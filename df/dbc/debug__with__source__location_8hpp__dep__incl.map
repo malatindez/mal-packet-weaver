@@ -1,0 +1,7 @@
+<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/detail/debug_with_source_location.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/detail/debug_with_source_location.hpp">
+<area shape="rect" id="node1" title="This file provides utility functions for debugging and assertion handling." alt="" coords="149,5,324,60"/>
+<area shape="rect" id="node2" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="162,108,311,148"/>
+<area shape="rect" id="node3" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="5,196,199,251"/>
+<area shape="rect" id="node4" href="$d1/d08/mal__toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="208,299,385,339"/>
+<area shape="rect" id="node5" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="274,203,442,243"/>
+</map>

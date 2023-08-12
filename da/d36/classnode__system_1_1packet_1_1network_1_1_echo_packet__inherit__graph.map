@@ -1,0 +1,6 @@
+<map id="node_system::packet::network::EchoPacket" name="node_system::packet::network::EchoPacket">
+<area shape="rect" id="node1" title="Packet for echoing a received message." alt="" coords="25,240,176,280"/>
+<area shape="rect" id="node2" href="$d6/d1d/classnode__system_1_1_derived_packet.html" title=" " alt="" coords="5,152,196,192"/>
+<area shape="rect" id="node3" href="$da/d22/classnode__system_1_1_packet.html" title="Base class for all packets." alt="" coords="27,79,174,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="35,5,166,31"/>
+</map>

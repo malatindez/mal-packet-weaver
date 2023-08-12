@@ -1,0 +1,4 @@
+<map id="node_system::crypto::ECDSA::Verifier" name="node_system::crypto::ECDSA::Verifier">
+<area shape="rect" id="node1" title="The Verifier class is responsible for verifying digital signatures using public keys." alt="" coords="5,93,145,133"/>
+<area shape="rect" id="node2" title=" " alt="" coords="10,5,141,45"/>
+</map>

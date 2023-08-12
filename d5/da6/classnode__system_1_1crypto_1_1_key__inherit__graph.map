@@ -1,0 +1,5 @@
+<map id="node_system::crypto::Key" name="node_system::crypto::Key">
+<area shape="rect" id="node1" title="Represents a cryptographic key as a byte array." alt="" coords="5,152,173,177"/>
+<area shape="rect" id="node2" href="$d0/d71/structnode__system_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="9,79,170,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="33,5,145,31"/>
+</map>

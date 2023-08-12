@@ -1,0 +1,8 @@
+<map id="node_system::packet::network::MessagePacket" name="node_system::packet::network::MessagePacket">
+<area shape="rect" id="node1" title="Packet for sending a text message." alt="" coords="92,272,267,312"/>
+<area shape="rect" id="node2" href="$d6/d1d/classnode__system_1_1_derived_packet.html" title=" " alt="" coords="5,169,196,209"/>
+<area shape="rect" id="node3" href="$da/d22/classnode__system_1_1_packet.html" title="Base class for all packets." alt="" coords="26,87,173,113"/>
+<area shape="rect" id="node4" title=" " alt="" coords="34,5,165,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="220,177,299,202"/>
+<area shape="rect" id="node6" title=" " alt="" coords="197,80,321,120"/>
+</map>

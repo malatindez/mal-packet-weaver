@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$da/d90/classmal__toolkit_1_1namable.html" title="A class that contains a name and can be named and unnamed." alt="" coords="5,35,145,60"/>
+<area shape="rect" id="node2" href="$df/d40/classmal__toolkit_1_1namable__once.html" title="A class that contains a name and can be named only once at construction." alt="" coords="193,5,368,31"/>
+<area shape="rect" id="node3" href="$d4/d2a/classmal__toolkit_1_1namable__protected.html" title="A class that contains a name and can be named and unnamed, but you cant set the name from outside." alt="" coords="211,55,351,95"/>
+</map>

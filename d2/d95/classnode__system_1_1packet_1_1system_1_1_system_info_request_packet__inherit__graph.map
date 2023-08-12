@@ -1,0 +1,6 @@
+<map id="node_system::packet::system::SystemInfoRequestPacket" name="node_system::packet::system::SystemInfoRequestPacket">
+<area shape="rect" id="node1" title="Packet for requesting system information from a node." alt="" coords="27,240,217,295"/>
+<area shape="rect" id="node2" href="$d6/d1d/classnode__system_1_1_derived_packet.html" title=" " alt="" coords="5,152,239,192"/>
+<area shape="rect" id="node3" href="$da/d22/classnode__system_1_1_packet.html" title="Base class for all packets." alt="" coords="49,79,195,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="57,5,187,31"/>
+</map>

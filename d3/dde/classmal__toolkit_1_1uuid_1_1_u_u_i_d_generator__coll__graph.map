@@ -1,0 +1,4 @@
+<map id="mal_toolkit::uuid::UUIDGenerator&lt; RNG &gt;" name="mal_toolkit::uuid::UUIDGenerator&lt; RNG &gt;">
+<area shape="rect" id="node1" title="Generates UUIDv4 from a provided random generator (c++11 &lt;random&gt; module). std::mt19937_64 is highly ..." alt="" coords="5,93,168,133"/>
+<area shape="rect" id="node2" title=" " alt="" coords="7,5,166,31"/>
+</map>
