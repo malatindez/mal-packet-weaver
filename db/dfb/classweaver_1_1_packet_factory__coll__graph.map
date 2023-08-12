@@ -1,4 +1,0 @@
-<map id="weaver::PacketFactory" name="weaver::PacketFactory">
-<area shape="rect" id="node1" title="A class responsible for registering and creating packet deserializers." alt="" coords="47,123,202,148"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,244,60"/>
-</map>

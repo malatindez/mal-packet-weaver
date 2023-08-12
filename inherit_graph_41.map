@@ -1,3 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d3/df2/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___c_i_p_h_e_r___c_t_x_01_4.html" title="Specialization of OPENSSL_OBJECT_WRAPPER for EVP_CIPHER_CTX. Provides a custom deleter for freeing EV..." alt="" coords="5,5,236,45"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,136,45"/>
+<area shape="rect" id="node2" href="$d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets." alt="" coords="219,5,363,45"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,165,136,205"/>
+<area shape="rect" id="node4" href="$d9/d37/classmal__packet__weaver_1_1crypto_1_1_a_e_s_1_1_a_e_s256.html" title="Provides AES&#45;256 encryption and decryption functionality using OpenSSL." alt="" coords="219,69,363,109"/>
+<area shape="rect" id="node5" href="$d0/d9a/classmal__packet__weaver_1_1crypto_1_1_diffie_hellman_helper.html" title="Provides utility functions for Diffie&#45;Hellman key exchange." alt="" coords="203,133,380,173"/>
+<area shape="rect" id="node6" href="$df/d10/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_key_pair_generator.html" title="Generates ECDSA key pairs for a given curve." alt="" coords="184,197,399,237"/>
+<area shape="rect" id="node7" href="$d8/d88/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_signer.html" title="The Signer class is responsible for creating digital signatures using private keys." alt="" coords="216,261,367,301"/>
+<area shape="rect" id="node8" href="$df/d2a/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_verifier.html" title="The Verifier class is responsible for verifying digital signatures using public keys." alt="" coords="215,325,368,365"/>
 </map>

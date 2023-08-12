@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::ByteView" name="mal_packet_weaver::ByteView">
+<area shape="rect" id="node1" title="A lightweight view over a sequence of bytes." alt="" coords="5,79,149,119"/>
+<area shape="rect" id="node3" href="$d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view.html" title="Represents a view of a cryptographic key as a byte view." alt="" coords="5,167,149,207"/>
+<area shape="rect" id="node2" title=" " alt="" coords="25,5,129,31"/>
+</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buffer_5f_0',['buffer_',['../de/dc2/classweaver_1_1_session.html#a1e4fbe0fc60a89aa0aab2f41214817eb',1,'weaver::Session']]]
+  ['buffer_5f_0',['buffer_',['../d8/d39/classmal__packet__weaver_1_1_session.html#a138f35f27bad9e024dbb38727e49a2a6',1,'mal_packet_weaver::Session']]]
 ];

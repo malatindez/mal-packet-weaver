@@ -1,8 +1,0 @@
-<map id="weaver::EchoPacket" name="weaver::EchoPacket">
-<area shape="rect" id="node1" title="Packet for echoing a received message." alt="" coords="82,272,222,297"/>
-<area shape="rect" id="node2" href="$d4/d4c/classweaver_1_1_derived_packet.html" title=" " alt="" coords="5,169,160,209"/>
-<area shape="rect" id="node3" href="$d8/d0f/classweaver_1_1_packet.html" title="Base class for all packets." alt="" coords="27,87,138,113"/>
-<area shape="rect" id="node4" title=" " alt="" coords="17,5,148,31"/>
-<area shape="rect" id="node5" title=" " alt="" coords="185,177,263,202"/>
-<area shape="rect" id="node6" title=" " alt="" coords="162,80,286,120"/>
-</map>

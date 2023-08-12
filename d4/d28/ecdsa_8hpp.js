@@ -1,12 +1,12 @@
 var ecdsa_8hpp =
 [
-    [ "weaver::KeyPairGenerator", "d0/d23/classweaver_1_1_key_pair_generator.html", "d0/d23/classweaver_1_1_key_pair_generator" ],
-    [ "weaver::Signer", "df/d40/classweaver_1_1_signer.html", "df/d40/classweaver_1_1_signer" ],
-    [ "weaver::Verifier", "d6/dfc/classweaver_1_1_verifier.html", "d6/dfc/classweaver_1_1_verifier" ],
-    [ "generate_key_pair", "d4/d28/ecdsa_8hpp.html#a352e2cef5ae5ed45c385bdb6811d5bd3", null ],
-    [ "GetCurveByName", "d4/d28/ecdsa_8hpp.html#aeabf6de0db2a9b686b61bf497e8c664a", null ],
-    [ "sign_data", "d4/d28/ecdsa_8hpp.html#a77e7cf70eeabb99fc7d394c112047dab", null ],
-    [ "sign_hash", "d4/d28/ecdsa_8hpp.html#aa43c832568a3c31c4398f4bd460959ee", null ],
-    [ "verify_data", "d4/d28/ecdsa_8hpp.html#ae7f7d6f5f8a8c1e96c2b1aa2a27f1942", null ],
-    [ "verify_hash", "d4/d28/ecdsa_8hpp.html#a5bfcda3822ea1202cf02e6a54383e779", null ]
+    [ "mal_packet_weaver::crypto::ECDSA::KeyPairGenerator", "df/d10/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_key_pair_generator.html", "df/d10/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_key_pair_generator" ],
+    [ "mal_packet_weaver::crypto::ECDSA::Signer", "d8/d88/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_signer.html", "d8/d88/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_signer" ],
+    [ "mal_packet_weaver::crypto::ECDSA::Verifier", "df/d2a/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_verifier.html", "df/d2a/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_verifier" ],
+    [ "generate_key_pair", "d4/d28/ecdsa_8hpp.html#a85df93f117edc72dde491f32e7ea594a", null ],
+    [ "GetCurveByName", "d4/d28/ecdsa_8hpp.html#a15c03922eb2735acc1c5ab511c64be70", null ],
+    [ "sign_data", "d4/d28/ecdsa_8hpp.html#ac3a3b5adbeac074fe5e7a57d22d44d7c", null ],
+    [ "sign_hash", "d4/d28/ecdsa_8hpp.html#a17381fd8742dd748295e76f09b980cf0", null ],
+    [ "verify_data", "d4/d28/ecdsa_8hpp.html#a945499cfa6f78a7ab8ad28f12064a9ea", null ],
+    [ "verify_hash", "d4/d28/ecdsa_8hpp.html#ab6dd92f9047e147b5c13dd905bf6905a", null ]
 ];

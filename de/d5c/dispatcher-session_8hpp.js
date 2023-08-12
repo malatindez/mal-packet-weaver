@@ -1,4 +1,4 @@
 var dispatcher_session_8hpp =
 [
-    [ "weaver::DispatcherSession", "d8/d25/classweaver_1_1_dispatcher_session.html", "d8/d25/classweaver_1_1_dispatcher_session" ]
+    [ "mal_packet_weaver::DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session" ]
 ];

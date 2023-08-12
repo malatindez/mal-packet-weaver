@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d5/dbd/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r.html" title="A template struct that provides a custom deleter for OpenSSL objects." alt="" coords="5,5,196,45"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,117,67"/>
+<area shape="rect" id="node2" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="167,5,311,45"/>
+<area shape="rect" id="node4" href="$d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="165,70,312,95"/>
+<area shape="rect" id="node3" href="$da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html" title="Represents a cryptographic key as a byte array." alt="" coords="360,5,504,45"/>
 </map>

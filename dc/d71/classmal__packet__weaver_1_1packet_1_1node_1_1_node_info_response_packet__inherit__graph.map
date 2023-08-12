@@ -1,0 +1,6 @@
+<map id="mal_packet_weaver::packet::node::NodeInfoResponsePacket" name="mal_packet_weaver::packet::node::NodeInfoResponsePacket">
+<area shape="rect" id="node1" title="Packet containing information about a node in response to a request." alt="" coords="5,269,217,324"/>
+<area shape="rect" id="node2" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title=" " alt="" coords="17,167,205,221"/>
+<area shape="rect" id="node3" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="39,79,183,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="46,5,177,31"/>
+</map>

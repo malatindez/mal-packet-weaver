@@ -1,0 +1,4 @@
+<map id="mal_packet_weaver::packet::PacketFactory" name="mal_packet_weaver::packet::PacketFactory">
+<area shape="rect" id="node1" title="A class responsible for registering and creating packet deserializers." alt="" coords="49,123,200,163"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,244,60"/>
+</map>

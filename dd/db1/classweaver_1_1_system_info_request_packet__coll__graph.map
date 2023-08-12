@@ -1,6 +1,0 @@
-<map id="weaver::SystemInfoRequestPacket" name="weaver::SystemInfoRequestPacket">
-<area shape="rect" id="node1" title="Packet for requesting system information from a node." alt="" coords="30,240,214,280"/>
-<area shape="rect" id="node2" href="$d4/d4c/classweaver_1_1_derived_packet.html" title=" " alt="" coords="5,152,239,192"/>
-<area shape="rect" id="node3" href="$d8/d0f/classweaver_1_1_packet.html" title="Base class for all packets." alt="" coords="67,79,177,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="57,5,187,31"/>
-</map>

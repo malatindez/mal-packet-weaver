@@ -1,7 +1,0 @@
-<map id="weaver::KeyPair" name="weaver::KeyPair">
-<area shape="rect" id="node1" title="Represents a pair of cryptographic keys (public and private keys)." alt="" coords="11,345,126,371"/>
-<area shape="rect" id="node2" href="$dc/dfb/classweaver_1_1_key.html" title="Represents a cryptographic key as a byte array." alt="" coords="23,243,115,268"/>
-<area shape="rect" id="node3" href="$d3/d21/structweaver_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="5,168,132,193"/>
-<area shape="rect" id="node4" title=" " alt="" coords="13,93,125,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="49,5,88,31"/>
-</map>

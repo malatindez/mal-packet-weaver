@@ -1,0 +1,7 @@
+<map id="mal_packet_weaver::crypto::KeyPair" name="mal_packet_weaver::crypto::KeyPair">
+<area shape="rect" id="node1" title="Represents a pair of cryptographic keys (public and private keys)." alt="" coords="5,375,149,415"/>
+<area shape="rect" id="node2" href="$da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html" title="Represents a cryptographic key as a byte array." alt="" coords="5,257,149,297"/>
+<area shape="rect" id="node3" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="5,168,149,208"/>
+<area shape="rect" id="node4" title=" " alt="" coords="21,93,133,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="58,5,97,31"/>
+</map>

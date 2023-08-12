@@ -1,6 +1,0 @@
-<map id="weaver::MessagePacket" name="weaver::MessagePacket">
-<area shape="rect" id="node1" title="Packet for sending a text message." alt="" coords="9,240,173,265"/>
-<area shape="rect" id="node2" href="$d4/d4c/classweaver_1_1_derived_packet.html" title=" " alt="" coords="5,152,177,192"/>
-<area shape="rect" id="node3" href="$d8/d0f/classweaver_1_1_packet.html" title="Base class for all packets." alt="" coords="36,79,147,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="26,5,157,31"/>
-</map>

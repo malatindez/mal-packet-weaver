@@ -1,12 +1,12 @@
 var packet_network_8hpp =
 [
-    [ "weaver::PingPacket", "da/db8/classweaver_1_1_ping_packet.html", "da/db8/classweaver_1_1_ping_packet" ],
-    [ "weaver::PongPacket", "df/d04/classweaver_1_1_pong_packet.html", "df/d04/classweaver_1_1_pong_packet" ],
-    [ "weaver::MessagePacket", "d6/db0/classweaver_1_1_message_packet.html", "d6/db0/classweaver_1_1_message_packet" ],
-    [ "weaver::EchoPacket", "d2/d1f/classweaver_1_1_echo_packet.html", "d2/d1f/classweaver_1_1_echo_packet" ],
-    [ "RegisterDeserializers", "d4/d6f/packet-network_8hpp.html#a1b2aed1e6ed3fef9af505a97b6639898", null ],
-    [ "EchoPacketID", "d4/d6f/packet-network_8hpp.html#a99709c64a1bc6978e94623fae8e2c765", null ],
-    [ "MessagePacketID", "d4/d6f/packet-network_8hpp.html#a0a06c4fe85e29e36c4481db38af78ef4", null ],
-    [ "PingPacketID", "d4/d6f/packet-network_8hpp.html#a6194d9c299ae20fa9622e621179bad0c", null ],
-    [ "PongPacketID", "d4/d6f/packet-network_8hpp.html#a2488852fa83e9def4e6c1d4904276627", null ]
+    [ "mal_packet_weaver::packet::network::PingPacket", "d2/db1/classmal__packet__weaver_1_1packet_1_1network_1_1_ping_packet.html", "d2/db1/classmal__packet__weaver_1_1packet_1_1network_1_1_ping_packet" ],
+    [ "mal_packet_weaver::packet::network::PongPacket", "d6/d7a/classmal__packet__weaver_1_1packet_1_1network_1_1_pong_packet.html", "d6/d7a/classmal__packet__weaver_1_1packet_1_1network_1_1_pong_packet" ],
+    [ "mal_packet_weaver::packet::network::MessagePacket", "da/d95/classmal__packet__weaver_1_1packet_1_1network_1_1_message_packet.html", "da/d95/classmal__packet__weaver_1_1packet_1_1network_1_1_message_packet" ],
+    [ "mal_packet_weaver::packet::network::EchoPacket", "d5/d10/classmal__packet__weaver_1_1packet_1_1network_1_1_echo_packet.html", "d5/d10/classmal__packet__weaver_1_1packet_1_1network_1_1_echo_packet" ],
+    [ "RegisterDeserializers", "d4/d6f/packet-network_8hpp.html#acdbe27daeb05bd265d4ca6bd946fa7ad", null ],
+    [ "EchoPacketID", "d4/d6f/packet-network_8hpp.html#a34149e8f2fc9db8c9a4ec2a6e5f305a2", null ],
+    [ "MessagePacketID", "d4/d6f/packet-network_8hpp.html#ad39ce704c868f367bd0b50515ffbd790", null ],
+    [ "PingPacketID", "d4/d6f/packet-network_8hpp.html#aa90102a9480867c4e8757d78b73872a9", null ],
+    [ "PongPacketID", "d4/d6f/packet-network_8hpp.html#a31d085c032c6316551ae47562abf88a2", null ]
 ];

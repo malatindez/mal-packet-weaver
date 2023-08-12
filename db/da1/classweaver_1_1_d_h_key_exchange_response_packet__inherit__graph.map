@@ -1,6 +1,0 @@
-<map id="weaver::DHKeyExchangeResponsePacket" name="weaver::DHKeyExchangeResponsePacket">
-<area shape="rect" id="node1" title="Packet for Diffie&#45;Hellman key exchange response." alt="" coords="5,255,231,295"/>
-<area shape="rect" id="node2" href="$d4/d4c/classweaver_1_1_derived_packet.html" title=" " alt="" coords="7,152,229,207"/>
-<area shape="rect" id="node3" href="$d8/d0f/classweaver_1_1_packet.html" title="Base class for all packets." alt="" coords="63,79,173,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="53,5,183,31"/>
-</map>

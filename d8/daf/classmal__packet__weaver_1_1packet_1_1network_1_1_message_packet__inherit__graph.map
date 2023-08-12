@@ -1,0 +1,6 @@
+<map id="mal_packet_weaver::packet::network::MessagePacket" name="mal_packet_weaver::packet::network::MessagePacket">
+<area shape="rect" id="node1" title="Packet for sending a text message." alt="" coords="5,269,219,309"/>
+<area shape="rect" id="node2" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title=" " alt="" coords="37,167,187,221"/>
+<area shape="rect" id="node3" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="40,79,184,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="47,5,177,31"/>
+</map>

@@ -1,6 +1,0 @@
-<map id="weaver::Key" name="weaver::Key">
-<area shape="rect" id="node1" title="Represents a cryptographic key as a byte array." alt="" coords="23,243,115,268"/>
-<area shape="rect" id="node2" href="$d3/d21/structweaver_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="5,168,132,193"/>
-<area shape="rect" id="node3" title=" " alt="" coords="13,93,125,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="49,5,88,31"/>
-</map>

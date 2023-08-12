@@ -1,0 +1,6 @@
+<map id="mal_packet_weaver::packet::network::PingPacket" name="mal_packet_weaver::packet::network::PingPacket">
+<area shape="rect" id="node1" title="Packet for sending a ping signal." alt="" coords="5,269,192,309"/>
+<area shape="rect" id="node2" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title=" " alt="" coords="24,167,173,221"/>
+<area shape="rect" id="node3" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="27,79,171,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="33,5,164,31"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="mal_packet_weaver::Session" name="mal_packet_weaver::Session">
+<area shape="rect" id="node1" title="Represents a network session for sending and receiving packets." alt="" coords="963,104,1107,144"/>
+<area shape="rect" id="node2" title=" " alt="" coords="63,5,193,45"/>
+<area shape="rect" id="node5" href="$d9/d37/classmal__packet__weaver_1_1crypto_1_1_a_e_s_1_1_a_e_s256.html" title="Provides AES&#45;256 encryption and decryption functionality using OpenSSL." alt="" coords="400,68,544,108"/>
+<area shape="rect" id="node3" title=" " alt="" coords="614,140,766,180"/>
+<area shape="rect" id="node4" title=" " alt="" coords="611,61,769,115"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,71,251,140"/>
+<area shape="rect" id="node7" title=" " alt="" coords="649,205,731,230"/>
+</map>

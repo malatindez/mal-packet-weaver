@@ -1,7 +1,0 @@
-<map id="weaver::Session" name="weaver::Session">
-<area shape="rect" id="node1" title="Represents a network session for sending and receiving packets." alt="" coords="351,109,468,134"/>
-<area shape="rect" id="node2" title=" " alt="" coords="16,5,147,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,69,157,109"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,133,157,173"/>
-<area shape="rect" id="node5" title=" " alt="" coords="41,198,122,223"/>
-</map>

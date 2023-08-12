@@ -1,0 +1,4 @@
+<map id="mal_packet_weaver::crypto::ECDSA::Verifier" name="mal_packet_weaver::crypto::ECDSA::Verifier">
+<area shape="rect" id="node1" title="The Verifier class is responsible for verifying digital signatures using public keys." alt="" coords="5,93,159,133"/>
+<area shape="rect" id="node2" title=" " alt="" coords="17,5,147,45"/>
+</map>
