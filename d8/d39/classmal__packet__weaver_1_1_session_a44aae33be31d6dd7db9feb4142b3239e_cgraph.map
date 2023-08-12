@@ -1,0 +1,7 @@
+<map id="mal_packet_weaver::Session::get_shared_ptr" name="mal_packet_weaver::Session::get_shared_ptr">
+<area shape="rect" id="Node000001" title="Retrieves a shared pointer to the current session." alt="" coords="5,53,153,94"/>
+<area shape="rect" id="Node000002" href="$d7/d6c/classmal__packet__weaver_1_1_exponential_backoff.html#aa58aecd9c3c9a893de17afed16c1509f" title="Get the current backoff delay." alt="" coords="201,5,333,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,55,185,48,187,53,154,60"/>
+<area shape="rect" id="Node000003" href="$d7/d6c/classmal__packet__weaver_1_1_exponential_backoff.html#a4ce57a126c13af532d74f9c533cbbdf3" title="Increase the backoff delay using exponential factor." alt="" coords="201,85,333,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,86,187,93,185,99,152,91"/>
+</map>

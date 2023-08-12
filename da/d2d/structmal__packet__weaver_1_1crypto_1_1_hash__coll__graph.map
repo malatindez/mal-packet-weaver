@@ -1,6 +1,15 @@
 <map id="mal_packet_weaver::crypto::Hash" name="mal_packet_weaver::crypto::Hash">
-<area shape="rect" id="node1" title="Represents a cryptographic hash value along with its type." alt="" coords="5,271,149,311"/>
-<area shape="rect" id="node2" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="5,168,149,208"/>
-<area shape="rect" id="node3" title=" " alt="" coords="21,93,133,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="58,5,97,31"/>
+<area shape="rect" id="Node000001" title="Represents a cryptographic hash value along with its type." alt="" coords="594,121,726,161"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="305,21,439,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="454,43,512,53,571,72,608,93,639,118,635,122,605,98,569,77,511,59,453,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="296,102,448,127"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="463,120,594,132,593,138,462,125"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="319,151,425,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="440,164,503,163,569,159,593,155,594,160,570,164,503,169,440,169"/>
+<area shape="rect" id="Node000005" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="306,201,438,241"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="453,211,511,201,569,185,624,160,626,164,571,191,512,206,454,216"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="141,208,247,234"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="262,218,305,218,305,224,262,224"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,208,44,234"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="59,218,140,218,140,224,59,224"/>
 </map>

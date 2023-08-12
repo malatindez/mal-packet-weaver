@@ -1,5 +1,7 @@
 <map id="mal_toolkit::ByteView" name="mal_toolkit::ByteView">
-<area shape="rect" id="node1" title="A lightweight view over a sequence of bytes." alt="" coords="5,168,152,193"/>
-<area shape="rect" id="node2" title=" " alt="" coords="27,93,131,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="59,5,98,31"/>
+<area shape="rect" id="Node000001" title="A lightweight view over a sequence of bytes." alt="" coords="5,169,144,195"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="25,94,124,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,135,77,169,72,169,72,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="55,5,94,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,46,77,94,72,94,72,46"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::ByteArray::from_integral" name="mal_packet_weaver::ByteArray::from_integral">
+<area shape="rect" id="Node000001" title="Create a byte array from an integral value." alt="" coords="5,5,159,46"/>
+<area shape="rect" id="Node000002" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a5ce0c445aa4f44df9f44ddcfe8bff0ef" title="Convert the ByteArray to a typed pointer." alt="" coords="207,5,339,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,23,192,23,192,28,159,28"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::Session::read_bytes_to" name="mal_packet_weaver::Session::read_bytes_to">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,147,46"/>
+<area shape="rect" id="Node000002" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a5ce0c445aa4f44df9f44ddcfe8bff0ef" title="Convert the ByteArray to a typed pointer." alt="" coords="195,5,327,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,23,180,23,180,28,147,28"/>
+</map>

@@ -1,5 +1,13 @@
 <map id="mal_packet_weaver::crypto::DiffieHellmanHelper" name="mal_packet_weaver::crypto::DiffieHellmanHelper">
-<area shape="rect" id="node1" title="Provides utility functions for Diffie&#45;Hellman key exchange." alt="" coords="300,41,477,81"/>
-<area shape="rect" id="node2" title=" " alt="" coords="37,5,168,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,70,200,125"/>
+<area shape="rect" id="Node000001" title="Provides utility functions for Diffie&#45;Hellman key exchange." alt="" coords="742,41,917,82"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="489,5,611,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="627,33,742,48,741,53,626,38"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="454,70,646,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="661,81,742,70,742,76,661,86"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="133,46,221,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="236,62,454,85,453,90,235,68"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="111,122,243,148"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="258,138,341,138,430,131,465,123,466,129,430,136,341,143,258,143"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,122,44,148"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="59,132,110,132,110,138,59,138"/>
 </map>

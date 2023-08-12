@@ -1,6 +1,9 @@
 <map id="mal_packet_weaver::crypto::KeyView" name="mal_packet_weaver::crypto::KeyView">
-<area shape="rect" id="node1" title="Represents a view of a cryptographic key as a byte view." alt="" coords="5,257,149,297"/>
-<area shape="rect" id="node2" href="$d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes." alt="" coords="5,168,149,208"/>
-<area shape="rect" id="node3" title=" " alt="" coords="25,93,129,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="58,5,97,31"/>
+<area shape="rect" id="Node000001" title="Represents a view of a cryptographic key as a byte view." alt="" coords="5,259,138,300"/>
+<area shape="rect" id="Node000002" href="$d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes." alt="" coords="5,169,138,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,224,74,259,69,259,69,224"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="22,94,121,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,135,74,169,69,169,69,135"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="52,5,91,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="74,46,74,94,69,94,69,46"/>
 </map>

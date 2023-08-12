@@ -1,0 +1,7 @@
+<map id="mal_toolkit::CallbackSystem::RemoveCallback" name="mal_toolkit::CallbackSystem::RemoveCallback">
+<area shape="rect" id="Node000001" title="Remove a callback by its function object." alt="" coords="5,39,178,79"/>
+<area shape="rect" id="Node000002" href="$df/df5/namespacemal__toolkit.html#adcf0589e175aea12b4b7c10084105c61" title="Get the address of a callable function." alt="" coords="235,5,389,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,43,220,37,220,42,179,49"/>
+<area shape="rect" id="Node000003" href="$dd/d83/classmal__toolkit_1_1_callback_system.html#af7be6f4bf90bd19f7e68680149d176f1" title="Remove a callback by its ID." alt="" coords="226,71,398,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,69,211,74,211,79,178,74"/>
+</map>

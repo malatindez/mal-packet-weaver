@@ -1,5 +1,7 @@
 <map id="mal_packet_weaver::Session" name="mal_packet_weaver::Session">
-<area shape="rect" id="node1" title="Represents a network session for sending and receiving packets." alt="" coords="81,93,225,133"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,136,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="160,5,312,45"/>
+<area shape="rect" id="Node000001" title="Represents a network session for sending and receiving packets." alt="" coords="78,94,210,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,128,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,55,128,92,124,95,92,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="152,5,293,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,59,164,95,160,92,193,55"/>
 </map>

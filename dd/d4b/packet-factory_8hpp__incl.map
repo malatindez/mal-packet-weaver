@@ -1,9 +1,15 @@
 <map id="mal&#45;packet&#45;weaver/mal&#45;packet&#45;weaver/packet_impl/packet&#45;factory.hpp" name="mal&#45;packet&#45;weaver/mal&#45;packet&#45;weaver/packet_impl/packet&#45;factory.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="299,5,462,60"/>
-<area shape="rect" id="node2" href="$d9/d85/packet__impl_2packet_8hpp.html" title=" " alt="" coords="338,108,423,133"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,189,124,214"/>
-<area shape="rect" id="node4" title=" " alt="" coords="149,181,287,221"/>
-<area shape="rect" id="node5" title=" " alt="" coords="311,181,450,221"/>
-<area shape="rect" id="node6" title=" " alt="" coords="475,181,601,221"/>
-<area shape="rect" id="node7" title=" " alt="" coords="625,181,752,221"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="289,5,445,61"/>
+<area shape="rect" id="Node000002" href="$d9/d85/packet__impl_2packet_8hpp.html" title=" " alt="" coords="327,109,407,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="370,61,370,94,364,94,364,61"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,190,121,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,136,134,185,122,188,121,183,133,180,326,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="145,183,277,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="344,138,264,178,262,173,342,133"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="301,183,433,223"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="370,135,370,168,364,168,364,135"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="457,183,576,223"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="391,133,468,173,466,178,388,137"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="601,183,720,223"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="408,132,587,179,585,184,407,137"/>
 </map>

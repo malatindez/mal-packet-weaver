@@ -1,4 +1,5 @@
 <map id="mal_toolkit::namable_once" name="mal_toolkit::namable_once">
-<area shape="rect" id="node1" title="A class that contains a name and can be named only once at construction." alt="" coords="5,79,180,104"/>
-<area shape="rect" id="node2" href="$da/d90/classmal__toolkit_1_1namable.html" title="A class that contains a name and can be named and unnamed." alt="" coords="23,5,163,31"/>
+<area shape="rect" id="Node000001" title="A class that contains a name and can be named only once at construction." alt="" coords="5,79,168,105"/>
+<area shape="rect" id="Node000002" href="$da/d90/classmal__toolkit_1_1namable.html" title="A class that contains a name and can be named and unnamed." alt="" coords="21,5,152,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,46,89,79,84,79,84,46"/>
 </map>

@@ -1,7 +1,7 @@
 var crypto_2common_8hpp =
 [
-    [ "mal_packet_weaver::crypto::Key", "da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html", null ],
-    [ "mal_packet_weaver::crypto::KeyView", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view.html", null ],
+    [ "mal_packet_weaver::crypto::Key", "da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html", "da/d1a/classmal__packet__weaver_1_1crypto_1_1_key" ],
+    [ "mal_packet_weaver::crypto::KeyView", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view.html", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view" ],
     [ "mal_packet_weaver::crypto::Hash", "d4/dce/structmal__packet__weaver_1_1crypto_1_1_hash.html", "d4/dce/structmal__packet__weaver_1_1crypto_1_1_hash" ],
     [ "mal_packet_weaver::crypto::KeyPair", "d4/df8/structmal__packet__weaver_1_1crypto_1_1_key_pair.html", "d4/df8/structmal__packet__weaver_1_1crypto_1_1_key_pair" ],
     [ "mal_packet_weaver::crypto::OPENSSL_OBJECT_WRAPPER< EVP_PKEY_CTX >", "df/d58/structmal__packet__weaver_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y___c_t_x_01_4.html", "df/d58/structmal__packet__weaver_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y___c_t_x_01_4" ],

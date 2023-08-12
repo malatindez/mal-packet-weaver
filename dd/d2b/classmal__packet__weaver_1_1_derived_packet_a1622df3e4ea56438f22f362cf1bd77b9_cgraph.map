@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::DerivedPacket::deserialize" name="mal_packet_weaver::DerivedPacket::deserialize">
+<area shape="rect" id="Node000001" title="Deserialize a byte view into a unique pointer of the specified packet type." alt="" coords="5,5,168,46"/>
+<area shape="rect" id="Node000002" href="$d7/d41/structmal__packet__weaver_1_1_byte_view.html#a642359fac9a65d40ddf6c01077ffade3" title="Convert the ByteView to a typed view." alt="" coords="216,5,348,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,23,201,23,201,28,168,28"/>
+</map>

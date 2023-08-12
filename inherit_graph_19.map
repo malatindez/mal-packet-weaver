@@ -1,5 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$da/d90/classmal__toolkit_1_1namable.html" title="A class that contains a name and can be named and unnamed." alt="" coords="5,35,145,60"/>
-<area shape="rect" id="node2" href="$df/d40/classmal__toolkit_1_1namable__once.html" title="A class that contains a name and can be named only once at construction." alt="" coords="193,5,368,31"/>
-<area shape="rect" id="node3" href="$d4/d2a/classmal__toolkit_1_1namable__protected.html" title="A class that contains a name and can be named and unnamed, but you cant set the name from outside." alt="" coords="211,55,351,95"/>
+<area shape="rect" id="Node000000" href="$da/d90/classmal__toolkit_1_1namable.html" title="A class that contains a name and can be named and unnamed." alt="" coords="5,35,137,60"/>
+<area shape="rect" id="Node000001" href="$df/d40/classmal__toolkit_1_1namable__once.html" title="A class that contains a name and can be named only once at construction." alt="" coords="185,5,347,31"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="151,33,184,28,185,33,151,38"/>
+<area shape="rect" id="Node000002" href="$d4/d2a/classmal__toolkit_1_1namable__protected.html" title="A class that contains a name and can be named and unnamed, but you cant set the name from outside." alt="" coords="200,55,332,96"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="151,56,200,63,199,69,151,62"/>
 </map>

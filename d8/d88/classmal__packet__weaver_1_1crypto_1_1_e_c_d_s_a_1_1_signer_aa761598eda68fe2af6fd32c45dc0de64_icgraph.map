@@ -1,0 +1,9 @@
+<map id="mal_packet_weaver::crypto::ECDSA::Signer::sign_hash" name="mal_packet_weaver::crypto::ECDSA::Signer::sign_hash">
+<area shape="rect" id="Node000001" title="Signs a hash using the private key." alt="" coords="430,41,575,97"/>
+<area shape="rect" id="Node000002" href="$d8/d88/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_signer.html#a80725b1d55e0efaa11469e3182f0b1c2" title="Signs binary data using the private key." alt="" coords="227,5,372,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,56,372,49,373,43,416,51"/>
+<area shape="rect" id="Node000004" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#a17381fd8742dd748295e76f09b980cf0" title=" " alt="" coords="217,85,382,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="416,87,383,93,382,88,415,82"/>
+<area shape="rect" id="Node000003" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#ac3a3b5adbeac074fe5e7a57d22d44d7c" title=" " alt="" coords="5,13,169,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,36,169,36,169,31,212,31"/>
+</map>

@@ -1,6 +1,10 @@
 <map id="mal&#45;packet&#45;weaver/mal&#45;packet&#45;weaver/packet&#45;dispatcher.hpp" name="mal&#45;packet&#45;weaver/mal&#45;packet&#45;weaver/packet&#45;dispatcher.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="295,5,453,60"/>
-<area shape="rect" id="node2" href="$de/d5c/dispatcher-session_8hpp.html" title=" " alt="" coords="5,108,180,163"/>
-<area shape="rect" id="node3" href="$d8/d1a/packet-dispatcher_8cpp.html" title=" " alt="" coords="205,108,362,163"/>
-<area shape="rect" id="node4" href="$d2/d7d/packet-dispatcher_8inl.html" title=" " alt="" coords="386,108,543,163"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="276,5,420,61"/>
+<area shape="rect" id="Node000002" href="$de/d5c/dispatcher-session_8hpp.html" title=" " alt="" coords="5,109,168,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,69,158,111,156,106,263,64"/>
+<area shape="rect" id="Node000003" href="$d8/d1a/packet-dispatcher_8cpp.html" title=" " alt="" coords="192,109,336,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="318,74,288,110,284,107,314,71"/>
+<area shape="rect" id="Node000004" href="$d2/d7d/packet-dispatcher_8inl.html" title=" " alt="" coords="360,109,504,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="373,71,403,107,399,110,369,75"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="407,99,376,63,380,60,411,95"/>
 </map>

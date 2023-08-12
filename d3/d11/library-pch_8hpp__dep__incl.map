@@ -1,17 +1,39 @@
 <map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/library&#45;pch.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/library&#45;pch.hpp">
-<area shape="rect" id="node1" title="Precompiled header (PCH) file for common headers used across the library." alt="" coords="607,5,757,60"/>
-<area shape="rect" id="node2" href="$da/df5/byte-helper_8hpp.html" title=" " alt="" coords="5,108,156,163"/>
-<area shape="rect" id="node3" href="$d4/d80/common-structures_8hpp.html" title="Defines common data structures and types that can be used anywhere." alt="" coords="45,218,207,273"/>
-<area shape="rect" id="node4" href="$d1/d08/mal__toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="396,328,547,383"/>
-<area shape="rect" id="node5" href="$d1/d27/converter_8hpp.html" title="Provides functions for converting between different data types." alt="" coords="283,218,433,273"/>
-<area shape="rect" id="node6" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="520,108,671,163"/>
-<area shape="rect" id="node10" href="$d1/dcf/endianness_8hpp.html" title="Provides functions and utilities for handling endianness conversions." alt="" coords="695,108,845,163"/>
-<area shape="rect" id="node12" href="$dc/d94/event_8hpp.html" title="Defines event handling and notification mechanisms." alt="" coords="869,108,1020,163"/>
-<area shape="rect" id="node13" href="$dc/dad/file-watcher_8hpp.html" title="Implements a file watcher that monitors changes to specified files or directories." alt="" coords="1271,218,1421,273"/>
-<area shape="rect" id="node14" href="$dd/db7/stl-helpers_8hpp.html" title="Provides helper functions and extensions for the C++ Standard Library." alt="" coords="1096,108,1247,163"/>
-<area shape="rect" id="node15" href="$d0/d8a/win-utils_8hpp.html" title="Provides various Windows&#45;specific utility functions and macros." alt="" coords="1271,108,1421,163"/>
-<area shape="rect" id="node7" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="509,211,682,280"/>
-<area shape="rect" id="node8" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="707,211,897,280"/>
-<area shape="rect" id="node9" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="921,218,1072,273"/>
-<area shape="rect" id="node11" href="$d7/db4/uuid_8hpp.html" title="Defines utilities for working with Universally Unique Identifiers (UUIDs)." alt="" coords="1096,218,1247,273"/>
+<area shape="rect" id="Node000001" title="Precompiled header (PCH) file for common headers used across the library." alt="" coords="587,5,730,61"/>
+<area shape="rect" id="Node000002" href="$da/df5/byte-helper_8hpp.html" title=" " alt="" coords="5,109,149,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="573,47,386,72,277,90,168,112,150,116,148,111,167,106,276,85,385,67,572,41"/>
+<area shape="rect" id="Node000003" href="$d4/d80/common-structures_8hpp.html" title="Defines common data structures and types that can be used anywhere." alt="" coords="48,220,199,276"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="572,44,478,53,375,68,283,87,246,98,220,111,191,135,168,164,137,221,132,219,164,161,188,131,217,107,244,94,281,82,375,62,478,48,572,38"/>
+<area shape="rect" id="Node000004" href="$d1/d08/mal__toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="384,331,527,387"/>
+<area shape="poly" id="edge19_Node000001_Node000004" title=" " alt="" coords="573,46,492,63,448,77,404,94,362,116,324,143,291,176,265,214,256,233,253,249,255,264,265,282,288,307,318,326,351,339,384,348,383,353,349,344,316,331,285,311,260,285,250,266,247,249,251,231,260,211,287,172,321,139,360,112,402,89,446,72,490,58,572,41"/>
+<area shape="rect" id="Node000005" href="$d1/d27/converter_8hpp.html" title="Provides functions for converting between different data types." alt="" coords="275,220,418,276"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="574,68,532,88,492,111,457,138,424,167,371,222,367,218,420,163,453,134,489,107,530,83,572,63"/>
+<area shape="rect" id="Node000006" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="503,109,646,165"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="629,74,599,110,595,107,625,71"/>
+<area shape="rect" id="Node000010" href="$d1/dcf/endianness_8hpp.html" title="Provides functions and utilities for handling endianness conversions." alt="" coords="671,109,814,165"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="692,71,722,107,718,110,688,74"/>
+<area shape="rect" id="Node000012" href="$dc/d94/event_8hpp.html" title="Defines event handling and notification mechanisms." alt="" coords="839,109,982,165"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="740,64,844,106,842,111,738,69"/>
+<area shape="rect" id="Node000013" href="$dc/dad/file-watcher_8hpp.html" title="Implements a file watcher that monitors changes to specified files or directories." alt="" coords="1219,220,1362,276"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="745,37,803,44,868,57,934,78,996,107,1012,120,1022,135,1031,149,1046,162,1088,183,1123,192,1161,198,1207,210,1226,217,1224,222,1206,215,1160,203,1122,197,1086,188,1044,167,1027,153,1018,138,1008,124,993,111,932,83,867,63,802,49,744,42"/>
+<area shape="rect" id="Node000014" href="$dd/db7/stl-helpers_8hpp.html" title="Provides helper functions and extensions for the C++ Standard Library." alt="" coords="1057,109,1201,165"/>
+<area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="745,46,883,72,1039,106,1058,111,1056,116,1038,112,882,78,744,52"/>
+<area shape="rect" id="Node000015" href="$d0/d8a/win-utils_8hpp.html" title="Provides various Windows&#45;specific utility functions and macros." alt="" coords="1225,109,1369,165"/>
+<area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="745,39,959,63,1087,82,1214,106,1225,109,1224,114,1212,112,1086,87,959,68,745,44"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="212,278,219,281,385,334,383,339,218,286,211,284"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="386,285,430,329,427,333,382,288"/>
+<area shape="poly" id="edge10_Node000006_Node000004" title=" " alt="" coords="518,176,499,193,483,214,470,243,462,274,457,331,452,330,457,274,465,241,479,211,495,190,515,172"/>
+<area shape="rect" id="Node000007" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="493,213,656,283"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="568,180,569,212,563,212,563,180"/>
+<area shape="rect" id="Node000008" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="679,213,859,283"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="637,170,708,210,706,214,634,174"/>
+<area shape="rect" id="Node000009" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="883,220,1026,276"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="661,162,768,185,814,194,871,210,891,217,890,222,870,215,813,200,767,190,660,168"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="581,198,580,165,585,165,586,198"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="879,283,871,286,780,309,687,328,528,352,527,347,686,322,778,304,870,281,877,278"/>
+<area shape="rect" id="Node000011" href="$d7/db4/uuid_8hpp.html" title="Defines utilities for working with Universally Unique Identifiers (UUIDs)." alt="" coords="1051,220,1194,276"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="829,162,936,185,982,194,1039,210,1059,217,1058,222,1038,215,981,200,935,190,828,168"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="997,161,1002,162,1105,184,1150,194,1207,210,1227,217,1226,222,1206,215,1149,199,1104,190,1000,167,996,166"/>
+<area shape="poly" id="edge17_Node000013_Node000004" title=" " alt="" coords="1216,284,1207,286,1113,306,1017,323,826,345,657,356,528,360,528,355,656,351,826,339,1016,317,1112,301,1206,281,1214,278"/>
+<area shape="poly" id="edge21_Node000014_Node000004" title=" " alt="" coords="1215,162,1266,169,1307,172,1343,181,1360,193,1376,211,1388,230,1392,249,1388,267,1376,285,1359,297,1331,307,1247,323,1136,336,1007,346,739,356,528,360,528,355,739,351,1007,340,1136,331,1247,318,1329,302,1357,292,1372,281,1383,265,1387,249,1383,232,1372,214,1357,197,1341,186,1306,177,1265,175,1214,167"/>
 </map>

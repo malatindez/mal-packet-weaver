@@ -1,4 +1,5 @@
 <map id="mal_packet_weaver::crypto::DiffieHellmanHelper" name="mal_packet_weaver::crypto::DiffieHellmanHelper">
-<area shape="rect" id="node1" title="Provides utility functions for Diffie&#45;Hellman key exchange." alt="" coords="5,93,183,133"/>
-<area shape="rect" id="node2" title=" " alt="" coords="29,5,159,45"/>
+<area shape="rect" id="Node000001" title="Provides utility functions for Diffie&#45;Hellman key exchange." alt="" coords="5,94,180,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="31,5,154,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,61,95,94,90,94,90,61"/>
 </map>

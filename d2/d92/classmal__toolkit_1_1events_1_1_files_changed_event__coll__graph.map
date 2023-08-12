@@ -1,5 +1,23 @@
 <map id="mal_toolkit::events::FilesChangedEvent" name="mal_toolkit::events::FilesChangedEvent">
-<area shape="rect" id="node1" title="Event class for files changed." alt="" coords="89,108,229,148"/>
-<area shape="rect" id="node2" href="$d5/dbd/classmal__toolkit_1_1events_1_1_event.html" title="Base class for all events." alt="" coords="5,5,136,45"/>
-<area shape="rect" id="node3" title=" " alt="" coords="161,5,335,45"/>
+<area shape="rect" id="Node000001" title="Event class for files changed." alt="" coords="697,154,829,195"/>
+<area shape="rect" id="Node000002" href="$d5/dbd/classmal__toolkit_1_1events_1_1_event.html" title="Base class for all events." alt="" coords="443,73,563,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="578,113,698,151,696,156,576,118"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="188,5,233,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,22,318,35,399,54,446,69,445,74,397,59,317,40,247,27"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="156,55,265,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="280,71,442,85,442,90,279,76"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="166,104,255,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="270,115,398,109,442,103,442,108,398,114,270,120"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="450,161,555,187"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="570,172,697,172,697,177,570,177"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="141,154,280,195"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="295,172,450,172,450,177,295,177"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="422,211,583,252"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="597,209,673,192,697,187,698,192,674,197,599,214"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="188,219,233,244"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="248,229,422,229,422,234,248,234"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="157,280,264,306"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="278,284,336,276,397,264,446,250,447,255,399,269,337,281,279,289"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="5,280,44,306"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="59,290,157,290,157,296,59,296"/>
 </map>

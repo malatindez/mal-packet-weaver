@@ -1,6 +1,12 @@
 <map id="mal_packet_weaver::packet::crypto::DHKeyExchangeRequestPacket" name="mal_packet_weaver::packet::crypto::DHKeyExchangeRequestPacket">
-<area shape="rect" id="node1" title="Packet for Diffie&#45;Hellman key exchange request." alt="" coords="14,269,219,324"/>
-<area shape="rect" id="node2" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title=" " alt="" coords="5,167,228,221"/>
-<area shape="rect" id="node3" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="45,79,189,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="51,5,182,31"/>
+<area shape="rect" id="Node000001" title="Packet for Diffie&#45;Hellman key exchange request." alt="" coords="10,394,207,450"/>
+<area shape="rect" id="Node000002" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title=" " alt="" coords="5,289,212,345"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,359,111,393,106,393,106,359"/>
+<area shape="rect" id="Node000003" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="37,80,169,121"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,136,110,288,105,289,101,136"/>
+<area shape="rect" id="Node000005" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class." alt="" coords="125,170,308,211"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="142,128,193,168,189,172,138,132"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="42,5,164,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="106,46,106,80,101,80,101,46"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="192,224,134,290,130,287,188,220"/>
 </map>

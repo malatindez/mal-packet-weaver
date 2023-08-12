@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::Packet::get_packet_time_alive" name="mal_packet_weaver::Packet::get_packet_time_alive">
+<area shape="rect" id="Node000001" title="Get the time elapsed since the packet was created." alt="" coords="186,5,368,46"/>
+<area shape="rect" id="Node000002" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html#a573235a5877f469654754d62d85bbdd3" title="Check if the packet has expired based on its time&#45;to&#45;live." alt="" coords="5,5,138,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,28,138,28,138,23,171,23"/>
+</map>

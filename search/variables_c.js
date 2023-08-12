@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['max_5fdelay_5f_0',['max_delay_',['../d7/d6c/classmal__packet__weaver_1_1_exponential_backoff.html#a8fd4e1c986783be2e547c402b452ee5f',1,'mal_packet_weaver::ExponentialBackoff::max_delay_()'],['../df/d52/classmal__packet__weaver_1_1_linear_backoff.html#af977028da436736c5dc97a7b1e295ed2',1,'mal_packet_weaver::LinearBackoff::max_delay_()']]],
+  ['max_5fdelay_5f_0',['max_delay_',['../d7/d6c/classmal__packet__weaver_1_1_exponential_backoff.html#a8fd4e1c986783be2e547c402b452ee5f',1,'mal_packet_weaver::ExponentialBackoff::max_delay_'],['../df/d52/classmal__packet__weaver_1_1_linear_backoff.html#af977028da436736c5dc97a7b1e295ed2',1,'mal_packet_weaver::LinearBackoff::max_delay_']]],
   ['maximum_5fentries_1',['maximum_entries',['../d1/d3a/structmal__toolkit_1_1_measurer.html#abd76064808f063794e022a5aa01d9176',1,'mal_toolkit::Measurer']]],
   ['measure_2',['measure',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a7974eb2fd010cc78ac37b61a73a08660',1,'mal_toolkit::Measurer']]],
   ['measurer_3',['measurer',['../d2/d9d/classmal__packet__weaver_1_1_packet.html#aa5a120bff5b79f894c3cff158aaacc4d',1,'mal_packet_weaver::Packet']]],

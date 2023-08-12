@@ -1,0 +1,7 @@
+<map id="mal_packet_weaver::crypto::ECDSA::generate_key_pair" name="mal_packet_weaver::crypto::ECDSA::generate_key_pair">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,163,61"/>
+<area shape="rect" id="Node000002" href="$df/d10/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_key_pair_generator.html#a24a3aced4748f3729979c6e16f853068" title="Generates an ECDSA key pair." alt="" coords="211,5,420,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,31,196,31,196,36,163,36"/>
+<area shape="rect" id="Node000003" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a5ce0c445aa4f44df9f44ddcfe8bff0ef" title="Convert the ByteArray to a typed pointer." alt="" coords="468,13,600,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="420,31,453,31,453,36,420,36"/>
+</map>

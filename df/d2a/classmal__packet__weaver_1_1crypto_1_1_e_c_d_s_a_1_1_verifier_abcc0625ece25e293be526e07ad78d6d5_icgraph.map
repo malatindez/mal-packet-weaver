@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::crypto::ECDSA::Verifier::verify_data" name="mal_packet_weaver::crypto::ECDSA::Verifier::verify_data">
+<area shape="rect" id="Node000001" title="Verifies the signature of binary data." alt="" coords="227,5,381,61"/>
+<area shape="rect" id="Node000002" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#a945499cfa6f78a7ab8ad28f12064a9ea" title=" " alt="" coords="5,13,179,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,36,179,36,179,31,212,31"/>
+</map>

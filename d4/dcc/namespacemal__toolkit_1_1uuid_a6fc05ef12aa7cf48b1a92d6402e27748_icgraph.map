@@ -1,0 +1,5 @@
+<map id="mal_toolkit::uuid::m128itos" name="mal_toolkit::uuid::m128itos">
+<area shape="rect" id="Node000001" title="Converts a 128&#45;bits unsigned int to an UUIDv4 string representation using SIMD via AVX2." alt="" coords="170,5,286,46"/>
+<area shape="rect" id="Node000002" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a4e75c9f1f51435c35a76386a1e98b134" title=" " alt="" coords="5,5,122,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,28,122,28,122,23,154,23"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="mal_packet_weaver::PacketDispatcher::fulfill_promises" name="mal_packet_weaver::PacketDispatcher::fulfill_promises">
+<area shape="rect" id="Node000001" title="Fulfills promises associated with a packet ID." alt="" coords="464,5,612,61"/>
+<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323" title="This function represents the main loop for running a task with exponential backoff and asynchronous I..." alt="" coords="271,13,416,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,36,416,36,416,31,449,31"/>
+<area shape="rect" id="Node000003" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac22bb2ccd532850a73766ce512b50082" title="Constructs a PacketDispatcher instance associated with the given io_context." alt="" coords="5,13,223,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="256,36,223,36,223,31,256,31"/>
+</map>

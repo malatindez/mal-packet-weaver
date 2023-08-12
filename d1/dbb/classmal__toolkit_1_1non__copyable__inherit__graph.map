@@ -1,4 +1,5 @@
 <map id="mal_toolkit::non_copyable" name="mal_toolkit::non_copyable">
-<area shape="rect" id="node1" title="A class that can&#39;t be copied." alt="" coords="5,5,176,31"/>
-<area shape="rect" id="node2" href="$d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html" title="A class that can&#39;t be copied neither moved." alt="" coords="5,79,176,119"/>
+<area shape="rect" id="Node000001" title="A class that can&#39;t be copied." alt="" coords="5,5,165,31"/>
+<area shape="rect" id="Node000002" href="$d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html" title="A class that can&#39;t be copied neither moved." alt="" coords="5,79,165,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,46,88,79,82,79,82,46"/>
 </map>

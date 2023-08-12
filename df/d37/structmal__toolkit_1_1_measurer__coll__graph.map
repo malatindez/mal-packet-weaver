@@ -1,7 +1,24 @@
 <map id="mal_toolkit::Measurer&lt; clock &gt;" name="mal_toolkit::Measurer&lt; clock &gt;">
-<area shape="rect" id="node1" title="A class for measuring and logging the execution time of functions." alt="" coords="69,211,215,251"/>
-<area shape="rect" id="node2" title=" " alt="" coords="33,115,112,141"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,129,45"/>
-<area shape="rect" id="node4" title=" " alt="" coords="144,108,300,148"/>
-<area shape="rect" id="node5" href="$db/ddb/structmal__toolkit_1_1_measurer_1_1_entry.html" title=" " alt="" coords="153,5,299,45"/>
+<area shape="rect" id="Node000001" title="A class for measuring and logging the execution time of functions." alt="" coords="764,127,903,167"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,20,51,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,23,75,22,133,22,377,17,484,18,622,28,683,32,710,38,742,51,766,67,787,87,820,125,816,128,783,90,762,71,739,56,708,43,683,37,621,34,484,24,377,23,133,27,75,27,66,28"/>
+<area shape="rect" id="Node000008" href="$db/ddb/structmal__toolkit_1_1_measurer_1_1_entry.html" title=" " alt="" coords="157,43,295,83"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="65,49,75,52,116,59,156,62,156,67,115,64,74,57,64,54"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="521,108,574,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="589,121,764,138,764,143,589,127"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="526,157,570,183"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="585,169,657,171,740,166,763,162,764,168,741,171,657,176,585,175"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="511,206,585,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="599,214,667,207,739,191,797,165,800,170,741,197,668,213,600,220"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="168,199,284,239"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="299,216,510,216,510,222,299,222"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="474,43,621,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="637,68,689,78,741,92,774,107,803,124,800,128,771,112,739,98,688,83,636,74"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="310,60,474,60,474,66,310,66"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="173,112,279,137"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="294,118,369,110,449,96,495,81,497,87,451,101,370,115,294,123"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="9,112,47,137"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="62,122,172,122,172,127,62,127"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="495,278,600,304"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="615,291,678,284,709,275,739,262,766,241,789,216,820,167,824,169,793,219,769,245,742,266,711,280,679,289,615,296"/>
 </map>
