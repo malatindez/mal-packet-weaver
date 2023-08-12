@@ -39,60 +39,44 @@ var annotated_dup =
       [ "return_type< R(C::*)(Args...)>", "d2/d15/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4.html", "d2/d15/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4" ],
       [ "Timer", "db/d8f/classmal__toolkit_1_1_timer.html", "db/d8f/classmal__toolkit_1_1_timer" ]
     ] ],
-    [ "node_system", "dd/dd7/namespacenode__system.html", [
-      [ "crypto", "d5/d31/namespacenode__system_1_1crypto.html", [
-        [ "AES", "d2/d35/namespacenode__system_1_1crypto_1_1_a_e_s.html", [
-          [ "AES256", "d1/dbc/classnode__system_1_1crypto_1_1_a_e_s_1_1_a_e_s256.html", "d1/dbc/classnode__system_1_1crypto_1_1_a_e_s_1_1_a_e_s256" ]
-        ] ],
-        [ "ECDSA", "d6/d96/namespacenode__system_1_1crypto_1_1_e_c_d_s_a.html", [
-          [ "KeyPairGenerator", "de/d43/classnode__system_1_1crypto_1_1_e_c_d_s_a_1_1_key_pair_generator.html", "de/d43/classnode__system_1_1crypto_1_1_e_c_d_s_a_1_1_key_pair_generator" ],
-          [ "Signer", "df/d5e/classnode__system_1_1crypto_1_1_e_c_d_s_a_1_1_signer.html", "df/d5e/classnode__system_1_1crypto_1_1_e_c_d_s_a_1_1_signer" ],
-          [ "Verifier", "d0/dfa/classnode__system_1_1crypto_1_1_e_c_d_s_a_1_1_verifier.html", "d0/dfa/classnode__system_1_1crypto_1_1_e_c_d_s_a_1_1_verifier" ]
-        ] ],
-        [ "DiffieHellmanHelper", "d0/dfa/classnode__system_1_1crypto_1_1_diffie_hellman_helper.html", "d0/dfa/classnode__system_1_1crypto_1_1_diffie_hellman_helper" ],
-        [ "Hash", "d6/d63/structnode__system_1_1crypto_1_1_hash.html", "d6/d63/structnode__system_1_1crypto_1_1_hash" ],
-        [ "Key", "d1/d15/classnode__system_1_1crypto_1_1_key.html", null ],
-        [ "KeyPair", "dc/dda/structnode__system_1_1crypto_1_1_key_pair.html", "dc/dda/structnode__system_1_1crypto_1_1_key_pair" ],
-        [ "KeyView", "dd/d00/classnode__system_1_1crypto_1_1_key_view.html", null ],
-        [ "OPENSSL_OBJECT_WRAPPER", "d4/dec/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r.html", null ],
-        [ "OPENSSL_OBJECT_WRAPPER< BIO >", "d7/d4f/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_b_i_o_01_4.html", "d7/d4f/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_b_i_o_01_4" ],
-        [ "OPENSSL_OBJECT_WRAPPER< EVP_CIPHER_CTX >", "de/d2c/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___c_i_p_h_e_r___c_t_x_01_4.html", "de/d2c/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___c_i_p_h_e_r___c_t_x_01_4" ],
-        [ "OPENSSL_OBJECT_WRAPPER< EVP_PKEY >", "d0/d09/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y_01_4.html", "d0/d09/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y_01_4" ],
-        [ "OPENSSL_OBJECT_WRAPPER< EVP_PKEY_CTX >", "db/d1e/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y___c_t_x_01_4.html", "db/d1e/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y___c_t_x_01_4" ]
-      ] ],
-      [ "packet", "db/db4/namespacenode__system_1_1packet.html", [
-        [ "crypto", "dc/db2/namespacenode__system_1_1packet_1_1crypto.html", [
-          [ "DHKeyExchangeRequestPacket", "dc/d97/classnode__system_1_1packet_1_1crypto_1_1_d_h_key_exchange_request_packet.html", "dc/d97/classnode__system_1_1packet_1_1crypto_1_1_d_h_key_exchange_request_packet" ],
-          [ "DHKeyExchangeResponsePacket", "d9/d1f/classnode__system_1_1packet_1_1crypto_1_1_d_h_key_exchange_response_packet.html", "d9/d1f/classnode__system_1_1packet_1_1crypto_1_1_d_h_key_exchange_response_packet" ]
-        ] ],
-        [ "network", "d1/d99/namespacenode__system_1_1packet_1_1network.html", [
-          [ "EchoPacket", "d4/d98/classnode__system_1_1packet_1_1network_1_1_echo_packet.html", "d4/d98/classnode__system_1_1packet_1_1network_1_1_echo_packet" ],
-          [ "MessagePacket", "d0/d2a/classnode__system_1_1packet_1_1network_1_1_message_packet.html", "d0/d2a/classnode__system_1_1packet_1_1network_1_1_message_packet" ],
-          [ "PingPacket", "d5/d2d/classnode__system_1_1packet_1_1network_1_1_ping_packet.html", "d5/d2d/classnode__system_1_1packet_1_1network_1_1_ping_packet" ],
-          [ "PongPacket", "d2/dd0/classnode__system_1_1packet_1_1network_1_1_pong_packet.html", "d2/dd0/classnode__system_1_1packet_1_1network_1_1_pong_packet" ]
-        ] ],
-        [ "node", "d1/d7c/namespacenode__system_1_1packet_1_1node.html", [
-          [ "NodeInfoRequestPacket", "d5/d80/classnode__system_1_1packet_1_1node_1_1_node_info_request_packet.html", "d5/d80/classnode__system_1_1packet_1_1node_1_1_node_info_request_packet" ],
-          [ "NodeInfoResponsePacket", "d4/de2/classnode__system_1_1packet_1_1node_1_1_node_info_response_packet.html", "d4/de2/classnode__system_1_1packet_1_1node_1_1_node_info_response_packet" ]
-        ] ],
-        [ "system", "d4/df7/namespacenode__system_1_1packet_1_1system.html", [
-          [ "SystemInfoRequestPacket", "dc/ddf/classnode__system_1_1packet_1_1system_1_1_system_info_request_packet.html", "dc/ddf/classnode__system_1_1packet_1_1system_1_1_system_info_request_packet" ],
-          [ "SystemInfoResponsePacket", "db/dea/classnode__system_1_1packet_1_1system_1_1_system_info_response_packet.html", "db/dea/classnode__system_1_1packet_1_1system_1_1_system_info_response_packet" ]
-        ] ],
-        [ "PacketFactory", "de/df9/classnode__system_1_1packet_1_1_packet_factory.html", "de/df9/classnode__system_1_1packet_1_1_packet_factory" ]
-      ] ],
-      [ "ByteArray", "d0/d71/structnode__system_1_1_byte_array.html", "d0/d71/structnode__system_1_1_byte_array" ],
-      [ "ByteView", "d8/d4d/structnode__system_1_1_byte_view.html", "d8/d4d/structnode__system_1_1_byte_view" ],
-      [ "DerivedPacket", "d6/d1d/classnode__system_1_1_derived_packet.html", "d6/d1d/classnode__system_1_1_derived_packet" ],
-      [ "DispatcherSession", "d8/d53/classnode__system_1_1_dispatcher_session.html", "d8/d53/classnode__system_1_1_dispatcher_session" ],
-      [ "ExponentialBackoff", "d8/daa/classnode__system_1_1_exponential_backoff.html", "d8/daa/classnode__system_1_1_exponential_backoff" ],
-      [ "LinearBackoff", "d7/d55/classnode__system_1_1_linear_backoff.html", "d7/d55/classnode__system_1_1_linear_backoff" ],
-      [ "Packet", "da/d22/classnode__system_1_1_packet.html", "da/d22/classnode__system_1_1_packet" ],
-      [ "PacketDispatcher", "d4/de6/classnode__system_1_1_packet_dispatcher.html", "d4/de6/classnode__system_1_1_packet_dispatcher" ],
-      [ "Session", "d4/d49/classnode__system_1_1_session.html", "d4/d49/classnode__system_1_1_session" ]
-    ] ],
     [ "std", "d8/dcc/namespacestd.html", [
       [ "hash< mal_toolkit::uuid::UUID >", "db/d27/structstd_1_1hash_3_01mal__toolkit_1_1uuid_1_1_u_u_i_d_01_4.html", "db/d27/structstd_1_1hash_3_01mal__toolkit_1_1uuid_1_1_u_u_i_d_01_4" ]
+    ] ],
+    [ "weaver", "d1/d57/namespaceweaver.html", [
+      [ "AES256", "db/dcb/classweaver_1_1_a_e_s256.html", "db/dcb/classweaver_1_1_a_e_s256" ],
+      [ "ByteArray", "d3/d21/structweaver_1_1_byte_array.html", "d3/d21/structweaver_1_1_byte_array" ],
+      [ "ByteView", "de/d13/structweaver_1_1_byte_view.html", "de/d13/structweaver_1_1_byte_view" ],
+      [ "DerivedPacket", "d4/d4c/classweaver_1_1_derived_packet.html", "d4/d4c/classweaver_1_1_derived_packet" ],
+      [ "DHKeyExchangeRequestPacket", "d5/d44/classweaver_1_1_d_h_key_exchange_request_packet.html", "d5/d44/classweaver_1_1_d_h_key_exchange_request_packet" ],
+      [ "DHKeyExchangeResponsePacket", "d1/d7d/classweaver_1_1_d_h_key_exchange_response_packet.html", "d1/d7d/classweaver_1_1_d_h_key_exchange_response_packet" ],
+      [ "DiffieHellmanHelper", "d7/ded/classweaver_1_1_diffie_hellman_helper.html", "d7/ded/classweaver_1_1_diffie_hellman_helper" ],
+      [ "DispatcherSession", "d8/d25/classweaver_1_1_dispatcher_session.html", "d8/d25/classweaver_1_1_dispatcher_session" ],
+      [ "EchoPacket", "d2/d1f/classweaver_1_1_echo_packet.html", "d2/d1f/classweaver_1_1_echo_packet" ],
+      [ "ExponentialBackoff", "d4/dc1/classweaver_1_1_exponential_backoff.html", "d4/dc1/classweaver_1_1_exponential_backoff" ],
+      [ "Hash", "db/dec/structweaver_1_1_hash.html", "db/dec/structweaver_1_1_hash" ],
+      [ "Key", "dc/dfb/classweaver_1_1_key.html", null ],
+      [ "KeyPair", "d5/dd7/structweaver_1_1_key_pair.html", "d5/dd7/structweaver_1_1_key_pair" ],
+      [ "KeyPairGenerator", "d0/d23/classweaver_1_1_key_pair_generator.html", "d0/d23/classweaver_1_1_key_pair_generator" ],
+      [ "KeyView", "d4/d3d/classweaver_1_1_key_view.html", null ],
+      [ "LinearBackoff", "de/d13/classweaver_1_1_linear_backoff.html", "de/d13/classweaver_1_1_linear_backoff" ],
+      [ "MessagePacket", "d6/db0/classweaver_1_1_message_packet.html", "d6/db0/classweaver_1_1_message_packet" ],
+      [ "NodeInfoRequestPacket", "d7/dee/classweaver_1_1_node_info_request_packet.html", "d7/dee/classweaver_1_1_node_info_request_packet" ],
+      [ "NodeInfoResponsePacket", "d3/d0b/classweaver_1_1_node_info_response_packet.html", "d3/d0b/classweaver_1_1_node_info_response_packet" ],
+      [ "OPENSSL_OBJECT_WRAPPER", "d5/dbd/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r.html", null ],
+      [ "OPENSSL_OBJECT_WRAPPER< BIO >", "db/d83/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_b_i_o_01_4.html", "db/d83/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_b_i_o_01_4" ],
+      [ "OPENSSL_OBJECT_WRAPPER< EVP_CIPHER_CTX >", "d3/df2/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___c_i_p_h_e_r___c_t_x_01_4.html", "d3/df2/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___c_i_p_h_e_r___c_t_x_01_4" ],
+      [ "OPENSSL_OBJECT_WRAPPER< EVP_PKEY >", "d7/dde/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y_01_4.html", "d7/dde/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y_01_4" ],
+      [ "OPENSSL_OBJECT_WRAPPER< EVP_PKEY_CTX >", "d4/d26/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y___c_t_x_01_4.html", "d4/d26/structweaver_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_e_v_p___p_k_e_y___c_t_x_01_4" ],
+      [ "Packet", "d8/d0f/classweaver_1_1_packet.html", "d8/d0f/classweaver_1_1_packet" ],
+      [ "PacketDispatcher", "d7/d91/classweaver_1_1_packet_dispatcher.html", "d7/d91/classweaver_1_1_packet_dispatcher" ],
+      [ "PacketFactory", "df/d38/classweaver_1_1_packet_factory.html", "df/d38/classweaver_1_1_packet_factory" ],
+      [ "PingPacket", "da/db8/classweaver_1_1_ping_packet.html", "da/db8/classweaver_1_1_ping_packet" ],
+      [ "PongPacket", "df/d04/classweaver_1_1_pong_packet.html", "df/d04/classweaver_1_1_pong_packet" ],
+      [ "Session", "de/dc2/classweaver_1_1_session.html", "de/dc2/classweaver_1_1_session" ],
+      [ "Signer", "df/d40/classweaver_1_1_signer.html", "df/d40/classweaver_1_1_signer" ],
+      [ "SystemInfoRequestPacket", "d5/d5e/classweaver_1_1_system_info_request_packet.html", "d5/d5e/classweaver_1_1_system_info_request_packet" ],
+      [ "SystemInfoResponsePacket", "df/de6/classweaver_1_1_system_info_response_packet.html", "df/de6/classweaver_1_1_system_info_response_packet" ],
+      [ "Verifier", "d6/dfc/classweaver_1_1_verifier.html", "d6/dfc/classweaver_1_1_verifier" ]
     ] ],
     [ "Entry", "d7/da8/struct_measurer_1_1_entry.html", null ],
     [ "type_at", "de/df0/structparameter__pack__info_1_1type__at.html", null ]

@@ -1,9 +1,0 @@
-<map id="node_system::packet::crypto::DHKeyExchangeRequestPacket" name="node_system::packet::crypto::DHKeyExchangeRequestPacket">
-<area shape="rect" id="node1" title="Packet for Diffie&#45;Hellman key exchange request." alt="" coords="815,27,1029,82"/>
-<area shape="rect" id="node2" href="$d6/d1d/classnode__system_1_1_derived_packet.html" title=" " alt="" coords="437,5,701,45"/>
-<area shape="rect" id="node3" href="$da/d22/classnode__system_1_1_packet.html" title="Base class for all packets." alt="" coords="241,13,388,38"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,13,136,38"/>
-<area shape="rect" id="node5" href="$d0/d71/structnode__system_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="489,70,650,95"/>
-<area shape="rect" id="node6" title=" " alt="" coords="259,70,371,95"/>
-<area shape="rect" id="node7" title=" " alt="" coords="51,70,90,95"/>
-</map>

@@ -1,8 +1,8 @@
 var packet_system_8hpp =
 [
-    [ "node_system::packet::system::SystemInfoRequestPacket", "dc/ddf/classnode__system_1_1packet_1_1system_1_1_system_info_request_packet.html", "dc/ddf/classnode__system_1_1packet_1_1system_1_1_system_info_request_packet" ],
-    [ "node_system::packet::system::SystemInfoResponsePacket", "db/dea/classnode__system_1_1packet_1_1system_1_1_system_info_response_packet.html", "db/dea/classnode__system_1_1packet_1_1system_1_1_system_info_response_packet" ],
-    [ "RegisterDeserializers", "dd/d5c/packet-system_8hpp.html#aa5a5cbe36160ab6e2bf5bfd1ace6d75a", null ],
-    [ "SystemInfoRequestPacketID", "dd/d5c/packet-system_8hpp.html#a89c2eef893ae4f49800e7e617837481f", null ],
-    [ "SystemInfoResponsePacketID", "dd/d5c/packet-system_8hpp.html#a930a5cd68878b621fc0c92bfa7ff068e", null ]
+    [ "weaver::SystemInfoRequestPacket", "d5/d5e/classweaver_1_1_system_info_request_packet.html", "d5/d5e/classweaver_1_1_system_info_request_packet" ],
+    [ "weaver::SystemInfoResponsePacket", "df/de6/classweaver_1_1_system_info_response_packet.html", "df/de6/classweaver_1_1_system_info_response_packet" ],
+    [ "RegisterDeserializers", "dd/d5c/packet-system_8hpp.html#a1b2aed1e6ed3fef9af505a97b6639898", null ],
+    [ "SystemInfoRequestPacketID", "dd/d5c/packet-system_8hpp.html#ac319650da7b10a07858fbea09d5356c3", null ],
+    [ "SystemInfoResponsePacketID", "dd/d5c/packet-system_8hpp.html#a3fde69c0ecff8acd0c8fed0999c27fff", null ]
 ];

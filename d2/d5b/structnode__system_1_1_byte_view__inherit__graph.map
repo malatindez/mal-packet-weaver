@@ -1,5 +1,0 @@
-<map id="node_system::ByteView" name="node_system::ByteView">
-<area shape="rect" id="node1" title="A lightweight view over a sequence of bytes." alt="" coords="5,79,165,104"/>
-<area shape="rect" id="node3" href="$dd/d00/classnode__system_1_1crypto_1_1_key_view.html" title="Represents a view of a cryptographic key as a byte view." alt="" coords="15,152,155,192"/>
-<area shape="rect" id="node2" title=" " alt="" coords="33,5,137,31"/>
-</map>

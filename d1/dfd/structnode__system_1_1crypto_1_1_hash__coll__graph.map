@@ -1,6 +1,0 @@
-<map id="node_system::crypto::Hash" name="node_system::crypto::Hash">
-<area shape="rect" id="node1" title="Represents a cryptographic hash value along with its type." alt="" coords="16,256,156,296"/>
-<area shape="rect" id="node2" href="$d0/d71/structnode__system_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="5,168,167,193"/>
-<area shape="rect" id="node3" title=" " alt="" coords="30,93,142,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="67,5,105,31"/>
-</map>

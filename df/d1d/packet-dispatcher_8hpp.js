@@ -1,6 +1,6 @@
 var packet_dispatcher_8hpp =
 [
-    [ "node_system::PacketDispatcher", "d4/de6/classnode__system_1_1_packet_dispatcher.html", "d4/de6/classnode__system_1_1_packet_dispatcher" ],
-    [ "PacketFilterFunc", "df/d1d/packet-dispatcher_8hpp.html#a4af55e0316063ec0ca32549360f48b06", null ],
-    [ "PacketHandlerFunc", "df/d1d/packet-dispatcher_8hpp.html#a83b03f5025170a72c1af4257b2078cfb", null ]
+    [ "weaver::PacketDispatcher", "d7/d91/classweaver_1_1_packet_dispatcher.html", "d7/d91/classweaver_1_1_packet_dispatcher" ],
+    [ "PacketFilterFunc", "df/d1d/packet-dispatcher_8hpp.html#a2b7841e139e3d806922bb6e15b1ba32b", null ],
+    [ "PacketHandlerFunc", "df/d1d/packet-dispatcher_8hpp.html#aba553429c24083e10b69571caa331aa5", null ]
 ];

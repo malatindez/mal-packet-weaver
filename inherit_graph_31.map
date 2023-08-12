@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d7/d4f/structnode__system_1_1crypto_1_1_o_p_e_n_s_s_l___o_b_j_e_c_t___w_r_a_p_p_e_r_3_01_b_i_o_01_4.html" title="Specialization of OPENSSL_OBJECT_WRAPPER for BIO. Provides a custom deleter for freeing BIO objects." alt="" coords="5,5,227,60"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,109,56"/>
+<area shape="rect" id="node2" href="$d8/dab/structmal__toolkit_1_1_byte_view.html" title="A lightweight view over a sequence of bytes." alt="" coords="157,5,304,31"/>
+<area shape="rect" id="node3" href="$de/d13/structweaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes." alt="" coords="168,55,293,80"/>
+<area shape="rect" id="node4" href="$d4/d3d/classweaver_1_1_key_view.html" title="Represents a view of a cryptographic key as a byte view." alt="" coords="352,55,473,80"/>
 </map>

@@ -1,6 +1,0 @@
-<map id="node_system::crypto::KeyView" name="node_system::crypto::KeyView">
-<area shape="rect" id="node1" title="Represents a view of a cryptographic key as a byte view." alt="" coords="15,243,155,283"/>
-<area shape="rect" id="node2" href="$d8/d4d/structnode__system_1_1_byte_view.html" title="A lightweight view over a sequence of bytes." alt="" coords="5,168,165,193"/>
-<area shape="rect" id="node3" title=" " alt="" coords="33,93,137,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="66,5,105,31"/>
-</map>

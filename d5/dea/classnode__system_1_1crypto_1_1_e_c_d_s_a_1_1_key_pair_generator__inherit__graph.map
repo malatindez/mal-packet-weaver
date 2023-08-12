@@ -1,4 +1,0 @@
-<map id="node_system::crypto::ECDSA::KeyPairGenerator" name="node_system::crypto::ECDSA::KeyPairGenerator">
-<area shape="rect" id="node1" title="Generates ECDSA key pairs for a given curve." alt="" coords="5,93,185,133"/>
-<area shape="rect" id="node2" title=" " alt="" coords="30,5,161,45"/>
-</map>

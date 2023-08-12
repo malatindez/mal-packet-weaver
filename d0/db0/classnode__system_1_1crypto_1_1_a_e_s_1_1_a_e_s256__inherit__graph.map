@@ -1,4 +1,0 @@
-<map id="node_system::crypto::AES::AES256" name="node_system::crypto::AES::AES256">
-<area shape="rect" id="node1" title="Provides AES&#45;256 encryption and decryption functionality using OpenSSL." alt="" coords="5,93,145,133"/>
-<area shape="rect" id="node2" title=" " alt="" coords="10,5,141,45"/>
-</map>

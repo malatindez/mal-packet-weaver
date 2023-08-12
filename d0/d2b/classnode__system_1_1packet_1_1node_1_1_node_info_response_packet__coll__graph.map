@@ -1,6 +1,0 @@
-<map id="node_system::packet::node::NodeInfoResponsePacket" name="node_system::packet::node::NodeInfoResponsePacket">
-<area shape="rect" id="node1" title="Packet containing information about a node in response to a request." alt="" coords="13,240,228,280"/>
-<area shape="rect" id="node2" href="$d6/d1d/classnode__system_1_1_derived_packet.html" title=" " alt="" coords="5,152,236,192"/>
-<area shape="rect" id="node3" href="$da/d22/classnode__system_1_1_packet.html" title="Base class for all packets." alt="" coords="47,79,194,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="55,5,186,31"/>
-</map>

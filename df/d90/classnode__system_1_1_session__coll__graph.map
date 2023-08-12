@@ -1,9 +1,0 @@
-<map id="node_system::Session" name="node_system::Session">
-<area shape="rect" id="node1" title="Represents a network session for sending and receiving packets." alt="" coords="952,111,1104,137"/>
-<area shape="rect" id="node2" title=" " alt="" coords="63,5,193,45"/>
-<area shape="rect" id="node5" href="$d1/dbc/classnode__system_1_1crypto_1_1_a_e_s_1_1_a_e_s256.html" title="Provides AES&#45;256 encryption and decryption functionality using OpenSSL." alt="" coords="400,68,540,108"/>
-<area shape="rect" id="node3" title=" " alt="" coords="607,140,759,180"/>
-<area shape="rect" id="node4" title=" " alt="" coords="610,61,755,115"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,71,251,140"/>
-<area shape="rect" id="node7" title=" " alt="" coords="642,205,723,230"/>
-</map>

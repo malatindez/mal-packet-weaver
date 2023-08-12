@@ -1,8 +1,8 @@
 var packet_node_8hpp =
 [
-    [ "node_system::packet::node::NodeInfoRequestPacket", "d5/d80/classnode__system_1_1packet_1_1node_1_1_node_info_request_packet.html", "d5/d80/classnode__system_1_1packet_1_1node_1_1_node_info_request_packet" ],
-    [ "node_system::packet::node::NodeInfoResponsePacket", "d4/de2/classnode__system_1_1packet_1_1node_1_1_node_info_response_packet.html", "d4/de2/classnode__system_1_1packet_1_1node_1_1_node_info_response_packet" ],
-    [ "RegisterDeserializers", "d3/d61/packet-node_8hpp.html#a9cbfc10a882298817f07f0cfc6f0dd79", null ],
-    [ "NodeInfoRequestPacketID", "d3/d61/packet-node_8hpp.html#aae0a1aacd5c69e05a39964687737cbc9", null ],
-    [ "NodeInfoResponsePacketID", "d3/d61/packet-node_8hpp.html#a96118745b4c239e5732b172ec489101f", null ]
+    [ "weaver::NodeInfoRequestPacket", "d7/dee/classweaver_1_1_node_info_request_packet.html", "d7/dee/classweaver_1_1_node_info_request_packet" ],
+    [ "weaver::NodeInfoResponsePacket", "d3/d0b/classweaver_1_1_node_info_response_packet.html", "d3/d0b/classweaver_1_1_node_info_response_packet" ],
+    [ "RegisterDeserializers", "d3/d61/packet-node_8hpp.html#a1b2aed1e6ed3fef9af505a97b6639898", null ],
+    [ "NodeInfoRequestPacketID", "d3/d61/packet-node_8hpp.html#ad7084a1eeea751ed2a0ec3cc63949e27", null ],
+    [ "NodeInfoResponsePacketID", "d3/d61/packet-node_8hpp.html#a20596b85a8d0c9d053ae8f1b66866f37", null ]
 ];
