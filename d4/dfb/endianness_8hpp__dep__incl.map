@@ -1,4 +1,4 @@
-<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/detail/endianness.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/detail/endianness.hpp">
-<area shape="rect" id="node1" title="Provides functions and utilities for handling endianness conversions." alt="" coords="5,5,220,45"/>
-<area shape="rect" id="node2" href="$d7/db4/uuid_8hpp.html" title="Defines utilities for working with Universally Unique Identifiers (UUIDs)." alt="" coords="39,93,186,133"/>
+<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/detail/endianness.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/detail/endianness.hpp">
+<area shape="rect" id="node1" title="Provides functions and utilities for handling endianness conversions." alt="" coords="5,5,156,60"/>
+<area shape="rect" id="node2" href="$d7/db4/uuid_8hpp.html" title="Defines utilities for working with Universally Unique Identifiers (UUIDs)." alt="" coords="5,108,156,163"/>
 </map>

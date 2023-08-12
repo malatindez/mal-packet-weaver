@@ -1,7 +1,7 @@
-<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/debug.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/debug.hpp">
-<area shape="rect" id="node1" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="226,5,375,45"/>
-<area shape="rect" id="node2" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="5,93,180,148"/>
-<area shape="rect" id="node3" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="204,93,397,148"/>
-<area shape="rect" id="node4" href="$d1/d08/mal__toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="407,196,584,236"/>
-<area shape="rect" id="node5" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="473,101,641,141"/>
+<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/debug.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/debug.hpp">
+<area shape="rect" id="node1" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="223,5,374,60"/>
+<area shape="rect" id="node2" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="5,108,179,177"/>
+<area shape="rect" id="node3" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="203,108,394,177"/>
+<area shape="rect" id="node4" href="$d1/d08/mal__toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="413,225,563,280"/>
+<area shape="rect" id="node5" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="470,115,621,170"/>
 </map>

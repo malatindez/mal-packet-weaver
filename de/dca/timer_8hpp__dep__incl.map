@@ -1,5 +1,5 @@
-<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/timer.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/timer.hpp">
-<area shape="rect" id="node1" title="Implements timer utilities for measuring elapsed time and intervals." alt="" coords="21,5,167,45"/>
-<area shape="rect" id="node2" href="$d1/d08/mal__toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="5,181,183,221"/>
-<area shape="rect" id="node3" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="71,93,239,133"/>
+<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/timer.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/timer.hpp">
+<area shape="rect" id="node1" title="Implements timer utilities for measuring elapsed time and intervals." alt="" coords="5,5,156,60"/>
+<area shape="rect" id="node2" href="$d1/d08/mal__toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="5,211,156,265"/>
+<area shape="rect" id="node3" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="63,108,213,163"/>
 </map>
