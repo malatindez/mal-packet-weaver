@@ -9,8 +9,7 @@
 #include "mal-packet-weaver/session.hpp"
 #include "packets/packet-crypto.hpp"
 #include "packets/packet-network.hpp"
-#include "packets/packet-node.hpp"
-#include "packets/packet-system.hpp"
+
 
 using namespace mal_packet_weaver;
 using namespace crypto;
@@ -30,7 +29,7 @@ std::string bytes_to_hex_str(ByteView const byte_view)
 
 boost::asio::awaitable<void> encryption_handler_server(
     std::shared_ptr<PacketDispatcher>& dispatcher, std::shared_ptr<Session>& connection, ECDSA::Signer& signer,
-    std::unique_ptr<packet::crypto::DHKeyExchangeRequestPacket> exchange_request)
+    std::unique_ptr<DHKeyExchangeRequestPacket> exchange_request)
 {
     if (!exchange_request)
     {
@@ -38,7 +37,7 @@ boost::asio::awaitable<void> encryption_handler_server(
     }
     spdlog::info("Received encryption request packet");
     DiffieHellmanHelper dh{};
-    packet::crypto::DHKeyExchangeResponsePacket response_packet;
+    DHKeyExchangeResponsePacket response_packet;
     response_packet.public_key = dh.get_public_key();
 
     std::mt19937_64 rng(std::random_device{}());
@@ -70,9 +69,9 @@ boost::asio::awaitable<void> encryption_handler_server(
 }
 
 void process_echo(std::shared_ptr<mal_packet_weaver::Session> connection,
-                  std::unique_ptr<mal_packet_weaver::packet::network::EchoPacket>&& echo)
+                  std::unique_ptr<EchoPacket>&& echo)
 {
-    mal_packet_weaver::packet::network::EchoPacket response;
+    EchoPacket response;
     response.echo_message = std::to_string(std::stoi(echo->echo_message) + 1);
     connection->send_packet(response);
     spdlog::info("Received message: {}", echo->echo_message);
@@ -106,6 +105,7 @@ private:
                     spdlog::info("New connection established.");
                     const auto connection =
                         std::make_shared<mal_packet_weaver::Session>(io_context_, std::move(socket));
+                    connections_.push_back(connection);
                 }
 
                 do_accept();
@@ -127,17 +127,9 @@ int main()
     using namespace mal_packet_weaver;
     using namespace crypto;
 
-    using namespace mal_packet_weaver::packet;
-    mal_packet_weaver::packet::crypto::RegisterDeserializers();
-    mal_packet_weaver::packet::network::RegisterDeserializers();
-    mal_packet_weaver::packet::node::RegisterDeserializers();
-    mal_packet_weaver::packet::system::RegisterDeserializers();
-
-    using namespace mal_packet_weaver::packet::crypto;
-    using namespace mal_packet_weaver::packet::network;
-    using namespace mal_packet_weaver::packet::system;
-    using namespace mal_packet_weaver::packet::node;
-
+    RegisterDeserializersCrypto();
+    RegisterDeserializersNetwork();
+    spdlog::info(std::filesystem::current_path().string());
     try
     {
         boost::asio::io_context io_context;
@@ -157,7 +149,7 @@ int main()
         TcpServer server(io_context, 1234, std::move(signer));
 
         std::vector<std::thread> threads;
-        for (int i = 0; i < 8; ++i)
+        for (int i = 0; i < 0; ++i)
         {
             threads.emplace_back(
                 [&io_context]()

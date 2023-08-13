@@ -15,13 +15,6 @@ namespace mal_packet_weaver
     /// Type alias for packet deserialization function.
     using PacketDeserializeFunc = std::function<std::unique_ptr<Packet>(const ByteView)>;
 
-    /// Predefined packet subsystem IDs.
-    constexpr PacketSubsystemID PacketSubsystemCrypto = 0x0001;
-    constexpr PacketSubsystemID PacketSubsystemNode = 0x0002;
-    constexpr PacketSubsystemID PacketSubsystemNetwork = 0x0003;
-    constexpr PacketSubsystemID PacketSubsystemUnknown = 0x0005;
-    constexpr PacketSubsystemID PacketSubsystemSystem = 0x0004;
-
     /// Enum representing different permission levels for packets.
     /// @todo: use RBAC system to manage permissions
     enum class Permission : uint32_t

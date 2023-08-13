@@ -6,25 +6,29 @@ namespace mal_packet_weaver
     /**
      * @brief Callback function type to handle packets asynchronously.
      *
-     * This function type defines the signature for packet handler functions that accept a unique
-     * pointer to a derived packet type and return an awaitable boost::asio task.
+     * This function type defines the signature for packet handler functions that accept a set of
+     * arguments followed by a unique pointer to a derived packet type and return an awaitable
+     * boost::asio task.
      *
      * @tparam DerivedPacket The derived packet type.
+     * @tparam Args Additional argument types.
      */
-    template <typename DerivedPacket>
-    using PacketHandlerFunc = std::function<void(std::unique_ptr<DerivedPacket>)>;
+    template <typename DerivedPacket, typename... Args>
+    using PacketHandlerFunc = std::function<void(Args..., std::unique_ptr<DerivedPacket>)>;
 
     /**
      * @brief Predicate function type to filter packets.
      *
-     * This function type defines the signature for packet filter functions that accept a const
-     * reference to a derived packet type and return a boolean indicating whether the packet should
-     * be filtered or not.
+     * This function type defines the signature for packet filter functions that accept a set of
+     * arguments followed by a const reference to a derived packet type and return a boolean
+     * indicating whether the packet should be filtered or not.
      *
      * @tparam DerivedPacket The derived packet type.
+     * @tparam Args Additional argument types.
      */
-    template <typename DerivedPacket>
-    using PacketFilterFunc = std::function<bool(DerivedPacket const &)>;
+    template <typename DerivedPacket, typename... Args>
+    using PacketFilterFunc = std::function<bool(Args..., DerivedPacket const &)>;
+
 
     /**
      * @brief The PacketDispatcher class is responsible for managing packet dispatching and

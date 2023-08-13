@@ -9,7 +9,12 @@ namespace mal_packet_weaver
         spdlog::debug("Session: Creating a new session");
 
         // Start receiving data from the socket
-        receive_all();
+        co_spawn(socket.get_executor(), [this, &io]() -> boost::asio::awaitable<void>
+            {
+                // wait until shared_ptr is initialized.
+                co_await get_shared_ptr(io);
+                receive_all();
+            }, boost::asio::detached);
 
         // Check if the socket is open and mark the session as alive if so
         alive_ = socket_.is_open();
