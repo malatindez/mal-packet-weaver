@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::crypto::ECDSA::Signer::sign_data" name="mal_packet_weaver::crypto::ECDSA::Signer::sign_data">
-<area shape="rect" id="Node000001" title="Signs binary data using the private key." alt="" coords="217,5,362,61"/>
-<area shape="rect" id="Node000002" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#ac3a3b5adbeac074fe5e7a57d22d44d7c" title=" " alt="" coords="5,13,169,54"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,36,169,36,169,31,202,31"/>
-</map>

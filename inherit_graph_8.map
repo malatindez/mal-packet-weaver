@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html" title=" " alt="" coords="5,5,138,46"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,13,112,39"/>
+<area shape="rect" id="Node000001" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="160,5,292,46"/>
+<area shape="poly" id="edge27_Node000000_Node000001" title=" " alt="" coords="126,23,159,23,159,28,126,28"/>
+<area shape="rect" id="Node000002" href="$da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html" title="Represents a cryptographic key as a byte array." alt="" coords="340,5,472,46"/>
+<area shape="poly" id="edge28_Node000001_Node000002" title=" " alt="" coords="307,23,340,23,340,28,307,28"/>
 </map>

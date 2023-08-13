@@ -46,7 +46,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 930;
+var viewWidth = 957;
 var viewHeight = 595;
 var sectionId = 'dynsection-0';
 </script>
@@ -58,9 +58,9 @@ var sectionId = 'dynsection-0';
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="A templated class representing a derived packet from the base Packet class.">
-<polygon fill="#999999" stroke="#666666" points="402.5,-299.12 265,-299.12 265,-268.62 402.5,-268.62 402.5,-299.12"/>
-<text text-anchor="start" x="273" y="-285.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="333.75" y="-274.38" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; PacketType &gt;</text>
+<polygon fill="#999999" stroke="#666666" points="430.25,-299.12 292.75,-299.12 292.75,-268.62 430.25,-268.62 430.25,-299.12"/>
+<text text-anchor="start" x="300.75" y="-285.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="361.5" y="-274.38" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; PacketType &gt;</text>
 </a>
 </g>
 </g>
@@ -68,10 +68,10 @@ var sectionId = 'dynsection-0';
 <g id="Node000004" class="node">
 <title>Node4</title>
 <g id="a_Node000004"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="734.62,-581.75 579.88,-581.75 579.88,-540 734.62,-540 734.62,-581.75"/>
-<text text-anchor="start" x="587.88" y="-568.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="587.88" y="-557" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-545.75" font-family="Times,serif" font-size="10.00"> DHKeyExchangeRequestPacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="762.38,-581.75 607.62,-581.75 607.62,-540 762.38,-540 762.38,-581.75"/>
+<text text-anchor="start" x="615.62" y="-568.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="615.62" y="-557" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-545.75" font-family="Times,serif" font-size="10.00"> DHKeyExchangeRequestPacket &gt;</text>
 </a>
 </g>
 </g>
@@ -79,21 +79,21 @@ var sectionId = 'dynsection-0';
 <g id="edge3_Node000001_Node000004" class="edge">
 <title>Node1&#45;&gt;Node4</title>
 <g id="a_edge3_Node000001_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M336.08,-310.24C340.09,-359.63 356.15,-465.97 420.5,-519.88 464.29,-556.55 529.05,-565.66 579.62,-566.23"/>
-<polygon fill="orange" stroke="orange" points="339.52,-310.25 335.33,-300.51 332.54,-310.73 339.52,-310.25"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M363.83,-310.24C367.84,-359.63 383.9,-465.97 448.25,-519.88 492.04,-556.55 556.8,-565.66 607.37,-566.23"/>
+<polygon fill="orange" stroke="orange" points="367.27,-310.25 363.08,-300.51 360.29,-310.73 367.27,-310.25"/>
 </a>
 </g>
-<text text-anchor="start" x="423.12" y="-577.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class DHKeyExchangeRequest</text>
-<text text-anchor="middle" x="489.88" y="-566.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
+<text text-anchor="start" x="450.88" y="-577.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class DHKeyExchangeRequest</text>
+<text text-anchor="middle" x="517.62" y="-566.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
 <g id="a_Node000006"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="737.25,-521.75 577.25,-521.75 577.25,-480 737.25,-480 737.25,-521.75"/>
-<text text-anchor="start" x="585.25" y="-508.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="585.25" y="-497" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-485.75" font-family="Times,serif" font-size="10.00"> DHKeyExchangeResponsePacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="765,-521.75 605,-521.75 605,-480 765,-480 765,-521.75"/>
+<text text-anchor="start" x="613" y="-508.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="613" y="-497" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-485.75" font-family="Times,serif" font-size="10.00"> DHKeyExchangeResponsePacket &gt;</text>
 </a>
 </g>
 </g>
@@ -101,21 +101,21 @@ var sectionId = 'dynsection-0';
 <g id="edge5_Node000001_Node000006" class="edge">
 <title>Node1&#45;&gt;Node6</title>
 <g id="a_edge5_Node000001_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M341.89,-309.77C352.89,-344.68 377.34,-406.33 420.5,-439.88 465.15,-474.57 527.49,-489.67 576.86,-496.17"/>
-<polygon fill="orange" stroke="orange" points="345.02,-309.01 338.79,-300.44 338.32,-311.02 345.02,-309.01"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M369.64,-309.77C380.64,-344.68 405.09,-406.33 448.25,-439.88 492.9,-474.57 555.24,-489.67 604.61,-496.17"/>
+<polygon fill="orange" stroke="orange" points="372.77,-309.01 366.54,-300.44 366.07,-311.02 372.77,-309.01"/>
 </a>
 </g>
-<text text-anchor="start" x="420.5" y="-505.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class DHKeyExchangeResponse</text>
-<text text-anchor="middle" x="489.88" y="-494.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
+<text text-anchor="start" x="448.25" y="-505.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class DHKeyExchangeResponse</text>
+<text text-anchor="middle" x="517.62" y="-494.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
 </g>
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
 <g id="a_Node000008"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="708,-461.75 606.5,-461.75 606.5,-420 708,-420 708,-461.75"/>
-<text text-anchor="start" x="614.5" y="-448.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="614.5" y="-437" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-425.75" font-family="Times,serif" font-size="10.00"> EchoPacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="735.75,-461.75 634.25,-461.75 634.25,-420 735.75,-420 735.75,-461.75"/>
+<text text-anchor="start" x="642.25" y="-448.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="642.25" y="-437" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-425.75" font-family="Times,serif" font-size="10.00"> EchoPacket &gt;</text>
 </a>
 </g>
 </g>
@@ -123,20 +123,20 @@ var sectionId = 'dynsection-0';
 <g id="edge7_Node000001_Node000008" class="edge">
 <title>Node1&#45;&gt;Node8</title>
 <g id="a_edge7_Node000001_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M351.8,-308.37C367.41,-329.01 392.31,-357.82 420.5,-374.88 478.69,-410.07 556.23,-427.05 606.2,-434.84"/>
-<polygon fill="orange" stroke="orange" points="354.05,-306.52 345.31,-300.54 348.41,-310.67 354.05,-306.52"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M379.55,-308.37C395.16,-329.01 420.06,-357.82 448.25,-374.88 506.44,-410.07 583.98,-427.05 633.95,-434.84"/>
+<polygon fill="orange" stroke="orange" points="381.8,-306.52 373.06,-300.54 376.16,-310.67 381.8,-306.52"/>
 </a>
 </g>
-<text text-anchor="middle" x="489.88" y="-426.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class EchoPacket &gt;</text>
+<text text-anchor="middle" x="517.62" y="-426.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class EchoPacket &gt;</text>
 </g>
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
 <g id="a_Node000010"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="708,-401.75 606.5,-401.75 606.5,-360 708,-360 708,-401.75"/>
-<text text-anchor="start" x="614.5" y="-388.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="614.5" y="-377" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-365.75" font-family="Times,serif" font-size="10.00"> MessagePacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="735.75,-401.75 634.25,-401.75 634.25,-360 735.75,-360 735.75,-401.75"/>
+<text text-anchor="start" x="642.25" y="-388.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="642.25" y="-377" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-365.75" font-family="Times,serif" font-size="10.00"> MessagePacket &gt;</text>
 </a>
 </g>
 </g>
@@ -144,20 +144,20 @@ var sectionId = 'dynsection-0';
 <g id="edge9_Node000001_Node000010" class="edge">
 <title>Node1&#45;&gt;Node10</title>
 <g id="a_edge9_Node000001_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M373.88,-304.13C388.27,-311.04 404.88,-318.4 420.5,-323.88 483.09,-345.79 557.9,-362.32 606.2,-371.79"/>
-<polygon fill="orange" stroke="orange" points="375.82,-300.7 365.3,-299.44 372.74,-306.98 375.82,-300.7"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M401.63,-304.13C416.02,-311.04 432.63,-318.4 448.25,-323.88 510.84,-345.79 585.65,-362.32 633.95,-371.79"/>
+<polygon fill="orange" stroke="orange" points="403.57,-300.7 393.05,-299.44 400.49,-306.98 403.57,-300.7"/>
 </a>
 </g>
-<text text-anchor="middle" x="489.88" y="-361.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class MessagePacket &gt;</text>
+<text text-anchor="middle" x="517.62" y="-361.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class MessagePacket &gt;</text>
 </g>
 <!-- Node12 -->
 <g id="Node000012" class="node">
 <title>Node12</title>
 <g id="a_Node000012"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="708,-341.75 606.5,-341.75 606.5,-300 708,-300 708,-341.75"/>
-<text text-anchor="start" x="614.5" y="-328.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="614.5" y="-317" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-305.75" font-family="Times,serif" font-size="10.00"> PingPacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="735.75,-341.75 634.25,-341.75 634.25,-300 735.75,-300 735.75,-341.75"/>
+<text text-anchor="start" x="642.25" y="-328.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="642.25" y="-317" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-305.75" font-family="Times,serif" font-size="10.00"> PingPacket &gt;</text>
 </a>
 </g>
 </g>
@@ -165,20 +165,20 @@ var sectionId = 'dynsection-0';
 <g id="edge11_Node000001_Node000012" class="edge">
 <title>Node1&#45;&gt;Node12</title>
 <g id="a_edge11_Node000001_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M413.51,-292.94C473.58,-299.85 554.5,-309.17 606.04,-315.1"/>
-<polygon fill="orange" stroke="orange" points="414.27,-289.39 403.93,-291.72 413.47,-296.34 414.27,-289.39"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M441.26,-292.94C501.33,-299.85 582.25,-309.17 633.79,-315.1"/>
+<polygon fill="orange" stroke="orange" points="442.02,-289.39 431.68,-291.72 441.22,-296.34 442.02,-289.39"/>
 </a>
 </g>
-<text text-anchor="middle" x="489.88" y="-310.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class PingPacket &gt;</text>
+<text text-anchor="middle" x="517.62" y="-310.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class PingPacket &gt;</text>
 </g>
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
 <g id="a_Node000014"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="708,-281.75 606.5,-281.75 606.5,-240 708,-240 708,-281.75"/>
-<text text-anchor="start" x="614.5" y="-268.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="614.5" y="-257" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-245.75" font-family="Times,serif" font-size="10.00"> PongPacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="735.75,-281.75 634.25,-281.75 634.25,-240 735.75,-240 735.75,-281.75"/>
+<text text-anchor="start" x="642.25" y="-268.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="642.25" y="-257" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-245.75" font-family="Times,serif" font-size="10.00"> PongPacket &gt;</text>
 </a>
 </g>
 </g>
@@ -186,20 +186,20 @@ var sectionId = 'dynsection-0';
 <g id="edge13_Node000001_Node000014" class="edge">
 <title>Node1&#45;&gt;Node14</title>
 <g id="a_edge13_Node000001_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M413.89,-278.21C473.92,-273.92 554.61,-268.15 606.04,-264.47"/>
-<polygon fill="orange" stroke="orange" points="413.66,-274.79 403.93,-279 414.16,-281.77 413.66,-274.79"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M441.64,-278.21C501.67,-273.92 582.36,-268.15 633.79,-264.47"/>
+<polygon fill="orange" stroke="orange" points="441.41,-274.79 431.68,-279 441.91,-281.77 441.41,-274.79"/>
 </a>
 </g>
-<text text-anchor="middle" x="489.88" y="-279.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class PongPacket &gt;</text>
+<text text-anchor="middle" x="517.62" y="-279.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class PongPacket &gt;</text>
 </g>
 <!-- Node16 -->
 <g id="Node000016" class="node">
 <title>Node16</title>
 <g id="a_Node000016"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="719.25,-221.75 595.25,-221.75 595.25,-180 719.25,-180 719.25,-221.75"/>
-<text text-anchor="start" x="603.25" y="-208.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="603.25" y="-197" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-185.75" font-family="Times,serif" font-size="10.00"> NodeInfoRequestPacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="747,-221.75 623,-221.75 623,-180 747,-180 747,-221.75"/>
+<text text-anchor="start" x="631" y="-208.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="631" y="-197" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-185.75" font-family="Times,serif" font-size="10.00"> NodeInfoRequestPacket &gt;</text>
 </a>
 </g>
 </g>
@@ -207,20 +207,20 @@ var sectionId = 'dynsection-0';
 <g id="edge15_Node000001_Node000016" class="edge">
 <title>Node1&#45;&gt;Node16</title>
 <g id="a_edge15_Node000001_Node000016"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M386,-264.68C397.28,-260.76 409.23,-256.86 420.5,-253.62 479.15,-236.78 547.29,-222.04 595.18,-212.46"/>
-<polygon fill="orange" stroke="orange" points="385.13,-261.63 376.86,-268.25 387.46,-268.23 385.13,-261.63"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M413.75,-264.68C425.03,-260.76 436.98,-256.86 448.25,-253.62 506.9,-236.78 575.04,-222.04 622.93,-212.46"/>
+<polygon fill="orange" stroke="orange" points="412.88,-261.63 404.61,-268.25 415.21,-268.23 412.88,-261.63"/>
 </a>
 </g>
-<text text-anchor="middle" x="489.88" y="-255.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class NodeInfoRequestPacket &gt;</text>
+<text text-anchor="middle" x="517.62" y="-255.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class NodeInfoRequestPacket &gt;</text>
 </g>
 <!-- Node18 -->
 <g id="Node000018" class="node">
 <title>Node18</title>
 <g id="a_Node000018"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="721.88,-161.75 592.62,-161.75 592.62,-120 721.88,-120 721.88,-161.75"/>
-<text text-anchor="start" x="600.62" y="-148.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="600.62" y="-137" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-125.75" font-family="Times,serif" font-size="10.00"> NodeInfoResponsePacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="749.62,-161.75 620.38,-161.75 620.38,-120 749.62,-120 749.62,-161.75"/>
+<text text-anchor="start" x="628.38" y="-148.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="628.38" y="-137" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-125.75" font-family="Times,serif" font-size="10.00"> NodeInfoResponsePacket &gt;</text>
 </a>
 </g>
 </g>
@@ -228,21 +228,21 @@ var sectionId = 'dynsection-0';
 <g id="edge17_Node000001_Node000018" class="edge">
 <title>Node1&#45;&gt;Node18</title>
 <g id="a_edge17_Node000001_Node000018"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M351.76,-259.75C367.34,-239.48 392.23,-211.34 420.5,-195.38 473.72,-165.31 542.6,-151.82 592.14,-145.77"/>
-<polygon fill="orange" stroke="orange" points="348.46,-257.32 345.28,-267.43 354.07,-261.51 348.46,-257.32"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M379.51,-259.75C395.09,-239.48 419.98,-211.34 448.25,-195.38 501.47,-165.31 570.35,-151.82 619.89,-145.77"/>
+<polygon fill="orange" stroke="orange" points="376.21,-257.32 373.03,-267.43 381.82,-261.51 376.21,-257.32"/>
 </a>
 </g>
-<text text-anchor="start" x="435.88" y="-208.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class NodeInfoResponse</text>
-<text text-anchor="middle" x="489.88" y="-197.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
+<text text-anchor="start" x="463.62" y="-208.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class NodeInfoResponse</text>
+<text text-anchor="middle" x="517.62" y="-197.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
 </g>
 <!-- Node20 -->
 <g id="Node000020" class="node">
 <title>Node20</title>
 <g id="a_Node000020"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="722.25,-101.75 592.25,-101.75 592.25,-60 722.25,-60 722.25,-101.75"/>
-<text text-anchor="start" x="600.25" y="-88.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="600.25" y="-77" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-65.75" font-family="Times,serif" font-size="10.00"> SystemInfoRequestPacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="750,-101.75 620,-101.75 620,-60 750,-60 750,-101.75"/>
+<text text-anchor="start" x="628" y="-88.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="628" y="-77" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-65.75" font-family="Times,serif" font-size="10.00"> SystemInfoRequestPacket &gt;</text>
 </a>
 </g>
 </g>
@@ -250,21 +250,21 @@ var sectionId = 'dynsection-0';
 <g id="edge19_Node000001_Node000020" class="edge">
 <title>Node1&#45;&gt;Node20</title>
 <g id="a_edge19_Node000001_Node000020"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M341.3,-257.7C351.7,-221.85 375.59,-158.17 420.5,-125.38 470.12,-89.14 540.82,-79.89 591.84,-78.56"/>
-<polygon fill="orange" stroke="orange" points="337.66,-256.72 338.38,-267.29 344.41,-258.58 337.66,-256.72"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M369.05,-257.7C379.45,-221.85 403.34,-158.17 448.25,-125.38 497.87,-89.14 568.57,-79.89 619.59,-78.56"/>
+<polygon fill="orange" stroke="orange" points="365.41,-256.72 366.13,-267.29 372.16,-258.58 365.41,-256.72"/>
 </a>
 </g>
-<text text-anchor="start" x="435.5" y="-138.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class SystemInfoRequest</text>
-<text text-anchor="middle" x="489.88" y="-127.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
+<text text-anchor="start" x="463.25" y="-138.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class SystemInfoRequest</text>
+<text text-anchor="middle" x="517.62" y="-127.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
 </g>
 <!-- Node22 -->
 <g id="Node000022" class="node">
 <title>Node22</title>
 <g id="a_Node000022"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="724.88,-41.75 589.62,-41.75 589.62,0 724.88,0 724.88,-41.75"/>
-<text text-anchor="start" x="597.62" y="-28.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="597.62" y="-17" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="657.25" y="-5.75" font-family="Times,serif" font-size="10.00"> SystemInfoResponsePacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="752.62,-41.75 617.38,-41.75 617.38,0 752.62,0 752.62,-41.75"/>
+<text text-anchor="start" x="625.38" y="-28.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="625.38" y="-17" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="685" y="-5.75" font-family="Times,serif" font-size="10.00"> SystemInfoResponsePacket &gt;</text>
 </a>
 </g>
 </g>
@@ -272,20 +272,20 @@ var sectionId = 'dynsection-0';
 <g id="edge21_Node000001_Node000022" class="edge">
 <title>Node1&#45;&gt;Node22</title>
 <g id="a_edge21_Node000001_Node000022"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M336.24,-257.38C340.5,-208.73 356.96,-105.47 420.5,-54.38 467.54,-16.56 537.6,-10.98 589.13,-13.17"/>
-<polygon fill="orange" stroke="orange" points="332.68,-257 335.41,-267.24 339.66,-257.53 332.68,-257"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M363.99,-257.38C368.25,-208.73 384.71,-105.47 448.25,-54.38 495.29,-16.56 565.35,-10.98 616.88,-13.17"/>
+<polygon fill="orange" stroke="orange" points="360.43,-257 363.16,-267.24 367.41,-257.53 360.43,-257"/>
 </a>
 </g>
-<text text-anchor="start" x="432.88" y="-67.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class SystemInfoResponse</text>
-<text text-anchor="middle" x="489.88" y="-56.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
+<text text-anchor="start" x="460.62" y="-67.88" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class SystemInfoResponse</text>
+<text text-anchor="middle" x="517.62" y="-56.62" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
 </g>
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html" target="_top" xlink:title="Base class for all packets.">
-<polygon fill="white" stroke="#666666" points="228,-299.12 128.75,-299.12 128.75,-268.62 228,-268.62 228,-299.12"/>
-<text text-anchor="start" x="136.75" y="-285.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="178.38" y="-274.38" font-family="Times,serif" font-size="10.00">Packet</text>
+<polygon fill="white" stroke="#666666" points="255.75,-299.12 156.5,-299.12 156.5,-268.62 255.75,-268.62 255.75,-299.12"/>
+<text text-anchor="start" x="164.5" y="-285.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="206.12" y="-274.38" font-family="Times,serif" font-size="10.00">Packet</text>
 </a>
 </g>
 </g>
@@ -293,8 +293,8 @@ var sectionId = 'dynsection-0';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node2&#45;&gt;Node1</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M239.14,-283.88C247.52,-283.88 256.18,-283.88 264.69,-283.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="239.33,-280.38 229.33,-283.88 239.33,-287.38 239.33,-280.38"/>
+<path fill="none" stroke="#63b8ff" d="M266.89,-283.88C275.27,-283.88 283.93,-283.88 292.44,-283.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="267.08,-280.38 257.08,-283.88 267.08,-287.38 267.08,-280.38"/>
 </a>
 </g>
 </g>
@@ -302,8 +302,8 @@ var sectionId = 'dynsection-0';
 <g id="Node000003" class="node">
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="91.75,-293.5 0,-293.5 0,-274.25 91.75,-274.25 91.75,-293.5"/>
-<text text-anchor="middle" x="45.88" y="-280" font-family="Times,serif" font-size="10.00">utils::non_copyable</text>
+<polygon fill="white" stroke="#666666" points="119.5,-293.5 0,-293.5 0,-274.25 119.5,-274.25 119.5,-293.5"/>
+<text text-anchor="middle" x="59.75" y="-280" font-family="Times,serif" font-size="10.00">mal_toolkit::non_copyable</text>
 </a>
 </g>
 </g>
@@ -311,8 +311,8 @@ var sectionId = 'dynsection-0';
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node3&#45;&gt;Node2</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M103.14,-283.88C111.62,-283.88 120.31,-283.88 128.62,-283.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="103.15,-280.38 93.15,-283.88 103.15,-287.38 103.15,-280.38"/>
+<path fill="none" stroke="#63b8ff" d="M130.81,-283.88C139.47,-283.88 148.18,-283.88 156.43,-283.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="130.89,-280.38 120.89,-283.88 130.89,-287.38 130.89,-280.38"/>
 </a>
 </g>
 </g>
@@ -320,10 +320,10 @@ var sectionId = 'dynsection-0';
 <g id="Node000005" class="node">
 <title>Node5</title>
 <g id="a_Node000005"><a xlink:href="../../d2/d9c/classmal__packet__weaver_1_1packet_1_1crypto_1_1_d_h_key_exchange_request_packet.html" target="_top" xlink:title="Packet for Diffie&#45;Hellman key exchange request.">
-<polygon fill="white" stroke="#666666" points="921.5,-581.75 774.25,-581.75 774.25,-540 921.5,-540 921.5,-581.75"/>
-<text text-anchor="start" x="782.25" y="-568.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="782.25" y="-557" font-family="Times,serif" font-size="10.00">packet::crypto::DHKeyExchange</text>
-<text text-anchor="middle" x="847.88" y="-545.75" font-family="Times,serif" font-size="10.00">RequestPacket</text>
+<polygon fill="white" stroke="#666666" points="949.25,-581.75 802,-581.75 802,-540 949.25,-540 949.25,-581.75"/>
+<text text-anchor="start" x="810" y="-568.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="810" y="-557" font-family="Times,serif" font-size="10.00">packet::crypto::DHKeyExchange</text>
+<text text-anchor="middle" x="875.62" y="-545.75" font-family="Times,serif" font-size="10.00">RequestPacket</text>
 </a>
 </g>
 </g>
@@ -331,8 +331,8 @@ var sectionId = 'dynsection-0';
 <g id="edge4_Node000004_Node000005" class="edge">
 <title>Node4&#45;&gt;Node5</title>
 <g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M745.9,-560.88C755.26,-560.88 764.71,-560.88 773.88,-560.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="745.97,-557.38 735.97,-560.88 745.97,-564.38 745.97,-557.38"/>
+<path fill="none" stroke="#63b8ff" d="M773.65,-560.88C783.01,-560.88 792.46,-560.88 801.63,-560.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="773.72,-557.38 763.72,-560.88 773.72,-564.38 773.72,-557.38"/>
 </a>
 </g>
 </g>
@@ -340,10 +340,10 @@ var sectionId = 'dynsection-0';
 <g id="Node000007" class="node">
 <title>Node7</title>
 <g id="a_Node000007"><a xlink:href="../../d5/d65/classmal__packet__weaver_1_1packet_1_1crypto_1_1_d_h_key_exchange_response_packet.html" target="_top" xlink:title="Packet for Diffie&#45;Hellman key exchange response.">
-<polygon fill="white" stroke="#666666" points="921.5,-521.75 774.25,-521.75 774.25,-480 921.5,-480 921.5,-521.75"/>
-<text text-anchor="start" x="782.25" y="-508.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="782.25" y="-497" font-family="Times,serif" font-size="10.00">packet::crypto::DHKeyExchange</text>
-<text text-anchor="middle" x="847.88" y="-485.75" font-family="Times,serif" font-size="10.00">ResponsePacket</text>
+<polygon fill="white" stroke="#666666" points="949.25,-521.75 802,-521.75 802,-480 949.25,-480 949.25,-521.75"/>
+<text text-anchor="start" x="810" y="-508.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="810" y="-497" font-family="Times,serif" font-size="10.00">packet::crypto::DHKeyExchange</text>
+<text text-anchor="middle" x="875.62" y="-485.75" font-family="Times,serif" font-size="10.00">ResponsePacket</text>
 </a>
 </g>
 </g>
@@ -351,8 +351,8 @@ var sectionId = 'dynsection-0';
 <g id="edge6_Node000006_Node000007" class="edge">
 <title>Node6&#45;&gt;Node7</title>
 <g id="a_edge6_Node000006_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M748.43,-500.88C756.95,-500.88 765.5,-500.88 773.83,-500.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="748.7,-497.38 738.7,-500.88 748.7,-504.38 748.7,-497.38"/>
+<path fill="none" stroke="#63b8ff" d="M776.18,-500.88C784.7,-500.88 793.25,-500.88 801.58,-500.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="776.45,-497.38 766.45,-500.88 776.45,-504.38 776.45,-497.38"/>
 </a>
 </g>
 </g>
@@ -360,9 +360,9 @@ var sectionId = 'dynsection-0';
 <g id="Node000009" class="node">
 <title>Node9</title>
 <g id="a_Node000009"><a xlink:href="../../d5/d10/classmal__packet__weaver_1_1packet_1_1network_1_1_echo_packet.html" target="_top" xlink:title="Packet for echoing a received message.">
-<polygon fill="white" stroke="#666666" points="912.88,-456.12 782.88,-456.12 782.88,-425.62 912.88,-425.62 912.88,-456.12"/>
-<text text-anchor="start" x="790.88" y="-442.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="847.88" y="-431.38" font-family="Times,serif" font-size="10.00">packet::network::EchoPacket</text>
+<polygon fill="white" stroke="#666666" points="940.62,-456.12 810.62,-456.12 810.62,-425.62 940.62,-425.62 940.62,-456.12"/>
+<text text-anchor="start" x="818.62" y="-442.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="875.62" y="-431.38" font-family="Times,serif" font-size="10.00">packet::network::EchoPacket</text>
 </a>
 </g>
 </g>
@@ -370,8 +370,8 @@ var sectionId = 'dynsection-0';
 <g id="edge8_Node000008_Node000009" class="edge">
 <title>Node8&#45;&gt;Node9</title>
 <g id="a_edge8_Node000008_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M719.29,-440.88C739.57,-440.88 762.19,-440.88 782.69,-440.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="719.3,-437.38 709.3,-440.88 719.3,-444.38 719.3,-437.38"/>
+<path fill="none" stroke="#63b8ff" d="M747.04,-440.88C767.32,-440.88 789.94,-440.88 810.44,-440.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="747.05,-437.38 737.05,-440.88 747.05,-444.38 747.05,-437.38"/>
 </a>
 </g>
 </g>
@@ -379,9 +379,9 @@ var sectionId = 'dynsection-0';
 <g id="Node000011" class="node">
 <title>Node11</title>
 <g id="a_Node000011"><a xlink:href="../../da/d95/classmal__packet__weaver_1_1packet_1_1network_1_1_message_packet.html" target="_top" xlink:title="Packet for sending a text message.">
-<polygon fill="white" stroke="#666666" points="919.62,-396.12 776.12,-396.12 776.12,-365.62 919.62,-365.62 919.62,-396.12"/>
-<text text-anchor="start" x="784.12" y="-382.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="847.88" y="-371.38" font-family="Times,serif" font-size="10.00">packet::network::MessagePacket</text>
+<polygon fill="white" stroke="#666666" points="947.38,-396.12 803.88,-396.12 803.88,-365.62 947.38,-365.62 947.38,-396.12"/>
+<text text-anchor="start" x="811.88" y="-382.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="875.62" y="-371.38" font-family="Times,serif" font-size="10.00">packet::network::MessagePacket</text>
 </a>
 </g>
 </g>
@@ -389,8 +389,8 @@ var sectionId = 'dynsection-0';
 <g id="edge10_Node000010_Node000011" class="edge">
 <title>Node10&#45;&gt;Node11</title>
 <g id="a_edge10_Node000010_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M719.23,-380.88C737.22,-380.88 757.07,-380.88 775.64,-380.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="719.3,-377.38 709.3,-380.88 719.3,-384.38 719.3,-377.38"/>
+<path fill="none" stroke="#63b8ff" d="M746.98,-380.88C764.97,-380.88 784.82,-380.88 803.39,-380.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="747.05,-377.38 737.05,-380.88 747.05,-384.38 747.05,-377.38"/>
 </a>
 </g>
 </g>
@@ -398,9 +398,9 @@ var sectionId = 'dynsection-0';
 <g id="Node000013" class="node">
 <title>Node13</title>
 <g id="a_Node000013"><a xlink:href="../../d2/db1/classmal__packet__weaver_1_1packet_1_1network_1_1_ping_packet.html" target="_top" xlink:title="Packet for sending a ping signal.">
-<polygon fill="white" stroke="#666666" points="911.75,-336.12 784,-336.12 784,-305.62 911.75,-305.62 911.75,-336.12"/>
-<text text-anchor="start" x="792" y="-322.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="847.88" y="-311.38" font-family="Times,serif" font-size="10.00">packet::network::PingPacket</text>
+<polygon fill="white" stroke="#666666" points="939.5,-336.12 811.75,-336.12 811.75,-305.62 939.5,-305.62 939.5,-336.12"/>
+<text text-anchor="start" x="819.75" y="-322.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="875.62" y="-311.38" font-family="Times,serif" font-size="10.00">packet::network::PingPacket</text>
 </a>
 </g>
 </g>
@@ -408,8 +408,8 @@ var sectionId = 'dynsection-0';
 <g id="edge12_Node000012_Node000013" class="edge">
 <title>Node12&#45;&gt;Node13</title>
 <g id="a_edge12_Node000012_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M719.17,-320.88C739.82,-320.88 762.92,-320.88 783.73,-320.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="719.3,-317.38 709.3,-320.88 719.3,-324.38 719.3,-317.38"/>
+<path fill="none" stroke="#63b8ff" d="M746.92,-320.88C767.57,-320.88 790.67,-320.88 811.48,-320.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="747.05,-317.38 737.05,-320.88 747.05,-324.38 747.05,-317.38"/>
 </a>
 </g>
 </g>
@@ -417,9 +417,9 @@ var sectionId = 'dynsection-0';
 <g id="Node000015" class="node">
 <title>Node15</title>
 <g id="a_Node000015"><a xlink:href="../../d6/d7a/classmal__packet__weaver_1_1packet_1_1network_1_1_pong_packet.html" target="_top" xlink:title="Packet for responding to a ping signal.">
-<polygon fill="white" stroke="#666666" points="912.12,-276.12 783.62,-276.12 783.62,-245.62 912.12,-245.62 912.12,-276.12"/>
-<text text-anchor="start" x="791.62" y="-262.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="847.88" y="-251.38" font-family="Times,serif" font-size="10.00">packet::network::PongPacket</text>
+<polygon fill="white" stroke="#666666" points="939.88,-276.12 811.38,-276.12 811.38,-245.62 939.88,-245.62 939.88,-276.12"/>
+<text text-anchor="start" x="819.38" y="-262.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="875.62" y="-251.38" font-family="Times,serif" font-size="10.00">packet::network::PongPacket</text>
 </a>
 </g>
 </g>
@@ -427,8 +427,8 @@ var sectionId = 'dynsection-0';
 <g id="edge14_Node000014_Node000015" class="edge">
 <title>Node14&#45;&gt;Node15</title>
 <g id="a_edge14_Node000014_Node000015"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M719.12,-260.88C739.66,-260.88 762.64,-260.88 783.39,-260.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="719.3,-257.38 709.3,-260.88 719.3,-264.38 719.3,-257.38"/>
+<path fill="none" stroke="#63b8ff" d="M746.87,-260.88C767.41,-260.88 790.39,-260.88 811.14,-260.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="747.05,-257.38 737.05,-260.88 747.05,-264.38 747.05,-257.38"/>
 </a>
 </g>
 </g>
@@ -436,10 +436,10 @@ var sectionId = 'dynsection-0';
 <g id="Node000017" class="node">
 <title>Node17</title>
 <g id="a_Node000017"><a xlink:href="../../dd/d37/classmal__packet__weaver_1_1packet_1_1node_1_1_node_info_request_packet.html" target="_top" xlink:title="Packet for requesting information from a node.">
-<polygon fill="white" stroke="#666666" points="918.88,-221.75 776.88,-221.75 776.88,-180 918.88,-180 918.88,-221.75"/>
-<text text-anchor="start" x="784.88" y="-208.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="784.88" y="-197" font-family="Times,serif" font-size="10.00">packet::node::NodeInfoRequest</text>
-<text text-anchor="middle" x="847.88" y="-185.75" font-family="Times,serif" font-size="10.00">Packet</text>
+<polygon fill="white" stroke="#666666" points="946.62,-221.75 804.62,-221.75 804.62,-180 946.62,-180 946.62,-221.75"/>
+<text text-anchor="start" x="812.62" y="-208.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="812.62" y="-197" font-family="Times,serif" font-size="10.00">packet::node::NodeInfoRequest</text>
+<text text-anchor="middle" x="875.62" y="-185.75" font-family="Times,serif" font-size="10.00">Packet</text>
 </a>
 </g>
 </g>
@@ -447,8 +447,8 @@ var sectionId = 'dynsection-0';
 <g id="edge16_Node000016_Node000017" class="edge">
 <title>Node16&#45;&gt;Node17</title>
 <g id="a_edge16_Node000016_Node000017"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M730.33,-200.88C745.45,-200.88 761.38,-200.88 776.44,-200.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="730.49,-197.38 720.49,-200.88 730.49,-204.38 730.49,-197.38"/>
+<path fill="none" stroke="#63b8ff" d="M758.08,-200.88C773.2,-200.88 789.13,-200.88 804.19,-200.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="758.24,-197.38 748.24,-200.88 758.24,-204.38 758.24,-197.38"/>
 </a>
 </g>
 </g>
@@ -456,10 +456,10 @@ var sectionId = 'dynsection-0';
 <g id="Node000019" class="node">
 <title>Node19</title>
 <g id="a_Node000019"><a xlink:href="../../dd/d3d/classmal__packet__weaver_1_1packet_1_1node_1_1_node_info_response_packet.html" target="_top" xlink:title="Packet containing information about a node in response to a request.">
-<polygon fill="white" stroke="#666666" points="921.5,-161.75 774.25,-161.75 774.25,-120 921.5,-120 921.5,-161.75"/>
-<text text-anchor="start" x="782.25" y="-148.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="782.25" y="-137" font-family="Times,serif" font-size="10.00">packet::node::NodeInfoResponse</text>
-<text text-anchor="middle" x="847.88" y="-125.75" font-family="Times,serif" font-size="10.00">Packet</text>
+<polygon fill="white" stroke="#666666" points="949.25,-161.75 802,-161.75 802,-120 949.25,-120 949.25,-161.75"/>
+<text text-anchor="start" x="810" y="-148.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="810" y="-137" font-family="Times,serif" font-size="10.00">packet::node::NodeInfoResponse</text>
+<text text-anchor="middle" x="875.62" y="-125.75" font-family="Times,serif" font-size="10.00">Packet</text>
 </a>
 </g>
 </g>
@@ -467,8 +467,8 @@ var sectionId = 'dynsection-0';
 <g id="edge18_Node000018_Node000019" class="edge">
 <title>Node18&#45;&gt;Node19</title>
 <g id="a_edge18_Node000018_Node000019"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M733.01,-140.88C746.45,-140.88 760.45,-140.88 773.84,-140.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="733.37,-137.38 723.37,-140.88 733.37,-144.38 733.37,-137.38"/>
+<path fill="none" stroke="#63b8ff" d="M760.76,-140.88C774.2,-140.88 788.2,-140.88 801.59,-140.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="761.12,-137.38 751.12,-140.88 761.12,-144.38 761.12,-137.38"/>
 </a>
 </g>
 </g>
@@ -476,10 +476,10 @@ var sectionId = 'dynsection-0';
 <g id="Node000021" class="node">
 <title>Node21</title>
 <g id="a_Node000021"><a xlink:href="../../d3/d4a/classmal__packet__weaver_1_1packet_1_1system_1_1_system_info_request_packet.html" target="_top" xlink:title="Packet for requesting system information from a node.">
-<polygon fill="white" stroke="#666666" points="909.5,-101.75 786.25,-101.75 786.25,-60 909.5,-60 909.5,-101.75"/>
-<text text-anchor="start" x="794.25" y="-88.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="794.25" y="-77" font-family="Times,serif" font-size="10.00">packet::system::SystemInfo</text>
-<text text-anchor="middle" x="847.88" y="-65.75" font-family="Times,serif" font-size="10.00">RequestPacket</text>
+<polygon fill="white" stroke="#666666" points="937.25,-101.75 814,-101.75 814,-60 937.25,-60 937.25,-101.75"/>
+<text text-anchor="start" x="822" y="-88.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="822" y="-77" font-family="Times,serif" font-size="10.00">packet::system::SystemInfo</text>
+<text text-anchor="middle" x="875.62" y="-65.75" font-family="Times,serif" font-size="10.00">RequestPacket</text>
 </a>
 </g>
 </g>
@@ -487,8 +487,8 @@ var sectionId = 'dynsection-0';
 <g id="edge20_Node000020_Node000021" class="edge">
 <title>Node20&#45;&gt;Node21</title>
 <g id="a_edge20_Node000020_Node000021"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M733.37,-80.88C750.82,-80.88 769.2,-80.88 785.96,-80.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="733.64,-77.38 723.64,-80.88 733.64,-84.38 733.64,-77.38"/>
+<path fill="none" stroke="#63b8ff" d="M761.12,-80.88C778.57,-80.88 796.95,-80.88 813.71,-80.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="761.39,-77.38 751.39,-80.88 761.39,-84.38 761.39,-77.38"/>
 </a>
 </g>
 </g>
@@ -496,10 +496,10 @@ var sectionId = 'dynsection-0';
 <g id="Node000023" class="node">
 <title>Node23</title>
 <g id="a_Node000023"><a xlink:href="../../df/dc0/classmal__packet__weaver_1_1packet_1_1system_1_1_system_info_response_packet.html" target="_top" xlink:title="Packet containing system information in response to a request.">
-<polygon fill="white" stroke="#666666" points="909.5,-41.75 786.25,-41.75 786.25,0 909.5,0 909.5,-41.75"/>
-<text text-anchor="start" x="794.25" y="-28.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="794.25" y="-17" font-family="Times,serif" font-size="10.00">packet::system::SystemInfo</text>
-<text text-anchor="middle" x="847.88" y="-5.75" font-family="Times,serif" font-size="10.00">ResponsePacket</text>
+<polygon fill="white" stroke="#666666" points="937.25,-41.75 814,-41.75 814,0 937.25,0 937.25,-41.75"/>
+<text text-anchor="start" x="822" y="-28.25" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="822" y="-17" font-family="Times,serif" font-size="10.00">packet::system::SystemInfo</text>
+<text text-anchor="middle" x="875.62" y="-5.75" font-family="Times,serif" font-size="10.00">ResponsePacket</text>
 </a>
 </g>
 </g>
@@ -507,8 +507,8 @@ var sectionId = 'dynsection-0';
 <g id="edge22_Node000022_Node000023" class="edge">
 <title>Node22&#45;&gt;Node23</title>
 <g id="a_edge22_Node000022_Node000023"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M736.1,-20.88C752.76,-20.88 770.13,-20.88 786.03,-20.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="736.28,-17.38 726.28,-20.88 736.28,-24.38 736.28,-17.38"/>
+<path fill="none" stroke="#63b8ff" d="M763.85,-20.88C780.51,-20.88 797.88,-20.88 813.78,-20.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="764.03,-17.38 754.03,-20.88 764.03,-24.38 764.03,-17.38"/>
 </a>
 </g>
 </g>

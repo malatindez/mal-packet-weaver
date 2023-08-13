@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "mal-packet-weaver", "index.html", [
-    [ "Deprecated List", "da/d58/deprecated.html", null ],
     [ "Todo List", "dd/da0/todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -34,8 +33,7 @@ var NAVTREE =
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ],
-        [ "Enumerator", "namespacemembers_eval.html", null ]
+        [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
     [ "Concepts", "concepts.html", "concepts" ],
@@ -43,20 +41,15 @@ var NAVTREE =
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Macros", "globals_defs.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
@@ -64,12 +57,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d4a/classmal__packet__weaver_1_1packet_1_1system_1_1_system_info_request_packet.html",
-"d4/dcc/namespacemal__toolkit_1_1uuid.html#a6fc05ef12aa7cf48b1a92d6402e27748",
-"d6/d11/namespacemal__toolkit_1_1endianness.html#a3218032bd9d393be5fc5ec4da4374fb5",
-"d8/d99/structmal__toolkit_1_1_byte_array.html#a36dcef7b7965fa3ac6ffc4de36800b76",
-"db/d6e/library-pch_8hpp.html",
-"df/d10/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_key_pair_generator.html#ac6f56bf3b71c44ee55ccfb342c712639"
+"d4/d9d/structmal__packet__weaver_1_1_byte_array.html",
+"d8/d39/classmal__packet__weaver_1_1_session.html#a9cb6655f710d023540a11da7b218c5d3",
+"df/dc0/classmal__packet__weaver_1_1packet_1_1system_1_1_system_info_response_packet.html#aab8d39f572d7a0ac05a4f1dc07564ab9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

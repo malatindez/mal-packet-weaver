@@ -1,28 +1,5 @@
 <map id="mal_packet_weaver::ByteView::as" name="mal_packet_weaver::ByteView::as">
-<area shape="rect" id="Node000001" title="Convert the ByteView to a typed view." alt="" coords="691,193,824,234"/>
-<area shape="rect" id="Node000002" href="$d9/d37/classmal__packet__weaver_1_1crypto_1_1_a_e_s_1_1_a_e_s256.html#a7e57d3beac3e8a2c551e902de9979039" title="Constructor to initialize AES256 with a key and salt." alt="" coords="488,5,627,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="734,182,695,128,669,100,642,75,624,64,627,59,645,71,673,97,699,125,738,179"/>
-<area shape="rect" id="Node000003" href="$dd/dd7/namespacemal__packet__weaver_1_1crypto_1_1_s_h_a.html#a11d1f9c659cddb5ebfa6f560e4772fb2" title="Computes a hash value for the given data using the specified hash algorithm." alt="" coords="471,85,643,126"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="716,186,642,140,618,128,620,124,645,135,719,181"/>
-<area shape="rect" id="Node000009" href="$d9/d37/classmal__packet__weaver_1_1crypto_1_1_a_e_s_1_1_a_e_s256.html#a28153e7739c614b38c24e720e2c6f787" title="Decrypts ciphertext data using AES&#45;256 CBC mode." alt="" coords="488,149,627,205"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="676,201,627,192,628,187,677,196"/>
-<area shape="rect" id="Node000010" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1622df3e4ea56438f22f362cf1bd77b9" title="Deserialize a byte view into a unique pointer of the specified packet type." alt="" coords="476,229,638,270"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="677,230,639,237,638,232,676,225"/>
-<area shape="rect" id="Node000011" href="$d9/d37/classmal__packet__weaver_1_1crypto_1_1_a_e_s_1_1_a_e_s256.html#a4126e5bdba9b35fe6dee92a48f6528f0" title="Encrypts plaintext data using AES&#45;256 CBC mode." alt="" coords="488,293,627,349"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="713,244,645,284,622,295,619,290,642,279,710,239"/>
-<area shape="rect" id="Node000012" href="$df/d2a/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_verifier.html#a7dadcfb3708f7f300b62d57574c71543" title="Verifies a hash&#39;s signature." alt="" coords="480,373,634,429"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="740,248,700,305,674,336,645,363,628,375,625,371,642,359,670,332,696,302,735,245"/>
-<area shape="rect" id="Node000004" href="$d5/d65/classmal__packet__weaver_1_1packet_1_1crypto_1_1_d_h_key_exchange_response_packet.html#a5b0b722412687c056ae381e0687f10ba" title="Calculate the hash of the packet&#39;s contents." alt="" coords="227,37,423,93"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="456,91,423,85,424,79,457,85"/>
-<area shape="rect" id="Node000005" href="$d8/d88/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_signer.html#a80725b1d55e0efaa11469e3182f0b1c2" title="Signs binary data using the private key." alt="" coords="252,117,398,173"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="457,125,398,135,397,130,456,120"/>
-<area shape="rect" id="Node000007" href="$df/d2a/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_verifier.html#abcc0625ece25e293be526e07ad78d6d5" title="Verifies the signature of binary data." alt="" coords="248,229,402,285"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="480,135,473,139,448,162,425,187,368,231,365,227,421,183,444,158,469,135,477,130"/>
-<area shape="rect" id="Node000006" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#ac3a3b5adbeac074fe5e7a57d22d44d7c" title=" " alt="" coords="10,125,174,166"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,148,174,148,174,143,238,143"/>
-<area shape="rect" id="Node000008" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#a945499cfa6f78a7ab8ad28f12064a9ea" title=" " alt="" coords="5,237,179,278"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="233,260,179,260,179,255,233,255"/>
-<area shape="poly" id="edge12_Node000012_Node000007" title=" " alt="" coords="478,368,470,363,411,325,360,288,363,283,414,321,472,359,481,364"/>
-<area shape="rect" id="Node000013" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#ab6dd92f9047e147b5c13dd905bf6905a" title=" " alt="" coords="237,381,413,422"/>
-<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="465,404,413,404,413,399,465,399"/>
+<area shape="rect" id="Node000001" title="Convert the ByteView to a typed view." alt="" coords="216,5,348,46"/>
+<area shape="rect" id="Node000002" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1622df3e4ea56438f22f362cf1bd77b9" title="Deserialize a byte view into a unique pointer of the specified packet type." alt="" coords="5,5,168,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,28,168,28,168,23,201,23"/>
 </map>

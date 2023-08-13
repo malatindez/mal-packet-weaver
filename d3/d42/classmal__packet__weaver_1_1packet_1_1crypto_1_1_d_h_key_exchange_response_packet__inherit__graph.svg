@@ -91,8 +91,8 @@
 <g id="Node000004" class="node">
 <title>Node4</title>
 <g id="a_Node000004"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="121.88,-333.25 30.12,-333.25 30.12,-314 121.88,-314 121.88,-333.25"/>
-<text text-anchor="middle" x="76" y="-319.75" font-family="Times,serif" font-size="10.00">utils::non_copyable</text>
+<polygon fill="white" stroke="#666666" points="135.75,-333.25 16.25,-333.25 16.25,-314 135.75,-314 135.75,-333.25"/>
+<text text-anchor="middle" x="76" y="-319.75" font-family="Times,serif" font-size="10.00">mal_toolkit::non_copyable</text>
 </a>
 </g>
 </g>

@@ -1,19 +1,15 @@
 <map id="mal_packet_weaver::Session::pop_packet_async" name="mal_packet_weaver::Session::pop_packet_async">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,170,134"/>
-<area shape="rect" id="Node000002" href="$d7/d6c/classmal__packet__weaver_1_1_exponential_backoff.html#aa58aecd9c3c9a893de17afed16c1509f" title="Get the current backoff delay." alt="" coords="230,5,362,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,90,215,61,217,66,143,95"/>
-<area shape="rect" id="Node000003" href="$d7/d6c/classmal__packet__weaver_1_1_exponential_backoff.html#a4ce57a126c13af532d74f9c533cbbdf3" title="Increase the backoff delay using exponential factor." alt="" coords="230,85,362,141"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,111,215,111,215,116,170,116"/>
-<area shape="rect" id="Node000004" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0" title="Returns the earliest acquired packet. If packet queue is empty, returns nullptr." alt="" coords="218,165,374,206"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="149,131,222,157,220,162,147,137"/>
-<area shape="rect" id="Node000005" href="$d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="435,28,567,68"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="356,162,372,151,388,134,396,116,404,98,420,79,427,74,430,78,424,83,408,101,400,118,392,137,376,155,359,166"/>
-<area shape="rect" id="Node000006" href="$d8/d39/classmal__packet__weaver_1_1_session.html#ae6837dc10696dd27811306f6fa7e45b8" title="Public method to decrypt bytearray using locally stored AES256 pointer." alt="" coords="435,93,567,134"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="355,162,427,136,428,141,357,167"/>
-<area shape="rect" id="Node000007" href="$d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a1e6a3cb4e74ee9c34e309c9e3cfbd471" title="Deserialize a byte view into a unique pointer of the specified packet type." alt="" coords="433,157,570,213"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="374,183,418,183,418,188,374,188"/>
-<area shape="rect" id="Node000008" href="$d8/d39/classmal__packet__weaver_1_1_session.html#aa6838781a707ad1f37555d590c0f22c2" title="Pops the packet data from the received packets queue." alt="" coords="422,237,580,278"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="357,203,428,229,427,234,355,209"/>
-<area shape="rect" id="Node000009" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a88aac09c49f5b82796a94736781626c7" title="Create a ByteView of a subsequence of the byte array." alt="" coords="435,302,567,343"/>
-<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="320,204,366,245,423,287,434,293,431,297,421,291,362,249,316,208"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,143,170,183"/>
+<area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0" title="Returns the earliest acquired packet. If packet queue is empty, returns nullptr." alt="" coords="218,143,374,183"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,160,203,160,203,166,170,166"/>
+<area shape="rect" id="Node000003" href="$d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="435,5,567,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,140,362,99,421,57,431,51,434,55,423,61,366,103,320,144"/>
+<area shape="rect" id="Node000004" href="$d8/d39/classmal__packet__weaver_1_1_session.html#ae6837dc10696dd27811306f6fa7e45b8" title="Public method to decrypt bytearray using locally stored AES256 pointer." alt="" coords="435,71,567,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="355,140,427,114,428,119,357,145"/>
+<area shape="rect" id="Node000005" href="$d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a1e6a3cb4e74ee9c34e309c9e3cfbd471" title="Deserialize a byte view into a unique pointer of the specified packet type." alt="" coords="433,135,570,191"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="374,160,418,160,418,166,374,166"/>
+<area shape="rect" id="Node000006" href="$d8/d39/classmal__packet__weaver_1_1_session.html#aa6838781a707ad1f37555d590c0f22c2" title="Pops the packet data from the received packets queue." alt="" coords="422,215,580,255"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="357,181,428,207,427,212,355,186"/>
+<area shape="rect" id="Node000007" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a88aac09c49f5b82796a94736781626c7" title="Create a ByteView of a subsequence of the byte array." alt="" coords="435,280,567,321"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="320,182,366,223,423,265,434,271,431,275,421,269,362,227,316,186"/>
 </map>

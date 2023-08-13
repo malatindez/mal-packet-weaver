@@ -1,23 +1,23 @@
 <map id="mal_packet_weaver::packet::node::NodeInfoResponsePacket" name="mal_packet_weaver::packet::node::NodeInfoResponsePacket">
-<area shape="rect" id="Node000001" title="Packet containing information about a node in response to a request." alt="" coords="1124,240,1320,295"/>
-<area shape="rect" id="Node000002" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title=" " alt="" coords="832,169,1005,225"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1020,218,1124,242,1123,247,1019,223"/>
-<area shape="rect" id="Node000003" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="265,119,397,160"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="412,135,590,137,694,145,798,158,833,166,832,171,797,163,694,150,589,143,412,140"/>
-<area shape="rect" id="Node000009" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class." alt="" coords="446,177,630,217"/>
-<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="412,159,463,173,461,178,411,164"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="15,5,137,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="129,34,148,41,195,57,242,77,304,116,301,121,239,82,194,62,146,46,127,39"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="5,55,147,96"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="162,93,241,113,265,119,263,124,240,118,160,98"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="7,120,145,146"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="160,132,264,135,264,140,160,138"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="38,169,114,195"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="128,173,240,156,264,151,265,157,241,161,129,178"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="53,236,99,262"/>
-<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="114,251,211,260,330,265,920,265,1124,265,1124,270,920,270,329,270,211,265,113,256"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="112,236,172,215,240,188,295,158,298,163,242,193,174,220,113,241"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="645,194,832,194,832,200,645,200"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="822,305,1015,331"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1030,308,1100,299,1124,293,1125,298,1100,304,1030,314"/>
+<area shape="rect" id="Node000001" title="Packet containing information about a node in response to a request." alt="" coords="1142,240,1338,295"/>
+<area shape="rect" id="Node000002" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title=" " alt="" coords="850,169,1023,225"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1038,218,1142,242,1141,247,1037,223"/>
+<area shape="rect" id="Node000003" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="283,119,415,160"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="430,135,608,137,712,145,816,158,851,166,850,171,815,163,712,150,607,143,430,140"/>
+<area shape="rect" id="Node000009" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class." alt="" coords="464,177,648,217"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="430,159,481,173,479,178,429,164"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,165,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="144,34,166,41,214,58,260,78,321,116,318,121,257,83,212,63,164,46,142,39"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="14,55,156,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="171,93,259,114,283,120,281,125,258,119,169,98"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="16,120,154,146"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="169,132,282,135,282,141,169,138"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="47,169,123,195"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="137,174,258,156,282,151,283,157,259,161,138,179"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="62,236,108,262"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="123,250,224,260,348,265,938,265,1142,265,1142,270,938,270,347,270,223,265,122,256"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="121,236,185,216,258,188,313,158,316,163,260,193,187,221,123,242"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="663,194,850,194,850,200,663,200"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="840,305,1033,331"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1048,308,1118,299,1142,293,1143,298,1118,304,1048,314"/>
 </map>

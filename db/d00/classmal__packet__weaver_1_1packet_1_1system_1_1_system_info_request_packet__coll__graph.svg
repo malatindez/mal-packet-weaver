@@ -46,7 +46,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 971;
+var viewWidth = 985;
 var viewHeight = 252;
 var sectionId = 'dynsection-1';
 </script>
@@ -58,10 +58,10 @@ var sectionId = 'dynsection-1';
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="Packet for requesting system information from a node.">
-<polygon fill="#999999" stroke="#666666" points="963,-68.5 839.75,-68.5 839.75,-26.75 963,-26.75 963,-68.5"/>
-<text text-anchor="start" x="847.75" y="-55" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="847.75" y="-43.75" font-family="Times,serif" font-size="10.00">packet::system::SystemInfo</text>
-<text text-anchor="middle" x="901.38" y="-32.5" font-family="Times,serif" font-size="10.00">RequestPacket</text>
+<polygon fill="#999999" stroke="#666666" points="976.5,-68.5 853.25,-68.5 853.25,-26.75 976.5,-26.75 976.5,-68.5"/>
+<text text-anchor="start" x="861.25" y="-55" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="861.25" y="-43.75" font-family="Times,serif" font-size="10.00">packet::system::SystemInfo</text>
+<text text-anchor="middle" x="914.88" y="-32.5" font-family="Times,serif" font-size="10.00">RequestPacket</text>
 </a>
 </g>
 </g>
@@ -69,10 +69,10 @@ var sectionId = 'dynsection-1';
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="750.5,-121.5 620.5,-121.5 620.5,-79.75 750.5,-79.75 750.5,-121.5"/>
-<text text-anchor="start" x="628.5" y="-108" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="start" x="628.5" y="-96.75" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
-<text text-anchor="middle" x="685.5" y="-85.5" font-family="Times,serif" font-size="10.00"> SystemInfoRequestPacket &gt;</text>
+<polygon fill="white" stroke="#666666" points="764,-121.5 634,-121.5 634,-79.75 764,-79.75 764,-121.5"/>
+<text text-anchor="start" x="642" y="-108" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="start" x="642" y="-96.75" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; class</text>
+<text text-anchor="middle" x="699" y="-85.5" font-family="Times,serif" font-size="10.00"> SystemInfoRequestPacket &gt;</text>
 </a>
 </g>
 </g>
@@ -80,8 +80,8 @@ var sectionId = 'dynsection-1';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node2&#45;&gt;Node1</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M761.33,-82.08C786.85,-75.76 815.05,-68.77 839.34,-62.75"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="760.82,-78.85 751.96,-84.65 762.51,-85.64 760.82,-78.85"/>
+<path fill="none" stroke="#63b8ff" d="M774.83,-82.08C800.35,-75.76 828.55,-68.77 852.84,-62.75"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="774.32,-78.85 765.46,-84.65 776.01,-85.64 774.32,-78.85"/>
 </a>
 </g>
 </g>
@@ -89,9 +89,9 @@ var sectionId = 'dynsection-1';
 <g id="Node000003" class="node">
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html" target="_top" xlink:title="Base class for all packets.">
-<polygon fill="white" stroke="#666666" points="293.75,-158.88 194.5,-158.88 194.5,-128.38 293.75,-128.38 293.75,-158.88"/>
-<text text-anchor="start" x="202.5" y="-145.38" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="244.12" y="-134.12" font-family="Times,serif" font-size="10.00">Packet</text>
+<polygon fill="white" stroke="#666666" points="307.25,-158.88 208,-158.88 208,-128.38 307.25,-128.38 307.25,-158.88"/>
+<text text-anchor="start" x="216" y="-145.38" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="257.62" y="-134.12" font-family="Times,serif" font-size="10.00">Packet</text>
 </a>
 </g>
 </g>
@@ -99,8 +99,8 @@ var sectionId = 'dynsection-1';
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node3&#45;&gt;Node2</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M305.02,-145.36C375.08,-146.35 494.3,-144.84 595,-127.62 603.48,-126.18 612.28,-124.17 620.91,-121.9"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="305.27,-141.84 295.21,-145.18 305.15,-148.84 305.27,-141.84"/>
+<path fill="none" stroke="#63b8ff" d="M318.52,-145.36C388.58,-146.35 507.8,-144.84 608.5,-127.62 616.98,-126.18 625.78,-124.17 634.41,-121.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="318.77,-141.84 308.71,-145.18 318.65,-148.84 318.77,-141.84"/>
 </a>
 </g>
 </g>
@@ -108,9 +108,9 @@ var sectionId = 'dynsection-1';
 <g id="Node000009" class="node">
 <title>Node9</title>
 <g id="a_Node000009"><a xlink:href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" target="_top" xlink:title="A templated class representing a derived packet from the base Packet class.">
-<polygon fill="white" stroke="#666666" points="468.25,-115.88 330.75,-115.88 330.75,-85.38 468.25,-85.38 468.25,-115.88"/>
-<text text-anchor="start" x="338.75" y="-102.38" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="399.5" y="-91.12" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; PacketType &gt;</text>
+<polygon fill="white" stroke="#666666" points="481.75,-115.88 344.25,-115.88 344.25,-85.38 481.75,-85.38 481.75,-115.88"/>
+<text text-anchor="start" x="352.25" y="-102.38" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="413" y="-91.12" font-family="Times,serif" font-size="10.00">DerivedPacket&lt; PacketType &gt;</text>
 </a>
 </g>
 </g>
@@ -118,8 +118,8 @@ var sectionId = 'dynsection-1';
 <g id="edge9_Node000009_Node000003" class="edge">
 <title>Node3&#45;&gt;Node9</title>
 <g id="a_edge9_Node000009_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M304.42,-127C316.95,-123.49 330.14,-119.79 342.54,-116.31"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="303.76,-123.83 295.08,-129.9 305.65,-130.57 303.76,-123.83"/>
+<path fill="none" stroke="#63b8ff" d="M317.92,-127C330.45,-123.49 343.64,-119.79 356.04,-116.31"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="317.26,-123.83 308.58,-129.9 319.15,-130.57 317.26,-123.83"/>
 </a>
 </g>
 </g>
@@ -127,8 +127,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000004" class="node">
 <title>Node4</title>
 <g id="a_Node000004"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="98.88,-244.25 7.12,-244.25 7.12,-225 98.88,-225 98.88,-244.25"/>
-<text text-anchor="middle" x="53" y="-230.75" font-family="Times,serif" font-size="10.00">utils::non_copyable</text>
+<polygon fill="white" stroke="#666666" points="119.5,-244.25 0,-244.25 0,-225 119.5,-225 119.5,-244.25"/>
+<text text-anchor="middle" x="59.75" y="-230.75" font-family="Times,serif" font-size="10.00">mal_toolkit::non_copyable</text>
 </a>
 </g>
 </g>
@@ -136,8 +136,8 @@ var sectionId = 'dynsection-1';
 <g id="edge3_Node000003_Node000004" class="edge">
 <title>Node4&#45;&gt;Node3</title>
 <g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M92,-220.82C96.72,-219.08 101.47,-217.32 106,-215.62 137.42,-203.87 146.74,-204.12 176.5,-188.62 192.72,-180.18 209.79,-168.6 222.58,-159.3"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="91.01,-217.82 82.83,-224.55 93.42,-224.39 91.01,-217.82"/>
+<path fill="none" stroke="#63b8ff" d="M103.48,-221.17C108.89,-219.36 114.34,-217.48 119.5,-215.62 151.22,-204.21 160.11,-203.22 190,-187.62 205.85,-179.35 222.65,-168.25 235.41,-159.26"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="102.61,-218.1 94.2,-224.55 104.79,-224.75 102.61,-218.1"/>
 </a>
 </g>
 </g>
@@ -145,9 +145,9 @@ var sectionId = 'dynsection-1';
 <g id="Node000005" class="node">
 <title>Node5</title>
 <g id="a_Node000005"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="106,-206.88 0,-206.88 0,-176.38 106,-176.38 106,-206.88"/>
-<text text-anchor="start" x="8" y="-193.38" font-family="Times,serif" font-size="10.00">Measurer&lt; std::chrono</text>
-<text text-anchor="middle" x="53" y="-182.12" font-family="Times,serif" font-size="10.00">::steady_clock &gt;</text>
+<polygon fill="white" stroke="#666666" points="112.75,-206.88 6.75,-206.88 6.75,-176.38 112.75,-176.38 112.75,-206.88"/>
+<text text-anchor="start" x="14.75" y="-193.38" font-family="Times,serif" font-size="10.00">Measurer&lt; std::chrono</text>
+<text text-anchor="middle" x="59.75" y="-182.12" font-family="Times,serif" font-size="10.00">::steady_clock &gt;</text>
 </a>
 </g>
 </g>
@@ -155,18 +155,18 @@ var sectionId = 'dynsection-1';
 <g id="edge4_Node000003_Node000005" class="edge">
 <title>Node5&#45;&gt;Node3</title>
 <g id="a_edge4_Node000003_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M116.68,-176.58C135.89,-171.88 157.09,-166.62 176.5,-161.62 182.19,-160.16 188.14,-158.6 194.04,-157.03"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="116.11,-173.36 107.23,-179.12 117.77,-180.16 116.11,-173.36"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M123.47,-176.78C144.62,-171.72 168.35,-165.98 190,-160.62 195.68,-159.22 201.62,-157.73 207.53,-156.24"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="122.9,-173.55 113.99,-179.28 124.53,-180.36 122.9,-173.55"/>
 </a>
 </g>
-<text text-anchor="middle" x="150.25" y="-175.38" font-family="Times,serif" font-size="10.00" fill="grey"> measurer</text>
+<text text-anchor="middle" x="163.75" y="-174.38" font-family="Times,serif" font-size="10.00" fill="grey"> measurer</text>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
 <g id="a_Node000006"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="104.88,-158.25 1.12,-158.25 1.12,-139 104.88,-139 104.88,-158.25"/>
-<text text-anchor="middle" x="53" y="-144.75" font-family="Times,serif" font-size="10.00">const UniquePacketID</text>
+<polygon fill="white" stroke="#666666" points="111.62,-158.25 7.88,-158.25 7.88,-139 111.62,-139 111.62,-158.25"/>
+<text text-anchor="middle" x="59.75" y="-144.75" font-family="Times,serif" font-size="10.00">const UniquePacketID</text>
 </a>
 </g>
 </g>
@@ -174,18 +174,18 @@ var sectionId = 'dynsection-1';
 <g id="edge5_Node000003_Node000006" class="edge">
 <title>Node6&#45;&gt;Node3</title>
 <g id="a_edge5_Node000003_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M116.17,-146.98C141.51,-146.31 170.39,-145.55 194.19,-144.92"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="116.08,-143.51 106.18,-147.27 116.27,-150.51 116.08,-143.51"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M122.64,-147.05C150.11,-146.34 181.98,-145.53 207.74,-144.87"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="122.87,-143.56 112.96,-147.32 123.04,-150.56 122.87,-143.56"/>
 </a>
 </g>
-<text text-anchor="middle" x="150.25" y="-148.38" font-family="Times,serif" font-size="10.00" fill="grey"> type</text>
+<text text-anchor="middle" x="163.75" y="-147.38" font-family="Times,serif" font-size="10.00" fill="grey"> type</text>
 </g>
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
 <g id="a_Node000007"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="81.25,-121.25 24.75,-121.25 24.75,-102 81.25,-102 81.25,-121.25"/>
-<text text-anchor="middle" x="53" y="-107.75" font-family="Times,serif" font-size="10.00">const float</text>
+<polygon fill="white" stroke="#666666" points="88,-121.25 31.5,-121.25 31.5,-102 88,-102 88,-121.25"/>
+<text text-anchor="middle" x="59.75" y="-107.75" font-family="Times,serif" font-size="10.00">const float</text>
 </a>
 </g>
 </g>
@@ -193,18 +193,18 @@ var sectionId = 'dynsection-1';
 <g id="edge6_Node000003_Node000007" class="edge">
 <title>Node7&#45;&gt;Node3</title>
 <g id="a_edge6_Node000003_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M92.21,-116.49C116.43,-119.74 148.38,-124.34 176.5,-129.38 182.21,-130.4 188.17,-131.55 194.08,-132.75"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="92.7,-112.9 82.33,-115.05 91.78,-119.84 92.7,-112.9"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M98.89,-116.11C124.69,-119.33 159.49,-124.02 190,-129.38 195.71,-130.38 201.67,-131.52 207.59,-132.7"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="99.43,-112.52 89.07,-114.78 98.57,-119.47 99.43,-112.52"/>
 </a>
 </g>
-<text text-anchor="middle" x="150.25" y="-130.38" font-family="Times,serif" font-size="10.00" fill="grey"> time_to_live</text>
+<text text-anchor="middle" x="163.75" y="-130.38" font-family="Times,serif" font-size="10.00" fill="grey"> time_to_live</text>
 </g>
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
 <g id="a_Node000008"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="70,-71.25 36,-71.25 36,-52 70,-52 70,-71.25"/>
-<text text-anchor="middle" x="53" y="-57.75" font-family="Times,serif" font-size="10.00">float</text>
+<polygon fill="white" stroke="#666666" points="76.75,-71.25 42.75,-71.25 42.75,-52 76.75,-52 76.75,-71.25"/>
+<text text-anchor="middle" x="59.75" y="-57.75" font-family="Times,serif" font-size="10.00">float</text>
 </a>
 </g>
 </g>
@@ -212,39 +212,39 @@ var sectionId = 'dynsection-1';
 <g id="edge11_Node000001_Node000008" class="edge">
 <title>Node8&#45;&gt;Node1</title>
 <g id="a_edge11_Node000001_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M81.2,-58.34C117.9,-54.21 185.34,-47.62 243.12,-47.62 243.12,-47.62 243.12,-47.62 686.5,-47.62 738.11,-47.62 796.73,-47.62 839.53,-47.62"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="80.95,-54.96 71.41,-59.59 81.75,-61.92 80.95,-54.96"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M87.85,-58.46C125.61,-54.33 196.22,-47.62 256.62,-47.62 256.62,-47.62 256.62,-47.62 700,-47.62 751.61,-47.62 810.23,-47.62 853.03,-47.62"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="87.78,-55.06 78.23,-59.65 88.56,-62.01 87.78,-55.06"/>
 </a>
 </g>
-<text text-anchor="middle" x="399.5" y="-49.38" font-family="Times,serif" font-size="10.00" fill="grey"> time_to_live</text>
+<text text-anchor="middle" x="413" y="-49.38" font-family="Times,serif" font-size="10.00" fill="grey"> time_to_live</text>
 </g>
 <!-- Node8&#45;&gt;Node3 -->
 <g id="edge7_Node000003_Node000008" class="edge">
 <title>Node8&#45;&gt;Node3</title>
 <g id="a_edge7_Node000003_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M80.44,-69.56C105.62,-77.47 144.35,-90.55 176.5,-105.38 190.79,-111.97 206.06,-120.61 218.38,-128.01"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="81.81,-66.01 71.22,-66.4 79.74,-72.7 81.81,-66.01"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M87.44,-69C113.99,-76.72 155.61,-89.86 190,-105.38 204.35,-111.85 219.62,-120.48 231.92,-127.91"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="88.63,-65.41 78.05,-66.03 86.71,-72.15 88.63,-65.41"/>
 </a>
 </g>
-<text text-anchor="middle" x="150.25" y="-106.38" font-family="Times,serif" font-size="10.00" fill="grey"> timestamp_</text>
+<text text-anchor="middle" x="163.75" y="-106.38" font-family="Times,serif" font-size="10.00" fill="grey"> timestamp_</text>
 </g>
 <!-- Node9&#45;&gt;Node2 -->
 <g id="edge8_Node000002_Node000009" class="edge">
 <title>Node9&#45;&gt;Node2</title>
 <g id="a_edge8_Node000002_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M479.3,-100.62C523.77,-100.62 578.64,-100.62 620.44,-100.62"/>
-<polygon fill="orange" stroke="orange" points="479.53,-97.13 469.53,-100.62 479.53,-104.13 479.53,-97.13"/>
+<path fill="none" stroke="orange" stroke-dasharray="5,2" d="M492.8,-100.62C537.27,-100.62 592.14,-100.62 633.94,-100.62"/>
+<polygon fill="orange" stroke="orange" points="493.03,-97.13 483.03,-100.62 493.03,-104.13 493.03,-97.13"/>
 </a>
 </g>
-<text text-anchor="start" x="486.25" y="-113.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class SystemInfoRequest</text>
-<text text-anchor="middle" x="540.62" y="-102.38" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
+<text text-anchor="start" x="499.75" y="-113.62" font-family="Times,serif" font-size="10.00" fill="grey"> &lt; class SystemInfoRequest</text>
+<text text-anchor="middle" x="554.12" y="-102.38" font-family="Times,serif" font-size="10.00" fill="grey">Packet &gt;</text>
 </g>
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
 <g id="a_Node000010"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="758,-19.25 613,-19.25 613,0 758,0 758,-19.25"/>
-<text text-anchor="middle" x="685.5" y="-5.75" font-family="Times,serif" font-size="10.00">static constexpr UniquePacketID</text>
+<polygon fill="white" stroke="#666666" points="771.5,-19.25 626.5,-19.25 626.5,0 771.5,0 771.5,-19.25"/>
+<text text-anchor="middle" x="699" y="-5.75" font-family="Times,serif" font-size="10.00">static constexpr UniquePacketID</text>
 </a>
 </g>
 </g>
@@ -252,11 +252,11 @@ var sectionId = 'dynsection-1';
 <g id="edge10_Node000001_Node000010" class="edge">
 <title>Node10&#45;&gt;Node1</title>
 <g id="a_edge10_Node000001_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M768.97,-14.53C786.5,-16.37 804.82,-18.9 821.75,-22.38 827.51,-23.56 833.44,-25.01 839.34,-26.61"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="769.47,-10.96 759.17,-13.47 768.78,-17.93 769.47,-10.96"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M782.47,-14.53C800,-16.37 818.32,-18.9 835.25,-22.38 841.01,-23.56 846.94,-25.01 852.84,-26.61"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="782.97,-10.96 772.67,-13.47 782.28,-17.93 782.97,-10.96"/>
 </a>
 </g>
-<text text-anchor="middle" x="798.88" y="-24.38" font-family="Times,serif" font-size="10.00" fill="grey"> static_type</text>
+<text text-anchor="middle" x="812.38" y="-24.38" font-family="Times,serif" font-size="10.00" fill="grey"> static_type</text>
 </g>
 </g>
 </svg>

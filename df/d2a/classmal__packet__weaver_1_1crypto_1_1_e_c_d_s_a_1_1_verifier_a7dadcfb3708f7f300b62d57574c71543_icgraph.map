@@ -1,9 +1,0 @@
-<map id="mal_packet_weaver::crypto::ECDSA::Verifier::verify_hash" name="mal_packet_weaver::crypto::ECDSA::Verifier::verify_hash">
-<area shape="rect" id="Node000001" title="Verifies a hash&#39;s signature." alt="" coords="450,41,604,97"/>
-<area shape="rect" id="Node000002" href="$df/d2a/classmal__packet__weaver_1_1crypto_1_1_e_c_d_s_a_1_1_verifier.html#abcc0625ece25e293be526e07ad78d6d5" title="Verifies the signature of binary data." alt="" coords="237,5,392,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="435,56,392,49,393,44,436,51"/>
-<area shape="rect" id="Node000004" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#ab6dd92f9047e147b5c13dd905bf6905a" title=" " alt="" coords="227,85,402,126"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="436,87,403,93,402,88,435,82"/>
-<area shape="rect" id="Node000003" href="$d2/d8f/namespacemal__packet__weaver_1_1crypto_1_1_e_c_d_s_a.html#a945499cfa6f78a7ab8ad28f12064a9ea" title=" " alt="" coords="5,13,179,54"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="222,36,179,36,179,31,222,31"/>
-</map>

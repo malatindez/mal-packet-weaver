@@ -121,10 +121,10 @@ $(document).ready(function(){initNavTree('dd/d3a/common_8hpp_source.html','../..
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;span&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d6/de9/namespacemal__packet__weaver.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">struct </span>ByteView;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">struct </span>ByteArray;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">ByteView</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html">ByteArray</a>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">   23</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">ByteView</a> : <span class="keyword">public</span> std::span&lt;const std::byte&gt;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
@@ -280,7 +280,7 @@ $(document).ready(function(){initNavTree('dd/d3a/common_8hpp_source.html','../..
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Integer&gt;</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="../../d6/de9/namespacemal__packet__weaver.html#ade298814d907888a09b7e8a3b068b8db">  360</a></span>    [[nodiscard]] <span class="keyword">inline</span> Integer <a class="code hl_function" href="../../d6/de9/namespacemal__packet__weaver.html#ade298814d907888a09b7e8a3b068b8db">bytes_to_integer</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">ByteView</a> byte_view)</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    {</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        utils::Assert(byte_view.size() &gt;= <span class="keyword">sizeof</span>(Integer),</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        mal_toolkit::Assert(byte_view.size() &gt;= <span class="keyword">sizeof</span>(Integer),</div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                      <span class="stringliteral">&quot;The byte array is too small to be converted to the specified integer type&quot;</span>);</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        <span class="keywordflow">return</span> boost::endian::little_to_native(</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>Integer *<span class="keyword">&gt;</span>(byte_view.data()));</div>
@@ -354,7 +354,7 @@ $(document).ready(function(){initNavTree('dd/d3a/common_8hpp_source.html','../..
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    }</div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span> </div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>} <span class="comment">// namespace mal_packet_weaver</span></div>
-<div class="ttc" id="anamespacemal__packet__weaver_html"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dc6/backoffs_8hpp_source.html#l00006">backoffs.hpp:7</a></div></div>
+<div class="ttc" id="anamespacemal__packet__weaver_html"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d3a/common_8hpp_source.html#l00012">common.hpp:13</a></div></div>
 <div class="ttc" id="anamespacemal__packet__weaver_html_a02f5130547d5ddf6c16f31fad13cc469"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469">mal_packet_weaver::bytes_to_uint32</a></div><div class="ttdeci">uint32_t bytes_to_uint32(const ByteView byte_view)</div><div class="ttdoc">Convert a byte array to a uint32_t value using little-endian byte order.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d3a/common_8hpp_source.html#l00420">common.hpp:420</a></div></div>
 <div class="ttc" id="anamespacemal__packet__weaver_html_a10c0261dbe9d06aa3a85ed3e6928d0fa"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a10c0261dbe9d06aa3a85ed3e6928d0fa">mal_packet_weaver::int16_to_bytes</a></div><div class="ttdeci">ByteArray int16_to_bytes(const int16_t value)</div><div class="ttdoc">Convert an int16_t value to a ByteArray using little-endian byte order.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d3a/common_8hpp_source.html#l00488">common.hpp:488</a></div></div>
 <div class="ttc" id="anamespacemal__packet__weaver_html_a12455d757ff7b5e943f7d608c22d255e"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a12455d757ff7b5e943f7d608c22d255e">mal_packet_weaver::bytes_to_int16</a></div><div class="ttdeci">int16_t bytes_to_int16(const ByteView byte_view)</div><div class="ttdoc">Convert a byte array to an int16_t value using little-endian byte order.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d3a/common_8hpp_source.html#l00474">common.hpp:474</a></div></div>
@@ -395,7 +395,7 @@ $(document).ready(function(){initNavTree('dd/d3a/common_8hpp_source.html','../..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dd/d3a/common_8hpp.html">common.hpp</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 00:39:52 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 01:12:15 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

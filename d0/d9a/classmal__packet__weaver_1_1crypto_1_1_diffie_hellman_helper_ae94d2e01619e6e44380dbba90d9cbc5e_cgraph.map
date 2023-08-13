@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::crypto::DiffieHellmanHelper::get_shared_secret" name="mal_packet_weaver::crypto::DiffieHellmanHelper::get_shared_secret">
-<area shape="rect" id="Node000001" title="Computes the shared secret key using the peer&#39;s public key." alt="" coords="5,5,180,61"/>
-<area shape="rect" id="Node000002" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a5ce0c445aa4f44df9f44ddcfe8bff0ef" title="Convert the ByteArray to a typed pointer." alt="" coords="228,13,360,54"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,31,213,31,213,36,180,36"/>
-</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mal-packet-weaver: mal-packet-weaver/mal-packet-weaver/crypto/sha.hpp File Reference</title>
+<title>mal-packet-weaver: mal-packet-weaver/mal-packet-weaver/crypto/detail/sha.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -107,56 +107,29 @@ $(document).ready(function(){initNavTree('d8/d6d/sha_8hpp.html','../../'); initR
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">sha.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;../utils/utils.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d7/d87/crypto_2common_8hpp_source.html">common.hpp</a>&quot;</code><br />
-<code>#include &lt;openssl/bio.h&gt;</code><br />
-<code>#include &lt;openssl/ec.h&gt;</code><br />
-<code>#include &lt;openssl/ecdh.h&gt;</code><br />
-<code>#include &lt;openssl/ecdsa.h&gt;</code><br />
-<code>#include &lt;openssl/evp.h&gt;</code><br />
-<code>#include &lt;openssl/pem.h&gt;</code><br />
-<code>#include &lt;openssl/sha.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../de/d3a/crypto-common_8hpp_source.html">crypto-common.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for sha.hpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/d3a/sha_8hpp__incl.svg" width="100%" height="527"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d3a/sha_8hpp__incl.svg" width="175" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/def/sha_8hpp__dep__incl.svg" width="323" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/def/sha_8hpp__dep__incl.svg" width="210" height="274"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="../../d8/d6d/sha_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d6/de9/namespacemal__packet__weaver"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d5/db4/namespacemal__packet__weaver_1_1crypto"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db4/namespacemal__packet__weaver_1_1crypto.html">mal_packet_weaver::crypto</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:dd/dd7/namespacemal__packet__weaver_1_1crypto_1_1_s_h_a"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/namespacemal__packet__weaver_1_1crypto_1_1_s_h_a.html">mal_packet_weaver::crypto::SHA</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a11d1f9c659cddb5ebfa6f560e4772fb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dce/structmal__packet__weaver_1_1crypto_1_1_hash.html">Hash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/namespacemal__packet__weaver_1_1crypto_1_1_s_h_a.html#a11d1f9c659cddb5ebfa6f560e4772fb2">mal_packet_weaver::crypto::SHA::ComputeHash</a> (const <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">ByteView</a> data, const <a class="el" href="../../d4/dce/structmal__packet__weaver_1_1crypto_1_1_hash.html#a8c890d092002be41d3332d5f880c954c">Hash::HashType</a> hash_type)</td></tr>
-<tr class="memdesc:a11d1f9c659cddb5ebfa6f560e4772fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a hash value for the given data using the specified hash algorithm.  <br /></td></tr>
-<tr class="separator:a11d1f9c659cddb5ebfa6f560e4772fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_b21b3a813874f04d184aa10e06b21f4a.html">crypto</a></li><li class="navelem"><a class="el" href="../../d8/d6d/sha_8hpp.html">sha.hpp</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 00:39:52 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_b21b3a813874f04d184aa10e06b21f4a.html">crypto</a></li><li class="navelem"><a class="el" href="../../dir_aa7613161b4a207dc626e0abda147715.html">detail</a></li><li class="navelem"><a class="el" href="../../d8/d6d/sha_8hpp.html">sha.hpp</a></li>
+    <li class="footer">Generated on Sun Aug 13 2023 01:12:15 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

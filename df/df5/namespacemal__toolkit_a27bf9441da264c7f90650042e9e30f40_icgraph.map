@@ -1,9 +1,0 @@
-<map id="mal_toolkit::CurrentSourceLocation" name="mal_toolkit::CurrentSourceLocation">
-<area shape="rect" id="Node000001" title="Returns an empty string representing the current source location." alt="" coords="214,47,378,88"/>
-<area shape="rect" id="Node000002" href="$df/df5/namespacemal__toolkit.html#a8405b24c94e717d8a57da64b1483a4a9" title="Always asserts a condition with customizable behavior." alt="" coords="5,5,166,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,47,142,34,144,29,200,42"/>
-<area shape="rect" id="Node000003" href="$df/df5/namespacemal__toolkit.html#a1a10dbab8f9e26361eaa4af07f31713d" title="Asserts a condition with customizable behavior based on debug mode." alt="" coords="24,55,147,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,70,147,70,147,65,198,65"/>
-<area shape="rect" id="Node000004" href="$d1/d3a/structmal__toolkit_1_1_measurer.html#a75ea1122ef872b467e5113888c1e5305" title="Construct a Measurer object." alt="" coords="16,105,155,145"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,95,156,109,154,103,204,90"/>
-</map>

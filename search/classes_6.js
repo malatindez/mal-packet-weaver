@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hash_0',['Hash',['../d4/dce/structmal__packet__weaver_1_1crypto_1_1_hash.html',1,'mal_packet_weaver::crypto']]],
-  ['hash_3c_20mal_5ftoolkit_3a_3auuid_3a_3auuid_20_3e_1',['hash&lt; mal_toolkit::uuid::UUID &gt;',['../db/d27/structstd_1_1hash_3_01mal__toolkit_1_1uuid_1_1_u_u_i_d_01_4.html',1,'std']]]
+  ['nodeinforequestpacket_0',['NodeInfoRequestPacket',['../dd/d37/classmal__packet__weaver_1_1packet_1_1node_1_1_node_info_request_packet.html',1,'mal_packet_weaver::packet::node']]],
+  ['nodeinforesponsepacket_1',['NodeInfoResponsePacket',['../dd/d3d/classmal__packet__weaver_1_1packet_1_1node_1_1_node_info_response_packet.html',1,'mal_packet_weaver::packet::node']]]
 ];

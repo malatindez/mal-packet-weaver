@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::crypto::ECDSA::Signer" name="mal_packet_weaver::crypto::ECDSA::Signer">
-<area shape="rect" id="Node000001" title="The Signer class is responsible for creating digital signatures using private keys." alt="" coords="5,94,151,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="17,5,139,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,61,81,94,75,94,75,61"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::crypto::ECDSA::KeyPairGenerator" name="mal_packet_weaver::crypto::ECDSA::KeyPairGenerator">
-<area shape="rect" id="Node000001" title="Generates ECDSA key pairs for a given curve." alt="" coords="5,94,215,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="49,5,171,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,61,113,94,107,94,107,61"/>
-</map>

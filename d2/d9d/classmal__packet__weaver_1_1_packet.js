@@ -11,7 +11,7 @@ var classmal__packet__weaver_1_1_packet =
     [ "serialize", "d2/d9d/classmal__packet__weaver_1_1_packet.html#afbfa7f771246555a4d719fab8d0d04f0", null ],
     [ "timestamp", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a1b353f8d666972864724e49b94e9184a", null ],
     [ "boost::serialization::access", "d2/d9d/classmal__packet__weaver_1_1_packet.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "measurer", "d2/d9d/classmal__packet__weaver_1_1_packet.html#aa5a120bff5b79f894c3cff158aaacc4d", null ],
+    [ "measurer", "d2/d9d/classmal__packet__weaver_1_1_packet.html#adc0df39a554f6de840307aa6ed61dd37", null ],
     [ "time_to_live", "d2/d9d/classmal__packet__weaver_1_1_packet.html#ae3201e383545a1543105b8e43b1d31a7", null ],
     [ "timestamp_", "d2/d9d/classmal__packet__weaver_1_1_packet.html#ab93354542867ec9bbb2b17b9b5434c52", null ],
     [ "type", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a83d94514219f8f5f0c3c11db9804e98a", null ]

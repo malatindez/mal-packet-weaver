@@ -1,7 +1,0 @@
-<map id="mal_packet_weaver::crypto::SHA::ComputeHash" name="mal_packet_weaver::crypto::SHA::ComputeHash">
-<area shape="rect" id="Node000001" title="Computes a hash value for the given data using the specified hash algorithm." alt="" coords="5,39,178,79"/>
-<area shape="rect" id="Node000002" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a5ce0c445aa4f44df9f44ddcfe8bff0ef" title="Convert the ByteArray to a typed pointer." alt="" coords="226,5,358,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,42,211,36,212,42,178,47"/>
-<area shape="rect" id="Node000003" href="$d7/d41/structmal__packet__weaver_1_1_byte_view.html#a642359fac9a65d40ddf6c01077ffade3" title="Convert the ByteView to a typed view." alt="" coords="226,71,358,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,70,212,76,211,81,177,75"/>
-</map>
