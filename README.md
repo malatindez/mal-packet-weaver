@@ -1,8 +1,8 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
-# Packet Library
+# MAL Packet Weaver
 
-The Packet Library is a C++ library that provides utilities for working with network packets. It simplifies the creation, manipulation, and serialization of network packets. The library is designed to be easy to use, efficient, and highly customizable.
+The MAL Packet Weaver is a C++ library that provides utilities for working with network packets. It simplifies the creation, manipulation, and serialization of network packets. The library is designed to be easy to use, efficient, and highly customizable.
 
 ## Dependencies
 
@@ -267,7 +267,7 @@ For more usage examples and detailed documentation, please refer to the [Documen
 
 ## Contributing
 
-Contributions to the Packet Library are welcome! If you find a bug, have a feature request, or want to contribute code, please open an issue or submit a pull request.
+Contributions to the MAL Packet Weaver are welcome! If you find a bug, have a feature request, or want to contribute code, please open an issue or submit a pull request.
 
 ## License
 
