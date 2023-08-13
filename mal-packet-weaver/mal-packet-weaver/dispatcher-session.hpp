@@ -7,7 +7,7 @@ namespace mal_packet_weaver
      * @class DispatcherSession
      * @brief Represents a session with packet dispatching functionality.
      */
-    class DispatcherSession
+    class DispatcherSession final
     {
     public:
         /**
@@ -16,9 +16,12 @@ namespace mal_packet_weaver
          * @param socket The TCP socket to use for the session.
          */
         DispatcherSession(boost::asio::io_context &io_context, boost::asio::ip::tcp::socket &&socket)
-            : session_{ std::make_shared<Session>(io_context, std::move(socket)) },
+            : io_context_{ io_context },
+              session_{ std::make_shared<Session>(io_context, std::move(socket)) },
               dispatcher_{ std::make_shared<PacketDispatcher>(io_context) }
         {
+            session_->set_packet_receiver([this](std::unique_ptr<mal_packet_weaver::Packet> &&packet)
+                                              __lambda_force_inline { enqueue_packet(std::move(packet)); });
         }
 
         /**
@@ -69,9 +72,10 @@ namespace mal_packet_weaver
          * possible. This function is threadsafe.
          * @see Session::pop_packet_async
          */
-        inline boost::asio::awaitable<std::unique_ptr<Packet>> pop_packet_async(boost::asio::io_context &io)
+        inline boost::asio::awaitable<std::unique_ptr<Packet>> pop_packet_async()
         {
-            co_return session_->pop_packet_async(io);
+            auto value = co_await session_->pop_packet_async(io_context_);
+            co_return std::move(value);
         }
 
         /**
@@ -131,7 +135,10 @@ namespace mal_packet_weaver
          *
          * @param packet The unique pointer to the packet to be enqueued.
          */
-        inline void enqueue_packet(BasePacketPtr &&packet) { dispatcher_->enqueue_packet(std::move(packet)); }
+        inline void enqueue_packet(PacketDispatcher::BasePacketPtr &&packet)
+        {
+            dispatcher_->enqueue_packet(std::move(packet));
+        }
 
         /**
          * @brief Wait until the packet is registered in the dispatch system and return as soon as
@@ -150,7 +157,7 @@ namespace mal_packet_weaver
         template <IsPacket DerivedPacket>
         boost::asio::awaitable<std::unique_ptr<DerivedPacket>> await_packet(float timeout = -1.0f)
         {
-            co_return dispatcher_->await_packet(timeout);
+            return dispatcher_->await_packet<DerivedPacket>(timeout);
         }
 
         /**
@@ -175,7 +182,7 @@ namespace mal_packet_weaver
         boost::asio::awaitable<std::unique_ptr<DerivedPacket>> await_packet(PacketFilterFunc<DerivedPacket> filter,
                                                                             float timeout = -1.0f)
         {
-            co_return dispatcher_->await_packet(filter, timeout);
+            return dispatcher_->await_packet<DerivedPacket>(filter, timeout);
         }
 
         /**
@@ -202,7 +209,223 @@ namespace mal_packet_weaver
         {
             return dispatcher_->register_default_handler(handler, filter, delay);
         }
+        /**
+         * @brief Register a default handler for the provided packet type.
+         *
+         * This function registers a default packet handler for a specific packet type. The handler
+         * function can be provided, and if it returns false, the packet is passed to the next
+         * handler. An optional filter function can also be provided to determine whether the
+         * handler should be applied based on the packet's properties. A delay parameter can be used
+         * to postpone the handler's execution for a certain amount of time.
+         *
+         * @tparam Arg1 The type of argument 1 for the handler.
+         * @tparam Args Additional argument types for the handler.
+         * @tparam CustomPacket The type of packet for which the handler should be registered.
+         * @param handler The packet handler function.
+         * @param filter The packet filter function to determine whether the handler should be applied.
+         * @param delay The delay in seconds before the handler is executed. (Default is 0.0)
+         *
+         * @note Supported types for Args are: Session&, std::shared_ptr<Session>, io_context &,
+         *       std::shared_ptr<PacketDispatcher>, and PacketDispatcher&. The std::unique_ptr<CustomPacket> type should
+         * be last.
+         */
+        template <typename Arg1, IsPacket CustomPacket>
+        inline void register_default_handler(PacketHandlerFunc<CustomPacket, Arg1> &&handler,
+                                             PacketFilterFunc<CustomPacket, Arg1> &&filter = {}, float delay = 0.0f)
+        {
+            if constexpr (std::is_same_v<Arg1, std::shared_ptr<Session>>)
+            {
+                return register_default_handler<CustomPacket>(
+                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
+                    { moved_handler(session_, std::move(packet)); },
+                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
+                                     { return moved_filter(session_, packet); })
+                                  : PacketFilterFunc<CustomPacket>{}),
+                    delay);
+            }
+            else if constexpr (std::is_same_v<Arg1, Session &>)
+            {
+                return register_default_handler<CustomPacket>(
+                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
+                    { moved_handler(*session_, std::move(packet)); },
+                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
+                                     { return moved_filter(*session_, packet); })
+                                  : PacketFilterFunc<CustomPacket>{}),
+                    delay);
+            }
+            else if constexpr (std::is_same_v<Arg1, boost::asio::io_context &>)
+            {
+                return register_default_handler<CustomPacket>(
+                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
+                    { moved_handler(io_context_, std::move(packet)); },
+                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
+                                     { return moved_filter(io_context_, packet); })
+                                  : PacketFilterFunc<CustomPacket>{}),
+                    delay);
+            }
+            else if constexpr (std::is_same_v<Arg1, std::shared_ptr<PacketDispatcher>>)
+            {
+                return register_default_handler<CustomPacket>(
+                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
+                    { moved_handler(dispatcher_, std::move(packet)); },
+                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
+                                     { return moved_filter(dispatcher_, packet); })
+                                  : PacketFilterFunc<CustomPacket>{}),
+                    delay);
+            }
+            else if constexpr (std::is_same_v<Arg1, PacketDispatcher &>)
+            {
+                return register_default_handler<CustomPacket>(
+                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
+                    { moved_handler(*dispatcher_, std::move(packet)); },
+                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
+                                     { return moved_filter(*dispatcher_, packet); })
+                                  : PacketFilterFunc<CustomPacket>{}),
+                    delay);
+            }
+            else
+            {
+                []<bool flag = false>()
+                {
+                    static_assert(flag,
+                                  "Unknown type passed! Supported types for handler are: Session&, "
+                                  "std::shared_ptr<Session>, io_context &, std::shared_ptr<PacketDispatcher> and "
+                                  "PacketDispatcher&. The CustomPacket type should be last.");
+                }
+                ();
+            }
+        }
 
+        /**
+         * @brief Register a default handler for the provided packet type.
+         *
+         * This function registers a default packet handler for a specific packet type. The handler
+         * function can be provided, and if it returns false, the packet is passed to the next
+         * handler. An optional filter function can also be provided to determine whether the
+         * handler should be applied based on the packet's properties. A delay parameter can be used
+         * to postpone the handler's execution for a certain amount of time.
+         *
+         * @tparam Arg1 The type of argument 1 for the handler.
+         * @tparam Arg2 The type of argument 2 for the handler.
+         * @tparam Args Additional argument types for the handler.
+         * @tparam CustomPacket The type of packet for which the handler should be registered.
+         * @param handler The packet handler function.
+         * @param filter The packet filter function to determine whether the handler should be applied.
+         * @param delay The delay in seconds before the handler is executed. (Default is 0.0)
+         *
+         * @note Supported types for Args are: Session&, std::shared_ptr<Session>, io_context &,
+         *       std::shared_ptr<PacketDispatcher>, and PacketDispatcher&. The std::unique_ptr<CustomPacket> type should
+         * be last.
+         */
+        template <typename Arg1, typename Arg2, typename... Args, IsPacket CustomPacket>
+        inline void register_default_handler(PacketHandlerFunc<CustomPacket, Arg1, Arg2, Args...> &&handler,
+                                             PacketFilterFunc<CustomPacket, Arg1, Arg2, Args...> &&filter = {},
+                                             float delay = 0.0f)
+        {
+            if constexpr (std::is_same_v<Arg1, std::shared_ptr<Session>>)
+            {
+                return register_default_handler<Arg2, Args..., CustomPacket>(
+                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
+                                                               std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(session_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                                             std::move(packet));
+                    },
+                    (bool(filter) ? (
+                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
+                                                                                 const CustomPacket &packet) {
+                                            return moved_filter(session_, std::forward<Arg2>(arg2),
+                                                                std::forward<Args>(args)..., packet);
+                                        })
+                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                    delay);
+            }
+            else if constexpr (std::is_same_v<Arg1, Session &>)
+            {
+                return register_default_handler<Arg2, Args..., CustomPacket>(
+                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
+                                                               std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(*session_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                                             std::move(packet));
+                    },
+                    (bool(filter) ? (
+                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
+                                                                                 const CustomPacket &packet) {
+                                            return moved_filter(*session_, std::forward<Arg2>(arg2),
+                                                                std::forward<Args>(args)..., packet);
+                                        })
+                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                    delay);
+            }
+            else if constexpr (std::is_same_v<Arg1, boost::asio::io_context &>)
+            {
+                return register_default_handler<Arg2, Args..., CustomPacket>(
+                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
+                                                               std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(io_context_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                                             std::move(packet));
+                    },
+                    (bool(filter) ? (
+                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
+                                                                                 const CustomPacket &packet) {
+                                            return moved_filter(io_context_, std::forward<Arg2>(arg2),
+                                                                std::forward<Args>(args)..., packet);
+                                        })
+                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                    delay);
+            }
+            else if constexpr (std::is_same_v<Arg1, std::shared_ptr<PacketDispatcher>>)
+            {
+                return register_default_handler<Arg2, Args..., CustomPacket>(
+                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
+                                                               std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(dispatcher_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                                             std::move(packet));
+                    },
+                    (bool(filter) ? (
+                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
+                                                                                 const CustomPacket &) {
+                                            return moved_filter(dispatcher_, std::forward<Arg2>(arg2),
+                                                                std::forward<Args>(args)..., packet);
+                                        })
+                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                    delay);
+            }
+            else if constexpr (std::is_same_v<Arg1, PacketDispatcher &>)
+            {
+                return register_default_handler<Arg2, Args..., CustomPacket>(
+                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
+                                                               std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(*dispatcher_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                                             std::move(packet));
+                    },
+                    (bool(filter) ? (
+                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
+                                                                                 const CustomPacket &) {
+                                            return moved_filter(*dispatcher_, std::forward<Arg2>(arg2),
+                                                                std::forward<Args>(args)..., packet);
+                                        })
+                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                    delay);
+            }
+            else
+            {
+                []<bool flag = false>()
+                {
+                    static_assert(flag,
+                                  "Unknown type passed! Supported types for handler are: Session&, "
+                                  "std::shared_ptr<Session>, io_context &, std::shared_ptr<PacketDispatcher> and "
+                                  "PacketDispatcher&. The CustomPacket type should be last.");
+                }
+                ();
+            }
+        }
+
+
+        template <IsPacket CustomPacket, typename... FnArgs>
+        inline void register_default_handler(std::function<void(FnArgs...)> &&handler, std::function<bool(FnArgs...)> &&filter = {}, float delay = 0.0f)
+        {
+            return register_default_handler<FnArgs..., CustomPacket>(handler, filter, delay);
+        }
         /**
          * @brief Enqueues a promise associated with a packet.
          *
@@ -213,7 +436,7 @@ namespace mal_packet_weaver
          * @param packet_id The unique packet identifier for which the promise is being enqueued.
          * @param promise The shared packet promise to be enqueued.
          */
-        inline void enqueue_promise(UniquePacketID packet_id, shared_packet_promise promise)
+        inline void enqueue_promise(UniquePacketID packet_id, PacketDispatcher::shared_packet_promise promise)
         {
             return dispatcher_->enqueue_promise(packet_id, promise);
         }
@@ -229,7 +452,7 @@ namespace mal_packet_weaver
          * enqueued.
          * @param filtered_promise The promise filter to be enqueued.
          */
-        inline void enqueue_filter_promise(UniquePacketID packet_id, promise_filter filtered_promise)
+        inline void enqueue_filter_promise(UniquePacketID packet_id, PacketDispatcher::promise_filter filtered_promise)
         {
             return dispatcher_->enqueue_filter_promise(packet_id, filtered_promise);
         }
@@ -238,15 +461,16 @@ namespace mal_packet_weaver
          * @brief Get a reference to the underlying session.
          * @return A reference to the session.
          */
-        [[nodiscard]] constexpr Session &session() { return *session_; }
+        [[nodiscard]] inline Session &session() { return *session_; }
 
         /**
          * @brief Get a reference to the underlying packet dispatcher.
          * @return A reference to the packet dispatcher.
          */
-        [[nodiscard]] constexpr PacketDispatcher &dispatcher_() { return *dispatcher_; }
+        [[nodiscard]] inline PacketDispatcher &dispatcher() { return *dispatcher_; }
 
     private:
+        boost::asio::io_context &io_context_;           ///< Reference to the associated Boost.Asio io_context.
         std::shared_ptr<Session> session_;              ///< The underlying session.
         std::shared_ptr<PacketDispatcher> dispatcher_;  ///< The underlying packet dispatcher.
     };
