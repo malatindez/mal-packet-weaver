@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['jitter_5ffactor_5f_0',['jitter_factor_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a2dc32cb61cfb1e088bcf26f11557180f',1,'mal_toolkit::ExponentialBackoff']]]
+  ['index_0',['index',['../d1/d3a/structmal__toolkit_1_1_measurer.html#adb052aa098fdf07d3f6a3962464828de',1,'mal_toolkit::Measurer']]],
+  ['initial_5fdelay_5f_1',['initial_delay_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#af8a7f7822b0a4fd6c23a8ceee1ec7efe',1,'mal_toolkit::ExponentialBackoff::initial_delay_'],['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a62ce035cd2fc72c1958c285daccc621d',1,'mal_toolkit::LinearBackoff::initial_delay_']]],
+  ['io_5fcontext_5f_2',['io_context_',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac97952a8672d90dc311e64bace72b712',1,'mal_packet_weaver::PacketDispatcher']]]
 ];

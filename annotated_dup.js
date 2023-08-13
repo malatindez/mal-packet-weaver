@@ -1,5 +1,23 @@
 var annotated_dup =
 [
+    [ "mal_packet_weaver", "d6/de9/namespacemal__packet__weaver.html", [
+      [ "crypto", "d5/db4/namespacemal__packet__weaver_1_1crypto.html", [
+        [ "EncryptionInterface", "d7/da7/classmal__packet__weaver_1_1crypto_1_1_encryption_interface.html", "d7/da7/classmal__packet__weaver_1_1crypto_1_1_encryption_interface" ],
+        [ "Key", "da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html", "da/d1a/classmal__packet__weaver_1_1crypto_1_1_key" ],
+        [ "KeyPair", "d4/df8/structmal__packet__weaver_1_1crypto_1_1_key_pair.html", "d4/df8/structmal__packet__weaver_1_1crypto_1_1_key_pair" ],
+        [ "KeyView", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view.html", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view" ]
+      ] ],
+      [ "packet", "d9/d93/namespacemal__packet__weaver_1_1packet.html", [
+        [ "PacketFactory", "d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html", "d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory" ]
+      ] ],
+      [ "ByteArray", "d4/d9d/structmal__packet__weaver_1_1_byte_array.html", "d4/d9d/structmal__packet__weaver_1_1_byte_array" ],
+      [ "ByteView", "d7/d41/structmal__packet__weaver_1_1_byte_view.html", "d7/d41/structmal__packet__weaver_1_1_byte_view" ],
+      [ "DerivedPacket", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html", "dd/d2b/classmal__packet__weaver_1_1_derived_packet" ],
+      [ "DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session" ],
+      [ "Packet", "d2/d9d/classmal__packet__weaver_1_1_packet.html", "d2/d9d/classmal__packet__weaver_1_1_packet" ],
+      [ "PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher" ],
+      [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ]
+    ] ],
     [ "mal_toolkit", "df/df5/namespacemal__toolkit.html", [
       [ "events", "d9/ddf/namespacemal__toolkit_1_1events.html", [
         [ "Event", "d5/dbd/classmal__toolkit_1_1events_1_1_event.html", "d5/dbd/classmal__toolkit_1_1events_1_1_event" ],
@@ -45,5 +63,6 @@ var annotated_dup =
       [ "hash< mal_toolkit::uuid::UUID >", "db/d27/structstd_1_1hash_3_01mal__toolkit_1_1uuid_1_1_u_u_i_d_01_4.html", "db/d27/structstd_1_1hash_3_01mal__toolkit_1_1uuid_1_1_u_u_i_d_01_4" ]
     ] ],
     [ "Entry", "d7/da8/struct_measurer_1_1_entry.html", null ],
+    [ "Hash", "d2/d7a/struct_hash.html", null ],
     [ "type_at", "de/df0/structparameter__pack__info_1_1type__at.html", null ]
 ];

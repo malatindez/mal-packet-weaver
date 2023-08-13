@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['removecallback_0',['RemoveCallback',['../dd/d83/classmal__toolkit_1_1_callback_system.html#af7be6f4bf90bd19f7e68680149d176f1',1,'mal_toolkit::CallbackSystem::RemoveCallback(CallbackId id)'],['../dd/d83/classmal__toolkit_1_1_callback_system.html#a8310ae5fc9ffc4084ca631ae6bd229ac',1,'mal_toolkit::CallbackSystem::RemoveCallback(CallbackFunction const &amp;callback)']]],
-  ['reset_1',['reset',['../db/d8f/classmal__toolkit_1_1_timer.html#a620487fa7d308bc07213d63224539084',1,'mal_toolkit::Timer']]],
-  ['reset_5fdelay_2',['reset_delay',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a93f251f1d02f4d8f80ad682b09db23d4',1,'mal_toolkit::ExponentialBackoff::reset_delay()'],['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a192862549e9b4e2b444ba4982f473f1a',1,'mal_toolkit::LinearBackoff::reset_delay()']]],
-  ['reset_5fto_5fnow_3',['reset_to_now',['../db/d8f/classmal__toolkit_1_1_timer.html#abffea8f2a684ead757b4bfdf878b39e1',1,'mal_toolkit::Timer']]],
-  ['rtrim_4',['rtrim',['../df/df5/namespacemal__toolkit.html#a08803427441a4a54fdcc0c4b7e0b32f3',1,'mal_toolkit']]],
-  ['rtrimview_5',['rtrimview',['../df/df5/namespacemal__toolkit.html#a0e2eca44df5c6fad4ccfc2fd5be64e4c',1,'mal_toolkit']]]
+  ['onupdate_0',['OnUpdate',['../dd/d41/classmal__toolkit_1_1_file_watcher.html#ace2ccc30c7b36f75cf0e65396875da7d',1,'mal_toolkit::FileWatcher']]],
+  ['operator_28_29_1',['operator()',['../db/d27/structstd_1_1hash_3_01mal__toolkit_1_1uuid_1_1_u_u_i_d_01_4.html#a21405808dfa8f48d328ad543a4fcf368',1,'std::hash&lt; mal_toolkit::uuid::UUID &gt;']]],
+  ['operator_3d_2',['operator=',['../d2/d9d/classmal__packet__weaver_1_1_packet.html#aa3afc0227fa98413fc157dd41308ef31',1,'mal_packet_weaver::Packet::operator=()'],['../d1/dd3/classmal__toolkit_1_1non__copyable.html#ad01667214074c0b6cf52d6d9bc2e68d0',1,'mal_toolkit::non_copyable::operator=()'],['../db/d86/classmal__toolkit_1_1non__movable.html#a57965e0c2b0317b4de879b0630b20ce9',1,'mal_toolkit::non_movable::operator=()'],['../d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event.html#ad5ddd79d91e5fb00cba54a6e4dc8c2ec',1,'mal_toolkit::events::FilesChangedEvent::operator=(FilesChangedEvent &amp;&amp;)=delete'],['../d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event.html#ae840eb6fb1fa761b489ef0ff56ac8ae2',1,'mal_toolkit::events::FilesChangedEvent::operator=(FilesChangedEvent const &amp;)=delete'],['../d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a82312b1c919aa7db3b4c7ea78e047d1c',1,'mal_toolkit::uuid::UUID::operator=()']]]
 ];

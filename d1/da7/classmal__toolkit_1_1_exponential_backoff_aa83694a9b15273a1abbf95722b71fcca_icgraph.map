@@ -1,0 +1,13 @@
+<map id="mal_toolkit::ExponentialBackoff::decrease_delay" name="mal_toolkit::ExponentialBackoff::decrease_delay">
+<area shape="rect" id="Node000001" title="Decrease the backoff delay using divisor factor." alt="" coords="371,93,519,134"/>
+<area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html#ab8d02d6502bb180c3b0f383b3fddc6ca" title="Asynchronously forges new packets from the buffer." alt="" coords="186,5,323,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="380,89,321,64,323,59,383,84"/>
+<area shape="rect" id="Node000004" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a95349691831542cec27090d0ab21ca88" title="Asynchronously receives and processes incoming packets from the network." alt="" coords="186,85,323,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="356,116,324,116,324,111,356,111"/>
+<area shape="rect" id="Node000005" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a71ede34f71a6dc30d56d99015997caa3" title="Asynchronously sends all packets in the queue through the network." alt="" coords="188,165,321,206"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="377,142,311,167,309,162,375,137"/>
+<area shape="rect" id="Node000003" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a5cf271c70d7ec610cfb01d0ed8655693" title="Constructor for the Session class." alt="" coords="5,93,138,134"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="177,70,121,95,119,90,175,65"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="171,116,138,116,138,111,171,111"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="187,162,124,136,126,131,189,157"/>
+</map>

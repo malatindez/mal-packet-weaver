@@ -1,0 +1,11 @@
+<map id="mal_packet_weaver::PacketDispatcher::pop_inputs" name="mal_packet_weaver::PacketDispatcher::pop_inputs">
+<area shape="rect" id="Node000001" title="Pops input packets from input queues to local maps for processing." alt="" coords="5,152,148,207"/>
+<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ab72dbe23999515e3fa7db665a330f066" title="Creates a default_handlers_input_pop_task and returns a future to await completion." alt="" coords="215,5,369,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,149,149,117,194,85,200,81,203,86,197,90,152,121,112,153"/>
+<area shape="rect" id="Node000003" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1fcf146e1842c61f10a6456e716f24a2" title="Creates a promise_filter_map_input_pop_task and returns a future to await completion." alt="" coords="208,100,376,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,162,192,153,193,158,149,167"/>
+<area shape="rect" id="Node000004" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a8e90b1f9723efb6f2bb12e3b89d1e27c" title="Creates a promise_map_input_pop_task and returns a future to await completion." alt="" coords="196,194,388,250"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="149,191,182,197,181,203,148,196"/>
+<area shape="rect" id="Node000005" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af943e1f1d220396b11bfbbb24132e4c8" title="Creates an unprocessed_packets_input_pop_task and returns a future to await completion." alt="" coords="203,273,381,344"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="117,205,197,260,203,263,201,268,194,264,114,210"/>
+</map>

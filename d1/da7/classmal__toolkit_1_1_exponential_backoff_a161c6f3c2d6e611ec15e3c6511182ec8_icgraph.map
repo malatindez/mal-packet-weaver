@@ -1,0 +1,20 @@
+<map id="mal_toolkit::ExponentialBackoff::get_current_delay" name="mal_toolkit::ExponentialBackoff::get_current_delay">
+<area shape="rect" id="Node000001" title="Get the current backoff delay." alt="" coords="583,172,747,212"/>
+<area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html#ab8d02d6502bb180c3b0f383b3fddc6ca" title="Asynchronously forges new packets from the buffer." alt="" coords="186,5,323,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="627,164,584,132,534,104,481,83,425,66,323,45,324,40,426,61,482,78,536,99,587,128,631,160"/>
+<area shape="rect" id="Node000004" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a95349691831542cec27090d0ab21ca88" title="Asynchronously receives and processes incoming packets from the network." alt="" coords="186,85,323,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="616,167,577,148,535,133,480,122,424,116,323,113,324,108,425,111,481,117,536,128,579,143,618,162"/>
+<area shape="rect" id="Node000005" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e" title="Retrieves a shared pointer to the current session." alt="" coords="380,142,527,183"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="568,181,527,175,528,170,569,176"/>
+<area shape="rect" id="Node000006" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a71ede34f71a6dc30d56d99015997caa3" title="Asynchronously sends all packets in the queue through the network." alt="" coords="188,165,321,206"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="568,198,371,197,321,194,321,189,371,192,568,192"/>
+<area shape="rect" id="Node000007" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a961d49d84fb1426fc605c529df1296d1" title=" " alt="" coords="371,257,535,298"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="600,221,507,259,505,254,598,216"/>
+<area shape="rect" id="Node000008" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a66b134c55cf54ac2e84daa77f381235e" title="Sends any packet derived from DerivedPacket through the network." alt="" coords="387,322,519,363"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="637,225,592,269,537,311,514,324,511,319,534,307,589,265,634,221"/>
+<area shape="rect" id="Node000003" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a5cf271c70d7ec610cfb01d0ed8655693" title="Constructor for the Session class." alt="" coords="5,93,138,134"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="177,70,121,95,119,90,175,65"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="171,116,138,116,138,111,171,111"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="365,175,321,180,320,175,365,170"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="187,162,124,136,126,131,189,157"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="mal_packet_weaver::Packet" name="mal_packet_weaver::Packet">
+<area shape="rect" id="Node000001" title="Base class for all packets." alt="" coords="31,79,163,120"/>
+<area shape="rect" id="Node000003" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class." alt="" coords="5,168,189,208"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="100,134,100,167,94,167,94,134"/>
+<area shape="rect" id="Node000002" href="$d1/dd3/classmal__toolkit_1_1non__copyable.html" title="A class that can&#39;t be copied." alt="" coords="17,5,177,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,46,100,79,94,79,94,46"/>
+</map>

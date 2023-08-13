@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['timer_0',['Timer',['../db/d8f/classmal__toolkit_1_1_timer.html#a860881484f2ea107ad7545019a547bc7',1,'mal_toolkit::Timer']]],
-  ['to_5fint64_1',['to_int64',['../df/df5/namespacemal__toolkit.html#a30e221c6a3ee5dff2655a00ad399cb45',1,'mal_toolkit']]],
-  ['to_5flong_5fdouble_2',['to_long_double',['../df/df5/namespacemal__toolkit.html#ab1bfa2ddb5625a755cc4267581cd39f2',1,'mal_toolkit']]],
-  ['to_5fstring_3',['to_string',['../d5/dbd/classmal__toolkit_1_1events_1_1_event.html#ac33846527e4932869e4b504b26bab0cc',1,'mal_toolkit::events::Event']]],
-  ['to_5fuint64_4',['to_uint64',['../df/df5/namespacemal__toolkit.html#a559606eccc7a6cd9ea57aa7f6fc39158',1,'mal_toolkit']]],
-  ['trim_5',['trim',['../df/df5/namespacemal__toolkit.html#a934db623f96eff1f4fa6e095305328d8',1,'mal_toolkit']]],
-  ['trimview_6',['trimview',['../df/df5/namespacemal__toolkit.html#a4df57a0367bc8510628db5fed43ebc9f',1,'mal_toolkit']]],
-  ['type_7',['type',['../d5/dbd/classmal__toolkit_1_1events_1_1_event.html#a1dd6b5a3fd2991761f3bf88737499ff6',1,'mal_toolkit::events::Event']]]
+  ['read_5fbytes_5fto_0',['read_bytes_to',['../d8/d39/classmal__packet__weaver_1_1_session.html#ad10adb9e1d47a0e0a56d02808606ca17',1,'mal_packet_weaver::Session']]],
+  ['receive_5fall_1',['receive_all',['../d8/d39/classmal__packet__weaver_1_1_session.html#a9cb6655f710d023540a11da7b218c5d3',1,'mal_packet_weaver::Session']]],
+  ['register_5fdefault_5fhandler_2',['register_default_handler',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a90f4839728ba615d085089e56fb99a08',1,'mal_packet_weaver::PacketDispatcher']]],
+  ['registerdeserializer_3',['RegisterDeserializer',['../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a2434d336c0c27192592cd3cbc1320fdd',1,'mal_packet_weaver::packet::PacketFactory::RegisterDeserializer()'],['../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#aefe02e1a7968a53a2e5cdf89f21f7c12',1,'mal_packet_weaver::packet::PacketFactory::RegisterDeserializer(UniquePacketID packet_id, PacketDeserializeFunc const &amp;factory)']]],
+  ['removecallback_4',['RemoveCallback',['../dd/d83/classmal__toolkit_1_1_callback_system.html#af7be6f4bf90bd19f7e68680149d176f1',1,'mal_toolkit::CallbackSystem::RemoveCallback(CallbackId id)'],['../dd/d83/classmal__toolkit_1_1_callback_system.html#a8310ae5fc9ffc4084ca631ae6bd229ac',1,'mal_toolkit::CallbackSystem::RemoveCallback(CallbackFunction const &amp;callback)']]],
+  ['reset_5',['reset',['../db/d8f/classmal__toolkit_1_1_timer.html#a620487fa7d308bc07213d63224539084',1,'mal_toolkit::Timer']]],
+  ['reset_5fdelay_6',['reset_delay',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a93f251f1d02f4d8f80ad682b09db23d4',1,'mal_toolkit::ExponentialBackoff::reset_delay()'],['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a192862549e9b4e2b444ba4982f473f1a',1,'mal_toolkit::LinearBackoff::reset_delay()']]],
+  ['reset_5fto_5fnow_7',['reset_to_now',['../db/d8f/classmal__toolkit_1_1_timer.html#abffea8f2a684ead757b4bfdf878b39e1',1,'mal_toolkit::Timer']]],
+  ['rtrim_8',['rtrim',['../df/df5/namespacemal__toolkit.html#a08803427441a4a54fdcc0c4b7e0b32f3',1,'mal_toolkit']]],
+  ['rtrimview_9',['rtrimview',['../df/df5/namespacemal__toolkit.html#a0e2eca44df5c6fad4ccfc2fd5be64e4c',1,'mal_toolkit']]],
+  ['run_10',['Run',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323',1,'mal_packet_weaver::PacketDispatcher']]]
 ];

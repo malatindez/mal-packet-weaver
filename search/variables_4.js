@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['file_5fmap_5f_0',['file_map_',['../dd/d41/classmal__toolkit_1_1_file_watcher.html#a505bd96c09a5c160374ae7de8f621f60',1,'mal_toolkit::FileWatcher']]],
-  ['files_5f_1',['files_',['../d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event.html#afdcb7b6973c416e4ee6096a1ed255b01',1,'mal_toolkit::events::FilesChangedEvent']]],
-  ['flush_2',['flush',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a42764823fc67a09f243e462dae776338',1,'mal_toolkit::Measurer']]]
+  ['elapsed_0',['elapsed',['../db/ddb/structmal__toolkit_1_1_measurer_1_1_entry.html#af5faf03417c67260f28c034a3fe4dd88',1,'mal_toolkit::Measurer::Entry']]],
+  ['enabled_5f_1',['enabled_',['../d0/d09/classmal__toolkit_1_1enableable.html#a7c08b94f980813dc1721537922554816',1,'mal_toolkit::enableable']]],
+  ['encryption_5f_2',['encryption_',['../d8/d39/classmal__packet__weaver_1_1_session.html#a330b6ffeb91b3feccb89e3c4264e7eb6',1,'mal_packet_weaver::Session']]],
+  ['entries_3',['entries',['../d1/d3a/structmal__toolkit_1_1_measurer.html#ab59da069393137f4297279395e2194dc',1,'mal_toolkit::Measurer']]],
+  ['entry_5ftime_4',['entry_time',['../db/ddb/structmal__toolkit_1_1_measurer_1_1_entry.html#a5edc45081dd6a0c4f6b6410acbdbdb94',1,'mal_toolkit::Measurer::Entry::entry_time'],['../d1/d3a/structmal__toolkit_1_1_measurer.html#a3999891d74d3592e6e9482391ef7da17',1,'mal_toolkit::Measurer::entry_time']]],
+  ['event_5fcallback_5f_5',['event_callback_',['../dd/d41/classmal__toolkit_1_1_file_watcher.html#ab886297d57706e6dc76b83bd2007ac99',1,'mal_toolkit::FileWatcher']]],
+  ['event_5fname_6',['event_name',['../d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event.html#a1aa221dc9c213801bb685ad180e7edb5',1,'mal_toolkit::events::FilesChangedEvent']]]
 ];

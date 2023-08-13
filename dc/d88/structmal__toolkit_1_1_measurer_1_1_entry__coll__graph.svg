@@ -31,7 +31,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="../../d4/dc3/classfloat.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="68.88,-108.25 34.88,-108.25 34.88,-89 68.88,-89 68.88,-108.25"/>
 <text text-anchor="middle" x="51.88" y="-94.75" font-family="Times,serif" font-size="10.00">float</text>
 </a>

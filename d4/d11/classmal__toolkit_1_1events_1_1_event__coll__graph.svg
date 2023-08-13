@@ -31,7 +31,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="../../d9/db9/classbool.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="33.25,-97 0,-97 0,-77.75 33.25,-77.75 33.25,-97"/>
 <text text-anchor="middle" x="16.62" y="-83.5" font-family="Times,serif" font-size="10.00">bool</text>
 </a>

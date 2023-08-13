@@ -31,7 +31,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="../../dd/de2/classsize__t.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="73.38,-108.25 33.38,-108.25 33.38,-89 73.38,-89 73.38,-108.25"/>
 <text text-anchor="middle" x="53.38" y="-94.75" font-family="Times,serif" font-size="10.00">size_t</text>
 </a>

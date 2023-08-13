@@ -1,0 +1,15 @@
+<map id="mal_packet_weaver::Session::async_packet_forger" name="mal_packet_weaver::Session::async_packet_forger">
+<area shape="rect" id="Node000001" title="Asynchronously forges new packets from the buffer." alt="" coords="5,121,143,176"/>
+<area shape="rect" id="Node000002" href="$df/df5/namespacemal__toolkit.html#a8405b24c94e717d8a57da64b1483a4a9" title="Always asserts a condition with customizable behavior." alt="" coords="192,13,353,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,118,141,82,189,49,203,42,206,47,192,53,144,86,104,122"/>
+<area shape="rect" id="Node000004" href="$d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="206,63,339,103"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,123,194,106,196,111,144,128"/>
+<area shape="rect" id="Node000005" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#aa83694a9b15273a1abbf95722b71fcca" title="Decrease the backoff delay using divisor factor." alt="" coords="198,128,347,169"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="143,146,183,146,183,151,143,151"/>
+<area shape="rect" id="Node000006" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="191,193,354,234"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="144,168,196,186,194,191,142,174"/>
+<area shape="rect" id="Node000007" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="198,259,347,299"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="106,175,145,210,192,243,202,249,200,254,189,248,142,214,102,179"/>
+<area shape="rect" id="Node000003" href="$df/df5/namespacemal__toolkit.html#a27bf9441da264c7f90650042e9e30f40" title="Returns an empty string representing the current source location." alt="" coords="402,5,566,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="353,23,387,23,387,28,353,28"/>
+</map>

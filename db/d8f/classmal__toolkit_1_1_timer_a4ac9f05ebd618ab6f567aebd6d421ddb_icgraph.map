@@ -1,0 +1,10 @@
+<map id="mal_toolkit::Timer::elapsed" name="mal_toolkit::Timer::elapsed">
+<area shape="rect" id="Node000001" title="Calculates and returns the elapsed time since the timer was last reset." alt="" coords="660,46,781,87"/>
+<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae3d94e60dee99fdf2faf1b807c7d04ef" title="Fulfills handlers associated with a packet ID and packet data." alt="" coords="464,5,612,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="645,55,612,49,613,44,646,50"/>
+<area shape="rect" id="Node000003" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323" title="This function represents the main loop for running a task with exponential backoff and asynchronous I..." alt="" coords="271,46,416,87"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="646,74,612,76,464,76,416,74,417,69,464,71,612,71,645,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="450,51,417,57,416,51,449,46"/>
+<area shape="rect" id="Node000004" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac22bb2ccd532850a73766ce512b50082" title="Constructs a PacketDispatcher instance associated with the given io_context." alt="" coords="5,46,223,87"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="256,69,223,69,223,64,256,64"/>
+</map>

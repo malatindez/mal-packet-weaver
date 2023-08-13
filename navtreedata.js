@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "mal-packet-weaver", "index.html", [
+    [ "Todo List", "dd/da0/todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -41,7 +42,7 @@ var NAVTREE =
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
@@ -61,9 +62,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event.html#a1dd6b5a3fd2991761f3bf88737499ff6",
-"da/dbb/classmal__toolkit_1_1uuid_1_1_u_u_i_d_generator.html#a2cc59051bb3d50b78da98f0bc8793f48",
-"functions_vars.html"
+"d4/d2a/classmal__toolkit_1_1namable__protected.html#a67aeb8f1d497add5bc75586ed7e50a26",
+"d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a7eff437a2fb7ead46dfe52a863894012",
+"d8/de8/namespacemal__toolkit_1_1__template__detail.html#a9596fa9c03ccb77d48242f28dff4364d",
+"dd/d3a/common_8hpp.html#a7f65afb32374e0f2cbe853423950775c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

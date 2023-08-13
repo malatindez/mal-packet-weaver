@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['time_5fto_5fflush_0',['time_to_flush',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a221fa6b46566b3e4a4174391023cbad9',1,'mal_toolkit::Measurer']]]
+  ['received_5fpackets_5f_0',['received_packets_',['../d8/d39/classmal__packet__weaver_1_1_session.html#a91a49bf692db6a46fe1f48a3d5499014',1,'mal_packet_weaver::Session']]],
+  ['rng_5f_1',['rng_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a130280af92464fdd4f63fc5f98ccd261',1,'mal_toolkit::ExponentialBackoff']]]
 ];

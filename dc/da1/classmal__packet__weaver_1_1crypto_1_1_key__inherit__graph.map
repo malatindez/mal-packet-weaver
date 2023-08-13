@@ -1,0 +1,7 @@
+<map id="mal_packet_weaver::crypto::Key" name="mal_packet_weaver::crypto::Key">
+<area shape="rect" id="Node000001" title="Represents a cryptographic key as a byte array." alt="" coords="10,153,143,193"/>
+<area shape="rect" id="Node000002" href="$d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="5,79,148,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,120,79,152,74,152,74,120"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="23,5,130,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,46,79,79,74,79,74,46"/>
+</map>

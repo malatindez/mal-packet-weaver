@@ -1,0 +1,49 @@
+<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit.hpp">
+<area shape="rect" id="Node000001" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="384,5,527,61"/>
+<area shape="rect" id="Node000002" href="$d3/daa/encryption-interface_8hpp.html" title=" " alt="" coords="7,109,163,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="370,61,164,117,163,111,369,55"/>
+<area shape="rect" id="Node000005" href="$d4/d5e/session_8hpp.html" title=" " alt="" coords="373,531,539,572"/>
+<area shape="poly" id="edge28_Node000001_Node000005" title=" " alt="" coords="458,76,458,239,458,346,458,531,453,531,453,346,453,239,453,76"/>
+<area shape="rect" id="Node000009" href="$de/d3a/crypto-common_8hpp.html" title=" " alt="" coords="201,109,377,165"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="400,71,335,111,332,106,397,67"/>
+<area shape="rect" id="Node000012" href="$df/d1d/packet-dispatcher_8hpp.html" title=" " alt="" coords="731,420,874,476"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="542,46,616,67,697,99,737,121,774,146,807,176,835,211,858,252,866,289,863,327,852,373,841,398,827,421,822,418,836,396,846,371,858,326,861,289,853,254,831,214,803,180,770,150,734,125,695,104,615,72,541,51"/>
+<area shape="rect" id="Node000015" href="$d9/d85/packet__impl_2packet_8hpp.html" title=" " alt="" coords="504,109,647,165"/>
+<area shape="poly" id="edge21_Node000001_Node000015" title=" " alt="" coords="500,69,545,106,542,110,497,73"/>
+<area shape="rect" id="Node000003" href="$df/d27/aes_8hpp.html" title=" " alt="" coords="5,213,149,268"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,180,82,212,76,212,79,179"/>
+<area shape="rect" id="Node000004" href="$d2/d62/crypto_8hpp.html" title=" " alt="" coords="224,420,367,476"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="100,280,131,326,169,370,203,396,239,417,236,422,200,400,166,374,126,329,96,283"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="352,482,426,528,423,533,349,486"/>
+<area shape="rect" id="Node000006" href="$de/d5c/dispatcher-session_8hpp.html" title=" " alt="" coords="789,627,952,683"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="539,574,551,577,789,633,788,638,550,582,538,579"/>
+<area shape="rect" id="Node000007" href="$d9/d1a/session_8cpp.html" title=" " alt="" coords="560,635,725,676"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="506,577,608,632,605,637,503,581"/>
+<area shape="rect" id="Node000008" href="$d1/d16/session_8inl.html" title=" " alt="" coords="376,635,535,676"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="450,586,451,634,446,634,444,587"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="462,620,460,572,466,572,467,620"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="220,174,135,214,133,210,218,169"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="241,177,226,194,214,214,198,257,193,293,198,328,214,371,231,397,254,418,250,421,227,400,209,373,193,330,188,293,193,255,209,212,221,191,237,173"/>
+<area shape="rect" id="Node000010" href="$d8/d6d/sha_8hpp.html" title=" " alt="" coords="224,213,367,268"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="294,179,297,212,291,212,289,180"/>
+<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="352,276,369,294,382,315,390,344,382,373,364,400,341,421,337,418,360,397,377,371,385,344,377,317,365,297,348,280"/>
+<area shape="rect" id="Node000011" href="$d4/d28/ecdsa_8hpp.html" title=" " alt="" coords="224,316,367,372"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="298,283,298,316,293,316,293,283"/>
+<area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="298,387,298,419,293,419,293,387"/>
+<area shape="poly" id="edge17_Node000012_Node000006" title=" " alt="" coords="859,484,876,502,889,523,896,550,896,578,884,628,879,627,891,577,891,550,884,525,872,505,855,487"/>
+<area shape="rect" id="Node000013" href="$d8/d1a/packet-dispatcher_8cpp.html" title=" " alt="" coords="563,524,706,579"/>
+<area shape="poly" id="edge18_Node000012_Node000013" title=" " alt="" coords="746,486,681,525,678,521,744,481"/>
+<area shape="rect" id="Node000014" href="$d2/d7d/packet-dispatcher_8inl.html" title=" " alt="" coords="731,524,874,579"/>
+<area shape="poly" id="edge19_Node000012_Node000014" title=" " alt="" coords="796,491,797,523,792,523,791,491"/>
+<area shape="poly" id="edge20_Node000014_Node000012" title=" " alt="" coords="809,509,808,476,813,476,814,509"/>
+<area shape="rect" id="Node000016" href="$d3/d53/packet-factory_8hpp.html" title=" " alt="" coords="498,213,654,268"/>
+<area shape="poly" id="edge22_Node000015_Node000016" title=" " alt="" coords="578,180,578,212,573,212,573,180"/>
+<area shape="rect" id="Node000019" href="$d3/dae/packet_8cpp.html" title=" " alt="" coords="677,213,821,268"/>
+<area shape="poly" id="edge27_Node000015_Node000019" title=" " alt="" coords="636,170,704,210,701,214,633,175"/>
+<area shape="rect" id="Node000017" href="$d2/d3f/packet_8hpp.html" title=" " alt="" coords="494,324,658,365"/>
+<area shape="poly" id="edge23_Node000016_Node000017" title=" " alt="" coords="578,283,578,324,573,324,573,283"/>
+<area shape="rect" id="Node000018" href="$d2/db3/packet-factory_8cpp.html" title=" " alt="" coords="682,316,837,372"/>
+<area shape="poly" id="edge26_Node000016_Node000018" title=" " alt="" coords="639,274,712,313,709,318,636,278"/>
+<area shape="poly" id="edge25_Node000017_Node000005" title=" " alt="" coords="559,379,469,532,465,530,555,376"/>
+<area shape="poly" id="edge24_Node000017_Node000012" title=" " alt="" coords="634,368,743,417,741,422,631,373"/>
+</map>

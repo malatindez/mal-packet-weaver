@@ -297,7 +297,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a8789d7fd41b500c31062620a36b064f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an int64_t value to a <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a> using little-endian byte order.  <br /></td></tr>
 <tr class="separator:a8789d7fd41b500c31062620a36b064f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcf0589e175aea12b4b7c10084105c61"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... U&gt; </td></tr>
-<tr class="memitem:adcf0589e175aea12b4b7c10084105c61"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#adcf0589e175aea12b4b7c10084105c61">GetFunctionAddress</a> (std::function&lt; T(U...)&gt; f)</td></tr>
+<tr class="memitem:adcf0589e175aea12b4b7c10084105c61"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#adcf0589e175aea12b4b7c10084105c61">GetFunctionAddress</a> (std::function&lt; T(U...)&gt; f)</td></tr>
 <tr class="memdesc:adcf0589e175aea12b4b7c10084105c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the address of a callable function.  <br /></td></tr>
 <tr class="separator:adcf0589e175aea12b4b7c10084105c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30e221c6a3ee5dff2655a00ad399cb45"><td class="memItemLeft" align="right" valign="top">std::optional&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a30e221c6a3ee5dff2655a00ad399cb45">to_int64</a> (std::string_view str)</td></tr>
@@ -312,19 +312,19 @@ Functions</h2></td></tr>
 <tr class="memitem:a2f8178fa182139d89e522d558e12a6c3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a2f8178fa182139d89e522d558e12a6c3">CurrentSourceLocation</a> (std::source_location location=std::source_location::current())</td></tr>
 <tr class="memdesc:a2f8178fa182139d89e522d558e12a6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a string representation of the current source location.  <br /></td></tr>
 <tr class="separator:a2f8178fa182139d89e522d558e12a6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a10dbab8f9e26361eaa4af07f31713d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a1a10dbab8f9e26361eaa4af07f31713d">Assert</a> (bool value, std::string_view message=&quot;Assert failed&quot;, std::source_location location=std::source_location::current())</td></tr>
+<tr class="memitem:a1a10dbab8f9e26361eaa4af07f31713d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a1a10dbab8f9e26361eaa4af07f31713d">Assert</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> value, std::string_view message=&quot;Assert failed&quot;, std::source_location location=std::source_location::current())</td></tr>
 <tr class="memdesc:a1a10dbab8f9e26361eaa4af07f31713d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts a condition with customizable behavior based on debug mode.  <br /></td></tr>
 <tr class="separator:a1a10dbab8f9e26361eaa4af07f31713d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8405b24c94e717d8a57da64b1483a4a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a8405b24c94e717d8a57da64b1483a4a9">AlwaysAssert</a> (bool value, std::string_view message=&quot;Assert failed&quot;, std::source_location location=std::source_location::current())</td></tr>
+<tr class="memitem:a8405b24c94e717d8a57da64b1483a4a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a8405b24c94e717d8a57da64b1483a4a9">AlwaysAssert</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> value, std::string_view message=&quot;Assert failed&quot;, std::source_location location=std::source_location::current())</td></tr>
 <tr class="memdesc:a8405b24c94e717d8a57da64b1483a4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always asserts a condition with customizable behavior.  <br /></td></tr>
 <tr class="separator:a8405b24c94e717d8a57da64b1483a4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27bf9441da264c7f90650042e9e30f40"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a27bf9441da264c7f90650042e9e30f40">CurrentSourceLocation</a> ()</td></tr>
 <tr class="memdesc:a27bf9441da264c7f90650042e9e30f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an empty string representing the current source location.  <br /></td></tr>
 <tr class="separator:a27bf9441da264c7f90650042e9e30f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35d57cfdf079b78083710d8cae478d3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a35d57cfdf079b78083710d8cae478d3d">Assert</a> (bool value, std::string_view message=&quot;Assert failed&quot;)</td></tr>
+<tr class="memitem:a35d57cfdf079b78083710d8cae478d3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a35d57cfdf079b78083710d8cae478d3d">Assert</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> value, std::string_view message=&quot;Assert failed&quot;)</td></tr>
 <tr class="memdesc:a35d57cfdf079b78083710d8cae478d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts a condition with customizable behavior based on debug mode.  <br /></td></tr>
 <tr class="separator:a35d57cfdf079b78083710d8cae478d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02c8f49d7e3b808d3465d93daff31603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a02c8f49d7e3b808d3465d93daff31603">AlwaysAssert</a> (bool value, std::string_view message=&quot;Assert failed&quot;)</td></tr>
+<tr class="memitem:a02c8f49d7e3b808d3465d93daff31603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a02c8f49d7e3b808d3465d93daff31603">AlwaysAssert</a> (<a class="el" href="../../d9/db9/classbool.html">bool</a> value, std::string_view message=&quot;Assert failed&quot;)</td></tr>
 <tr class="memdesc:a02c8f49d7e3b808d3465d93daff31603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always asserts a condition with customizable behavior.  <br /></td></tr>
 <tr class="separator:a02c8f49d7e3b808d3465d93daff31603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e192a2ebd5aba9f1213fcf925f64a7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -332,7 +332,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a50e192a2ebd5aba9f1213fcf925f64a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a value into a sorted vector while maintaining the sorted order.  <br /></td></tr>
 <tr class="separator:a50e192a2ebd5aba9f1213fcf925f64a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d62f96ef86f79c8e045f8b6a14269b7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2d62f96ef86f79c8e045f8b6a14269b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a2d62f96ef86f79c8e045f8b6a14269b7">SortedInsert</a> (std::vector&lt; T &gt; &amp;range, T &amp;&amp;value, std::function&lt; bool(T const &amp;, T const &amp;)&gt; const &amp;comparator)</td></tr>
+<tr class="memitem:a2d62f96ef86f79c8e045f8b6a14269b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a2d62f96ef86f79c8e045f8b6a14269b7">SortedInsert</a> (std::vector&lt; T &gt; &amp;range, T &amp;&amp;value, std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(T const &amp;, T const &amp;)&gt; const &amp;comparator)</td></tr>
 <tr class="memdesc:a2d62f96ef86f79c8e045f8b6a14269b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a value into a sorted vector while maintaining the sorted order using a custom comparator.  <br /></td></tr>
 <tr class="separator:a2d62f96ef86f79c8e045f8b6a14269b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a761e4a52d67f01dcecccdef9470a1c0f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -340,11 +340,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:a761e4a52d67f01dcecccdef9470a1c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efficiently erases elements equal to a given value from a sorted vector.  <br /></td></tr>
 <tr class="separator:a761e4a52d67f01dcecccdef9470a1c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2df219b7098c37fbe67d01bd21de208"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af2df219b7098c37fbe67d01bd21de208"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#af2df219b7098c37fbe67d01bd21de208">SortedErase</a> (std::vector&lt; T &gt; &amp;range, T &amp;&amp;value, std::function&lt; bool(T const &amp;, T const &amp;)&gt; const &amp;comparator)</td></tr>
+<tr class="memitem:af2df219b7098c37fbe67d01bd21de208"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#af2df219b7098c37fbe67d01bd21de208">SortedErase</a> (std::vector&lt; T &gt; &amp;range, T &amp;&amp;value, std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(T const &amp;, T const &amp;)&gt; const &amp;comparator)</td></tr>
 <tr class="memdesc:af2df219b7098c37fbe67d01bd21de208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efficiently erases elements equal to a given value from a sorted vector using a custom comparator.  <br /></td></tr>
 <tr class="separator:af2df219b7098c37fbe67d01bd21de208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ecf4e1993e2d57fcd76e2d8ca11f36a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8ecf4e1993e2d57fcd76e2d8ca11f36a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a8ecf4e1993e2d57fcd76e2d8ca11f36a">hash_combine</a> (size_t &amp;seed, T const &amp;hash)</td></tr>
+<tr class="memitem:a8ecf4e1993e2d57fcd76e2d8ca11f36a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a8ecf4e1993e2d57fcd76e2d8ca11f36a">hash_combine</a> (<a class="el" href="../../dd/de2/classsize__t.html">size_t</a> &amp;seed, T const &amp;hash)</td></tr>
 <tr class="memdesc:a8ecf4e1993e2d57fcd76e2d8ca11f36a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines a hash value into an existing hash using bitwise operations.  <br /></td></tr>
 <tr class="separator:a8ecf4e1993e2d57fcd76e2d8ca11f36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ed516d312589f8f0896434aa486ea65"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a2ed516d312589f8f0896434aa486ea65">as_lowercase</a> (std::string_view const s) noexcept</td></tr>
@@ -376,7 +376,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a4d9fe515b4cf334c6984d4725fa21e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constexpr loop for compile-time iteration.  <br /></td></tr>
 <tr class="separator:a4d9fe515b4cf334c6984d4725fa21e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f062a1732c9739d26f1edee74b3aa25"><td class="memTemplParams" colspan="2">template&lt;class iterator , class F &gt; </td></tr>
-<tr class="memitem:a2f062a1732c9739d26f1edee74b3aa25"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a2f062a1732c9739d26f1edee74b3aa25">for_each_true</a> (iterator begin, iterator const &amp;end, F &amp;&amp;f)</td></tr>
+<tr class="memitem:a2f062a1732c9739d26f1edee74b3aa25"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a2f062a1732c9739d26f1edee74b3aa25">for_each_true</a> (iterator begin, iterator const &amp;end, F &amp;&amp;f)</td></tr>
 <tr class="memdesc:a2f062a1732c9739d26f1edee74b3aa25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a function to each element in a range and returns true if all return true.  <br /></td></tr>
 <tr class="separator:a2f062a1732c9739d26f1edee74b3aa25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a744d054f457522233a3b30314956f61d"><td class="memTemplParams" colspan="2">template&lt;EnumClassConcept Enumeration&gt; </td></tr>
@@ -609,7 +609,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void mal_toolkit::AlwaysAssert </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
@@ -663,7 +663,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void mal_toolkit::AlwaysAssert </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
@@ -712,6 +712,11 @@ template&lt;typename T &gt; </div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a8405b24c94e717d8a57da64b1483a4a9_cgraph.svg" width="384" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a8405b24c94e717d8a57da64b1483a4a9_icgraph.svg" width="538" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -835,7 +840,7 @@ template&lt;EnumClassConcept Enumeration&gt; </div>
         <tr>
           <td class="memname">void mal_toolkit::Assert </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
@@ -890,7 +895,7 @@ template&lt;EnumClassConcept Enumeration&gt; </div>
         <tr>
           <td class="memname">void mal_toolkit::Assert </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
@@ -944,7 +949,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a1a10dbab8f9e26361eaa4af07f31713d_icgraph.svg" width="296" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a1a10dbab8f9e26361eaa4af07f31713d_icgraph.svg" width="331" height="276"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1193,6 +1198,11 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>The converted uint32_t value. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df5/byte-helper_8hpp_source.html#l00429">429</a> of file <a class="el" href="../../da/df5/byte-helper_8hpp_source.html">byte-helper.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a5c77c699bb81839f37c2b5d956d8e2df_icgraph.svg" width="491" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -1297,7 +1307,7 @@ template&lt;auto begin, auto end, auto inc, class F &gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a27bf9441da264c7f90650042e9e30f40_icgraph.svg" width="546" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a27bf9441da264c7f90650042e9e30f40_icgraph.svg" width="100%" height="567"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1351,7 +1361,7 @@ template&lt;class iterator , class F &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool mal_toolkit::for_each_true </td>
+          <td class="memname">constexpr <a class="el" href="../../d9/db9/classbool.html">bool</a> mal_toolkit::for_each_true </td>
           <td>(</td>
           <td class="paramtype">iterator&#160;</td>
           <td class="paramname"><em>begin</em>, </td>
@@ -1434,7 +1444,7 @@ template&lt;class iterator , class F &gt; </div>
 template&lt;typename T , typename... U&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">size_t mal_toolkit::GetFunctionAddress </td>
+          <td class="memname"><a class="el" href="../../dd/de2/classsize__t.html">size_t</a> mal_toolkit::GetFunctionAddress </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; T(U...)&gt;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
@@ -1479,7 +1489,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void mal_toolkit::hash_combine </td>
           <td>(</td>
-          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/de2/classsize__t.html">size_t</a> &amp;&#160;</td>
           <td class="paramname"><em>seed</em>, </td>
         </tr>
         <tr>
@@ -1906,7 +1916,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::function&lt; bool(T const &amp;, T const &amp;)&gt; const &amp;&#160;</td>
+          <td class="paramtype">std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(T const &amp;, T const &amp;)&gt; const &amp;&#160;</td>
           <td class="paramname"><em>comparator</em>&#160;</td>
         </tr>
         <tr>
@@ -1995,7 +2005,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::function&lt; bool(T const &amp;, T const &amp;)&gt; const &amp;&#160;</td>
+          <td class="paramtype">std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(T const &amp;, T const &amp;)&gt; const &amp;&#160;</td>
           <td class="paramname"><em>comparator</em>&#160;</td>
         </tr>
         <tr>
@@ -2333,6 +2343,11 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a> containing the byte representation of the uint32_t value. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df5/byte-helper_8hpp_source.html#l00443">443</a> of file <a class="el" href="../../da/df5/byte-helper_8hpp_source.html">byte-helper.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a205f8d4452e595ed3943f0d083c6033f_icgraph.svg" width="494" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -2417,7 +2432,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 11:06:44 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 11:07:25 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

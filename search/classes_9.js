@@ -1,18 +1,9 @@
 var searchData=
 [
-  ['return_5ftype_0',['return_type',['../db/dda/structmal__toolkit_1_1return__type.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28_2a_29_28args_2e_2e_2e_29_3e_1',['return_type&lt; R(*)(Args...)&gt;',['../dd/dc6/structmal__toolkit_1_1return__type_3_01_r_07_5_08_07_args_8_8_8_08_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28args_2e_2e_2e_29_3e_2',['return_type&lt; R(Args...)&gt;',['../da/dbf/structmal__toolkit_1_1return__type_3_01_r_07_args_8_8_8_08_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20_26_20_3e_3',['return_type&lt; R(C::*)(Args...) &amp; &gt;',['../d1/db6/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01_6_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20_26_26_20_3e_4',['return_type&lt; R(C::*)(Args...) &amp;&amp; &gt;',['../d8/dfc/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01_6_6_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20const_20_26_20_3e_5',['return_type&lt; R(C::*)(Args...) const &amp; &gt;',['../de/dd2/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01_6_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20const_20_26_26_20_3e_6',['return_type&lt; R(C::*)(Args...) const &amp;&amp; &gt;',['../da/d22/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01_6_6_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20const_20_3e_7',['return_type&lt; R(C::*)(Args...) const &gt;',['../d4/d84/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20const_20volatile_20_26_20_3e_8',['return_type&lt; R(C::*)(Args...) const volatile &amp; &gt;',['../d4/d43/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_6_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20const_20volatile_20_26_26_20_3e_9',['return_type&lt; R(C::*)(Args...) const volatile &amp;&amp; &gt;',['../dc/d0d/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_6_6_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20const_20volatile_20_3e_10',['return_type&lt; R(C::*)(Args...) const volatile &gt;',['../da/db3/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20volatile_20_26_20_3e_11',['return_type&lt; R(C::*)(Args...) volatile &amp; &gt;',['../de/d8b/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_6_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20volatile_20_26_26_20_3e_12',['return_type&lt; R(C::*)(Args...) volatile &amp;&amp; &gt;',['../de/d97/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_6_6_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_20volatile_20_3e_13',['return_type&lt; R(C::*)(Args...) volatile &gt;',['../d6/d1d/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_4.html',1,'mal_toolkit']]],
-  ['return_5ftype_3c_20r_28c_3a_3a_2a_29_28args_2e_2e_2e_29_3e_14',['return_type&lt; R(C::*)(Args...)&gt;',['../d2/d15/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4.html',1,'mal_toolkit']]]
+  ['namable_0',['namable',['../da/d90/classmal__toolkit_1_1namable.html',1,'mal_toolkit']]],
+  ['namable_5fonce_1',['namable_once',['../df/d40/classmal__toolkit_1_1namable__once.html',1,'mal_toolkit']]],
+  ['namable_5fprotected_2',['namable_protected',['../d4/d2a/classmal__toolkit_1_1namable__protected.html',1,'mal_toolkit']]],
+  ['non_5fcopyable_3',['non_copyable',['../d1/dd3/classmal__toolkit_1_1non__copyable.html',1,'mal_toolkit']]],
+  ['non_5fcopyable_5fnon_5fmovable_4',['non_copyable_non_movable',['../d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html',1,'mal_toolkit']]],
+  ['non_5fmovable_5',['non_movable',['../db/d86/classmal__toolkit_1_1non__movable.html',1,'mal_toolkit']]]
 ];

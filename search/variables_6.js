@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handled_0',['handled',['../d5/dbd/classmal__toolkit_1_1events_1_1_event.html#aecb253b364b9823e3c95d1fcf2b18aa9',1,'mal_toolkit::events::Event']]]
+  ['generator_0',['generator',['../da/dbb/classmal__toolkit_1_1uuid_1_1_u_u_i_d_generator.html#aff7cc3bcbd0c441877f3f7e4335e937e',1,'mal_toolkit::uuid::UUIDGenerator']]]
 ];
