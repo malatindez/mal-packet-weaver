@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['read_5fbytes_5fto_0',['read_bytes_to',['../d8/d39/classmal__packet__weaver_1_1_session.html#ad10adb9e1d47a0e0a56d02808606ca17',1,'mal_packet_weaver::Session']]],
+  ['read_5fbytes_5fto_0',['read_bytes_to',['../d8/d39/classmal__packet__weaver_1_1_session.html#a24333663993df453bafeeaed060b777a',1,'mal_packet_weaver::Session']]],
   ['receive_5fall_1',['receive_all',['../d8/d39/classmal__packet__weaver_1_1_session.html#a9cb6655f710d023540a11da7b218c5d3',1,'mal_packet_weaver::Session']]],
-  ['register_5fdefault_5fhandler_2',['register_default_handler',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a90f4839728ba615d085089e56fb99a08',1,'mal_packet_weaver::PacketDispatcher']]],
+  ['register_5fdefault_5fhandler_2',['register_default_handler',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aa4666bcf2c65991ad251e29d7d6cb312',1,'mal_packet_weaver::DispatcherSession::register_default_handler()'],['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a90f4839728ba615d085089e56fb99a08',1,'mal_packet_weaver::PacketDispatcher::register_default_handler()']]],
   ['registerdeserializer_3',['RegisterDeserializer',['../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a2434d336c0c27192592cd3cbc1320fdd',1,'mal_packet_weaver::packet::PacketFactory::RegisterDeserializer()'],['../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#aefe02e1a7968a53a2e5cdf89f21f7c12',1,'mal_packet_weaver::packet::PacketFactory::RegisterDeserializer(UniquePacketID packet_id, PacketDeserializeFunc const &amp;factory)']]],
   ['removecallback_4',['RemoveCallback',['../dd/d83/classmal__toolkit_1_1_callback_system.html#af7be6f4bf90bd19f7e68680149d176f1',1,'mal_toolkit::CallbackSystem::RemoveCallback(CallbackId id)'],['../dd/d83/classmal__toolkit_1_1_callback_system.html#a8310ae5fc9ffc4084ca631ae6bd229ac',1,'mal_toolkit::CallbackSystem::RemoveCallback(CallbackFunction const &amp;callback)']]],
   ['reset_5',['reset',['../db/d8f/classmal__toolkit_1_1_timer.html#a620487fa7d308bc07213d63224539084',1,'mal_toolkit::Timer']]],

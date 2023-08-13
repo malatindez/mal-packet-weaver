@@ -40,10 +40,10 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469" target="_top" xlink:title="Convert a byte array to a uint32_t value using little&#45;endian byte order.">
-<polygon fill="white" stroke="#666666" points="249.88,-177.5 150.62,-177.5 150.62,-147 249.88,-147 249.88,-177.5"/>
-<text text-anchor="start" x="158.62" y="-164" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="200.25" y="-152.75" font-family="Times,serif" font-size="10.00">bytes_to_uint32</text>
+<g id="a_Node000004"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df" target="_top" xlink:title="Convert a byte array to a uint32_t value using little&#45;endian byte order.">
+<polygon fill="white" stroke="#666666" points="243.12,-177.5 157.38,-177.5 157.38,-147 243.12,-147 243.12,-177.5"/>
+<text text-anchor="start" x="165.38" y="-164" font-family="Times,serif" font-size="10.00">mal_toolkit::bytes</text>
+<text text-anchor="middle" x="200.25" y="-152.75" font-family="Times,serif" font-size="10.00">_to_uint32</text>
 </a>
 </g>
 </g>
@@ -51,8 +51,8 @@
 <g id="edge3_Node000001_Node000004" class="edge">
 <title>Node1&#45;&gt;Node4</title>
 <g id="a_edge3_Node000001_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M103.41,-130.25C115.96,-134.44 129.47,-138.95 142.27,-143.23"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="140.77,-146.75 151.36,-146.59 142.99,-140.11 140.77,-146.75"/>
+<path fill="none" stroke="#63b8ff" d="M103.41,-130.25C117.54,-134.97 132.89,-140.09 147.08,-144.83"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="145.58,-148.35 156.18,-148.2 147.8,-141.71 145.58,-148.35"/>
 </a>
 </g>
 </g>

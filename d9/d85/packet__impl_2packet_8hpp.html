@@ -118,11 +118,7 @@ $(document).ready(function(){initNavTree('d9/d85/packet__impl_2packet_8hpp.html'
   <div class="headertitle"><div class="title">packet.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d1/d8a/mal-toolkit_8hpp_source.html">mal-toolkit/mal-toolkit.hpp</a>&quot;</code><br />
-<code>#include &lt;boost/archive/binary_iarchive.hpp&gt;</code><br />
-<code>#include &lt;boost/archive/binary_oarchive.hpp&gt;</code><br />
-<code>#include &lt;boost/serialization/base_object.hpp&gt;</code><br />
-<code>#include &lt;boost/serialization/serialization.hpp&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d3a/common_8hpp_source.html">../common.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for packet.hpp:</div>
 <div class="dyncontent">
@@ -148,6 +144,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:d6/de9/namespacemal__packet__weaver"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></td></tr>
+<tr class="memdesc:d6/de9/namespacemal__packet__weaver"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the main namespace for the Mal <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets.">Packet</a> Weaver library. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="concepts" name="concepts"></a>
@@ -167,9 +164,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a55bbfecb837c31e7823aae457d86ef5d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">mal_packet_weaver::UniquePacketID</a> = uint32_t</td></tr>
 <tr class="memdesc:a55bbfecb837c31e7823aae457d86ef5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique identifier for a packet, combining subsystem and packet IDs.  <br /></td></tr>
 <tr class="separator:a55bbfecb837c31e7823aae457d86ef5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b7421df3f817652c8cf5ed4d4afbe1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a91b7421df3f817652c8cf5ed4d4afbe1">mal_packet_weaver::PacketDeserializeFunc</a> = std::function&lt; std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;(const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">mal_toolkit::ByteView</a>)&gt;</td></tr>
-<tr class="memdesc:a91b7421df3f817652c8cf5ed4d4afbe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type alias for packet deserialization function.  <br /></td></tr>
-<tr class="separator:a91b7421df3f817652c8cf5ed4d4afbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ec734df3c6f45e5b67ff001a9321caf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a1ec734df3c6f45e5b67ff001a9321caf">mal_packet_weaver::PacketDeserializeFunc</a> = std::function&lt; std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;(const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">ByteView</a>)&gt;</td></tr>
+<tr class="memdesc:a1ec734df3c6f45e5b67ff001a9321caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type alias for packet deserialization function.  <br /></td></tr>
+<tr class="separator:a1ec734df3c6f45e5b67ff001a9321caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -219,7 +216,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_8e585f4f409e6ee6c851964ea7a26abe.html">packet_impl</a></li><li class="navelem"><a class="el" href="../../d9/d85/packet__impl_2packet_8hpp.html">packet.hpp</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 14:25:25 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 17:32:59 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

@@ -1,22 +1,28 @@
 <map id="mal_packet_weaver::PacketDispatcher::PacketDispatcher" name="mal_packet_weaver::PacketDispatcher::PacketDispatcher">
-<area shape="rect" id="Node000001" title="Constructs a PacketDispatcher instance associated with the given io_context." alt="" coords="5,99,223,139"/>
-<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323" title="This function represents the main loop for running a task with exponential backoff and asynchronous I..." alt="" coords="271,99,416,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,116,256,116,256,122,223,122"/>
-<area shape="rect" id="Node000003" href="$db/d8f/classmal__toolkit_1_1_timer.html#a4ac9f05ebd618ab6f567aebd6d421ddb" title="Calculates and returns the elapsed time since the timer was last reset." alt="" coords="696,5,817,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,96,409,64,435,48,463,36,519,23,577,16,682,16,682,21,577,21,520,28,465,42,437,53,412,68,369,100"/>
-<area shape="rect" id="Node000004" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae3d94e60dee99fdf2faf1b807c7d04ef" title="Fulfills handlers associated with a packet ID and packet data." alt="" coords="464,51,612,107"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="416,101,449,94,450,100,417,107"/>
-<area shape="rect" id="Node000005" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2ebc44d095b5fe14aaf3e851c3deef91" title="Fulfills promises associated with a packet ID." alt="" coords="464,131,612,187"/>
-<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="417,131,450,138,449,144,416,137"/>
-<area shape="rect" id="Node000006" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be" title="Pops input packets from input queues to local maps for processing." alt="" coords="467,211,609,267"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="376,138,465,197,473,201,470,206,463,201,373,142"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="612,58,682,41,683,46,613,64"/>
-<area shape="rect" id="Node000007" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ab72dbe23999515e3fa7db665a330f066" title="Creates a default_handlers_input_pop_task and returns a future to await completion." alt="" coords="679,96,834,166"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="594,208,659,175,668,171,670,176,662,180,596,213"/>
-<area shape="rect" id="Node000008" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1fcf146e1842c61f10a6456e716f24a2" title="Creates a promise_filter_map_input_pop_task and returns a future to await completion." alt="" coords="672,190,841,261"/>
-<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="609,232,658,229,658,234,610,237"/>
-<area shape="rect" id="Node000009" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a8e90b1f9723efb6f2bb12e3b89d1e27c" title="Creates a promise_map_input_pop_task and returns a future to await completion." alt="" coords="660,285,853,340"/>
-<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="610,260,659,277,657,282,609,265"/>
-<area shape="rect" id="Node000010" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af943e1f1d220396b11bfbbb24132e4c8" title="Creates an unprocessed_packets_input_pop_task and returns a future to await completion." alt="" coords="667,364,846,434"/>
-<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="567,265,610,308,662,350,666,353,664,358,659,354,606,312,563,269"/>
+<area shape="rect" id="Node000001" title="Constructs a PacketDispatcher instance associated with the given io_context." alt="" coords="5,126,223,166"/>
+<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323" title="This function represents the main loop for running a task with exponential backoff and asynchronous I..." alt="" coords="271,126,416,166"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,143,256,143,256,149,223,149"/>
+<area shape="rect" id="Node000003" href="$db/d8f/classmal__toolkit_1_1_timer.html#a4ac9f05ebd618ab6f567aebd6d421ddb" title="Calculates and returns the elapsed time since the timer was last reset." alt="" coords="696,12,817,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="355,124,398,71,428,44,463,24,518,8,576,3,632,5,682,12,681,18,632,11,576,8,519,13,465,28,431,48,402,74,359,127"/>
+<area shape="rect" id="Node000004" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a777e68fdca73f97496bc360835a62c32" title="Fulfills handlers associated with a packet ID and packet data." alt="" coords="464,38,612,94"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="394,123,454,98,456,102,396,128"/>
+<area shape="rect" id="Node000005" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2ebc44d095b5fe14aaf3e851c3deef91" title="Fulfills promises associated with a packet ID." alt="" coords="464,118,612,174"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="416,143,449,143,449,149,416,149"/>
+<area shape="rect" id="Node000006" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ad7cba4339fd22ce22ff13bd940f839ff" title="Retrieves a shared pointer to the current dispatcher." alt="" coords="469,198,607,254"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="396,164,456,190,454,195,394,169"/>
+<area shape="rect" id="Node000009" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be" title="Pops input packets from input queues to local maps for processing." alt="" coords="467,373,609,429"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="363,165,509,359,504,362,358,168"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="612,52,681,41,682,47,613,57"/>
+<area shape="rect" id="Node000007" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="675,140,838,181"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="607,203,671,183,673,188,609,208"/>
+<area shape="rect" id="Node000008" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="682,206,831,246"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="608,223,667,223,667,229,608,229"/>
+<area shape="rect" id="Node000010" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ab72dbe23999515e3fa7db665a330f066" title="Creates a default_handlers_input_pop_task and returns a future to await completion." alt="" coords="679,271,834,341"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="603,370,664,343,666,348,605,375"/>
+<area shape="rect" id="Node000011" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1fcf146e1842c61f10a6456e716f24a2" title="Creates a promise_filter_map_input_pop_task and returns a future to await completion." alt="" coords="672,365,841,436"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="610,398,658,398,658,403,610,403"/>
+<area shape="rect" id="Node000012" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a8e90b1f9723efb6f2bb12e3b89d1e27c" title="Creates a promise_map_input_pop_task and returns a future to await completion." alt="" coords="660,460,853,515"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="611,426,672,451,670,456,609,431"/>
+<area shape="rect" id="Node000013" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af943e1f1d220396b11bfbbb24132e4c8" title="Creates an unprocessed_packets_input_pop_task and returns a future to await completion." alt="" coords="667,539,846,609"/>
+<area shape="poly" id="edge13_Node000009_Node000013" title=" " alt="" coords="564,427,607,476,662,525,666,528,663,533,659,529,603,480,560,431"/>
 </map>

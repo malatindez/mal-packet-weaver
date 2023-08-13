@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html" target="_top" xlink:title="Represents a session with packet dispatching functionality.">
 <polygon fill="white" stroke="#666666" points="99.25,-30.5 0,-30.5 0,0 99.25,0 99.25,-30.5"/>
 <text text-anchor="start" x="8" y="-17" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="middle" x="49.62" y="-5.75" font-family="Times,serif" font-size="10.00">DispatcherSession</text>

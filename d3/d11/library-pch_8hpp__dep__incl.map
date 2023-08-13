@@ -1,86 +1,89 @@
 <map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/library&#45;pch.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/library&#45;pch.hpp">
-<area shape="rect" id="Node000001" title="Precompiled header (PCH) file for common headers used across the library." alt="" coords="673,5,817,61"/>
-<area shape="rect" id="Node000002" href="$da/df5/byte-helper_8hpp.html" title=" " alt="" coords="392,220,535,276"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="731,76,705,123,687,146,666,167,531,222,529,217,664,162,683,143,700,120,726,73"/>
-<area shape="rect" id="Node000003" href="$d1/d8a/mal-toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="476,331,619,387"/>
-<area shape="poly" id="edge48_Node000001_Node000003" title=" " alt="" coords="832,39,1012,61,1113,80,1207,105,1286,137,1316,156,1339,177,1353,201,1356,227,1347,255,1326,285,1311,295,1288,304,1220,318,1129,331,1023,340,801,353,620,359,620,354,801,348,1023,335,1129,325,1219,313,1287,299,1309,290,1322,281,1342,253,1350,227,1348,203,1335,181,1313,161,1283,142,1205,110,1111,85,1011,66,831,44"/>
-<area shape="rect" id="Node000022" href="$d4/d80/common-structures_8hpp.html" title="Defines common data structures and types that can be used anywhere." alt="" coords="1371,109,1522,165"/>
-<area shape="poly" id="edge31_Node000001_Node000022" title=" " alt="" coords="832,38,1067,62,1210,82,1352,106,1371,110,1370,116,1351,112,1209,87,1067,68,831,44"/>
-<area shape="rect" id="Node000023" href="$d1/d27/converter_8hpp.html" title="Provides functions for converting between different data types." alt="" coords="5,220,149,276"/>
-<area shape="poly" id="edge33_Node000001_Node000023" title=" " alt="" coords="659,39,576,46,479,58,376,80,277,111,228,135,181,165,108,222,104,218,178,160,225,131,275,107,375,74,478,53,575,40,658,34"/>
-<area shape="rect" id="Node000024" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="728,109,871,165"/>
-<area shape="poly" id="edge35_Node000001_Node000024" title=" " alt="" coords="769,73,787,107,783,110,764,76"/>
-<area shape="rect" id="Node000028" href="$d1/dcf/endianness_8hpp.html" title="Provides functions and utilities for handling endianness conversions." alt="" coords="1019,109,1162,165"/>
-<area shape="poly" id="edge42_Node000001_Node000028" title=" " alt="" coords="832,57,1019,112,1018,117,830,62"/>
-<area shape="rect" id="Node000030" href="$dc/d94/event_8hpp.html" title="Defines event handling and notification mechanisms." alt="" coords="341,109,485,165"/>
-<area shape="poly" id="edge44_Node000001_Node000030" title=" " alt="" coords="660,63,498,112,486,115,484,110,496,106,658,57"/>
-<area shape="rect" id="Node000031" href="$dc/dad/file-watcher_8hpp.html" title="Implements a file watcher that monitors changes to specified files or directories." alt="" coords="173,220,317,276"/>
-<area shape="poly" id="edge47_Node000001_Node000031" title=" " alt="" coords="659,44,570,54,474,68,388,87,355,99,331,111,304,135,283,164,256,221,251,218,279,161,300,131,327,107,353,94,387,82,473,63,569,49,658,39"/>
-<area shape="rect" id="Node000032" href="$dd/db7/stl-helpers_8hpp.html" title="Provides helper functions and extensions for the C++ Standard Library." alt="" coords="509,109,653,165"/>
-<area shape="poly" id="edge49_Node000001_Node000032" title=" " alt="" coords="690,71,626,111,624,106,688,67"/>
-<area shape="rect" id="Node000033" href="$d0/d8a/win-utils_8hpp.html" title="Provides various Windows&#45;specific utility functions and macros." alt="" coords="1547,109,1690,165"/>
-<area shape="poly" id="edge51_Node000001_Node000033" title=" " alt="" coords="832,34,968,40,1143,53,1339,74,1535,106,1547,109,1546,114,1534,112,1338,80,1143,58,967,46,831,39"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="495,286,529,329,525,333,491,289"/>
-<area shape="rect" id="Node000004" href="$d3/daa/encryption-interface_8hpp.html" title=" " alt="" coords="99,435,255,491"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="462,386,274,438,256,442,255,437,272,432,461,381"/>
-<area shape="rect" id="Node000007" href="$d4/d5e/session_8hpp.html" title=" " alt="" coords="465,857,631,898"/>
-<area shape="poly" id="edge30_Node000003_Node000007" title=" " alt="" coords="550,402,550,565,550,672,550,857,545,857,545,672,545,565,545,402"/>
-<area shape="rect" id="Node000011" href="$de/d3a/crypto-common_8hpp.html" title=" " alt="" coords="285,435,461,491"/>
-<area shape="poly" id="edge11_Node000003_Node000011" title=" " alt="" coords="490,397,421,437,419,432,487,392"/>
-<area shape="rect" id="Node000014" href="$df/d1d/packet-dispatcher_8hpp.html" title=" " alt="" coords="823,746,966,802"/>
-<area shape="poly" id="edge18_Node000003_Node000014" title=" " alt="" coords="634,372,708,393,789,425,829,447,866,472,899,502,927,537,950,578,958,615,955,653,944,699,933,724,919,747,914,744,928,722,938,697,950,652,953,615,945,580,923,540,895,506,862,476,826,451,787,430,707,398,633,377"/>
-<area shape="rect" id="Node000017" href="$d9/d85/packet__impl_2packet_8hpp.html" title=" " alt="" coords="596,435,739,491"/>
-<area shape="poly" id="edge23_Node000003_Node000017" title=" " alt="" coords="592,395,637,432,634,436,589,399"/>
-<area shape="rect" id="Node000005" href="$df/d27/aes_8hpp.html" title=" " alt="" coords="97,539,241,594"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="176,506,174,538,168,538,171,505"/>
-<area shape="rect" id="Node000006" href="$d2/d62/crypto_8hpp.html" title=" " alt="" coords="316,746,459,802"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="192,606,223,652,261,696,295,722,331,743,328,748,292,726,258,700,218,655,188,609"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="444,808,518,854,515,859,441,812"/>
-<area shape="rect" id="Node000008" href="$de/d5c/dispatcher-session_8hpp.html" title=" " alt="" coords="881,953,1044,1009"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="631,900,643,903,881,959,880,964,642,908,630,905"/>
-<area shape="rect" id="Node000009" href="$d9/d1a/session_8cpp.html" title=" " alt="" coords="652,961,817,1002"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="598,903,700,958,697,963,595,907"/>
-<area shape="rect" id="Node000010" href="$d1/d16/session_8inl.html" title=" " alt="" coords="468,961,627,1002"/>
-<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="542,912,543,960,538,960,536,913"/>
-<area shape="poly" id="edge10_Node000010_Node000007" title=" " alt="" coords="554,946,552,898,558,898,559,946"/>
-<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="306,500,225,540,223,536,304,495"/>
-<area shape="poly" id="edge12_Node000011_Node000006" title=" " alt="" coords="330,503,316,520,306,540,291,583,286,619,290,654,306,697,323,723,346,744,342,747,319,726,301,699,285,656,280,619,286,582,301,538,312,518,326,500"/>
-<area shape="rect" id="Node000012" href="$d8/d6d/sha_8hpp.html" title=" " alt="" coords="316,539,459,594"/>
-<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="382,505,386,538,381,538,376,506"/>
-<area shape="poly" id="edge15_Node000012_Node000006" title=" " alt="" coords="444,602,461,620,474,641,482,670,474,699,456,726,433,747,429,744,452,723,469,697,477,670,469,643,457,623,440,606"/>
-<area shape="rect" id="Node000013" href="$d4/d28/ecdsa_8hpp.html" title=" " alt="" coords="316,642,459,698"/>
-<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="390,609,390,642,385,642,385,609"/>
-<area shape="poly" id="edge17_Node000013_Node000006" title=" " alt="" coords="390,713,390,745,385,745,385,713"/>
-<area shape="poly" id="edge19_Node000014_Node000008" title=" " alt="" coords="951,810,968,828,981,849,988,876,988,904,976,954,971,953,983,903,983,876,976,851,964,831,947,813"/>
-<area shape="rect" id="Node000015" href="$d8/d1a/packet-dispatcher_8cpp.html" title=" " alt="" coords="655,850,798,905"/>
-<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="838,812,773,851,770,847,836,807"/>
-<area shape="rect" id="Node000016" href="$d2/d7d/packet-dispatcher_8inl.html" title=" " alt="" coords="823,850,966,905"/>
-<area shape="poly" id="edge21_Node000014_Node000016" title=" " alt="" coords="888,817,889,849,884,849,883,817"/>
-<area shape="poly" id="edge22_Node000016_Node000014" title=" " alt="" coords="901,835,900,802,905,802,906,835"/>
-<area shape="rect" id="Node000018" href="$d3/d53/packet-factory_8hpp.html" title=" " alt="" coords="590,539,746,594"/>
-<area shape="poly" id="edge24_Node000017_Node000018" title=" " alt="" coords="670,506,670,538,665,538,665,506"/>
-<area shape="rect" id="Node000021" href="$d3/dae/packet_8cpp.html" title=" " alt="" coords="769,539,913,594"/>
-<area shape="poly" id="edge29_Node000017_Node000021" title=" " alt="" coords="728,496,796,536,793,540,725,501"/>
-<area shape="rect" id="Node000019" href="$d2/d3f/packet_8hpp.html" title=" " alt="" coords="586,650,750,691"/>
-<area shape="poly" id="edge25_Node000018_Node000019" title=" " alt="" coords="670,609,670,650,665,650,665,609"/>
-<area shape="rect" id="Node000020" href="$d2/db3/packet-factory_8cpp.html" title=" " alt="" coords="774,642,929,698"/>
-<area shape="poly" id="edge28_Node000018_Node000020" title=" " alt="" coords="731,600,804,639,801,644,728,604"/>
-<area shape="poly" id="edge27_Node000019_Node000007" title=" " alt="" coords="651,705,561,858,557,856,647,702"/>
-<area shape="poly" id="edge26_Node000019_Node000014" title=" " alt="" coords="726,694,835,743,833,748,723,699"/>
-<area shape="poly" id="edge32_Node000022_Node000003" title=" " alt="" coords="1438,180,1414,236,1394,263,1369,286,1326,300,1252,313,1042,334,808,349,620,358,620,352,807,344,1041,329,1251,308,1325,295,1366,281,1390,260,1409,233,1434,177"/>
-<area shape="poly" id="edge34_Node000023_Node000003" title=" " alt="" coords="155,279,162,281,245,303,330,321,476,346,475,351,329,326,244,308,160,286,153,284"/>
-<area shape="poly" id="edge39_Node000024_Node000003" title=" " alt="" coords="783,179,750,240,718,285,671,317,621,340,619,335,668,313,714,281,745,237,778,177"/>
-<area shape="rect" id="Node000025" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="779,213,941,283"/>
-<area shape="poly" id="edge36_Node000024_Node000025" title=" " alt="" coords="815,177,835,211,830,214,811,179"/>
-<area shape="rect" id="Node000026" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="965,213,1144,283"/>
-<area shape="poly" id="edge38_Node000024_Node000026" title=" " alt="" coords="878,168,974,210,972,215,875,173"/>
-<area shape="rect" id="Node000027" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="560,220,703,276"/>
-<area shape="poly" id="edge40_Node000024_Node000027" title=" " alt="" coords="747,175,675,222,672,217,744,171"/>
-<area shape="poly" id="edge37_Node000025_Node000024" title=" " alt="" coords="840,201,820,166,825,164,845,198"/>
-<area shape="poly" id="edge41_Node000027_Node000003" title=" " alt="" coords="604,289,571,333,566,329,600,286"/>
-<area shape="rect" id="Node000029" href="$d7/db4/uuid_8hpp.html" title="Defines utilities for working with Universally Unique Identifiers (UUIDs)." alt="" coords="1168,220,1311,276"/>
-<area shape="poly" id="edge43_Node000028_Node000029" title=" " alt="" coords="1141,172,1204,217,1201,222,1138,176"/>
-<area shape="poly" id="edge45_Node000030_Node000031" title=" " alt="" coords="361,175,288,222,286,217,358,171"/>
-<area shape="poly" id="edge46_Node000031_Node000003" title=" " alt="" coords="331,279,337,281,476,330,475,335,335,286,330,284"/>
-<area shape="poly" id="edge50_Node000032_Node000003" title=" " alt="" coords="496,170,420,197,381,215,372,232,369,248,372,264,382,282,400,303,424,320,477,342,475,347,421,325,397,307,377,285,367,266,364,248,367,230,378,211,418,192,495,165"/>
+<area shape="rect" id="Node000001" title="Precompiled header (PCH) file for common headers used across the library." alt="" coords="391,5,534,61"/>
+<area shape="rect" id="Node000002" href="$da/df5/byte-helper_8hpp.html" title=" " alt="" coords="59,220,202,276"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,48,312,58,248,72,192,90,172,100,158,111,142,136,133,164,130,194,130,220,125,220,124,193,128,163,137,133,154,107,169,95,190,85,246,67,311,53,375,42"/>
+<area shape="rect" id="Node000003" href="$d1/d8a/mal-toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="361,331,505,387"/>
+<area shape="poly" id="edge50_Node000001_Node000003" title=" " alt="" coords="376,40,318,47,253,60,188,81,128,111,98,133,77,153,62,179,49,214,38,250,39,265,48,282,68,297,99,311,181,332,275,345,361,352,361,357,275,350,180,337,97,316,66,302,44,285,34,267,32,250,44,212,58,176,73,150,94,129,125,107,186,76,252,55,317,42,375,35"/>
+<area shape="rect" id="Node000023" href="$d4/d80/common-structures_8hpp.html" title="Defines common data structures and types that can be used anywhere." alt="" coords="168,109,319,165"/>
+<area shape="poly" id="edge33_Node000001_Node000023" title=" " alt="" coords="392,70,304,111,301,106,389,65"/>
+<area shape="rect" id="Node000024" href="$d1/d27/converter_8hpp.html" title="Provides functions for converting between different data types." alt="" coords="277,220,421,276"/>
+<area shape="poly" id="edge35_Node000001_Node000024" title=" " alt="" coords="444,75,425,110,366,221,361,218,420,108,439,73"/>
+<area shape="rect" id="Node000025" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="808,109,951,165"/>
+<area shape="poly" id="edge37_Node000001_Node000025" title=" " alt="" coords="549,53,808,115,807,121,548,58"/>
+<area shape="rect" id="Node000029" href="$d1/dcf/endianness_8hpp.html" title="Provides functions and utilities for handling endianness conversions." alt="" coords="976,109,1119,165"/>
+<area shape="poly" id="edge44_Node000001_Node000029" title=" " alt="" coords="549,40,740,65,853,84,964,106,976,109,975,115,963,112,852,89,740,70,548,46"/>
+<area shape="rect" id="Node000031" href="$dc/d94/event_8hpp.html" title="Defines event handling and notification mechanisms." alt="" coords="445,109,589,165"/>
+<area shape="poly" id="edge46_Node000001_Node000031" title=" " alt="" coords="486,73,505,107,500,110,482,76"/>
+<area shape="rect" id="Node000032" href="$dc/dad/file-watcher_8hpp.html" title="Implements a file watcher that monitors changes to specified files or directories." alt="" coords="445,220,589,276"/>
+<area shape="poly" id="edge49_Node000001_Node000032" title=" " alt="" coords="444,75,431,119,430,142,436,164,455,193,480,218,476,222,450,197,431,166,425,142,426,118,438,74"/>
+<area shape="rect" id="Node000033" href="$dd/db7/stl-helpers_8hpp.html" title="Provides helper functions and extensions for the C++ Standard Library." alt="" coords="613,109,757,165"/>
+<area shape="poly" id="edge51_Node000001_Node000033" title=" " alt="" coords="536,65,626,106,624,111,534,70"/>
+<area shape="rect" id="Node000034" href="$d0/d8a/win-utils_8hpp.html" title="Provides various Windows&#45;specific utility functions and macros." alt="" coords="1144,109,1287,165"/>
+<area shape="poly" id="edge53_Node000001_Node000034" title=" " alt="" coords="549,36,811,58,972,78,1132,106,1144,109,1143,114,1131,112,971,83,811,63,549,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,279,222,281,362,330,360,335,220,286,215,284"/>
+<area shape="rect" id="Node000004" href="$dd/d3a/common_8hpp.html" title=" " alt="" coords="346,435,520,476"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="436,402,436,435,430,435,430,402"/>
+<area shape="rect" id="Node000005" href="$d3/daa/encryption-interface_8hpp.html" title=" " alt="" coords="19,524,175,579"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="350,483,176,531,175,526,348,478"/>
+<area shape="rect" id="Node000012" href="$de/d3a/crypto-common_8hpp.html" title=" " alt="" coords="209,524,385,579"/>
+<area shape="poly" id="edge13_Node000004_Node000012" title=" " alt="" coords="395,486,338,525,335,521,392,482"/>
+<area shape="rect" id="Node000015" href="$d8/d1a/packet-dispatcher_8cpp.html" title=" " alt="" coords="760,938,903,994"/>
+<area shape="poly" id="edge20_Node000004_Node000015" title=" " alt="" coords="535,460,633,477,684,492,732,511,775,536,809,568,832,607,838,629,840,654,840,760,836,938,830,938,834,760,834,654,832,630,827,609,805,571,771,540,730,516,682,497,632,482,535,466"/>
+<area shape="rect" id="Node000016" href="$d2/d3f/packet_8hpp.html" title=" " alt="" coords="456,739,621,779"/>
+<area shape="poly" id="edge21_Node000004_Node000016" title=" " alt="" coords="433,490,431,531,434,580,443,632,461,682,483,712,510,736,507,740,479,716,456,684,438,634,429,581,426,531,427,490"/>
+<area shape="rect" id="Node000019" href="$d9/d85/packet__impl_2packet_8hpp.html" title=" " alt="" coords="477,524,621,579"/>
+<area shape="poly" id="edge28_Node000004_Node000019" title=" " alt="" coords="470,483,517,521,514,525,467,487"/>
+<area shape="rect" id="Node000006" href="$d2/d62/crypto_8hpp.html" title=" " alt="" coords="144,842,309,883"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="44,591,28,608,16,628,8,655,16,682,31,709,50,734,96,779,144,814,188,839,185,844,141,818,92,783,46,738,26,712,11,684,3,655,11,626,24,605,41,587"/>
+<area shape="rect" id="Node000011" href="$df/d27/aes_8hpp.html" title=" " alt="" coords="25,627,169,683"/>
+<area shape="poly" id="edge11_Node000005_Node000011" title=" " alt="" coords="100,594,100,627,94,627,94,594"/>
+<area shape="rect" id="Node000007" href="$d4/d5e/session_8hpp.html" title=" " alt="" coords="275,946,442,987"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="265,890,335,943,331,948,261,894"/>
+<area shape="rect" id="Node000008" href="$de/d5c/dispatcher-session_8hpp.html" title=" " alt="" coords="463,1042,625,1098"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="408,992,495,1039,493,1044,406,996"/>
+<area shape="rect" id="Node000009" href="$d9/d1a/session_8cpp.html" title=" " alt="" coords="89,1050,254,1090"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="311,996,209,1051,206,1047,309,991"/>
+<area shape="rect" id="Node000010" href="$d1/d16/session_8inl.html" title=" " alt="" coords="279,1050,438,1090"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="353,1001,354,1049,349,1049,347,1001"/>
+<area shape="poly" id="edge10_Node000010_Node000007" title=" " alt="" coords="364,1035,363,987,368,987,370,1035"/>
+<area shape="poly" id="edge12_Node000011_Node000006" title=" " alt="" coords="124,694,216,840,212,843,119,697"/>
+<area shape="poly" id="edge14_Node000012_Node000006" title=" " alt="" coords="257,592,244,609,234,628,220,687,216,747,219,801,225,841,220,842,214,801,211,747,214,686,229,626,240,607,253,589"/>
+<area shape="poly" id="edge15_Node000012_Node000011" title=" " alt="" coords="232,589,152,629,150,624,229,584"/>
+<area shape="rect" id="Node000013" href="$d8/d6d/sha_8hpp.html" title=" " alt="" coords="244,627,387,683"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="307,594,313,626,308,627,302,595"/>
+<area shape="poly" id="edge17_Node000013_Node000006" title=" " alt="" coords="297,697,280,732,236,843,231,841,275,730,292,695"/>
+<area shape="rect" id="Node000014" href="$d4/d28/ecdsa_8hpp.html" title=" " alt="" coords="289,731,433,787"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="336,696,351,729,346,731,331,698"/>
+<area shape="poly" id="edge19_Node000014_Node000006" title=" " alt="" coords="315,798,254,844,251,840,312,794"/>
+<area shape="poly" id="edge27_Node000016_Node000007" title=" " alt="" coords="514,792,377,947,373,944,510,789"/>
+<area shape="rect" id="Node000017" href="$df/d1d/packet-dispatcher_8hpp.html" title=" " alt="" coords="581,835,725,890"/>
+<area shape="poly" id="edge22_Node000016_Node000017" title=" " alt="" coords="573,787,624,832,621,836,569,791"/>
+<area shape="poly" id="edge23_Node000017_Node000008" title=" " alt="" coords="604,902,586,920,571,940,560,965,553,992,547,1042,541,1042,548,991,555,963,567,937,582,916,600,898"/>
+<area shape="poly" id="edge24_Node000017_Node000015" title=" " alt="" coords="715,896,785,935,782,940,712,900"/>
+<area shape="rect" id="Node000018" href="$d2/d7d/packet-dispatcher_8inl.html" title=" " alt="" coords="581,938,725,994"/>
+<area shape="poly" id="edge25_Node000017_Node000018" title=" " alt="" coords="647,905,648,938,642,938,642,905"/>
+<area shape="poly" id="edge26_Node000018_Node000017" title=" " alt="" coords="659,923,659,891,664,891,665,923"/>
+<area shape="rect" id="Node000020" href="$d3/d53/packet-factory_8hpp.html" title=" " alt="" coords="471,627,627,683"/>
+<area shape="poly" id="edge29_Node000019_Node000020" title=" " alt="" coords="552,594,552,627,546,627,546,594"/>
+<area shape="rect" id="Node000022" href="$d3/dae/packet_8cpp.html" title=" " alt="" coords="651,627,794,683"/>
+<area shape="poly" id="edge32_Node000019_Node000022" title=" " alt="" coords="610,585,677,624,675,629,607,590"/>
+<area shape="poly" id="edge30_Node000020_Node000016" title=" " alt="" coords="547,698,543,739,538,738,542,698"/>
+<area shape="rect" id="Node000021" href="$d2/db3/packet-factory_8cpp.html" title=" " alt="" coords="645,731,800,787"/>
+<area shape="poly" id="edge31_Node000020_Node000021" title=" " alt="" coords="610,689,677,728,675,733,607,693"/>
+<area shape="poly" id="edge34_Node000023_Node000003" title=" " alt="" coords="242,179,246,232,254,258,267,282,287,302,310,318,362,340,360,345,308,323,283,306,263,285,249,260,241,233,237,180"/>
+<area shape="poly" id="edge36_Node000024_Node000003" title=" " alt="" coords="381,286,414,329,410,333,377,289"/>
+<area shape="poly" id="edge41_Node000025_Node000003" title=" " alt="" coords="887,180,887,206,882,234,873,262,856,285,831,302,795,316,702,337,598,351,505,357,505,352,598,345,702,332,794,311,829,298,853,281,868,259,877,233,881,206,882,180"/>
+<area shape="rect" id="Node000026" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="1085,213,1248,283"/>
+<area shape="poly" id="edge38_Node000025_Node000026" title=" " alt="" coords="958,168,1086,216,1084,221,956,173"/>
+<area shape="rect" id="Node000027" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="663,213,843,283"/>
+<area shape="poly" id="edge40_Node000025_Node000027" title=" " alt="" coords="839,176,795,214,791,210,836,172"/>
+<area shape="rect" id="Node000028" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="917,220,1061,276"/>
+<area shape="poly" id="edge42_Node000025_Node000028" title=" " alt="" coords="919,173,964,218,960,222,915,177"/>
+<area shape="poly" id="edge39_Node000026_Node000025" title=" " alt="" coords="1070,210,951,165,953,160,1072,205"/>
+<area shape="poly" id="edge43_Node000028_Node000003" title=" " alt="" coords="908,283,899,286,793,310,686,330,506,353,505,348,685,324,792,305,898,281,907,278"/>
+<area shape="rect" id="Node000030" href="$d7/db4/uuid_8hpp.html" title="Defines utilities for working with Universally Unique Identifiers (UUIDs)." alt="" coords="1272,220,1415,276"/>
+<area shape="poly" id="edge45_Node000029_Node000030" title=" " alt="" coords="1134,165,1261,210,1279,217,1277,222,1259,215,1132,170"/>
+<area shape="poly" id="edge47_Node000031_Node000032" title=" " alt="" coords="520,180,520,220,514,220,514,180"/>
+<area shape="poly" id="edge48_Node000032_Node000003" title=" " alt="" coords="490,289,456,333,452,329,485,286"/>
+<area shape="poly" id="edge52_Node000033_Node000003" title=" " alt="" coords="668,179,635,240,603,285,556,317,507,340,504,335,554,313,599,281,630,237,663,177"/>
 </map>

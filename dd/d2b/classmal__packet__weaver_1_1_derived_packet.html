@@ -143,9 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef4b1741abd9c2ad90a358a6a03a3198"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#aef4b1741abd9c2ad90a358a6a03a3198">~DerivedPacket</a> ()=default</td></tr>
 <tr class="memdesc:aef4b1741abd9c2ad90a358a6a03a3198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class.">DerivedPacket</a> class.  <br /></td></tr>
 <tr class="separator:aef4b1741abd9c2ad90a358a6a03a3198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a359fae60b849d92cbe0e4647478503f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a359fae60b849d92cbe0e4647478503f6">serialize</a> (<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> &amp;buffer) const override</td></tr>
-<tr class="memdesc:a359fae60b849d92cbe0e4647478503f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the derived packet data into a <a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a>.  <br /></td></tr>
-<tr class="separator:a359fae60b849d92cbe0e4647478503f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bc641026e7f0ff5088c7ffd53b29b85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a0bc641026e7f0ff5088c7ffd53b29b85">serialize</a> (<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> &amp;buffer) const override</td></tr>
+<tr class="memdesc:a0bc641026e7f0ff5088c7ffd53b29b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the derived packet data into a ByteArray.  <br /></td></tr>
+<tr class="separator:a0bc641026e7f0ff5088c7ffd53b29b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4514665d55df442b85a01f24179c9655"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659bac">Permission</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a4514665d55df442b85a01f24179c9655">get_permission</a> () const =0</td></tr>
 <tr class="memdesc:a4514665d55df442b85a01f24179c9655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the permission level of the packet.  <br /></td></tr>
 <tr class="separator:a4514665d55df442b85a01f24179c9655"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,9 +161,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9a14c4d742c0e49930cc4b7e426befc"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#ae9a14c4d742c0e49930cc4b7e426befc">deserialize</a> (const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">mal_toolkit::ByteView</a> buffer)</td></tr>
-<tr class="memdesc:ae9a14c4d742c0e49930cc4b7e426befc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a byte view into a unique pointer of the specified packet type.  <br /></td></tr>
-<tr class="separator:ae9a14c4d742c0e49930cc4b7e426befc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1622df3e4ea56438f22f362cf1bd77b9"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1622df3e4ea56438f22f362cf1bd77b9">deserialize</a> (const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">ByteView</a> buffer)</td></tr>
+<tr class="memdesc:a1622df3e4ea56438f22f362cf1bd77b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a byte view into a unique pointer of the specified packet type.  <br /></td></tr>
+<tr class="separator:a1622df3e4ea56438f22f362cf1bd77b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -189,9 +189,9 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:adc0df39a554f6de840307aa6ed61dd37"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html">mal_toolkit::Measurer</a>&lt; std::chrono::steady_clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#adc0df39a554f6de840307aa6ed61dd37">measurer</a></td></tr>
-<tr class="memdesc:adc0df39a554f6de840307aa6ed61dd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measurer for packet timestamps.  <br /></td></tr>
-<tr class="separator:adc0df39a554f6de840307aa6ed61dd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09767662dde9e0e2be5c3d7c6541fb62"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html">Measurer</a>&lt; std::chrono::steady_clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a09767662dde9e0e2be5c3d7c6541fb62">measurer</a></td></tr>
+<tr class="memdesc:a09767662dde9e0e2be5c3d7c6541fb62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measurer for packet timestamps.  <br /></td></tr>
+<tr class="separator:a09767662dde9e0e2be5c3d7c6541fb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -209,7 +209,7 @@ class mal_packet_weaver::DerivedPacket&lt; PacketType &gt;</div><p>A templated c
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00130">130</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00118">118</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae43f62e80b604885b4f1ac626da04da1" name="ae43f62e80b604885b4f1ac626da04da1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae43f62e80b604885b4f1ac626da04da1">&#9670;&#160;</a></span>DerivedPacket()</h2>
@@ -239,7 +239,7 @@ template&lt;typename PacketType &gt; </div>
 <p>Constructor for the <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class.">DerivedPacket</a> class. </p>
 <p>Initializes the packet with the static_type and time_to_live of the PacketType. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00138">138</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,8 +273,8 @@ template&lt;typename PacketType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae9a14c4d742c0e49930cc4b7e426befc" name="ae9a14c4d742c0e49930cc4b7e426befc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9a14c4d742c0e49930cc4b7e426befc">&#9670;&#160;</a></span>deserialize()</h2>
+<a id="a1622df3e4ea56438f22f362cf1bd77b9" name="a1622df3e4ea56438f22f362cf1bd77b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1622df3e4ea56438f22f362cf1bd77b9">&#9670;&#160;</a></span>deserialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +287,7 @@ template&lt;typename PacketType &gt; </div>
         <tr>
           <td class="memname">static std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt; PacketType &gt;::deserialize </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">mal_toolkit::ByteView</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">ByteView</a>&#160;</td>
           <td class="paramname"><em>buffer</em></td><td>)</td>
           <td></td>
         </tr>
@@ -300,20 +300,20 @@ template&lt;typename PacketType &gt; </div>
 </div><div class="memdoc">
 
 <p>Deserialize a byte view into a unique pointer of the specified packet type. </p>
-<p>This static function is responsible for deserializing the binary data from a <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> and reconstructing a unique pointer to a PacketType instance.</p>
+<p>This static function is responsible for deserializing the binary data from a ByteView and reconstructing a unique pointer to a PacketType instance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td>The <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> containing the binary serialized data. </td></tr>
+    <tr><td class="paramname">buffer</td><td>The ByteView containing the binary serialized data. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A unique pointer to the deserialized PacketType instance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00171">171</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00159">159</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet_ae9a14c4d742c0e49930cc4b7e426befc_cgraph.svg" width="376" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet_a1622df3e4ea56438f22f362cf1bd77b9_cgraph.svg" width="376" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -343,7 +343,7 @@ Here is the call graph for this function:</div>
 
 <p>Check if the packet has expired based on its time-to-live. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00101">101</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -377,7 +377,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the time elapsed since the packet was created. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00095">95</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -466,12 +466,12 @@ template&lt;class Archive &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00195">195</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00183">183</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a359fae60b849d92cbe0e4647478503f6" name="a359fae60b849d92cbe0e4647478503f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a359fae60b849d92cbe0e4647478503f6">&#9670;&#160;</a></span>serialize() <span class="overload">[2/2]</span></h2>
+<a id="a0bc641026e7f0ff5088c7ffd53b29b85" name="a0bc641026e7f0ff5088c7ffd53b29b85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc641026e7f0ff5088c7ffd53b29b85">&#9670;&#160;</a></span>serialize() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,7 +484,7 @@ template&lt;typename PacketType &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt; PacketType &gt;::serialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> &amp;&#160;</td>
           <td class="paramname"><em>buffer</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -496,22 +496,22 @@ template&lt;typename PacketType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Serialize the derived packet data into a <a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a>. </p>
+<p>Serialize the derived packet data into a ByteArray. </p>
 <p>This function uses Boost's binary serialization to convert the packet's contents into a binary representation and appends it to the provided buffer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td>The <a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a> to which the serialized data is appended. </td></tr>
+    <tr><td class="paramname">buffer</td><td>The ByteArray to which the serialized data is appended. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a3b92848c792a6fe31a77d22a6cdb7748">mal_packet_weaver::Packet</a>.</p>
+<p>Implements <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#afbfa7f771246555a4d719fab8d0d04f0">mal_packet_weaver::Packet</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet_a359fae60b849d92cbe0e4647478503f6_cgraph.svg" width="351" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet_a0bc641026e7f0ff5088c7ffd53b29b85_cgraph.svg" width="351" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -541,7 +541,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the timestamp when the packet was created. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00092">92</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -568,13 +568,13 @@ template&lt;typename PacketType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00183">183</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00171">171</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="adc0df39a554f6de840307aa6ed61dd37" name="adc0df39a554f6de840307aa6ed61dd37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc0df39a554f6de840307aa6ed61dd37">&#9670;&#160;</a></span>measurer</h2>
+<a id="a09767662dde9e0e2be5c3d7c6541fb62" name="a09767662dde9e0e2be5c3d7c6541fb62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09767662dde9e0e2be5c3d7c6541fb62">&#9670;&#160;</a></span>measurer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -583,7 +583,7 @@ template&lt;typename PacketType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html">mal_toolkit::Measurer</a>&lt; std::chrono::steady_clock &gt; mal_packet_weaver::Packet::measurer</td>
+          <td class="memname"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html">Measurer</a>&lt; std::chrono::steady_clock &gt; mal_packet_weaver::Packet::measurer</td>
         </tr>
       </table>
   </td>
@@ -595,7 +595,7 @@ template&lt;typename PacketType &gt; </div>
 
 <p>Measurer for packet timestamps. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -621,7 +621,7 @@ template&lt;typename PacketType &gt; </div>
 
 <p>Time-to-live for the packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -647,7 +647,7 @@ template&lt;typename PacketType &gt; </div>
 
 <p>Timestamp when the packet was created. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -673,7 +673,7 @@ template&lt;typename PacketType &gt; </div>
 
 <p>Unique packet ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -686,7 +686,7 @@ template&lt;typename PacketType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 14:25:25 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 17:32:59 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

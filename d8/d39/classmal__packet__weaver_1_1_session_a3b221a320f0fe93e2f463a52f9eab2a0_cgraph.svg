@@ -31,10 +31,10 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469" target="_top" xlink:title="Convert a byte array to a uint32_t value using little&#45;endian byte order.">
-<polygon fill="white" stroke="#666666" points="262.25,-187.5 163,-187.5 163,-157 262.25,-157 262.25,-187.5"/>
-<text text-anchor="start" x="171" y="-174" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="212.62" y="-162.75" font-family="Times,serif" font-size="10.00">bytes_to_uint32</text>
+<g id="a_Node000002"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df" target="_top" xlink:title="Convert a byte array to a uint32_t value using little&#45;endian byte order.">
+<polygon fill="white" stroke="#666666" points="255.5,-187.5 169.75,-187.5 169.75,-157 255.5,-157 255.5,-187.5"/>
+<text text-anchor="start" x="177.75" y="-174" font-family="Times,serif" font-size="10.00">mal_toolkit::bytes</text>
+<text text-anchor="middle" x="212.62" y="-162.75" font-family="Times,serif" font-size="10.00">_to_uint32</text>
 </a>
 </g>
 </g>
@@ -50,7 +50,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a80189703c0b33b45ad1b5e132bf91b0b" target="_top" xlink:title="Deserialize a byte view into a unique pointer of the specified packet type.">
+<g id="a_Node000003"><a xlink:href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a1e6a3cb4e74ee9c34e309c9e3cfbd471" target="_top" xlink:title="Deserialize a byte view into a unique pointer of the specified packet type.">
 <polygon fill="white" stroke="#666666" points="264.12,-139.12 161.12,-139.12 161.12,-97.38 264.12,-97.38 264.12,-139.12"/>
 <text text-anchor="start" x="169.12" y="-125.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="start" x="169.12" y="-114.38" font-family="Times,serif" font-size="10.00">packet::PacketFactory</text>
@@ -89,10 +89,10 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a88aac09c49f5b82796a94736781626c7" target="_top" xlink:title="Create a ByteView of a subsequence of the byte array.">
-<polygon fill="white" stroke="#666666" points="262.25,-30.5 163,-30.5 163,0 262.25,0 262.25,-30.5"/>
-<text text-anchor="start" x="171" y="-17" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="212.62" y="-5.75" font-family="Times,serif" font-size="10.00">ByteArray::view</text>
+<g id="a_Node000005"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#a33b603234734c1cdddee3fb854988181" target="_top" xlink:title="Create a ByteView of a subsequence of the byte array.">
+<polygon fill="white" stroke="#666666" points="266,-30.5 159.25,-30.5 159.25,0 266,0 266,-30.5"/>
+<text text-anchor="start" x="167.25" y="-17" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray</text>
+<text text-anchor="middle" x="212.62" y="-5.75" font-family="Times,serif" font-size="10.00">::view</text>
 </a>
 </g>
 </g>

@@ -8,10 +8,10 @@ var classmal__packet__weaver_1_1_packet =
     [ "get_permission", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a4514665d55df442b85a01f24179c9655", null ],
     [ "operator=", "d2/d9d/classmal__packet__weaver_1_1_packet.html#aa3afc0227fa98413fc157dd41308ef31", null ],
     [ "serialize", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a33a1877f1313316488d7a9c2becdfd38", null ],
-    [ "serialize", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a3b92848c792a6fe31a77d22a6cdb7748", null ],
+    [ "serialize", "d2/d9d/classmal__packet__weaver_1_1_packet.html#afbfa7f771246555a4d719fab8d0d04f0", null ],
     [ "timestamp", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a1b353f8d666972864724e49b94e9184a", null ],
     [ "boost::serialization::access", "d2/d9d/classmal__packet__weaver_1_1_packet.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],
-    [ "measurer", "d2/d9d/classmal__packet__weaver_1_1_packet.html#adc0df39a554f6de840307aa6ed61dd37", null ],
+    [ "measurer", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a09767662dde9e0e2be5c3d7c6541fb62", null ],
     [ "time_to_live", "d2/d9d/classmal__packet__weaver_1_1_packet.html#ae3201e383545a1543105b8e43b1d31a7", null ],
     [ "timestamp_", "d2/d9d/classmal__packet__weaver_1_1_packet.html#ab93354542867ec9bbb2b17b9b5434c52", null ],
     [ "type", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a83d94514219f8f5f0c3c11db9804e98a", null ]

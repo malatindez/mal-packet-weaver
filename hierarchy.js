@@ -3,6 +3,7 @@ var hierarchy =
     [ "mal_toolkit::CallbackSystem< F >", "dd/d83/classmal__toolkit_1_1_callback_system.html", null ],
     [ "mal_packet_weaver::DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", null ],
     [ "std::enable_shared_from_this", null, [
+      [ "mal_packet_weaver::PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", null ],
       [ "mal_packet_weaver::Session", "d8/d39/classmal__packet__weaver_1_1_session.html", null ]
     ] ],
     [ "mal_toolkit::enableable", "d0/d09/classmal__toolkit_1_1enableable.html", null ],
@@ -35,7 +36,6 @@ var hierarchy =
     [ "mal_toolkit::non_movable", "db/d86/classmal__toolkit_1_1non__movable.html", [
       [ "mal_toolkit::non_copyable_non_movable", "d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html", null ]
     ] ],
-    [ "mal_packet_weaver::PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", null ],
     [ "mal_packet_weaver::packet::PacketFactory", "d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html", null ],
     [ "mal_toolkit::parameter_pack_info< Args >", "d9/d42/structmal__toolkit_1_1parameter__pack__info.html", null ],
     [ "mal_toolkit::return_type< T >", "db/dda/structmal__toolkit_1_1return__type.html", null ],
@@ -54,7 +54,6 @@ var hierarchy =
     [ "mal_toolkit::return_type< R(C::*)(Args...) volatile >", "d6/d1d/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_4.html", null ],
     [ "mal_toolkit::return_type< R(C::*)(Args...)>", "d2/d15/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4.html", null ],
     [ "std::span< T >", null, [
-      [ "mal_packet_weaver::ByteView", "d7/d41/structmal__packet__weaver_1_1_byte_view.html", null ],
       [ "mal_toolkit::ByteView", "d8/dab/structmal__toolkit_1_1_byte_view.html", [
         [ "mal_packet_weaver::crypto::KeyView", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view.html", null ]
       ] ]
@@ -66,7 +65,6 @@ var hierarchy =
     [ "mal_toolkit::uuid::UUID", "d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html", null ],
     [ "mal_toolkit::uuid::UUIDGenerator< RNG >", "da/dbb/classmal__toolkit_1_1uuid_1_1_u_u_i_d_generator.html", null ],
     [ "std::vector< T >", null, [
-      [ "mal_packet_weaver::ByteArray", "d4/d9d/structmal__packet__weaver_1_1_byte_array.html", null ],
       [ "mal_toolkit::ByteArray", "d8/d99/structmal__toolkit_1_1_byte_array.html", [
         [ "mal_packet_weaver::crypto::Key", "da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html", null ]
       ] ]

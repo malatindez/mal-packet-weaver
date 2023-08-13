@@ -10,8 +10,6 @@ var annotated_dup =
       [ "packet", "d9/d93/namespacemal__packet__weaver_1_1packet.html", [
         [ "PacketFactory", "d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html", "d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory" ]
       ] ],
-      [ "ByteArray", "d4/d9d/structmal__packet__weaver_1_1_byte_array.html", "d4/d9d/structmal__packet__weaver_1_1_byte_array" ],
-      [ "ByteView", "d7/d41/structmal__packet__weaver_1_1_byte_view.html", "d7/d41/structmal__packet__weaver_1_1_byte_view" ],
       [ "DerivedPacket", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html", "dd/d2b/classmal__packet__weaver_1_1_derived_packet" ],
       [ "DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session" ],
       [ "Packet", "d2/d9d/classmal__packet__weaver_1_1_packet.html", "d2/d9d/classmal__packet__weaver_1_1_packet" ],

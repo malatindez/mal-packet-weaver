@@ -109,11 +109,10 @@ $(document).ready(function(){initNavTree('d8/d39/classmal__packet__weaver_1_1_se
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d7/dc1/classmal__packet__weaver_1_1_session-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">mal_packet_weaver::Session Class Reference</div></div>
+  <div class="headertitle"><div class="title">mal_packet_weaver::Session Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -165,21 +164,18 @@ requires std::is_base_of_v&lt;<a class="el" href="../../d2/d9d/classmal__packet_
 <tr class="memitem:ad2580293c667f8f3c25e0b6355e89adc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ad2580293c667f8f3c25e0b6355e89adc">setup_encryption</a> (std::shared_ptr&lt; <a class="el" href="../../d7/da7/classmal__packet__weaver_1_1crypto_1_1_encryption_interface.html">mal_packet_weaver::crypto::EncryptionInterface</a> &gt; encryption)</td></tr>
 <tr class="memdesc:ad2580293c667f8f3c25e0b6355e89adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up encryption for the session using provided encryption interface.  <br /></td></tr>
 <tr class="separator:ad2580293c667f8f3c25e0b6355e89adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50f272d0f8717c7bc47584d969b15975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a50f272d0f8717c7bc47584d969b15975">SetPacketReceiver</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a2fe1e24598530a77a781144181b85f09">PacketReceiverFn</a> const receiver)</td></tr>
-<tr class="memdesc:a50f272d0f8717c7bc47584d969b15975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the packet receiver for the session.  <br /></td></tr>
-<tr class="separator:a50f272d0f8717c7bc47584d969b15975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76f44a9b689f9255d4237cbfd28a7c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ae76f44a9b689f9255d4237cbfd28a7c3">set_packet_receiver</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a2fe1e24598530a77a781144181b85f09">PacketReceiverFn</a> const receiver)</td></tr>
+<tr class="memdesc:ae76f44a9b689f9255d4237cbfd28a7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the packet receiver for the session.  <br /></td></tr>
+<tr class="separator:ae76f44a9b689f9255d4237cbfd28a7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5987c4b8cc7ebd5ebade07756529dd2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a5987c4b8cc7ebd5ebade07756529dd2f">Destroy</a> ()</td></tr>
 <tr class="memdesc:a5987c4b8cc7ebd5ebade07756529dd2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coroutines use the shared pointer from this, so you need to explicitly call Destroy so alive_ is false. This way coroutines can end and unlock the remaining instances of shared_ptr.  <br /></td></tr>
 <tr class="separator:a5987c4b8cc7ebd5ebade07756529dd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aa6838781a707ad1f37555d590c0f22c2"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#aa6838781a707ad1f37555d590c0f22c2">pop_packet_data</a> () noexcept</td></tr>
-<tr class="memdesc:aa6838781a707ad1f37555d590c0f22c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops the packet data from the received packets queue.  <br /></td></tr>
-<tr class="separator:aa6838781a707ad1f37555d590c0f22c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:aa6838781a707ad1f37555d590c0f22c2"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#aa6838781a707ad1f37555d590c0f22c2">pop_packet_data</a> () noexcept</td></tr>
+<tr class="memdesc:aa6838781a707ad1f37555d590c0f22c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops the packet data from the received packets queue.  <br /></td></tr>
+<tr class="separator:aa6838781a707ad1f37555d590c0f22c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44aae33be31d6dd7db9feb4142b3239e"><td class="memItemLeft" align="right" valign="top">boost::asio::awaitable&lt; std::shared_ptr&lt; <a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html">Session</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e">get_shared_ptr</a> (boost::asio::io_context &amp;io)</td></tr>
 <tr class="memdesc:a44aae33be31d6dd7db9feb4142b3239e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a shared pointer to the current session.  <br /></td></tr>
 <tr class="separator:a44aae33be31d6dd7db9feb4142b3239e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,17 +191,17 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a95349691831542cec27090d0ab21ca88"><td class="memItemLeft" align="right" valign="top">boost::asio::awaitable&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a95349691831542cec27090d0ab21ca88">async_packet_sender</a> (boost::asio::io_context &amp;io)</td></tr>
 <tr class="memdesc:a95349691831542cec27090d0ab21ca88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronously receives and processes incoming packets from the network.  <br /></td></tr>
 <tr class="separator:a95349691831542cec27090d0ab21ca88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad10adb9e1d47a0e0a56d02808606ca17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ad10adb9e1d47a0e0a56d02808606ca17">read_bytes_to</a> (<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> &amp;byte_array, const <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> amount)</td></tr>
-<tr class="separator:ad10adb9e1d47a0e0a56d02808606ca17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24333663993df453bafeeaed060b777a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a24333663993df453bafeeaed060b777a">read_bytes_to</a> (<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> &amp;byte_array, const <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> amount)</td></tr>
+<tr class="separator:a24333663993df453bafeeaed060b777a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a91a49bf692db6a46fe1f48a3d5499014"><td class="memItemLeft" align="right" valign="top">boost::lockfree::queue&lt; <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> *, boost::lockfree::fixed_sized&lt; true &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a91a49bf692db6a46fe1f48a3d5499014">received_packets_</a></td></tr>
-<tr class="memdesc:a91a49bf692db6a46fe1f48a3d5499014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock-free queue to store received packets that are waiting to be processed.  <br /></td></tr>
-<tr class="separator:a91a49bf692db6a46fe1f48a3d5499014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae78b0535f22c447bf8e024118ddc0476"><td class="memItemLeft" align="right" valign="top">boost::lockfree::queue&lt; <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> *, boost::lockfree::fixed_sized&lt; true &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ae78b0535f22c447bf8e024118ddc0476">packets_to_send_</a></td></tr>
-<tr class="memdesc:ae78b0535f22c447bf8e024118ddc0476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock-free queue to store packets that are waiting to be sent.  <br /></td></tr>
-<tr class="separator:ae78b0535f22c447bf8e024118ddc0476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537990363637358cb83d51a85f358608"><td class="memItemLeft" align="right" valign="top">boost::lockfree::queue&lt; <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> *, boost::lockfree::fixed_sized&lt; true &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a537990363637358cb83d51a85f358608">received_packets_</a></td></tr>
+<tr class="memdesc:a537990363637358cb83d51a85f358608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock-free queue to store received packets that are waiting to be processed.  <br /></td></tr>
+<tr class="separator:a537990363637358cb83d51a85f358608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7575869c0635f2d91b33fb21f2b4f2"><td class="memItemLeft" align="right" valign="top">boost::lockfree::queue&lt; <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> *, boost::lockfree::fixed_sized&lt; true &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a1f7575869c0635f2d91b33fb21f2b4f2">packets_to_send_</a></td></tr>
+<tr class="memdesc:a1f7575869c0635f2d91b33fb21f2b4f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock-free queue to store packets that are waiting to be sent.  <br /></td></tr>
+<tr class="separator:a1f7575869c0635f2d91b33fb21f2b4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad552f2abc84b29af4a1a532cb795258e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ad552f2abc84b29af4a1a532cb795258e">alive_</a> = true</td></tr>
 <tr class="memdesc:ad552f2abc84b29af4a1a532cb795258e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the session is alive and operational.  <br /></td></tr>
 <tr class="separator:ad552f2abc84b29af4a1a532cb795258e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,7 +226,7 @@ Private Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets.">Session</a> should be initialized using make_shared.</dd></dl>
 <p>To correctly destroy this object, you need to call Destroy function, because coroutines share the object from this. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5cf271c70d7ec610cfb01d0ed8655693" name="a5cf271c70d7ec610cfb01d0ed8655693"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5cf271c70d7ec610cfb01d0ed8655693">&#9670;&#160;</a></span>Session()</h2>
@@ -275,7 +271,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00006">6</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -309,7 +305,7 @@ Here is the call graph for this function:</div>
 
 <p>Destructor for the <a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets.">Session</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 
 </div>
 </div>
@@ -340,7 +336,7 @@ Here is the call graph for this function:</div>
 <p>Checks if the session is alive. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the session is alive, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00112">112</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00092">92</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -376,7 +372,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00261">261</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00249">249</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -423,11 +419,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00333">333</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00321">321</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d39/classmal__packet__weaver_1_1_session_a95349691831542cec27090d0ab21ca88_cgraph.svg" width="360" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d39/classmal__packet__weaver_1_1_session_a95349691831542cec27090d0ab21ca88_cgraph.svg" width="360" height="314"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -462,7 +458,7 @@ Here is the caller graph for this function:</div>
 
 <p>Coroutines use the shared pointer from this, so you need to explicitly call Destroy so alive_ is false. This way coroutines can end and unlock the remaining instances of shared_ptr. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00118">118</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -499,7 +495,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boost::asio::awaitable that resolves to a shared_ptr&lt;Session&gt;. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00150">150</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00141">141</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -539,7 +535,7 @@ Here is the caller graph for this function:</div>
 <p>Checks if there are packets in the queue. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if there are packets in the queue, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -569,7 +565,7 @@ Here is the caller graph for this function:</div>
 <p>Checks if the session is closed. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the session is closed, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00105">105</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -590,7 +586,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Returns nullptr if socket has crashed. If not, it will wait until the packet is available and will return it as soon as possible. This function is threadsafe. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00083">83</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00077">77</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -609,7 +605,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html">ByteArray</a> &gt; mal_packet_weaver::Session::pop_packet_data </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> &gt; mal_packet_weaver::Session::pop_packet_data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -617,7 +613,7 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -626,7 +622,7 @@ Here is the call graph for this function:</div>
 <p>This function retrieves the data of the earliest acquired packet from the queue.</p>
 <dl class="section return"><dt>Returns</dt><dd>A unique_ptr&lt;ByteArray&gt; containing the packet data, or nullptr if the queue is empty. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00108">108</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00101">101</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -651,10 +647,10 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Returns the earliest acquired packet. If packet queue is empty, returns nullptr. </p>
-<dl class="section warning"><dt>Warning</dt><dd>If packet receiver is set through SetPacketReceiver there's no reason to call this function. Generally packets will just go through the receiver. There's no ordering neither option to configure which packet you will receive.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>If packet receiver is set through set_packet_receiver there's no reason to call this function. Generally packets will just go through the receiver. There's no ordering neither option to configure which packet you will receive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>std::unique_ptr&lt;Packet&gt; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -668,8 +664,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad10adb9e1d47a0e0a56d02808606ca17" name="ad10adb9e1d47a0e0a56d02808606ca17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad10adb9e1d47a0e0a56d02808606ca17">&#9670;&#160;</a></span>read_bytes_to()</h2>
+<a id="a24333663993df453bafeeaed060b777a" name="a24333663993df453bafeeaed060b777a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24333663993df453bafeeaed060b777a">&#9670;&#160;</a></span>read_bytes_to()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -680,7 +676,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void mal_packet_weaver::Session::read_bytes_to </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> &amp;&#160;</td>
           <td class="paramname"><em>byte_array</em>, </td>
         </tr>
         <tr>
@@ -702,11 +698,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d16/session_8inl_source.html#l00040">40</a> of file <a class="el" href="../../d1/d16/session_8inl_source.html">session.inl</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d16/session_8inl_source.html#l00039">39</a> of file <a class="el" href="../../d1/d16/session_8inl_source.html">session.inl</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d39/classmal__packet__weaver_1_1_session_ad10adb9e1d47a0e0a56d02808606ca17_cgraph.svg" width="360" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d39/classmal__packet__weaver_1_1_session_a24333663993df453bafeeaed060b777a_cgraph.svg" width="360" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -737,7 +733,7 @@ Here is the call graph for this function:</div>
 <p>Initiates an asynchronous read operation from the socket to receive data. </p>
 <p>This function asynchronously reads data from the socket into the internal buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00122">122</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00115">115</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -772,7 +768,7 @@ Here is the caller graph for this function:</div>
 <p>Checks if the session is secured using encryption. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the session is secured, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -808,11 +804,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00179">179</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d1a/session_8cpp_source.html#l00169">169</a> of file <a class="el" href="../../d9/d1a/session_8cpp_source.html">session.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d39/classmal__packet__weaver_1_1_session_a71ede34f71a6dc30d56d99015997caa3_cgraph.svg" width="551" height="436"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d39/classmal__packet__weaver_1_1_session_a71ede34f71a6dc30d56d99015997caa3_cgraph.svg" width="562" height="420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -863,13 +859,13 @@ false if session was closed. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d39/classmal__packet__weaver_1_1_session_a66b134c55cf54ac2e84daa77f381235e_cgraph.svg" width="355" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d39/classmal__packet__weaver_1_1_session_a66b134c55cf54ac2e84daa77f381235e_cgraph.svg" width="355" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a50f272d0f8717c7bc47584d969b15975" name="a50f272d0f8717c7bc47584d969b15975"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50f272d0f8717c7bc47584d969b15975">&#9670;&#160;</a></span>SetPacketReceiver()</h2>
+<a id="ae76f44a9b689f9255d4237cbfd28a7c3" name="ae76f44a9b689f9255d4237cbfd28a7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76f44a9b689f9255d4237cbfd28a7c3">&#9670;&#160;</a></span>set_packet_receiver()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -878,7 +874,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void mal_packet_weaver::Session::SetPacketReceiver </td>
+          <td class="memname">void mal_packet_weaver::Session::set_packet_receiver </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a2fe1e24598530a77a781144181b85f09">PacketReceiverFn</a> const&#160;</td>
           <td class="paramname"><em>receiver</em></td><td>)</td>
@@ -900,7 +896,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -930,7 +926,7 @@ Here is the call graph for this function:</div>
 
 <p>Sets up encryption for the session using provided encryption interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00097">97</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -957,7 +953,7 @@ Here is the call graph for this function:</div>
 
 <p>Indicates whether the session is alive and operational. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00218">218</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00199">199</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -983,7 +979,7 @@ Here is the call graph for this function:</div>
 
 <p>Buffer used for reading data from the network socket. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00223">223</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00204">204</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1009,7 +1005,7 @@ Here is the call graph for this function:</div>
 
 <p>Holder for encryption using EncryptionInterface. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00233">233</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00214">214</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1031,7 @@ Here is the call graph for this function:</div>
 
 <p>Callback function for processing received packets. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00243">243</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00224">224</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1061,12 +1057,12 @@ Here is the call graph for this function:</div>
 
 <p>Mutex to ensure thread-safe access to the packet receiver function. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00238">238</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ae78b0535f22c447bf8e024118ddc0476" name="ae78b0535f22c447bf8e024118ddc0476"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae78b0535f22c447bf8e024118ddc0476">&#9670;&#160;</a></span>packets_to_send_</h2>
+<a id="a1f7575869c0635f2d91b33fb21f2b4f2" name="a1f7575869c0635f2d91b33fb21f2b4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7575869c0635f2d91b33fb21f2b4f2">&#9670;&#160;</a></span>packets_to_send_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1075,7 +1071,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::lockfree::queue&lt;<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> *, boost::lockfree::fixed_sized&lt;true&gt; &gt; mal_packet_weaver::Session::packets_to_send_</td>
+          <td class="memname">boost::lockfree::queue&lt;<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> *, boost::lockfree::fixed_sized&lt;true&gt; &gt; mal_packet_weaver::Session::packets_to_send_</td>
         </tr>
       </table>
   </td>
@@ -1087,12 +1083,12 @@ Here is the call graph for this function:</div>
 
 <p>Lock-free queue to store packets that are waiting to be sent. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00213">213</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00194">194</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a91a49bf692db6a46fe1f48a3d5499014" name="a91a49bf692db6a46fe1f48a3d5499014"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91a49bf692db6a46fe1f48a3d5499014">&#9670;&#160;</a></span>received_packets_</h2>
+<a id="a537990363637358cb83d51a85f358608" name="a537990363637358cb83d51a85f358608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537990363637358cb83d51a85f358608">&#9670;&#160;</a></span>received_packets_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1101,7 +1097,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::lockfree::queue&lt;<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">mal_toolkit::ByteArray</a> *, boost::lockfree::fixed_sized&lt;true&gt; &gt; mal_packet_weaver::Session::received_packets_</td>
+          <td class="memname">boost::lockfree::queue&lt;<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> *, boost::lockfree::fixed_sized&lt;true&gt; &gt; mal_packet_weaver::Session::received_packets_</td>
         </tr>
       </table>
   </td>
@@ -1113,10 +1109,10 @@ Here is the call graph for this function:</div>
 
 <p>Lock-free queue to store received packets that are waiting to be processed. </p>
 <p>Packets stored in this queue should be created using 'new'. After popping the pointer, you can either delete it manually or wrap it in smart pointers. Be sure to release the smart pointer before pushing it again, as failing to do so could lead to undefined behavior.</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">Todo:</a></b></dt><dd>Implement a circular buffer and <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> handler for the lock-free queue. The <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> handler should hold a simple pointer to a circular buffer and a <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a>. The circular buffer should automatically free memory allocated by the ByteViewHandler::free() method. This approach optimizes memory usage by avoiding repeated allocation and deallocation from the OS. Another option is to use a default queue of shared pointers, which automatically handles deallocation. The final choice may affect performance and memory usage, and further testing is needed.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd>Implement a circular buffer and ByteView handler for the lock-free queue. The ByteView handler should hold a simple pointer to a circular buffer and a ByteView. The circular buffer should automatically free memory allocated by the ByteViewHandler::free() method. This approach optimizes memory usage by avoiding repeated allocation and deallocation from the OS. Another option is to use a default queue of shared pointers, which automatically handles deallocation. The final choice may affect performance and memory usage, and further testing is needed.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The current implementation is a proof-of-concept and has important TODOs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00209">209</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00190">190</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1142,7 +1138,7 @@ Here is the call graph for this function:</div>
 
 <p>The TCP socket for network communication. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00228">228</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d5e/session_8hpp_source.html#l00209">209</a> of file <a class="el" href="../../d4/d5e/session_8hpp_source.html">session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1153,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html">Session</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 14:25:25 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 17:32:59 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

@@ -78,10 +78,10 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469" target="_top" xlink:title="Convert a byte array to a uint32_t value using little&#45;endian byte order.">
-<polygon fill="white" stroke="#666666" points="426.75,-187.5 327.5,-187.5 327.5,-157 426.75,-157 426.75,-187.5"/>
-<text text-anchor="start" x="335.5" y="-174" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="377.12" y="-162.75" font-family="Times,serif" font-size="10.00">bytes_to_uint32</text>
+<g id="a_Node000005"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df" target="_top" xlink:title="Convert a byte array to a uint32_t value using little&#45;endian byte order.">
+<polygon fill="white" stroke="#666666" points="420,-187.5 334.25,-187.5 334.25,-157 420,-157 420,-187.5"/>
+<text text-anchor="start" x="342.25" y="-174" font-family="Times,serif" font-size="10.00">mal_toolkit::bytes</text>
+<text text-anchor="middle" x="377.12" y="-162.75" font-family="Times,serif" font-size="10.00">_to_uint32</text>
 </a>
 </g>
 </g>
@@ -89,15 +89,15 @@
 <g id="edge4_Node000004_Node000005" class="edge">
 <title>Node4&#45;&gt;Node5</title>
 <g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M264.2,-106.87C270.26,-109.68 276.28,-112.82 281.75,-116.25 299.89,-127.62 299.59,-136.91 317.75,-148.25 319.71,-149.48 321.75,-150.66 323.83,-151.81"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="321.7,-155.16 332.2,-156.57 324.87,-148.92 321.7,-155.16"/>
+<path fill="none" stroke="#63b8ff" d="M264.2,-106.87C270.26,-109.68 276.28,-112.82 281.75,-116.25 299.89,-127.62 299.59,-136.91 317.75,-148.25 319.79,-149.52 321.91,-150.76 324.08,-151.94"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="322.32,-155.48 332.82,-156.86 325.47,-149.23 322.32,-155.48"/>
 </a>
 </g>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a80189703c0b33b45ad1b5e132bf91b0b" target="_top" xlink:title="Deserialize a byte view into a unique pointer of the specified packet type.">
+<g id="a_Node000006"><a xlink:href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a1e6a3cb4e74ee9c34e309c9e3cfbd471" target="_top" xlink:title="Deserialize a byte view into a unique pointer of the specified packet type.">
 <polygon fill="white" stroke="#666666" points="428.62,-139.12 325.62,-139.12 325.62,-97.38 428.62,-97.38 428.62,-139.12"/>
 <text text-anchor="start" x="333.62" y="-125.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="start" x="333.62" y="-114.38" font-family="Times,serif" font-size="10.00">packet::PacketFactory</text>
@@ -136,10 +136,10 @@
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a88aac09c49f5b82796a94736781626c7" target="_top" xlink:title="Create a ByteView of a subsequence of the byte array.">
-<polygon fill="white" stroke="#666666" points="426.75,-30.5 327.5,-30.5 327.5,0 426.75,0 426.75,-30.5"/>
-<text text-anchor="start" x="335.5" y="-17" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="377.12" y="-5.75" font-family="Times,serif" font-size="10.00">ByteArray::view</text>
+<g id="a_Node000008"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#a33b603234734c1cdddee3fb854988181" target="_top" xlink:title="Create a ByteView of a subsequence of the byte array.">
+<polygon fill="white" stroke="#666666" points="430.5,-30.5 323.75,-30.5 323.75,0 430.5,0 430.5,-30.5"/>
+<text text-anchor="start" x="331.75" y="-17" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray</text>
+<text text-anchor="middle" x="377.12" y="-5.75" font-family="Times,serif" font-size="10.00">::view</text>
 </a>
 </g>
 </g>

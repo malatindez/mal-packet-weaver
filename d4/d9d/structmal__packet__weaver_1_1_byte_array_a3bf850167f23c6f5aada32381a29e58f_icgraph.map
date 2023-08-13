@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::ByteArray::serialize" name="mal_packet_weaver::ByteArray::serialize">
-<area shape="rect" id="Node000001" title="Serialize the byte array using Boost&#39;s serialization framework." alt="" coords="186,5,318,46"/>
-<area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a66b134c55cf54ac2e84daa77f381235e" title="Sends any packet derived from DerivedPacket through the network." alt="" coords="5,5,138,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,28,138,28,138,23,171,23"/>
-</map>
