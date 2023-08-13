@@ -18,7 +18,7 @@ var classmal__packet__weaver_1_1_packet_dispatcher =
     [ "enqueue_promise", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af4ee0a486c569b7e413cb5740b5625de", null ],
     [ "fulfill_handlers", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a777e68fdca73f97496bc360835a62c32", null ],
     [ "fulfill_promises", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2ebc44d095b5fe14aaf3e851c3deef91", null ],
-    [ "get_shared_ptr", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ad7cba4339fd22ce22ff13bd940f839ff", null ],
+    [ "get_shared_ptr", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2b820a2094b9d5cfd27bb787183437ac", null ],
     [ "pop_inputs", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be", null ],
     [ "push_packet", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a346f02299048c0c8443aeead2fbf7d23", null ],
     [ "register_default_handler", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a90f4839728ba615d085089e56fb99a08", null ],

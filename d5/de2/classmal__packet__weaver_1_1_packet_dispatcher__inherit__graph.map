@@ -1,5 +1,5 @@
 <map id="mal_packet_weaver::PacketDispatcher" name="mal_packet_weaver::PacketDispatcher">
-<area shape="rect" id="Node000001" title="The PacketDispatcher class is responsible for managing packet dispatching and handling." alt="" coords="9,94,142,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,146,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,61,78,94,73,94,73,61"/>
+<area shape="rect" id="Node000001" title="The PacketDispatcher class is responsible for managing packet dispatching and handling." alt="" coords="37,94,170,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,202,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,61,106,94,101,94,101,61"/>
 </map>
