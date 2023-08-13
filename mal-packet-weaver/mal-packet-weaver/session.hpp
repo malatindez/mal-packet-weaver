@@ -67,7 +67,7 @@ namespace mal_packet_weaver
         /**
          * @brief Returns the earliest acquired packet. If packet queue is empty, returns nullptr.
          *
-         * @warn If packet receiver is set through SetPacketReceiver there's no reason to call this
+         * @warning If packet receiver is set through SetPacketReceiver there's no reason to call this
          * function. Generally packets will just go through the receiver. There's no ordering
          * neither option to configure which packet you will receive.
          *
