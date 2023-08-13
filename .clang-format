@@ -1,0 +1,19 @@
+BasedOnStyle: Google
+IndentWidth: 4
+UseTab: Never
+ColumnLimit: 120
+NamespaceIndentation: All
+BraceWrapping:
+  AfterFunction: true
+  AfterNamespace: true
+  AfterClass: true
+AlignAfterOpenBracket: Align
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+IndentCaseLabels: true
+Cpp11BracedListStyle: false
+AccessModifierOffset: -4
+IndentAccessModifiers: false
+IndentGotoLabels: true
+BreakBeforeBraces: Allman
+AccessModifierOffset: -4
