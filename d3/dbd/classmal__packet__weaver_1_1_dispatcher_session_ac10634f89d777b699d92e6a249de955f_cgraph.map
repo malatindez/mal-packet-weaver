@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::DispatcherSession::DispatcherSession" name="mal_packet_weaver::DispatcherSession::DispatcherSession">
+<area shape="rect" id="Node000001" title="Constructor for DispatcherSession." alt="" coords="5,5,192,61"/>
+<area shape="rect" id="Node000002" href="$d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#afc70ced2f8a219a629978f30b55b7dbf" title="Enqueues a packet for processing." alt="" coords="240,5,410,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,31,225,31,225,36,192,36"/>
+</map>

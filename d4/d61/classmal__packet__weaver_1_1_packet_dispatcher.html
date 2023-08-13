@@ -147,7 +147,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:acb3cc54b48e9061fc0833ed48bf23626"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#acb3cc54b48e9061fc0833ed48bf23626">promise_filter</a> = std::pair&lt; std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(<a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">BasePacketPtr</a> const &amp;)&gt;, <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a63179c18c99517b9d62a0c607feabd89">shared_packet_promise</a> &gt;</td></tr>
 <tr class="memdesc:acb3cc54b48e9061fc0833ed48bf23626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a filter function paired with a shared packet promise.  <br /></td></tr>
 <tr class="separator:acb3cc54b48e9061fc0833ed48bf23626"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3de763529906e7cc213eca4a82e8f9a4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a3de763529906e7cc213eca4a82e8f9a4">handler_tuple</a> = std::tuple&lt; <a class="el" href="../../d4/dc3/classfloat.html">float</a>, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">PacketHandlerFunc</a>&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt; &gt;</td></tr>
+<tr class="memitem:a3de763529906e7cc213eca4a82e8f9a4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a3de763529906e7cc213eca4a82e8f9a4">handler_tuple</a> = std::tuple&lt; <a class="el" href="../../d4/dc3/classfloat.html">float</a>, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt; &gt;</td></tr>
 <tr class="memdesc:a3de763529906e7cc213eca4a82e8f9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a tuple containing information for packet handling.  <br /></td></tr>
 <tr class="separator:a3de763529906e7cc213eca4a82e8f9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -164,11 +164,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1e7e2c9e624018e4a1046297453e0596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait until the packet is registered in the dispatch system and return as soon as possible.  <br /></td></tr>
 <tr class="separator:a1e7e2c9e624018e4a1046297453e0596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa270876e67889a7524a186b297cd11"><td class="memTemplParams" colspan="2">template&lt;IsPacket DerivedPacket&gt; </td></tr>
-<tr class="memitem:a5fa270876e67889a7524a186b297cd11"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a5fa270876e67889a7524a186b297cd11">await_packet</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; filter, <a class="el" href="../../d4/dc3/classfloat.html">float</a> timeout=-1.0f)</td></tr>
+<tr class="memitem:a5fa270876e67889a7524a186b297cd11"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a5fa270876e67889a7524a186b297cd11">await_packet</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; filter, <a class="el" href="../../d4/dc3/classfloat.html">float</a> timeout=-1.0f)</td></tr>
 <tr class="memdesc:a5fa270876e67889a7524a186b297cd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait until a packet satisfying the filter condition is registered in the dispatch system and return as soon as possible.  <br /></td></tr>
 <tr class="separator:a5fa270876e67889a7524a186b297cd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90f4839728ba615d085089e56fb99a08"><td class="memTemplParams" colspan="2">template&lt;IsPacket DerivedPacket&gt; </td></tr>
-<tr class="memitem:a90f4839728ba615d085089e56fb99a08"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a90f4839728ba615d085089e56fb99a08">register_default_handler</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">PacketHandlerFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; handler, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; filter={}, <a class="el" href="../../d4/dc3/classfloat.html">float</a> delay=0.0f)</td></tr>
+<tr class="memitem:a90f4839728ba615d085089e56fb99a08"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a90f4839728ba615d085089e56fb99a08">register_default_handler</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; handler, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; filter={}, <a class="el" href="../../d4/dc3/classfloat.html">float</a> delay=0.0f)</td></tr>
 <tr class="memdesc:a90f4839728ba615d085089e56fb99a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a default handler for the provided packet type.  <br /></td></tr>
 <tr class="separator:a90f4839728ba615d085089e56fb99a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ee0a486c569b7e413cb5740b5625de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af4ee0a486c569b7e413cb5740b5625de">enqueue_promise</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a> packet_id, <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a63179c18c99517b9d62a0c607feabd89">shared_packet_promise</a> promise)</td></tr>
@@ -259,7 +259,7 @@ Private Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets.">Session</a> should be initialized using make_shared.</dd></dl>
 <p>To correctly destroy this object, you need to call Destroy function, because coroutines share the object from this. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7a16362f32fc0c74236a5487a90151db" name="a7a16362f32fc0c74236a5487a90151db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a16362f32fc0c74236a5487a90151db">&#9670;&#160;</a></span>BasePacketPtr</h2>
@@ -275,7 +275,7 @@ Private Attributes</h2></td></tr>
 
 <p>Alias for a unique pointer to a base packet type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00047">47</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a3de763529906e7cc213eca4a82e8f9a4">mal_packet_weaver::PacketDispatcher::handler_tuple</a> =  std::tuple&lt;<a class="el" href="../../d4/dc3/classfloat.html">float</a>, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt;<a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a>&gt;, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">PacketHandlerFunc</a>&lt;<a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a>&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a3de763529906e7cc213eca4a82e8f9a4">mal_packet_weaver::PacketDispatcher::handler_tuple</a> =  std::tuple&lt;<a class="el" href="../../d4/dc3/classfloat.html">float</a>, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt;<a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a>&gt;, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt;<a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a>&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -294,7 +294,7 @@ Private Attributes</h2></td></tr>
 <p>Alias for a tuple containing information for packet handling. </p>
 <p>This type alias defines a tuple that holds information related to packet handling. The first element is a float representing a priority, the second element is a packet filter function, and the third element is a packet handler function. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -313,7 +313,7 @@ Private Attributes</h2></td></tr>
 <p>Alias for a filter function paired with a shared packet promise. </p>
 <p>This type alias defines a pair where the first element is a filter function that accepts a const reference to a base packet pointer and returns a boolean. The second element is a shared promise that holds a base packet pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ Private Attributes</h2></td></tr>
 
 <p>Alias for a shared promise of a base packet pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00057">57</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +451,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
         <tr>
           <td class="memname">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; &gt; mal_packet_weaver::PacketDispatcher::await_packet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
           <td class="paramname"><em>filter</em>, </td>
         </tr>
         <tr>
@@ -625,7 +625,7 @@ Here is the caller graph for this function:</div>
 <p>Creates an unprocessed_packets_input_pop_task and returns a future to await completion. </p>
 <dl class="section return"><dt>Returns</dt><dd>A future that signals the completion of the task. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d1a/packet-dispatcher_8cpp_source.html#l00180">180</a> of file <a class="el" href="../../d8/d1a/packet-dispatcher_8cpp_source.html">packet-dispatcher.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d1a/packet-dispatcher_8cpp_source.html#l00193">193</a> of file <a class="el" href="../../d8/d1a/packet-dispatcher_8cpp_source.html">packet-dispatcher.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -659,7 +659,7 @@ Here is the caller graph for this function:</div>
 
 <p>Coroutines use the shared pointer from this, so you need to explicitly call Destroy so alive_ is false. This way coroutines can end and unlock the remaining instances of shared_ptr. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1010,7 +1010,7 @@ Here is the caller graph for this function:</div>
 <p>Pops input packets from input queues to local maps for processing. </p>
 <dl class="section return"><dt>Returns</dt><dd>An awaitable indicating whether the task was successful. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d1a/packet-dispatcher_8cpp_source.html#l00208">208</a> of file <a class="el" href="../../d8/d1a/packet-dispatcher_8cpp_source.html">packet-dispatcher.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d1a/packet-dispatcher_8cpp_source.html#l00221">221</a> of file <a class="el" href="../../d8/d1a/packet-dispatcher_8cpp_source.html">packet-dispatcher.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1077,13 +1077,13 @@ template&lt;IsPacket DerivedPacket&gt; </div>
         <tr>
           <td class="memname">void mal_packet_weaver::PacketDispatcher::register_default_handler </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">PacketHandlerFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
           <td class="paramname"><em>filter</em> = <code>{}</code>, </td>
         </tr>
         <tr>
@@ -1183,7 +1183,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00322">322</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00326">326</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1208,7 +1208,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Map storing default packet handlers for each packet ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00320">320</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00324">324</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1233,7 +1233,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Queue for storing default handlers inputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00311">311</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00315">315</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1258,7 +1258,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Strand for synchronizing access to the default handlers input. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00293">293</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00297">297</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1283,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Atomic flag indicating updates to default_handlers_input_. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00302">302</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00306">306</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1308,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Reference to the associated Boost.Asio io_context. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00285">285</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00289">289</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1333,7 +1333,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Map storing promise filters for each packet ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00318">318</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00322">322</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1358,7 +1358,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Queue for storing promise filter map inputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00309">309</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00313">313</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1383,7 +1383,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Strand for synchronizing access to the promise filter map input. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00291">291</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00295">295</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1408,7 +1408,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Atomic flag indicating updates to promise_filter_map_input_. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00300">300</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00304">304</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1433,7 +1433,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Map storing promises for each packet ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00316">316</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00320">320</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1458,7 +1458,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Queue for storing promise map inputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00307">307</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00311">311</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1483,7 +1483,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Strand for synchronizing access to the promise map input. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00289">289</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00293">293</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1508,7 +1508,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Atomic flag indicating updates to promise_map_input_. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00298">298</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00302">302</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1533,7 +1533,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Map storing unprocessed packets for each packet ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00314">314</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00318">318</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1558,7 +1558,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Queue for storing unprocessed input packets. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00305">305</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00309">309</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1583,7 +1583,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Strand for synchronizing access to the unprocessed input packets queue. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00287">287</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00291">291</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1608,7 +1608,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Atomic flag indicating updates to unprocessed_packets_input_. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00296">296</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00300">300</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -1623,7 +1623,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html">PacketDispatcher</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 21:27:51 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 23:23:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

@@ -43,7 +43,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
@@ -62,10 +62,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aa4666bcf2c65991ad251e29d7d6cb312",
-"d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a581600a5894bac0a1f55f2ae89367717",
-"d9/d1a/session_8cpp_source.html",
-"dd/d41/classmal__toolkit_1_1_file_watcher.html#a20f7a02c8cf05c39ccd524ffe7452006"
+"d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a94fdbf0ca2b8e735fc6352663bf14277",
+"d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a17db37fb1624ba7320a2baba52567965",
+"d8/dfc/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01_6_6_01_4.html#a9d0644e4c9a5ed9c27a5b509e66e6746",
+"dd/d41/classmal__toolkit_1_1_file_watcher.html#a505bd96c09a5c160374ae7de8f621f60"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

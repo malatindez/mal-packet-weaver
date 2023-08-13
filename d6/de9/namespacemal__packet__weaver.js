@@ -9,8 +9,8 @@ var namespacemal__packet__weaver =
     [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ],
     [ "IsPacket", "dd/d19/conceptmal__packet__weaver_1_1_is_packet.html", null ],
     [ "PacketDeserializeFunc", "d6/de9/namespacemal__packet__weaver.html#a1ec734df3c6f45e5b67ff001a9321caf", null ],
-    [ "PacketFilterFunc", "d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0", null ],
-    [ "PacketHandlerFunc", "d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3", null ],
+    [ "PacketFilterFunc", "d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5", null ],
+    [ "PacketHandlerFunc", "d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641", null ],
     [ "PacketID", "d6/de9/namespacemal__packet__weaver.html#acd76523faa7f79afa4a9ad4160e4a091", null ],
     [ "PacketReceiverFn", "d6/de9/namespacemal__packet__weaver.html#a2fe1e24598530a77a781144181b85f09", null ],
     [ "PacketSubsystemID", "d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0", null ],
@@ -25,10 +25,5 @@ var namespacemal__packet__weaver =
     [ "CreatePacketID", "d6/de9/namespacemal__packet__weaver.html#a6c0e59e082acc379a031b57d9b0e3d55", null ],
     [ "PacketSubsystemIDToUint32", "d6/de9/namespacemal__packet__weaver.html#a16cda5548aa8df9bb05c206e261fd235", null ],
     [ "UniquePacketIDToPacketID", "d6/de9/namespacemal__packet__weaver.html#a98a3d7d85ae7b2c9e865d45f6d450521", null ],
-    [ "UniquePacketIDToPacketSubsystemID", "d6/de9/namespacemal__packet__weaver.html#a0a953c31a1840b2bc81be049e31a8884", null ],
-    [ "PacketSubsystemCrypto", "d6/de9/namespacemal__packet__weaver.html#a35194699d52c458a38c1295afd5129c6", null ],
-    [ "PacketSubsystemNetwork", "d6/de9/namespacemal__packet__weaver.html#aa95b8af249eab2ba62039d53f365fc90", null ],
-    [ "PacketSubsystemNode", "d6/de9/namespacemal__packet__weaver.html#a06822bc3acfc4db3ef92cff7d34aef44", null ],
-    [ "PacketSubsystemSystem", "d6/de9/namespacemal__packet__weaver.html#acb3a77623ea9d99734aa3d93cd8e9e3d", null ],
-    [ "PacketSubsystemUnknown", "d6/de9/namespacemal__packet__weaver.html#a9ed2f304686f5026e75f06e2d55d387b", null ]
+    [ "UniquePacketIDToPacketSubsystemID", "d6/de9/namespacemal__packet__weaver.html#a0a953c31a1840b2bc81be049e31a8884", null ]
 ];

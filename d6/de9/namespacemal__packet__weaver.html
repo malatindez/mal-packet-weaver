@@ -113,8 +113,7 @@ $(document).ready(function(){initNavTree('d6/de9/namespacemal__packet__weaver.ht
 <a href="#concepts">Concepts</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">mal_packet_weaver Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -155,14 +154,14 @@ Concepts</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:acc3d9721b49ccb6484e856b7442b57e3"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; </td></tr>
-<tr class="memitem:acc3d9721b49ccb6484e856b7442b57e3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">PacketHandlerFunc</a> = std::function&lt; void(std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;)&gt;</td></tr>
-<tr class="memdesc:acc3d9721b49ccb6484e856b7442b57e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type to handle packets asynchronously.  <br /></td></tr>
-<tr class="separator:acc3d9721b49ccb6484e856b7442b57e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5d985fc24b6638976d15978a4b75b0"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; </td></tr>
-<tr class="memitem:ada5d985fc24b6638976d15978a4b75b0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a> = std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(<a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> const &amp;)&gt;</td></tr>
-<tr class="memdesc:ada5d985fc24b6638976d15978a4b75b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicate function type to filter packets.  <br /></td></tr>
-<tr class="separator:ada5d985fc24b6638976d15978a4b75b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c5fb7cea27f435168c355709b5a641"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> , typename... Args&gt; </td></tr>
+<tr class="memitem:a02c5fb7cea27f435168c355709b5a641"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a> = std::function&lt; void(Args..., std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;)&gt;</td></tr>
+<tr class="memdesc:a02c5fb7cea27f435168c355709b5a641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type to handle packets asynchronously.  <br /></td></tr>
+<tr class="separator:a02c5fb7cea27f435168c355709b5a641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac71434626d6ccafe432a50f2c9875d5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> , typename... Args&gt; </td></tr>
+<tr class="memitem:aac71434626d6ccafe432a50f2c9875d5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a> = std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(Args..., <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> const &amp;)&gt;</td></tr>
+<tr class="memdesc:aac71434626d6ccafe432a50f2c9875d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicate function type to filter packets.  <br /></td></tr>
+<tr class="separator:aac71434626d6ccafe432a50f2c9875d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a531c6d496f114157a3562ecbbe89e9e0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> = uint16_t</td></tr>
 <tr class="memdesc:a531c6d496f114157a3562ecbbe89e9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type alias for packet subsystem IDs.  <br /></td></tr>
 <tr class="separator:a531c6d496f114157a3562ecbbe89e9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,20 +204,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a6c0e59e082acc379a031b57d9b0e3d55"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a6c0e59e082acc379a031b57d9b0e3d55">CreatePacketID</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> subsystem_id, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acd76523faa7f79afa4a9ad4160e4a091">PacketID</a> packet_id) noexcept</td></tr>
 <tr class="memdesc:a6c0e59e082acc379a031b57d9b0e3d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a UniquePacketID from subsystem and packet IDs.  <br /></td></tr>
 <tr class="separator:a6c0e59e082acc379a031b57d9b0e3d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a35194699d52c458a38c1295afd5129c6"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a35194699d52c458a38c1295afd5129c6">PacketSubsystemCrypto</a> = 0x0001</td></tr>
-<tr class="memdesc:a35194699d52c458a38c1295afd5129c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined packet subsystem IDs.  <br /></td></tr>
-<tr class="separator:a35194699d52c458a38c1295afd5129c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06822bc3acfc4db3ef92cff7d34aef44"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a06822bc3acfc4db3ef92cff7d34aef44">PacketSubsystemNode</a> = 0x0002</td></tr>
-<tr class="separator:a06822bc3acfc4db3ef92cff7d34aef44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa95b8af249eab2ba62039d53f365fc90"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aa95b8af249eab2ba62039d53f365fc90">PacketSubsystemNetwork</a> = 0x0003</td></tr>
-<tr class="separator:aa95b8af249eab2ba62039d53f365fc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ed2f304686f5026e75f06e2d55d387b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a9ed2f304686f5026e75f06e2d55d387b">PacketSubsystemUnknown</a> = 0x0005</td></tr>
-<tr class="separator:a9ed2f304686f5026e75f06e2d55d387b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb3a77623ea9d99734aa3d93cd8e9e3d"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acb3a77623ea9d99734aa3d93cd8e9e3d">PacketSubsystemSystem</a> = 0x0004</td></tr>
-<tr class="separator:acb3a77623ea9d99734aa3d93cd8e9e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is the main namespace for the Mal <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets.">Packet</a> Weaver library. </p>
@@ -242,57 +227,59 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ada5d985fc24b6638976d15978a4b75b0" name="ada5d985fc24b6638976d15978a4b75b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada5d985fc24b6638976d15978a4b75b0">&#9670;&#160;</a></span>PacketFilterFunc</h2>
+<a id="aac71434626d6ccafe432a50f2c9875d5" name="aac71434626d6ccafe432a50f2c9875d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac71434626d6ccafe432a50f2c9875d5">&#9670;&#160;</a></span>PacketFilterFunc</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; </div>
+template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">mal_packet_weaver::PacketFilterFunc</a> = typedef std::function&lt;<a class="el" href="../../d9/db9/classbool.html">bool</a>(<a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> const &amp;)&gt;</td>
+          <td class="memname">using <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">mal_packet_weaver::PacketFilterFunc</a> = typedef std::function&lt;<a class="el" href="../../d9/db9/classbool.html">bool</a>(Args..., <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> const &amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Predicate function type to filter packets. </p>
-<p>This function type defines the signature for packet filter functions that accept a const reference to a derived packet type and return a boolean indicating whether the packet should be filtered or not.</p>
+<p>This function type defines the signature for packet filter functions that accept a set of arguments followed by a const reference to a derived packet type and return a boolean indicating whether the packet should be filtered or not.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname"><a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class.">DerivedPacket</a></td><td>The derived packet type. </td></tr>
+    <tr><td class="paramname">Args</td><td>Additional argument types. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
-<a id="acc3d9721b49ccb6484e856b7442b57e3" name="acc3d9721b49ccb6484e856b7442b57e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc3d9721b49ccb6484e856b7442b57e3">&#9670;&#160;</a></span>PacketHandlerFunc</h2>
+<a id="a02c5fb7cea27f435168c355709b5a641" name="a02c5fb7cea27f435168c355709b5a641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c5fb7cea27f435168c355709b5a641">&#9670;&#160;</a></span>PacketHandlerFunc</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; </div>
+template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">mal_packet_weaver::PacketHandlerFunc</a> = typedef std::function&lt;void(std::unique_ptr&lt;<a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a>&gt;)&gt;</td>
+          <td class="memname">using <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">mal_packet_weaver::PacketHandlerFunc</a> = typedef std::function&lt;void(Args..., std::unique_ptr&lt;<a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a>&gt;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Callback function type to handle packets asynchronously. </p>
-<p>This function type defines the signature for packet handler functions that accept a unique pointer to a derived packet type and return an awaitable boost::asio task.</p>
+<p>This function type defines the signature for packet handler functions that accept a set of arguments followed by a unique pointer to a derived packet type and return an awaitable boost::asio task.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname"><a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class.">DerivedPacket</a></td><td>The derived packet type. </td></tr>
+    <tr><td class="paramname">Args</td><td>Additional argument types. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../df/d1d/packet-dispatcher_8hpp_source.html">packet-dispatcher.hpp</a>.</p>
 
 </div>
 </div>
@@ -395,7 +382,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 <tr><td class="fieldname"><a id="ac85056d274826db5c5d65260e0659baca562c55c22eef282d3606ceea86b4bd1c" name="ac85056d274826db5c5d65260e0659baca562c55c22eef282d3606ceea86b4bd1c"></a>L2_ADMIN_NODE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -436,7 +423,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 
 <p>Create a UniquePacketID from subsystem and packet IDs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +453,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 
 <p>Convert a PacketSubsystemID to a uint32_t value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +483,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 
 <p>Extract PacketID from a UniquePacketID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -526,130 +513,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 
 <p>Extract PacketSubsystemID from a UniquePacketID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a35194699d52c458a38c1295afd5129c6" name="a35194699d52c458a38c1295afd5129c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35194699d52c458a38c1295afd5129c6">&#9670;&#160;</a></span>PacketSubsystemCrypto</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> mal_packet_weaver::PacketSubsystemCrypto = 0x0001</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Predefined packet subsystem IDs. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aa95b8af249eab2ba62039d53f365fc90" name="aa95b8af249eab2ba62039d53f365fc90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa95b8af249eab2ba62039d53f365fc90">&#9670;&#160;</a></span>PacketSubsystemNetwork</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> mal_packet_weaver::PacketSubsystemNetwork = 0x0003</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a06822bc3acfc4db3ef92cff7d34aef44" name="a06822bc3acfc4db3ef92cff7d34aef44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06822bc3acfc4db3ef92cff7d34aef44">&#9670;&#160;</a></span>PacketSubsystemNode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> mal_packet_weaver::PacketSubsystemNode = 0x0002</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
-
-</div>
-</div>
-<a id="acb3a77623ea9d99734aa3d93cd8e9e3d" name="acb3a77623ea9d99734aa3d93cd8e9e3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb3a77623ea9d99734aa3d93cd8e9e3d">&#9670;&#160;</a></span>PacketSubsystemSystem</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> mal_packet_weaver::PacketSubsystemSystem = 0x0004</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a9ed2f304686f5026e75f06e2d55d387b" name="a9ed2f304686f5026e75f06e2d55d387b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ed2f304686f5026e75f06e2d55d387b">&#9670;&#160;</a></span>PacketSubsystemUnknown</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> mal_packet_weaver::PacketSubsystemUnknown = 0x0005</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d9/d85/packet__impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +523,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 21:27:51 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 23:23:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

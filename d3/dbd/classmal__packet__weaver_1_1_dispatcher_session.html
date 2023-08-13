@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('d3/dbd/classmal__packet__weaver_1_1_di
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../dd/d0e/classmal__packet__weaver_1_1_dispatcher_session-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">mal_packet_weaver::DispatcherSession Class Reference</div></div>
+  <div class="headertitle"><div class="title">mal_packet_weaver::DispatcherSession Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -141,8 +141,8 @@ requires std::is_base_of_v&lt;<a class="el" href="../../d2/d9d/classmal__packet_
 <tr class="memitem:ab17065de5d9429bc05778a9a92cd7431"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ab17065de5d9429bc05778a9a92cd7431">pop_packet_now</a> ()</td></tr>
 <tr class="memdesc:ab17065de5d9429bc05778a9a92cd7431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the earliest acquired packet. If packet queue is empty, returns nullptr.  <br /></td></tr>
 <tr class="separator:ab17065de5d9429bc05778a9a92cd7431"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29ceadab7fb11440d942387fdfc7aeeb"><td class="memItemLeft" align="right" valign="top">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a29ceadab7fb11440d942387fdfc7aeeb">pop_packet_async</a> (boost::asio::io_context &amp;io)</td></tr>
-<tr class="separator:a29ceadab7fb11440d942387fdfc7aeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca95d959c292056bd106084852b45b9b"><td class="memItemLeft" align="right" valign="top">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aca95d959c292056bd106084852b45b9b">pop_packet_async</a> ()</td></tr>
+<tr class="separator:aca95d959c292056bd106084852b45b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ebdad3b9d0726451549b03f16a8b1fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a1ebdad3b9d0726451549b03f16a8b1fa">has_packets</a> ()</td></tr>
 <tr class="memdesc:a1ebdad3b9d0726451549b03f16a8b1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if there are packets in the queue.  <br /></td></tr>
 <tr class="separator:a1ebdad3b9d0726451549b03f16a8b1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,36 +161,50 @@ requires std::is_base_of_v&lt;<a class="el" href="../../d2/d9d/classmal__packet_
 <tr class="memitem:a30069930477c18571cef620786455b22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a30069930477c18571cef620786455b22">set_packet_receiver</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a2fe1e24598530a77a781144181b85f09">PacketReceiverFn</a> const receiver)</td></tr>
 <tr class="memdesc:a30069930477c18571cef620786455b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the packet receiver for the session.  <br /></td></tr>
 <tr class="separator:a30069930477c18571cef620786455b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56d09c6350134053208f55acf19d4471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a56d09c6350134053208f55acf19d4471">enqueue_packet</a> (BasePacketPtr &amp;&amp;packet)</td></tr>
-<tr class="memdesc:a56d09c6350134053208f55acf19d4471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a packet for processing.  <br /></td></tr>
-<tr class="separator:a56d09c6350134053208f55acf19d4471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc70ced2f8a219a629978f30b55b7dbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#afc70ced2f8a219a629978f30b55b7dbf">enqueue_packet</a> (<a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">PacketDispatcher::BasePacketPtr</a> &amp;&amp;packet)</td></tr>
+<tr class="memdesc:afc70ced2f8a219a629978f30b55b7dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a packet for processing.  <br /></td></tr>
+<tr class="separator:afc70ced2f8a219a629978f30b55b7dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df9b40c8cd3ddc1d39efef599a630d5"><td class="memTemplParams" colspan="2">template&lt;IsPacket DerivedPacket&gt; </td></tr>
 <tr class="memitem:a4df9b40c8cd3ddc1d39efef599a630d5"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a4df9b40c8cd3ddc1d39efef599a630d5">await_packet</a> (<a class="el" href="../../d4/dc3/classfloat.html">float</a> timeout=-1.0f)</td></tr>
 <tr class="memdesc:a4df9b40c8cd3ddc1d39efef599a630d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait until the packet is registered in the dispatch system and return as soon as possible.  <br /></td></tr>
 <tr class="separator:a4df9b40c8cd3ddc1d39efef599a630d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2fa57ebe77fb8ff587769419237f195"><td class="memTemplParams" colspan="2">template&lt;IsPacket DerivedPacket&gt; </td></tr>
-<tr class="memitem:ac2fa57ebe77fb8ff587769419237f195"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ac2fa57ebe77fb8ff587769419237f195">await_packet</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; filter, <a class="el" href="../../d4/dc3/classfloat.html">float</a> timeout=-1.0f)</td></tr>
+<tr class="memitem:ac2fa57ebe77fb8ff587769419237f195"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ac2fa57ebe77fb8ff587769419237f195">await_packet</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; filter, <a class="el" href="../../d4/dc3/classfloat.html">float</a> timeout=-1.0f)</td></tr>
 <tr class="memdesc:ac2fa57ebe77fb8ff587769419237f195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait until a packet satisfying the filter condition is registered in the dispatch system and return as soon as possible.  <br /></td></tr>
 <tr class="separator:ac2fa57ebe77fb8ff587769419237f195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4666bcf2c65991ad251e29d7d6cb312"><td class="memTemplParams" colspan="2">template&lt;IsPacket DerivedPacket&gt; </td></tr>
-<tr class="memitem:aa4666bcf2c65991ad251e29d7d6cb312"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aa4666bcf2c65991ad251e29d7d6cb312">register_default_handler</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">PacketHandlerFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; handler, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; filter={}, <a class="el" href="../../d4/dc3/classfloat.html">float</a> delay=0.0f)</td></tr>
+<tr class="memitem:aa4666bcf2c65991ad251e29d7d6cb312"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aa4666bcf2c65991ad251e29d7d6cb312">register_default_handler</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; handler, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; filter={}, <a class="el" href="../../d4/dc3/classfloat.html">float</a> delay=0.0f)</td></tr>
 <tr class="memdesc:aa4666bcf2c65991ad251e29d7d6cb312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a default handler for the provided packet type.  <br /></td></tr>
 <tr class="separator:aa4666bcf2c65991ad251e29d7d6cb312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa090993b7dcc0468b73a07aae5fba3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aaa090993b7dcc0468b73a07aae5fba3c">enqueue_promise</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a> packet_id, shared_packet_promise promise)</td></tr>
-<tr class="memdesc:aaa090993b7dcc0468b73a07aae5fba3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a promise associated with a packet.  <br /></td></tr>
-<tr class="separator:aaa090993b7dcc0468b73a07aae5fba3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaa745744c0629ba67c431a059011083"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aeaa745744c0629ba67c431a059011083">enqueue_filter_promise</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a> packet_id, promise_filter filtered_promise)</td></tr>
-<tr class="memdesc:aeaa745744c0629ba67c431a059011083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a promise with a filter associated with a packet.  <br /></td></tr>
-<tr class="separator:aeaa745744c0629ba67c431a059011083"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cf3b1e69c13445c581a2c1355163e12"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html">Session</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a0cf3b1e69c13445c581a2c1355163e12">session</a> ()</td></tr>
-<tr class="memdesc:a0cf3b1e69c13445c581a2c1355163e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the underlying session.  <br /></td></tr>
-<tr class="separator:a0cf3b1e69c13445c581a2c1355163e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a278be5c30aaf5447f8108b61ded4f724"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html">PacketDispatcher</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a278be5c30aaf5447f8108b61ded4f724">dispatcher_</a> ()</td></tr>
-<tr class="memdesc:a278be5c30aaf5447f8108b61ded4f724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the underlying packet dispatcher.  <br /></td></tr>
-<tr class="separator:a278be5c30aaf5447f8108b61ded4f724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4ac5d624ba632534beada2c403e279"><td class="memTemplParams" colspan="2">template&lt;typename Arg1 , IsPacket CustomPacket&gt; </td></tr>
+<tr class="memitem:a8c4ac5d624ba632534beada2c403e279"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a8c4ac5d624ba632534beada2c403e279">register_default_handler</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; CustomPacket, Arg1 &gt; &amp;&amp;handler, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; CustomPacket, Arg1 &gt; &amp;&amp;filter={}, <a class="el" href="../../d4/dc3/classfloat.html">float</a> delay=0.0f)</td></tr>
+<tr class="memdesc:a8c4ac5d624ba632534beada2c403e279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a default handler for the provided packet type.  <br /></td></tr>
+<tr class="separator:a8c4ac5d624ba632534beada2c403e279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc3768296c9fbfffe1811f512abe97d"><td class="memTemplParams" colspan="2">template&lt;typename Arg1 , typename Arg2 , typename... Args, IsPacket CustomPacket&gt; </td></tr>
+<tr class="memitem:aafc3768296c9fbfffe1811f512abe97d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aafc3768296c9fbfffe1811f512abe97d">register_default_handler</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; CustomPacket, Arg1, Arg2, Args... &gt; &amp;&amp;handler, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; CustomPacket, Arg1, Arg2, Args... &gt; &amp;&amp;filter={}, <a class="el" href="../../d4/dc3/classfloat.html">float</a> delay=0.0f)</td></tr>
+<tr class="memdesc:aafc3768296c9fbfffe1811f512abe97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a default handler for the provided packet type.  <br /></td></tr>
+<tr class="separator:aafc3768296c9fbfffe1811f512abe97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254e12db3996d8b29b3fef90fea302bd"><td class="memTemplParams" colspan="2">template&lt;IsPacket CustomPacket, typename... FnArgs&gt; </td></tr>
+<tr class="memitem:a254e12db3996d8b29b3fef90fea302bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a254e12db3996d8b29b3fef90fea302bd">register_default_handler</a> (std::function&lt; void(FnArgs...)&gt; &amp;&amp;handler, std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(FnArgs...)&gt; &amp;&amp;filter={}, <a class="el" href="../../d4/dc3/classfloat.html">float</a> delay=0.0f)</td></tr>
+<tr class="separator:a254e12db3996d8b29b3fef90fea302bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea9f12fc92273e285cfcf171a7767d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a6ea9f12fc92273e285cfcf171a7767d9">enqueue_promise</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a> packet_id, <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a63179c18c99517b9d62a0c607feabd89">PacketDispatcher::shared_packet_promise</a> promise)</td></tr>
+<tr class="memdesc:a6ea9f12fc92273e285cfcf171a7767d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a promise associated with a packet.  <br /></td></tr>
+<tr class="separator:a6ea9f12fc92273e285cfcf171a7767d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf98a5734884f56c2034306c65edc198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#acf98a5734884f56c2034306c65edc198">enqueue_filter_promise</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a> packet_id, <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#acb3cc54b48e9061fc0833ed48bf23626">PacketDispatcher::promise_filter</a> filtered_promise)</td></tr>
+<tr class="memdesc:acf98a5734884f56c2034306c65edc198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a promise with a filter associated with a packet.  <br /></td></tr>
+<tr class="separator:acf98a5734884f56c2034306c65edc198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7fb1ce58371b61826ad3a276b9b239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html">Session</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#adc7fb1ce58371b61826ad3a276b9b239">session</a> ()</td></tr>
+<tr class="memdesc:adc7fb1ce58371b61826ad3a276b9b239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the underlying session.  <br /></td></tr>
+<tr class="separator:adc7fb1ce58371b61826ad3a276b9b239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94fdbf0ca2b8e735fc6352663bf14277"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html">PacketDispatcher</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a94fdbf0ca2b8e735fc6352663bf14277">dispatcher</a> ()</td></tr>
+<tr class="memdesc:a94fdbf0ca2b8e735fc6352663bf14277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the underlying packet dispatcher.  <br /></td></tr>
+<tr class="separator:a94fdbf0ca2b8e735fc6352663bf14277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a6d0576a07686d745d3cd94bafed0353d"><td class="memItemLeft" align="right" valign="top">boost::asio::io_context &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a6d0576a07686d745d3cd94bafed0353d">io_context_</a></td></tr>
+<tr class="memdesc:a6d0576a07686d745d3cd94bafed0353d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the associated Boost.Asio io_context.  <br /></td></tr>
+<tr class="separator:a6d0576a07686d745d3cd94bafed0353d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac114499284469dfc1266866a4cfa1140"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html">Session</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ac114499284469dfc1266866a4cfa1140">session_</a></td></tr>
 <tr class="memdesc:ac114499284469dfc1266866a4cfa1140"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying session.  <br /></td></tr>
 <tr class="separator:ac114499284469dfc1266866a4cfa1140"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +261,11 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session_ac10634f89d777b699d92e6a249de955f_cgraph.svg" width="416" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -275,7 +294,7 @@ Private Attributes</h2></td></tr>
 
 <p>Destructor for <a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html" title="Represents a session with packet dispatching functionality.">DispatcherSession</a>. Cleans up the session and packet dispatcher. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00028">28</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00031">31</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -307,7 +326,7 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true if the session is alive, false otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a3bcaf424209f8568602a89583c20a929" title="Checks if the session is alive.">Session::alive</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +372,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boost::asio::awaitable&lt;std::unique_ptr&lt;DerivedPacket&gt;&gt; A unique pointer to the received packet, or nullptr if the timeout was reached. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00151">151</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00158">158</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +390,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
         <tr>
           <td class="memname">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; &gt; mal_packet_weaver::DispatcherSession::await_packet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
           <td class="paramname"><em>filter</em>, </td>
         </tr>
         <tr>
@@ -410,12 +429,12 @@ template&lt;IsPacket DerivedPacket&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boost::asio::awaitable&lt;std::unique_ptr&lt;DerivedPacket&gt;&gt; A unique pointer to the received packet, or nullptr if the timeout was reached or the filter condition was not satisfied. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00175">175</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00182">182</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a278be5c30aaf5447f8108b61ded4f724" name="a278be5c30aaf5447f8108b61ded4f724"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a278be5c30aaf5447f8108b61ded4f724">&#9670;&#160;</a></span>dispatcher_()</h2>
+<a id="a94fdbf0ca2b8e735fc6352663bf14277" name="a94fdbf0ca2b8e735fc6352663bf14277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94fdbf0ca2b8e735fc6352663bf14277">&#9670;&#160;</a></span>dispatcher()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -424,7 +443,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html">PacketDispatcher</a> &amp; mal_packet_weaver::DispatcherSession::dispatcher_ </td>
+          <td class="memname"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html">PacketDispatcher</a> &amp; mal_packet_weaver::DispatcherSession::dispatcher </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -432,7 +451,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -440,22 +459,12 @@ template&lt;IsPacket DerivedPacket&gt; </div>
 <p>Get a reference to the underlying packet dispatcher. </p>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the packet dispatcher. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00247">247</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session_a278be5c30aaf5447f8108b61ded4f724_cgraph.svg" width="202" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session_a278be5c30aaf5447f8108b61ded4f724_icgraph.svg" width="202" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00470">470</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aeaa745744c0629ba67c431a059011083" name="aeaa745744c0629ba67c431a059011083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeaa745744c0629ba67c431a059011083">&#9670;&#160;</a></span>enqueue_filter_promise()</h2>
+<a id="acf98a5734884f56c2034306c65edc198" name="acf98a5734884f56c2034306c65edc198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf98a5734884f56c2034306c65edc198">&#9670;&#160;</a></span>enqueue_filter_promise()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -472,7 +481,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">promise_filter&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#acb3cc54b48e9061fc0833ed48bf23626">PacketDispatcher::promise_filter</a>&#160;</td>
           <td class="paramname"><em>filtered_promise</em>&#160;</td>
         </tr>
         <tr>
@@ -498,12 +507,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00232">232</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00455">455</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a56d09c6350134053208f55acf19d4471" name="a56d09c6350134053208f55acf19d4471"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56d09c6350134053208f55acf19d4471">&#9670;&#160;</a></span>enqueue_packet()</h2>
+<a id="afc70ced2f8a219a629978f30b55b7dbf" name="afc70ced2f8a219a629978f30b55b7dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc70ced2f8a219a629978f30b55b7dbf">&#9670;&#160;</a></span>enqueue_packet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -514,7 +523,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void mal_packet_weaver::DispatcherSession::enqueue_packet </td>
           <td>(</td>
-          <td class="paramtype">BasePacketPtr &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">PacketDispatcher::BasePacketPtr</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -535,12 +544,17 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00134">134</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00138">138</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session_afc70ced2f8a219a629978f30b55b7dbf_icgraph.svg" width="416" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
-<a id="aaa090993b7dcc0468b73a07aae5fba3c" name="aaa090993b7dcc0468b73a07aae5fba3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa090993b7dcc0468b73a07aae5fba3c">&#9670;&#160;</a></span>enqueue_promise()</h2>
+<a id="a6ea9f12fc92273e285cfcf171a7767d9" name="a6ea9f12fc92273e285cfcf171a7767d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea9f12fc92273e285cfcf171a7767d9">&#9670;&#160;</a></span>enqueue_promise()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -557,7 +571,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">shared_packet_promise&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a63179c18c99517b9d62a0c607feabd89">PacketDispatcher::shared_packet_promise</a>&#160;</td>
           <td class="paramname"><em>promise</em>&#160;</td>
         </tr>
         <tr>
@@ -583,7 +597,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00216">216</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00439">439</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -614,7 +628,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>true if there are packets in the queue, false otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#acb5628d44d4b2a1f217524932483f6b6" title="Checks if there are packets in the queue.">Session::has_packets</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -645,12 +659,12 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>true if the session is closed, false otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a83c93e5e6a2da8fc84a6484b4bbda5f1" title="Checks if the session is closed.">Session::is_closed</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00103">103</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a29ceadab7fb11440d942387fdfc7aeeb" name="a29ceadab7fb11440d942387fdfc7aeeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29ceadab7fb11440d942387fdfc7aeeb">&#9670;&#160;</a></span>pop_packet_async()</h2>
+<a id="aca95d959c292056bd106084852b45b9b" name="aca95d959c292056bd106084852b45b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca95d959c292056bd106084852b45b9b">&#9670;&#160;</a></span>pop_packet_async()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,8 +675,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">boost::asio::awaitable&lt; std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt; &gt; mal_packet_weaver::DispatcherSession::pop_packet_async </td>
           <td>(</td>
-          <td class="paramtype">boost::asio::io_context &amp;&#160;</td>
-          <td class="paramname"><em>io</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -674,7 +687,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Returns nullptr if socket has crashed. If not, it will wait until the packet is available and will return it as soon as possible. This function is threadsafe. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a961d49d84fb1426fc605c529df1296d1">Session::pop_packet_async</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -706,12 +719,145 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>std::unique_ptr&lt;Packet&gt; </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0" title="Returns the earliest acquired packet. If packet queue is empty, returns nullptr.">Session::pop_packet_now</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8c4ac5d624ba632534beada2c403e279" name="a8c4ac5d624ba632534beada2c403e279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c4ac5d624ba632534beada2c403e279">&#9670;&#160;</a></span>register_default_handler() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Arg1 , IsPacket CustomPacket&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mal_packet_weaver::DispatcherSession::register_default_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; CustomPacket, Arg1 &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; CustomPacket, Arg1 &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td>
+          <td class="paramname"><em>delay</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a default handler for the provided packet type. </p>
+<p>This function registers a default packet handler for a specific packet type. The handler function can be provided, and if it returns false, the packet is passed to the next handler. An optional filter function can also be provided to determine whether the handler should be applied based on the packet's properties. A delay parameter can be used to postpone the handler's execution for a certain amount of time.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Arg1</td><td>The type of argument 1 for the handler. </td></tr>
+    <tr><td class="paramname">Args</td><td>Additional argument types for the handler. </td></tr>
+    <tr><td class="paramname">CustomPacket</td><td>The type of packet for which the handler should be registered. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>The packet handler function. </td></tr>
+    <tr><td class="paramname">filter</td><td>The packet filter function to determine whether the handler should be applied. </td></tr>
+    <tr><td class="paramname">delay</td><td>The delay in seconds before the handler is executed. (Default is 0.0)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Supported types for Args are: <a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets.">Session</a>&amp;, std::shared_ptr&lt;Session&gt;, io_context &amp;, std::shared_ptr&lt;PacketDispatcher&gt;, and <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html" title="The PacketDispatcher class is responsible for managing packet dispatching and handling.">PacketDispatcher</a>&amp;. The std::unique_ptr&lt;CustomPacket&gt; type should be last. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00233">233</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aafc3768296c9fbfffe1811f512abe97d" name="aafc3768296c9fbfffe1811f512abe97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc3768296c9fbfffe1811f512abe97d">&#9670;&#160;</a></span>register_default_handler() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Arg1 , typename Arg2 , typename... Args, IsPacket CustomPacket&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mal_packet_weaver::DispatcherSession::register_default_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; CustomPacket, Arg1, Arg2, Args... &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; CustomPacket, Arg1, Arg2, Args... &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td>
+          <td class="paramname"><em>delay</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a default handler for the provided packet type. </p>
+<p>This function registers a default packet handler for a specific packet type. The handler function can be provided, and if it returns false, the packet is passed to the next handler. An optional filter function can also be provided to determine whether the handler should be applied based on the packet's properties. A delay parameter can be used to postpone the handler's execution for a certain amount of time.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Arg1</td><td>The type of argument 1 for the handler. </td></tr>
+    <tr><td class="paramname">Arg2</td><td>The type of argument 2 for the handler. </td></tr>
+    <tr><td class="paramname">Args</td><td>Additional argument types for the handler. </td></tr>
+    <tr><td class="paramname">CustomPacket</td><td>The type of packet for which the handler should be registered. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>The packet handler function. </td></tr>
+    <tr><td class="paramname">filter</td><td>The packet filter function to determine whether the handler should be applied. </td></tr>
+    <tr><td class="paramname">delay</td><td>The delay in seconds before the handler is executed. (Default is 0.0)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Supported types for Args are: <a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets.">Session</a>&amp;, std::shared_ptr&lt;Session&gt;, io_context &amp;, std::shared_ptr&lt;PacketDispatcher&gt;, and <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html" title="The PacketDispatcher class is responsible for managing packet dispatching and handling.">PacketDispatcher</a>&amp;. The std::unique_ptr&lt;CustomPacket&gt; type should be last. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00321">321</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aa4666bcf2c65991ad251e29d7d6cb312" name="aa4666bcf2c65991ad251e29d7d6cb312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4666bcf2c65991ad251e29d7d6cb312">&#9670;&#160;</a></span>register_default_handler()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4666bcf2c65991ad251e29d7d6cb312">&#9670;&#160;</a></span>register_default_handler() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -724,13 +870,13 @@ template&lt;IsPacket DerivedPacket&gt; </div>
         <tr>
           <td class="memname">void mal_packet_weaver::DispatcherSession::register_default_handler </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">PacketHandlerFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">PacketHandlerFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">PacketFilterFunc</a>&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;&#160;</td>
           <td class="paramname"><em>filter</em> = <code>{}</code>, </td>
         </tr>
         <tr>
@@ -770,7 +916,63 @@ template&lt;IsPacket DerivedPacket&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00200">200</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00207">207</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session_aa4666bcf2c65991ad251e29d7d6cb312_icgraph.svg" width="392" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a254e12db3996d8b29b3fef90fea302bd" name="a254e12db3996d8b29b3fef90fea302bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a254e12db3996d8b29b3fef90fea302bd">&#9670;&#160;</a></span>register_default_handler() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;IsPacket CustomPacket, typename... FnArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mal_packet_weaver::DispatcherSession::register_default_handler </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(FnArgs...)&gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(FnArgs...)&gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td>
+          <td class="paramname"><em>delay</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00425">425</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session_a254e12db3996d8b29b3fef90fea302bd_cgraph.svg" width="392" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -801,7 +1003,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>true if the session is secured, false otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ad5258feb4209869496af9b685febb6c1" title="Checks if the session is secured using encryption.">Session::secured</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00095">95</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -851,12 +1053,12 @@ requires std::is_base_of_v&lt;<a class="el" href="../../d2/d9d/classmal__packet_
 false if session was closed. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a66b134c55cf54ac2e84daa77f381235e" title="Sends any packet derived from DerivedPacket through the network.">Session::send_packet</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a0cf3b1e69c13445c581a2c1355163e12" name="a0cf3b1e69c13445c581a2c1355163e12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cf3b1e69c13445c581a2c1355163e12">&#9670;&#160;</a></span>session()</h2>
+<a id="adc7fb1ce58371b61826ad3a276b9b239" name="adc7fb1ce58371b61826ad3a276b9b239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7fb1ce58371b61826ad3a276b9b239">&#9670;&#160;</a></span>session()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -865,7 +1067,7 @@ false if session was closed. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html">Session</a> &amp; mal_packet_weaver::DispatcherSession::session </td>
+          <td class="memname"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html">Session</a> &amp; mal_packet_weaver::DispatcherSession::session </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -873,7 +1075,7 @@ false if session was closed. </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -881,7 +1083,7 @@ false if session was closed. </dd></dl>
 <p>Get a reference to the underlying session. </p>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the session. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00241">241</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00464">464</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -918,7 +1120,7 @@ false if session was closed. </dd></dl>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ae76f44a9b689f9255d4237cbfd28a7c3" title="Sets the packet receiver for the session.">Session::set_packet_receiver</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00128">128</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -949,7 +1151,7 @@ false if session was closed. </dd></dl>
 <p>Sets up encryption for the session using provided encryption interface. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ad2580293c667f8f3c25e0b6355e89adc" title="Sets up encryption for the session using provided encryption interface.">Session::setup_encryption</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00113">113</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -976,7 +1178,33 @@ false if session was closed. </dd></dl>
 
 <p>The underlying packet dispatcher. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00251">251</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00475">475</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6d0576a07686d745d3cd94bafed0353d" name="a6d0576a07686d745d3cd94bafed0353d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0576a07686d745d3cd94bafed0353d">&#9670;&#160;</a></span>io_context_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::asio::io_context&amp; mal_packet_weaver::DispatcherSession::io_context_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reference to the associated Boost.Asio io_context. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00473">473</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1002,7 +1230,7 @@ false if session was closed. </dd></dl>
 
 <p>The underlying session. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00250">250</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00474">474</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1243,7 @@ false if session was closed. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html">DispatcherSession</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 21:27:51 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 23:23:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

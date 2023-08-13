@@ -58,9 +58,9 @@ var sectionId = 'dynsection-2';
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="Constructor for the Session class.">
-<polygon fill="#999999" stroke="#666666" points="99.25,-241.5 0,-241.5 0,-211 99.25,-211 99.25,-241.5"/>
-<text text-anchor="start" x="8" y="-228" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="49.62" y="-216.75" font-family="Times,serif" font-size="10.00">Session::Session</text>
+<polygon fill="#999999" stroke="#666666" points="99.25,-312.5 0,-312.5 0,-282 99.25,-282 99.25,-312.5"/>
+<text text-anchor="start" x="8" y="-299" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="49.62" y="-287.75" font-family="Times,serif" font-size="10.00">Session::Session</text>
 </a>
 </g>
 </g>
@@ -79,8 +79,8 @@ var sectionId = 'dynsection-2';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M75.72,-241.89C92.33,-251.96 114.74,-265.03 135.25,-275.25 178.96,-297.04 229.87,-318.41 268.57,-333.87"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="267.05,-337.43 277.63,-337.87 269.63,-330.93 267.05,-337.43"/>
+<path fill="none" stroke="#63b8ff" d="M99.48,-307.77C146.39,-317.87 217.43,-333.17 268.09,-344.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="267.06,-347.65 277.57,-346.34 268.53,-340.81 267.06,-347.65"/>
 </a>
 </g>
 </g>
@@ -99,18 +99,18 @@ var sectionId = 'dynsection-2';
 <g id="edge8_Node000001_Node000009" class="edge">
 <title>Node1&#45;&gt;Node9</title>
 <g id="a_edge8_Node000001_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M99.48,-238.7C146.39,-250.65 217.43,-268.76 268.09,-281.66"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="267.02,-285.26 277.57,-284.34 268.74,-278.47 267.02,-285.26"/>
+<path fill="none" stroke="#63b8ff" d="M99.48,-297.25C146.3,-297.25 217.13,-297.25 267.77,-297.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="267.57,-300.75 277.57,-297.25 267.57,-293.75 267.57,-300.75"/>
 </a>
 </g>
 </g>
 <!-- Node11 -->
 <g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_Node000011"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a9cb6655f710d023540a11da7b218c5d3" target="_top" xlink:title="Initiates an asynchronous read operation from the socket to receive data.">
-<polygon fill="white" stroke="#666666" points="234.5,-171.5 135.25,-171.5 135.25,-141 234.5,-141 234.5,-171.5"/>
-<text text-anchor="start" x="143.25" y="-158" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="184.88" y="-146.75" font-family="Times,serif" font-size="10.00">Session::receive_all</text>
+<g id="a_Node000011"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a71ede34f71a6dc30d56d99015997caa3" target="_top" xlink:title="Asynchronously sends all packets in the queue through the network.">
+<polygon fill="white" stroke="#666666" points="234.5,-199.5 135.25,-199.5 135.25,-169 234.5,-169 234.5,-199.5"/>
+<text text-anchor="start" x="143.25" y="-186" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="184.88" y="-174.75" font-family="Times,serif" font-size="10.00">Session::send_all</text>
 </a>
 </g>
 </g>
@@ -118,27 +118,8 @@ var sectionId = 'dynsection-2';
 <g id="edge14_Node000001_Node000011" class="edge">
 <title>Node1&#45;&gt;Node11</title>
 <g id="a_edge14_Node000001_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M79.95,-210.53C96.21,-201.84 116.82,-190.89 135.25,-181.25 137.97,-179.83 140.78,-178.37 143.61,-176.9"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="144.96,-179.62 152.23,-171.92 141.74,-173.41 144.96,-179.62"/>
-</a>
-</g>
-</g>
-<!-- Node12 -->
-<g id="Node000012" class="node">
-<title>Node12</title>
-<g id="a_Node000012"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a71ede34f71a6dc30d56d99015997caa3" target="_top" xlink:title="Asynchronously sends all packets in the queue through the network.">
-<polygon fill="white" stroke="#666666" points="234.5,-220.5 135.25,-220.5 135.25,-190 234.5,-190 234.5,-220.5"/>
-<text text-anchor="start" x="143.25" y="-207" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="184.88" y="-195.75" font-family="Times,serif" font-size="10.00">Session::send_all</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node12 -->
-<g id="edge15_Node000001_Node000012" class="edge">
-<title>Node1&#45;&gt;Node12</title>
-<g id="a_edge15_Node000001_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M99.49,-218.55C107.54,-217.28 115.97,-215.95 124.26,-214.65"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="124.69,-217.96 134.02,-212.95 123.6,-211.05 124.69,-217.96"/>
+<path fill="none" stroke="#63b8ff" d="M69.15,-281.54C92.03,-262.14 131.09,-229.01 157.19,-206.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="159.14,-208.97 164.5,-199.83 154.61,-203.63 159.14,-208.97"/>
 </a>
 </g>
 </g>
@@ -310,130 +291,130 @@ var sectionId = 'dynsection-2';
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node6 -->
-<g id="edge19_Node000012_Node000006" class="edge">
-<title>Node12&#45;&gt;Node6</title>
-<g id="a_edge19_Node000012_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M188.32,-220.82C194.75,-256.35 215.63,-343.72 270.5,-387.25 312.82,-420.82 374.08,-431.05 420.52,-433.47"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="420.25,-437.01 430.39,-433.91 420.54,-430.01 420.25,-437.01"/>
+<!-- Node11&#45;&gt;Node6 -->
+<g id="edge18_Node000011_Node000006" class="edge">
+<title>Node11&#45;&gt;Node6</title>
+<g id="a_edge18_Node000011_Node000006"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M187.5,-199.83C192.37,-238.18 210.46,-337.62 270.5,-387.25 312.27,-421.78 373.87,-431.87 420.57,-434"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="420.38,-437.53 430.49,-434.37 420.61,-430.54 420.38,-437.53"/>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node7 -->
-<g id="edge20_Node000012_Node000007" class="edge">
-<title>Node12&#45;&gt;Node7</title>
-<g id="a_edge20_Node000012_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M232.38,-189.57C244.64,-186.13 257.95,-183 270.5,-181.25 323.1,-173.93 337.12,-176.35 390,-181.25 398.15,-182.01 406.64,-183.11 415.06,-184.42"/>
+<!-- Node11&#45;&gt;Node7 -->
+<g id="edge19_Node000011_Node000007" class="edge">
+<title>Node11&#45;&gt;Node7</title>
+<g id="a_edge19_Node000011_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M234.64,-182.23C246.38,-181.82 258.89,-181.46 270.5,-181.25 323.6,-180.31 337.12,-176.35 390,-181.25 398.15,-182.01 406.64,-183.11 415.06,-184.42"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="414.21,-187.99 424.65,-186.16 415.35,-181.08 414.21,-187.99"/>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node8 -->
-<g id="edge24_Node000012_Node000008" class="edge">
-<title>Node12&#45;&gt;Node8</title>
-<g id="a_edge24_Node000012_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M234.73,-220.8C246.35,-224.02 258.79,-227.09 270.5,-229.25 320.34,-238.43 377.49,-243.21 420.45,-245.68"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="420.16,-249.22 430.33,-246.27 420.54,-242.23 420.16,-249.22"/>
+<!-- Node11&#45;&gt;Node8 -->
+<g id="edge23_Node000011_Node000008" class="edge">
+<title>Node11&#45;&gt;Node8</title>
+<g id="a_edge23_Node000011_Node000008"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M209.21,-199.96C225.61,-210.16 248.48,-222.72 270.5,-229.25 319.42,-243.76 377.09,-248.22 420.49,-249.22"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="420.43,-252.73 430.49,-249.4 420.55,-245.73 420.43,-252.73"/>
 </a>
 </g>
 </g>
-<!-- Node13 -->
-<g id="Node000013" class="node">
-<title>Node13</title>
-<g id="a_Node000013"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#aa3d43592b3a16ad73860e290f28b9ce9" target="_top" xlink:title="Append multiple data sources to the byte array.">
+<!-- Node12 -->
+<g id="Node000012" class="node">
+<title>Node12</title>
+<g id="a_Node000012"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#aa3d43592b3a16ad73860e290f28b9ce9" target="_top" xlink:title="Append multiple data sources to the byte array.">
 <polygon fill="white" stroke="#666666" points="383.62,-116.5 276.88,-116.5 276.88,-86 383.62,-86 383.62,-116.5"/>
 <text text-anchor="start" x="284.88" y="-103" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray</text>
 <text text-anchor="middle" x="330.25" y="-91.75" font-family="Times,serif" font-size="10.00">::append</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node13 -->
-<g id="edge16_Node000012_Node000013" class="edge">
-<title>Node12&#45;&gt;Node13</title>
-<g id="a_edge16_Node000012_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M219.22,-189.53C224.46,-186.66 229.72,-183.52 234.5,-180.25 252.16,-168.15 254.14,-162.05 270.5,-148.25 280.21,-140.06 291.02,-131.31 300.69,-123.61"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="302.52,-125.83 308.19,-116.88 298.18,-120.34 302.52,-125.83"/>
+<!-- Node11&#45;&gt;Node12 -->
+<g id="edge15_Node000011_Node000012" class="edge">
+<title>Node11&#45;&gt;Node12</title>
+<g id="a_edge15_Node000011_Node000012"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M212.84,-168.64C235.47,-155.54 268,-136.71 292.92,-122.28"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="294.5,-124.83 301.4,-116.79 291,-118.77 294.5,-124.83"/>
+</a>
+</g>
+</g>
+<!-- Node13 -->
+<g id="Node000013" class="node">
+<title>Node13</title>
+<g id="a_Node000013"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" target="_top" xlink:title="Convert the ByteArray to a typed pointer.">
+<polygon fill="white" stroke="#666666" points="390,-67.88 270.5,-67.88 270.5,-48.62 390,-48.62 390,-67.88"/>
+<text text-anchor="middle" x="330.25" y="-54.38" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray::as</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node13 -->
+<g id="edge17_Node000011_Node000013" class="edge">
+<title>Node11&#45;&gt;Node13</title>
+<g id="a_edge17_Node000011_Node000013"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M194.13,-168.76C207.26,-145.55 235.1,-101.84 270.5,-77.25 272.77,-75.67 275.18,-74.22 277.68,-72.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="279.04,-75.65 286.65,-68.28 276.1,-69.29 279.04,-75.65"/>
 </a>
 </g>
 </g>
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" target="_top" xlink:title="Convert the ByteArray to a typed pointer.">
-<polygon fill="white" stroke="#666666" points="390,-67.88 270.5,-67.88 270.5,-48.62 390,-48.62 390,-67.88"/>
-<text text-anchor="middle" x="330.25" y="-54.38" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray::as</text>
-</a>
-</g>
-</g>
-<!-- Node12&#45;&gt;Node14 -->
-<g id="edge18_Node000012_Node000014" class="edge">
-<title>Node12&#45;&gt;Node14</title>
-<g id="a_edge18_Node000012_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M223.61,-189.69C227.63,-186.97 231.38,-183.83 234.5,-180.25 266.33,-143.67 235.81,-111.14 270.5,-77.25 271.67,-76.1 272.92,-75.03 274.22,-74.01"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="275.87,-76.49 282.5,-68.23 272.17,-70.55 275.87,-76.49"/>
-</a>
-</g>
-</g>
-<!-- Node15 -->
-<g id="Node000015" class="node">
-<title>Node15</title>
-<g id="a_Node000015"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e" target="_top" xlink:title="Retrieves a shared pointer to the current session.">
+<g id="a_Node000014"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e" target="_top" xlink:title="Retrieves a shared pointer to the current session.">
 <polygon fill="white" stroke="#666666" points="385.5,-220.5 275,-220.5 275,-190 385.5,-190 385.5,-220.5"/>
 <text text-anchor="start" x="283" y="-207" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="middle" x="330.25" y="-195.75" font-family="Times,serif" font-size="10.00">Session::get_shared_ptr</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node15 -->
-<g id="edge21_Node000012_Node000015" class="edge">
-<title>Node12&#45;&gt;Node15</title>
-<g id="a_edge21_Node000012_Node000015"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M234.82,-205.25C244.13,-205.25 254.01,-205.25 263.74,-205.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="263.63,-208.75 273.63,-205.25 263.63,-201.75 263.63,-208.75"/>
+<!-- Node11&#45;&gt;Node14 -->
+<g id="edge20_Node000011_Node000014" class="edge">
+<title>Node11&#45;&gt;Node14</title>
+<g id="a_edge20_Node000011_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M234.82,-191.42C244.13,-192.78 254.01,-194.23 263.74,-195.66"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="263.22,-199.26 273.63,-197.25 264.24,-192.34 263.22,-199.26"/>
 </a>
 </g>
 </g>
-<!-- Node16 -->
-<g id="Node000016" class="node">
-<title>Node16</title>
-<g id="a_Node000016"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a205f8d4452e595ed3943f0d083c6033f" target="_top" xlink:title="Convert a uint32_t value to a ByteArray using little&#45;endian byte order.">
+<!-- Node15 -->
+<g id="Node000015" class="node">
+<title>Node15</title>
+<g id="a_Node000015"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a205f8d4452e595ed3943f0d083c6033f" target="_top" xlink:title="Convert a uint32_t value to a ByteArray using little&#45;endian byte order.">
 <polygon fill="white" stroke="#666666" points="375.75,-30.5 284.75,-30.5 284.75,0 375.75,0 375.75,-30.5"/>
 <text text-anchor="start" x="292.75" y="-17" font-family="Times,serif" font-size="10.00">mal_toolkit::uint32</text>
 <text text-anchor="middle" x="330.25" y="-5.75" font-family="Times,serif" font-size="10.00">_to_bytes</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node16 -->
-<g id="edge25_Node000012_Node000016" class="edge">
-<title>Node12&#45;&gt;Node16</title>
-<g id="a_edge25_Node000012_Node000016"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M224.39,-189.61C228.18,-186.92 231.66,-183.81 234.5,-180.25 274.81,-129.67 228.02,-88.02 270.5,-39.25 272.09,-37.43 273.83,-35.74 275.7,-34.18"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="277.27,-36.66 283.54,-28.12 273.31,-30.89 277.27,-36.66"/>
+<!-- Node11&#45;&gt;Node15 -->
+<g id="edge24_Node000011_Node000015" class="edge">
+<title>Node11&#45;&gt;Node15</title>
+<g id="a_edge24_Node000011_Node000015"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M191.01,-168.93C201.5,-139.82 228.03,-76.14 270.5,-39.25 272.06,-37.9 273.71,-36.61 275.42,-35.39"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="276.75,-38.07 283.43,-29.84 273.08,-32.11 276.75,-38.07"/>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node13 -->
-<g id="edge17_Node000013_Node000013" class="edge">
-<title>Node13&#45;&gt;Node13</title>
-<g id="a_edge17_Node000013_Node000013"><a xlink:title=" ">
+<!-- Node12&#45;&gt;Node12 -->
+<g id="edge16_Node000012_Node000012" class="edge">
+<title>Node12&#45;&gt;Node12</title>
+<g id="a_edge16_Node000012_Node000012"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M304.49,-116.99C299.23,-126.06 307.82,-134.5 330.25,-134.5 342.87,-134.5 351.1,-131.83 354.96,-127.88"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="358.54,-128.28 356.01,-117.99 351.57,-127.6 358.54,-128.28"/>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node7 -->
-<g id="edge22_Node000015_Node000007" class="edge">
-<title>Node15&#45;&gt;Node7</title>
-<g id="a_edge22_Node000015_Node000007"><a xlink:title=" ">
+<!-- Node14&#45;&gt;Node7 -->
+<g id="edge21_Node000014_Node000007" class="edge">
+<title>Node14&#45;&gt;Node7</title>
+<g id="a_edge21_Node000014_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M385.9,-203.13C395.27,-202.77 405.13,-202.39 414.86,-202.01"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="414.91,-205.48 424.76,-201.59 414.64,-198.48 414.91,-205.48"/>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node8 -->
-<g id="edge23_Node000015_Node000008" class="edge">
-<title>Node15&#45;&gt;Node8</title>
-<g id="a_edge23_Node000015_Node000008"><a xlink:title=" ">
+<!-- Node14&#45;&gt;Node8 -->
+<g id="edge22_Node000014_Node000008" class="edge">
+<title>Node14&#45;&gt;Node8</title>
+<g id="a_edge22_Node000014_Node000008"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M385.9,-220.41C397.17,-223.54 409.16,-226.86 420.78,-230.09"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="419.74,-233.71 430.31,-233.01 421.61,-226.96 419.74,-233.71"/>
 </a>

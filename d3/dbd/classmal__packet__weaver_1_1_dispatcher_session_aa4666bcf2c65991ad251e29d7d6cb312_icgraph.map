@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::DispatcherSession::register_default_handler" name="mal_packet_weaver::DispatcherSession::register_default_handler">
+<area shape="rect" id="Node000001" title="Registers a default handler for the provided packet type." alt="" coords="220,5,386,61"/>
+<area shape="rect" id="Node000002" href="$d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a254e12db3996d8b29b3fef90fea302bd" title=" " alt="" coords="5,5,172,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,36,172,36,172,31,204,31"/>
+</map>

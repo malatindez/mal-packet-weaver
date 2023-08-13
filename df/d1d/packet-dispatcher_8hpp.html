@@ -143,14 +143,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:acc3d9721b49ccb6484e856b7442b57e3"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; </td></tr>
-<tr class="memitem:acc3d9721b49ccb6484e856b7442b57e3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acc3d9721b49ccb6484e856b7442b57e3">mal_packet_weaver::PacketHandlerFunc</a> = std::function&lt; void(std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;)&gt;</td></tr>
-<tr class="memdesc:acc3d9721b49ccb6484e856b7442b57e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type to handle packets asynchronously.  <br /></td></tr>
-<tr class="separator:acc3d9721b49ccb6484e856b7442b57e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5d985fc24b6638976d15978a4b75b0"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt; </td></tr>
-<tr class="memitem:ada5d985fc24b6638976d15978a4b75b0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ada5d985fc24b6638976d15978a4b75b0">mal_packet_weaver::PacketFilterFunc</a> = std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(<a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> const &amp;)&gt;</td></tr>
-<tr class="memdesc:ada5d985fc24b6638976d15978a4b75b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicate function type to filter packets.  <br /></td></tr>
-<tr class="separator:ada5d985fc24b6638976d15978a4b75b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c5fb7cea27f435168c355709b5a641"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> , typename... Args&gt; </td></tr>
+<tr class="memitem:a02c5fb7cea27f435168c355709b5a641"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a02c5fb7cea27f435168c355709b5a641">mal_packet_weaver::PacketHandlerFunc</a> = std::function&lt; void(Args..., std::unique_ptr&lt; <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> &gt;)&gt;</td></tr>
+<tr class="memdesc:a02c5fb7cea27f435168c355709b5a641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function type to handle packets asynchronously.  <br /></td></tr>
+<tr class="separator:a02c5fb7cea27f435168c355709b5a641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac71434626d6ccafe432a50f2c9875d5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> , typename... Args&gt; </td></tr>
+<tr class="memitem:aac71434626d6ccafe432a50f2c9875d5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#aac71434626d6ccafe432a50f2c9875d5">mal_packet_weaver::PacketFilterFunc</a> = std::function&lt; <a class="el" href="../../d9/db9/classbool.html">bool</a>(Args..., <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">DerivedPacket</a> const &amp;)&gt;</td></tr>
+<tr class="memdesc:aac71434626d6ccafe432a50f2c9875d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicate function type to filter packets.  <br /></td></tr>
+<tr class="separator:aac71434626d6ccafe432a50f2c9875d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -158,7 +158,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../df/d1d/packet-dispatcher_8hpp.html">packet-dispatcher.hpp</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 21:27:50 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 23:23:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

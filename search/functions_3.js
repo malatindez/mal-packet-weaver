@@ -8,6 +8,6 @@ var searchData=
   ['deserialize_5',['deserialize',['../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1622df3e4ea56438f22f362cf1bd77b9',1,'mal_packet_weaver::DerivedPacket']]],
   ['destroy_6',['Destroy',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#acb3e458ecd0247c019bba9e148703027',1,'mal_packet_weaver::PacketDispatcher::Destroy()'],['../d8/d39/classmal__packet__weaver_1_1_session.html#a5987c4b8cc7ebd5ebade07756529dd2f',1,'mal_packet_weaver::Session::Destroy()']]],
   ['disable_7',['disable',['../d0/d09/classmal__toolkit_1_1enableable.html#ad186911b32bfe42b9884f818caba4f7b',1,'mal_toolkit::enableable']]],
-  ['dispatcher_5f_8',['dispatcher_',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a278be5c30aaf5447f8108b61ded4f724',1,'mal_packet_weaver::DispatcherSession']]],
+  ['dispatcher_8',['dispatcher',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a94fdbf0ca2b8e735fc6352663bf14277',1,'mal_packet_weaver::DispatcherSession']]],
   ['dispatchersession_9',['DispatcherSession',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ac10634f89d777b699d92e6a249de955f',1,'mal_packet_weaver::DispatcherSession']]]
 ];

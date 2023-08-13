@@ -17,10 +17,5 @@ var packet__impl_2packet_8hpp =
     [ "CreatePacketID", "d9/d85/packet__impl_2packet_8hpp.html#a6c0e59e082acc379a031b57d9b0e3d55", null ],
     [ "PacketSubsystemIDToUint32", "d9/d85/packet__impl_2packet_8hpp.html#a16cda5548aa8df9bb05c206e261fd235", null ],
     [ "UniquePacketIDToPacketID", "d9/d85/packet__impl_2packet_8hpp.html#a98a3d7d85ae7b2c9e865d45f6d450521", null ],
-    [ "UniquePacketIDToPacketSubsystemID", "d9/d85/packet__impl_2packet_8hpp.html#a0a953c31a1840b2bc81be049e31a8884", null ],
-    [ "PacketSubsystemCrypto", "d9/d85/packet__impl_2packet_8hpp.html#a35194699d52c458a38c1295afd5129c6", null ],
-    [ "PacketSubsystemNetwork", "d9/d85/packet__impl_2packet_8hpp.html#aa95b8af249eab2ba62039d53f365fc90", null ],
-    [ "PacketSubsystemNode", "d9/d85/packet__impl_2packet_8hpp.html#a06822bc3acfc4db3ef92cff7d34aef44", null ],
-    [ "PacketSubsystemSystem", "d9/d85/packet__impl_2packet_8hpp.html#acb3a77623ea9d99734aa3d93cd8e9e3d", null ],
-    [ "PacketSubsystemUnknown", "d9/d85/packet__impl_2packet_8hpp.html#a9ed2f304686f5026e75f06e2d55d387b", null ]
+    [ "UniquePacketIDToPacketSubsystemID", "d9/d85/packet__impl_2packet_8hpp.html#a0a953c31a1840b2bc81be049e31a8884", null ]
 ];
