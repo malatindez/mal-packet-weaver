@@ -17,6 +17,12 @@ var annotated_dup =
       [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ]
     ] ],
     [ "mal_toolkit", "df/df5/namespacemal__toolkit.html", [
+      [ "_template_detail", "d8/de8/namespacemal__toolkit_1_1__template__detail.html", [
+        [ "function_traits", "da/d54/structmal__toolkit_1_1__template__detail_1_1function__traits.html", null ],
+        [ "function_traits< std::function< Ret(Args...)> >", "da/d9a/structmal__toolkit_1_1__template__detail_1_1function__traits_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4.html", "da/d9a/structmal__toolkit_1_1__template__detail_1_1function__traits_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4" ],
+        [ "index_of_function_arg", "dc/d37/structmal__toolkit_1_1__template__detail_1_1index__of__function__arg.html", null ],
+        [ "index_of_function_arg< std::function< Ret(Args...)> >", "dd/df0/structmal__toolkit_1_1__template__detail_1_1index__of__function__arg_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4.html", "dd/df0/structmal__toolkit_1_1__template__detail_1_1index__of__function__arg_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4" ]
+      ] ],
       [ "events", "d9/ddf/namespacemal__toolkit_1_1events.html", [
         [ "Event", "d5/dbd/classmal__toolkit_1_1events_1_1_event.html", "d5/dbd/classmal__toolkit_1_1events_1_1_event" ],
         [ "FilesChangedEvent", "d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event.html", "d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event" ]

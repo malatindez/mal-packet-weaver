@@ -1,17 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="233,71,352,111"/>
-<area shape="rect" id="Node000001" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html" title="The PacketDispatcher class is responsible for managing packet dispatching and handling." alt="" coords="446,71,578,111"/>
-<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="367,88,445,88,445,94,367,94"/>
-<area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets." alt="" coords="446,136,578,177"/>
-<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="367,110,446,134,444,139,365,115"/>
-<area shape="rect" id="Node000004" href="$d1/dd3/classmal__toolkit_1_1non__copyable.html" title="A class that can&#39;t be copied." alt="" coords="5,54,165,80"/>
-<area shape="rect" id="Node000005" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="226,5,359,46"/>
-<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="166,48,225,36,226,41,167,53"/>
-<area shape="rect" id="Node000003" href="$d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html" title="A class that can&#39;t be copied neither moved." alt="" coords="213,136,372,177"/>
-<area shape="poly" id="edge8_Node000004_Node000003" title=" " alt="" coords="131,84,214,121,243,133,241,138,212,125,128,89"/>
-<area shape="rect" id="Node000006" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class." alt="" coords="420,5,603,46"/>
-<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="373,23,419,23,419,28,373,28"/>
-<area shape="poly" id="edge9_Node000003_Node000002" title=" " alt="" coords="387,154,445,154,445,159,387,159"/>
-<area shape="rect" id="Node000007" href="$db/d86/classmal__toolkit_1_1non__movable.html" title="A class that can&#39;t be moved." alt="" coords="6,144,164,169"/>
-<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="179,154,212,154,212,159,179,159"/>
+<area shape="rect" id="Node000000" href="$db/d8f/classmal__toolkit_1_1_timer.html" title=" " alt="" coords="5,5,135,61"/>
 </map>

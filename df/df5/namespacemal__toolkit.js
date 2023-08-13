@@ -1,11 +1,6 @@
 var namespacemal__toolkit =
 [
-    [ "_template_detail", "d8/de8/namespacemal__toolkit_1_1__template__detail.html", [
-      [ "CalculateAmount", "d8/de8/namespacemal__toolkit_1_1__template__detail.html#a9596fa9c03ccb77d48242f28dff4364d", null ],
-      [ "CalculateAmount", "d8/de8/namespacemal__toolkit_1_1__template__detail.html#ac76db7c083b2bcf0a2367c3ce46e72e7", null ],
-      [ "CalculateSize", "d8/de8/namespacemal__toolkit_1_1__template__detail.html#ac6c8904a283789e9cebf68db97b21e54", null ],
-      [ "CalculateSize", "d8/de8/namespacemal__toolkit_1_1__template__detail.html#a8fc9d6e7834409dd7bebc9b6dbd103fa", null ]
-    ] ],
+    [ "_template_detail", "d8/de8/namespacemal__toolkit_1_1__template__detail.html", "d8/de8/namespacemal__toolkit_1_1__template__detail" ],
     [ "endianness", "d6/d11/namespacemal__toolkit_1_1endianness.html", [
       [ "CompilerType", "d6/d11/namespacemal__toolkit_1_1endianness.html#a52efb6cae970de374672b3e576f3df5e", [
         [ "kUnknown", "d6/d11/namespacemal__toolkit_1_1endianness.html#a52efb6cae970de374672b3e576f3df5ea25c2dc47991b3df171ed5192bcf70390", null ],
@@ -95,6 +90,8 @@ var namespacemal__toolkit =
     [ "FormatErrorAsString", "df/df5/namespacemal__toolkit.html#aed0194ad64c47216250cdc1d1610be25", null ],
     [ "GetFunctionAddress", "df/df5/namespacemal__toolkit.html#adcf0589e175aea12b4b7c10084105c61", null ],
     [ "hash_combine", "df/df5/namespacemal__toolkit.html#a8ecf4e1993e2d57fcd76e2d8ca11f36a", null ],
+    [ "index_of_function_arg", "df/df5/namespacemal__toolkit.html#a02f9d3d70f6d5089e06dcfff0e0e1cdc", null ],
+    [ "index_of_type", "df/df5/namespacemal__toolkit.html#a09306c1075541c84ce7f61e50b461af0", null ],
     [ "int16_to_bytes", "df/df5/namespacemal__toolkit.html#abda37d17785bb6e4dc2a53e129e1c8d1", null ],
     [ "int32_to_bytes", "df/df5/namespacemal__toolkit.html#a78ae30a96ee1d217316d913d6a866288", null ],
     [ "int64_to_bytes", "df/df5/namespacemal__toolkit.html#a8789d7fd41b500c31062620a36b064f8", null ],

@@ -1,0 +1,9 @@
+<map id="mal_toolkit::_template_detail::index_of_helper" name="mal_toolkit::_template_detail::index_of_helper">
+<area shape="rect" id="Node000001" title="Calculates the index of a type within a parameter pack." alt="" coords="219,85,371,126"/>
+<area shape="rect" id="Node000002" href="$d8/de8/namespacemal__toolkit_1_1__template__detail.html#a4c5556a331ea37c7db390c8098597c38" title="Calculates the index of a type within a parameter pack." alt="" coords="12,5,164,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,82,142,49,144,44,228,77"/>
+<area shape="rect" id="Node000003" href="$dd/df0/structmal__toolkit_1_1__template__detail_1_1index__of__function__arg_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4.html#a21d73e4bee5434a11e611f69728a71c9" title="Calculates the index of a type within the function&#39;s argument list." alt="" coords="5,70,171,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,108,171,108,171,103,204,103"/>
+<area shape="rect" id="Node000004" href="$df/df5/namespacemal__toolkit.html#a09306c1075541c84ce7f61e50b461af0" title="Function to find the index of a type in a parameter pack." alt="" coords="30,165,146,206"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,134,144,167,142,162,226,129"/>
+</map>

@@ -371,6 +371,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a934db623f96eff1f4fa6e095305328d8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a934db623f96eff1f4fa6e095305328d8">trim</a> (std::string const &amp;s) noexcept</td></tr>
 <tr class="memdesc:a934db623f96eff1f4fa6e095305328d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trims leading and trailing whitespace from a string.  <br /></td></tr>
 <tr class="separator:a934db623f96eff1f4fa6e095305328d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09306c1075541c84ce7f61e50b461af0"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Types&gt; </td></tr>
+<tr class="memitem:a09306c1075541c84ce7f61e50b461af0"><td class="memTemplItemLeft" align="right" valign="top">consteval <a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a09306c1075541c84ce7f61e50b461af0">index_of_type</a> ()</td></tr>
+<tr class="memdesc:a09306c1075541c84ce7f61e50b461af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to find the index of a type in a parameter pack.  <br /></td></tr>
+<tr class="separator:a09306c1075541c84ce7f61e50b461af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02f9d3d70f6d5089e06dcfff0e0e1cdc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Func &gt; </td></tr>
+<tr class="memitem:a02f9d3d70f6d5089e06dcfff0e0e1cdc"><td class="memTemplItemLeft" align="right" valign="top">consteval std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a02f9d3d70f6d5089e06dcfff0e0e1cdc">index_of_function_arg</a> (Func const &amp;func={})</td></tr>
+<tr class="memdesc:a02f9d3d70f6d5089e06dcfff0e0e1cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to find the index of a type within a function's argument list.  <br /></td></tr>
+<tr class="separator:a02f9d3d70f6d5089e06dcfff0e0e1cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d9fe515b4cf334c6984d4725fa21e50"><td class="memTemplParams" colspan="2">template&lt;auto begin, auto end, auto inc, class F &gt; </td></tr>
 <tr class="memitem:a4d9fe515b4cf334c6984d4725fa21e50"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/df5/namespacemal__toolkit.html#a4d9fe515b4cf334c6984d4725fa21e50">constexpr_for</a> (F &amp;&amp;f)</td></tr>
 <tr class="memdesc:a4d9fe515b4cf334c6984d4725fa21e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constexpr loop for compile-time iteration.  <br /></td></tr>
@@ -574,7 +582,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00198">198</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00312">312</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
 
 </div>
 </div>
@@ -751,7 +759,7 @@ template&lt;EnumClassConcept Enumeration&gt; </div>
 
 <p>Converts an enumeration class value to its underlying integer value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00109">109</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00223">223</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
 
 </div>
 </div>
@@ -1274,7 +1282,7 @@ template&lt;auto begin, auto end, auto inc, class F &gt; </div>
 
 <p>A constexpr loop for compile-time iteration. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00183">183</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
 
 </div>
 </div>
@@ -1395,7 +1403,7 @@ template&lt;class iterator , class F &gt; </div>
 
 <p>Applies a function to each element in a range and returns true if all return true. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
 
 </div>
 </div>
@@ -1518,6 +1526,82 @@ template&lt;typename T &gt; </div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/db7/stl-helpers_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../dd/db7/stl-helpers_8hpp_source.html">stl-helpers.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a02f9d3d70f6d5089e06dcfff0e0e1cdc" name="a02f9d3d70f6d5089e06dcfff0e0e1cdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02f9d3d70f6d5089e06dcfff0e0e1cdc">&#9670;&#160;</a></span>index_of_function_arg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Func &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">consteval std::size_t mal_toolkit::index_of_function_arg </td>
+          <td>(</td>
+          <td class="paramtype">Func const &amp;&#160;</td>
+          <td class="paramname"><em>func</em> = <code>{}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to find the index of a type within a function's argument list. </p>
+<p>This template function determines the index of a specified type <code>T</code> within the argument list of a provided function <code>Func</code>. The function is evaluated at compile time and returns the index of the first occurrence of the specified type in the argument list of the function.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type whose index is to be found within the function's argument list. </td></tr>
+    <tr><td class="paramname">Func</td><td>The function type whose argument list is to be searched. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>An instance of the function for which the argument list type index is sought. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index of the first occurrence of type <code>T</code> in the function's argument list. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00174">174</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a09306c1075541c84ce7f61e50b461af0" name="a09306c1075541c84ce7f61e50b461af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09306c1075541c84ce7f61e50b461af0">&#9670;&#160;</a></span>index_of_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Types&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">consteval <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> mal_toolkit::index_of_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to find the index of a type in a parameter pack. </p>
+<p>This template function determines the index of a specified type <code>T</code> within a parameter pack <code>Types</code>. The function is evaluated at compile time and returns the index of the first occurrence of the specified type in the parameter pack.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type whose index is to be found within the parameter pack. </td></tr>
+    <tr><td class="paramname">Types</td><td>The parameter pack in which the type index is searched. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index of the first occurrence of type <code>T</code> in the parameter pack. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a09306c1075541c84ce7f61e50b461af0_cgraph.svg" width="328" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -2434,7 +2518,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 17:34:04 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 21:27:51 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

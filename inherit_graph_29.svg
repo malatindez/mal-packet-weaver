@@ -11,11 +11,11 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="da/db3/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_4.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="da/d22/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01_6_6_01_4.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="107.5,-41.75 0,-41.75 0,0 107.5,0 107.5,-41.75"/>
 <text text-anchor="start" x="8" y="-28.25" font-family="Times,serif" font-size="10.00">mal_toolkit::return</text>
 <text text-anchor="start" x="8" y="-17" font-family="Times,serif" font-size="10.00">_type&lt; R(C::*)(Args...)</text>
-<text text-anchor="middle" x="53.75" y="-5.75" font-family="Times,serif" font-size="10.00"> const volatile &gt;</text>
+<text text-anchor="middle" x="53.75" y="-5.75" font-family="Times,serif" font-size="10.00"> const &amp;&amp; &gt;</text>
 </a>
 </g>
 </g>
