@@ -1,22 +1,19 @@
 #pragma once
-#include "../packet.hpp"
-#include "../crypto/common.hpp"
-#include "../crypto/sha.hpp"
-#include <boost/endian/conversion.hpp>
+#include "mal-packet-weaver/crypto.hpp"
+#include "mal-packet-weaver/packet.hpp"
+
 
 namespace mal_packet_weaver::packet::crypto
 {
     /**
      * @brief Unique packet ID for DHKeyExchangeRequestPacket.
      */
-    constexpr UniquePacketID DHKeyExchangeRequestPacketID =
-        CreatePacketID(PacketSubsystemCrypto, 0x0000);
+    constexpr UniquePacketID DHKeyExchangeRequestPacketID = CreatePacketID(PacketSubsystemCrypto, 0x0000);
 
     /**
      * @brief Unique packet ID for DHKeyExchangeResponsePacket.
      */
-    constexpr UniquePacketID DHKeyExchangeResponsePacketID =
-        CreatePacketID(PacketSubsystemCrypto, 0x0001);
+    constexpr UniquePacketID DHKeyExchangeResponsePacketID = CreatePacketID(PacketSubsystemCrypto, 0x0001);
 
     /**
      * @brief Packet for Diffie-Hellman key exchange request.
@@ -35,8 +32,7 @@ namespace mal_packet_weaver::packet::crypto
         template <class Archive>
         void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
         {
-            ar &boost::serialization::base_object<DerivedPacket<class DHKeyExchangeRequestPacket>>(
-                *this);
+            ar &boost::serialization::base_object<DerivedPacket<class DHKeyExchangeRequestPacket>>(*this);
             ar &public_key;
         }
     };
@@ -59,10 +55,8 @@ namespace mal_packet_weaver::packet::crypto
         [[nodiscard]] mal_packet_weaver::crypto::Hash get_hash() const
         {
             ByteArray arr;
-            arr.append(public_key, salt,
-                       ByteArray::from_integral(boost::endian::little_to_native(static_type)));
-            return mal_packet_weaver::crypto::SHA::ComputeHash(
-                arr, mal_packet_weaver::crypto::Hash::HashType::SHA256);
+            arr.append(public_key, salt, ByteArray::from_integral(boost::endian::little_to_native(static_type)));
+            return mal_packet_weaver::crypto::SHA::ComputeHash(arr, mal_packet_weaver::crypto::Hash::HashType::SHA256);
         }
 
         ByteArray public_key;
@@ -77,8 +71,7 @@ namespace mal_packet_weaver::packet::crypto
         template <class Archive>
         void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
         {
-            ar &boost::serialization::base_object<DerivedPacket<class DHKeyExchangeResponsePacket>>(
-                *this);
+            ar &boost::serialization::base_object<DerivedPacket<class DHKeyExchangeResponsePacket>>(*this);
             ar &public_key;
             ar &signature;
             ar &salt;
@@ -95,4 +88,4 @@ namespace mal_packet_weaver::packet::crypto
         mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<DHKeyExchangeResponsePacket>();
     }
 
-} // namespace mal_packet_weaver::packet::crypto
+}  // namespace mal_packet_weaver::packet::crypto

@@ -48,3 +48,9 @@ if(OPENSSL_FOUND)
 else()
     message(WARNING "OpenSSL not found")
 endif()
+
+
+option(BUILD_EXAMPLES "Build examples" ON)
+if(BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()

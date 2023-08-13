@@ -1,5 +1,5 @@
 #pragma once
-#include "../packet.hpp"
+#include "mal-packet-weaver/packet.hpp"
 
 namespace mal_packet_weaver::packet::node
 {
@@ -30,8 +30,7 @@ namespace mal_packet_weaver::packet::node
         template <class Archive>
         void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
         {
-            ar &boost::serialization::base_object<DerivedPacket<class NodeInfoRequestPacket>>(
-                *this);
+            ar &boost::serialization::base_object<DerivedPacket<class NodeInfoRequestPacket>>(*this);
         }
     };
 
@@ -43,10 +42,7 @@ namespace mal_packet_weaver::packet::node
     public:
         static constexpr UniquePacketID static_type = NodeInfoResponsePacketID;
         static constexpr float time_to_live = 5.0f;
-        [[nodiscard]] Permission get_permission() const override
-        {
-            return Permission::L2_CORE_NODE;
-        }
+        [[nodiscard]] Permission get_permission() const override { return Permission::L2_CORE_NODE; }
 
         // TODO: Add implementation details
 
@@ -55,8 +51,7 @@ namespace mal_packet_weaver::packet::node
         template <class Archive>
         void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
         {
-            ar &boost::serialization::base_object<DerivedPacket<class NodeInfoResponsePacket>>(
-                *this);
+            ar &boost::serialization::base_object<DerivedPacket<class NodeInfoResponsePacket>>(*this);
         }
     };
 
@@ -68,4 +63,4 @@ namespace mal_packet_weaver::packet::node
         mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<NodeInfoRequestPacket>();
         mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<NodeInfoResponsePacket>();
     }
-} // namespace mal_packet_weaver::packet::node
+}  // namespace mal_packet_weaver::packet::node

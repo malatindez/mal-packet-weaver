@@ -1,19 +1,17 @@
 #pragma once
-#include "../packet.hpp"
+#include "mal-packet-weaver/packet.hpp"
 
 namespace mal_packet_weaver::packet::system
 {
     /**
      * @brief Unique packet ID for SystemInfoRequestPacket.
      */
-    constexpr UniquePacketID SystemInfoRequestPacketID =
-        CreatePacketID(PacketSubsystemSystem, 0x0000);
+    constexpr UniquePacketID SystemInfoRequestPacketID = CreatePacketID(PacketSubsystemSystem, 0x0000);
 
     /**
      * @brief Unique packet ID for SystemInfoResponsePacket.
      */
-    constexpr UniquePacketID SystemInfoResponsePacketID =
-        CreatePacketID(PacketSubsystemSystem, 0x0001);
+    constexpr UniquePacketID SystemInfoResponsePacketID = CreatePacketID(PacketSubsystemSystem, 0x0001);
 
     /**
      * @brief Packet for requesting system information from a node.
@@ -23,10 +21,7 @@ namespace mal_packet_weaver::packet::system
     public:
         static constexpr UniquePacketID static_type = SystemInfoRequestPacketID;
         static constexpr float time_to_live = 5.0f;
-        [[nodiscard]] Permission get_permission() const override
-        {
-            return Permission::L2_CORE_NODE;
-        }
+        [[nodiscard]] Permission get_permission() const override { return Permission::L2_CORE_NODE; }
 
         // TODO: Add implementation details
 
@@ -35,8 +30,7 @@ namespace mal_packet_weaver::packet::system
         template <class Archive>
         void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
         {
-            ar &boost::serialization::base_object<DerivedPacket<class SystemInfoRequestPacket>>(
-                *this);
+            ar &boost::serialization::base_object<DerivedPacket<class SystemInfoRequestPacket>>(*this);
         }
     };
 
@@ -48,10 +42,7 @@ namespace mal_packet_weaver::packet::system
     public:
         static constexpr UniquePacketID static_type = SystemInfoResponsePacketID;
         static constexpr float time_to_live = 5.0f;
-        [[nodiscard]] Permission get_permission() const override
-        {
-            return Permission::L2_CORE_NODE;
-        }
+        [[nodiscard]] Permission get_permission() const override { return Permission::L2_CORE_NODE; }
 
         // TODO: Add implementation details
 
@@ -60,8 +51,7 @@ namespace mal_packet_weaver::packet::system
         template <class Archive>
         void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
         {
-            ar &boost::serialization::base_object<DerivedPacket<class SystemInfoResponsePacket>>(
-                *this);
+            ar &boost::serialization::base_object<DerivedPacket<class SystemInfoResponsePacket>>(*this);
         }
     };
 
@@ -73,4 +63,4 @@ namespace mal_packet_weaver::packet::system
         mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<SystemInfoRequestPacket>();
         mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<SystemInfoResponsePacket>();
     }
-} // namespace mal_packet_weaver::packet::system
+}  // namespace mal_packet_weaver::packet::system

@@ -1,5 +1,5 @@
 #pragma once
-#include "../packet.hpp"
+#include "mal-packet-weaver/packet.hpp"
 namespace mal_packet_weaver::packet::network
 {
     /**
@@ -112,4 +112,4 @@ namespace mal_packet_weaver::packet::network
         mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<MessagePacket>();
         mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<EchoPacket>();
     }
-} // namespace mal_packet_weaver::packet::network
+}  // namespace mal_packet_weaver::packet::network
