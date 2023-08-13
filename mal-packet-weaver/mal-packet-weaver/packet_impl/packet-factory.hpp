@@ -19,9 +19,10 @@ namespace mal_packet_weaver::packet
          *
          * @tparam PacketType The packet type that satisfies the IsPacket concept.
          */
-        template <IsPacket PacketType> static inline void RegisterDeserializer()
+        template <IsPacket PacketType>
+        static inline void RegisterDeserializer()
         {
-            if(packet_deserializers_.find(PacketType::static_type) != packet_deserializers_.end())
+            if (packet_deserializers_.find(PacketType::static_type) != packet_deserializers_.end())
             {
                 throw std::invalid_argument("Packet deserializer already initialized!");
             }
@@ -37,10 +38,9 @@ namespace mal_packet_weaver::packet
          * @param packet_id The unique packet ID.
          * @param factory The packet deserialization factory function.
          */
-        static inline void RegisterDeserializer(UniquePacketID packet_id,
-                                                PacketDeserializeFunc const &factory)
+        static inline void RegisterDeserializer(UniquePacketID packet_id, PacketDeserializeFunc const &factory)
         {
-            if(packet_deserializers_.find(packet_id) != packet_deserializers_.end())
+            if (packet_deserializers_.find(packet_id) != packet_deserializers_.end())
             {
                 throw std::invalid_argument("Packet deserializer already initialized!");
             }
@@ -57,7 +57,7 @@ namespace mal_packet_weaver::packet
          * @param packet_type The unique packet ID specifying the packet type.
          * @return A unique pointer to the deserialized packet instance.
          */
-        [[nodiscard]] static inline std::unique_ptr<Packet> Deserialize(const mal_toolkit::ByteView &bytearray,
+        [[nodiscard]] static inline std::unique_ptr<Packet> Deserialize(const ByteView &bytearray,
                                                                         UniquePacketID packet_type)
         {
             auto it = packet_deserializers_.find(packet_type);
@@ -75,4 +75,4 @@ namespace mal_packet_weaver::packet
          */
         static std::unordered_map<UniquePacketID, PacketDeserializeFunc> packet_deserializers_;
     };
-} // namespace mal_packet_weaver::packet
+}  // namespace mal_packet_weaver::packet

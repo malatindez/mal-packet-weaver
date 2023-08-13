@@ -13,7 +13,7 @@ namespace mal_packet_weaver
             return false;
         }
         const auto &packet = static_cast<const Packet &>(packet_arg);
-        mal_toolkit::ByteArray buffer = mal_toolkit::ByteArray{ mal_toolkit::uint32_to_bytes(packet.type) };
+        ByteArray buffer = ByteArray{ uint32_to_bytes(packet.type) };
         packet.serialize(buffer);
         if (encryption_)
         {
@@ -21,9 +21,8 @@ namespace mal_packet_weaver
         }
         // byte to check if connection is secured or not.
         buffer.insert(buffer.begin(), encryption_ ? std::byte{ 1 } : std::byte{ 0 });
-        mal_toolkit::ByteArray *value = new mal_toolkit::ByteArray{ std::move(buffer) };
-        mal_toolkit::ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000),
-                                     2, 1, 0.1);
+        ByteArray *value = new ByteArray{ std::move(buffer) };
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 1, 0.1);
         while (!packets_to_send_.push(value) || !alive_)
         {
             std::this_thread::sleep_for(backoff.get_current_delay());
@@ -37,11 +36,11 @@ namespace mal_packet_weaver
         return true;
     }
 
-    inline void Session::read_bytes_to(mal_toolkit::ByteArray &byte_array, const size_t amount)
+    inline void Session::read_bytes_to(ByteArray &byte_array, const size_t amount)
     {
         const size_t current_size = byte_array.size();
         byte_array.resize(current_size + amount);
         buffer_.sgetn(byte_array.as<char>() + current_size * sizeof(char), amount);
     }
 
-} // namespace mal_packet_weaver
+}  // namespace mal_packet_weaver

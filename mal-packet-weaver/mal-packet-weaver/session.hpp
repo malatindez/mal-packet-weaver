@@ -1,38 +1,19 @@
 #pragma once
-#include <algorithm>
-#include <memory>
-#include <mutex>
-#include <queue>
 
-#include <boost/asio/awaitable.hpp>
-#include <boost/asio/co_spawn.hpp>
-#include <boost/asio/detached.hpp>
-#include <boost/asio/ip/tcp.hpp>
-#include <boost/asio/read.hpp>
-#include <boost/asio/spawn.hpp>
-#include <boost/asio/streambuf.hpp>
-#include <boost/asio/write.hpp>
-#include <boost/endian/conversion.hpp>
-#include <boost/range/begin.hpp>
-#include <boost/range/end.hpp>
-#include <boost/lockfree/queue.hpp>
-
-#include "crypto/crypto.hpp"
+#include "crypto.hpp"
 #include "packet.hpp"
-#include "mal-toolkit/mal-toolkit.hpp"
 namespace mal_packet_weaver
 {
     using PacketReceiverFn = std::function<void(std::unique_ptr<Packet> &&)>;
     /**
      * @brief Represents a network session for sending and receiving packets.
-     * 
+     *
      * @note Session should be initialized using make_shared.
-     * 
+     *
      * @details To correctly destroy this object, you need to call Destroy function, because
      * coroutines share the object from this.
      */
-    class Session : public mal_toolkit::non_copyable_non_movable,
-                    public std::enable_shared_from_this<Session>
+    class Session final : public non_copyable_non_movable, public std::enable_shared_from_this<Session>
     {
     public:
         /**
@@ -67,7 +48,7 @@ namespace mal_packet_weaver
         /**
          * @brief Returns the earliest acquired packet. If packet queue is empty, returns nullptr.
          *
-         * @warning If packet receiver is set through SetPacketReceiver there's no reason to call this
+         * @warning If packet receiver is set through set_packet_receiver there's no reason to call this
          * function. Generally packets will just go through the receiver. There's no ordering
          * neither option to configure which packet you will receive.
          *
@@ -80,8 +61,7 @@ namespace mal_packet_weaver
          * If not, it will wait until the packet is available and will return it as soon as
          * possible. This function is threadsafe.
          */
-        boost::asio::awaitable<std::unique_ptr<Packet>>
-        pop_packet_async(boost::asio::io_context &io);
+        boost::asio::awaitable<std::unique_ptr<Packet>> pop_packet_async(boost::asio::io_context &io);
 
         /**
          * @brief Checks if there are packets in the queue.
@@ -114,14 +94,17 @@ namespace mal_packet_weaver
         /**
          * @brief Sets up encryption for the session using provided encryption interface.
          */
-        void setup_encryption(std::shared_ptr<mal_packet_weaver::crypto::EncryptionInterface> encryption) { encryption_ = encryption; }
+        void setup_encryption(std::shared_ptr<mal_packet_weaver::crypto::EncryptionInterface> encryption)
+        {
+            encryption_ = encryption;
+        }
 
         /**
          * @brief Sets the packet receiver for the session.
          *
          * @param receiver The function to be called when a packet is received.
          */
-        void SetPacketReceiver(PacketReceiverFn const receiver)
+        void set_packet_receiver(PacketReceiverFn const receiver)
         {
             std::lock_guard guard{ packet_receiver_mutex_ };
             packet_receiver_ = receiver;
@@ -134,7 +117,7 @@ namespace mal_packet_weaver
          */
         void Destroy() { alive_ = false; }
 
-    protected:
+    private:
         /**
          * @brief Pops the packet data from the received packets queue.
          *
@@ -143,17 +126,15 @@ namespace mal_packet_weaver
          * @return A unique_ptr<ByteArray> containing the packet data, or nullptr if the queue is
          * empty.
          */
-        std::unique_ptr<mal_toolkit::ByteArray> pop_packet_data() noexcept;
+        std::unique_ptr<ByteArray> pop_packet_data() noexcept;
 
-    private:
         /**
          * @brief Retrieves a shared pointer to the current session.
          *
          * @param io The boost::asio::io_context used for asynchronous operations.
          * @return A boost::asio::awaitable that resolves to a shared_ptr<Session>.
          */
-        boost::asio::awaitable<std::shared_ptr<Session>>
-        get_shared_ptr(boost::asio::io_context &io);
+        boost::asio::awaitable<std::shared_ptr<Session>> get_shared_ptr(boost::asio::io_context &io);
 
         /**
          * @brief Initiates an asynchronous read operation from the socket to receive data.
@@ -187,7 +168,7 @@ namespace mal_packet_weaver
          * @param io The boost::asio::io_context used for asynchronous operations.
          */
         boost::asio::awaitable<void> async_packet_sender(boost::asio::io_context &io);
-        inline void read_bytes_to(mal_toolkit::ByteArray &byte_array, const size_t amount);
+        inline void read_bytes_to(ByteArray &byte_array, const size_t amount);
 
         /**
          * @brief Lock-free queue to store received packets that are waiting to be processed.
@@ -206,11 +187,11 @@ namespace mal_packet_weaver
          *
          * @warning The current implementation is a proof-of-concept and has important TODOs.
          */
-        boost::lockfree::queue<mal_toolkit::ByteArray *, boost::lockfree::fixed_sized<true>> received_packets_;
+        boost::lockfree::queue<ByteArray *, boost::lockfree::fixed_sized<true>> received_packets_;
         /**
          * @brief Lock-free queue to store packets that are waiting to be sent.
          */
-        boost::lockfree::queue<mal_toolkit::ByteArray *, boost::lockfree::fixed_sized<true>> packets_to_send_;
+        boost::lockfree::queue<ByteArray *, boost::lockfree::fixed_sized<true>> packets_to_send_;
 
         /**
          * @brief Indicates whether the session is alive and operational.
@@ -242,5 +223,5 @@ namespace mal_packet_weaver
          */
         PacketReceiverFn packet_receiver_;
     };
-} // namespace mal_packet_weaver
+}  // namespace mal_packet_weaver
 #include "session.inl"

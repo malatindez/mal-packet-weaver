@@ -1,12 +1,10 @@
 #include "session.hpp"
-using mal_toolkit::ByteView;
-using mal_toolkit::ByteArray;
 namespace mal_packet_weaver
 {
     Session::Session(boost::asio::io_context &io, boost::asio::ip::tcp::socket &&socket)
         : socket_(std::move(socket)),
-          received_packets_{ 8192 }, // Initialize received_packets_ with a buffer size of 8192
-          packets_to_send_{ 8192 }   // Initialize packets_to_send_ with a buffer size of 8192
+          received_packets_{ 8192 },  // Initialize received_packets_ with a buffer size of 8192
+          packets_to_send_{ 8192 }    // Initialize packets_to_send_ with a buffer size of 8192
     {
         spdlog::debug("Session: Creating a new session");
 
@@ -21,15 +19,12 @@ namespace mal_packet_weaver
         }
 
         // Start asynchronous tasks for packet forging, sending, and sending packets concurrently
-        co_spawn(socket_.get_executor(),
-                 std::bind(&Session::async_packet_forger, this, std::ref(io)),
+        co_spawn(socket_.get_executor(), std::bind(&Session::async_packet_forger, this, std::ref(io)),
                  boost::asio::detached);
-        co_spawn(socket_.get_executor(), std::bind(&Session::send_all, this, std::ref(io)),
-                 boost::asio::detached);
+        co_spawn(socket_.get_executor(), std::bind(&Session::send_all, this, std::ref(io)), boost::asio::detached);
         for (size_t i = 0; i < 4; i++)
         {
-            co_spawn(socket_.get_executor(),
-                     std::bind(&Session::async_packet_sender, this, std::ref(io)),
+            co_spawn(socket_.get_executor(), std::bind(&Session::async_packet_sender, this, std::ref(io)),
                      boost::asio::detached);
         }
     }
@@ -79,13 +74,11 @@ namespace mal_packet_weaver
         return nullptr;
     }
 
-    boost::asio::awaitable<std::unique_ptr<Packet>>
-    Session::pop_packet_async(boost::asio::io_context &io)
+    boost::asio::awaitable<std::unique_ptr<Packet>> Session::pop_packet_async(boost::asio::io_context &io)
     {
         spdlog::trace("Async packet popping initiated.");
 
-        mal_toolkit::ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000),
-                                     2, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 0.1);
         while (this->alive_)
         {
             std::unique_ptr<Packet> packet = pop_packet_now();
@@ -123,34 +116,31 @@ namespace mal_packet_weaver
     {
         spdlog::debug("Initiating async read from socket.");
 
-        boost::asio::async_read(
-            socket_, buffer_, boost::asio::transfer_all(),
-            [this](const boost::system::error_code ec, [[maybe_unused]] std::size_t length)
-            {
-                if (ec)
-                {
-                    spdlog::warn("Error reading message: {}", ec.message());
-                    socket_.close();
-                    alive_ = false;
-                    packets_to_send_.consume_all(
-                        [](ByteArray *value)
-                        {
-                            if (value != nullptr)
-                                delete value;
-                        });
-                }
-                else
-                {
-                    spdlog::info("Received total of {} bytes", length);
-                }
-            });
+        boost::asio::async_read(socket_, buffer_, boost::asio::transfer_all(),
+                                [this](const boost::system::error_code ec, [[maybe_unused]] std::size_t length)
+                                {
+                                    if (ec)
+                                    {
+                                        spdlog::warn("Error reading message: {}", ec.message());
+                                        socket_.close();
+                                        alive_ = false;
+                                        packets_to_send_.consume_all(
+                                            [](ByteArray *value)
+                                            {
+                                                if (value != nullptr)
+                                                    delete value;
+                                            });
+                                    }
+                                    else
+                                    {
+                                        spdlog::info("Received total of {} bytes", length);
+                                    }
+                                });
     }
 
-    boost::asio::awaitable<std::shared_ptr<Session>>
-    Session::get_shared_ptr(boost::asio::io_context &io)
+    boost::asio::awaitable<std::shared_ptr<Session>> Session::get_shared_ptr(boost::asio::io_context &io)
     {
-        mal_toolkit::ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000),
-                                     2, 32, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
 
         int it = 0;
         do
@@ -196,13 +186,13 @@ namespace mal_packet_weaver
         std::shared_ptr<Session> session_lock = co_await get_shared_ptr(io);
         if (session_lock == nullptr)
         {
-            spdlog::error("Couldn't retrieve shared pointer for session. Did you create the "
-                          "session using std::make_shared?");
+            spdlog::error(
+                "Couldn't retrieve shared pointer for session. Did you create the "
+                "session using std::make_shared?");
             co_return;
         }
 
-        mal_toolkit::ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000),
-                                     2, 32, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
 
         while (alive_)
         {
@@ -218,11 +208,10 @@ namespace mal_packet_weaver
                 }
 
                 ByteArray *packet = nullptr;
-                for (int i = 0; (i < 1000 && data_to_send.size() < kDefaultDataToSendSize) &&
-                                packets_to_send_.pop(packet);
-                     i++)
+                for (int i = 0;
+                     (i < 1000 && data_to_send.size() < kDefaultDataToSendSize) && packets_to_send_.pop(packet); i++)
                 {
-                    data_to_send.append(mal_toolkit::uint32_to_bytes(static_cast<uint32_t>(packet->size())));
+                    data_to_send.append(uint32_to_bytes(static_cast<uint32_t>(packet->size())));
                     data_to_send.append(*packet);
                 }
                 if (packet != nullptr)
@@ -231,21 +220,20 @@ namespace mal_packet_weaver
                 }
 
                 spdlog::trace("Sending data...");
-                async_write(
-                    socket_, boost::asio::buffer(data_to_send.as<char>(), data_to_send.size()),
-                    [&](const boost::system::error_code ec, [[maybe_unused]] std::size_t length)
-                    {
-                        writing = false;
-                        data_to_send.clear();
-                        if (ec)
-                        {
-                            spdlog::warn("Error sending message: {}", ec.message());
-                        }
-                        else
-                        {
-                            spdlog::trace("Data sent successfully");
-                        }
-                    });
+                async_write(socket_, boost::asio::buffer(data_to_send.as<char>(), data_to_send.size()),
+                            [&](const boost::system::error_code ec, [[maybe_unused]] std::size_t length)
+                            {
+                                writing = false;
+                                data_to_send.clear();
+                                if (ec)
+                                {
+                                    spdlog::warn("Error sending message: {}", ec.message());
+                                }
+                                else
+                                {
+                                    spdlog::trace("Data sent successfully");
+                                }
+                            });
 
                 backoff.decrease_delay();
                 continue;
@@ -262,13 +250,13 @@ namespace mal_packet_weaver
     {
         spdlog::debug("Starting async_packet_forger...");
 
-        mal_toolkit::ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000),
-                                     2, 32, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
         std::shared_ptr<Session> session_lock = co_await get_shared_ptr(io);
         if (session_lock == nullptr)
         {
-            spdlog::error("Couldn't retrieve shared pointer for session. Did you create the "
-                          "session using std::make_shared?");
+            spdlog::error(
+                "Couldn't retrieve shared pointer for session. Did you create the "
+                "session using std::make_shared?");
             co_return;
         }
 
@@ -287,9 +275,9 @@ namespace mal_packet_weaver
                 // TODO: add a system that ensures that packet data size is correct.
                 // TODO: handle exception, and if packet size is too big we need to do something
                 // about it.
-                mal_toolkit::AlwaysAssert(packet_size != 0 && packet_size < 1024ULL * 1024 * 1024 * 4,
-                                    "The amount of bytes to read is too big. 4GB? What are you "
-                                    "transfering? Anyways, it seems to be a bug.");
+                AlwaysAssert(packet_size != 0 && packet_size < 1024ULL * 1024 * 1024 * 4,
+                             "The amount of bytes to read is too big. 4GB? What are you "
+                             "transfering? Anyways, it seems to be a bug.");
 
                 while (static_cast<int64_t>(buffer_.size()) < packet_size && alive_)
                 {
@@ -334,14 +322,14 @@ namespace mal_packet_weaver
     {
         spdlog::debug("Starting async_packet_sender...");
 
-        mal_toolkit::ExponentialBackoff backoff(std::chrono::microseconds(1),
-                                     std::chrono::microseconds(1000 * 10), 2, 64, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000 * 10), 2, 64, 0.1);
 
         std::shared_ptr<Session> session_lock = co_await get_shared_ptr(io);
         if (session_lock == nullptr)
         {
-            spdlog::error("Couldn't retrieve shared pointer for session. Did you create the "
-                          "session using std::make_shared?");
+            spdlog::error(
+                "Couldn't retrieve shared pointer for session. Did you create the "
+                "session using std::make_shared?");
             co_return;
         }
 
@@ -377,13 +365,12 @@ namespace mal_packet_weaver
                 if (encryption_ && packet_data->at(0) != std::byte{ 0 })
                 {
                     const ByteArray plain = encryption_->decrypt(packet_data->view(1));
-                    const uint32_t packet_type = mal_toolkit::bytes_to_uint32(plain.view(0, 4));
+                    const uint32_t packet_type = bytes_to_uint32(plain.view(0, 4));
 
                     try
                     {
                         spdlog::trace("Decrypting and deserializing packet data...");
-                        packet_receiver_(
-                            packet::PacketFactory::Deserialize(plain.view(4), packet_type));
+                        packet_receiver_(packet::PacketFactory::Deserialize(plain.view(4), packet_type));
                     }
                     catch (const std::exception &e)
                     {
@@ -397,8 +384,7 @@ namespace mal_packet_weaver
                     try
                     {
                         spdlog::trace("Deserializing packet data...");
-                        packet_receiver_(
-                            packet::PacketFactory::Deserialize(packet_data->view(5), packet_type));
+                        packet_receiver_(packet::PacketFactory::Deserialize(packet_data->view(5), packet_type));
                     }
                     catch (const std::exception &e)
                     {
@@ -414,4 +400,4 @@ namespace mal_packet_weaver
         spdlog::debug("Exiting async_packet_sender.");
     }
 
-} // namespace mal_packet_weaver
+}  // namespace mal_packet_weaver

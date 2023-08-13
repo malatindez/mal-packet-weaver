@@ -1,5 +1,5 @@
 #pragma once
-#include "mal-toolkit/mal-toolkit.hpp"
+#include "../../common.hpp"
 #if __has_include(<openssl/aes.h>)
 #define MAL_PACKET_WEAVER_HAS_OPENSSL
 #endif
@@ -18,9 +18,8 @@
 #include <openssl/pem.h>
 #include <openssl/sha.h>
 #else
-#pragma message ("WARNING: mal-packet-weaver: OpenSSL wasn't found. mal_packet_weaver::crypto is disabled.")
+#pragma message("WARNING: mal-packet-weaver: OpenSSL wasn't found. mal_packet_weaver::crypto is disabled.")
 #endif
-
 
 namespace mal_packet_weaver::crypto
 {
@@ -28,31 +27,31 @@ namespace mal_packet_weaver::crypto
      * @class Key
      * @brief Represents a cryptographic key as a byte array.
      */
-    class Key : public mal_toolkit::ByteArray
+    class Key : public ByteArray
     {
     public:
-        using mal_toolkit::ByteArray::ByteArray;
-        using mal_toolkit::ByteArray::operator=;
-        using mal_toolkit::ByteArray::operator[];
+        using ByteArray::ByteArray;
+        using ByteArray::operator=;
+        using ByteArray::operator[];
     };
 
     /**
      * @class KeyView
      * @brief Represents a view of a cryptographic key as a byte view.
      */
-    class KeyView : public mal_toolkit::ByteView
+    class KeyView : public ByteView
     {
     public:
-        using mal_toolkit::ByteView::ByteView;
-        using mal_toolkit::ByteView::operator=;
-        using mal_toolkit::ByteView::operator[];
+        using ByteView::ByteView;
+        using ByteView::operator=;
+        using ByteView::operator[];
     };
 
     /**
      * @struct Hash
      * @brief Represents a cryptographic hash value along with its type.
      */
-    
+
 #ifdef MAL_PACKET_WEAVER_HAS_OPENSSL
     struct Hash
     {
@@ -80,10 +79,7 @@ namespace mal_packet_weaver::crypto
          * @param hash_value The byte array representing the hash value.
          * @param hash The hash type.
          */
-        Hash(const mal_toolkit::ByteArray hash_value, const HashType hash)
-            : hash_type{ hash }, hash_value{ hash_value }
-        {
-        }
+        Hash(const ByteArray hash_value, const HashType hash) : hash_type{ hash }, hash_value{ hash_value } {}
 
         /**
          * @brief Returns the size of the hash value in bytes.
@@ -108,7 +104,8 @@ namespace mal_packet_weaver::crypto
          * @tparam T The type to convert to.
          * @return A pointer to the hash value data as the specified type.
          */
-        template <typename T> [[nodiscard]] auto *as() const
+        template <typename T>
+        [[nodiscard]] auto *as() const
         {
             return reinterpret_cast<const T *>(hash_value.data());
         }
@@ -120,7 +117,7 @@ namespace mal_packet_weaver::crypto
         [[nodiscard]] const uint8_t *as_uint8() const { return as<uint8_t>(); }
 
         const HashType hash_type;   /**< The hash type. */
-        const mal_toolkit::ByteArray hash_value; /**< The hash value byte array. */
+        const ByteArray hash_value; /**< The hash value byte array. */
     };
 #endif
     /**
@@ -134,47 +131,40 @@ namespace mal_packet_weaver::crypto
          * @param private_key The private key.
          * @param public_key The public key.
          */
-        KeyPair(const Key private_key, const Key public_key)
-            : private_key{ private_key }, public_key{ public_key }
-        {
-        }
+        KeyPair(const Key private_key, const Key public_key) : private_key{ private_key }, public_key{ public_key } {}
 
         /**
          * @brief Returns a view of the public key.
          * @return A view of the public key.
          */
-        [[nodiscard]] auto get_public_key_view() const
-        {
-            return KeyView{ public_key.data(), public_key.size() };
-        }
+        [[nodiscard]] auto get_public_key_view() const { return KeyView{ public_key.data(), public_key.size() }; }
 
         /**
          * @brief Returns a view of the private key.
          * @return A view of the private key.
          */
-        [[nodiscard]] auto get_private_key_view() const
-        {
-            return KeyView{ private_key.data(), private_key.size() };
-        }
+        [[nodiscard]] auto get_private_key_view() const { return KeyView{ private_key.data(), private_key.size() }; }
 
         Key private_key; /**< The private key. */
         Key public_key;  /**< The public key. */
     };
-    
+
 #ifdef MAL_PACKET_WEAVER_HAS_OPENSSL
     /**
      * @struct OPENSSL_OBJECT_WRAPPER
      * @brief A template struct that provides a custom deleter for OpenSSL objects.
      * @tparam T The type of the OpenSSL object to wrap.
      */
-    template <typename T> struct OPENSSL_OBJECT_WRAPPER;
+    template <typename T>
+    struct OPENSSL_OBJECT_WRAPPER;
 
     /**
      * @struct OPENSSL_OBJECT_WRAPPER<EVP_PKEY_CTX>
      * @brief Specialization of OPENSSL_OBJECT_WRAPPER for EVP_PKEY_CTX.
      * Provides a custom deleter for freeing EVP_PKEY_CTX objects.
      */
-    template <> struct OPENSSL_OBJECT_WRAPPER<EVP_PKEY_CTX>
+    template <>
+    struct OPENSSL_OBJECT_WRAPPER<EVP_PKEY_CTX>
     {
         void operator()(EVP_PKEY_CTX *ptr) const { EVP_PKEY_CTX_free(ptr); }
     };
@@ -184,7 +174,8 @@ namespace mal_packet_weaver::crypto
      * @brief Specialization of OPENSSL_OBJECT_WRAPPER for EVP_PKEY.
      * Provides a custom deleter for freeing EVP_PKEY objects.
      */
-    template <> struct OPENSSL_OBJECT_WRAPPER<EVP_PKEY>
+    template <>
+    struct OPENSSL_OBJECT_WRAPPER<EVP_PKEY>
     {
         void operator()(EVP_PKEY *ptr) const { EVP_PKEY_free(ptr); }
     };
@@ -194,7 +185,8 @@ namespace mal_packet_weaver::crypto
      * @brief Specialization of OPENSSL_OBJECT_WRAPPER for BIO.
      * Provides a custom deleter for freeing BIO objects.
      */
-    template <> struct OPENSSL_OBJECT_WRAPPER<BIO>
+    template <>
+    struct OPENSSL_OBJECT_WRAPPER<BIO>
     {
         void operator()(BIO *ptr) const { BIO_free_all(ptr); }
     };
@@ -204,7 +196,8 @@ namespace mal_packet_weaver::crypto
      * @brief Specialization of OPENSSL_OBJECT_WRAPPER for EVP_CIPHER_CTX.
      * Provides a custom deleter for freeing EVP_CIPHER_CTX objects.
      */
-    template <> struct OPENSSL_OBJECT_WRAPPER<EVP_CIPHER_CTX>
+    template <>
+    struct OPENSSL_OBJECT_WRAPPER<EVP_CIPHER_CTX>
     {
         void operator()(EVP_CIPHER_CTX *ptr) const { EVP_CIPHER_CTX_free(ptr); }
     };
@@ -213,8 +206,7 @@ namespace mal_packet_weaver::crypto
      * @typedef EVP_PKEY_CTX_WRAPPER
      * @brief Alias for a unique_ptr with a custom deleter for EVP_PKEY_CTX objects.
      */
-    using EVP_PKEY_CTX_WRAPPER =
-        std::unique_ptr<EVP_PKEY_CTX, OPENSSL_OBJECT_WRAPPER<EVP_PKEY_CTX>>;
+    using EVP_PKEY_CTX_WRAPPER = std::unique_ptr<EVP_PKEY_CTX, OPENSSL_OBJECT_WRAPPER<EVP_PKEY_CTX>>;
 
     /**
      * @typedef EVP_PKEY_WRAPPER
@@ -232,7 +224,6 @@ namespace mal_packet_weaver::crypto
      * @typedef EVP_CIPHER_CTX_WRAPPER
      * @brief Alias for a unique_ptr with a custom deleter for EVP_CIPHER_CTX objects.
      */
-    using EVP_CIPHER_CTX_WRAPPER =
-        std::unique_ptr<EVP_CIPHER_CTX, OPENSSL_OBJECT_WRAPPER<EVP_CIPHER_CTX>>;
+    using EVP_CIPHER_CTX_WRAPPER = std::unique_ptr<EVP_CIPHER_CTX, OPENSSL_OBJECT_WRAPPER<EVP_CIPHER_CTX>>;
 #endif
-} // namespace mal_packet_weaver::crypto
+}  // namespace mal_packet_weaver::crypto

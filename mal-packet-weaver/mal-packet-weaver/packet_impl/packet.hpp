@@ -1,23 +1,19 @@
 #pragma once
-#include "mal-toolkit/mal-toolkit.hpp"
-#include <boost/archive/binary_iarchive.hpp>
-#include <boost/archive/binary_oarchive.hpp>
-#include <boost/serialization/base_object.hpp>
-#include <boost/serialization/serialization.hpp>
+#include "../common.hpp"
 
 namespace mal_packet_weaver
 {
     /// Forward declaration of the Packet class.
     class Packet;
 
-    using PacketSubsystemID = uint16_t; ///< Type alias for packet subsystem IDs.
-    using PacketID = uint16_t;          ///< Type alias for packet IDs.
+    using PacketSubsystemID = uint16_t;  ///< Type alias for packet subsystem IDs.
+    using PacketID = uint16_t;           ///< Type alias for packet IDs.
 
     /// Unique identifier for a packet, combining subsystem and packet IDs.
     using UniquePacketID = uint32_t;
 
     /// Type alias for packet deserialization function.
-    using PacketDeserializeFunc = std::function<std::unique_ptr<Packet>(const mal_toolkit::ByteView)>;
+    using PacketDeserializeFunc = std::function<std::unique_ptr<Packet>(const ByteView)>;
 
     /// Predefined packet subsystem IDs.
     constexpr PacketSubsystemID PacketSubsystemCrypto = 0x0001;
@@ -44,8 +40,7 @@ namespace mal_packet_weaver
     }
 
     /// Extract PacketSubsystemID from a UniquePacketID.
-    constexpr PacketSubsystemID
-    UniquePacketIDToPacketSubsystemID(UniquePacketID subsystem_type) noexcept
+    constexpr PacketSubsystemID UniquePacketIDToPacketSubsystemID(UniquePacketID subsystem_type) noexcept
     {
         return static_cast<PacketSubsystemID>((subsystem_type & 0xFFFF0000) >> 16);
     }
@@ -57,18 +52,16 @@ namespace mal_packet_weaver
     }
 
     /// Create a UniquePacketID from subsystem and packet IDs.
-    constexpr UniquePacketID CreatePacketID(PacketSubsystemID subsystem_id,
-                                            PacketID packet_id) noexcept
+    constexpr UniquePacketID CreatePacketID(PacketSubsystemID subsystem_id, PacketID packet_id) noexcept
     {
         return (static_cast<UniquePacketID>(subsystem_id) << 16) | packet_id;
     }
 
     /// Base class for all packets.
-    class Packet : public mal_toolkit::non_copyable
+    class Packet : public non_copyable
     {
     private:
-        static mal_toolkit::Measurer<std::chrono::steady_clock>
-            measurer; ///< Measurer for packet timestamps.
+        static Measurer<std::chrono::steady_clock> measurer;  ///< Measurer for packet timestamps.
     public:
         /// Constructor for Packet class.
         explicit Packet(const UniquePacketID type, const float time_to_live)
@@ -86,25 +79,19 @@ namespace mal_packet_weaver
         virtual ~Packet() = default;
 
         /// Serialize the packet into a ByteArray.
-        virtual void serialize(mal_toolkit::ByteArray &buffer) const = 0;
+        virtual void serialize(ByteArray &buffer) const = 0;
 
         /// Get the timestamp when the packet was created.
         [[nodiscard]] float timestamp() const noexcept { return timestamp_; }
 
         /// Get the time elapsed since the packet was created.
-        [[nodiscard]] float get_packet_time_alive() const noexcept
-        {
-            return measurer.elapsed() - timestamp_;
-        }
+        [[nodiscard]] float get_packet_time_alive() const noexcept { return measurer.elapsed() - timestamp_; }
 
         /// Check if the packet has expired based on its time-to-live.
-        [[nodiscard]] bool expired() const noexcept
-        {
-            return get_packet_time_alive() > time_to_live;
-        }
+        [[nodiscard]] bool expired() const noexcept { return get_packet_time_alive() > time_to_live; }
 
-        const UniquePacketID type; ///< Unique packet ID.
-        const float time_to_live;  ///< Time-to-live for the packet.
+        const UniquePacketID type;  ///< Unique packet ID.
+        const float time_to_live;   ///< Time-to-live for the packet.
     private:
         friend class boost::serialization::access;
 
@@ -114,7 +101,7 @@ namespace mal_packet_weaver
         {
             ar &timestamp_;
         }
-        float timestamp_; ///< Timestamp when the packet was created.
+        float timestamp_;  ///< Timestamp when the packet was created.
     };
 
     /**
@@ -127,7 +114,8 @@ namespace mal_packet_weaver
      *
      * @tparam PacketType The specific derived packet type.
      */
-    template <typename PacketType> class DerivedPacket : public Packet
+    template <typename PacketType>
+    class DerivedPacket : public Packet
     {
     public:
         /**
@@ -150,7 +138,7 @@ namespace mal_packet_weaver
          *
          * @param buffer The ByteArray to which the serialized data is appended.
          */
-        void serialize(mal_toolkit::ByteArray &buffer) const override
+        void serialize(ByteArray &buffer) const override
         {
             std::ostringstream oss;
             boost::archive::binary_oarchive oa(oss);
@@ -168,7 +156,7 @@ namespace mal_packet_weaver
          * @param buffer The ByteView containing the binary serialized data.
          * @return A unique pointer to the deserialized PacketType instance.
          */
-        [[nodiscard]] static std::unique_ptr<Packet> deserialize(const mal_toolkit::ByteView buffer)
+        [[nodiscard]] static std::unique_ptr<Packet> deserialize(const ByteView buffer)
         {
             const auto char_view = buffer.as<char>();
             const std::string s(char_view, buffer.size());
@@ -207,7 +195,7 @@ namespace mal_packet_weaver
             } -> std::same_as<const UniquePacketID &>;
         {
             T::deserialize
-            } -> std::same_as<std::unique_ptr<Packet> (&)(const mal_toolkit::ByteView)>;
+            } -> std::same_as<std::unique_ptr<Packet> (&)(const ByteView)>;
     };
 
-} // namespace mal_packet_weaver
+}  // namespace mal_packet_weaver

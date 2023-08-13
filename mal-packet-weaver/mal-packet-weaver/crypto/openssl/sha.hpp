@@ -15,9 +15,9 @@ namespace mal_packet_weaver::crypto::SHA
      * @param hash_type The hash algorithm to use (SHA256, SHA384, or SHA512).
      * @return A Hash object containing the computed hash value.
      */
-    [[nodiscard]] inline Hash ComputeHash(const mal_toolkit::ByteView data, const Hash::HashType hash_type)
+    [[nodiscard]] inline Hash ComputeHash(const ByteView data, const Hash::HashType hash_type)
     {
-        mal_toolkit::ByteArray result;
+        ByteArray result;
         switch (hash_type)
         {
             case Hash::HashType::SHA256:
@@ -39,9 +39,9 @@ namespace mal_packet_weaver::crypto::SHA
                 break;
             }
             default:
-                mal_toolkit::AlwaysAssert(false, "Unknown hash type");
+                AlwaysAssert(false, "Unknown hash type");
         }
         return Hash{ result, hash_type };
     }
-} // namespace mal_packet_weaver::crypto::SHA
+}  // namespace mal_packet_weaver::crypto::SHA
 #endif

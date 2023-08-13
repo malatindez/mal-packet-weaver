@@ -1,22 +1,4 @@
 #pragma once
-#include <queue>
-#include <deque>
-#include <unordered_map>
-#include <future>
-#include <boost/asio/awaitable.hpp>
-#include <boost/asio/co_spawn.hpp>
-#include <boost/asio/detached.hpp>
-#include <boost/asio/read.hpp>
-#include <boost/asio/spawn.hpp>
-#include <boost/asio/steady_timer.hpp>
-#include <boost/asio/streambuf.hpp>
-#include <boost/asio/write.hpp>
-#include <boost/bind/bind.hpp>
-#include <deque>
-#include <future>
-#include <queue>
-#include <unordered_map>
-#include "mal-toolkit/mal-toolkit.hpp"
 #include "packet.hpp"
 
 namespace mal_packet_weaver
@@ -50,8 +32,13 @@ namespace mal_packet_weaver
      *
      * This class associates with a specific io_context and provides functionality for enqueuing
      * packets and managing packet handlers and filters.
+     *
+     * @note Session should be initialized using make_shared.
+     *
+     * @details To correctly destroy this object, you need to call Destroy function, because
+     * coroutines share the object from this.
      */
-    class PacketDispatcher final
+    class PacketDispatcher final : public std::enable_shared_from_this<Session>
     {
     public:
         /**
@@ -66,7 +53,8 @@ namespace mal_packet_weaver
          *
          * @tparam T The type of the value held by the promise.
          */
-        template <typename T> using shared_promise = std::shared_ptr<std::promise<T>>;
+        template <typename T>
+        using shared_promise = std::shared_ptr<std::promise<T>>;
 
         /**
          * @brief Alias for a shared promise of a base packet pointer.
@@ -80,8 +68,7 @@ namespace mal_packet_weaver
          * a const reference to a base packet pointer and returns a boolean. The second element is a
          * shared promise that holds a base packet pointer.
          */
-        using promise_filter =
-            std::pair<std::function<bool(BasePacketPtr const &)>, shared_packet_promise>;
+        using promise_filter = std::pair<std::function<bool(BasePacketPtr const &)>, shared_packet_promise>;
 
         /**
          * @brief Alias for a tuple containing information for packet handling.
@@ -91,8 +78,7 @@ namespace mal_packet_weaver
          * function, and the third element is a packet handler function.
          *
          */
-        using handler_tuple =
-            std::tuple<float, PacketFilterFunc<Packet>, PacketHandlerFunc<Packet>>;
+        using handler_tuple = std::tuple<float, PacketFilterFunc<Packet>, PacketHandlerFunc<Packet>>;
 
         /**
          * @brief Constructs a PacketDispatcher instance associated with the given io_context.
@@ -145,8 +131,8 @@ namespace mal_packet_weaver
          * satisfied.
          */
         template <IsPacket DerivedPacket>
-        boost::asio::awaitable<std::unique_ptr<DerivedPacket>>
-        await_packet(PacketFilterFunc<DerivedPacket> filter, float timeout = -1.0f);
+        boost::asio::awaitable<std::unique_ptr<DerivedPacket>> await_packet(PacketFilterFunc<DerivedPacket> filter,
+                                                                            float timeout = -1.0f);
         /**
          * @brief Registers a default handler for the provided packet type.
          *
@@ -167,8 +153,7 @@ namespace mal_packet_weaver
          */
         template <IsPacket DerivedPacket>
         void register_default_handler(PacketHandlerFunc<DerivedPacket> handler,
-                                      PacketFilterFunc<DerivedPacket> filter = {},
-                                      float delay = 0.0f);
+                                      PacketFilterFunc<DerivedPacket> filter = {}, float delay = 0.0f);
 
         /**
          * @brief Enqueues a promise associated with a packet.
@@ -192,10 +177,24 @@ namespace mal_packet_weaver
          * enqueued.
          * @param filtered_promise The promise filter to be enqueued.
          */
-        inline void enqueue_filter_promise(UniquePacketID packet_id,
-                                           promise_filter filtered_promise);
+        inline void enqueue_filter_promise(UniquePacketID packet_id, promise_filter filtered_promise);
+
+        /**
+         * @brief Coroutines use the shared pointer from this, so you need to explicitly call
+         * Destroy so alive_ is false. This way coroutines can end and unlock the remaining
+         * instances of shared_ptr.
+         */
+        void Destroy() { flag.store(false); }
 
     private:
+        /**
+         * @brief Retrieves a shared pointer to the current dispatcher.
+         *
+         * @param io The boost::asio::io_context used for asynchronous operations.
+         * @return A boost::asio::awaitable that resolves to a shared_ptr<PacketDispatcher>.
+         */
+        boost::asio::awaitable<std::shared_ptr<PacketDispatcher>> get_shared_ptr(boost::asio::io_context &io);
+
         /**
          * @brief This function represents the main loop for running a task with exponential backoff
          * and asynchronous I/O. It processes input packets and handles them while managing delays
@@ -236,8 +235,8 @@ namespace mal_packet_weaver
          * @param timer The timer used for timestamp calculations.
          * @return `true` if at least one handler was fulfilled, otherwise `false`.
          */
-        inline bool fulfill_handlers(UniquePacketID packet_id, BasePacketPtr &packet,
-                                     float &min_handler_timestamp, mal_toolkit::SteadyTimer &timer);
+        inline bool fulfill_handlers(UniquePacketID packet_id, BasePacketPtr &packet, float &min_handler_timestamp,
+                                     SteadyTimer &timer);
 
         /**
          * @brief Pushes an input packet to the unprocessed_packets_input_ queue.
@@ -283,21 +282,16 @@ namespace mal_packet_weaver
          */
         boost::asio::awaitable<bool> pop_inputs();
 
-        boost::asio::io_context
-            &io_context_; /**< Reference to the associated Boost.Asio io_context. */
+        boost::asio::io_context &io_context_; /**< Reference to the associated Boost.Asio io_context. */
 
-        boost::asio::io_context::strand
-            unprocessed_packets_input_strand_; /**< Strand for synchronizing access to the
-                                                  unprocessed input packets queue. */
-        boost::asio::io_context::strand
-            promise_map_input_strand_; /**< Strand for synchronizing access to the promise map
-                                          input. */
-        boost::asio::io_context::strand
-            promise_filter_map_input_strand_; /**< Strand for synchronizing access to the promise
-                                                 filter map input. */
-        boost::asio::io_context::strand
-            default_handlers_input_strand_; /**< Strand for synchronizing access to the default
-                                               handlers input. */
+        boost::asio::io_context::strand unprocessed_packets_input_strand_; /**< Strand for synchronizing access to the
+                                                                              unprocessed input packets queue. */
+        boost::asio::io_context::strand promise_map_input_strand_; /**< Strand for synchronizing access to the promise
+                                                                      map input. */
+        boost::asio::io_context::strand promise_filter_map_input_strand_; /**< Strand for synchronizing access to the
+                                                                             promise filter map input. */
+        boost::asio::io_context::strand default_handlers_input_strand_;   /**< Strand for synchronizing access to the
+                                                                             default   handlers input. */
 
         std::atomic_flag unprocessed_packets_input_updated_; /**< Atomic flag indicating updates to
                                                                 unprocessed_packets_input_. */
@@ -308,8 +302,7 @@ namespace mal_packet_weaver
         std::atomic_flag default_handlers_input_updated_;    /**< Atomic flag indicating updates to
                                                                 default_handlers_input_. */
 
-        std::vector<BasePacketPtr>
-            unprocessed_packets_input_; /**< Queue for storing unprocessed input packets. */
+        std::vector<BasePacketPtr> unprocessed_packets_input_; /**< Queue for storing unprocessed input packets. */
         std::vector<std::pair<UniquePacketID, shared_packet_promise>>
             promise_map_input_; /**< Queue for storing promise map inputs. */
         std::vector<std::pair<UniquePacketID, promise_filter>>
@@ -325,7 +318,9 @@ namespace mal_packet_weaver
             promise_filter_map_; /**< Map storing promise filters for each packet ID. */
         std::unordered_map<UniquePacketID, std::vector<handler_tuple>>
             default_handlers_; /**< Map storing default packet handlers for each packet ID. */
+
+        std::atomic_bool alive_{ true };
     };
-}
+}  // namespace mal_packet_weaver
 
 #include "packet-dispatcher.inl"
