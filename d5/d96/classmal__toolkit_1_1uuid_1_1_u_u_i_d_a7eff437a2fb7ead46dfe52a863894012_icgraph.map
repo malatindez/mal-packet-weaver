@@ -1,12 +1,12 @@
 <map id="mal_toolkit::uuid::UUID::bytes" name="mal_toolkit::uuid::UUID::bytes">
 <area shape="rect" id="Node000001" title="Serializes the UUID to a byte string (16 bytes)." alt="" coords="170,104,286,145"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="254,91,245,85,228,83,213,84,203,89,200,95,201,103,196,104,195,94,200,85,211,79,228,77,246,80,257,87"/>
-<area shape="rect" id="Node000002" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#aa794f777d190f4fb4c6954fafb7e35f2" title="Constructs an UUID from a byte string." alt="" coords="5,5,122,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,98,120,61,99,49,102,44,123,57,183,94"/>
-<area shape="rect" id="Node000003" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a5998e9f7ce514b8680d0745c58daf2e8" title="Constructs an UUID from a byte array." alt="" coords="5,71,122,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,112,122,105,123,100,155,107"/>
-<area shape="rect" id="Node000004" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#ab9a14e4b6bbb8837b0d25902743c7cbc" title=" " alt="" coords="5,136,122,177"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="254,91,245,85,228,83,213,84,203,89,200,95,201,103,196,104,195,94,200,85,211,79,228,77,246,80,257,87"/>
+<area shape="rect" id="Node000002" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#ab9a14e4b6bbb8837b0d25902743c7cbc" title=" " alt="" coords="5,5,122,46"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="180,98,120,61,99,49,102,44,123,57,183,94"/>
+<area shape="rect" id="Node000003" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a79489de8409fb99308ee8a1c1128050d" title=" " alt="" coords="5,71,122,111"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="154,112,122,105,123,100,155,107"/>
+<area shape="rect" id="Node000004" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#aa794f777d190f4fb4c6954fafb7e35f2" title="Constructs an UUID from a byte string." alt="" coords="5,136,122,177"/>
 <area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="155,141,123,148,122,142,154,136"/>
-<area shape="rect" id="Node000005" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a79489de8409fb99308ee8a1c1128050d" title=" " alt="" coords="5,201,122,242"/>
+<area shape="rect" id="Node000005" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a5998e9f7ce514b8680d0745c58daf2e8" title="Constructs an UUID from a byte array." alt="" coords="5,201,122,242"/>
 <area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="182,155,123,191,102,203,99,199,120,186,179,150"/>
 </map>

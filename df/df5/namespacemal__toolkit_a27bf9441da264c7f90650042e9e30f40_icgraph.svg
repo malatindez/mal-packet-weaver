@@ -58,19 +58,18 @@ var sectionId = 'dynsection-6';
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="Returns an empty string representing the current source location.">
-<polygon fill="#999999" stroke="#666666" points="562.75,-211.5 439.5,-211.5 439.5,-181 562.75,-181 562.75,-211.5"/>
-<text text-anchor="start" x="447.5" y="-198" font-family="Times,serif" font-size="10.00">mal_toolkit::CurrentSource</text>
-<text text-anchor="middle" x="501.12" y="-186.75" font-family="Times,serif" font-size="10.00">Location</text>
+<polygon fill="#999999" stroke="#666666" points="562.75,-133.5 439.5,-133.5 439.5,-103 562.75,-103 562.75,-133.5"/>
+<text text-anchor="start" x="447.5" y="-120" font-family="Times,serif" font-size="10.00">mal_toolkit::CurrentSource</text>
+<text text-anchor="middle" x="501.12" y="-108.75" font-family="Times,serif" font-size="10.00">Location</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a75ea1122ef872b467e5113888c1e5305" target="_top" xlink:title="Construct a Measurer object.">
-<polygon fill="white" stroke="#666666" points="395.25,-254.5 291.5,-254.5 291.5,-224 395.25,-224 395.25,-254.5"/>
-<text text-anchor="start" x="299.5" y="-241" font-family="Times,serif" font-size="10.00">mal_toolkit::Measurer</text>
-<text text-anchor="middle" x="343.38" y="-229.75" font-family="Times,serif" font-size="10.00">::Measurer</text>
+<g id="a_Node000002"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a8405b24c94e717d8a57da64b1483a4a9" target="_top" xlink:title="Always asserts a condition with customizable behavior.">
+<polygon fill="white" stroke="#666666" points="403.5,-205.88 283.25,-205.88 283.25,-186.62 403.5,-186.62 403.5,-205.88"/>
+<text text-anchor="middle" x="343.38" y="-192.38" font-family="Times,serif" font-size="10.00">mal_toolkit::AlwaysAssert</text>
 </a>
 </g>
 </g>
@@ -78,51 +77,52 @@ var sectionId = 'dynsection-6';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M433.03,-214.77C420.48,-218.24 407.55,-221.81 395.58,-225.11"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="433.75,-217.93 442.46,-211.9 431.88,-211.18 433.75,-217.93"/>
+<path fill="none" stroke="#63b8ff" d="M459.46,-138.61C428.96,-153.89 388.5,-174.15 364.57,-186.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="460.61,-141.45 467.98,-133.85 457.47,-135.2 460.61,-141.45"/>
+</a>
+</g>
+</g>
+<!-- Node5 -->
+<g id="Node000005" class="node">
+<title>Node5</title>
+<g id="a_Node000005"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a1a10dbab8f9e26361eaa4af07f31713d" target="_top" xlink:title="Asserts a condition with customizable behavior based on debug mode.">
+<polygon fill="white" stroke="#666666" points="389.25,-127.88 297.5,-127.88 297.5,-108.62 389.25,-108.62 389.25,-127.88"/>
+<text text-anchor="middle" x="343.38" y="-114.38" font-family="Times,serif" font-size="10.00">mal_toolkit::Assert</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node5 -->
+<g id="edge4_Node000001_Node000005" class="edge">
+<title>Node1&#45;&gt;Node5</title>
+<g id="a_edge4_Node000001_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M428.05,-118.25C414.89,-118.25 401.51,-118.25 389.42,-118.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="428.02,-121.75 438.02,-118.25 428.02,-114.75 428.02,-121.75"/>
+</a>
+</g>
+</g>
+<!-- Node10 -->
+<g id="Node000010" class="node">
+<title>Node10</title>
+<g id="a_Node000010"><a xlink:href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a75ea1122ef872b467e5113888c1e5305" target="_top" xlink:title="Construct a Measurer object.">
+<polygon fill="white" stroke="#666666" points="395.25,-90.5 291.5,-90.5 291.5,-60 395.25,-60 395.25,-90.5"/>
+<text text-anchor="start" x="299.5" y="-77" font-family="Times,serif" font-size="10.00">mal_toolkit::Measurer</text>
+<text text-anchor="middle" x="343.38" y="-65.75" font-family="Times,serif" font-size="10.00">::Measurer</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node10 -->
+<g id="edge9_Node000001_Node000010" class="edge">
+<title>Node1&#45;&gt;Node10</title>
+<g id="a_edge9_Node000001_Node000010"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M433.03,-99.73C420.48,-96.26 407.55,-92.69 395.58,-89.39"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="431.88,-103.32 442.46,-102.6 433.75,-96.57 431.88,-103.32"/>
 </a>
 </g>
 </g>
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a8405b24c94e717d8a57da64b1483a4a9" target="_top" xlink:title="Always asserts a condition with customizable behavior.">
-<polygon fill="white" stroke="#666666" points="403.5,-205.88 283.25,-205.88 283.25,-186.62 403.5,-186.62 403.5,-205.88"/>
-<text text-anchor="middle" x="343.38" y="-192.38" font-family="Times,serif" font-size="10.00">mal_toolkit::AlwaysAssert</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node3 -->
-<g id="edge2_Node000001_Node000003" class="edge">
-<title>Node1&#45;&gt;Node3</title>
-<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M428.03,-196.25C419.91,-196.25 411.71,-196.25 403.78,-196.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="428.02,-199.75 438.02,-196.25 428.02,-192.75 428.02,-199.75"/>
-</a>
-</g>
-</g>
-<!-- Node6 -->
-<g id="Node000006" class="node">
-<title>Node6</title>
-<g id="a_Node000006"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a1a10dbab8f9e26361eaa4af07f31713d" target="_top" xlink:title="Asserts a condition with customizable behavior based on debug mode.">
-<polygon fill="white" stroke="#666666" points="389.25,-127.88 297.5,-127.88 297.5,-108.62 389.25,-108.62 389.25,-127.88"/>
-<text text-anchor="middle" x="343.38" y="-114.38" font-family="Times,serif" font-size="10.00">mal_toolkit::Assert</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node6 -->
-<g id="edge5_Node000001_Node000006" class="edge">
-<title>Node1&#45;&gt;Node6</title>
-<g id="a_edge5_Node000001_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M459.46,-175.89C428.96,-160.61 388.5,-140.35 364.57,-128.37"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="457.47,-179.3 467.98,-180.65 460.61,-173.05 457.47,-179.3"/>
-</a>
-</g>
-</g>
-<!-- Node4 -->
-<g id="Node000004" class="node">
-<title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ab8d02d6502bb180c3b0f383b3fddc6ca" target="_top" xlink:title="Asynchronously forges new packets from the buffer.">
+<g id="a_Node000003"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ab8d02d6502bb180c3b0f383b3fddc6ca" target="_top" xlink:title="Asynchronously forges new packets from the buffer.">
 <polygon fill="white" stroke="#666666" points="242.75,-259.12 139.75,-259.12 139.75,-217.38 242.75,-217.38 242.75,-259.12"/>
 <text text-anchor="start" x="147.75" y="-245.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="start" x="147.75" y="-234.38" font-family="Times,serif" font-size="10.00">Session::async_packet</text>
@@ -130,38 +130,38 @@ var sectionId = 'dynsection-6';
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node4 -->
-<g id="edge3_Node000003_Node000004" class="edge">
-<title>Node3&#45;&gt;Node4</title>
-<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2_Node000002_Node000003" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M296.3,-209.14C279.51,-213.84 260.43,-219.17 243.24,-223.98"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="296.73,-212.37 305.42,-206.31 294.84,-205.63 296.73,-212.37"/>
 </a>
 </g>
 </g>
-<!-- Node5 -->
-<g id="Node000005" class="node">
-<title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a5cf271c70d7ec610cfb01d0ed8655693" target="_top" xlink:title="Constructor for the Session class.">
+<!-- Node4 -->
+<g id="Node000004" class="node">
+<title>Node4</title>
+<g id="a_Node000004"><a xlink:href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a5cf271c70d7ec610cfb01d0ed8655693" target="_top" xlink:title="Constructor for the Session class.">
 <polygon fill="white" stroke="#666666" points="99.25,-253.5 0,-253.5 0,-223 99.25,-223 99.25,-253.5"/>
 <text text-anchor="start" x="8" y="-240" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="middle" x="49.62" y="-228.75" font-family="Times,serif" font-size="10.00">Session::Session</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node5 -->
-<g id="edge4_Node000004_Node000005" class="edge">
-<title>Node4&#45;&gt;Node5</title>
-<g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
+<!-- Node3&#45;&gt;Node4 -->
+<g id="edge3_Node000003_Node000004" class="edge">
+<title>Node3&#45;&gt;Node4</title>
+<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M128.53,-238.25C118.74,-238.25 108.73,-238.25 99.29,-238.25"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="128.45,-241.75 138.45,-238.25 128.45,-234.75 128.45,-241.75"/>
 </a>
 </g>
 </g>
-<!-- Node7 -->
-<g id="Node000007" class="node">
-<title>Node7</title>
-<g id="a_Node000007"><a xlink:href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1e7e2c9e624018e4a1046297453e0596" target="_top" xlink:title="Wait until the packet is registered in the dispatch system and return as soon as possible.">
+<!-- Node6 -->
+<g id="Node000006" class="node">
+<title>Node6</title>
+<g id="a_Node000006"><a xlink:href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1e7e2c9e624018e4a1046297453e0596" target="_top" xlink:title="Wait until the packet is registered in the dispatch system and return as soon as possible.">
 <polygon fill="white" stroke="#666666" points="247.25,-199.12 135.25,-199.12 135.25,-157.38 247.25,-157.38 247.25,-199.12"/>
 <text text-anchor="start" x="143.25" y="-185.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="start" x="143.25" y="-174.38" font-family="Times,serif" font-size="10.00">PacketDispatcher::await</text>
@@ -169,19 +169,19 @@ var sectionId = 'dynsection-6';
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node7 -->
-<g id="edge6_Node000006_Node000007" class="edge">
-<title>Node6&#45;&gt;Node7</title>
-<g id="a_edge6_Node000006_Node000007"><a xlink:title=" ">
+<!-- Node5&#45;&gt;Node6 -->
+<g id="edge5_Node000005_Node000006" class="edge">
+<title>Node5&#45;&gt;Node6</title>
+<g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M307.28,-132.28C288.9,-139.62 266.02,-148.77 245.51,-156.96"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="308.26,-135.25 316.25,-128.29 305.66,-128.75 308.26,-135.25"/>
 </a>
 </g>
 </g>
-<!-- Node8 -->
-<g id="Node000008" class="node">
-<title>Node8</title>
-<g id="a_Node000008"><a xlink:href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a5fa270876e67889a7524a186b297cd11" target="_top" xlink:title="Wait until a packet satisfying the filter condition is registered in the dispatch system and return a...">
+<!-- Node7 -->
+<g id="Node000007" class="node">
+<title>Node7</title>
+<g id="a_Node000007"><a xlink:href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a5fa270876e67889a7524a186b297cd11" target="_top" xlink:title="Wait until a packet satisfying the filter condition is registered in the dispatch system and return a...">
 <polygon fill="white" stroke="#666666" points="247.25,-139.12 135.25,-139.12 135.25,-97.38 247.25,-97.38 247.25,-139.12"/>
 <text text-anchor="start" x="143.25" y="-125.62" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="start" x="143.25" y="-114.38" font-family="Times,serif" font-size="10.00">PacketDispatcher::await</text>
@@ -189,50 +189,50 @@ var sectionId = 'dynsection-6';
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node8 -->
-<g id="edge7_Node000006_Node000008" class="edge">
-<title>Node6&#45;&gt;Node8</title>
-<g id="a_edge7_Node000006_Node000008"><a xlink:title=" ">
+<!-- Node5&#45;&gt;Node7 -->
+<g id="edge6_Node000005_Node000007" class="edge">
+<title>Node5&#45;&gt;Node7</title>
+<g id="a_edge6_Node000005_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M286.43,-118.25C273.74,-118.25 260.28,-118.25 247.62,-118.25"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="286.33,-121.75 296.33,-118.25 286.33,-114.75 286.33,-121.75"/>
 </a>
 </g>
 </g>
-<!-- Node9 -->
-<g id="Node000009" class="node">
-<title>Node9</title>
-<g id="a_Node000009"><a xlink:href="../../d6/de9/namespacemal__packet__weaver.html#ade298814d907888a09b7e8a3b068b8db" target="_top" xlink:title="Convert a ByteView to an integer value of the specified type.">
+<!-- Node8 -->
+<g id="Node000008" class="node">
+<title>Node8</title>
+<g id="a_Node000008"><a xlink:href="../../d6/de9/namespacemal__packet__weaver.html#ade298814d907888a09b7e8a3b068b8db" target="_top" xlink:title="Convert a ByteView to an integer value of the specified type.">
 <polygon fill="white" stroke="#666666" points="240.88,-79.5 141.62,-79.5 141.62,-49 240.88,-49 240.88,-79.5"/>
 <text text-anchor="start" x="149.62" y="-66" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="middle" x="191.25" y="-54.75" font-family="Times,serif" font-size="10.00">bytes_to_integer</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node9 -->
-<g id="edge8_Node000006_Node000009" class="edge">
-<title>Node6&#45;&gt;Node9</title>
-<g id="a_edge8_Node000006_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M304.4,-104.59C283.55,-97.09 257.6,-87.76 235.92,-79.96"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="302.9,-108.13 313.49,-108.22 305.26,-101.54 302.9,-108.13"/>
+<!-- Node5&#45;&gt;Node8 -->
+<g id="edge7_Node000005_Node000008" class="edge">
+<title>Node5&#45;&gt;Node8</title>
+<g id="a_edge7_Node000005_Node000008"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M300.01,-104.95C294.36,-103.09 288.65,-101.16 283.25,-99.25 266.17,-93.23 247.47,-86.12 231.49,-79.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="298.45,-108.45 309.04,-108.22 300.62,-101.8 298.45,-108.45"/>
 </a>
 </g>
 </g>
-<!-- Node10 -->
-<g id="Node000010" class="node">
-<title>Node10</title>
-<g id="a_Node000010"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a6dd69b1a3c078b983b60645afa17b00c" target="_top" xlink:title="Convert a ByteView to an integer value of the specified type.">
+<!-- Node9 -->
+<g id="Node000009" class="node">
+<title>Node9</title>
+<g id="a_Node000009"><a xlink:href="../../df/df5/namespacemal__toolkit.html#a6dd69b1a3c078b983b60645afa17b00c" target="_top" xlink:title="Convert a ByteView to an integer value of the specified type.">
 <polygon fill="white" stroke="#666666" points="234.12,-30.5 148.38,-30.5 148.38,0 234.12,0 234.12,-30.5"/>
 <text text-anchor="start" x="156.38" y="-17" font-family="Times,serif" font-size="10.00">mal_toolkit::bytes</text>
 <text text-anchor="middle" x="191.25" y="-5.75" font-family="Times,serif" font-size="10.00">_to_integer</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node10 -->
-<g id="edge9_Node000006_Node000010" class="edge">
-<title>Node6&#45;&gt;Node10</title>
-<g id="a_edge9_Node000006_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M324.37,-101.05C306,-84.12 276.18,-58.26 247.25,-40.25 241.91,-36.92 236.05,-33.78 230.21,-30.93"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="321.26,-102.87 330.95,-107.14 326.03,-97.75 321.26,-102.87"/>
+<!-- Node5&#45;&gt;Node9 -->
+<g id="edge8_Node000005_Node000009" class="edge">
+<title>Node5&#45;&gt;Node9</title>
+<g id="a_edge8_Node000005_Node000009"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M289.14,-103.31C287.08,-102.06 285.11,-100.71 283.25,-99.25 259.11,-80.25 270.25,-60.62 247.25,-40.25 243.25,-36.7 238.65,-33.58 233.87,-30.85"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="287.08,-106.71 297.58,-108.16 290.28,-100.48 287.08,-106.71"/>
 </a>
 </g>
 </g>
