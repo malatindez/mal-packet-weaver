@@ -166,7 +166,20 @@ namespace mal_packet_weaver
                 for (auto &[packet_id, handler] : default_handlers_input_)
                 {
                     auto &handler_list = default_handlers_[packet_id];
-                    handler_list.emplace_back(std::move(handler));
+                    // Insert the handler such that filtered ones are first.
+                    mal_toolkit::SortedInsert<handler_tuple>(handler_list, std::move(handler), 
+                        [](handler_tuple const &left, handler_tuple const &right) -> bool __lambda_force_inline 
+                        {
+                            if(bool(std::get<1>(left)))
+                            {
+                                return true;
+                            }
+                            else if(bool(std::get<1>(right)))
+                            {
+                                return false;
+                            }
+                            return true;
+                        });
                 }
                 bool t = default_handlers_input_.size() > 0;
                 default_handlers_input_.clear();
