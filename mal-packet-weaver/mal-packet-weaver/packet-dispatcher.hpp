@@ -38,7 +38,7 @@ namespace mal_packet_weaver
      * @details To correctly destroy this object, you need to call Destroy function, because
      * coroutines share the object from this.
      */
-    class PacketDispatcher final : public std::enable_shared_from_this<Session>
+    class PacketDispatcher final : public std::enable_shared_from_this<PacketDispatcher>
     {
     public:
         /**
@@ -184,7 +184,7 @@ namespace mal_packet_weaver
          * Destroy so alive_ is false. This way coroutines can end and unlock the remaining
          * instances of shared_ptr.
          */
-        void Destroy() { flag.store(false); }
+        void Destroy() { alive_.store(false); }
 
     private:
         /**
@@ -193,7 +193,7 @@ namespace mal_packet_weaver
          * @param io The boost::asio::io_context used for asynchronous operations.
          * @return A boost::asio::awaitable that resolves to a shared_ptr<PacketDispatcher>.
          */
-        boost::asio::awaitable<std::shared_ptr<PacketDispatcher>> get_shared_ptr(boost::asio::io_context &io);
+        boost::asio::awaitable<std::shared_ptr<PacketDispatcher>> get_shared_ptr();
 
         /**
          * @brief This function represents the main loop for running a task with exponential backoff

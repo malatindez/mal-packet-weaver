@@ -17,8 +17,7 @@ namespace mal_packet_weaver
         co_spawn(io_context, std::bind(&PacketDispatcher::Run, this), boost::asio::detached);
     }
 
-    boost::asio::awaitable<std::shared_ptr<PacketDispatcher>> PacketDispatcher::get_shared_ptr(
-        boost::asio::io_context &io)
+    boost::asio::awaitable<std::shared_ptr<PacketDispatcher>> PacketDispatcher::get_shared_ptr()
     {
         ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
 
@@ -34,7 +33,7 @@ namespace mal_packet_weaver
             {
                 it++;
             }
-            boost::asio::steady_timer timer(io, backoff.get_current_delay());
+            boost::asio::steady_timer timer(io_context_, backoff.get_current_delay());
             co_await timer.async_wait(boost::asio::use_awaitable);
             backoff.increase_delay();
             if (it >= 50 && it % 20 == 0)
@@ -51,7 +50,7 @@ namespace mal_packet_weaver
         SteadyTimer timer;
         float min_handler_timestamp = std::numeric_limits<float>::max();
 
-        std::shared_ptr<Session> dispatcher_lock = co_await get_shared_ptr(io);
+        std::shared_ptr<PacketDispatcher> dispatcher_lock = co_await get_shared_ptr();
         if (dispatcher_lock == nullptr)
         {
             spdlog::error(

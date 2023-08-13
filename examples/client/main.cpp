@@ -93,7 +93,7 @@ int main()
 
         std::shared_ptr<mal_packet_weaver::PacketDispatcher> dispatcher =
             std::make_shared<mal_packet_weaver::PacketDispatcher>(io_context);
-        session->SetPacketReceiver([&dispatcher](std::unique_ptr<mal_packet_weaver::Packet> &&packet)
+        session->set_packet_receiver([&dispatcher](std::unique_ptr<mal_packet_weaver::Packet> &&packet)
                                        __lambda_force_inline { dispatcher->enqueue_packet(std::move(packet)); });
         dispatcher->register_default_handler<EchoPacket>(
             [session, &io_context](std::unique_ptr<mal_packet_weaver::packet::network::EchoPacket> &&packet)
