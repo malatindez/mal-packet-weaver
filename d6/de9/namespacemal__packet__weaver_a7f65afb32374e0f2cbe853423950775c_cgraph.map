@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::integer_to_bytes" name="mal_packet_weaver::integer_to_bytes">
-<area shape="rect" id="Node000001" title="Convert an integer value of the specified type to a ByteArray." alt="" coords="5,5,138,46"/>
-<area shape="rect" id="Node000002" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a5ce0c445aa4f44df9f44ddcfe8bff0ef" title="Convert the ByteArray to a typed pointer." alt="" coords="186,5,318,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,23,171,23,171,28,138,28"/>
-</map>

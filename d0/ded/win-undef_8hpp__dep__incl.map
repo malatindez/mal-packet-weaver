@@ -1,0 +1,17 @@
+<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/include/win&#45;undef.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/include/win&#45;undef.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="208,5,355,61"/>
+<area shape="rect" id="Node000002" href="$dd/db5/spdlog_8hpp.html" title="Provides integration with the SPDLOG library for efficient logging and debugging." alt="" coords="210,109,353,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,76,284,108,279,108,279,76"/>
+<area shape="rect" id="Node000003" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="210,213,353,268"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,180,284,212,279,212,279,180"/>
+<area shape="rect" id="Node000004" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="5,316,168,387"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,278,141,318,139,313,211,273"/>
+<area shape="rect" id="Node000005" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="192,316,371,387"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="284,283,284,316,279,316,279,283"/>
+<area shape="rect" id="Node000006" href="$d1/d8a/mal-toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="391,435,534,491"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="340,275,384,315,407,344,427,376,454,434,450,436,422,379,403,347,381,318,336,279"/>
+<area shape="rect" id="Node000007" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="446,324,589,380"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="354,273,459,321,457,326,352,277"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="168,307,239,267,242,271,171,311"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="500,394,478,436,474,433,495,391"/>
+</map>

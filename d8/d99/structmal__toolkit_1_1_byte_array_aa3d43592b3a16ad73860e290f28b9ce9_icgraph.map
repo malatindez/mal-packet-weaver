@@ -1,0 +1,8 @@
+<map id="mal_toolkit::ByteArray::append" name="mal_toolkit::ByteArray::append">
+<area shape="rect" id="Node000001" title="Append multiple data sources to the byte array." alt="" coords="196,39,338,79"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="298,26,287,20,267,17,249,19,238,24,234,30,236,37,230,39,229,29,235,20,248,14,267,12,288,15,300,21"/>
+<area shape="rect" id="Node000002" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#a5ebdf4bd2aaee348803dcb9575c77114" title="Append two data sources to the byte array." alt="" coords="5,5,148,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,47,148,41,148,36,181,41"/>
+<area shape="rect" id="Node000003" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#a8c530ce3db08f43b3156b92856c4acf1" title="Create a byte array from multiple data sources." alt="" coords="5,71,148,111"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="181,76,148,82,148,76,180,71"/>
+</map>

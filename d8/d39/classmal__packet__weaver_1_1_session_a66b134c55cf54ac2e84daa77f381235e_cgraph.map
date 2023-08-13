@@ -1,7 +1,0 @@
-<map id="mal_packet_weaver::Session::send_packet" name="mal_packet_weaver::Session::send_packet">
-<area shape="rect" id="Node000001" title="Sends any packet derived from DerivedPacket through the network." alt="" coords="5,39,138,79"/>
-<area shape="rect" id="Node000002" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a3bf850167f23c6f5aada32381a29e58f" title="Serialize the byte array using Boost&#39;s serialization framework." alt="" coords="186,5,318,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,44,171,38,172,43,138,49"/>
-<area shape="rect" id="Node000003" href="$d6/de9/namespacemal__packet__weaver.html#a87ac8de4f0992d1a8e99086320febbde" title="Convert a uint32_t value to a ByteArray using little&#45;endian byte order." alt="" coords="186,71,318,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,68,171,74,171,79,138,73"/>
-</map>

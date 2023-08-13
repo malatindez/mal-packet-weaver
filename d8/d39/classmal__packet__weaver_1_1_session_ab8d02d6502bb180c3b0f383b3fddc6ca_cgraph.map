@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::Session::async_packet_forger" name="mal_packet_weaver::Session::async_packet_forger">
-<area shape="rect" id="Node000001" title="Asynchronously forges new packets from the buffer." alt="" coords="5,5,143,61"/>
-<area shape="rect" id="Node000002" href="$d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="191,13,323,54"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,31,176,31,176,36,143,36"/>
-</map>

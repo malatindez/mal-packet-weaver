@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['packet_0',['Packet',['../d2/d9d/classmal__packet__weaver_1_1_packet.html',1,'mal_packet_weaver']]],
-  ['packetdispatcher_1',['PacketDispatcher',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html',1,'mal_packet_weaver']]],
-  ['packetfactory_2',['PacketFactory',['../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html',1,'mal_packet_weaver::packet']]],
-  ['pingpacket_3',['PingPacket',['../d2/db1/classmal__packet__weaver_1_1packet_1_1network_1_1_ping_packet.html',1,'mal_packet_weaver::packet::network']]],
-  ['pongpacket_4',['PongPacket',['../d6/d7a/classmal__packet__weaver_1_1packet_1_1network_1_1_pong_packet.html',1,'mal_packet_weaver::packet::network']]]
+  ['namable_0',['namable',['../da/d90/classmal__toolkit_1_1namable.html',1,'mal_toolkit']]],
+  ['namable_5fonce_1',['namable_once',['../df/d40/classmal__toolkit_1_1namable__once.html',1,'mal_toolkit']]],
+  ['namable_5fprotected_2',['namable_protected',['../d4/d2a/classmal__toolkit_1_1namable__protected.html',1,'mal_toolkit']]],
+  ['non_5fcopyable_3',['non_copyable',['../d1/dd3/classmal__toolkit_1_1non__copyable.html',1,'mal_toolkit']]],
+  ['non_5fcopyable_5fnon_5fmovable_4',['non_copyable_non_movable',['../d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html',1,'mal_toolkit']]],
+  ['non_5fmovable_5',['non_movable',['../db/d86/classmal__toolkit_1_1non__movable.html',1,'mal_toolkit']]]
 ];

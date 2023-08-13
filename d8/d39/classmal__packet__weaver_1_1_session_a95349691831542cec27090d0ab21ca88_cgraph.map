@@ -1,7 +1,0 @@
-<map id="mal_packet_weaver::Session::async_packet_sender" name="mal_packet_weaver::Session::async_packet_sender">
-<area shape="rect" id="Node000001" title="Asynchronously receives and processes incoming packets from the network." alt="" coords="5,31,143,87"/>
-<area shape="rect" id="Node000002" href="$d6/de9/namespacemal__packet__weaver.html#a02f5130547d5ddf6c16f31fad13cc469" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="191,5,323,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,44,176,38,177,43,143,49"/>
-<area shape="rect" id="Node000003" href="$d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a88aac09c49f5b82796a94736781626c7" title="Create a ByteView of a subsequence of the byte array." alt="" coords="191,71,323,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,68,177,74,176,80,142,74"/>
-</map>

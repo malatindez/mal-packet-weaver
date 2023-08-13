@@ -1,0 +1,5 @@
+<map id="mal_toolkit::ByteArray::from_integral" name="mal_toolkit::ByteArray::from_integral">
+<area shape="rect" id="Node000001" title="Create a byte array from an integral value." alt="" coords="5,5,148,46"/>
+<area shape="rect" id="Node000002" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" title="Convert the ByteArray to a typed pointer." alt="" coords="196,13,355,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,23,181,23,181,28,148,28"/>
+</map>

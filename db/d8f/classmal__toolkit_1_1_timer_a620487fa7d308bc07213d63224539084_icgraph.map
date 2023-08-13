@@ -1,0 +1,5 @@
+<map id="mal_toolkit::Timer::reset" name="mal_toolkit::Timer::reset">
+<area shape="rect" id="Node000001" title="Resets the start time to the previously captured current time." alt="" coords="174,5,294,46"/>
+<area shape="rect" id="Node000002" href="$db/d8f/classmal__toolkit_1_1_timer.html#a860881484f2ea107ad7545019a547bc7" title="Constructs a Timer and initializes it with the current time." alt="" coords="5,5,126,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,28,126,28,126,23,159,23"/>
+</map>

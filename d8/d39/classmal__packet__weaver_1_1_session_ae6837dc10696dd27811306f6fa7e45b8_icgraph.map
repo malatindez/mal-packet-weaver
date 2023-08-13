@@ -1,7 +1,0 @@
-<map id="mal_packet_weaver::Session::decrypt" name="mal_packet_weaver::Session::decrypt">
-<area shape="rect" id="Node000001" title="Public method to decrypt bytearray using locally stored AES256 pointer." alt="" coords="422,5,554,46"/>
-<area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0" title="Returns the earliest acquired packet. If packet queue is empty, returns nullptr." alt="" coords="218,5,374,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="407,28,374,28,374,23,407,23"/>
-<area shape="rect" id="Node000003" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a961d49d84fb1426fc605c529df1296d1" title=" " alt="" coords="5,5,170,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,28,170,28,170,23,203,23"/>
-</map>

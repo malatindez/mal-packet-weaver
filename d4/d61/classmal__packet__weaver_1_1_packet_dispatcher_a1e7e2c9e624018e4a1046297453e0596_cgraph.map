@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::PacketDispatcher::await_packet" name="mal_packet_weaver::PacketDispatcher::await_packet">
-<area shape="rect" id="Node000001" title="Wait until the packet is registered in the dispatch system and return as soon as possible." alt="" coords="5,5,155,61"/>
-<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af4ee0a486c569b7e413cb5740b5625de" title="Enqueues a promise associated with a packet." alt="" coords="203,5,369,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,31,187,31,187,36,155,36"/>
-</map>

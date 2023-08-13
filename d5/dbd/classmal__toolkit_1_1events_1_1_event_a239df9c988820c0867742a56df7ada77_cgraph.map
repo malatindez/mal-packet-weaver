@@ -1,0 +1,5 @@
+<map id="mal_toolkit::events::Event::in_category" name="mal_toolkit::events::Event::in_category">
+<area shape="rect" id="Node000001" title="Checks if the event is in the specified category." alt="" coords="5,5,132,46"/>
+<area shape="rect" id="Node000002" href="$d5/dbd/classmal__toolkit_1_1events_1_1_event.html#ac4a2a1bead0fdea34119aff175956d5e" title="Returns the category flags of the event." alt="" coords="180,5,319,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,23,165,23,165,28,132,28"/>
+</map>

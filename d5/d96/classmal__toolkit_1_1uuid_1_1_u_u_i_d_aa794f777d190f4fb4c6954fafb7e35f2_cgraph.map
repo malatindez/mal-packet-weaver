@@ -1,0 +1,8 @@
+<map id="mal_toolkit::uuid::UUID::UUID" name="mal_toolkit::uuid::UUID::UUID">
+<area shape="rect" id="Node000001" title="Constructs an UUID from a byte string." alt="" coords="5,51,122,91"/>
+<area shape="rect" id="Node000002" href="$d6/d11/namespacemal__toolkit_1_1endianness.html#a029a712e464ad5771b3d1f4ed6c912c5" title="Converts a 128&#45;bit value between big&#45;endian and little&#45;endian using SSE2 intrinsics." alt="" coords="170,5,314,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,54,155,45,156,50,123,59"/>
+<area shape="rect" id="Node000003" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a7eff437a2fb7ead46dfe52a863894012" title="Serializes the UUID to a byte string (16 bytes)." alt="" coords="184,95,300,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,83,170,95,168,100,121,88"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="208,95,206,85,212,76,224,70,242,68,262,71,273,77,271,82,260,76,242,73,225,75,215,80,211,86,213,94"/>
+</map>

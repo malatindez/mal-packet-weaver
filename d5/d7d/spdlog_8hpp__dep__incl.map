@@ -1,0 +1,15 @@
+<map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/include/spdlog.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/include/spdlog.hpp">
+<area shape="rect" id="Node000001" title="Provides integration with the SPDLOG library for efficient logging and debugging." alt="" coords="210,5,353,61"/>
+<area shape="rect" id="Node000002" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="210,109,353,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,76,284,108,279,108,279,76"/>
+<area shape="rect" id="Node000003" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="5,213,168,283"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,174,141,214,139,210,211,170"/>
+<area shape="rect" id="Node000004" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="192,213,371,283"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="284,180,284,212,279,212,279,180"/>
+<area shape="rect" id="Node000005" href="$d1/d8a/mal-toolkit_8hpp.html" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="391,331,534,387"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="340,171,384,211,407,241,427,273,454,330,450,332,422,275,403,244,381,214,336,175"/>
+<area shape="rect" id="Node000006" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="446,220,589,276"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="354,169,459,217,457,222,352,174"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="168,203,239,163,242,168,171,208"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="500,290,478,332,474,330,495,288"/>
+</map>

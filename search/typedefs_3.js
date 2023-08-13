@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['shared_5fpacket_5fpromise_0',['shared_packet_promise',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a63179c18c99517b9d62a0c607feabd89',1,'mal_packet_weaver::PacketDispatcher']]],
-  ['shared_5fpromise_1',['shared_promise',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a18a4addbeb66de3ff2b2a73871d6cb3d',1,'mal_packet_weaver::PacketDispatcher']]]
+  ['linearbackoffms_0',['LinearBackoffMs',['../df/df5/namespacemal__toolkit.html#a72f030355e19e6528f2aff00d6bc480d',1,'mal_toolkit']]],
+  ['linearbackoffns_1',['LinearBackoffNs',['../df/df5/namespacemal__toolkit.html#ab97b824f5c8bcd73b1d227c93b2fb58d',1,'mal_toolkit']]],
+  ['linearbackoffsec_2',['LinearBackoffSec',['../df/df5/namespacemal__toolkit.html#ab0ef180ee9423603d6ae428627f69e41',1,'mal_toolkit']]],
+  ['linearbackoffus_3',['LinearBackoffUs',['../df/df5/namespacemal__toolkit.html#aecdd7c43646010f0d8a60d390787e9a5',1,'mal_toolkit']]]
 ];

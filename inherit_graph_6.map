@@ -1,7 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="25,5,145,46"/>
-<area shape="rect" id="Node000001" href="$d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets." alt="" coords="213,39,345,79"/>
-<area shape="poly" id="edge23_Node000000_Node000001" title=" " alt="" coords="160,36,213,45,212,50,159,41"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,71,165,111"/>
-<area shape="poly" id="edge24_Node000002_Node000001" title=" " alt="" coords="179,73,212,67,213,73,180,78"/>
+<area shape="rect" id="Node000000" href="$d0/dbc/classmal__toolkit_1_1_linear_backoff.html" title="A utility class for implementing linear backoff strategies." alt="" coords="5,5,169,46"/>
 </map>
