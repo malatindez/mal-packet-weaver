@@ -1,3 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$dd/de2/classsize__t.html" title=" " alt="" coords="5,5,59,31"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="233,71,352,111"/>
+<area shape="rect" id="Node000001" href="$d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets." alt="" coords="446,39,578,79"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="366,78,445,66,446,71,367,83"/>
+<area shape="rect" id="Node000003" href="$d1/dd3/classmal__toolkit_1_1non__copyable.html" title="A class that can&#39;t be copied." alt="" coords="5,102,165,128"/>
+<area shape="rect" id="Node000004" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="226,136,359,177"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="167,129,226,141,225,146,166,134"/>
+<area shape="rect" id="Node000002" href="$d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html" title="A class that can&#39;t be copied neither moved." alt="" coords="213,5,372,46"/>
+<area shape="poly" id="edge7_Node000003_Node000002" title=" " alt="" coords="128,93,212,57,241,44,243,49,214,61,131,98"/>
+<area shape="rect" id="Node000005" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class." alt="" coords="420,136,603,177"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="373,154,419,154,419,159,373,159"/>
+<area shape="poly" id="edge8_Node000002_Node000001" title=" " alt="" coords="387,37,445,46,445,52,386,43"/>
+<area shape="rect" id="Node000006" href="$db/d86/classmal__toolkit_1_1non__movable.html" title="A class that can&#39;t be moved." alt="" coords="6,13,164,39"/>
+<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="179,23,212,23,212,28,179,28"/>
 </map>

@@ -130,44 +130,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af59b79520bf2b85865a41583b1943319"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#af59b79520bf2b85865a41583b1943319">ExponentialBackoff</a> (ChronoType initial_delay, ChronoType max_delay, double multiplier=2.0, double divisor=2.0, double jitter_factor=0.2)</td></tr>
 <tr class="memdesc:af59b79520bf2b85865a41583b1943319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to initialize the exponential backoff strategy.  <br /></td></tr>
 <tr class="separator:af59b79520bf2b85865a41583b1943319"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa83694a9b15273a1abbf95722b71fcca"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#aa83694a9b15273a1abbf95722b71fcca">decrease_delay</a> () noexcept</td></tr>
-<tr class="memdesc:aa83694a9b15273a1abbf95722b71fcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the backoff delay using divisor factor.  <br /></td></tr>
-<tr class="separator:aa83694a9b15273a1abbf95722b71fcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a161c6f3c2d6e611ec15e3c6511182ec8"><td class="memItemLeft" align="right" valign="top">constexpr ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8">get_current_delay</a> () noexcept</td></tr>
 <tr class="memdesc:a161c6f3c2d6e611ec15e3c6511182ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current backoff delay.  <br /></td></tr>
 <tr class="separator:a161c6f3c2d6e611ec15e3c6511182ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9374a1e0241fcbae8c9fa4d7c3175f8"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8">increase_delay</a> () noexcept</td></tr>
 <tr class="memdesc:ad9374a1e0241fcbae8c9fa4d7c3175f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the backoff delay using exponential factor.  <br /></td></tr>
 <tr class="separator:ad9374a1e0241fcbae8c9fa4d7c3175f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83694a9b15273a1abbf95722b71fcca"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#aa83694a9b15273a1abbf95722b71fcca">decrease_delay</a> () noexcept</td></tr>
+<tr class="memdesc:aa83694a9b15273a1abbf95722b71fcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the backoff delay using divisor factor.  <br /></td></tr>
+<tr class="separator:aa83694a9b15273a1abbf95722b71fcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f251f1d02f4d8f80ad682b09db23d4"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a93f251f1d02f4d8f80ad682b09db23d4">reset_delay</a> () noexcept</td></tr>
 <tr class="memdesc:a93f251f1d02f4d8f80ad682b09db23d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the backoff delay to its initial value.  <br /></td></tr>
 <tr class="separator:a93f251f1d02f4d8f80ad682b09db23d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af3b554b21402458d2fe70da34b4c9b5b"><td class="memItemLeft" align="right" valign="top">ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#af3b554b21402458d2fe70da34b4c9b5b">current_delay_</a></td></tr>
-<tr class="memdesc:af3b554b21402458d2fe70da34b4c9b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current backoff delay.  <br /></td></tr>
-<tr class="separator:af3b554b21402458d2fe70da34b4c9b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a420490b45fe95f110eef58b70025e341"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a420490b45fe95f110eef58b70025e341">divisor_</a></td></tr>
-<tr class="memdesc:a420490b45fe95f110eef58b70025e341"><td class="mdescLeft">&#160;</td><td class="mdescRight">The factor by which the delay is divided when decreasing the delay.  <br /></td></tr>
-<tr class="separator:a420490b45fe95f110eef58b70025e341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8a7f7822b0a4fd6c23a8ceee1ec7efe"><td class="memItemLeft" align="right" valign="top">const ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#af8a7f7822b0a4fd6c23a8ceee1ec7efe">initial_delay_</a></td></tr>
 <tr class="memdesc:af8a7f7822b0a4fd6c23a8ceee1ec7efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial delay before the first retry.  <br /></td></tr>
 <tr class="separator:af8a7f7822b0a4fd6c23a8ceee1ec7efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc32cb61cfb1e088bcf26f11557180f"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a2dc32cb61cfb1e088bcf26f11557180f">jitter_factor_</a></td></tr>
-<tr class="separator:a2dc32cb61cfb1e088bcf26f11557180f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71e105d0cdf947d433bfc0e4bb7f1b7b"><td class="memItemLeft" align="right" valign="top">const ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a71e105d0cdf947d433bfc0e4bb7f1b7b">max_delay_</a></td></tr>
 <tr class="memdesc:a71e105d0cdf947d433bfc0e4bb7f1b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum delay allowed between retries.  <br /></td></tr>
 <tr class="separator:a71e105d0cdf947d433bfc0e4bb7f1b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38c878210aa4d564d35ac3fc45ca091e"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a38c878210aa4d564d35ac3fc45ca091e">multiplier_</a></td></tr>
 <tr class="memdesc:a38c878210aa4d564d35ac3fc45ca091e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The factor by which the delay is multiplied after each retry.  <br /></td></tr>
 <tr class="separator:a38c878210aa4d564d35ac3fc45ca091e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a130280af92464fdd4f63fc5f98ccd261"><td class="memItemLeft" align="right" valign="top">std::default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a130280af92464fdd4f63fc5f98ccd261">rng_</a></td></tr>
-<tr class="memdesc:a130280af92464fdd4f63fc5f98ccd261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random number generator engine.  <br /></td></tr>
-<tr class="separator:a130280af92464fdd4f63fc5f98ccd261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420490b45fe95f110eef58b70025e341"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a420490b45fe95f110eef58b70025e341">divisor_</a></td></tr>
+<tr class="memdesc:a420490b45fe95f110eef58b70025e341"><td class="mdescLeft">&#160;</td><td class="mdescRight">The factor by which the delay is divided when decreasing the delay.  <br /></td></tr>
+<tr class="separator:a420490b45fe95f110eef58b70025e341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc32cb61cfb1e088bcf26f11557180f"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a2dc32cb61cfb1e088bcf26f11557180f">jitter_factor_</a></td></tr>
+<tr class="separator:a2dc32cb61cfb1e088bcf26f11557180f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbe0f7c1f07fb740b1c69eff10924261"><td class="memItemLeft" align="right" valign="top">std::uniform_real_distribution&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#acbe0f7c1f07fb740b1c69eff10924261">uniform_dist_</a></td></tr>
 <tr class="memdesc:acbe0f7c1f07fb740b1c69eff10924261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniform distribution for generating jitter.  <br /></td></tr>
 <tr class="separator:acbe0f7c1f07fb740b1c69eff10924261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b554b21402458d2fe70da34b4c9b5b"><td class="memItemLeft" align="right" valign="top">ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#af3b554b21402458d2fe70da34b4c9b5b">current_delay_</a></td></tr>
+<tr class="memdesc:af3b554b21402458d2fe70da34b4c9b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current backoff delay.  <br /></td></tr>
+<tr class="separator:af3b554b21402458d2fe70da34b4c9b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130280af92464fdd4f63fc5f98ccd261"><td class="memItemLeft" align="right" valign="top">std::default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a130280af92464fdd4f63fc5f98ccd261">rng_</a></td></tr>
+<tr class="memdesc:a130280af92464fdd4f63fc5f98ccd261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random number generator engine.  <br /></td></tr>
+<tr class="separator:a130280af92464fdd4f63fc5f98ccd261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename ChronoType&gt;<br />
@@ -625,7 +625,7 @@ template&lt;typename ChronoType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></li><li class="navelem"><a class="el" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 11:42:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 11:44:32 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

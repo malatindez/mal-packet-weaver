@@ -127,9 +127,6 @@ Collaboration diagram for mal_packet_weaver::packet::PacketFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a80189703c0b33b45ad1b5e132bf91b0b"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a80189703c0b33b45ad1b5e132bf91b0b">Deserialize</a> (const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">mal_toolkit::ByteView</a> &amp;bytearray, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a> packet_type)</td></tr>
-<tr class="memdesc:a80189703c0b33b45ad1b5e132bf91b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a byte view into a unique pointer of the specified packet type.  <br /></td></tr>
-<tr class="separator:a80189703c0b33b45ad1b5e132bf91b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2434d336c0c27192592cd3cbc1320fdd"><td class="memTemplParams" colspan="2">template&lt;IsPacket PacketType&gt; </td></tr>
 <tr class="memitem:a2434d336c0c27192592cd3cbc1320fdd"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a2434d336c0c27192592cd3cbc1320fdd">RegisterDeserializer</a> ()</td></tr>
 <tr class="memdesc:a2434d336c0c27192592cd3cbc1320fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a packet deserializer function for a specific PacketType.  <br /></td></tr>
@@ -137,6 +134,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aefe02e1a7968a53a2e5cdf89f21f7c12"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#aefe02e1a7968a53a2e5cdf89f21f7c12">RegisterDeserializer</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a> packet_id, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a91b7421df3f817652c8cf5ed4d4afbe1">PacketDeserializeFunc</a> const &amp;factory)</td></tr>
 <tr class="memdesc:aefe02e1a7968a53a2e5cdf89f21f7c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a packet deserializer function for a specific packet ID.  <br /></td></tr>
 <tr class="separator:aefe02e1a7968a53a2e5cdf89f21f7c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80189703c0b33b45ad1b5e132bf91b0b"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a80189703c0b33b45ad1b5e132bf91b0b">Deserialize</a> (const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">mal_toolkit::ByteView</a> &amp;bytearray, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a> packet_type)</td></tr>
+<tr class="memdesc:a80189703c0b33b45ad1b5e132bf91b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a byte view into a unique pointer of the specified packet type.  <br /></td></tr>
+<tr class="separator:a80189703c0b33b45ad1b5e132bf91b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -326,7 +326,7 @@ template&lt;IsPacket PacketType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../d9/d93/namespacemal__packet__weaver_1_1packet.html">packet</a></li><li class="navelem"><a class="el" href="../../d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html">PacketFactory</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 11:42:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 11:44:32 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

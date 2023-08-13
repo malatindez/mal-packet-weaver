@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="db/dda/structmal__toolkit_1_1return__type.html" target="_top" xlink:title="Extracts the return type of a function or function pointer.">
+<g id="a_Node000000"><a xlink:href="db/d8f/classmal__toolkit_1_1_timer.html" target="_top" xlink:title="A simple timer class for measuring elapsed time using various clock types.">
 <polygon fill="white" stroke="#666666" points="90.25,-30.5 0,-30.5 0,0 90.25,0 90.25,-30.5"/>
-<text text-anchor="start" x="8" y="-17" font-family="Times,serif" font-size="10.00">mal_toolkit::return</text>
-<text text-anchor="middle" x="45.12" y="-5.75" font-family="Times,serif" font-size="10.00">_type&lt; T &gt;</text>
+<text text-anchor="start" x="8" y="-17" font-family="Times,serif" font-size="10.00">mal_toolkit::Timer</text>
+<text text-anchor="middle" x="45.12" y="-5.75" font-family="Times,serif" font-size="10.00">&lt; clock &gt;</text>
 </a>
 </g>
 </g>

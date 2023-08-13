@@ -135,34 +135,6 @@ Collaboration diagram for mal_packet_weaver::ByteArray:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a355cabb7668b5e24f03d5c016d79faef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires (sizeof(T) == sizeof(std::byte))</td></tr>
-<tr class="memitem:a355cabb7668b5e24f03d5c016d79faef"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a355cabb7668b5e24f03d5c016d79faef">append</a> (const std::basic_string&lt; T &gt; &amp;other)</td></tr>
-<tr class="memdesc:a355cabb7668b5e24f03d5c016d79faef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a string of data to the byte array.  <br /></td></tr>
-<tr class="separator:a355cabb7668b5e24f03d5c016d79faef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80a0d8aec6f878e88d717e58a957942c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires (sizeof(T) == sizeof(std::byte))</td></tr>
-<tr class="memitem:a80a0d8aec6f878e88d717e58a957942c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a80a0d8aec6f878e88d717e58a957942c">append</a> (const std::basic_string_view&lt; T &gt; &amp;other)</td></tr>
-<tr class="memdesc:a80a0d8aec6f878e88d717e58a957942c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a string view of data to the byte array.  <br /></td></tr>
-<tr class="separator:a80a0d8aec6f878e88d717e58a957942c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc429e6d6f79e25d384e6c04e0b044bb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires (sizeof(T) == sizeof(std::byte))</td></tr>
-<tr class="memitem:afc429e6d6f79e25d384e6c04e0b044bb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#afc429e6d6f79e25d384e6c04e0b044bb">append</a> (const std::span&lt; T &gt; &amp;other)</td></tr>
-<tr class="memdesc:afc429e6d6f79e25d384e6c04e0b044bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a span of data to the byte array.  <br /></td></tr>
-<tr class="separator:afc429e6d6f79e25d384e6c04e0b044bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256ebfbd5b135cd6ba19b5a976eadaf4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires (sizeof(T) == sizeof(std::byte))</td></tr>
-<tr class="memitem:a256ebfbd5b135cd6ba19b5a976eadaf4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a256ebfbd5b135cd6ba19b5a976eadaf4">append</a> (const std::vector&lt; T &gt; &amp;other)</td></tr>
-<tr class="memdesc:a256ebfbd5b135cd6ba19b5a976eadaf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a vector of data to the byte array.  <br /></td></tr>
-<tr class="separator:a256ebfbd5b135cd6ba19b5a976eadaf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac91eac3686b7789fa5e7276992f55e30"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second &gt; </td></tr>
-<tr class="memitem:ac91eac3686b7789fa5e7276992f55e30"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#ac91eac3686b7789fa5e7276992f55e30">append</a> (First &amp;&amp;first, typename Second &amp;&amp;second)</td></tr>
-<tr class="memdesc:ac91eac3686b7789fa5e7276992f55e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append two data sources to the byte array.  <br /></td></tr>
-<tr class="separator:ac91eac3686b7789fa5e7276992f55e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed36512e62b9d6d8e45aef241339888b"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second , typename... Args&gt; </td></tr>
-<tr class="memitem:aed36512e62b9d6d8e45aef241339888b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#aed36512e62b9d6d8e45aef241339888b">append</a> (First &amp;&amp;first, typename Second &amp;&amp;second, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:aed36512e62b9d6d8e45aef241339888b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append multiple data sources to the byte array.  <br /></td></tr>
-<tr class="separator:aed36512e62b9d6d8e45aef241339888b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ce0c445aa4f44df9f44ddcfe8bff0ef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5ce0c445aa4f44df9f44ddcfe8bff0ef"><td class="memTemplItemLeft" align="right" valign="top">constexpr T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a5ce0c445aa4f44df9f44ddcfe8bff0ef">as</a> ()</td></tr>
 <tr class="memdesc:a5ce0c445aa4f44df9f44ddcfe8bff0ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the <a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a> to a typed pointer.  <br /></td></tr>
@@ -174,12 +146,40 @@ requires (sizeof(T) == sizeof(std::byte))</td></tr>
 <tr class="memitem:a4bd9b7983f87ef6731486a64be3e5ecb"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">ByteView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a4bd9b7983f87ef6731486a64be3e5ecb">as_view</a> () const</td></tr>
 <tr class="memdesc:a4bd9b7983f87ef6731486a64be3e5ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the <a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a> to a <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a>.  <br /></td></tr>
 <tr class="separator:a4bd9b7983f87ef6731486a64be3e5ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab342b3733cbf77d72b28859c67cf7100"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">ByteView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#ab342b3733cbf77d72b28859c67cf7100">view</a> (<a class="el" href="../../dd/de2/classsize__t.html">size_t</a> from, <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> length) const</td></tr>
-<tr class="memdesc:ab342b3733cbf77d72b28859c67cf7100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> of a subsequence of the byte array.  <br /></td></tr>
-<tr class="separator:ab342b3733cbf77d72b28859c67cf7100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed36512e62b9d6d8e45aef241339888b"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second , typename... Args&gt; </td></tr>
+<tr class="memitem:aed36512e62b9d6d8e45aef241339888b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#aed36512e62b9d6d8e45aef241339888b">append</a> (First &amp;&amp;first, typename Second &amp;&amp;second, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:aed36512e62b9d6d8e45aef241339888b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append multiple data sources to the byte array.  <br /></td></tr>
+<tr class="separator:aed36512e62b9d6d8e45aef241339888b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac91eac3686b7789fa5e7276992f55e30"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second &gt; </td></tr>
+<tr class="memitem:ac91eac3686b7789fa5e7276992f55e30"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#ac91eac3686b7789fa5e7276992f55e30">append</a> (First &amp;&amp;first, typename Second &amp;&amp;second)</td></tr>
+<tr class="memdesc:ac91eac3686b7789fa5e7276992f55e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append two data sources to the byte array.  <br /></td></tr>
+<tr class="separator:ac91eac3686b7789fa5e7276992f55e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256ebfbd5b135cd6ba19b5a976eadaf4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (sizeof(T) == sizeof(std::byte))</td></tr>
+<tr class="memitem:a256ebfbd5b135cd6ba19b5a976eadaf4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a256ebfbd5b135cd6ba19b5a976eadaf4">append</a> (const std::vector&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:a256ebfbd5b135cd6ba19b5a976eadaf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a vector of data to the byte array.  <br /></td></tr>
+<tr class="separator:a256ebfbd5b135cd6ba19b5a976eadaf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc429e6d6f79e25d384e6c04e0b044bb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (sizeof(T) == sizeof(std::byte))</td></tr>
+<tr class="memitem:afc429e6d6f79e25d384e6c04e0b044bb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#afc429e6d6f79e25d384e6c04e0b044bb">append</a> (const std::span&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:afc429e6d6f79e25d384e6c04e0b044bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a span of data to the byte array.  <br /></td></tr>
+<tr class="separator:afc429e6d6f79e25d384e6c04e0b044bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355cabb7668b5e24f03d5c016d79faef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (sizeof(T) == sizeof(std::byte))</td></tr>
+<tr class="memitem:a355cabb7668b5e24f03d5c016d79faef"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a355cabb7668b5e24f03d5c016d79faef">append</a> (const std::basic_string&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:a355cabb7668b5e24f03d5c016d79faef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a string of data to the byte array.  <br /></td></tr>
+<tr class="separator:a355cabb7668b5e24f03d5c016d79faef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a0d8aec6f878e88d717e58a957942c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (sizeof(T) == sizeof(std::byte))</td></tr>
+<tr class="memitem:a80a0d8aec6f878e88d717e58a957942c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a80a0d8aec6f878e88d717e58a957942c">append</a> (const std::basic_string_view&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:a80a0d8aec6f878e88d717e58a957942c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a string view of data to the byte array.  <br /></td></tr>
+<tr class="separator:a80a0d8aec6f878e88d717e58a957942c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88aac09c49f5b82796a94736781626c7"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">ByteView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#a88aac09c49f5b82796a94736781626c7">view</a> (<a class="el" href="../../dd/de2/classsize__t.html">size_t</a> from=0) const</td></tr>
 <tr class="memdesc:a88aac09c49f5b82796a94736781626c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> of a subsequence of the byte array.  <br /></td></tr>
 <tr class="separator:a88aac09c49f5b82796a94736781626c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab342b3733cbf77d72b28859c67cf7100"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html">ByteView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html#ab342b3733cbf77d72b28859c67cf7100">view</a> (<a class="el" href="../../dd/de2/classsize__t.html">size_t</a> from, <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> length) const</td></tr>
+<tr class="memdesc:ab342b3733cbf77d72b28859c67cf7100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="../../d7/d41/structmal__packet__weaver_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> of a subsequence of the byte array.  <br /></td></tr>
+<tr class="separator:ab342b3733cbf77d72b28859c67cf7100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -970,7 +970,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../d4/d9d/structmal__packet__weaver_1_1_byte_array.html">ByteArray</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 11:42:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 11:44:32 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

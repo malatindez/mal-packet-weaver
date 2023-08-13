@@ -1,7 +1,7 @@
 var byte_helper_8hpp =
 [
-    [ "mal_toolkit::ByteArray", "d8/d99/structmal__toolkit_1_1_byte_array.html", "d8/d99/structmal__toolkit_1_1_byte_array" ],
     [ "mal_toolkit::ByteView", "d8/dab/structmal__toolkit_1_1_byte_view.html", "d8/dab/structmal__toolkit_1_1_byte_view" ],
+    [ "mal_toolkit::ByteArray", "d8/d99/structmal__toolkit_1_1_byte_array.html", "d8/d99/structmal__toolkit_1_1_byte_array" ],
     [ "bytes_to_int16", "da/df5/byte-helper_8hpp.html#a3d550b1904e1c7ceb2a5994c4037a99c", null ],
     [ "bytes_to_int32", "da/df5/byte-helper_8hpp.html#a29596ae1fbeb6ee4ee74aa86c57214c9", null ],
     [ "bytes_to_int64", "da/df5/byte-helper_8hpp.html#a8f2aad558818fc39442478c3436d5a10", null ],
