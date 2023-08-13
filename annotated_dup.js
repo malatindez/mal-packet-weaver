@@ -62,7 +62,7 @@ var annotated_dup =
     [ "std", "d8/dcc/namespacestd.html", [
       [ "hash< mal_toolkit::uuid::UUID >", "db/d27/structstd_1_1hash_3_01mal__toolkit_1_1uuid_1_1_u_u_i_d_01_4.html", "db/d27/structstd_1_1hash_3_01mal__toolkit_1_1uuid_1_1_u_u_i_d_01_4" ]
     ] ],
-    [ "Entry", "d7/da8/struct_measurer_1_1_entry.html", null ],
     [ "Hash", "d2/d7a/struct_hash.html", null ],
+    [ "Entry", "d7/da8/struct_measurer_1_1_entry.html", null ],
     [ "type_at", "de/df0/structparameter__pack__info_1_1type__at.html", null ]
 ];

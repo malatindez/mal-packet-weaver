@@ -142,15 +142,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a75ea1122ef872b467e5113888c1e5305"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a75ea1122ef872b467e5113888c1e5305">Measurer</a> (std::string_view s=&quot;Measurer&quot;, <a class="el" href="../../d9/db9/classbool.html">bool</a> <a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#aa17ead24bc82edac3a199ee04dc2aad6">log_automatically</a>=true, <a class="el" href="../../d4/dc3/classfloat.html">float</a> <a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a221fa6b46566b3e4a4174391023cbad9">time_to_flush</a>=30, std::source_location location=std::source_location::current())</td></tr>
 <tr class="memdesc:a75ea1122ef872b467e5113888c1e5305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html" title="A class for measuring and logging the execution time of functions.">Measurer</a> object.  <br /></td></tr>
 <tr class="separator:a75ea1122ef872b467e5113888c1e5305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada023b99359b867839efcb6c88479aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#ada023b99359b867839efcb6c88479aa9">begin</a> ()</td></tr>
-<tr class="memdesc:ada023b99359b867839efcb6c88479aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start measuring execution time.  <br /></td></tr>
-<tr class="separator:ada023b99359b867839efcb6c88479aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2623d00cfb8ce6dd69f6f0130613159c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a2623d00cfb8ce6dd69f6f0130613159c">end</a> ()</td></tr>
-<tr class="memdesc:a2623d00cfb8ce6dd69f6f0130613159c"><td class="mdescLeft">&#160;</td><td class="mdescRight">End measurement and log the result.  <br /></td></tr>
-<tr class="separator:a2623d00cfb8ce6dd69f6f0130613159c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea3e10503e8198a074f72c13e3615a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#aea3e10503e8198a074f72c13e3615a52">log</a> ()</td></tr>
-<tr class="memdesc:aea3e10503e8198a074f72c13e3615a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log the accumulated measurements.  <br /></td></tr>
-<tr class="separator:aea3e10503e8198a074f72c13e3615a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e5fa725628ac9b80e0f9536ff08167"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a80e5fa725628ac9b80e0f9536ff08167">amount_of_calls</a> (<a class="el" href="../../d4/dc3/classfloat.html">float</a> seconds)</td></tr>
+<tr class="memdesc:a80e5fa725628ac9b80e0f9536ff08167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the amount of function calls within a specific time interval.  <br /></td></tr>
+<tr class="separator:a80e5fa725628ac9b80e0f9536ff08167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e7b2ae124cc9e9309760afeb98fe44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#ab4e7b2ae124cc9e9309760afeb98fe44">avg</a> (const <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> last_n_entries=std::numeric_limits&lt; <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> &gt;::max())</td></tr>
 <tr class="memdesc:ab4e7b2ae124cc9e9309760afeb98fe44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the average execution time of the last N entries.  <br /></td></tr>
 <tr class="separator:ab4e7b2ae124cc9e9309760afeb98fe44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,45 +154,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c3f6e94c61e33979ad663cb7f65d4cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a5c3f6e94c61e33979ad663cb7f65d4cc">avg_over_the_last_limited</a> (const <a class="el" href="../../d4/dc3/classfloat.html">float</a> seconds)</td></tr>
 <tr class="memdesc:a5c3f6e94c61e33979ad663cb7f65d4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the average execution time over a specific time interval with a limit.  <br /></td></tr>
 <tr class="separator:a5c3f6e94c61e33979ad663cb7f65d4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80e5fa725628ac9b80e0f9536ff08167"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a80e5fa725628ac9b80e0f9536ff08167">amount_of_calls</a> (<a class="el" href="../../d4/dc3/classfloat.html">float</a> seconds)</td></tr>
-<tr class="memdesc:a80e5fa725628ac9b80e0f9536ff08167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the amount of function calls within a specific time interval.  <br /></td></tr>
-<tr class="separator:a80e5fa725628ac9b80e0f9536ff08167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada023b99359b867839efcb6c88479aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#ada023b99359b867839efcb6c88479aa9">begin</a> ()</td></tr>
+<tr class="memdesc:ada023b99359b867839efcb6c88479aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start measuring execution time.  <br /></td></tr>
+<tr class="separator:ada023b99359b867839efcb6c88479aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a484f3d94e1f8e838512e8805dd787491"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a484f3d94e1f8e838512e8805dd787491">elapsed</a> ()</td></tr>
 <tr class="memdesc:a484f3d94e1f8e838512e8805dd787491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total elapsed time since the start of the measurement.  <br /></td></tr>
 <tr class="separator:a484f3d94e1f8e838512e8805dd787491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2623d00cfb8ce6dd69f6f0130613159c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a2623d00cfb8ce6dd69f6f0130613159c">end</a> ()</td></tr>
+<tr class="memdesc:a2623d00cfb8ce6dd69f6f0130613159c"><td class="mdescLeft">&#160;</td><td class="mdescRight">End measurement and log the result.  <br /></td></tr>
+<tr class="separator:a2623d00cfb8ce6dd69f6f0130613159c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3e10503e8198a074f72c13e3615a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#aea3e10503e8198a074f72c13e3615a52">log</a> ()</td></tr>
+<tr class="memdesc:aea3e10503e8198a074f72c13e3615a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log the accumulated measurements.  <br /></td></tr>
+<tr class="separator:aea3e10503e8198a074f72c13e3615a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a221fa6b46566b3e4a4174391023cbad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a221fa6b46566b3e4a4174391023cbad9">time_to_flush</a> = 30</td></tr>
-<tr class="memdesc:a221fa6b46566b3e4a4174391023cbad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interval in seconds for automatic log flushing.  <br /></td></tr>
-<tr class="separator:a221fa6b46566b3e4a4174391023cbad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd76064808f063794e022a5aa01d9176"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#abd76064808f063794e022a5aa01d9176">maximum_entries</a></td></tr>
-<tr class="memdesc:abd76064808f063794e022a5aa01d9176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of measurement entries.  <br /></td></tr>
-<tr class="separator:abd76064808f063794e022a5aa01d9176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa17ead24bc82edac3a199ee04dc2aad6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#aa17ead24bc82edac3a199ee04dc2aad6">log_automatically</a> = true</td></tr>
 <tr class="memdesc:aa17ead24bc82edac3a199ee04dc2aad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if measurements are logged automatically.  <br /></td></tr>
 <tr class="separator:aa17ead24bc82edac3a199ee04dc2aad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd76064808f063794e022a5aa01d9176"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#abd76064808f063794e022a5aa01d9176">maximum_entries</a></td></tr>
+<tr class="memdesc:abd76064808f063794e022a5aa01d9176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of measurement entries.  <br /></td></tr>
+<tr class="separator:abd76064808f063794e022a5aa01d9176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a221fa6b46566b3e4a4174391023cbad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dc3/classfloat.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a221fa6b46566b3e4a4174391023cbad9">time_to_flush</a> = 30</td></tr>
+<tr class="memdesc:a221fa6b46566b3e4a4174391023cbad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interval in seconds for automatic log flushing.  <br /></td></tr>
+<tr class="separator:a221fa6b46566b3e4a4174391023cbad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a14902cec5bb51484cf5c5b6d1378004d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a14902cec5bb51484cf5c5b6d1378004d">output</a></td></tr>
-<tr class="memdesc:a14902cec5bb51484cf5c5b6d1378004d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string identifier for the measurer.  <br /></td></tr>
-<tr class="separator:a14902cec5bb51484cf5c5b6d1378004d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab59da069393137f4297279395e2194dc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/ddb/structmal__toolkit_1_1_measurer_1_1_entry.html">Entry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#ab59da069393137f4297279395e2194dc">entries</a></td></tr>
 <tr class="memdesc:ab59da069393137f4297279395e2194dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of measurement entries.  <br /></td></tr>
 <tr class="separator:ab59da069393137f4297279395e2194dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb052aa098fdf07d3f6a3962464828de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#adb052aa098fdf07d3f6a3962464828de">index</a> = 0</td></tr>
-<tr class="memdesc:adb052aa098fdf07d3f6a3962464828de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current index in the entries vector.  <br /></td></tr>
-<tr class="separator:adb052aa098fdf07d3f6a3962464828de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42764823fc67a09f243e462dae776338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html">Timer</a>&lt; clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a42764823fc67a09f243e462dae776338">flush</a></td></tr>
-<tr class="memdesc:a42764823fc67a09f243e462dae776338"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html" title="A simple timer class for measuring elapsed time using various clock types.">Timer</a> for automatic log flushing.  <br /></td></tr>
-<tr class="separator:a42764823fc67a09f243e462dae776338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7974eb2fd010cc78ac37b61a73a08660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html">Timer</a>&lt; clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a7974eb2fd010cc78ac37b61a73a08660">measure</a></td></tr>
-<tr class="memdesc:a7974eb2fd010cc78ac37b61a73a08660"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html" title="A simple timer class for measuring elapsed time using various clock types.">Timer</a> for measuring execution time.  <br /></td></tr>
-<tr class="separator:a7974eb2fd010cc78ac37b61a73a08660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3999891d74d3592e6e9482391ef7da17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html">Timer</a>&lt; clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a3999891d74d3592e6e9482391ef7da17">entry_time</a></td></tr>
 <tr class="memdesc:a3999891d74d3592e6e9482391ef7da17"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html" title="A simple timer class for measuring elapsed time using various clock types.">Timer</a> for tracking entry times.  <br /></td></tr>
 <tr class="separator:a3999891d74d3592e6e9482391ef7da17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42764823fc67a09f243e462dae776338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html">Timer</a>&lt; clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a42764823fc67a09f243e462dae776338">flush</a></td></tr>
+<tr class="memdesc:a42764823fc67a09f243e462dae776338"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html" title="A simple timer class for measuring elapsed time using various clock types.">Timer</a> for automatic log flushing.  <br /></td></tr>
+<tr class="separator:a42764823fc67a09f243e462dae776338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb052aa098fdf07d3f6a3962464828de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#adb052aa098fdf07d3f6a3962464828de">index</a> = 0</td></tr>
+<tr class="memdesc:adb052aa098fdf07d3f6a3962464828de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current index in the entries vector.  <br /></td></tr>
+<tr class="separator:adb052aa098fdf07d3f6a3962464828de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7974eb2fd010cc78ac37b61a73a08660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html">Timer</a>&lt; clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a7974eb2fd010cc78ac37b61a73a08660">measure</a></td></tr>
+<tr class="memdesc:a7974eb2fd010cc78ac37b61a73a08660"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d8f/classmal__toolkit_1_1_timer.html" title="A simple timer class for measuring elapsed time using various clock types.">Timer</a> for measuring execution time.  <br /></td></tr>
+<tr class="separator:a7974eb2fd010cc78ac37b61a73a08660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14902cec5bb51484cf5c5b6d1378004d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html#a14902cec5bb51484cf5c5b6d1378004d">output</a></td></tr>
+<tr class="memdesc:a14902cec5bb51484cf5c5b6d1378004d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string identifier for the measurer.  <br /></td></tr>
+<tr class="separator:a14902cec5bb51484cf5c5b6d1378004d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class clock&gt;<br />
@@ -828,7 +828,7 @@ template&lt;class clock &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></li><li class="navelem"><a class="el" href="../../d1/d3a/structmal__toolkit_1_1_measurer.html">Measurer</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 11:09:26 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 11:42:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

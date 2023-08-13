@@ -130,21 +130,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0879a0b89197b5ca135b29ef945b5b3"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#ac0879a0b89197b5ca135b29ef945b5b3">LinearBackoff</a> (ChronoType initial_delay, ChronoType max_delay, ChronoType step)</td></tr>
 <tr class="memdesc:ac0879a0b89197b5ca135b29ef945b5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to initialize the linear backoff strategy.  <br /></td></tr>
 <tr class="separator:ac0879a0b89197b5ca135b29ef945b5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc0fcf50890867c2e71cce63811413d"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a9dc0fcf50890867c2e71cce63811413d">decrease_delay</a> () noexcept</td></tr>
+<tr class="memdesc:a9dc0fcf50890867c2e71cce63811413d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the backoff delay using the specified step.  <br /></td></tr>
+<tr class="separator:a9dc0fcf50890867c2e71cce63811413d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5caf2535485109be06720d58da094f8f"><td class="memItemLeft" align="right" valign="top">constexpr ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a5caf2535485109be06720d58da094f8f">get_current_delay</a> () const noexcept</td></tr>
 <tr class="memdesc:a5caf2535485109be06720d58da094f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current backoff delay.  <br /></td></tr>
 <tr class="separator:a5caf2535485109be06720d58da094f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a828b89ee778c3d16771cee978763c4cd"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a828b89ee778c3d16771cee978763c4cd">increase_delay</a> () noexcept</td></tr>
 <tr class="memdesc:a828b89ee778c3d16771cee978763c4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the backoff delay using the specified step.  <br /></td></tr>
 <tr class="separator:a828b89ee778c3d16771cee978763c4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dc0fcf50890867c2e71cce63811413d"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a9dc0fcf50890867c2e71cce63811413d">decrease_delay</a> () noexcept</td></tr>
-<tr class="memdesc:a9dc0fcf50890867c2e71cce63811413d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the backoff delay using the specified step.  <br /></td></tr>
-<tr class="separator:a9dc0fcf50890867c2e71cce63811413d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192862549e9b4e2b444ba4982f473f1a"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a192862549e9b4e2b444ba4982f473f1a">reset_delay</a> () noexcept</td></tr>
 <tr class="memdesc:a192862549e9b4e2b444ba4982f473f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the backoff delay to its initial value.  <br /></td></tr>
 <tr class="separator:a192862549e9b4e2b444ba4982f473f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a638ef36e78098aa8d7f53810cc877b65"><td class="memItemLeft" align="right" valign="top">ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a638ef36e78098aa8d7f53810cc877b65">current_delay_</a></td></tr>
+<tr class="memdesc:a638ef36e78098aa8d7f53810cc877b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current backoff delay.  <br /></td></tr>
+<tr class="separator:a638ef36e78098aa8d7f53810cc877b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62ce035cd2fc72c1958c285daccc621d"><td class="memItemLeft" align="right" valign="top">const ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a62ce035cd2fc72c1958c285daccc621d">initial_delay_</a></td></tr>
 <tr class="memdesc:a62ce035cd2fc72c1958c285daccc621d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial delay before the first retry.  <br /></td></tr>
 <tr class="separator:a62ce035cd2fc72c1958c285daccc621d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,9 +157,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a39edbb70a0bda059950c878163a5e8f8"><td class="memItemLeft" align="right" valign="top">const ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a39edbb70a0bda059950c878163a5e8f8">step_</a></td></tr>
 <tr class="memdesc:a39edbb70a0bda059950c878163a5e8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The increment step used to increase or decrease the delay.  <br /></td></tr>
 <tr class="separator:a39edbb70a0bda059950c878163a5e8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a638ef36e78098aa8d7f53810cc877b65"><td class="memItemLeft" align="right" valign="top">ChronoType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a638ef36e78098aa8d7f53810cc877b65">current_delay_</a></td></tr>
-<tr class="memdesc:a638ef36e78098aa8d7f53810cc877b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current backoff delay.  <br /></td></tr>
-<tr class="separator:a638ef36e78098aa8d7f53810cc877b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename ChronoType&gt;<br />
@@ -474,7 +474,7 @@ template&lt;typename ChronoType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></li><li class="navelem"><a class="el" href="../../d0/dbc/classmal__toolkit_1_1_linear_backoff.html">LinearBackoff</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 11:09:26 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Sun Aug 13 2023 11:42:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

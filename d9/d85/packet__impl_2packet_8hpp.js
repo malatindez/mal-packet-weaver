@@ -1,7 +1,7 @@
 var packet__impl_2packet_8hpp =
 [
-    [ "mal_packet_weaver::Packet", "d2/d9d/classmal__packet__weaver_1_1_packet.html", "d2/d9d/classmal__packet__weaver_1_1_packet" ],
     [ "mal_packet_weaver::DerivedPacket< PacketType >", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html", "dd/d2b/classmal__packet__weaver_1_1_derived_packet" ],
+    [ "mal_packet_weaver::Packet", "d2/d9d/classmal__packet__weaver_1_1_packet.html", "d2/d9d/classmal__packet__weaver_1_1_packet" ],
     [ "mal_packet_weaver::IsPacket", "dd/d19/conceptmal__packet__weaver_1_1_is_packet.html", null ],
     [ "PacketDeserializeFunc", "d9/d85/packet__impl_2packet_8hpp.html#a91b7421df3f817652c8cf5ed4d4afbe1", null ],
     [ "PacketID", "d9/d85/packet__impl_2packet_8hpp.html#acd76523faa7f79afa4a9ad4160e4a091", null ],
