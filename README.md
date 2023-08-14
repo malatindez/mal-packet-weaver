@@ -17,7 +17,6 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 - Extensible architecture for adding custom packet types and serialization formats.
 - Integration with logging through the use of spdlog.
 - Provides encryption interface in [mal_packet_weaver/crypto/openssl](mal_packet_weaver/crypto/openssl) (Optional)
-- Seamless integration with other libraries such as mal-toolkit.
 
 ## Installation
 
