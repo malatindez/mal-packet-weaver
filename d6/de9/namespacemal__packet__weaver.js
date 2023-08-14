@@ -15,13 +15,6 @@ var namespacemal__packet__weaver =
     [ "PacketReceiverFn", "d6/de9/namespacemal__packet__weaver.html#a2fe1e24598530a77a781144181b85f09", null ],
     [ "PacketSubsystemID", "d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0", null ],
     [ "UniquePacketID", "d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d", null ],
-    [ "Permission", "d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659bac", [
-      [ "ANY", "d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659baca8e1bde3c3d303163521522cf1d62f21f", null ],
-      [ "L1_NODE", "d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659baca5d2578fa00c9a9f417bdc1bd34df202b", null ],
-      [ "L2_CORE_NODE", "d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659bacad1ce2ab7a23b12161fa92cb316357529", null ],
-      [ "L2_PUBLIC_NODE", "d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659baca5b96cc48f9d6589732843680c1e21b3c", null ],
-      [ "L2_ADMIN_NODE", "d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659baca562c55c22eef282d3606ceea86b4bd1c", null ]
-    ] ],
     [ "await_future", "d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5", null ],
     [ "await_future", "d6/de9/namespacemal__packet__weaver.html#ab0496058ec5d421a33221ddcc2512acb", null ],
     [ "CreatePacketID", "d6/de9/namespacemal__packet__weaver.html#a6c0e59e082acc379a031b57d9b0e3d55", null ],

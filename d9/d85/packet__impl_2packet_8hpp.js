@@ -7,13 +7,6 @@ var packet__impl_2packet_8hpp =
     [ "PacketID", "d9/d85/packet__impl_2packet_8hpp.html#acd76523faa7f79afa4a9ad4160e4a091", null ],
     [ "PacketSubsystemID", "d9/d85/packet__impl_2packet_8hpp.html#a531c6d496f114157a3562ecbbe89e9e0", null ],
     [ "UniquePacketID", "d9/d85/packet__impl_2packet_8hpp.html#a55bbfecb837c31e7823aae457d86ef5d", null ],
-    [ "Permission", "d9/d85/packet__impl_2packet_8hpp.html#ac85056d274826db5c5d65260e0659bac", [
-      [ "ANY", "d9/d85/packet__impl_2packet_8hpp.html#ac85056d274826db5c5d65260e0659baca8e1bde3c3d303163521522cf1d62f21f", null ],
-      [ "L1_NODE", "d9/d85/packet__impl_2packet_8hpp.html#ac85056d274826db5c5d65260e0659baca5d2578fa00c9a9f417bdc1bd34df202b", null ],
-      [ "L2_CORE_NODE", "d9/d85/packet__impl_2packet_8hpp.html#ac85056d274826db5c5d65260e0659bacad1ce2ab7a23b12161fa92cb316357529", null ],
-      [ "L2_PUBLIC_NODE", "d9/d85/packet__impl_2packet_8hpp.html#ac85056d274826db5c5d65260e0659baca5b96cc48f9d6589732843680c1e21b3c", null ],
-      [ "L2_ADMIN_NODE", "d9/d85/packet__impl_2packet_8hpp.html#ac85056d274826db5c5d65260e0659baca562c55c22eef282d3606ceea86b4bd1c", null ]
-    ] ],
     [ "CreatePacketID", "d9/d85/packet__impl_2packet_8hpp.html#a6c0e59e082acc379a031b57d9b0e3d55", null ],
     [ "PacketSubsystemIDToUint32", "d9/d85/packet__impl_2packet_8hpp.html#a16cda5548aa8df9bb05c206e261fd235", null ],
     [ "UniquePacketIDToPacketID", "d9/d85/packet__impl_2packet_8hpp.html#a98a3d7d85ae7b2c9e865d45f6d450521", null ],
