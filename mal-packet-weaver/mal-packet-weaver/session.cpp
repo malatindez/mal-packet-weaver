@@ -91,7 +91,7 @@ namespace mal_packet_weaver
     {
         spdlog::trace("Async packet popping initiated.");
 
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 0.1);
         while (this->alive_)
         {
             std::unique_ptr<Packet> packet = pop_packet_now();
@@ -153,7 +153,7 @@ namespace mal_packet_weaver
 
     boost::asio::awaitable<std::shared_ptr<Session>> Session::get_shared_ptr(boost::asio::io_context &io)
     {
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);
 
         int it = 0;
         do
@@ -203,7 +203,7 @@ namespace mal_packet_weaver
             co_return;
         }
 
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);
         try
         {
             while (alive_)
@@ -271,7 +271,7 @@ namespace mal_packet_weaver
     {
         spdlog::debug("Starting async_packet_forger...");
 
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);
         std::shared_ptr<Session> session_lock = co_await get_shared_ptr(io);
         if (session_lock == nullptr)
         {
@@ -322,7 +322,7 @@ namespace mal_packet_weaver
 
                 while (!received_packets_.push(packet_data))
                 {
-                    boost::asio::steady_timer timer(io, std::chrono::microseconds(1000));
+                    boost::asio::steady_timer timer(io, std::chrono::microseconds(100));
                     co_await timer.async_wait(boost::asio::use_awaitable);
                     spdlog::trace("Waiting to push packet data to received_packets_...");
                 }

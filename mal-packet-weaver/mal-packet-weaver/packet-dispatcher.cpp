@@ -19,7 +19,7 @@ namespace mal_packet_weaver
 
     boost::asio::awaitable<std::shared_ptr<PacketDispatcher>> PacketDispatcher::get_shared_ptr()
     {
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);
 
         int it = 0;
         do
@@ -45,7 +45,7 @@ namespace mal_packet_weaver
     }
     boost::asio::awaitable<void> PacketDispatcher::Run()
     {
-        ExponentialBackoff backoff{ std::chrono::microseconds(1), std::chrono::microseconds(500), 2, 32, 0.1 };
+        ExponentialBackoff backoff{ std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1 };
         SteadyTimer timer;
         float min_handler_timestamp = std::numeric_limits<float>::max();
 
