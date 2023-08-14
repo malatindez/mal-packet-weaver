@@ -207,6 +207,8 @@ requires std::is_base_of_v&lt;<a class="el" href="../../d2/d9d/classmal__packet_
 <tr class="memitem:a94fdbf0ca2b8e735fc6352663bf14277"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html">PacketDispatcher</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a94fdbf0ca2b8e735fc6352663bf14277">dispatcher</a> ()</td></tr>
 <tr class="memdesc:a94fdbf0ca2b8e735fc6352663bf14277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the underlying packet dispatcher.  <br /></td></tr>
 <tr class="separator:a94fdbf0ca2b8e735fc6352663bf14277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aed586038ddcb1f075218de90e73b56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a1aed586038ddcb1f075218de90e73b56">Destroy</a> ()</td></tr>
+<tr class="separator:a1aed586038ddcb1f075218de90e73b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -485,6 +487,33 @@ template&lt;IsPacket DerivedPacket&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>boost::asio::awaitable&lt;std::unique_ptr&lt;DerivedPacket&gt;&gt; A unique pointer to the received packet, or nullptr if the timeout was reached or the filter condition was not satisfied. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00193">193</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1aed586038ddcb1f075218de90e73b56" name="a1aed586038ddcb1f075218de90e73b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aed586038ddcb1f075218de90e73b56">&#9670;&#160;</a></span>Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mal_packet_weaver::DispatcherSession::Destroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00483">483</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1280,7 +1309,7 @@ false if session was closed. </dd></dl>
 
 <p>The underlying packet dispatcher. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00486">486</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00491">491</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1306,7 +1335,7 @@ false if session was closed. </dd></dl>
 
 <p>Reference to the associated Boost.Asio io_context. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00484">484</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00489">489</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1361,7 @@ false if session was closed. </dd></dl>
 
 <p>The underlying session. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00485">485</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00490">490</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1345,7 +1374,7 @@ false if session was closed. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html">DispatcherSession</a></li>
-    <li class="footer">Generated on Mon Aug 14 2023 15:26:44 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 15:36:55 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

@@ -7,6 +7,7 @@ var classmal__packet__weaver_1_1_dispatcher_session =
     [ "alive", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a2f5f398804b1225c8862f099128bbb07", null ],
     [ "await_packet", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a4df9b40c8cd3ddc1d39efef599a630d5", null ],
     [ "await_packet", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ac2fa57ebe77fb8ff587769419237f195", null ],
+    [ "Destroy", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a1aed586038ddcb1f075218de90e73b56", null ],
     [ "dispatcher", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a94fdbf0ca2b8e735fc6352663bf14277", null ],
     [ "enqueue_filter_promise", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#acf98a5734884f56c2034306c65edc198", null ],
     [ "enqueue_packet", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#afc70ced2f8a219a629978f30b55b7dbf", null ],
