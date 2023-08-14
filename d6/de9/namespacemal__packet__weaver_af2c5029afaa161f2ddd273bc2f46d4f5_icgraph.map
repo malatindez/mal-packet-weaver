@@ -1,9 +1,13 @@
 <map id="mal_packet_weaver::await_future" name="mal_packet_weaver::await_future">
-<area shape="rect" id="Node000001" title="Awaiting an std::future with Boost.Asio integration." alt="" coords="654,13,787,54"/>
-<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be" title="Pops input packets from input queues to local maps for processing." alt="" coords="464,5,606,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="639,36,606,36,606,31,639,31"/>
-<area shape="rect" id="Node000003" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323" title="This function represents the main loop for running a task with exponential backoff and asynchronous I..." alt="" coords="271,13,416,54"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="449,36,416,36,416,31,449,31"/>
-<area shape="rect" id="Node000004" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac22bb2ccd532850a73766ce512b50082" title="Constructs a PacketDispatcher instance associated with the given io_context." alt="" coords="5,13,223,54"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="256,36,223,36,223,31,256,31"/>
+<area shape="rect" id="Node000001" title="Awaiting an std::future with Boost.Asio integration." alt="" coords="661,93,794,134"/>
+<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1e7e2c9e624018e4a1046297453e0596" title="Wait until the packet is registered in the dispatch system and return as soon as possible." alt="" coords="464,5,613,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="663,89,605,64,607,59,666,84"/>
+<area shape="rect" id="Node000003" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a5fa270876e67889a7524a186b297cd11" title="Wait until a packet satisfying the filter condition is registered in the dispatch system and return a..." alt="" coords="464,85,613,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="646,116,614,116,614,111,646,111"/>
+<area shape="rect" id="Node000004" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be" title="Pops input packets from input queues to local maps for processing." alt="" coords="468,165,610,221"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="666,142,607,167,605,162,663,137"/>
+<area shape="rect" id="Node000005" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323" title="This function represents the main loop for running a task with exponential backoff and asynchronous I..." alt="" coords="271,173,416,214"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="453,196,416,196,416,191,453,191"/>
+<area shape="rect" id="Node000006" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac22bb2ccd532850a73766ce512b50082" title="Constructs a PacketDispatcher instance associated with the given io_context." alt="" coords="5,173,223,214"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="256,196,223,196,223,191,256,191"/>
 </map>
