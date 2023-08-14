@@ -9,7 +9,7 @@ using namespace mal_packet_weaver;
 using namespace mal_packet_weaver::crypto;
 using namespace mal_packet_weaver::packet;
 
-constexpr int kAdditionalThreads = 1;
+constexpr int kAdditionalThreads = 0;
 
 boost::asio::awaitable<void> setup_encryption_for_session(DispatcherSession &dispatcher_session,
                                                           boost::asio::io_context &io,
@@ -67,12 +67,21 @@ void process_echo(mal_packet_weaver::Session &connection, std::unique_ptr<EchoPa
 
 int main()
 {
-    spdlog::set_level(spdlog::level::trace);
+    spdlog::set_level(spdlog::level::debug);
     RegisterDeserializersCrypto();
     RegisterDeserializersNetwork();
     boost::asio::io_context io_context;
     boost::asio::ip::tcp::socket socket(io_context);
-    socket.connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
+    try
+    {
+        socket.connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
+    }
+    catch(const std::exception& e)
+    {
+        spdlog::error("Couldn't establish connection: {}", e.what());
+        std::abort();
+    }
+    
     std::cout << "Connected to server." << std::endl;
     DispatcherSession dispatcher_session(io_context, std::move(socket));
     // For dispatcher_session you should explicitly declare parameters.

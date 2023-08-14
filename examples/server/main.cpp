@@ -14,7 +14,7 @@ using namespace mal_packet_weaver;
 using namespace mal_packet_weaver::crypto;
 using namespace mal_packet_weaver::packet;
 
-constexpr int kAdditionalThreads = 1;
+constexpr int kAdditionalThreads = 0;
 
 void process_echo(mal_packet_weaver::Session& connection, std::unique_ptr<EchoPacket>&& echo)
 {
@@ -58,13 +58,13 @@ private:
     void setup_new_connection(boost::asio::ip::tcp::socket&& socket)
     {
         spdlog::info("New connection established.");
-        DispatcherSession dispatcher_session{ io_context_, std::move(socket) };
+        auto dispatcher_session = std::make_unique < DispatcherSession>( io_context_, std::move(socket) );
 
         using namespace std::placeholders;
 
-        dispatcher_session.register_default_handler<Session&, DHKeyExchangeRequestPacket>(
+        dispatcher_session->register_default_handler<Session&, DHKeyExchangeRequestPacket>(
             std::bind(&TcpServer::encryption_handler_server, this, _1, _2));
-        dispatcher_session.register_default_handler<Session&, EchoPacket>(process_echo);
+        dispatcher_session->register_default_handler<Session&, EchoPacket>(process_echo);
 
         connections_.emplace_back(std::move(dispatcher_session));
     }
@@ -110,14 +110,14 @@ private:
     std::mutex connection_access;
     bool alive = true;
     boost::asio::ip::tcp::acceptor acceptor_;
-    std::vector<mal_packet_weaver::DispatcherSession> connections_;
+    std::vector < std::unique_ptr<mal_packet_weaver::DispatcherSession>> connections_;
     boost::asio::io_context& io_context_;
     std::unique_ptr<crypto::ECDSA::Signer> signer_;
 };
 
 int main()
 {
-    spdlog::set_level(spdlog::level::trace);
+    spdlog::set_level(spdlog::level::debug);
 
     RegisterDeserializersCrypto();
     RegisterDeserializersNetwork();
@@ -128,7 +128,16 @@ int main()
 
     std::unique_ptr<ECDSA::Signer> signer = std::make_unique<ECDSA::Signer>(private_key, Hash::HashType::SHA256);
 
-    TcpServer server(io_context, 1234, std::move(signer));
+    std::unique_ptr<TcpServer> server;
+    try
+    {
+        server = std::make_unique<TcpServer>(io_context, 1234, std::move(signer));
+    }
+    catch(const std::exception& e)
+    {
+        spdlog::error("Couldn't create TCP server: {}", e.what());
+        std::abort();
+    }
 
     std::vector<std::thread> threads;
 
