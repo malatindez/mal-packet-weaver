@@ -15,14 +15,19 @@ namespace mal_packet_weaver
          * @param io_context The IO context to use for the session.
          * @param socket The TCP socket to use for the session.
          */
-        DispatcherSession(boost::asio::io_context &io_context, boost::asio::ip::tcp::socket &&socket)
+        DispatcherSession(boost::asio::io_context &io_context, boost::asio::ip::tcp::socket &&socket) 
             : io_context_{ io_context },
               session_{ std::make_shared<Session>(io_context, std::move(socket)) },
               dispatcher_{ std::make_shared<PacketDispatcher>(io_context) }
         {
-            session_->set_packet_receiver([this](std::unique_ptr<mal_packet_weaver::Packet> &&packet)
-                                              __lambda_force_inline { enqueue_packet(std::move(packet)); });
+            session_->set_packet_receiver(
+                [dispatcher_ = dispatcher_](std::unique_ptr<mal_packet_weaver::Packet> &&packet)
+                                              __lambda_force_inline { dispatcher_->enqueue_packet(std::move(packet)); });
         }
+        DispatcherSession(DispatcherSession const &) = delete;
+        DispatcherSession &operator=(DispatcherSession const &) = delete;
+        DispatcherSession(DispatcherSession &&) = delete;
+        DispatcherSession &operator=(DispatcherSession &&) = delete;
 
         /**
          * @brief Destructor for DispatcherSession.
@@ -30,8 +35,14 @@ namespace mal_packet_weaver
          */
         ~DispatcherSession()
         {
-            session_->Destroy();
-            dispatcher_->Destroy();
+            if (session_ != nullptr)
+            {
+                session_->Destroy();
+            }
+            if (dispatcher_ != nullptr)
+            {
+                dispatcher_->Destroy();
+            }
         }
 
         /**
