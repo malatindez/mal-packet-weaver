@@ -7,7 +7,7 @@ namespace mal_packet_weaver
      * @class DispatcherSession
      * @brief Represents a session with packet dispatching functionality.
      */
-    class DispatcherSession final
+    class DispatcherSession final : public non_copyable_non_movable
     {
     public:
         /**
@@ -24,10 +24,6 @@ namespace mal_packet_weaver
                 [&dispatcher_ = *dispatcher_](std::unique_ptr<mal_packet_weaver::Packet> &&packet) __lambda_force_inline
                 { dispatcher_.enqueue_packet(std::move(packet)); });
         }
-        DispatcherSession(DispatcherSession const &) = delete;
-        DispatcherSession &operator=(DispatcherSession const &) = delete;
-        DispatcherSession(DispatcherSession &&) = delete;
-        DispatcherSession &operator=(DispatcherSession &&) = delete;
 
         /**
          * @brief Destructor for DispatcherSession.

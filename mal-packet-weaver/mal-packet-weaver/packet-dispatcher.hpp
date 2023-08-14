@@ -41,7 +41,7 @@ namespace mal_packet_weaver
      * @details To correctly destroy this object, you need to call Destroy function, because
      * coroutines share the object from this.
      */
-    class PacketDispatcher final : public std::enable_shared_from_this<PacketDispatcher>
+    class PacketDispatcher final : public non_copyable_non_movable, public std::enable_shared_from_this<PacketDispatcher>
     {
     public:
         /**
@@ -89,11 +89,6 @@ namespace mal_packet_weaver
          * @param io_context The io_context to associate with the dispatcher.
          */
         PacketDispatcher(boost::asio::io_context &io_context);
-
-        PacketDispatcher(PacketDispatcher const &) = delete;
-        PacketDispatcher(PacketDispatcher &&) = delete;
-        PacketDispatcher &operator=(PacketDispatcher const &) = delete;
-        PacketDispatcher &operator=(PacketDispatcher &&) = delete;
 
         /**
          * @brief Enqueues a packet for processing.
