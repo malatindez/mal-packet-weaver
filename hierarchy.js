@@ -1,7 +1,6 @@
 var hierarchy =
 [
     [ "mal_toolkit::CallbackSystem< F >", "dd/d83/classmal__toolkit_1_1_callback_system.html", null ],
-    [ "mal_packet_weaver::DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", null ],
     [ "std::enable_shared_from_this", null, [
       [ "mal_packet_weaver::PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", null ],
       [ "mal_packet_weaver::Session", "d8/d39/classmal__packet__weaver_1_1_session.html", null ]
@@ -34,6 +33,8 @@ var hierarchy =
         [ "mal_packet_weaver::DerivedPacket< PacketType >", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html", null ]
       ] ],
       [ "mal_toolkit::non_copyable_non_movable", "d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html", [
+        [ "mal_packet_weaver::DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", null ],
+        [ "mal_packet_weaver::PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", null ],
         [ "mal_packet_weaver::Session", "d8/d39/classmal__packet__weaver_1_1_session.html", null ]
       ] ]
     ] ],

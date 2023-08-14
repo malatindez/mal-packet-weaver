@@ -1,8 +1,6 @@
 var classmal__packet__weaver_1_1_session =
 [
     [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html#a5cf271c70d7ec610cfb01d0ed8655693", null ],
-    [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html#aefa482087423044dc6a3de6fab4e67ed", null ],
-    [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html#adc0a2ea1808412ec9ab4806b4c8c4e81", null ],
     [ "~Session", "d8/d39/classmal__packet__weaver_1_1_session.html#ad08ed9d672176c9b7cda214a78e50c2c", null ],
     [ "alive", "d8/d39/classmal__packet__weaver_1_1_session.html#a3bcaf424209f8568602a89583c20a929", null ],
     [ "async_packet_forger", "d8/d39/classmal__packet__weaver_1_1_session.html#ab8d02d6502bb180c3b0f383b3fddc6ca", null ],
@@ -11,8 +9,6 @@ var classmal__packet__weaver_1_1_session =
     [ "get_shared_ptr", "d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e", null ],
     [ "has_packets", "d8/d39/classmal__packet__weaver_1_1_session.html#acb5628d44d4b2a1f217524932483f6b6", null ],
     [ "is_closed", "d8/d39/classmal__packet__weaver_1_1_session.html#a83c93e5e6a2da8fc84a6484b4bbda5f1", null ],
-    [ "operator=", "d8/d39/classmal__packet__weaver_1_1_session.html#a4877cc9292c9979dc725132ecc12381a", null ],
-    [ "operator=", "d8/d39/classmal__packet__weaver_1_1_session.html#aa627861f343ce9b40c1c1456b9299be8", null ],
     [ "pop_packet_async", "d8/d39/classmal__packet__weaver_1_1_session.html#a961d49d84fb1426fc605c529df1296d1", null ],
     [ "pop_packet_data", "d8/d39/classmal__packet__weaver_1_1_session.html#aa6838781a707ad1f37555d590c0f22c2", null ],
     [ "pop_packet_now", "d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0", null ],
