@@ -4,11 +4,25 @@
 
 The MAL Packet Weaver is a C++ library that provides utilities for working with network packets. It simplifies the creation, manipulation, and serialization of network packets. The library is designed to be easy to use, efficient, and highly customizable.
 
+- Documentation: [link](https://malatindez.github.io/mal-packet-weaver)
+
+## Table of contents
+- [Dependencies](#dependencies)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Creating a Custom Packet: MyPacket](#creating-a-custom-packet-mypacket)
+  - [Waiting for Packets with PacketDispatcher](#waiting-for-packets-with-packetdispatcher)
+- [Contributing](#contributing)
+- [License](#license)
+
+
 ## Dependencies
 
 - [Boost](https://www.boost.org/): A set of high-quality libraries for C++ programming.
 - [mal-toolkit](https://github.com/malatindez/mal-toolkit): My custom C++20 toolkit library.
 - [spdlog](https://github.com/gabime/spdlog): A fast C++ logging library.
+
 
 ## Features
 
@@ -17,7 +31,6 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 - Extensible architecture for adding custom packet types and serialization formats.
 - Integration with logging through the use of spdlog.
 - Provides encryption interface in [mal_packet_weaver/crypto/openssl](mal_packet_weaver/crypto/openssl) (Optional)
-- Seamless integration with other libraries such as mal-toolkit.
 
 ## Installation
 
@@ -66,15 +79,15 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 
 ## Creating a Custom Packet: MyPacket
 
-In this example, we'll create a custom packet named `MyPacket` using the `Packet` and `DerivedPacket` classes provided by the `packet_library` namespace.
+In this example, we'll create a custom packet named `MyPacket` using the `Packet` and `DerivedPacket` classes provided by the `mal_packet_weaver` namespace.
 
 Let's start by defining the `MyPacket` class. This class should inherit from `DerivedPacket<MyPacket>` and implement the necessary functions.
 
 
 ```cpp
-using packet_library::packet::DerivedPacket;
-using packet_library::packet::UniquePacketID;
-using packet_library::packet::CreatePacketID;
+using mal_packet_weaver::packet::DerivedPacket;
+using mal_packet_weaver::packet::UniquePacketID;
+using mal_packet_weaver::packet::CreatePacketID;
 
 // You can use underlying ID system so you won't catch yourself with intersecting IDs:
 // PacketSubsystemID and PacketID are simple uint16_t's to form a UniquePacketID.
@@ -108,7 +121,7 @@ private:
 Don't forget to register the deserializer for your `MyPacket` class using the `PacketFactory` to ensure proper deserialization.
 
 ```cpp
-    packet_library::packet::PacketFactory::RegisterDeserializer<MyPacket>();
+    mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<MyPacket>();
 ```
 
 By following these steps, you've successfully created a custom packet named `MyPacket` using the provided classes and concepts. You can now use this packet to communicate specific data within your application.
@@ -202,7 +215,7 @@ Once you've set up your `PacketDispatcher` and registered handlers, you can star
 int main() {
     // Create an io_context and PacketDispatcher instance
     boost::asio::io_context io_context;
-    packet_library::PacketDispatcher dispatcher(io_context);
+    mal_packet_weaver::PacketDispatcher dispatcher(io_context);
     boost::asio::ip::tcp::socket socket(io_context);
     socket.connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
 
