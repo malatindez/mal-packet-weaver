@@ -124,7 +124,7 @@ int main()
 
     boost::asio::io_context io_context;
 
-    auto private_key = read_key("public-key.pem");
+    auto private_key = read_key("private-key.pem");
 
     std::unique_ptr<ECDSA::Signer> signer = std::make_unique<ECDSA::Signer>(private_key, Hash::HashType::SHA256);
 
