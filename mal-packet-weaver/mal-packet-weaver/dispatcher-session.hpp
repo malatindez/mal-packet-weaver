@@ -480,6 +480,11 @@ namespace mal_packet_weaver
          */
         [[nodiscard]] inline PacketDispatcher &dispatcher() { return *dispatcher_; }
 
+        void Destroy() { 
+            session_->Destroy();
+            dispatcher_->Destroy();
+        }
+
     private:
         boost::asio::io_context &io_context_;           ///< Reference to the associated Boost.Asio io_context.
         std::shared_ptr<Session> session_;              ///< The underlying session.
