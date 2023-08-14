@@ -3,6 +3,7 @@ var classmal__toolkit_1_1_linear_backoff =
     [ "LinearBackoff", "d0/dbc/classmal__toolkit_1_1_linear_backoff.html#ac0879a0b89197b5ca135b29ef945b5b3", null ],
     [ "decrease_delay", "d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a9dc0fcf50890867c2e71cce63811413d", null ],
     [ "get_current_delay", "d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a5caf2535485109be06720d58da094f8f", null ],
+    [ "get_current_delay_double", "d0/dbc/classmal__toolkit_1_1_linear_backoff.html#abac0ac77880bd4d94c4c5082a405b521", null ],
     [ "increase_delay", "d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a828b89ee778c3d16771cee978763c4cd", null ],
     [ "reset_delay", "d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a192862549e9b4e2b444ba4982f473f1a", null ],
     [ "current_delay_", "d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a638ef36e78098aa8d7f53810cc877b65", null ],

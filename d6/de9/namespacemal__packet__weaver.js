@@ -22,6 +22,8 @@ var namespacemal__packet__weaver =
       [ "L2_PUBLIC_NODE", "d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659baca5b96cc48f9d6589732843680c1e21b3c", null ],
       [ "L2_ADMIN_NODE", "d6/de9/namespacemal__packet__weaver.html#ac85056d274826db5c5d65260e0659baca562c55c22eef282d3606ceea86b4bd1c", null ]
     ] ],
+    [ "await_future", "d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5", null ],
+    [ "await_future", "d6/de9/namespacemal__packet__weaver.html#ab0496058ec5d421a33221ddcc2512acb", null ],
     [ "CreatePacketID", "d6/de9/namespacemal__packet__weaver.html#a6c0e59e082acc379a031b57d9b0e3d55", null ],
     [ "PacketSubsystemIDToUint32", "d6/de9/namespacemal__packet__weaver.html#a16cda5548aa8df9bb05c206e261fd235", null ],
     [ "UniquePacketIDToPacketID", "d6/de9/namespacemal__packet__weaver.html#a98a3d7d85ae7b2c9e865d45f6d450521", null ],

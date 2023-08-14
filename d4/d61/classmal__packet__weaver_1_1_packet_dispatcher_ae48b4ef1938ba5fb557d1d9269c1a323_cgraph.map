@@ -8,19 +8,21 @@
 <area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="151,143,184,143,184,149,151,149"/>
 <area shape="rect" id="Node000005" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2b820a2094b9d5cfd27bb787183437ac" title="Retrieves a shared pointer to the current dispatcher." alt="" coords="204,198,342,254"/>
 <area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="130,164,191,190,189,195,128,169"/>
-<area shape="rect" id="Node000008" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be" title="Pops input packets from input queues to local maps for processing." alt="" coords="202,373,344,429"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="97,165,243,359,239,362,93,168"/>
+<area shape="rect" id="Node000008" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be" title="Pops input packets from input queues to local maps for processing." alt="" coords="202,390,344,446"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="96,165,246,377,241,380,92,168"/>
 <area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="347,52,416,41,417,47,348,57"/>
 <area shape="rect" id="Node000006" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="410,140,573,181"/>
 <area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="342,203,406,183,408,188,343,208"/>
 <area shape="rect" id="Node000007" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="417,206,565,246"/>
 <area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="342,223,402,223,402,229,342,229"/>
-<area shape="rect" id="Node000009" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ab72dbe23999515e3fa7db665a330f066" title="Creates a default_handlers_input_pop_task and returns a future to await completion." alt="" coords="414,271,568,341"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="338,370,399,343,401,348,340,375"/>
-<area shape="rect" id="Node000010" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1fcf146e1842c61f10a6456e716f24a2" title="Creates a promise_filter_map_input_pop_task and returns a future to await completion." alt="" coords="407,365,575,436"/>
-<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="344,398,392,398,392,403,344,403"/>
-<area shape="rect" id="Node000011" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a8e90b1f9723efb6f2bb12e3b89d1e27c" title="Creates a promise_map_input_pop_task and returns a future to await completion." alt="" coords="395,460,587,515"/>
-<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="345,426,407,451,405,456,343,431"/>
-<area shape="rect" id="Node000012" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af943e1f1d220396b11bfbbb24132e4c8" title="Creates an unprocessed_packets_input_pop_task and returns a future to await completion." alt="" coords="402,539,580,609"/>
-<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="298,427,341,476,397,525,401,528,398,533,393,529,338,480,294,431"/>
+<area shape="rect" id="Node000009" href="$d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5" title="Awaiting an std::future with Boost.Asio integration." alt="" coords="425,271,557,312"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="303,387,344,353,394,321,410,313,413,318,396,326,347,358,306,392"/>
+<area shape="rect" id="Node000010" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ab72dbe23999515e3fa7db665a330f066" title="Creates a default_handlers_input_pop_task and returns a future to await completion." alt="" coords="414,336,568,407"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="344,400,399,388,400,394,345,405"/>
+<area shape="rect" id="Node000011" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1fcf146e1842c61f10a6456e716f24a2" title="Creates a promise_filter_map_input_pop_task and returns a future to await completion." alt="" coords="407,431,575,501"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="345,431,393,442,392,447,344,436"/>
+<area shape="rect" id="Node000012" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a8e90b1f9723efb6f2bb12e3b89d1e27c" title="Creates a promise_map_input_pop_task and returns a future to await completion." alt="" coords="395,525,587,581"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="307,444,348,478,396,510,405,515,403,520,394,515,345,482,304,448"/>
+<area shape="rect" id="Node000013" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af943e1f1d220396b11bfbbb24132e4c8" title="Creates an unprocessed_packets_input_pop_task and returns a future to await completion." alt="" coords="402,604,580,675"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="290,445,332,516,362,555,397,591,399,593,396,597,393,595,358,559,328,519,285,447"/>
 </map>

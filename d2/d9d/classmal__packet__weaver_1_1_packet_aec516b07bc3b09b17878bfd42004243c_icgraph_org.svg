@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Get the time elapsed since the packet was created.">
+<g id="a_Node000001"><a xlink:title="Get the time elapsed since the packet was received.">
 <polygon fill="#999999" stroke="#666666" points="272,-30.5 135.25,-30.5 135.25,0 272,0 272,-30.5"/>
 <text text-anchor="start" x="143.25" y="-17" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
 <text text-anchor="middle" x="203.62" y="-5.75" font-family="Times,serif" font-size="10.00">Packet::get_packet_time_alive</text>

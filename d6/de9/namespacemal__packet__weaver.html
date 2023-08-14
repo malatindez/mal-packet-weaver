@@ -192,6 +192,14 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:af2c5029afaa161f2ddd273bc2f46d4f5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Executor  = boost::asio::any_io_executor&gt; </td></tr>
+<tr class="memitem:af2c5029afaa161f2ddd273bc2f46d4f5"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; T, Executor &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5">await_future</a> (std::future&lt; T &gt; &amp;fut, Executor ex)</td></tr>
+<tr class="memdesc:af2c5029afaa161f2ddd273bc2f46d4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaiting an std::future with Boost.Asio integration.  <br /></td></tr>
+<tr class="separator:af2c5029afaa161f2ddd273bc2f46d4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0496058ec5d421a33221ddcc2512acb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ChronoType , typename Executor  = boost::asio::any_io_executor&gt; </td></tr>
+<tr class="memitem:ab0496058ec5d421a33221ddcc2512acb"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; T, Executor &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ab0496058ec5d421a33221ddcc2512acb">await_future</a> (std::future&lt; T &gt; &amp;fut, Executor ex, ChronoType timeout)</td></tr>
+<tr class="memdesc:ab0496058ec5d421a33221ddcc2512acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaiting an std::future with timeout and Boost.Asio integration.  <br /></td></tr>
+<tr class="separator:ab0496058ec5d421a33221ddcc2512acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16cda5548aa8df9bb05c206e261fd235"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a16cda5548aa8df9bb05c206e261fd235">PacketSubsystemIDToUint32</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> subsystem_type) noexcept</td></tr>
 <tr class="memdesc:a16cda5548aa8df9bb05c206e261fd235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a PacketSubsystemID to a uint32_t value.  <br /></td></tr>
 <tr class="separator:a16cda5548aa8df9bb05c206e261fd235"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -387,6 +395,125 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af2c5029afaa161f2ddd273bc2f46d4f5" name="af2c5029afaa161f2ddd273bc2f46d4f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c5029afaa161f2ddd273bc2f46d4f5">&#9670;&#160;</a></span>await_future() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Executor  = boost::asio::any_io_executor&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::asio::awaitable&lt; T, Executor &gt; mal_packet_weaver::await_future </td>
+          <td>(</td>
+          <td class="paramtype">std::future&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Executor&#160;</td>
+          <td class="paramname"><em>ex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Awaiting an std::future with Boost.Asio integration. </p>
+<p>This function allows you to co_await an std::future inside a Boost.Asio coroutine, waiting for the future's result and providing non-blocking behavior.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the awaited value. </td></tr>
+    <tr><td class="paramname">Executor</td><td>The executor type that will be used for the coroutine.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fut</td><td>The std::future object to be awaited. </td></tr>
+    <tr><td class="paramname">ex</td><td>The executor for the coroutine.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Boost.Asio awaitable representing the result of the future. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d3a/common_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../dd/d3a/common_8hpp_source.html">common.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/de9/namespacemal__packet__weaver_af2c5029afaa161f2ddd273bc2f46d4f5_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ab0496058ec5d421a33221ddcc2512acb" name="ab0496058ec5d421a33221ddcc2512acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0496058ec5d421a33221ddcc2512acb">&#9670;&#160;</a></span>await_future() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename ChronoType , typename Executor  = boost::asio::any_io_executor&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::asio::awaitable&lt; T, Executor &gt; mal_packet_weaver::await_future </td>
+          <td>(</td>
+          <td class="paramtype">std::future&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Executor&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ChronoType&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Awaiting an std::future with timeout and Boost.Asio integration. </p>
+<p>This function allows you to co_await an std::future inside a Boost.Asio coroutine, waiting for the future's result with a specified timeout, and providing non-blocking behavior.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the awaited value. </td></tr>
+    <tr><td class="paramname">ChronoType</td><td>The type of the timeout duration (e.g., std::chrono::milliseconds). </td></tr>
+    <tr><td class="paramname">Executor</td><td>The executor type that will be used for the coroutine.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fut</td><td>The std::future object to be awaited. </td></tr>
+    <tr><td class="paramname">ex</td><td>The executor for the coroutine. </td></tr>
+    <tr><td class="paramname">timeout</td><td>The maximum duration to wait for the future's result.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Boost.Asio awaitable representing the result of the future. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the future is not ready within the specified timeout. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d3a/common_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../dd/d3a/common_8hpp_source.html">common.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a6c0e59e082acc379a031b57d9b0e3d55" name="a6c0e59e082acc379a031b57d9b0e3d55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c0e59e082acc379a031b57d9b0e3d55">&#9670;&#160;</a></span>CreatePacketID()</h2>
 
@@ -523,7 +650,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li>
-    <li class="footer">Generated on Mon Aug 14 2023 08:26:43 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 12:25:05 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>
