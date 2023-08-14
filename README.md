@@ -201,6 +201,7 @@ Or you can use it as a member:
 class MyPacket final : public DerivedPacket<MyPacket> {
 public:
     static constexpr UniquePacketID static_type = CreatePacketID(MySubsystem, 0x0010);
+    // Time to live defines how much the Dispatcher should wait til discarding the packet.
     static constexpr float time_to_live = 60.0f;
 
     int subpacket_specific_data_1;
