@@ -23,12 +23,17 @@ namespace mal_packet_weaver
         buffer.insert(buffer.begin(), encryption_ ? std::byte{ 1 } : std::byte{ 0 });
         ByteArray *value = new ByteArray{ std::move(buffer) };
         ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 1, 0.1);
-        while (!packets_to_send_.push(value) || !alive_)
+        while (alive_)
         {
+            if (packets_to_send_.push(value))
+            {
+                value = nullptr;
+                break;
+            }
             std::this_thread::sleep_for(backoff.get_current_delay());
             backoff.increase_delay();
         }
-        if (!alive_)
+        if (!alive_ || value != nullptr)
         {
             delete value;
             return false;

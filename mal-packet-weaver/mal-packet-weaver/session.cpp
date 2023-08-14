@@ -25,6 +25,11 @@ namespace mal_packet_weaver
         {
             spdlog::info("Session: Socket is open. Session created");
         }
+        else
+        {
+            spdlog::warn("Something went wrong. Socket is closed.");
+            throw std::invalid_argument("Socket is closed");
+        }
 
         // Start asynchronous tasks for packet forging, sending, and sending packets concurrently
         co_spawn(socket_.get_executor(), std::bind(&Session::async_packet_forger, this, std::ref(io)),
@@ -189,7 +194,6 @@ namespace mal_packet_weaver
         const uint32_t kMaximumDataToSendSize = 1024 * 1024 * 1;
         data_to_send.reserve(kDefaultDataToSendSize);
 
-        spdlog::trace("Preparing to retrieve shared pointer...");
         std::shared_ptr<Session> session_lock = co_await get_shared_ptr(io);
         if (session_lock == nullptr)
         {
@@ -200,55 +204,65 @@ namespace mal_packet_weaver
         }
 
         ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);
-
-        while (alive_)
+        try
         {
-            if (!packets_to_send_.empty() && !writing)
+            while (alive_)
             {
-                writing = true;
-                spdlog::trace("Starting data preparation and writing process...");
-
-                data_to_send.clear();
-                if (data_to_send.capacity() >= kMaximumDataToSendSize)
+                if (!packets_to_send_.empty() && !writing)
                 {
-                    data_to_send.shrink_to_fit();
-                }
+                    writing = true;
+                    spdlog::trace("Starting data preparation and writing process...");
 
-                ByteArray *packet = nullptr;
-                for (int i = 0;
-                     (i < 1000 && data_to_send.size() < kDefaultDataToSendSize) && packets_to_send_.pop(packet); i++)
-                {
-                    data_to_send.append(uint32_to_bytes(static_cast<uint32_t>(packet->size())));
-                    data_to_send.append(*packet);
-                }
-                if (packet != nullptr)
-                {
-                    delete packet;
-                }
+                    data_to_send.clear();
+                    if (data_to_send.capacity() >= kMaximumDataToSendSize)
+                    {
+                        data_to_send.shrink_to_fit();
+                    }
 
-                spdlog::trace("Sending data...");
-                async_write(socket_, boost::asio::buffer(data_to_send.as<char>(), data_to_send.size()),
-                            [&](const boost::system::error_code ec, [[maybe_unused]] std::size_t length)
-                            {
-                                writing = false;
-                                data_to_send.clear();
-                                if (ec)
+                    ByteArray *packet = nullptr;
+                    for (int i = 0;
+                         (i < 1000 && data_to_send.size() < kDefaultDataToSendSize) && packets_to_send_.pop(packet); i++)
+                    {
+                        data_to_send.append(uint32_to_bytes(static_cast<uint32_t>(packet->size())));
+                        data_to_send.append(*packet);
+                    }
+                    if (packet != nullptr)
+                    {
+                        delete packet;
+                    }
+
+                    spdlog::trace("Sending data...");
+                    async_write(socket_, boost::asio::buffer(data_to_send.as<char>(), data_to_send.size()),
+                                [&](const boost::system::error_code ec, [[maybe_unused]] std::size_t length)
                                 {
-                                    spdlog::warn("Error sending message: {}", ec.message());
-                                }
-                                else
-                                {
-                                    spdlog::trace("Data sent successfully");
-                                }
-                            });
+                                    writing = false;
+                                    data_to_send.clear();
+                                    if (ec)
+                                    {
+                                        spdlog::warn("Error sending message: {}", ec.message());
+                                    }
+                                    else
+                                    {
+                                        spdlog::trace("Data sent successfully");
+                                    }
+                                });
 
-                backoff.decrease_delay();
-                continue;
+                    backoff.decrease_delay();
+                    continue;
+                }
+
+                boost::asio::steady_timer timer(io, backoff.get_current_delay());
+                co_await timer.async_wait(boost::asio::use_awaitable);
+                backoff.increase_delay();
             }
-
-            boost::asio::steady_timer timer(io, backoff.get_current_delay());
-            co_await timer.async_wait(boost::asio::use_awaitable);
-            backoff.increase_delay();
+        }
+        catch(std::exception & e)
+        {
+            spdlog::error("Send loop terminated: {}", e.what());
+        }
+        catch(...)
+        {
+            spdlog::error("Send loop terminated: reason unknown.");
         }
 
         spdlog::debug("Send loop terminated");
