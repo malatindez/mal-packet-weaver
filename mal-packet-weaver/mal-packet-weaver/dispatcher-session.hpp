@@ -15,14 +15,14 @@ namespace mal_packet_weaver
          * @param io_context The IO context to use for the session.
          * @param socket The TCP socket to use for the session.
          */
-        DispatcherSession(boost::asio::io_context &io_context, boost::asio::ip::tcp::socket &&socket) 
+        DispatcherSession(boost::asio::io_context &io_context, boost::asio::ip::tcp::socket &&socket)
             : io_context_{ io_context },
               session_{ std::make_shared<Session>(io_context, std::move(socket)) },
               dispatcher_{ std::make_shared<PacketDispatcher>(io_context) }
         {
             session_->set_packet_receiver(
-                [dispatcher_ = dispatcher_](std::unique_ptr<mal_packet_weaver::Packet> &&packet)
-                                              __lambda_force_inline { dispatcher_->enqueue_packet(std::move(packet)); });
+                [&dispatcher_ = *dispatcher_](std::unique_ptr<mal_packet_weaver::Packet> &&packet) __lambda_force_inline
+                { dispatcher_.enqueue_packet(std::move(packet)); });
         }
         DispatcherSession(DispatcherSession const &) = delete;
         DispatcherSession &operator=(DispatcherSession const &) = delete;
@@ -247,50 +247,54 @@ namespace mal_packet_weaver
             if constexpr (std::is_same_v<Arg1, std::shared_ptr<Session>>)
             {
                 return register_default_handler<CustomPacket>(
-                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
-                    { moved_handler(session_, std::move(packet)); },
-                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
-                                     { return moved_filter(session_, packet); })
+                    [session_ = std::weak_ptr<Session>(session_), moved_handler = std::move(handler)](
+                        std::unique_ptr<CustomPacket> &&packet) { moved_handler(session_.lock(), std::move(packet)); },
+                    (bool(filter) ? ([session_ = std::weak_ptr<Session>(session_), moved_filter = std::move(filter)](
+                                         const CustomPacket &packet) { return moved_filter(session_.lock(), packet); })
                                   : PacketFilterFunc<CustomPacket>{}),
                     delay);
             }
             else if constexpr (std::is_same_v<Arg1, Session &>)
             {
                 return register_default_handler<CustomPacket>(
-                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
-                    { moved_handler(*session_, std::move(packet)); },
-                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
-                                     { return moved_filter(*session_, packet); })
+                    [session_ = std::weak_ptr<Session>(session_), moved_handler = std::move(handler)](
+                        std::unique_ptr<CustomPacket> &&packet) { moved_handler(*session_.lock(), std::move(packet)); },
+                    (bool(filter) ? ([session_ = std::weak_ptr<Session>(session_), moved_filter = std::move(filter)](
+                                         const CustomPacket &packet) { return moved_filter(*session_.lock(), packet); })
                                   : PacketFilterFunc<CustomPacket>{}),
                     delay);
             }
             else if constexpr (std::is_same_v<Arg1, boost::asio::io_context &>)
             {
                 return register_default_handler<CustomPacket>(
-                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
-                    { moved_handler(io_context_, std::move(packet)); },
-                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
-                                     { return moved_filter(io_context_, packet); })
+                    [io_context_ = std::ref(io_context_), moved_handler = std::move(handler)](
+                        std::unique_ptr<CustomPacket> &&packet) { moved_handler(io_context_, std::move(packet)); },
+                    (bool(filter) ? ([io_context_ = std::ref(io_context_), moved_filter = std::move(filter)](
+                                         const CustomPacket &packet) { return moved_filter(io_context_, packet); })
                                   : PacketFilterFunc<CustomPacket>{}),
                     delay);
             }
             else if constexpr (std::is_same_v<Arg1, std::shared_ptr<PacketDispatcher>>)
             {
                 return register_default_handler<CustomPacket>(
-                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
-                    { moved_handler(dispatcher_, std::move(packet)); },
-                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
-                                     { return moved_filter(dispatcher_, packet); })
+                    [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
+                     moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
+                    { moved_handler(dispatcher_.lock(), std::move(packet)); },
+                    (bool(filter) ? ([dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
+                                      moved_filter = std::move(filter)](const CustomPacket &packet)
+                                     { return moved_filter(dispatcher_.lock(), packet); })
                                   : PacketFilterFunc<CustomPacket>{}),
                     delay);
             }
             else if constexpr (std::is_same_v<Arg1, PacketDispatcher &>)
             {
                 return register_default_handler<CustomPacket>(
-                    [this, moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
-                    { moved_handler(*dispatcher_, std::move(packet)); },
-                    (bool(filter) ? ([this, moved_filter = std::move(filter)](const CustomPacket &packet)
-                                     { return moved_filter(*dispatcher_, packet); })
+                    [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
+                     moved_handler = std::move(handler)](std::unique_ptr<CustomPacket> &&packet)
+                    { moved_handler(*dispatcher_.lock(), std::move(packet)); },
+                    (bool(filter) ? ([dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
+                                      moved_filter = std::move(filter)](const CustomPacket &packet)
+                                     { return moved_filter(*dispatcher_.lock(), packet); })
                                   : PacketFilterFunc<CustomPacket>{}),
                     delay);
             }
@@ -336,15 +340,15 @@ namespace mal_packet_weaver
             if constexpr (std::is_same_v<Arg1, std::shared_ptr<Session>>)
             {
                 return register_default_handler<Arg2, Args..., CustomPacket>(
-                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
-                                                               std::unique_ptr<CustomPacket> &&packet) {
-                        moved_handler(session_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                    [session_ = std::weak_ptr<Session>(session_), moved_handler = std::move(handler)](
+                        Arg2 &&arg2, Args &&...args, std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(session_.lock(), std::forward<Arg2>(arg2), std::forward<Args>(args)...,
                                       std::move(packet));
                     },
                     (bool(filter) ? (
-                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
-                                                                                 const CustomPacket &packet) {
-                                            return moved_filter(session_, std::forward<Arg2>(arg2),
+                                        [session_ = std::weak_ptr<Session>(session_), moved_filter = std::move(filter)](
+                                            Arg2 &&arg2, Args &&...args, const CustomPacket &packet) {
+                                            return moved_filter(session_.lock(), std::forward<Arg2>(arg2),
                                                                 std::forward<Args>(args)..., packet);
                                         })
                                   : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
@@ -353,15 +357,15 @@ namespace mal_packet_weaver
             else if constexpr (std::is_same_v<Arg1, Session &>)
             {
                 return register_default_handler<Arg2, Args..., CustomPacket>(
-                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
-                                                               std::unique_ptr<CustomPacket> &&packet) {
-                        moved_handler(*session_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                    [session_ = std::weak_ptr<Session>(session_), moved_handler = std::move(handler)](
+                        Arg2 &&arg2, Args &&...args, std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(*session_.lock(), std::forward<Arg2>(arg2), std::forward<Args>(args)...,
                                       std::move(packet));
                     },
                     (bool(filter) ? (
-                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
-                                                                                 const CustomPacket &packet) {
-                                            return moved_filter(*session_, std::forward<Arg2>(arg2),
+                                        [session_ = std::weak_ptr<Session>(session_), moved_filter = std::move(filter)](
+                                            Arg2 &&arg2, Args &&...args, const CustomPacket &packet) {
+                                            return moved_filter(*session_.lock(), std::forward<Arg2>(arg2),
                                                                 std::forward<Args>(args)..., packet);
                                         })
                                   : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
@@ -370,14 +374,14 @@ namespace mal_packet_weaver
             else if constexpr (std::is_same_v<Arg1, boost::asio::io_context &>)
             {
                 return register_default_handler<Arg2, Args..., CustomPacket>(
-                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
-                                                               std::unique_ptr<CustomPacket> &&packet) {
+                    [io_context_ = std::ref(io_context_), moved_handler = std::move(handler)](
+                        Arg2 &&arg2, Args &&...args, std::unique_ptr<CustomPacket> &&packet) {
                         moved_handler(io_context_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
                                       std::move(packet));
                     },
                     (bool(filter) ? (
-                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
-                                                                                 const CustomPacket &packet) {
+                                        [io_context_ = std::ref(io_context_), moved_filter = std::move(filter)](
+                                            Arg2 &&arg2, Args &&...args, const CustomPacket &packet) {
                                             return moved_filter(io_context_, std::forward<Arg2>(arg2),
                                                                 std::forward<Args>(args)..., packet);
                                         })
@@ -387,35 +391,37 @@ namespace mal_packet_weaver
             else if constexpr (std::is_same_v<Arg1, std::shared_ptr<PacketDispatcher>>)
             {
                 return register_default_handler<Arg2, Args..., CustomPacket>(
-                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
-                                                               std::unique_ptr<CustomPacket> &&packet) {
-                        moved_handler(dispatcher_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                    [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_), moved_handler = std::move(handler)](
+                        Arg2 &&arg2, Args &&...args, std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(dispatcher_.lock(), std::forward<Arg2>(arg2), std::forward<Args>(args)...,
                                       std::move(packet));
                     },
-                    (bool(filter) ? (
-                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
-                                                                                 const CustomPacket &) {
-                                            return moved_filter(dispatcher_, std::forward<Arg2>(arg2),
-                                                                std::forward<Args>(args)..., packet);
-                                        })
-                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                    (bool(filter)
+                         ? (
+                               [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
+                                moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args, const CustomPacket &) {
+                                   return moved_filter(dispatcher_.lock(), std::forward<Arg2>(arg2),
+                                                       std::forward<Args>(args)..., packet);
+                               })
+                         : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
                     delay);
             }
             else if constexpr (std::is_same_v<Arg1, PacketDispatcher &>)
             {
                 return register_default_handler<Arg2, Args..., CustomPacket>(
-                    [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
-                                                               std::unique_ptr<CustomPacket> &&packet) {
-                        moved_handler(*dispatcher_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
+                    [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_), moved_handler = std::move(handler)](
+                        Arg2 &&arg2, Args &&...args, std::unique_ptr<CustomPacket> &&packet) {
+                        moved_handler(*dispatcher_.lock(), std::forward<Arg2>(arg2), std::forward<Args>(args)...,
                                       std::move(packet));
                     },
-                    (bool(filter) ? (
-                                        [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
-                                                                                 const CustomPacket &) {
-                                            return moved_filter(*dispatcher_, std::forward<Arg2>(arg2),
-                                                                std::forward<Args>(args)..., packet);
-                                        })
-                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                    (bool(filter)
+                         ? (
+                               [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
+                                moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args, const CustomPacket &) {
+                                   return moved_filter(*dispatcher_.lock(), std::forward<Arg2>(arg2),
+                                                       std::forward<Args>(args)..., packet);
+                               })
+                         : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
                     delay);
             }
             else
@@ -480,7 +486,8 @@ namespace mal_packet_weaver
          */
         [[nodiscard]] inline PacketDispatcher &dispatcher() { return *dispatcher_; }
 
-        void Destroy() { 
+        void Destroy()
+        {
             session_->Destroy();
             dispatcher_->Destroy();
         }
