@@ -53,7 +53,7 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 
 4. Link the built library and its dependencies to your project.
 
-# You can also use it as a submodule with CMake:
+### You can also use it as a submodule with CMake:
 
 
 1. Add submodule to your repository:
