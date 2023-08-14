@@ -109,9 +109,9 @@ Let's start by defining the `MyPacket` class. This class should inherit from `De
 ### Declaring the Packet Type
 
 ```cpp
-using mal_packet_weaver::packet::DerivedPacket;
-using mal_packet_weaver::packet::UniquePacketID;
-using mal_packet_weaver::packet::CreatePacketID;
+using mal_packet_weaver::DerivedPacket;
+using mal_packet_weaver::UniquePacketID;
+using mal_packet_weaver::CreatePacketID;
 
 // You can use underlying ID system so you won't catch yourself with intersecting IDs:
 // PacketSubsystemID and PacketID are simple uint16_t's to form a UniquePacketID.
@@ -149,9 +149,9 @@ You can do something similar:
 
 ```cpp
 
-using mal_packet_weaver::packet::DerivedPacket;
-using mal_packet_weaver::packet::UniquePacketID;
-using mal_packet_weaver::packet::CreatePacketID;
+using mal_packet_weaver::DerivedPacket;
+using mal_packet_weaver::UniquePacketID;
+using mal_packet_weaver::CreatePacketID;
 
 struct CommonData
 {
@@ -231,7 +231,7 @@ private:
 Don't forget to register the deserializer for your `MyPacket` class using the `PacketFactory` to ensure proper deserialization.
 
 ```cpp
-    mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<MyPacket>();
+    mal_packet_weaver::PacketFactory::RegisterDeserializer<MyPacket>();
 ```
 
 By following these steps, you've successfully created a custom packet named `MyPacket` using the provided classes and concepts. You can now use this packet to communicate specific data within your application.
