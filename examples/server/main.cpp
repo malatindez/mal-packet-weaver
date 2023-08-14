@@ -8,13 +8,12 @@
 #include "mal-packet-weaver/packet-dispatcher.hpp"
 #include "mal-packet-weaver/packet.hpp"
 #include "mal-packet-weaver/session.hpp"
-#include "packets/common.hpp"
+#include "common.hpp"
 
 using namespace mal_packet_weaver;
 using namespace mal_packet_weaver::crypto;
-using namespace mal_packet_weaver::packet;
 
-constexpr int kAdditionalThreads = 0;
+constexpr int kAdditionalThreads = 7;
 
 void process_echo(mal_packet_weaver::Session& connection, std::unique_ptr<EchoPacket>&& echo)
 {
@@ -33,6 +32,7 @@ public:
           signer_(std::move(signer))
     {
         do_accept();
+        co_spawn(io_context, boost::bind(&TcpServer::cleanup_task, this), boost::asio::detached);
         connections_.reserve(100);
     }
     ~TcpServer() { alive = false; }
@@ -58,7 +58,7 @@ private:
     void setup_new_connection(boost::asio::ip::tcp::socket&& socket)
     {
         spdlog::info("New connection established.");
-        auto dispatcher_session = std::make_unique<DispatcherSession>(io_context_, std::move(socket));
+        auto dispatcher_session = std::make_unique < DispatcherSession>( io_context_, std::move(socket) );
 
         using namespace std::placeholders;
 
@@ -107,10 +107,20 @@ private:
         connection.setup_encryption(encryption);
     }
 
+    boost::asio::awaitable<void> cleanup_task()
+    {
+        while(true)
+        {
+            std::erase_if(connections_, [](auto &session){ return session->is_closed(); });
+            boost::asio::steady_timer timer(io_context_, std::chrono::seconds(1));
+            co_await timer.async_wait(boost::asio::use_awaitable);
+        }
+    }
+
     std::mutex connection_access;
     bool alive = true;
     boost::asio::ip::tcp::acceptor acceptor_;
-    std::vector<std::unique_ptr<mal_packet_weaver::DispatcherSession>> connections_;
+    std::vector<std::shared_ptr<mal_packet_weaver::DispatcherSession>> connections_;
     boost::asio::io_context& io_context_;
     std::unique_ptr<crypto::ECDSA::Signer> signer_;
 };
@@ -131,9 +141,9 @@ int main()
     std::unique_ptr<TcpServer> server;
     try
     {
-        server = std::make_unique<TcpServer>(io_context, 1234, std::move(signer));
+        server = std::make_unique<TcpServer>(io_context, (uint16_t)(1234), std::move(signer));
     }
-    catch (const std::exception& e)
+    catch(const std::exception& e)
     {
         spdlog::error("Couldn't create TCP server: {}", e.what());
         std::abort();

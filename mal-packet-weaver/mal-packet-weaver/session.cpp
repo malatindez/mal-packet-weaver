@@ -77,12 +77,12 @@ namespace mal_packet_weaver
                 const ByteArray plain = encryption_->decrypt(packet_data->view(1));
                 const uint32_t packet_type = bytes_to_uint32(plain.view(0, 4));
                 spdlog::trace("Decrypted packet type: {}", packet_type);
-                return packet::PacketFactory::Deserialize(plain.view(4), packet_type);
+                return PacketFactory::Deserialize(plain.view(4), packet_type);
             }
 
             const uint32_t packet_type = bytes_to_uint32(packet_data->view(1, 4));
             spdlog::trace("Packet type: {}", packet_type);
-            return packet::PacketFactory::Deserialize(packet_data->view(5), packet_type);
+            return PacketFactory::Deserialize(packet_data->view(5), packet_type);
         }
         return nullptr;
     }
@@ -392,7 +392,7 @@ namespace mal_packet_weaver
                     try
                     {
                         spdlog::trace("Decrypting and deserializing packet data...");
-                        packet_receiver_(packet::PacketFactory::Deserialize(plain.view(4), packet_type));
+                        packet_receiver_(PacketFactory::Deserialize(plain.view(4), packet_type));
                     }
                     catch (const std::exception &e)
                     {
@@ -406,7 +406,7 @@ namespace mal_packet_weaver
                     try
                     {
                         spdlog::trace("Deserializing packet data...");
-                        packet_receiver_(packet::PacketFactory::Deserialize(packet_data->view(5), packet_type));
+                        packet_receiver_(PacketFactory::Deserialize(packet_data->view(5), packet_type));
                     }
                     catch (const std::exception &e)
                     {

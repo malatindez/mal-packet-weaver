@@ -2,7 +2,7 @@
 
 #include "packet.hpp"
 
-namespace mal_packet_weaver::packet
+namespace mal_packet_weaver
 {
     /**
      * @brief A class responsible for registering and creating packet deserializers.
@@ -75,4 +75,4 @@ namespace mal_packet_weaver::packet
          */
         static std::unordered_map<UniquePacketID, PacketDeserializeFunc> packet_deserializers_;
     };
-}  // namespace mal_packet_weaver::packet
+}  // namespace mal_packet_weaver

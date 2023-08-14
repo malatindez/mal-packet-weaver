@@ -21,7 +21,7 @@ namespace mal_packet_weaver
               dispatcher_{ std::make_shared<PacketDispatcher>(io_context) }
         {
             session_->set_packet_receiver(
-                [&dispatcher_ = *dispatcher_](std::unique_ptr<mal_packet_weaver::Packet> &&packet) __lambda_force_inline
+                [&dispatcher_ = *dispatcher_](std::unique_ptr<Packet> &&packet) __lambda_force_inline
                 { dispatcher_.enqueue_packet(std::move(packet)); });
         }
 
@@ -55,7 +55,7 @@ namespace mal_packet_weaver
          * @return false if session was closed.
          * @see Session::send_packet
          */
-        template <typename T>
+        template <IsPacket T>
         inline bool send_packet(const T &packet_arg) requires std::is_base_of_v<Packet, T>
         {
             return session_->send_packet(packet_arg);
@@ -395,7 +395,8 @@ namespace mal_packet_weaver
                     (bool(filter)
                          ? (
                                [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
-                                moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args, const CustomPacket &) {
+                                         moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
+                                                                           const CustomPacket &packet) {
                                    return moved_filter(dispatcher_.lock(), std::forward<Arg2>(arg2),
                                                        std::forward<Args>(args)..., packet);
                                })
@@ -413,7 +414,7 @@ namespace mal_packet_weaver
                     (bool(filter)
                          ? (
                                [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
-                                moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args, const CustomPacket &) {
+                                moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args, const CustomPacket &packet) {
                                    return moved_filter(*dispatcher_.lock(), std::forward<Arg2>(arg2),
                                                        std::forward<Args>(args)..., packet);
                                })

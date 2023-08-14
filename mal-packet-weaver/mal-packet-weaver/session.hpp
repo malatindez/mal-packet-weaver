@@ -42,7 +42,7 @@ namespace mal_packet_weaver
          * @return true if session got the packet.
          * @return false if session was closed.
          */
-        template <typename T>
+        template <IsPacket T>
         bool send_packet(const T &packet_arg) requires std::is_base_of_v<Packet, T>;
 
         /**

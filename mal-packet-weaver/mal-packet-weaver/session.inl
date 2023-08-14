@@ -4,7 +4,7 @@
 namespace mal_packet_weaver
 {
 
-    template <typename T>
+    template <IsPacket T>
     bool Session::send_packet(const T &packet_arg) requires std::is_base_of_v<Packet, T>
     {
         if (!alive_)

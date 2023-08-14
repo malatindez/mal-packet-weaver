@@ -18,7 +18,8 @@ constexpr mal_packet_weaver::UniquePacketID DHKeyExchangeResponsePacketID =
 /**
  * @brief Packet for Diffie-Hellman key exchange request.
  */
-class DHKeyExchangeRequestPacket : public mal_packet_weaver::DerivedPacket<class DHKeyExchangeRequestPacket>
+class DHKeyExchangeRequestPacket final
+    : public mal_packet_weaver::DerivedPacket<class DHKeyExchangeRequestPacket>
 {
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = DHKeyExchangeRequestPacketID;
@@ -30,8 +31,6 @@ private:
     template <class Archive>
     void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
     {
-        ar &boost::serialization::base_object<mal_packet_weaver::DerivedPacket<class DHKeyExchangeRequestPacket>>(
-            *this);
         ar &public_key;
     }
 };
@@ -39,7 +38,7 @@ private:
 /**
  * @brief Packet for Diffie-Hellman key exchange response.
  */
-class DHKeyExchangeResponsePacket : public mal_packet_weaver::DerivedPacket<class DHKeyExchangeResponsePacket>
+class DHKeyExchangeResponsePacket final : public mal_packet_weaver::DerivedPacket<class DHKeyExchangeResponsePacket>
 {
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = DHKeyExchangeResponsePacketID;
@@ -70,8 +69,6 @@ private:
     template <class Archive>
     void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
     {
-        ar &boost::serialization::base_object<mal_packet_weaver::DerivedPacket<class DHKeyExchangeResponsePacket>>(
-            *this);
         ar &public_key;
         ar &signature;
         ar &salt;
@@ -84,6 +81,6 @@ private:
  */
 inline void RegisterDeserializersCrypto()
 {
-    mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<DHKeyExchangeRequestPacket>();
-    mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<DHKeyExchangeResponsePacket>();
+    mal_packet_weaver::PacketFactory::RegisterDeserializer<DHKeyExchangeRequestPacket>();
+    mal_packet_weaver::PacketFactory::RegisterDeserializer<DHKeyExchangeResponsePacket>();
 }
