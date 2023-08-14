@@ -12,7 +12,13 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 - [Installation](#installation)
 - [Usage](#usage)
   - [Creating a Custom Packet: MyPacket](#creating-a-custom-packet-mypacket)
+    - [Registering Deserializers](#registering-deserializers)
   - [Waiting for Packets with PacketDispatcher](#waiting-for-packets-with-packetdispatcher)
+    - [Awaiting a Specific Packet](#awaiting-a-specific-packet)
+    - [Awaiting a Packet with a Filter](#awaiting-a-packet-with-a-filter)
+    - [Registering Default Handlers](#registering-default-handlers)
+  - [Putting it All Together](#putting-it-all-together)
+  - [Thread safety](#thread-safety)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -116,7 +122,7 @@ private:
 };
 ```
 
-### Register Deserializer
+### Registering Deserializers
 
 Don't forget to register the deserializer for your `MyPacket` class using the `PacketFactory` to ensure proper deserialization.
 
@@ -201,7 +207,7 @@ void MyPacketHandler(std::unique_ptr<MyPacket> packet) {
 dispatcher.register_default_handler<MyPacket>(MyPacketHandler, MyPacketFilter, 0.5f);
 ```
 
-## Processing Packets
+## Putting it All Together
 
 Once you've set up your `PacketDispatcher` and registered handlers, you can start processing incoming packets. Here's an example of how you can process packets in a coroutine:
 
@@ -254,9 +260,8 @@ int main() {
 }
 ```
 
-### Since the library is completely threadsafe, you can add multiple threads to the context: 
-
-This can improve performance if the server is heavy-loaded.
+## Thread Safety 
+Since the library is completely threadsafe, you can add multiple threads to the context. This can improve performance if the server is heavy-loaded:
 
 ```cpp
 std::vector<std::thread> threads;
