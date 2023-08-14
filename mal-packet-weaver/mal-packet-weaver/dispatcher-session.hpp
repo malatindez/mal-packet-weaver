@@ -328,7 +328,7 @@ namespace mal_packet_weaver
                     [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
                                                                std::unique_ptr<CustomPacket> &&packet) {
                         moved_handler(session_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
-                                             std::move(packet));
+                                      std::move(packet));
                     },
                     (bool(filter) ? (
                                         [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
@@ -345,7 +345,7 @@ namespace mal_packet_weaver
                     [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
                                                                std::unique_ptr<CustomPacket> &&packet) {
                         moved_handler(*session_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
-                                             std::move(packet));
+                                      std::move(packet));
                     },
                     (bool(filter) ? (
                                         [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
@@ -362,7 +362,7 @@ namespace mal_packet_weaver
                     [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
                                                                std::unique_ptr<CustomPacket> &&packet) {
                         moved_handler(io_context_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
-                                             std::move(packet));
+                                      std::move(packet));
                     },
                     (bool(filter) ? (
                                         [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
@@ -379,7 +379,7 @@ namespace mal_packet_weaver
                     [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
                                                                std::unique_ptr<CustomPacket> &&packet) {
                         moved_handler(dispatcher_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
-                                             std::move(packet));
+                                      std::move(packet));
                     },
                     (bool(filter) ? (
                                         [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
@@ -396,7 +396,7 @@ namespace mal_packet_weaver
                     [this, moved_handler = std::move(handler)](Arg2 &&arg2, Args &&...args,
                                                                std::unique_ptr<CustomPacket> &&packet) {
                         moved_handler(*dispatcher_, std::forward<Arg2>(arg2), std::forward<Args>(args)...,
-                                             std::move(packet));
+                                      std::move(packet));
                     },
                     (bool(filter) ? (
                                         [this, moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
@@ -420,9 +420,9 @@ namespace mal_packet_weaver
             }
         }
 
-
         template <IsPacket CustomPacket, typename... FnArgs>
-        inline void register_default_handler(std::function<void(FnArgs...)> &&handler, std::function<bool(FnArgs...)> &&filter = {}, float delay = 0.0f)
+        inline void register_default_handler(std::function<void(FnArgs...)> &&handler,
+                                             std::function<bool(FnArgs...)> &&filter = {}, float delay = 0.0f)
         {
             return register_default_handler<FnArgs..., CustomPacket>(handler, filter, delay);
         }

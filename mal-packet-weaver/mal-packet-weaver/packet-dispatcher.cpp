@@ -26,7 +26,6 @@ namespace mal_packet_weaver
         {
             try
             {
-                spdlog::debug("Attempting to retrieve shared pointer...");
                 co_return shared_from_this();
             }
             catch (std::bad_weak_ptr &)
@@ -167,14 +166,15 @@ namespace mal_packet_weaver
                 {
                     auto &handler_list = default_handlers_[packet_id];
                     // Insert the handler such that filtered ones are first.
-                    mal_toolkit::SortedInsert<handler_tuple>(handler_list, std::move(handler), 
-                        [](handler_tuple const &left, handler_tuple const &right) -> bool __lambda_force_inline 
+                    mal_toolkit::SortedInsert<handler_tuple>(
+                        handler_list, std::move(handler),
+                        [](handler_tuple const &left, handler_tuple const &right) -> bool __lambda_force_inline
                         {
-                            if(bool(std::get<1>(left)))
+                            if (bool(std::get<1>(left)))
                             {
                                 return true;
                             }
-                            else if(bool(std::get<1>(right)))
+                            else if (bool(std::get<1>(right)))
                             {
                                 return false;
                             }

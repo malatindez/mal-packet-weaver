@@ -9,12 +9,15 @@ namespace mal_packet_weaver
         spdlog::debug("Session: Creating a new session");
 
         // Start receiving data from the socket
-        co_spawn(socket.get_executor(), [this, &io]() -> boost::asio::awaitable<void>
+        co_spawn(
+            socket.get_executor(),
+            [this, &io]() -> boost::asio::awaitable<void>
             {
                 // wait until shared_ptr is initialized.
                 co_await get_shared_ptr(io);
                 receive_all();
-            }, boost::asio::detached);
+            },
+            boost::asio::detached);
 
         // Check if the socket is open and mark the session as alive if so
         alive_ = socket_.is_open();
@@ -27,7 +30,7 @@ namespace mal_packet_weaver
         co_spawn(socket_.get_executor(), std::bind(&Session::async_packet_forger, this, std::ref(io)),
                  boost::asio::detached);
         co_spawn(socket_.get_executor(), std::bind(&Session::send_all, this, std::ref(io)), boost::asio::detached);
-        for (size_t i = 0; i < 4; i++)
+        for (size_t i = 0; i < 1; i++)
         {
             co_spawn(socket_.get_executor(), std::bind(&Session::async_packet_sender, this, std::ref(io)),
                      boost::asio::detached);
@@ -152,7 +155,6 @@ namespace mal_packet_weaver
         {
             try
             {
-                spdlog::debug("Attempting to retrieve shared pointer...");
                 co_return shared_from_this();
             }
             catch (std::bad_weak_ptr &)
