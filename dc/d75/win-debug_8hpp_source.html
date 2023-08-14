@@ -111,15 +111,17 @@ $(document).ready(function(){initNavTree('dc/d75/win-debug_8hpp_source.html','..
 </div><!--header-->
 <div class="contents">
 <a href="../../dc/d75/win-debug_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if defined(_WIN32)</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../library-pch.hpp&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d98/win_8hpp.html">win.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;malloc.h&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>mal_toolkit::debug</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// works only if there&#39;s no debugger attached to the process</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> RedirectOutputDebugString(std::function&lt;<span class="keywordtype">void</span>(std::string_view)&gt; <span class="keyword">const</span> &amp;);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>} <span class="comment">// namespace mal_toolkit::debug</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;malloc.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../library-pch.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d98/win_8hpp.html">win.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>mal_toolkit::debug</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// works only if there&#39;s no debugger attached to the process</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> RedirectOutputDebugString(std::function&lt;<span class="keywordtype">void</span>(std::string_view)&gt; <span class="keyword">const</span> &amp;);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}  <span class="comment">// namespace mal_toolkit::debug</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="awin_8hpp_html"><div class="ttname"><a href="../../d4/d98/win_8hpp.html">win.hpp</a></div><div class="ttdoc">Provides general Windows-specific utilities and includes necessary headers.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -127,7 +129,7 @@ $(document).ready(function(){initNavTree('dc/d75/win-debug_8hpp_source.html','..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_44f42edf5dd23d4deca0321224e9ce90.html">third_party</a></li><li class="navelem"><a class="el" href="../../dir_3577c9a6affce70dac2a1ac1c3433c90.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../dir_3b66e6ce143615bdc3322f7e948ad10e.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../dir_41feb083de401942fea39ff02ab08efc.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../dir_6fb9208c77a310b46e12dafe1d40bcf4.html">include</a></li><li class="navelem"><a class="el" href="../../dc/d75/win-debug_8hpp.html">win-debug.hpp</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 23:23:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 08:24:47 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

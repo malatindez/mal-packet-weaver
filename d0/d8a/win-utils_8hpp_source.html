@@ -111,16 +111,16 @@ $(document).ready(function(){initNavTree('d0/d8a/win-utils_8hpp_source.html','..
 </div><!--header-->
 <div class="contents">
 <a href="../../d0/d8a/win-utils_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d6e/library-pch_8hpp.html">library-pch.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d98/win_8hpp.html">include/win.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../df/df5/namespacemal__toolkit.html#a5acf6d61cf0e94c18b6f5f4416c22bd5">   17</a></span>    <span class="keyword">inline</span> std::string <a class="code hl_function" href="../../df/df5/namespacemal__toolkit.html#a5acf6d61cf0e94c18b6f5f4416c22bd5">wstring_to_string</a>(std::wstring_view <span class="keyword">const</span> wstr)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">if</span> (wstr.empty())</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keywordflow">return</span> std::string();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">int</span> size =</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            WideCharToMultiByte(CP_UTF8, 0, wstr.data(), (<span class="keywordtype">int</span>)wstr.size(), NULL, 0, NULL, NULL);</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d98/win_8hpp.html">include/win.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d6e/library-pch_8hpp.html">library-pch.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../df/df5/namespacemal__toolkit.html#a5acf6d61cf0e94c18b6f5f4416c22bd5">   18</a></span>    <span class="keyword">inline</span> std::string <a class="code hl_function" href="../../df/df5/namespacemal__toolkit.html#a5acf6d61cf0e94c18b6f5f4416c22bd5">wstring_to_string</a>(std::wstring_view <span class="keyword">const</span> wstr)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (wstr.empty())</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">int</span> size = WideCharToMultiByte(CP_UTF8, 0, wstr.data(), (<span class="keywordtype">int</span>)wstr.size(), NULL, 0, NULL, NULL);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        std::string rv(size, 0);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        WideCharToMultiByte(CP_UTF8, 0, wstr.data(), (<span class="keywordtype">int</span>)wstr.size(), rv.data(), size, NULL, NULL);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> rv;</div>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('d0/d8a/win-utils_8hpp_source.html','..
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (errorMessageID == 0)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> std::string(); <span class="comment">// No error message has been recorded</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> std::string();  <span class="comment">// No error message has been recorded</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        LPSTR messageBuffer = <span class="keyword">nullptr</span>;</div>
@@ -148,24 +148,22 @@ $(document).ready(function(){initNavTree('d0/d8a/win-utils_8hpp_source.html','..
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">// Ask Win32 to give us the string version of that message ID.</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">// The parameters we pass in, tell Win32 to create the buffer that holds the message for us</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// (because we don&#39;t yet know how long the message string will be).</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">size_t</span> size =</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM |</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                               FORMAT_MESSAGE_IGNORE_INSERTS,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                           NULL, errorMessageID, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                           (LPSTR)&amp;messageBuffer, 0, NULL);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="comment">// Copy the error message into a std::string.</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::string message(messageBuffer, size);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// Free the Win32&#39;s string&#39;s buffer.</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        LocalFree(messageBuffer);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> message.substr(0, message.find_last_of(<span class="stringliteral">&quot;\n&quot;</span>, std::max(0ull, message.size() - 5)));</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>} <span class="comment">// namespace mal_toolkit</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">size_t</span> size = FormatMessageA(</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            errorMessageID, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&amp;messageBuffer, 0, NULL);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">// Copy the error message into a std::string.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::string message(messageBuffer, size);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="comment">// Free the Win32&#39;s string&#39;s buffer.</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        LocalFree(messageBuffer);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> message.substr(0, message.find_last_of(<span class="stringliteral">&quot;\n&quot;</span>, std::max(0ull, message.size() - 5)));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}  <span class="comment">// namespace mal_toolkit</span></div>
 <div class="ttc" id="alibrary-pch_8hpp_html"><div class="ttname"><a href="../../db/d6e/library-pch_8hpp.html">library-pch.hpp</a></div><div class="ttdoc">Precompiled header (PCH) file for common headers used across the library.</div></div>
 <div class="ttc" id="anamespacemal__toolkit_html"><div class="ttname"><a href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></div><div class="ttdoc">Contains a collection of tools and utilities provided by the MAL Toolkit library.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dc6/backoffs_8hpp_source.html#l00006">backoffs.hpp:7</a></div></div>
 <div class="ttc" id="anamespacemal__toolkit_html_a250958b7fb680f8e1eff004e92dbde01"><div class="ttname"><a href="../../df/df5/namespacemal__toolkit.html#a250958b7fb680f8e1eff004e92dbde01">mal_toolkit::string_to_wstring</a></div><div class="ttdeci">std::wstring string_to_wstring(std::string_view const str)</div><div class="ttdoc">Converts a UTF-8 string to a wide string (UTF16).</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d8a/win-utils_8hpp_source.html#l00034">win-utils.hpp:34</a></div></div>
-<div class="ttc" id="anamespacemal__toolkit_html_a5acf6d61cf0e94c18b6f5f4416c22bd5"><div class="ttname"><a href="../../df/df5/namespacemal__toolkit.html#a5acf6d61cf0e94c18b6f5f4416c22bd5">mal_toolkit::wstring_to_string</a></div><div class="ttdeci">std::string wstring_to_string(std::wstring_view const wstr)</div><div class="ttdoc">Converts a wide string (UTF16) to a UTF-8 string.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d8a/win-utils_8hpp_source.html#l00017">win-utils.hpp:17</a></div></div>
+<div class="ttc" id="anamespacemal__toolkit_html_a5acf6d61cf0e94c18b6f5f4416c22bd5"><div class="ttname"><a href="../../df/df5/namespacemal__toolkit.html#a5acf6d61cf0e94c18b6f5f4416c22bd5">mal_toolkit::wstring_to_string</a></div><div class="ttdeci">std::string wstring_to_string(std::wstring_view const wstr)</div><div class="ttdoc">Converts a wide string (UTF16) to a UTF-8 string.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d8a/win-utils_8hpp_source.html#l00018">win-utils.hpp:18</a></div></div>
 <div class="ttc" id="anamespacemal__toolkit_html_aed0194ad64c47216250cdc1d1610be25"><div class="ttname"><a href="../../df/df5/namespacemal__toolkit.html#aed0194ad64c47216250cdc1d1610be25">mal_toolkit::FormatErrorAsString</a></div><div class="ttdeci">std::string FormatErrorAsString(DWORD errorMessageID)</div><div class="ttdoc">Formats a Win32 error code as a string.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d8a/win-utils_8hpp_source.html#l00053">win-utils.hpp:53</a></div></div>
 <div class="ttc" id="awin_8hpp_html"><div class="ttname"><a href="../../d4/d98/win_8hpp.html">win.hpp</a></div><div class="ttdoc">Provides general Windows-specific utilities and includes necessary headers.</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -174,7 +172,7 @@ $(document).ready(function(){initNavTree('d0/d8a/win-utils_8hpp_source.html','..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_44f42edf5dd23d4deca0321224e9ce90.html">third_party</a></li><li class="navelem"><a class="el" href="../../dir_3577c9a6affce70dac2a1ac1c3433c90.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../dir_3b66e6ce143615bdc3322f7e948ad10e.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../dir_41feb083de401942fea39ff02ab08efc.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../d0/d8a/win-utils_8hpp.html">win-utils.hpp</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 23:23:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 08:24:47 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

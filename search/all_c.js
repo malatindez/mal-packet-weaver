@@ -29,12 +29,11 @@ var searchData=
   ['max_5fdelay_5f_26',['max_delay_',['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#aa606e67a38908a0975403ea3b4f18ab6',1,'mal_toolkit::LinearBackoff::max_delay_'],['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a71e105d0cdf947d433bfc0e4bb7f1b7b',1,'mal_toolkit::ExponentialBackoff::max_delay_']]],
   ['maximum_5fentries_27',['maximum_entries',['../d1/d3a/structmal__toolkit_1_1_measurer.html#abd76064808f063794e022a5aa01d9176',1,'mal_toolkit::Measurer']]],
   ['measure_28',['measure',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a7974eb2fd010cc78ac37b61a73a08660',1,'mal_toolkit::Measurer']]],
-  ['measurer_29',['Measurer',['../d1/d3a/structmal__toolkit_1_1_measurer.html',1,'mal_toolkit']]],
+  ['measurer_29',['Measurer',['../d1/d3a/structmal__toolkit_1_1_measurer.html',1,'mal_toolkit::Measurer&lt; clock &gt;'],['../d1/d3a/structmal__toolkit_1_1_measurer.html#a75ea1122ef872b467e5113888c1e5305',1,'mal_toolkit::Measurer::Measurer()']]],
   ['measurer_30',['measurer',['../d2/d9d/classmal__packet__weaver_1_1_packet.html#a09767662dde9e0e2be5c3d7c6541fb62',1,'mal_packet_weaver::Packet']]],
-  ['measurer_31',['Measurer',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a75ea1122ef872b467e5113888c1e5305',1,'mal_toolkit::Measurer']]],
-  ['measurer_2ehpp_32',['measurer.hpp',['../d0/db4/measurer_8hpp.html',1,'']]],
-  ['measurer_3c_20std_3a_3achrono_3a_3asteady_5fclock_20_3e_33',['Measurer&lt; std::chrono::steady_clock &gt;',['../d1/d3a/structmal__toolkit_1_1_measurer.html',1,'mal_toolkit']]],
-  ['multiplier_5f_34',['multiplier_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a38c878210aa4d564d35ac3fc45ca091e',1,'mal_toolkit::ExponentialBackoff']]],
-  ['packet_35',['packet',['../d9/d93/namespacemal__packet__weaver_1_1packet.html',1,'mal_packet_weaver']]],
-  ['uuid_36',['uuid',['../d4/dcc/namespacemal__toolkit_1_1uuid.html',1,'mal_toolkit']]]
+  ['measurer_2ehpp_31',['measurer.hpp',['../d0/db4/measurer_8hpp.html',1,'']]],
+  ['measurer_3c_20std_3a_3achrono_3a_3asteady_5fclock_20_3e_32',['Measurer&lt; std::chrono::steady_clock &gt;',['../d1/d3a/structmal__toolkit_1_1_measurer.html',1,'mal_toolkit']]],
+  ['multiplier_5f_33',['multiplier_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a38c878210aa4d564d35ac3fc45ca091e',1,'mal_toolkit::ExponentialBackoff']]],
+  ['packet_34',['packet',['../d9/d93/namespacemal__packet__weaver_1_1packet.html',1,'mal_packet_weaver']]],
+  ['uuid_35',['uuid',['../d4/dcc/namespacemal__toolkit_1_1uuid.html',1,'mal_toolkit']]]
 ];

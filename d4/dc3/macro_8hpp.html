@@ -158,12 +158,36 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> HasFlag(ENUM_TYPE a, T b) { <span class="keywordflow">return</span> (a &amp; b) == b; }           \</div>
-<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> HasAnyFlag(ENUM_TYPE a, T b) { <span class="keywordflow">return</span> (a &amp; b) != 0; }        \</div>
-<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> HasAllFlags(ENUM_TYPE a, T b) { <span class="keywordflow">return</span> (a &amp; b) == a; }       \</div>
-<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> ENUM_TYPE SetFlag(ENUM_TYPE a, T b) { <span class="keywordflow">return</span> a | b; }             \</div>
-<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> ENUM_TYPE ClearFlag(ENUM_TYPE a, T b) { <span class="keywordflow">return</span> a &amp; ~b; }          \</div>
-<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> ENUM_TYPE FlipFlag(ENUM_TYPE a, T b) { <span class="keywordflow">return</span> a ^ b; }</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;                                 \</div>
+<div class="line">    <span class="keyword">inline</span> <span class="keywordtype">bool</span> HasFlag(ENUM_TYPE a, T b)                 \</div>
+<div class="line">    {                                                     \</div>
+<div class="line">        return (a &amp; b) == b;                              \</div>
+<div class="line">    }                                                     \</div>
+<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;                                 \</div>
+<div class="line">    <span class="keyword">inline</span> <span class="keywordtype">bool</span> HasAnyFlag(ENUM_TYPE a, T b)              \</div>
+<div class="line">    {                                                     \</div>
+<div class="line">        return (a &amp; b) != 0;                              \</div>
+<div class="line">    }                                                     \</div>
+<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;                                 \</div>
+<div class="line">    <span class="keyword">inline</span> <span class="keywordtype">bool</span> HasAllFlags(ENUM_TYPE a, T b)             \</div>
+<div class="line">    {                                                     \</div>
+<div class="line">        return (a &amp; b) == a;                              \</div>
+<div class="line">    }                                                     \</div>
+<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;                                 \</div>
+<div class="line">    <span class="keyword">inline</span> ENUM_TYPE SetFlag(ENUM_TYPE a, T b)            \</div>
+<div class="line">    {                                                     \</div>
+<div class="line">        <span class="keywordflow">return</span> a | b;                                     \</div>
+<div class="line">    }                                                     \</div>
+<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;                                 \</div>
+<div class="line">    <span class="keyword">inline</span> ENUM_TYPE ClearFlag(ENUM_TYPE a, T b)          \</div>
+<div class="line">    {                                                     \</div>
+<div class="line">        <span class="keywordflow">return</span> a &amp; ~b;                                    \</div>
+<div class="line">    }                                                     \</div>
+<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;                                 \</div>
+<div class="line">    <span class="keyword">inline</span> ENUM_TYPE FlipFlag(ENUM_TYPE a, T b)           \</div>
+<div class="line">    {                                                     \</div>
+<div class="line">        <span class="keywordflow">return</span> a ^ b;                                     \</div>
+<div class="line">    }</div>
 </div><!-- fragment -->
 <p>This macro is used to declare the bitwise functions for an enum class so it is easier to use it as a bitfield. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -173,7 +197,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d4/dc3/macro_8hpp_source.html">macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../d4/dc3/macro_8hpp_source.html">macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -201,7 +225,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../d4/dc3/macro_8hpp_source.html">macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00082">82</a> of file <a class="el" href="../../d4/dc3/macro_8hpp_source.html">macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -220,9 +244,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d4/dc3/macro_8hpp.html#a9e2096cbdcac552508554718f89587ef">MAL_TOOLKIT_DECLARE_ENUM_BIT_OPERATORS</a>(ENUM_TYPE)                                             \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d4/dc3/macro_8hpp.html#a9e2096cbdcac552508554718f89587ef">MAL_TOOLKIT_DECLARE_ENUM_BIT_OPERATORS</a>(ENUM_TYPE)                   \</div>
 <div class="line">    MAL_TOOLKIT_DECLARE_ENUM_BIT_FUNCTIONS(ENUM_TYPE)</div>
-<div class="ttc" id="amacro_8hpp_html_a9e2096cbdcac552508554718f89587ef"><div class="ttname"><a href="../../d4/dc3/macro_8hpp.html#a9e2096cbdcac552508554718f89587ef">MAL_TOOLKIT_DECLARE_ENUM_BIT_OPERATORS</a></div><div class="ttdeci">#define MAL_TOOLKIT_DECLARE_ENUM_BIT_OPERATORS(ENUM_TYPE)</div><div class="ttdoc">This macro is used to declare the bitwise operators for an enum class so it is easier to use it as a ...</div><div class="ttdef"><b>Definition</b> <a href="../../d4/dc3/macro_8hpp_source.html#l00080">macro.hpp:80</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a9e2096cbdcac552508554718f89587ef"><div class="ttname"><a href="../../d4/dc3/macro_8hpp.html#a9e2096cbdcac552508554718f89587ef">MAL_TOOLKIT_DECLARE_ENUM_BIT_OPERATORS</a></div><div class="ttdeci">#define MAL_TOOLKIT_DECLARE_ENUM_BIT_OPERATORS(ENUM_TYPE)</div><div class="ttdoc">This macro is used to declare the bitwise operators for an enum class so it is easier to use it as a ...</div><div class="ttdef"><b>Definition</b> <a href="../../d4/dc3/macro_8hpp_source.html#l00082">macro.hpp:82</a></div></div>
 </div><!-- fragment -->
 <p>This macro is used to declare both the bitwise operators and functions for an enum class so it is easier to use it as a bitfield. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -232,7 +256,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00101">101</a> of file <a class="el" href="../../d4/dc3/macro_8hpp_source.html">macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00127">127</a> of file <a class="el" href="../../d4/dc3/macro_8hpp_source.html">macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -272,7 +296,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This macro is used when the underlying type of the enum class is not the default one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../d4/dc3/macro_8hpp_source.html">macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dc3/macro_8hpp_source.html#l00014">14</a> of file <a class="el" href="../../d4/dc3/macro_8hpp_source.html">macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -282,7 +306,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_44f42edf5dd23d4deca0321224e9ce90.html">third_party</a></li><li class="navelem"><a class="el" href="../../dir_3577c9a6affce70dac2a1ac1c3433c90.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../dir_3b66e6ce143615bdc3322f7e948ad10e.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../dir_41feb083de401942fea39ff02ab08efc.html">mal-toolkit</a></li><li class="navelem"><a class="el" href="../../d4/dc3/macro_8hpp.html">macro.hpp</a></li>
-    <li class="footer">Generated on Sun Aug 13 2023 23:23:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 08:24:47 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>
