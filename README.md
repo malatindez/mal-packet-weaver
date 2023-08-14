@@ -12,6 +12,8 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 - [Installation](#installation)
 - [Usage](#usage)
   - [Creating a Custom Packet: MyPacket](#creating-a-custom-packet-mypacket)
+    - [Declaring the Packet Type](#declaring-the-packet-type)
+    - [Using Inheritance](#using-inheritance)
     - [Registering Deserializers](#registering-deserializers)
   - [Waiting for Packets with PacketDispatcher](#waiting-for-packets-with-packetdispatcher)
     - [Awaiting a Specific Packet](#awaiting-a-specific-packet)
@@ -89,6 +91,23 @@ In this example, we'll create a custom packet named `MyPacket` using the `Packet
 
 Let's start by defining the `MyPacket` class. This class should inherit from `DerivedPacket<MyPacket>` and implement the necessary functions.
 
+* Note: Packets should satisfy the IsPacket concept:
+    ```cpp
+    template <typename T>
+    concept IsPacket = requires(T packet)
+    {
+        // The class MUST be final
+        std::is_final_v<T>;
+        // It should derive from mal_packet_weaver::DerivedPacket
+        std::is_base_of_v<DerivedPacket<T>, T>; 
+        // It should have a static constexpr UniquePacketID(or uint32_t) static_type that indicates unique packet ID.
+        std::same_as<std::decay_t<decltype(T::static_type)>, UniquePacketID>; 
+        // It should have static constexpr float time_to_live that indicates that packets TTL within subsystems.
+        std::same_as<std::decay_t<decltype(T::time_to_live)>, float>;
+    };
+    ```
+
+### Declaring the Packet Type
 
 ```cpp
 using mal_packet_weaver::packet::DerivedPacket;
@@ -101,8 +120,9 @@ using mal_packet_weaver::packet::CreatePacketID;
 // If you try to register deserializer for existing packet, it will throw an exception, so you'll be notified about intersections.
 constexpr PacketSubsystemID MySubsystem = 0x0000;
 
+
 // Define MyPacket
-class MyPacket : public DerivedPacket<MyPacket> {
+class MyPacket final : public DerivedPacket<MyPacket> {
 public:
     // Here you can use any number. UniquePacketID is uint32_t, CreatePacketID is a helper that combines two 16-bit unsigned integers so there's no conflicts.
     static constexpr UniquePacketID static_type = CreatePacketID(MySubsystem, 0x0010);
@@ -115,12 +135,94 @@ private:
     friend class boost::serialization::access;
     template <class Archive>
     void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) {
-        ar &boost::serialization::base_object<DerivedPacket<MyPacket>>(*this);
         // 
         ar &packet_data;
     }
 };
 ```
+### Using Inheritance
+
+What if you have a lot of similar data and functions between packets and you need inheritance so there's no boilerplate code? You can use multi-inheritance to define this. Neither DerivedPacket nor Packet need to serialize any data, so we wont need to call their serialization function.
+
+You can do something similar:
+```cpp
+
+using mal_packet_weaver::packet::DerivedPacket;
+using mal_packet_weaver::packet::UniquePacketID;
+using mal_packet_weaver::packet::CreatePacketID;
+
+struct CommonData
+{
+    float x, y, z;
+    std::string name;
+    
+private:
+    friend class boost::serialization::access;
+    template <class Archive>
+    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) {
+        ar &x;
+        ar &y;
+        ar &z;
+        ar &name;
+    }
+};
+
+constexpr PacketSubsystemID MySubsystem = 0x0000;
+
+class MyPacket final : public CommonData, public DerivedPacket<MyPacket> {
+public:
+    static constexpr UniquePacketID static_type = CreatePacketID(MySubsystem, 0x0010);
+    static constexpr float time_to_live = 60.0f;
+
+    int subpacket_specific_data_1;
+    int subpacket_specific_data_2;
+    int subpacket_specific_data_3;
+    int subpacket_specific_data_4;
+
+private:
+    friend class boost::serialization::access;
+    template <class Archive>
+    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) {
+        // Add this line:
+        ar &boost::serialization::base_object<CommonData>(*this);
+        // And you can still serialize your variables.
+        ar &subpacket_specific_data_1;
+        ar &subpacket_specific_data_2;
+        ar &subpacket_specific_data_3;
+        ar &subpacket_specific_data_4;
+    }
+};
+```
+Or you can use it as a member:
+```cpp
+class MyPacket final : public DerivedPacket<MyPacket> {
+public:
+    static constexpr UniquePacketID static_type = CreatePacketID(MySubsystem, 0x0010);
+    static constexpr float time_to_live = 60.0f;
+
+    int subpacket_specific_data_1;
+    int subpacket_specific_data_2;
+    int subpacket_specific_data_3;
+    int subpacket_specific_data_4;
+    // But we lose easy-to-access interface provided by CommonData.
+    CommonData common_data;
+
+private:
+    friend class boost::serialization::access;
+    template <class Archive>
+    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) {
+        // Add this line:
+        ar &common_data;
+        // And you can still serialize your variables.
+        ar &subpacket_specific_data_1;
+        ar &subpacket_specific_data_2;
+        ar &subpacket_specific_data_3;
+        ar &subpacket_specific_data_4;
+    }
+};
+```
+
+
 
 ### Registering Deserializers
 

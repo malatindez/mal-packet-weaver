@@ -53,9 +53,9 @@ namespace mal_packet_weaver
 
         Packet(Packet &&) = default;
         Packet &operator=(Packet &&) = default;
-        
+
         /// @todo: use RBAC system to manage permissions
-   
+
         /// Virtual destructor for Packet class.
         virtual ~Packet() = default;
 
@@ -74,23 +74,25 @@ namespace mal_packet_weaver
         const UniquePacketID type;  ///< Unique packet ID.
         const float time_to_live;   ///< Time-to-live for the packet.
         const float timestamp_;     ///< Timestamp when the packet was received.
-    private:
-        friend class boost::serialization::access;
-
-        /// Serialization function for the Packet class.
-        template <class Archive>
-        void serialize([[maybe_unused]] Archive &ar, [[maybe_unused]] const unsigned int version) { }
     };
 
     /**
      * @brief A templated class representing a derived packet from the base Packet class.
      *
      * Derived packets are specialized implementations of Packet that define specific packet types.
+     * 
      * They inherit serialization and deserialization functionality from the base Packet class and
      * can be used to encapsulate and manage different types of data for communication.
+     * 
      * The template parameter `PacketType` specifies the concrete derived packet type.
      *
+     * @note We cannot check within this class if requirements for packet type are satisfied, but IsPacket concept is
+     *       used thoroughly within the library. It requires that the class should be final, declared time_to_live,
+     *       static_type and deserialize functions.
+     *
      * @tparam PacketType The specific derived packet type.
+     *
+     *
      */
     template <typename PacketType>
     class DerivedPacket : public Packet
@@ -144,36 +146,16 @@ namespace mal_packet_weaver
             ia >> *derived_packet;
             return derived_packet;
         }
-
-    private:
-        friend class boost::serialization::access;
-
-        /**
-         * @brief Serialization function for the DerivedPacket class.
-         *
-         * This function is used by Boost's serialization framework to serialize the derived packet.
-         * It invokes the base_object serialization to serialize the common Packet attributes.
-         *
-         * @param ar The serialization archive.
-         * @param version The serialization version (unused in this implementation).
-         */
-        template <class Archive>
-        void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
-        {
-            ar &boost::serialization::base_object<Packet>(*this);
-        }
     };
 
     /// Concept to check if a given type satisfies the requirements of being a packet.
     template <typename T>
     concept IsPacket = requires(T packet)
     {
-        {
-            T::static_type
-            } -> std::same_as<const UniquePacketID &>;
-        {
-            T::deserialize
-            } -> std::same_as<std::unique_ptr<Packet> (&)(const ByteView)>;
+        std::is_final_v<T>;
+        std::is_base_of_v<DerivedPacket<T>, T>;
+        std::same_as<std::decay_t<decltype(T::static_type)>, UniquePacketID>;
+        std::same_as<std::decay_t<decltype(T::time_to_live)>, float>;
     };
 
 }  // namespace mal_packet_weaver
