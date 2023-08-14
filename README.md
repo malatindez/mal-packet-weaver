@@ -4,11 +4,24 @@
 
 The MAL Packet Weaver is a C++ library that provides utilities for working with network packets. It simplifies the creation, manipulation, and serialization of network packets. The library is designed to be easy to use, efficient, and highly customizable.
 
+## Table of contents
+- [Documentation link](https://malatindez.github.io/mal-packet-weaver)
+- [Dependencies](#dependencies)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Creating a Custom Packet: MyPacket](#creating-a-custom-packet-mypacket)
+  - [Waiting for Packets with PacketDispatcher](#waiting-for-packets-with-packetdispatcher)
+- [Contributing](#contributing)
+- [License](#license)
+
+
 ## Dependencies
 
 - [Boost](https://www.boost.org/): A set of high-quality libraries for C++ programming.
 - [mal-toolkit](https://github.com/malatindez/mal-toolkit): My custom C++20 toolkit library.
 - [spdlog](https://github.com/gabime/spdlog): A fast C++ logging library.
+
 
 ## Features
 
