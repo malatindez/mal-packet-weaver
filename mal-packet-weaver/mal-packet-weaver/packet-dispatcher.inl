@@ -20,29 +20,29 @@ namespace mal_packet_weaver
 
         if (timeout <= 0)
         {
-            auto base = future.get();
+            auto base = co_await await_future(future, co_await boost::asio::this_coro::executor);
             Assert(base->type == DerivedPacket::static_type);  // Sanity check
             spdlog::trace("Received packet: {}", DerivedPacket::static_type);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
 
-        std::future_status status = future.wait_for(std::chrono::microseconds(size_t(timeout * 1e6f)));
-
-        if (status == std::future_status::ready)
+        try
         {
-            auto base = future.get();
+            auto base = co_await await_future(future, co_await boost::asio::this_coro::executor, 
+                                              std::chrono::microseconds(static_cast<size_t>(timeout * 1e6f)));
             Assert(base->type == DerivedPacket::static_type);  // Sanity check
             spdlog::trace("Received packet: {}", DerivedPacket::static_type);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
-        else if (status == std::future_status::timeout)
+        catch (std::runtime_error &err)
         {
             spdlog::warn("Timed out waiting for packet: {}", DerivedPacket::static_type);
             co_return nullptr;
         }
-        else
+        catch (std::exception &exception)
         {
-            spdlog::error("An error occurred while waiting for packet: {}", DerivedPacket::static_type);
+            spdlog::error("An error occurred while waiting for packet {}: {}", DerivedPacket::static_type,
+                          exception.what());
             co_return nullptr;
         }
     }
@@ -57,7 +57,6 @@ namespace mal_packet_weaver
                                                  return passedFilter(*reinterpret_cast<DerivedPacket *>(packet.get()));
                                              },
                                               promise });
-
         auto future = promise->get_future();
         co_await boost::asio::this_coro::executor;
 
@@ -65,29 +64,29 @@ namespace mal_packet_weaver
 
         if (timeout <= 0)
         {
-            auto base = future.get();
+            auto base = co_await await_future(future, co_await boost::asio::this_coro::executor);
             Assert(base->type == DerivedPacket::static_type);  // Sanity check
             spdlog::trace("Received packet: {}", DerivedPacket::static_type);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
 
-        std::future_status status = future.wait_for(std::chrono::microseconds(size_t(timeout * 1e6f)));
-
-        if (status == std::future_status::ready)
+        try
         {
-            auto base = future.get();
+            auto base = co_await await_future(future, co_await boost::asio::this_coro::executor,
+                                              std::chrono::microseconds(static_cast<size_t>(timeout * 1e6f)));
             Assert(base->type == DerivedPacket::static_type);  // Sanity check
             spdlog::trace("Received packet: {}", DerivedPacket::static_type);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
-        else if (status == std::future_status::timeout)
+        catch (std::runtime_error &err)
         {
             spdlog::warn("Timed out waiting for packet: {}", DerivedPacket::static_type);
             co_return nullptr;
         }
-        else
+        catch (std::exception &exception)
         {
-            spdlog::error("An error occurred while waiting for packet: {}", DerivedPacket::static_type);
+            spdlog::error("An error occurred while waiting for packet {}: {}", DerivedPacket::static_type,
+                          exception.what());
             co_return nullptr;
         }
     }
