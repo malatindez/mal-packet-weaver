@@ -39,7 +39,7 @@ public:
 private:
     friend class boost::serialization::access;
     template <class Archive>
-    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) {}
+    void serialize(Archive &, const unsigned int) { }
 };
 
 /**
@@ -54,7 +54,7 @@ public:
 private:
     friend class boost::serialization::access;
     template <class Archive>
-    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) { }
+    void serialize(Archive &, const unsigned int) { }
 };
 
 /**
@@ -70,7 +70,10 @@ public:
 private:
     friend class boost::serialization::access;
     template <class Archive>
-    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) { ar &message; }
+    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
+    {
+        ar &message;
+    }
 };
 
 /**
@@ -86,7 +89,10 @@ public:
 private:
     friend class boost::serialization::access;
     template <class Archive>
-    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) { ar &echo_message; }
+    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
+    {
+        ar &echo_message;
+    }
 };
 
 /**
