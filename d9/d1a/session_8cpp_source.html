@@ -203,7 +203,7 @@ $(document).ready(function(){initNavTree('d9/d1a/session_8cpp_source.html','../.
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        spdlog::trace(<span class="stringliteral">&quot;Async packet popping initiated.&quot;</span>);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 0.1);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 0.1);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">while</span> (this-&gt;<a class="code hl_variable" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ad552f2abc84b29af4a1a532cb795258e">alive_</a>)</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            std::unique_ptr&lt;Packet&gt; packet = <a class="code hl_function" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0">pop_packet_now</a>();</div>
@@ -265,7 +265,7 @@ $(document).ready(function(){initNavTree('d9/d1a/session_8cpp_source.html','../.
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e">  154</a></span>    boost::asio::awaitable&lt;std::shared_ptr&lt;Session&gt;&gt; <a class="code hl_function" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e">Session::get_shared_ptr</a>(boost::asio::io_context &amp;io)</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordtype">int</span> it = 0;</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">do</span></div>
@@ -315,7 +315,7 @@ $(document).ready(function(){initNavTree('d9/d1a/session_8cpp_source.html','../.
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keyword">co_return</span>;</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        }</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">try</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        {</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">while</span> (<a class="code hl_variable" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ad552f2abc84b29af4a1a532cb795258e">alive_</a>)</div>
@@ -383,7 +383,7 @@ $(document).ready(function(){initNavTree('d9/d1a/session_8cpp_source.html','../.
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    {</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        spdlog::debug(<span class="stringliteral">&quot;Starting async_packet_forger...&quot;</span>);</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        std::shared_ptr&lt;Session&gt; session_lock = <span class="keyword">co_await</span> get_shared_ptr(io);</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">if</span> (session_lock == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        {</div>
@@ -434,7 +434,7 @@ $(document).ready(function(){initNavTree('d9/d1a/session_8cpp_source.html','../.
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                <span class="keywordflow">while</span> (!received_packets_.push(packet_data))</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                {</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                    boost::asio::steady_timer timer(io, std::chrono::microseconds(1000));</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                    boost::asio::steady_timer timer(io, std::chrono::microseconds(100));</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                    <span class="keyword">co_await</span> timer.async_wait(boost::asio::use_awaitable);</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                    spdlog::trace(<span class="stringliteral">&quot;Waiting to push packet data to received_packets_...&quot;</span>);</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                }</div>
@@ -571,7 +571,7 @@ $(document).ready(function(){initNavTree('d9/d1a/session_8cpp_source.html','../.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../d9/d1a/session_8cpp.html">session.cpp</a></li>
-    <li class="footer">Generated on Mon Aug 14 2023 14:49:03 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 15:26:44 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

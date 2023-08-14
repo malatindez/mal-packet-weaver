@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('d8/d1a/packet-dispatcher_8cpp_source.h
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2b820a2094b9d5cfd27bb787183437ac">   20</a></span>    boost::asio::awaitable&lt;std::shared_ptr&lt;PacketDispatcher&gt;&gt; <a class="code hl_function" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2b820a2094b9d5cfd27bb787183437ac">PacketDispatcher::get_shared_ptr</a>()</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 32, 0.1);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">int</span> it = 0;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">do</span></div>
@@ -157,7 +157,7 @@ $(document).ready(function(){initNavTree('d8/d1a/packet-dispatcher_8cpp_source.h
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323">   46</a></span>    boost::asio::awaitable&lt;void&gt; <a class="code hl_function" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323">PacketDispatcher::Run</a>()</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff{ std::chrono::microseconds(1), std::chrono::microseconds(500), 2, 32, 0.1 };</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff{ std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1 };</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_class" href="../../db/d8f/classmal__toolkit_1_1_timer.html">SteadyTimer</a> timer;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">float</span> min_handler_timestamp = std::numeric_limits&lt;float&gt;::max();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
@@ -414,7 +414,7 @@ $(document).ready(function(){initNavTree('d8/d1a/packet-dispatcher_8cpp_source.h
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../d8/d1a/packet-dispatcher_8cpp.html">packet-dispatcher.cpp</a></li>
-    <li class="footer">Generated on Mon Aug 14 2023 14:49:03 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 15:26:44 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>
