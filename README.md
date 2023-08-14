@@ -65,15 +65,15 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 
 ## Creating a Custom Packet: MyPacket
 
-In this example, we'll create a custom packet named `MyPacket` using the `Packet` and `DerivedPacket` classes provided by the `packet_library` namespace.
+In this example, we'll create a custom packet named `MyPacket` using the `Packet` and `DerivedPacket` classes provided by the `mal_packet_weaver` namespace.
 
 Let's start by defining the `MyPacket` class. This class should inherit from `DerivedPacket<MyPacket>` and implement the necessary functions.
 
 
 ```cpp
-using packet_library::packet::DerivedPacket;
-using packet_library::packet::UniquePacketID;
-using packet_library::packet::CreatePacketID;
+using mal_packet_weaver::packet::DerivedPacket;
+using mal_packet_weaver::packet::UniquePacketID;
+using mal_packet_weaver::packet::CreatePacketID;
 
 // You can use underlying ID system so you won't catch yourself with intersecting IDs:
 // PacketSubsystemID and PacketID are simple uint16_t's to form a UniquePacketID.
@@ -107,7 +107,7 @@ private:
 Don't forget to register the deserializer for your `MyPacket` class using the `PacketFactory` to ensure proper deserialization.
 
 ```cpp
-    packet_library::packet::PacketFactory::RegisterDeserializer<MyPacket>();
+    mal_packet_weaver::packet::PacketFactory::RegisterDeserializer<MyPacket>();
 ```
 
 By following these steps, you've successfully created a custom packet named `MyPacket` using the provided classes and concepts. You can now use this packet to communicate specific data within your application.
@@ -201,7 +201,7 @@ Once you've set up your `PacketDispatcher` and registered handlers, you can star
 int main() {
     // Create an io_context and PacketDispatcher instance
     boost::asio::io_context io_context;
-    packet_library::PacketDispatcher dispatcher(io_context);
+    mal_packet_weaver::PacketDispatcher dispatcher(io_context);
     boost::asio::ip::tcp::socket socket(io_context);
     socket.connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
 
