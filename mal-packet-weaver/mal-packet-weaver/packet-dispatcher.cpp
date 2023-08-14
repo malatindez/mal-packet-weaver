@@ -57,57 +57,66 @@ namespace mal_packet_weaver
                 "session using std::make_shared?");
             co_return;
         }
-
-        while (alive_.load())
+        try
         {
-            bool updated = co_await pop_inputs();
-
-            if (!updated)
+            while (alive_.load())
             {
-                if (min_handler_timestamp < timer.elapsed())
-                {
-                    spdlog::trace("Updating handlers...");
-                    min_handler_timestamp = std::numeric_limits<float>::max();
+                bool updated = co_await pop_inputs();
 
-                    for (auto &[packet_id, packet_vector] : unprocessed_packets_)
+                if (!updated)
+                {
+                    if (min_handler_timestamp < timer.elapsed())
                     {
-                        // Remove packets that fulfill handlers and update min_handler_timestamp
-                        std::erase_if(packet_vector, [this, &packet_id, &min_handler_timestamp,
-                                                      &timer](BasePacketPtr &packet) __lambda_force_inline
-                                      { return fulfill_handlers(packet_id, packet, min_handler_timestamp, timer); });
+                        spdlog::trace("Updating handlers...");
+                        min_handler_timestamp = std::numeric_limits<float>::max();
+
+                        for (auto &[packet_id, packet_vector] : unprocessed_packets_)
+                        {
+                            // Remove packets that fulfill handlers and update min_handler_timestamp
+                            std::erase_if(
+                                packet_vector, [this, &packet_id, &min_handler_timestamp, &timer](BasePacketPtr &packet)
+                                                   __lambda_force_inline
+                                { return fulfill_handlers(packet_id, packet, min_handler_timestamp, timer); });
+                        }
                     }
+
+                    // Introduce delay and increase it using exponential backoff strategy
+                    boost::asio::steady_timer async_timer(co_await boost::asio::this_coro::executor,
+                                                          backoff.get_current_delay());
+                    co_await async_timer.async_wait(boost::asio::use_awaitable);
+                    backoff.increase_delay();
+                    continue;
                 }
 
-                // Introduce delay and increase it using exponential backoff strategy
-                boost::asio::steady_timer async_timer(co_await boost::asio::this_coro::executor,
-                                                      backoff.get_current_delay());
-                co_await async_timer.async_wait(boost::asio::use_awaitable);
-                backoff.increase_delay();
-                continue;
+                spdlog::trace("Input arrays were updated! Fetching...");
+
+                min_handler_timestamp = std::numeric_limits<float>::max();
+                for (auto &[packet_id, packet_vector] : unprocessed_packets_)
+                {
+                    // Process packets: fulfill promises, fulfill handlers, and check for expiration
+                    std::erase_if(packet_vector,
+                                  [this, &packet_id, &min_handler_timestamp, &timer](BasePacketPtr &packet)
+                                      __lambda_force_inline
+                                  {
+                                      return fulfill_promises(packet_id, packet) ||
+                                             fulfill_handlers(packet_id, packet, min_handler_timestamp, timer) ||
+                                             packet->expired();
+                                  });
+                }
+
+                // Remove empty entries from the unprocessed_packets_ map
+                std::erase_if(unprocessed_packets_,
+                              [](auto const &pair) __lambda_force_inline { return pair.second.empty(); });
+
+                // Decrease the delay for exponential backoff
+                backoff.decrease_delay();
             }
-
-            spdlog::trace("Input arrays were updated! Fetching...");
-
-            min_handler_timestamp = std::numeric_limits<float>::max();
-            for (auto &[packet_id, packet_vector] : unprocessed_packets_)
-            {
-                // Process packets: fulfill promises, fulfill handlers, and check for expiration
-                std::erase_if(
-                    packet_vector,
-                    [this, &packet_id, &min_handler_timestamp, &timer](BasePacketPtr &packet) __lambda_force_inline
-                    {
-                        return fulfill_promises(packet_id, packet) ||
-                               fulfill_handlers(packet_id, packet, min_handler_timestamp, timer) || packet->expired();
-                    });
-            }
-
-            // Remove empty entries from the unprocessed_packets_ map
-            std::erase_if(unprocessed_packets_,
-                          [](auto const &pair) __lambda_force_inline { return pair.second.empty(); });
-
-            // Decrease the delay for exponential backoff
-            backoff.decrease_delay();
         }
+        catch (std::exception& e)
+        {
+            spdlog::error("PacketDispatcher::Run cancelled with an error: {}", e.what());
+        }
+        spdlog::info("Exiting PacketDispatcher::Run");
     }
 
     std::future<bool> PacketDispatcher::create_promise_map_input_pop_task()
@@ -241,12 +250,8 @@ namespace mal_packet_weaver
         for (auto &future : futures)
         {
             spdlog::trace("Waiting for futures to complete...");
-            while (future.wait_for(std::chrono::microseconds(100)) != std::future_status::ready)
-            {
-                co_await boost::asio::this_coro::executor;
-            }
-            rv |= future.get();
-            spdlog::trace("Futures completed. Result for popping is: {}", rv);
+            rv |= co_await await_future(future, co_await boost::asio::this_coro::executor);
+            spdlog::trace("Futures complete. Result for popping is: {}", rv);
         }
         co_return rv;
     }
