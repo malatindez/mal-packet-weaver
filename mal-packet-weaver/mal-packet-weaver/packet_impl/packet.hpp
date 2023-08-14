@@ -15,17 +15,6 @@ namespace mal_packet_weaver
     /// Type alias for packet deserialization function.
     using PacketDeserializeFunc = std::function<std::unique_ptr<Packet>(const ByteView)>;
 
-    /// Enum representing different permission levels for packets.
-    /// @todo: use RBAC system to manage permissions
-    enum class Permission : uint32_t
-    {
-        ANY = 0x0000UL,
-        L1_NODE = 0x0001UL,
-        L2_CORE_NODE = 0x0002UL,
-        L2_PUBLIC_NODE = 0x0003UL,
-        L2_ADMIN_NODE = 0x0004UL
-    };
-
     /// Convert a PacketSubsystemID to a uint32_t value.
     constexpr uint32_t PacketSubsystemIDToUint32(PacketSubsystemID subsystem_type) noexcept
     {
@@ -64,10 +53,9 @@ namespace mal_packet_weaver
 
         Packet(Packet &&) = default;
         Packet &operator=(Packet &&) = default;
-
-        /// Pure virtual function to get the permission level of the packet.
-        virtual Permission get_permission() const = 0;
-
+        
+        /// @todo: use RBAC system to manage permissions
+   
         /// Virtual destructor for Packet class.
         virtual ~Packet() = default;
 

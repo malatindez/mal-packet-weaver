@@ -34,11 +34,6 @@ class PingPacket : public mal_packet_weaver::DerivedPacket<class PingPacket>
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = PingPacketID;
     static constexpr float time_to_live = 10.0f;
-    [[nodiscard]] mal_packet_weaver::Permission get_permission() const override
-    {
-        return mal_packet_weaver::Permission::ANY;
-    }
-
 private:
     friend class boost::serialization::access;
     template <class Archive>
@@ -56,10 +51,6 @@ class PongPacket : public mal_packet_weaver::DerivedPacket<class PongPacket>
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = PongPacketID;
     static constexpr float time_to_live = 10.0f;
-    [[nodiscard]] mal_packet_weaver::Permission get_permission() const override
-    {
-        return mal_packet_weaver::Permission::ANY;
-    }
 
 private:
     friend class boost::serialization::access;
@@ -78,10 +69,6 @@ class MessagePacket : public mal_packet_weaver::DerivedPacket<class MessagePacke
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = MessagePacketID;
     static constexpr float time_to_live = 60.0f;
-    [[nodiscard]] mal_packet_weaver::Permission get_permission() const override
-    {
-        return mal_packet_weaver::Permission::ANY;
-    }
     std::string message;
 
 private:
@@ -102,10 +89,6 @@ class EchoPacket : public mal_packet_weaver::DerivedPacket<class EchoPacket>
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = EchoPacketID;
     static constexpr float time_to_live = 5.0f;
-    [[nodiscard]] mal_packet_weaver::Permission get_permission() const override
-    {
-        return mal_packet_weaver::Permission::ANY;
-    }
     std::string echo_message;
 
 private:

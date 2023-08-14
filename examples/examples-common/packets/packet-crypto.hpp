@@ -23,11 +23,6 @@ class DHKeyExchangeRequestPacket : public mal_packet_weaver::DerivedPacket<class
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = DHKeyExchangeRequestPacketID;
     static constexpr float time_to_live = 120.0f;
-    [[nodiscard]] mal_packet_weaver::Permission get_permission() const override
-    {
-        return mal_packet_weaver::Permission::ANY;
-    }
-
     mal_packet_weaver::ByteArray public_key;
 
 private:
@@ -49,10 +44,6 @@ class DHKeyExchangeResponsePacket : public mal_packet_weaver::DerivedPacket<clas
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = DHKeyExchangeResponsePacketID;
     static constexpr float time_to_live = 120.0f;
-    [[nodiscard]] mal_packet_weaver::Permission get_permission() const override
-    {
-        return mal_packet_weaver::Permission::ANY;
-    }
 
     /**
      * @brief Calculate the hash of the packet's contents.

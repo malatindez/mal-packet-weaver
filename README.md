@@ -88,7 +88,6 @@ public:
     // Here you can use any number. UniquePacketID is uint32_t, CreatePacketID is a helper that combines two 16-bit unsigned integers so there's no conflicts.
     static constexpr UniquePacketID static_type = CreatePacketID(MySubsystem, 0x0010);
     static constexpr float time_to_live = 60.0f;
-    [[nodiscard]] Permission get_permission() const override { return Permission::L1_NODE; }
 
     // Add your packet-specific data fields here
     int packet_data;
