@@ -67,7 +67,7 @@ void process_echo(mal_packet_weaver::Session &connection, std::unique_ptr<EchoPa
 
 int main()
 {
-    spdlog::set_level(spdlog::level::debug);
+    spdlog::set_level(spdlog::level::trace);
     RegisterDeserializersCrypto();
     RegisterDeserializersNetwork();
     boost::asio::io_context io_context;
@@ -76,8 +76,9 @@ int main()
     std::cout << "Connected to server." << std::endl;
     DispatcherSession dispatcher_session(io_context, std::move(socket));
     // For dispatcher_session you should explicitly declare parameters.
-    // It will automatically fill io_context/Session&/std::shared_ptr<Session>/PacketDispatcher&/std::shared_ptr<PacketDispatcher> variables.
-    dispatcher_session.register_default_handler<mal_packet_weaver::Session&, EchoPacket>(process_echo);
+    // It will automatically fill
+    // io_context/Session&/std::shared_ptr<Session>/PacketDispatcher&/std::shared_ptr<PacketDispatcher> variables.
+    dispatcher_session.register_default_handler<mal_packet_weaver::Session &, EchoPacket>(process_echo);
     auto public_key = read_key("public-key.pem");
 
     mal_packet_weaver::crypto::ECDSA::Verifier verifier{ public_key,

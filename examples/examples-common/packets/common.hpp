@@ -18,6 +18,20 @@ mal_packet_weaver::crypto::Key read_key(std::filesystem::path const &path)
 {
     mal_packet_weaver::crypto::Key key;
     std::ifstream key_file(path);
+    if (!key_file.is_open())
+    {
+        std::string fmt;
+        if (path.is_absolute())
+        {
+            auto fmt = std::format("Couldn't find the key at path: {}", path.string());
+        }
+        else
+        {
+            fmt = std::format("Couldn't find the key at path: {}", (std::filesystem::current_path() / path).string());
+        }
+        spdlog::error(fmt);
+        throw std::invalid_argument(fmt);
+    }
     // count amount of bytes in file
     key_file.seekg(0, std::ios::end);
     key.resize(key_file.tellg());
