@@ -58,7 +58,7 @@ private:
     void setup_new_connection(boost::asio::ip::tcp::socket&& socket)
     {
         spdlog::info("New connection established.");
-        auto dispatcher_session = std::make_unique < DispatcherSession>( io_context_, std::move(socket) );
+        auto dispatcher_session = std::make_unique<DispatcherSession>(io_context_, std::move(socket));
 
         using namespace std::placeholders;
 
@@ -110,7 +110,7 @@ private:
     std::mutex connection_access;
     bool alive = true;
     boost::asio::ip::tcp::acceptor acceptor_;
-    std::vector < std::unique_ptr<mal_packet_weaver::DispatcherSession>> connections_;
+    std::vector<std::unique_ptr<mal_packet_weaver::DispatcherSession>> connections_;
     boost::asio::io_context& io_context_;
     std::unique_ptr<crypto::ECDSA::Signer> signer_;
 };
@@ -133,7 +133,7 @@ int main()
     {
         server = std::make_unique<TcpServer>(io_context, 1234, std::move(signer));
     }
-    catch(const std::exception& e)
+    catch (const std::exception& e)
     {
         spdlog::error("Couldn't create TCP server: {}", e.what());
         std::abort();

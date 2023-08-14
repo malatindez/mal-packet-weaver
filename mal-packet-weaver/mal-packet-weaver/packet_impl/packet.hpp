@@ -80,10 +80,10 @@ namespace mal_packet_weaver
      * @brief A templated class representing a derived packet from the base Packet class.
      *
      * Derived packets are specialized implementations of Packet that define specific packet types.
-     * 
+     *
      * They inherit serialization and deserialization functionality from the base Packet class and
      * can be used to encapsulate and manage different types of data for communication.
-     * 
+     *
      * The template parameter `PacketType` specifies the concrete derived packet type.
      *
      * @note We cannot check within this class if requirements for packet type are satisfied, but IsPacket concept is

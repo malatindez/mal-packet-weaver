@@ -76,12 +76,12 @@ int main()
     {
         socket.connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         spdlog::error("Couldn't establish connection: {}", e.what());
         std::abort();
     }
-    
+
     std::cout << "Connected to server." << std::endl;
     DispatcherSession dispatcher_session(io_context, std::move(socket));
     // For dispatcher_session you should explicitly declare parameters.

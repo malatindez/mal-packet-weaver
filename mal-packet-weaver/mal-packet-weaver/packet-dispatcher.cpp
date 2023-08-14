@@ -112,7 +112,7 @@ namespace mal_packet_weaver
                 backoff.decrease_delay();
             }
         }
-        catch (std::exception& e)
+        catch (std::exception &e)
         {
             spdlog::error("PacketDispatcher::Run cancelled with an error: {}", e.what());
         }

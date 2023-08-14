@@ -221,7 +221,8 @@ namespace mal_packet_weaver
 
                     ByteArray *packet = nullptr;
                     for (int i = 0;
-                         (i < 1000 && data_to_send.size() < kDefaultDataToSendSize) && packets_to_send_.pop(packet); i++)
+                         (i < 1000 && data_to_send.size() < kDefaultDataToSendSize) && packets_to_send_.pop(packet);
+                         i++)
                     {
                         data_to_send.append(uint32_to_bytes(static_cast<uint32_t>(packet->size())));
                         data_to_send.append(*packet);
@@ -256,11 +257,11 @@ namespace mal_packet_weaver
                 backoff.increase_delay();
             }
         }
-        catch(std::exception & e)
+        catch (std::exception &e)
         {
             spdlog::error("Send loop terminated: {}", e.what());
         }
-        catch(...)
+        catch (...)
         {
             spdlog::error("Send loop terminated: reason unknown.");
         }

@@ -7,6 +7,7 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 - Documentation: [link](https://malatindez.github.io/mal-packet-weaver)
 
 ## Table of contents
+
 - [Dependencies](#dependencies)
 - [Features](#features)
 - [Installation](#installation)
@@ -24,13 +25,11 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 - [Contributing](#contributing)
 - [License](#license)
 
-
 ## Dependencies
 
 - [Boost](https://www.boost.org/): A set of high-quality libraries for C++ programming.
 - [mal-toolkit](https://github.com/malatindez/mal-toolkit): My custom C++20 toolkit library.
 - [spdlog](https://github.com/gabime/spdlog): A fast C++ logging library.
-
 
 ## Features
 
@@ -47,10 +46,11 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
    git clone https://github.com/malatindez/mal-packet-weaver.git
    ```
 2. Update and initialize submodules:
-    ```shell
-    git submodule update --init --recursive
-    ```
+   ```shell
+   git submodule update --init --recursive
+   ```
 3. Build the library using CMake:
+
    ```shell
    cd mal-packet-weaver
    mkdir build
@@ -62,7 +62,6 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 4. Link the built library and its dependencies to your project.
 
 ### You can also use it as a submodule with CMake:
-
 
 1. Add submodule to your repository:
    ```shell
@@ -91,21 +90,21 @@ In this example, we'll create a custom packet named `MyPacket` using the `Packet
 
 Let's start by defining the `MyPacket` class. This class should inherit from `DerivedPacket<MyPacket>` and implement the necessary functions.
 
-* Note: Packets should satisfy the IsPacket concept:
-    ```cpp
-    template <typename T>
-    concept IsPacket = requires(T packet)
-    {
-        // The class MUST be final
-        std::is_final_v<T>;
-        // It should derive from mal_packet_weaver::DerivedPacket
-        std::is_base_of_v<DerivedPacket<T>, T>; 
-        // It should have a static constexpr UniquePacketID(or uint32_t) static_type that indicates unique packet ID.
-        std::same_as<std::decay_t<decltype(T::static_type)>, UniquePacketID>; 
-        // It should have static constexpr float time_to_live that indicates that packets TTL within subsystems.
-        std::same_as<std::decay_t<decltype(T::time_to_live)>, float>;
-    };
-    ```
+- Note: Packets should satisfy the IsPacket concept:
+  ```cpp
+  template <typename T>
+  concept IsPacket = requires(T packet)
+  {
+      // The class MUST be final
+      std::is_final_v<T>;
+      // It should derive from mal_packet_weaver::DerivedPacket
+      std::is_base_of_v<DerivedPacket<T>, T>;
+      // It should have a static constexpr UniquePacketID(or uint32_t) static_type that indicates unique packet ID.
+      std::same_as<std::decay_t<decltype(T::static_type)>, UniquePacketID>;
+      // It should have static constexpr float time_to_live that indicates that packets TTL within subsystems.
+      std::same_as<std::decay_t<decltype(T::time_to_live)>, float>;
+  };
+  ```
 
 ### Declaring the Packet Type
 
@@ -135,16 +134,18 @@ private:
     friend class boost::serialization::access;
     template <class Archive>
     void serialize(Archive &ar, [[maybe_unused]] const unsigned int version) {
-        // 
+        //
         ar &packet_data;
     }
 };
 ```
+
 ### Using Inheritance
 
 What if you have a lot of similar data and functions between packets and you need inheritance so there's no boilerplate code? You can use multi-inheritance to define this. Neither DerivedPacket nor Packet need to serialize any data, so we wont need to call their serialization function.
 
 You can do something similar:
+
 ```cpp
 
 using mal_packet_weaver::packet::DerivedPacket;
@@ -155,7 +156,7 @@ struct CommonData
 {
     float x, y, z;
     std::string name;
-    
+
 private:
     friend class boost::serialization::access;
     template <class Archive>
@@ -193,7 +194,9 @@ private:
     }
 };
 ```
+
 Or you can use it as a member:
+
 ```cpp
 class MyPacket final : public DerivedPacket<MyPacket> {
 public:
@@ -222,8 +225,6 @@ private:
 };
 ```
 
-
-
 ### Registering Deserializers
 
 Don't forget to register the deserializer for your `MyPacket` class using the `PacketFactory` to ensure proper deserialization.
@@ -233,7 +234,6 @@ Don't forget to register the deserializer for your `MyPacket` class using the `P
 ```
 
 By following these steps, you've successfully created a custom packet named `MyPacket` using the provided classes and concepts. You can now use this packet to communicate specific data within your application.
-
 
 ## Waiting for Packets with PacketDispatcher
 
@@ -327,7 +327,7 @@ int main() {
     boost::asio::ip::tcp::socket socket(io_context);
     socket.connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
 
-    // Note: session ALWAYS should be declared as shared_ptr. 
+    // Note: session ALWAYS should be declared as shared_ptr.
     // This is done because coroutines inside the session try to create object using shared_from_this.
 
     // To destroy the session you should call session->Destroy() method
@@ -339,7 +339,7 @@ int main() {
             // Wait for a specific packet
             auto packet = co_await dispatcher.await_packet<MyPacket>();
             // Process the received MyPacket
-            
+
             // Respond to the server
             MyPacketResponse response;
             response.some_data = process_packet(packet);
@@ -362,7 +362,8 @@ int main() {
 }
 ```
 
-## Thread Safety 
+## Thread Safety
+
 Since the library is completely threadsafe, you can add multiple threads to the context. This can improve performance if the server is heavy-loaded:
 
 ```cpp

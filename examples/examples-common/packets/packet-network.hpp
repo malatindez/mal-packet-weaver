@@ -34,6 +34,7 @@ class PingPacket : public mal_packet_weaver::DerivedPacket<class PingPacket>
 public:
     static constexpr mal_packet_weaver::UniquePacketID static_type = PingPacketID;
     static constexpr float time_to_live = 10.0f;
+
 private:
     friend class boost::serialization::access;
     template <class Archive>

@@ -41,7 +41,8 @@ namespace mal_packet_weaver
      * @details To correctly destroy this object, you need to call Destroy function, because
      * coroutines share the object from this.
      */
-    class PacketDispatcher final : public non_copyable_non_movable, public std::enable_shared_from_this<PacketDispatcher>
+    class PacketDispatcher final : public non_copyable_non_movable,
+                                   public std::enable_shared_from_this<PacketDispatcher>
     {
     public:
         /**
