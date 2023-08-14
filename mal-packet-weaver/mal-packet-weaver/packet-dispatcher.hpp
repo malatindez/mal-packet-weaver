@@ -29,7 +29,6 @@ namespace mal_packet_weaver
     template <typename DerivedPacket, typename... Args>
     using PacketFilterFunc = std::function<bool(Args..., DerivedPacket const &)>;
 
-
     /**
      * @brief The PacketDispatcher class is responsible for managing packet dispatching and
      * handling.
@@ -90,6 +89,11 @@ namespace mal_packet_weaver
          * @param io_context The io_context to associate with the dispatcher.
          */
         PacketDispatcher(boost::asio::io_context &io_context);
+
+        PacketDispatcher(PacketDispatcher const &) = delete;
+        PacketDispatcher(PacketDispatcher &&) = delete;
+        PacketDispatcher &operator=(PacketDispatcher const &) = delete;
+        PacketDispatcher &operator=(PacketDispatcher &&) = delete;
 
         /**
          * @brief Enqueues a packet for processing.

@@ -24,6 +24,11 @@ namespace mal_packet_weaver
          */
         explicit Session(boost::asio::io_context &io, boost::asio::ip::tcp::socket &&socket);
 
+        Session(Session const &) = delete;
+        Session(Session &&) = delete;
+        Session &operator=(Session const &) = delete;
+        Session &operator=(Session &&) = delete;
+
         /**
          * @brief Destructor for the Session class.
          */
