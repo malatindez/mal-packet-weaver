@@ -56,7 +56,6 @@ namespace mal_packet_weaver
                 if (value != nullptr)
                     delete value;
             });
-        spdlog::info("Session dtor called");
     }
 
     std::unique_ptr<Packet> Session::pop_packet_now()
