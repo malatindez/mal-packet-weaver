@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('d4/d5e/session_8hpp_source.html','../.
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#ad08ed9d672176c9b7cda214a78e50c2c">~Session</a>();</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">template</span> &lt;IsPacket T&gt;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a66b134c55cf54ac2e84daa77f381235e">send_packet</a>(<span class="keyword">const</span> T &amp;packet_arg) <span class="keyword">requires</span> std::is_base_of_v&lt;Packet, T&gt;;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::unique_ptr&lt;Packet&gt; <a class="code hl_function" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0">pop_packet_now</a>();</div>
@@ -222,7 +222,7 @@ $(document).ready(function(){initNavTree('d4/d5e/session_8hpp_source.html','../.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../d4/d5e/session_8hpp.html">session.hpp</a></li>
-    <li class="footer">Generated on Mon Aug 14 2023 19:16:01 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 19:26:08 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

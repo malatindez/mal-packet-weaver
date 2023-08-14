@@ -6,12 +6,12 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,88,210,88,210,94,170,94"/>
 <area shape="rect" id="Node000004" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0" title="Returns the earliest acquired packet. If packet queue is empty, returns nullptr." alt="" coords="221,136,378,177"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,109,218,128,216,134,155,114"/>
-<area shape="rect" id="Node000005" href="$df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="451,28,565,69"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="356,133,379,121,403,100,427,78,436,73,439,78,431,82,407,104,383,125,359,138"/>
-<area shape="rect" id="Node000006" href="$d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html#a1e6a3cb4e74ee9c34e309c9e3cfbd471" title="Deserialize a byte view into a unique pointer of the specified packet type." alt="" coords="440,93,577,148"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="378,140,424,132,425,137,378,145"/>
-<area shape="rect" id="Node000007" href="$d8/d39/classmal__packet__weaver_1_1_session.html#aa6838781a707ad1f37555d590c0f22c2" title="Pops the packet data from the received packets queue." alt="" coords="429,172,587,213"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="378,167,415,174,414,179,378,172"/>
-<area shape="rect" id="Node000008" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#a33b603234734c1cdddee3fb854988181" title="Create a ByteView of a subsequence of the byte array." alt="" coords="437,237,579,278"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="339,175,430,222,444,228,442,233,428,227,337,179"/>
+<area shape="rect" id="Node000005" href="$df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="453,37,567,78"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="354,133,380,121,428,89,441,82,443,87,430,93,382,125,356,138"/>
+<area shape="rect" id="Node000006" href="$da/d61/classmal__packet__weaver_1_1_packet_factory.html#ad82f39abacb042a3900d3ca7e7a8fc47" title="Deserialize a byte view into a unique pointer of the specified packet type." alt="" coords="429,103,591,143"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="377,141,414,136,415,141,378,147"/>
+<area shape="rect" id="Node000007" href="$d8/d39/classmal__packet__weaver_1_1_session.html#aa6838781a707ad1f37555d590c0f22c2" title="Pops the packet data from the received packets queue." alt="" coords="431,168,589,209"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="378,166,417,171,416,177,377,171"/>
+<area shape="rect" id="Node000008" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#a33b603234734c1cdddee3fb854988181" title="Create a ByteView of a subsequence of the byte array." alt="" coords="439,233,581,274"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="342,175,430,218,446,225,443,230,428,223,340,180"/>
 </map>

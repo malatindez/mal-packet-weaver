@@ -1,11 +1,11 @@
 var namespacemal__packet__weaver =
 [
     [ "crypto", "d5/db4/namespacemal__packet__weaver_1_1crypto.html", "d5/db4/namespacemal__packet__weaver_1_1crypto" ],
-    [ "packet", "d9/d93/namespacemal__packet__weaver_1_1packet.html", "d9/d93/namespacemal__packet__weaver_1_1packet" ],
     [ "DerivedPacket", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html", "dd/d2b/classmal__packet__weaver_1_1_derived_packet" ],
     [ "DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session" ],
     [ "Packet", "d2/d9d/classmal__packet__weaver_1_1_packet.html", "d2/d9d/classmal__packet__weaver_1_1_packet" ],
     [ "PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher" ],
+    [ "PacketFactory", "da/d61/classmal__packet__weaver_1_1_packet_factory.html", "da/d61/classmal__packet__weaver_1_1_packet_factory" ],
     [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ],
     [ "IsPacket", "dd/d19/conceptmal__packet__weaver_1_1_is_packet.html", null ],
     [ "PacketDeserializeFunc", "d6/de9/namespacemal__packet__weaver.html#a1ec734df3c6f45e5b67ff001a9321caf", null ],

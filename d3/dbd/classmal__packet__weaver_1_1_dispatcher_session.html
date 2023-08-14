@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a6f0b94c49aecd68b3e10e955916c37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a8a6f0b94c49aecd68b3e10e955916c37">~DispatcherSession</a> ()</td></tr>
 <tr class="memdesc:a8a6f0b94c49aecd68b3e10e955916c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html" title="Represents a session with packet dispatching functionality.">DispatcherSession</a>. Cleans up the session and packet dispatcher.  <br /></td></tr>
 <tr class="separator:a8a6f0b94c49aecd68b3e10e955916c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca43c5d14fa7560b209d316d48788f04"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+<tr class="memitem:aca43c5d14fa7560b209d316d48788f04"><td class="memTemplParams" colspan="2">template&lt;IsPacket T&gt; <br />
 requires std::is_base_of_v&lt;<a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a>, T&gt;</td></tr>
 <tr class="memitem:aca43c5d14fa7560b209d316d48788f04"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aca43c5d14fa7560b209d316d48788f04">send_packet</a> (const T &amp;packet_arg)</td></tr>
 <tr class="memdesc:aca43c5d14fa7560b209d316d48788f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends any packet derived from <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class.">DerivedPacket</a> through the network.  <br /></td></tr>
@@ -458,7 +458,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00485">485</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00486">486</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +488,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
 <p>Get a reference to the underlying packet dispatcher. </p>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the packet dispatcher. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00483">483</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00484">484</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +536,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00468">468</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00469">469</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -621,7 +621,7 @@ template&lt;IsPacket DerivedPacket&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00452">452</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00453">453</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -991,7 +991,7 @@ template&lt;IsPacket CustomPacket, typename... FnArgs&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00437">437</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00438">438</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1037,7 +1037,7 @@ Here is the call graph for this function:</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
+template&lt;IsPacket T&gt; <br />
 requires std::is_base_of_v&lt;<a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a>, T&gt;</div>
 <table class="mlabels">
   <tr>
@@ -1107,7 +1107,7 @@ false if session was closed. </dd></dl>
 <p>Get a reference to the underlying session. </p>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the session. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00477">477</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00478">478</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1202,7 @@ false if session was closed. </dd></dl>
 
 <p>The underlying packet dispatcher. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00494">494</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00495">495</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1228,7 +1228,7 @@ false if session was closed. </dd></dl>
 
 <p>Reference to the associated Boost.Asio io_context. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00492">492</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00493">493</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1254,7 +1254,7 @@ false if session was closed. </dd></dl>
 
 <p>The underlying session. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00493">493</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html#l00494">494</a> of file <a class="el" href="../../de/d5c/dispatcher-session_8hpp_source.html">dispatcher-session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1267,7 +1267,7 @@ false if session was closed. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html">DispatcherSession</a></li>
-    <li class="footer">Generated on Mon Aug 14 2023 19:16:01 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Mon Aug 14 2023 19:26:08 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

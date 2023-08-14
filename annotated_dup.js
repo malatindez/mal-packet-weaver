@@ -7,13 +7,11 @@ var annotated_dup =
         [ "KeyPair", "d4/df8/structmal__packet__weaver_1_1crypto_1_1_key_pair.html", "d4/df8/structmal__packet__weaver_1_1crypto_1_1_key_pair" ],
         [ "KeyView", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view.html", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view" ]
       ] ],
-      [ "packet", "d9/d93/namespacemal__packet__weaver_1_1packet.html", [
-        [ "PacketFactory", "d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory.html", "d7/d1e/classmal__packet__weaver_1_1packet_1_1_packet_factory" ]
-      ] ],
       [ "DerivedPacket", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html", "dd/d2b/classmal__packet__weaver_1_1_derived_packet" ],
       [ "DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session" ],
       [ "Packet", "d2/d9d/classmal__packet__weaver_1_1_packet.html", "d2/d9d/classmal__packet__weaver_1_1_packet" ],
       [ "PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher" ],
+      [ "PacketFactory", "da/d61/classmal__packet__weaver_1_1_packet_factory.html", "da/d61/classmal__packet__weaver_1_1_packet_factory" ],
       [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ]
     ] ],
     [ "mal_toolkit", "df/df5/namespacemal__toolkit.html", [
