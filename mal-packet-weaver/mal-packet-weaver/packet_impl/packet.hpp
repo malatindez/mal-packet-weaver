@@ -91,9 +91,7 @@ namespace mal_packet_weaver
 
         /// Serialization function for the Packet class.
         template <class Archive>
-        void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
-        {
-        }
+        void serialize([[maybe_unused]] Archive &ar, [[maybe_unused]] const unsigned int version) { }
     };
 
     /**

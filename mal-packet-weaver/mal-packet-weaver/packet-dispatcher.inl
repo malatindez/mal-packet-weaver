@@ -36,7 +36,7 @@ namespace mal_packet_weaver
         }
         catch (std::runtime_error &err)
         {
-            spdlog::warn("Timed out waiting for packet: {}", DerivedPacket::static_type);
+            spdlog::warn("Timed out waiting for packet{}: ", DerivedPacket::static_type, err.what());
             co_return nullptr;
         }
         catch (std::exception &exception)

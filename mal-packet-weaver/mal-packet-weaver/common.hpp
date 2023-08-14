@@ -72,7 +72,9 @@ namespace mal_packet_weaver
 
         try {
             co_return fut.get();
-        } catch (const std::exception& e) {
+        }
+        catch ([[maybe_unused]] const std::exception&)
+        {
             std::rethrow_exception(std::current_exception());
         }
     }
@@ -109,7 +111,9 @@ namespace mal_packet_weaver
 
         try {
             co_return fut.get();
-        } catch (const std::exception& e) {
+        }
+        catch ([[maybe_unused]] const std::exception&)
+        {
             std::rethrow_exception(std::current_exception());
         }
     }
