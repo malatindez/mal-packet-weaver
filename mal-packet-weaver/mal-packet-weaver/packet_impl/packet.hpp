@@ -74,10 +74,10 @@ namespace mal_packet_weaver
         /// Serialize the packet into a ByteArray.
         virtual void serialize(ByteArray &buffer) const = 0;
 
-        /// Get the timestamp when the packet was created.
+        /// Get the timestamp when the packet was received.
         [[nodiscard]] float timestamp() const noexcept { return timestamp_; }
 
-        /// Get the time elapsed since the packet was created.
+        /// Get the time elapsed since the packet was received.
         [[nodiscard]] float get_packet_time_alive() const noexcept { return measurer.elapsed() - timestamp_; }
 
         /// Check if the packet has expired based on its time-to-live.
@@ -85,6 +85,7 @@ namespace mal_packet_weaver
 
         const UniquePacketID type;  ///< Unique packet ID.
         const float time_to_live;   ///< Time-to-live for the packet.
+        const float timestamp_;     ///< Timestamp when the packet was received.
     private:
         friend class boost::serialization::access;
 
@@ -92,9 +93,7 @@ namespace mal_packet_weaver
         template <class Archive>
         void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
         {
-            ar &timestamp_;
         }
-        float timestamp_;  ///< Timestamp when the packet was created.
     };
 
     /**
