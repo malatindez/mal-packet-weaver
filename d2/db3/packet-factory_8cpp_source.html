@@ -114,9 +114,9 @@ $(document).ready(function(){initNavTree('d2/db3/packet-factory_8cpp_source.html
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    std::unordered_map&lt;UniquePacketID, PacketDeserializeFunc&gt; <a class="code hl_variable" href="../../da/d61/classmal__packet__weaver_1_1_packet_factory.html#a3d348eb34b1ff7f2340dfe345ce1d62e">PacketFactory::packet_deserializers_</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    std::unique_ptr&lt;PacketFactory&gt; <a class="code hl_variable" href="../../da/d61/classmal__packet__weaver_1_1_packet_factory.html#a92444955363efd8b237d408d73295d62">PacketFactory::instance_</a>;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>}</div>
-<div class="ttc" id="aclassmal__packet__weaver_1_1_packet_factory_html_a3d348eb34b1ff7f2340dfe345ce1d62e"><div class="ttname"><a href="../../da/d61/classmal__packet__weaver_1_1_packet_factory.html#a3d348eb34b1ff7f2340dfe345ce1d62e">mal_packet_weaver::PacketFactory::packet_deserializers_</a></div><div class="ttdeci">static std::unordered_map&lt; UniquePacketID, PacketDeserializeFunc &gt; packet_deserializers_</div><div class="ttdoc">Map storing registered packet deserializer functions.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d53/packet-factory_8hpp_source.html#l00076">packet-factory.hpp:76</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_packet_factory_html_a92444955363efd8b237d408d73295d62"><div class="ttname"><a href="../../da/d61/classmal__packet__weaver_1_1_packet_factory.html#a92444955363efd8b237d408d73295d62">mal_packet_weaver::PacketFactory::instance_</a></div><div class="ttdeci">static std::unique_ptr&lt; PacketFactory &gt; instance_</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d53/packet-factory_8hpp_source.html#l00099">packet-factory.hpp:99</a></div></div>
 <div class="ttc" id="anamespacemal__packet__weaver_html"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div><div class="ttdoc">This is the main namespace for the Mal Packet Weaver library.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d3a/common_8hpp_source.html#l00039">common.hpp:40</a></div></div>
 <div class="ttc" id="apacket-factory_8hpp_html"><div class="ttname"><a href="../../d3/d53/packet-factory_8hpp.html">packet-factory.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('d2/db3/packet-factory_8cpp_source.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_4576bb29f2e361ee3b0cab13520d23e7.html">packet-impl</a></li><li class="navelem"><a class="el" href="../../d2/db3/packet-factory_8cpp.html">packet-factory.cpp</a></li>
-    <li class="footer">Generated on Tue Aug 15 2023 18:03:38 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Tue Aug 15 2023 22:58:40 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>

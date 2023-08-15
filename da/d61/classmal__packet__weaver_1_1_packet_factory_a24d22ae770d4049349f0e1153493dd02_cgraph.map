@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::PacketFactory::RegisterDeserializer" name="mal_packet_weaver::PacketFactory::RegisterDeserializer">
+<area shape="rect" id="Node000001" title="Register a packet deserializer function for a specific packet ID." alt="" coords="5,5,218,46"/>
+<area shape="rect" id="Node000002" href="$da/d61/classmal__packet__weaver_1_1_packet_factory.html#a8fdf5f5e58a23f9e31aa35b2737e355b" title="Instance of the Packet Factory." alt="" coords="266,5,411,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,23,251,23,251,28,218,28"/>
+</map>

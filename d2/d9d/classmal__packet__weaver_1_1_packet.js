@@ -6,7 +6,6 @@ var classmal__packet__weaver_1_1_packet =
     [ "expired", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a573235a5877f469654754d62d85bbdd3", null ],
     [ "get_packet_time_alive", "d2/d9d/classmal__packet__weaver_1_1_packet.html#aec516b07bc3b09b17878bfd42004243c", null ],
     [ "operator=", "d2/d9d/classmal__packet__weaver_1_1_packet.html#aa3afc0227fa98413fc157dd41308ef31", null ],
-    [ "serialize", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544", null ],
     [ "serialize", "d2/d9d/classmal__packet__weaver_1_1_packet.html#afbfa7f771246555a4d719fab8d0d04f0", null ],
     [ "timestamp", "d2/d9d/classmal__packet__weaver_1_1_packet.html#a1b353f8d666972864724e49b94e9184a", null ],
     [ "boost::serialization::access", "d2/d9d/classmal__packet__weaver_1_1_packet.html#ac98d07dd8f7b70e16ccb9a01abf56b9c", null ],

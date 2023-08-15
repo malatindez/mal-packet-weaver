@@ -43,6 +43,7 @@ var hierarchy =
     ] ],
     [ "mal_packet_weaver::PacketFactory", "da/d61/classmal__packet__weaver_1_1_packet_factory.html", null ],
     [ "mal_packet_weaver::PacketTypeRegistrationHelper< T >", "db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html", null ],
+    [ "mal_packet_weaver::PacketTypeRegistrationHelperNoexcept< T >", "df/d04/structmal__packet__weaver_1_1_packet_type_registration_helper_noexcept.html", null ],
     [ "mal_toolkit::parameter_pack_info< Args >", "d9/d42/structmal__toolkit_1_1parameter__pack__info.html", null ],
     [ "mal_toolkit::return_type< T >", "db/dda/structmal__toolkit_1_1return__type.html", null ],
     [ "mal_toolkit::return_type< R(*)(Args...)>", "dd/dc6/structmal__toolkit_1_1return__type_3_01_r_07_5_08_07_args_8_8_8_08_4.html", null ],

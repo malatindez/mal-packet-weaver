@@ -42,10 +42,11 @@ var searchData=
   ['max_5fdelay_5f_39',['max_delay_',['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#aa606e67a38908a0975403ea3b4f18ab6',1,'mal_toolkit::LinearBackoff::max_delay_'],['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a71e105d0cdf947d433bfc0e4bb7f1b7b',1,'mal_toolkit::ExponentialBackoff::max_delay_']]],
   ['maximum_5fentries_40',['maximum_entries',['../d1/d3a/structmal__toolkit_1_1_measurer.html#abd76064808f063794e022a5aa01d9176',1,'mal_toolkit::Measurer']]],
   ['measure_41',['measure',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a7974eb2fd010cc78ac37b61a73a08660',1,'mal_toolkit::Measurer']]],
-  ['measurer_42',['Measurer',['../d1/d3a/structmal__toolkit_1_1_measurer.html',1,'mal_toolkit::Measurer&lt; clock &gt;'],['../d1/d3a/structmal__toolkit_1_1_measurer.html#a75ea1122ef872b467e5113888c1e5305',1,'mal_toolkit::Measurer::Measurer()']]],
+  ['measurer_42',['Measurer',['../d1/d3a/structmal__toolkit_1_1_measurer.html',1,'mal_toolkit']]],
   ['measurer_43',['measurer',['../d2/d9d/classmal__packet__weaver_1_1_packet.html#a09767662dde9e0e2be5c3d7c6541fb62',1,'mal_packet_weaver::Packet']]],
-  ['measurer_2ehpp_44',['measurer.hpp',['../d0/db4/measurer_8hpp.html',1,'']]],
-  ['measurer_3c_20std_3a_3achrono_3a_3asteady_5fclock_20_3e_45',['Measurer&lt; std::chrono::steady_clock &gt;',['../d1/d3a/structmal__toolkit_1_1_measurer.html',1,'mal_toolkit']]],
-  ['multiplier_5f_46',['multiplier_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a38c878210aa4d564d35ac3fc45ca091e',1,'mal_toolkit::ExponentialBackoff']]],
-  ['uuid_47',['uuid',['../d4/dcc/namespacemal__toolkit_1_1uuid.html',1,'mal_toolkit']]]
+  ['measurer_44',['Measurer',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a75ea1122ef872b467e5113888c1e5305',1,'mal_toolkit::Measurer']]],
+  ['measurer_2ehpp_45',['measurer.hpp',['../d0/db4/measurer_8hpp.html',1,'']]],
+  ['measurer_3c_20std_3a_3achrono_3a_3asteady_5fclock_20_3e_46',['Measurer&lt; std::chrono::steady_clock &gt;',['../d1/d3a/structmal__toolkit_1_1_measurer.html',1,'mal_toolkit']]],
+  ['multiplier_5f_47',['multiplier_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a38c878210aa4d564d35ac3fc45ca091e',1,'mal_toolkit::ExponentialBackoff']]],
+  ['uuid_48',['uuid',['../d4/dcc/namespacemal__toolkit_1_1uuid.html',1,'mal_toolkit']]]
 ];

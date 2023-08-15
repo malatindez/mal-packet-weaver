@@ -1,15 +1,21 @@
 <map id="mal_packet_weaver::PacketFactory" name="mal_packet_weaver::PacketFactory">
-<area shape="rect" id="Node000001" title="A class responsible for registering and creating packet deserializers." alt="" coords="143,331,275,372"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="99,213,319,268"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,283,212,331,206,331,206,283"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,102,114,127"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,135,178,210,175,215,83,139"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="137,102,281,127"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="212,142,212,212,206,212,206,142"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="304,94,431,135"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="333,146,245,214,242,210,329,142"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="318,5,356,31"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="341,45,347,69,357,92,353,95,342,71,336,46"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="380,5,419,31"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="393,46,377,94,372,93,388,44"/>
+<area shape="rect" id="Node000001" title="A class responsible for registering and creating packet deserializers." alt="" coords="861,93,994,133"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="1095,47,1294,88"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="1008,96,1017,94,1094,81,1095,86,1018,99,1009,101"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1135,96,1071,114,1032,119,994,120,994,114,1032,114,1070,109,1133,91"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="313,5,445,31"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="460,20,1094,59,1094,64,460,26"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,19,44,44"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="59,28,312,18,313,23,59,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="149,47,276,88"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="58,48,68,52,109,61,149,65,148,70,108,66,67,57,56,53"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="474,96,694,151"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="709,117,861,112,861,118,709,122"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="158,112,267,138"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="282,122,474,121,474,127,282,127"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="141,161,284,187"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="299,162,450,143,473,139,474,144,450,148,299,167"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="291,76,474,104,473,110,290,82"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,88,44,114"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="59,100,116,97,159,86,160,91,117,102,59,106"/>
 </map>

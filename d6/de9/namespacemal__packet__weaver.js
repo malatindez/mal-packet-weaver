@@ -7,6 +7,7 @@ var namespacemal__packet__weaver =
     [ "PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher" ],
     [ "PacketFactory", "da/d61/classmal__packet__weaver_1_1_packet_factory.html", "da/d61/classmal__packet__weaver_1_1_packet_factory" ],
     [ "PacketTypeRegistrationHelper", "db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html", "db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper" ],
+    [ "PacketTypeRegistrationHelperNoexcept", "df/d04/structmal__packet__weaver_1_1_packet_type_registration_helper_noexcept.html", null ],
     [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ],
     [ "IsPacket", "dd/d19/conceptmal__packet__weaver_1_1_is_packet.html", null ],
     [ "PacketDeserializeFunc", "d6/de9/namespacemal__packet__weaver.html#a1ec734df3c6f45e5b67ff001a9321caf", null ],
