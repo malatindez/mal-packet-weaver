@@ -1,9 +1,11 @@
 <map id="mal&#45;packet&#45;weaver/mal&#45;packet&#45;weaver/packet.hpp" name="mal&#45;packet&#45;weaver/mal&#45;packet&#45;weaver/packet.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="3912,5,4077,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="3962,5,4126,46"/>
 <area shape="rect" id="Node000002" href="$dd/d3a/common_8hpp.html" title=" " alt="" coords="3939,256,4029,282"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="3988,47,3973,95,3969,134,3971,174,3980,242,3975,242,3965,175,3964,134,3968,93,3983,46"/>
-<area shape="rect" id="Node000082" href="$d3/d53/packet-factory_8hpp.html" title=" " alt="" coords="3982,94,4108,135"/>
-<area shape="poly" id="edge97_Node000001_Node000082" title=" " alt="" coords="4008,45,4029,80,4024,82,4004,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="4014,48,3991,69,3973,95,3963,133,3963,173,3969,211,3977,242,3972,243,3963,212,3957,174,3958,133,3968,93,3987,65,4010,44"/>
+<area shape="rect" id="Node000082" href="$d3/d53/packet-factory_8hpp.html" title=" " alt="" coords="3982,94,4105,135"/>
+<area shape="poly" id="edge97_Node000001_Node000082" title=" " alt="" coords="4046,47,4046,79,4041,79,4041,47"/>
+<area shape="rect" id="Node000084" href="$d2/d1f/packet-macro_8hpp.html" title=" " alt="" coords="4130,94,4253,135"/>
+<area shape="poly" id="edge100_Node000001_Node000084" title=" " alt="" coords="4079,44,4147,84,4144,89,4076,49"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,662,77,688"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="3938,274,3148,287,1837,317,1174,339,608,366,384,381,213,397,103,414,75,423,66,431,66,507,60,584,49,648,44,647,55,583,61,506,61,429,72,418,102,409,212,392,383,375,607,360,1174,334,1837,312,3148,282,3938,268"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="2479,330,2611,371"/>
@@ -178,7 +180,7 @@
 <area shape="poly" id="edge91_Node000078_Node000029" title=" " alt="" coords="1767,521,1603,571,1602,566,1766,516"/>
 <area shape="poly" id="edge94_Node000080_Node000029" title=" " alt="" coords="1457,516,1522,562,1519,567,1454,521"/>
 <area shape="poly" id="edge96_Node000081_Node000029" title=" " alt="" coords="1533,444,1548,558,1543,559,1528,445"/>
-<area shape="rect" id="Node000083" href="$d9/d85/packet__impl_2packet_8hpp.html" title=" " alt="" coords="3993,183,4073,208"/>
-<area shape="poly" id="edge98_Node000082_Node000083" title=" " alt="" coords="4045,135,4040,168,4034,167,4039,135"/>
+<area shape="rect" id="Node000083" href="$d3/d48/packet-impl_2packet_8hpp.html" title=" " alt="" coords="3993,183,4073,208"/>
+<area shape="poly" id="edge98_Node000082_Node000083" title=" " alt="" coords="4044,135,4039,168,4034,167,4038,135"/>
 <area shape="poly" id="edge99_Node000083_Node000002" title=" " alt="" coords="4027,210,4002,246,3998,242,4023,207"/>
 </map>
