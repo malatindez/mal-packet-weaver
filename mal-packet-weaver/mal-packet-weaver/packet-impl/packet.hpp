@@ -74,6 +74,14 @@ namespace mal_packet_weaver
         const UniquePacketID type;  ///< Unique packet ID.
         const float time_to_live;   ///< Time-to-live for the packet.
         const float timestamp_;     ///< Timestamp when the packet was received.
+        
+    private:
+        friend class boost::serialization::access;
+        // Base serialize method for classes.
+        // This may be used for empty packets, we will just send the empty payload.
+        // This can be used for requests, for example.
+        template <class Archive>
+        void serialize(Archive &, const unsigned int) { }
     };
 
     /**
@@ -157,5 +165,4 @@ namespace mal_packet_weaver
         std::same_as<std::decay_t<decltype(T::static_type)>, UniquePacketID>;
         std::same_as<std::decay_t<decltype(T::time_to_live)>, float>;
     };
-
 }  // namespace mal_packet_weaver

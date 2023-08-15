@@ -75,4 +75,26 @@ namespace mal_packet_weaver
          */
         static std::unordered_map<UniquePacketID, PacketDeserializeFunc> packet_deserializers_;
     };
+
+    /**
+     * @brief Helper class for registering a packet type with the PacketFactory.
+     *
+     * This class is used to register a specific packet type with the PacketFactory
+     * during static initialization. It ensures that the packet type is registered
+     * with the PacketFactory before the main function is called.
+     *
+     * @tparam T The packet type to be registered.
+     */
+    template <typename T>
+    struct PacketTypeRegistrationHelper
+    {
+        /**
+         * @brief Constructor. Registers the packet type with the PacketFactory.
+         */
+        PacketTypeRegistrationHelper()
+        {
+            PacketFactory::RegisterDeserializer<T>();
+        }
+    };
+
 }  // namespace mal_packet_weaver
