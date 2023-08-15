@@ -4,6 +4,8 @@
 
 namespace mal_packet_weaver
 {
+    template <typename T>
+    struct PacketTypeRegistrationHelperNoexcept;
     /**
      * @brief A class responsible for registering and creating packet deserializers.
      */
@@ -22,11 +24,17 @@ namespace mal_packet_weaver
         template <IsPacket PacketType>
         static inline void RegisterDeserializer()
         {
-            if (packet_deserializers_.find(PacketType::static_type) != packet_deserializers_.end())
+            if (auto it = instance().packet_deserializers_.find(PacketType::static_type);
+                it != instance().packet_deserializers_.end())
             {
-                throw std::invalid_argument("Packet deserializer already initialized!");
+                std::unique_ptr<Packet> (*const *ptr)(const ByteView) = it->second.target<std::unique_ptr<Packet> (*)(const ByteView)>();
+                if (ptr && ptr == &(& PacketType::deserialize))  // Same target
+                {
+                    return;
+                }
+                throw std::invalid_argument("Packet deserializer already initialized with different function!");
             }
-            packet_deserializers_[PacketType::static_type] = PacketType::deserialize;
+            instance().packet_deserializers_[PacketType::static_type] = PacketType::deserialize;
         }
 
         /**
@@ -38,13 +46,19 @@ namespace mal_packet_weaver
          * @param packet_id The unique packet ID.
          * @param factory The packet deserialization factory function.
          */
-        static inline void RegisterDeserializer(UniquePacketID packet_id, PacketDeserializeFunc const &factory)
+        static void RegisterDeserializer(UniquePacketID packet_id, PacketDeserializeFunc factory)
         {
-            if (packet_deserializers_.find(packet_id) != packet_deserializers_.end())
+            if (auto it = instance().packet_deserializers_.find(packet_id);
+                it != instance().packet_deserializers_.end())
             {
-                throw std::invalid_argument("Packet deserializer already initialized!");
+                std::unique_ptr<Packet> (*const *ptr)(const ByteView) = factory.target<std::unique_ptr<Packet> (*)(const ByteView)>();
+                if (!ptr || ptr == it->second.target<std::unique_ptr<Packet> (*)(const ByteView)>())
+                {
+                    throw std::invalid_argument("Packet deserializer already initialized with different function!");
+                }
+                return;
             }
-            packet_deserializers_[packet_id] = factory;
+            instance().packet_deserializers_[packet_id] = factory;
         }
 
         /**
@@ -60,20 +74,33 @@ namespace mal_packet_weaver
         [[nodiscard]] static inline std::unique_ptr<Packet> Deserialize(const ByteView &bytearray,
                                                                         UniquePacketID packet_type)
         {
-            auto it = packet_deserializers_.find(packet_type);
-            if (it != packet_deserializers_.end())
+            auto it = instance().packet_deserializers_.find(packet_type);
+            if (it != instance().packet_deserializers_.end())
             {
                 return it->second(bytearray);
             }
             // TODO: MAL_PACKET_WEAVER_VERBOSE_LEVEL, output to spdlog if there's no deserializer.
             return nullptr;
         }
+        /**
+        * @brief Instance of the Packet Factory.
+        */
+        static PacketFactory& instance()
+        {
+            if (instance_ == nullptr)
+            {
+                instance_ = std::unique_ptr<PacketFactory>(new PacketFactory);
+            }
+            return *instance_;
+        }
 
     private:
+        PacketFactory() = default;
+        static std::unique_ptr<PacketFactory> instance_;
         /**
          * @brief Map storing registered packet deserializer functions.
          */
-        static std::unordered_map<UniquePacketID, PacketDeserializeFunc> packet_deserializers_;
+        std::unordered_map<UniquePacketID, PacketDeserializeFunc> packet_deserializers_;
     };
 
     /**

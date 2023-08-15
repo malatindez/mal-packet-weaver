@@ -2,5 +2,5 @@
 
 namespace mal_packet_weaver
 {
-    std::unordered_map<UniquePacketID, PacketDeserializeFunc> PacketFactory::packet_deserializers_;
+    std::unique_ptr<PacketFactory> PacketFactory::instance_;
 }

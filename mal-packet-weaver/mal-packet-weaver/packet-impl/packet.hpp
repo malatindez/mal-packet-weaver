@@ -80,8 +80,7 @@ namespace mal_packet_weaver
         // Base serialize method for classes.
         // This may be used for empty packets, we will just send the empty payload.
         // This can be used for requests, for example.
-        template <class Archive>
-        void serialize(Archive &, const unsigned int) { }
+
     };
 
     /**

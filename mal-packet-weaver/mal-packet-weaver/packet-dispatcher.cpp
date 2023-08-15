@@ -89,6 +89,10 @@ namespace mal_packet_weaver
                 }
 
                 spdlog::trace("Input arrays were updated! Fetching...");
+                if (!alive_.load())
+                {
+                    break;
+                }
 
                 min_handler_timestamp = std::numeric_limits<float>::max();
                 for (auto &[packet_id, packet_vector] : unprocessed_packets_)
