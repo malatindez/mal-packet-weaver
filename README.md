@@ -13,7 +13,8 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 - [Installation](#installation)
 - [Usage](#usage)
   - [Creating a Custom Packet: MyPacket](#creating-a-custom-packet-mypacket)
-    - [Declaring the Packet Type](#declaring-the-packet-type)
+    - [Declaring the Packet Type](#declaring-the-packet-type-by-defining-the-class)
+    - [Declaring the Packet Type Using Preprocessors](#declaring-the-packet-type-using-preprocessors)
     - [Using Inheritance](#using-inheritance)
     - [Registering Deserializers](#registering-deserializers)
   - [Waiting for Packets with PacketDispatcher](#waiting-for-packets-with-packetdispatcher)
@@ -106,7 +107,7 @@ Let's start by defining the `MyPacket` class. This class should inherit from `De
   };
   ```
 
-### Declaring the Packet Type
+### Declaring the Packet Type by Defining the Class
 
 ```cpp
 using mal_packet_weaver::DerivedPacket;
@@ -226,6 +227,8 @@ private:
 };
 ```
 
+* Note: If your packet is empty, there's no need to define the serialize method.
+
 ### Registering Deserializers
 
 Don't forget to register the deserializer for your `MyPacket` class using the `PacketFactory` to ensure proper deserialization.
@@ -234,7 +237,149 @@ Don't forget to register the deserializer for your `MyPacket` class using the `P
     mal_packet_weaver::PacketFactory::RegisterDeserializer<MyPacket>();
 ```
 
+#### Or you can use automatic serialization by adding this static member to the class:
+```
+class PacketName : ... {
+    ...
+private:
+        static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;
+}; 
+// And add this line in the hpp file
+inline mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> PacketName::registration;
+// Or this one in .cpp:
+mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> PacketName::registration;
+```
+
+Using this method you're eliminating the boilerplate code and the need to register deserializer by yourself.
+
+
+
 By following these steps, you've successfully created a custom packet named `MyPacket` using the provided classes and concepts. You can now use this packet to communicate specific data within your application.
+
+
+### Declaring the Packet Type Using Preprocessors
+
+This section provides an overview of macros that assist in declaring packet types for serialization and deserialization. These macros simplify the declaration of request and response packets, ensuring consistency and reducing boilerplate code.
+
+#### `MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName, SubsystemID, PacketID, TTL)`
+
+Macro to declare an empty packet class with specific parameters.
+
+- **PacketName:** The name of the packet class.
+- **SubsystemID:** The identifier for the subsystem.
+- **PacketID:** The identifier for the packet.
+- **TTL:** The time-to-live value for the packet.
+
+**Example:**
+```cpp
+MAL_PACKET_WEAVER_DECLARE_PACKET(MyPacket, 1, 42, 10.0)
+```
+
+In this example, the macro declares a packet class named `MyPacket` with subsystem ID `1`, packet ID `42`, and a time-to-live (TTL) value of `10.0`.
+
+#### Declaring Request and Response Packets
+
+These macros simplify the process of declaring request and response packets as pairs.
+
+#### `MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE_WITH_PAYLOAD(PacketName, Subsystem, RequestID, ResponseID, RequestTTL, ResponseTTL, ...)`
+
+Macro to declare an empty request packet and a response packet with specific parameters and payload.
+
+- **PacketName:** The base name for the request and response packets.
+- **Subsystem:** The subsystem identifier.
+- **RequestID:** The packet identifier for the request.
+- **ResponseID:** The packet identifier for the response.
+- **RequestTTL:** The time-to-live value for the request.
+- **ResponseTTL:** The time-to-live value for the response.
+- **...:** Payload members for the response packet. They should be defined as tuples, like this: `(int, value)`, `(typename, valuename)`.
+
+**Example:**
+```cpp
+MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE_WITH_PAYLOAD(MyPacket, 1, 42, 43, 10.0, 20.0, (int, value), (float, data))
+```
+
+In this example, the macro declares an empty request packet named `MyPacketRequest` with subsystem ID `1`, request packet ID `42`, and request TTL of `10.0`. It also declares a response packet named `MyPacketResponse` with response packet ID `43`, and response TTL of `20.0`. The response packet contains payload members `(int, value)` and `(float, data)`.
+
+---
+
+#### `MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE_WITHOUT_PAYLOAD(PacketName, Subsystem, RequestID, ResponseID, RequestTTL, ResponseTTL)`
+
+Macro to declare an empty request packet and a response packet with specific parameters but without payload.
+
+- **PacketName:** The base name for the request and response packets.
+- **Subsystem:** The subsystem identifier.
+- **RequestID:** The packet identifier for the request.
+- **ResponseID:** The packet identifier for the response.
+- **RequestTTL:** The time-to-live value for the request.
+- **ResponseTTL:** The time-to-live value for the response.
+
+**Example:**
+```cpp
+MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE_WITHOUT_PAYLOAD(MyPacket, 1, 42, 43, 10.0, 20.0)
+```
+
+In this example, the macro declares an empty request packet named `MyPacketRequest` with subsystem ID `1`, request packet ID `42`, and request TTL of `10.0`. It also declares an empty response packet named `MyPacketResponse` with response packet ID `43` and response TTL of `20.0`.
+
+
+### Declaring a Packet with a Provided Body
+
+These macros allow you to declare a packet class with a specified body and payload members.
+
+#### `MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD(PacketName, Subsystem, PacketID, TTL, PacketBody, ...)`
+
+Macro to declare a packet class with specific parameters, body, payload, and serialization.
+
+- **PacketName:** The name of the packet class.
+- **Subsystem:** The subsystem identifier.
+- **PacketID:** The packet identifier.
+- **TTL:** The time-to-live value.
+- **PacketBody:** The body of the packet, provided as a code block.
+- **...:** Payload members. They should be defined as tuples, like this: `(int, value)`, `(typename, valuename)`.
+
+**Example:**
+```cpp
+MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD(MyPacket, 1, 42, 10.0,
+    // Define packet body here \
+    public: \
+        int someFunction() { return 42; } \
+        bool verifyData() {return value * data > 100.0f; }
+, (int, value), (float, data))
+```
+
+In this example, the macro declares a packet class named `MyPacket` with subsystem ID `1`, packet ID `42`, and TTL of `10.0`. The packet body is defined within the provided code block, containing a function `someFunction()`. Additionally, the packet has payload members `(int, value)` and `(float, data)`.
+
+#### `MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, Subsystem, PacketID, TTL, PacketBody)`
+
+Macro to declare a packet class with an empty payload, provided body, and serialization.
+
+- **PacketName:** The name of the packet class.
+- **Subsystem:** The subsystem identifier.
+- **PacketID:** The packet identifier.
+- **TTL:** The time-to-live value.
+- **PacketBody:** The body of the packet, provided as a code block.
+
+**Example:**
+```cpp
+MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD(MyPacket, 1, 42, 10.0,
+    // Define packet body here \
+    public: \
+        int someFunction() { return 42; }
+)
+```
+
+In this example, the macro declares a packet class named `MyPacket` with subsystem ID `1`, packet ID `42`, and TTL of `10.0`. The packet body is defined within the provided code block, containing a function `someFunction()`. The packet has an empty payload.
+
+These macros simplify the declaration of packet classes with specific bodies and payload members, allowing you to create packets tailored to your application's needs.
+
+
+### Note:
+* ***These examples are provided as an illustration of how to use the macros. Make sure to replace the placeholders (`PacketName`, `BasePacket`, etc.) and values (`42`, `10.0`, etc.) with appropriate names and values according to your project's requirements.***
+
+* ***`42` and `43` represent the ID's here, which **SHOULD** be unique within the Subsystem. But don't worry if you're not sure if something is incorrect. You'll be notified by the PacketFactory if something is you're trying to assign to the same UniqueID different functions. ***
+
+* *** Also, an important note: These macros automatically register themselves in the packet factory. So there's no need for you to do anything, besides writing only one short line of code! ***
+
+* More info on macros by this link: [click](https://malatindez.github.io/mal-packet-weaver/d2/d1f/packet-macro_8hpp.html)
 
 ## Waiting for Packets with PacketDispatcher
 
@@ -321,6 +466,13 @@ Once you've set up your `PacketDispatcher` and registered handlers, you can star
 #include <iostream>
 #include "mal-packet-weaver/packet-dispatcher.hpp"
 
+constexpr mal_packet_weaver::PacketSubsystemID PacketSubsystemNetwork = 0x0002;
+
+MAL_PACKET_WEAVER_DECLARE_PACKET(PingPacket, PacketSubsystemNetwork, 0, 120.0f)
+MAL_PACKET_WEAVER_DECLARE_PACKET(PongPacket, PacketSubsystemNetwork, 1, 120.0f)
+MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_PAYLOAD(MessagePacket, PacketSubsystemNetwork, 2, 120.0f,
+                                              (std::string, message))
+
 int main() {
     // Create an io_context and PacketDispatcher instance
     boost::asio::io_context io_context;
@@ -337,22 +489,33 @@ int main() {
     // Start processing packets in a coroutine
     boost::asio::co_spawn(io_context, [&]() -> boost::asio::awaitable<void> {
         while (true) {
-            // Wait for a specific packet
-            auto packet = co_await dispatcher.await_packet<MyPacket>();
-            // Process the received MyPacket
+            {
+                // Wait for a specific packet
+                auto ping = co_await dispatcher.await_packet<PingPacket>();
+                // Process the received MyPacket
 
-            // Respond to the server
-            MyPacketResponse response;
-            response.some_data = process_packet(packet);
-            connection->send_packet(packet);
+                // Respond to the server
+                PongPacket pong;
+                connection->send_packet(pong);
+            }
+            
+            // Also send a Ping packet to the server
+            {
+                // Simple time tracking structure from mal-toolkit.
+                mal_toolkit::Timer timer;
+                PingPacket ping_request;
+                connection->send_packet(response);
 
-            // Wait for a packet with a filter
-            auto filteredPacket = co_await dispatcher.await_packet<MyPacket>(
-                [](const MyPacket &packet){packet.some_data > 1000;}
-            );
-            // Process the received filtered packet
-
-            // ...
+                auto pong = co_await dispatcher.await_packet<PingPacket>();
+                std::cout << "Ping is: " << timer.elapsed();
+            }
+            {
+                // Wait for a packet with a filter
+                auto message = co_await dispatcher.await_packet<MessagePacket>(
+                    [](const MessagePacket& packet){packet.messsage.size() > 10;}
+                );
+                std::cout << "Captured message: " << message;
+            }
         }
     }, boost::asio::detached());
 
