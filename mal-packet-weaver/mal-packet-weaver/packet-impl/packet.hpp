@@ -60,7 +60,7 @@ namespace mal_packet_weaver
         virtual ~Packet() = default;
 
         /// Serialize the packet into a ByteArray.
-        virtual void serialize(ByteArray &buffer) const = 0;
+        virtual void serialize_to_bytearray(ByteArray &buffer) const = 0;
 
         /// Get the timestamp when the packet was received.
         [[nodiscard]] float timestamp() const noexcept { return timestamp_; }
@@ -74,13 +74,14 @@ namespace mal_packet_weaver
         const UniquePacketID type;  ///< Unique packet ID.
         const float time_to_live;   ///< Time-to-live for the packet.
         const float timestamp_;     ///< Timestamp when the packet was received.
-        
+
     private:
         friend class boost::serialization::access;
         // Base serialize method for classes.
-        // This may be used for empty packets, we will just send the empty payload.
-        // This can be used for requests, for example.
-
+        // This may be used for empty packets, so there's minimum boilerplate in packets. 
+        // This will just return an empty payload.
+        template <class Archive>
+        void serialize(Archive &, const unsigned int) { }
     };
 
     /**
@@ -125,7 +126,7 @@ namespace mal_packet_weaver
          *
          * @param buffer The ByteArray to which the serialized data is appended.
          */
-        void serialize(ByteArray &buffer) const override
+        void serialize_to_bytearray(ByteArray &buffer) const override
         {
             std::ostringstream oss;
             boost::archive::binary_oarchive oa(oss);

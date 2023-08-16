@@ -14,7 +14,7 @@ namespace mal_packet_weaver
         }
         const auto &packet = static_cast<const Packet &>(packet_arg);
         ByteArray buffer = ByteArray{ uint32_to_bytes(packet.type) };
-        packet.serialize(buffer);
+        packet.serialize_to_bytearray(buffer);
         if (encryption_)
         {
             buffer = encryption_->encrypt(buffer);
