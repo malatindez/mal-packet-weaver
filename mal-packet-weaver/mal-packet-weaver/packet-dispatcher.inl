@@ -10,19 +10,19 @@ namespace mal_packet_weaver
     template <IsPacket DerivedPacket>
     boost::asio::awaitable<std::unique_ptr<DerivedPacket>> PacketDispatcher::await_packet(float timeout)
     {
-        auto packet_type = DerivedPacket::static_type;
+        auto packet_type = DerivedPacket::static_unique_id;
         auto promise = std::make_shared<std::promise<BasePacketPtr>>();
         enqueue_promise(packet_type, promise);
         auto future = promise->get_future();
         co_await boost::asio::this_coro::executor;
 
-        spdlog::debug("Waiting for packet: {}", DerivedPacket::static_type);
+        spdlog::debug("Waiting for packet: {}", DerivedPacket::static_unique_id);
 
         if (timeout <= 0)
         {
             auto base = co_await await_future(future, co_await boost::asio::this_coro::executor);
-            Assert(base->type == DerivedPacket::static_type);  // Sanity check
-            spdlog::trace("Received packet: {}", DerivedPacket::static_type);
+            Assert(base->type == DerivedPacket::static_unique_id);  // Sanity check
+            spdlog::trace("Received packet: {}", DerivedPacket::static_unique_id);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
 
@@ -30,18 +30,18 @@ namespace mal_packet_weaver
         {
             auto base = co_await await_future(future, co_await boost::asio::this_coro::executor,
                                               std::chrono::microseconds(static_cast<size_t>(timeout * 1e6f)));
-            Assert(base->type == DerivedPacket::static_type);  // Sanity check
-            spdlog::trace("Received packet: {}", DerivedPacket::static_type);
+            Assert(base->type == DerivedPacket::static_unique_id);  // Sanity check
+            spdlog::trace("Received packet: {}", DerivedPacket::static_unique_id);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
         catch (std::runtime_error &err)
         {
-            spdlog::warn("Timed out waiting for packet{}: ", DerivedPacket::static_type, err.what());
+            spdlog::warn("Timed out waiting for packet{}: ", DerivedPacket::static_unique_id, err.what());
             co_return nullptr;
         }
         catch (std::exception &exception)
         {
-            spdlog::error("An error occurred while waiting for packet {}: {}", DerivedPacket::static_type,
+            spdlog::error("An error occurred while waiting for packet {}: {}", DerivedPacket::static_unique_id,
                           exception.what());
             co_return nullptr;
         }
@@ -51,7 +51,7 @@ namespace mal_packet_weaver
     boost::asio::awaitable<std::unique_ptr<DerivedPacket>> PacketDispatcher::await_packet(
         PacketFilterFunc<DerivedPacket> filter, float timeout)
     {
-        auto packet_type = DerivedPacket::static_type;
+        auto packet_type = DerivedPacket::static_unique_id;
         auto promise = std::make_shared<std::promise<BasePacketPtr>>();
         enqueue_filter_promise(packet_type, { [passedFilter = filter](BasePacketPtr const &packet) {
                                                  return passedFilter(*reinterpret_cast<DerivedPacket *>(packet.get()));
@@ -60,13 +60,13 @@ namespace mal_packet_weaver
         auto future = promise->get_future();
         co_await boost::asio::this_coro::executor;
 
-        spdlog::trace("Waiting for packet: {}", DerivedPacket::static_type);
+        spdlog::trace("Waiting for packet: {}", DerivedPacket::static_unique_id);
 
         if (timeout <= 0)
         {
             auto base = co_await await_future(future, co_await boost::asio::this_coro::executor);
-            Assert(base->type == DerivedPacket::static_type);  // Sanity check
-            spdlog::trace("Received packet: {}", DerivedPacket::static_type);
+            Assert(base->type == DerivedPacket::static_unique_id);  // Sanity check
+            spdlog::trace("Received packet: {}", DerivedPacket::static_unique_id);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
 
@@ -74,18 +74,18 @@ namespace mal_packet_weaver
         {
             auto base = co_await await_future(future, co_await boost::asio::this_coro::executor,
                                               std::chrono::microseconds(static_cast<size_t>(timeout * 1e6f)));
-            Assert(base->type == DerivedPacket::static_type);  // Sanity check
-            spdlog::trace("Received packet: {}", DerivedPacket::static_type);
+            Assert(base->type == DerivedPacket::static_unique_id);  // Sanity check
+            spdlog::trace("Received packet: {}", DerivedPacket::static_unique_id);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
         catch (std::runtime_error &err)
         {
-            spdlog::warn("Timed out waiting for packet: {}", DerivedPacket::static_type);
+            spdlog::warn("Timed out waiting for packet: {}", DerivedPacket::static_unique_id);
             co_return nullptr;
         }
         catch (std::exception &exception)
         {
-            spdlog::error("An error occurred while waiting for packet {}: {}", DerivedPacket::static_type,
+            spdlog::error("An error occurred while waiting for packet {}: {}", DerivedPacket::static_unique_id,
                           exception.what());
             co_return nullptr;
         }
@@ -95,11 +95,11 @@ namespace mal_packet_weaver
     void PacketDispatcher::register_default_handler(PacketHandlerFunc<DerivedPacket> handler,
                                                     PacketFilterFunc<DerivedPacket> filter, float delay)
     {
-        spdlog::trace("Posting task to register default handler for packet {}", DerivedPacket::static_type);
+        spdlog::trace("Posting task to register default handler for packet {}", DerivedPacket::static_unique_id);
         default_handlers_input_strand_.post(
             [this, delay, movedFilter = filter, movedHandler = handler]() __lambda_force_inline -> void
             {
-                constexpr auto packet_id = DerivedPacket::static_type;
+                constexpr auto packet_id = DerivedPacket::static_unique_id;
                 spdlog::trace("Registered default handler for packet {}!", packet_id);
                 handler_tuple tuple =
                     handler_tuple{ delay,

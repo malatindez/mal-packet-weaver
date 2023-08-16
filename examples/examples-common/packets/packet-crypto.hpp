@@ -22,7 +22,7 @@ class DHKeyExchangeRequestPacket final
     : public mal_packet_weaver::DerivedPacket<class DHKeyExchangeRequestPacket>
 {
 public:
-    static constexpr mal_packet_weaver::UniquePacketID static_type = DHKeyExchangeRequestPacketID;
+    static constexpr mal_packet_weaver::UniquePacketID static_unique_id = DHKeyExchangeRequestPacketID;
     static constexpr float time_to_live = 120.0f;
     mal_packet_weaver::ByteArray public_key;
 
@@ -41,7 +41,7 @@ private:
 class DHKeyExchangeResponsePacket final : public mal_packet_weaver::DerivedPacket<class DHKeyExchangeResponsePacket>
 {
 public:
-    static constexpr mal_packet_weaver::UniquePacketID static_type = DHKeyExchangeResponsePacketID;
+    static constexpr mal_packet_weaver::UniquePacketID static_unique_id = DHKeyExchangeResponsePacketID;
     static constexpr float time_to_live = 120.0f;
 
     /**
@@ -53,7 +53,7 @@ public:
     {
         mal_packet_weaver::ByteArray arr;
         arr.append(public_key, salt,
-                   mal_packet_weaver::ByteArray::from_integral(boost::endian::little_to_native(static_type)));
+                   mal_packet_weaver::ByteArray::from_integral(boost::endian::little_to_native(static_unique_id)));
         return mal_packet_weaver::crypto::SHA::ComputeHash(arr, mal_packet_weaver::crypto::Hash::HashType::SHA256);
     }
 

@@ -3,8 +3,6 @@
 #include <SDKDDKVer.h>
 #endif
 #include <algorithm>
-#include <boost/archive/binary_iarchive.hpp>
-#include <boost/archive/binary_oarchive.hpp>
 #include <boost/asio/awaitable.hpp>
 #include <boost/asio/co_spawn.hpp>
 #include <boost/asio/detached.hpp>
@@ -29,7 +27,6 @@
 #include <unordered_map>
 
 #include "mal-toolkit/mal-toolkit.hpp"
-
 /**
  * @brief This is the main namespace for the Mal Packet Weaver library.
  *

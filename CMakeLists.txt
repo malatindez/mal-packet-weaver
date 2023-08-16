@@ -15,7 +15,6 @@ add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third_party/mal-toolkit" EXCLUDE_F
 file(GLOB_RECURSE MAL_PACKET_WEAVER_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/mal-packet-weaver/*.*"
 )
-
 if(MSVC) # update filters in MSVC
 foreach(_source IN ITEMS ${MAL_PACKET_WEAVER_SOURCES})
   if(IS_ABSOLUTE "${_source}")

@@ -32,7 +32,7 @@ constexpr mal_packet_weaver::UniquePacketID EchoPacketID =
 class PingPacket final : public mal_packet_weaver::DerivedPacket<class PingPacket>
 {
 public:
-    static constexpr mal_packet_weaver::UniquePacketID static_type = PingPacketID;
+    static constexpr mal_packet_weaver::UniquePacketID static_unique_id = PingPacketID;
     static constexpr float time_to_live = 10.0f;
    
 
@@ -48,7 +48,7 @@ private:
 class PongPacket final : public mal_packet_weaver::DerivedPacket<class PongPacket>
 {
 public:
-    static constexpr mal_packet_weaver::UniquePacketID static_type = PongPacketID;
+    static constexpr mal_packet_weaver::UniquePacketID static_unique_id = PongPacketID;
     static constexpr float time_to_live = 10.0f;
 
 private:
@@ -63,7 +63,7 @@ private:
 class MessagePacket final : public mal_packet_weaver::DerivedPacket<class MessagePacket>
 {
 public:
-    static constexpr mal_packet_weaver::UniquePacketID static_type = MessagePacketID;
+    static constexpr mal_packet_weaver::UniquePacketID static_unique_id = MessagePacketID;
     static constexpr float time_to_live = 60.0f;
     std::string message;
 
@@ -82,7 +82,7 @@ private:
 class EchoPacket final : public mal_packet_weaver::DerivedPacket<class EchoPacket>
 {
 public:
-    static constexpr mal_packet_weaver::UniquePacketID static_type = EchoPacketID;
+    static constexpr mal_packet_weaver::UniquePacketID static_unique_id = EchoPacketID;
     static constexpr float time_to_live = 5.0f;
     std::string echo_message;
 

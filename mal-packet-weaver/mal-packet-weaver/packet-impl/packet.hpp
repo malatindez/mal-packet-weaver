@@ -1,6 +1,7 @@
 #pragma once
 #include "../common.hpp"
-
+#include "portable-binary-iarchive.hpp"
+#include "portable-binary-oarchive.hpp"
 namespace mal_packet_weaver
 {
     /// Forward declaration of the Packet class.
@@ -78,10 +79,12 @@ namespace mal_packet_weaver
     private:
         friend class boost::serialization::access;
         // Base serialize method for classes.
-        // This may be used for empty packets, so there's minimum boilerplate in packets. 
+        // This may be used for empty packets, so there's minimum boilerplate in packets.
         // This will just return an empty payload.
         template <class Archive>
-        void serialize(Archive &, const unsigned int) { }
+        void serialize(Archive &, const unsigned int)
+        {
+        }
     };
 
     /**
@@ -96,7 +99,7 @@ namespace mal_packet_weaver
      *
      * @note We cannot check within this class if requirements for packet type are satisfied, but IsPacket concept is
      *       used thoroughly within the library. It requires that the class should be final, declared time_to_live,
-     *       static_type and deserialize functions.
+     *       static_unique_id and deserialize functions.
      *
      * @tparam PacketType The specific derived packet type.
      *
@@ -109,9 +112,9 @@ namespace mal_packet_weaver
         /**
          * @brief Constructor for the DerivedPacket class.
          *
-         * Initializes the packet with the static_type and time_to_live of the PacketType.
+         * Initializes the packet with the static_unique_id and time_to_live of the PacketType.
          */
-        DerivedPacket() : Packet(PacketType::static_type, PacketType::time_to_live) {}
+        DerivedPacket() : Packet(PacketType::static_unique_id, PacketType::time_to_live) {}
 
         /**
          * @brief Virtual destructor for the DerivedPacket class.
@@ -128,8 +131,9 @@ namespace mal_packet_weaver
          */
         void serialize_to_bytearray(ByteArray &buffer) const override
         {
+            /// @todo: add an ability to choose the archive type.
             std::ostringstream oss;
-            boost::archive::binary_oarchive oa(oss);
+            portable_binary_oarchive oa(oss);
             oa << static_cast<const PacketType &>(*this);
             std::string const &s = oss.str();
             buffer.append(s);
@@ -146,10 +150,11 @@ namespace mal_packet_weaver
          */
         [[nodiscard]] static std::unique_ptr<Packet> deserialize(const ByteView buffer)
         {
+            /// @todo: add an ability to choose the archive type.
             const auto char_view = buffer.as<char>();
             const std::string s(char_view, buffer.size());
             std::istringstream iss(s);
-            boost::archive::binary_iarchive ia(iss);
+            portable_binary_iarchive ia(iss);
             std::unique_ptr<PacketType> derived_packet = std::make_unique<PacketType>();
             ia >> *derived_packet;
             return derived_packet;
@@ -162,7 +167,7 @@ namespace mal_packet_weaver
     {
         std::is_final_v<T>;
         std::is_base_of_v<DerivedPacket<T>, T>;
-        std::same_as<std::decay_t<decltype(T::static_type)>, UniquePacketID>;
+        std::same_as<std::decay_t<decltype(T::static_unique_id)>, UniquePacketID>;
         std::same_as<std::decay_t<decltype(T::time_to_live)>, float>;
     };
 }  // namespace mal_packet_weaver

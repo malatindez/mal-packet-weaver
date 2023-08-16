@@ -99,8 +99,8 @@ Let's start by defining the `MyPacket` class. This class should inherit from `De
       std::is_final_v<T>;
       // It should derive from mal_packet_weaver::DerivedPacket
       std::is_base_of_v<DerivedPacket<T>, T>;
-      // It should have a static constexpr UniquePacketID(or uint32_t) static_type that indicates unique packet ID.
-      std::same_as<std::decay_t<decltype(T::static_type)>, UniquePacketID>;
+      // It should have a static constexpr UniquePacketID(or uint32_t) static_unique_id that indicates unique packet ID.
+      std::same_as<std::decay_t<decltype(T::static_unique_id)>, UniquePacketID>;
       // It should have static constexpr float time_to_live that indicates that packets TTL within subsystems.
       std::same_as<std::decay_t<decltype(T::time_to_live)>, float>;
   };
@@ -124,7 +124,7 @@ constexpr PacketSubsystemID MySubsystem = 0x0000;
 class MyPacket final : public DerivedPacket<MyPacket> {
 public:
     // Here you can use any number. UniquePacketID is uint32_t, CreatePacketID is a helper that combines two 16-bit unsigned integers so there's no conflicts.
-    static constexpr UniquePacketID static_type = CreatePacketID(MySubsystem, 0x0010);
+    static constexpr UniquePacketID static_unique_id = CreatePacketID(MySubsystem, 0x0010);
     // Time to live defines how much the Dispatcher should wait til discarding the packet.
     static constexpr float time_to_live = 60.0f;
 
@@ -173,7 +173,7 @@ constexpr PacketSubsystemID MySubsystem = 0x0000;
 
 class MyPacket final : public CommonData, public DerivedPacket<MyPacket> {
 public:
-    static constexpr UniquePacketID static_type = CreatePacketID(MySubsystem, 0x0010);
+    static constexpr UniquePacketID static_unique_id = CreatePacketID(MySubsystem, 0x0010);
     static constexpr float time_to_live = 60.0f;
 
     int subpacket_specific_data_1;
@@ -201,7 +201,7 @@ Or you can use it as a member:
 ```cpp
 class MyPacket final : public DerivedPacket<MyPacket> {
 public:
-    static constexpr UniquePacketID static_type = CreatePacketID(MySubsystem, 0x0010);
+    static constexpr UniquePacketID static_unique_id = CreatePacketID(MySubsystem, 0x0010);
     static constexpr float time_to_live = 60.0f;
 
     int subpacket_specific_data_1;

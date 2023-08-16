@@ -16,7 +16,7 @@ namespace mal_packet_weaver
          * @brief Register a packet deserializer function for a specific PacketType.
          *
          * This template function allows registration of deserializer functions for packet types
-         * that satisfy the IsPacket concept. The function associates the packet's static_type
+         * that satisfy the IsPacket concept. The function associates the packet's static_unique_id
          * with its deserialize member function.
          *
          * @tparam PacketType The packet type that satisfies the IsPacket concept.
@@ -24,17 +24,43 @@ namespace mal_packet_weaver
         template <IsPacket PacketType>
         static inline void RegisterDeserializer()
         {
-            if (auto it = instance().packet_deserializers_.find(PacketType::static_type);
+            if (auto it = instance().packet_deserializers_.find(PacketType::static_unique_id);
                 it != instance().packet_deserializers_.end())
             {
-                std::unique_ptr<Packet> (*const *ptr)(const ByteView) = it->second.target<std::unique_ptr<Packet> (*)(const ByteView)>();
-                if (ptr && ptr == &(& PacketType::deserialize))  // Same target
+                std::unique_ptr<Packet> (*const *ptr)(const ByteView) =
+                    it->second.target<std::unique_ptr<Packet> (*)(const ByteView)>();
+                if (ptr && ptr == &(&PacketType::deserialize))  // Same target
                 {
                     return;
                 }
-                throw std::invalid_argument("Packet deserializer already initialized with different function!");
+                std::string exception_msg =
+                    "An error occured while trying to register packet deserializer: it is already initialized for this unique packet id with different function!";
+#if _DEBUG
+                auto t = instance().type_names.at(PacketType::static_unique_id);
+                auto hex = [](int value) -> std::string
+                {
+                    std::stringstream stream;
+                    stream << std::hex << value;
+                    return stream.str();
+                };
+
+                exception_msg += "\n        It is already initialized for type with name: " + std::string(t) +
+                                 " with an ID of 0x" + hex(PacketType::static_unique_id);
+                exception_msg += ".\n        You are passing " + std::string(typeid(PacketType).name()) +
+                                 " with an ID of 0x" + hex(PacketType::static_unique_id);
+                exception_msg += ".\n        Please check static unique IDs for these packets.";
+#endif
+                spdlog::critical(exception_msg);
+                throw std::invalid_argument(exception_msg.c_str());
             }
-            instance().packet_deserializers_[PacketType::static_type] = PacketType::deserialize;
+            instance().packet_deserializers_[PacketType::static_unique_id] = PacketType::deserialize;
+
+            const char *type_name = typeid(PacketType).name();
+
+            spdlog::info("Registered deserializer for {} with id {}", type_name, PacketType::static_unique_id);
+#if _DEBUG
+            instance().type_names[PacketType::static_unique_id] = type_name;
+#endif
         }
 
         /**
@@ -51,7 +77,8 @@ namespace mal_packet_weaver
             if (auto it = instance().packet_deserializers_.find(packet_id);
                 it != instance().packet_deserializers_.end())
             {
-                std::unique_ptr<Packet> (*const *ptr)(const ByteView) = factory.target<std::unique_ptr<Packet> (*)(const ByteView)>();
+                std::unique_ptr<Packet> (*const *ptr)(const ByteView) =
+                    factory.target<std::unique_ptr<Packet> (*)(const ByteView)>();
                 if (!ptr || ptr == it->second.target<std::unique_ptr<Packet> (*)(const ByteView)>())
                 {
                     throw std::invalid_argument("Packet deserializer already initialized with different function!");
@@ -83,9 +110,9 @@ namespace mal_packet_weaver
             return nullptr;
         }
         /**
-        * @brief Instance of the Packet Factory.
-        */
-        static PacketFactory& instance()
+         * @brief Instance of the Packet Factory.
+         */
+        static PacketFactory &instance()
         {
             if (instance_ == nullptr)
             {
@@ -101,6 +128,9 @@ namespace mal_packet_weaver
          * @brief Map storing registered packet deserializer functions.
          */
         std::unordered_map<UniquePacketID, PacketDeserializeFunc> packet_deserializers_;
+#if _DEBUG
+        std::unordered_map<UniquePacketID, const char *> type_names;
+#endif
     };
 
     /**
@@ -118,10 +148,7 @@ namespace mal_packet_weaver
         /**
          * @brief Constructor. Registers the packet type with the PacketFactory.
          */
-        PacketTypeRegistrationHelper()
-        {
-            PacketFactory::RegisterDeserializer<T>();
-        }
+        PacketTypeRegistrationHelper() { PacketFactory::RegisterDeserializer<T>(); }
     };
 
 }  // namespace mal_packet_weaver

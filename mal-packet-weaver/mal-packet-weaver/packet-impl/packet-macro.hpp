@@ -1,87 +1,215 @@
 #pragma once
+#include <boost/preprocessor.hpp>
+#include <boost/preprocessor/seq.hpp>
+#include <boost/preprocessor/seq/for_each.hpp>
+/**
+ * @file packet-macros.h
+ * @brief This file contains macros for packet declaration and serialization.
+ */
+
+/**
+ * @def MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName, Subsystem, ID, TTL)
+ * @brief Macro to declare an empty packet class with specific parameters.
+ * @param PacketName The name of the packet class.
+ * @param Subsystem The subsystem identifier.
+ * @param ID The packet identifier.
+ * @param TTL The time-to-live value.
+ */
 #define MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName, Subsystem, ID, TTL)                 \
     class PacketName final : public mal_packet_weaver::DerivedPacket<PacketName>         \
     {                                                                                    \
     public:                                                                              \
-        static constexpr mal_packet_weaver::UniquePacketID static_type =                 \
+        static constexpr mal_packet_weaver::UniquePacketID static_unique_id =            \
             mal_packet_weaver::CreatePacketID(Subsystem, ID);                            \
         static constexpr float time_to_live = TTL;                                       \
         static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration; \
-    };
+    };                                                                                   \
+inline mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> PacketName::registration;
 
+/**
+ * @def MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBER(r, _, elem)
+ * @brief Internal macro to declare payload members.
+ */
 #define MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBER(r, _, elem) BOOST_PP_TUPLE_ELEM(0, elem) BOOST_PP_TUPLE_ELEM(1, elem);
 
+/**
+ * @def MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(seq)
+ * @brief Macro to declare payload members using a Boost.PP sequence.
+ */
 #define MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(seq) \
     BOOST_PP_SEQ_FOR_EACH(MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBER, _, seq)
 
+/**
+ * @def MAL_PACKET_WEAVER_SERIALIZE_MEMBER(r, ar, elem)
+ * @brief Internal macro to serialize payload members.
+ */
 #define MAL_PACKET_WEAVER_SERIALIZE_MEMBER(r, ar, elem) ar &BOOST_PP_TUPLE_ELEM(1, elem);
 
+/**
+ * @def MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, seq)
+ * @brief Macro to serialize payload members using a Boost.PP sequence.
+ */
 #define MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, seq) BOOST_PP_SEQ_FOR_EACH(MAL_PACKET_WEAVER_SERIALIZE_MEMBER, ar, seq)
 
-#define MAL_PACKET_WEAVER_REMOVE_EMPTY(...) BOOST_PP_SEQ_FILTER(MAL_PACKET_WEAVER_FILTER_EMPTY, _, (__VA_ARGS__))
-#define MAL_PACKET_WEAVER_FILTER_EMPTY(s, data, elem) BOOST_PP_NOT(BOOST_PP_IS_EMPTY(elem))
+/**
+ * @def MAL_PACKET_WEAVER_VA_ARGS_COUNT(...)
+ * @brief Macro to count the number of variadic arguments (up to 62 arguments).
+ */
+#define MAL_PACKET_WEAVER_VA_ARGS_COUNT(...)                                                                           \
+    MAL_PACKET_WEAVER_VA_ARGS_COUNT_IMPL(__VA_ARGS__, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47,  \
+                                         46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28,   \
+                                         27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
+                                         7, 6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0)
 
-// Remove empty elements and convert to a sequence
-#define MAL_PACKET_WEAVER_NON_EMPTY_SEQ(...) MAL_PACKET_WEAVER_REMOVE_EMPTY(__VA_ARGS__)
+/**
+ * @def MAL_PACKET_WEAVER_VA_ARGS_COUNT_IMPL(...)
+ * @brief Internal macro to implement counting of variadic arguments.
+ */
+#define MAL_PACKET_WEAVER_VA_ARGS_COUNT_IMPL(                                                                          \
+    _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21, _22, _23, _24,     \
+    _25, _26, _27, _28, _29, _30, _31, _32, _33, _34, _35, _36, _37, _38, _39, _40, _41, _42, _43, _44, _45, _46, _47, \
+    _48, _49, _50, _51, _52, _53, _54, _55, _56, _57, _58, _59, _60, _61, _62, _63, N, ...)                            \
+    N
 
-// Get the size of the non-empty sequence
-#define MAL_PACKET_WEAVER_NON_EMPTY_SIZE(...) BOOST_PP_SEQ_SIZE(MAL_PACKET_WEAVER_NON_EMPTY_SEQ(__VA_ARGS__))
+/**
+ * @def MAL_PACKET_WEAVER_NON_EMPTY_SIZE(...)
+ * @brief Macro to determine the number of non-empty variadic arguments.
+ */
+#define MAL_PACKET_WEAVER_NON_EMPTY_SIZE(...) MAL_PACKET_WEAVER_VA_ARGS_COUNT(__VA_ARGS__)
 
-#define MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_PAYLOAD(PacketName, Subsystem, ID, TTL, ...)              \
-    class PacketName final : public mal_packet_weaver::DerivedPacket<PacketName>                        \
-    {                                                                                                   \
-    public:                                                                                             \
-        static constexpr mal_packet_weaver::UniquePacketID static_type =                                \
-            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                           \
-        static constexpr float time_to_live = TTL;                                                      \
-                                                                                                        \
-        BOOST_PP_IF(MAL_PACKET_WEAVER_NON_EMPTY_SIZE(__VA_ARGS__),                                      \
-                    MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__)),   \
-                    /* norhing */)                                                                      \
-                                                                                                        \
-    private:                                                                                            \
-        friend class boost::serialization::access;                                                      \
-        template <class Archive>                                                                        \
-        void serialize(Archive &ar, const unsigned int)                                                 \
-        {                                                                                               \
-            BOOST_PP_IF(MAL_PACKET_WEAVER_NON_EMPTY_SIZE(__VA_ARGS__),                                  \
-                        MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__)), \
-                        /* nothing */)                                                                  \
-        }                                                                                               \
-        static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;                \
-    };
+/**
+ * @def MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_AND_PAYLOAD(PacketName, Subsystem, ID, TTL, PACKET_BODY, ...)
+ * @brief Macro to declare a packet class with specific parameters, body, payload, and serialization.
+ * @param PacketName The name of the packet class.
+ * @param Subsystem The subsystem identifier.
+ * @param ID The packet identifier.
+ * @param TTL The time-to-live value.
+ * @param PACKET_BODY The body of the packet.
+ * @param ... Payload members (optional). They should be defined as tuples, like this: (int, value), (typename,
+ * valuename)
+ */
+#define MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD(PacketName, Subsystem, ID, TTL, PACKET_BODY, ...) \
+    class PacketName final : public mal_packet_weaver::DerivedPacket<PacketName>                                 \
+    {                                                                                                            \
+    public:                                                                                                      \
+        static constexpr mal_packet_weaver::UniquePacketID static_unique_id =                                    \
+            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                    \
+        static constexpr float time_to_live = TTL;                                                               \
+                                                                                                                 \
+        MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                         \
+                                                                                                                 \
+        PACKET_BODY                                                                                              \
+    private:                                                                                                     \
+        friend class boost::serialization::access;                                                               \
+        template <class Archive>                                                                                 \
+        void serialize(Archive &ar, const unsigned int)                                                          \
+        {                                                                                                        \
+            MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                       \
+        }                                                                                                        \
+        static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;                         \
+    };                                                                                                           \
+    inline mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> PacketName::registration;
 
-#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_PAYLOAD(PacketName, BasePacket, Subsystem, ID, TTL, ...) \
-    class PacketName final : public BasePacket, public mal_packet_weaver::DerivedPacket<PacketName>            \
-    {                                                                                                          \
-    public:                                                                                                    \
-        static constexpr mal_packet_weaver::UniquePacketID static_type =                                       \
-            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                  \
-        static constexpr float time_to_live = TTL;                                                             \
-                                                                                                               \
-        BOOST_PP_IF(MAL_PACKET_WEAVER_NON_EMPTY_SIZE(__VA_ARGS__),                                             \
-                    MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__)),          \
-                    /* norhing */)                                                                             \
-                                                                                                               \
-    private:                                                                                                   \
-        friend class boost::serialization::access;                                                             \
-        template <class Archive>                                                                               \
-        void serialize(Archive &ar, const unsigned int)                                                        \
-        {                                                                                                      \
-            ar &boost::serialization::base_object<BasePacket>(*this);                                          \
-            BOOST_PP_IF(MAL_PACKET_WEAVER_NON_EMPTY_SIZE(__VA_ARGS__),                                         \
-                        MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__)),        \
-                        /* nothing */)                                                                         \
-        }                                                                                                      \
-        static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;                       \
-    };
+/**
+ * @def MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_EMPTY_PAYLOAD(PacketName, Subsystem, ID, TTL, PACKET_BODY, ...)
+ * @brief Macro to declare a packet class with an empty payload, provided body, and serialization.
+ * @param PacketName The name of the packet class.
+ * @param Subsystem The subsystem identifier.
+ * @param ID The packet identifier.
+ * @param TTL The time-to-live value.
+ * @param PACKET_BODY The body of the packet, provided as a code block.
+ */
+#define MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, Subsystem, ID, TTL, PACKET_BODY) \
+    class PacketName final : public mal_packet_weaver::DerivedPacket<PacketName>                              \
+    {                                                                                                         \
+    public:                                                                                                   \
+        static constexpr mal_packet_weaver::UniquePacketID static_unique_id =                                 \
+            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                 \
+        static constexpr float time_to_live = TTL;                                                            \
+                                                                                                              \
+        PACKET_BODY                                                                                           \
+    private:                                                                                                  \
+        friend class boost::serialization::access;                                                            \
+        template <class Archive>                                                                              \
+        void serialize(Archive &, const unsigned int)                                                       \
+        {                                                                                                     \
+        }                                                                                                     \
+        static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;                      \
+    };                                                                                                        \
+    inline mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> PacketName::registration;
 
-#define MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE(PacketName, Subsystem, ID1, ID2, TTL1, TTL2, ...) \
+#define MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_PAYLOAD(PacketName, Subsystem, ID, TTL, ...)                    \
+        MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD(PacketName, Subsystem, ID, TTL, /* nothing */, __VA_ARGS__)
+                                                               
+#define MAL_PACKET_WEAVER_DECLARE_PACKET_WITHOUT_PAYLOAD(PacketName, Subsystem, ID, TTL)                   \
+        MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, Subsystem, ID, TTL, /* nothing */)
+
+
+#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, BasePacket, Subsystem, ID, TTL, \
+                                                                         PACKET_BODY)                                \
+    class PacketName final : public BasePacket, public mal_packet_weaver::DerivedPacket<PacketName>                  \
+    {                                                                                                                \
+    public:                                                                                                          \
+        static constexpr mal_packet_weaver::UniquePacketID static_unique_id =                                        \
+            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                        \
+        static constexpr float time_to_live = TTL;                                                                   \
+        PACKET_BODY                                                                                                  \
+    private:                                                                                                         \
+        friend class boost::serialization::access;                                                                   \
+        template <class Archive>                                                                                     \
+        void serialize(Archive &ar, const unsigned int)                                                              \
+        {                                                                                                            \
+            ar &boost::serialization::base_object<BasePacket>(*this);                                                \
+        }                                                                                                            \
+        static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;                             \
+    };                                                                                                               \
+    inline mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> PacketName::registration;
+
+
+#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD(PacketName, BasePacket, Subsystem, ID, TTL, \
+                                                                        PACKET_BODY, ...)                           \
+    class PacketName final : public BasePacket, public mal_packet_weaver::DerivedPacket<PacketName>                 \
+    {                                                                                                               \
+    public:                                                                                                         \
+        static constexpr mal_packet_weaver::UniquePacketID static_unique_id =                                       \
+            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                       \
+        static constexpr float time_to_live = TTL;                                                                  \
+        MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                            \
+        PACKET_BODY                                                                                                 \
+    private:                                                                                                        \
+        friend class boost::serialization::access;                                                                  \
+        template <class Archive>                                                                                    \
+        void serialize(Archive &ar, const unsigned int)                                                             \
+        {                                                                                                           \
+            ar &boost::serialization::base_object<BasePacket>(*this);                                               \
+            MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                          \
+        }                                                                                                           \
+        static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;                            \
+    };                                                                                                              \
+    inline mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> PacketName::registration;
+
+#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_PAYLOAD(PacketName, BasePacket, Subsystem, ID, TTL, ...)                    \
+        MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD(PacketName, BasePacket,Subsystem, ID, TTL, /* nothing */, __VA_ARGS__)
+                                                               
+#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITHOUT_PAYLOAD(PacketName, BasePacket, Subsystem, ID, TTL)                   \
+        MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, BasePacket, Subsystem, ID, TTL, /* nothing */)
+
+
+#define MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE_WITH_PAYLOAD(PacketName, Subsystem, ID1, ID2, TTL1, TTL2, ...) \
     MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName##Request, Subsystem, ID1, TTL1)                                \
     MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_PAYLOAD(PacketName##Response, Subsystem, ID2, TTL2, __VA_ARGS__)
 
-#define MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_DERIVED_RESPONSE(PacketName, BasePacket, Subsystem, ID1, ID2, \
+#define MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE_WITHOUT_PAYLOAD(PacketName, Subsystem, ID1, ID2, TTL1, TTL2, ...) \
+    MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName##Request, Subsystem, ID1, TTL1)                                \
+    MAL_PACKET_WEAVER_DECLARE_PACKET_WITHOUT_PAYLOAD(PacketName##Response, Subsystem, ID2, TTL2)
+
+#define MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_DERIVED_RESPONSE_WITH_PAYLOAD(PacketName, BasePacket, Subsystem, ID1, ID2, \
                                                                      TTL1, TTL2, ...)                             \
     MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName##Request, Subsystem, ID1, TTL1)                                   \
     MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_PAYLOAD(PacketName##Response, BasePacket, Subsystem, ID2, TTL2, \
                                                           __VA_ARGS__)
+                                                          
+#define MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_DERIVED_RESPONSE_WITHOUT_PAYLOAD(PacketName, BasePacket, Subsystem, ID1, ID2, \
+                                                                     TTL1, TTL2, ...)                             \
+    MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName##Request, Subsystem, ID1, TTL1)                                   \
+    MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITHOUT_PAYLOAD(PacketName##Response, BasePacket, Subsystem, ID2, TTL2)

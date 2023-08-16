@@ -20,9 +20,8 @@ namespace mal_packet_weaver
               session_{ std::make_shared<Session>(io_context, std::move(socket)) },
               dispatcher_{ std::make_shared<PacketDispatcher>(io_context) }
         {
-            session_->set_packet_receiver(
-                [&dispatcher_ = *dispatcher_](std::unique_ptr<Packet> &&packet) __lambda_force_inline
-                { dispatcher_.enqueue_packet(std::move(packet)); });
+            session_->set_packet_receiver([&dispatcher_ = *dispatcher_](std::unique_ptr<Packet> &&packet)
+                                              __lambda_force_inline { dispatcher_.enqueue_packet(std::move(packet)); });
         }
 
         /**
@@ -392,15 +391,14 @@ namespace mal_packet_weaver
                         moved_handler(dispatcher_.lock(), std::forward<Arg2>(arg2), std::forward<Args>(args)...,
                                       std::move(packet));
                     },
-                    (bool(filter)
-                         ? (
-                               [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
+                    (bool(filter) ? (
+                                        [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
                                          moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
                                                                            const CustomPacket &packet) {
-                                   return moved_filter(dispatcher_.lock(), std::forward<Arg2>(arg2),
-                                                       std::forward<Args>(args)..., packet);
-                               })
-                         : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                                            return moved_filter(dispatcher_.lock(), std::forward<Arg2>(arg2),
+                                                                std::forward<Args>(args)..., packet);
+                                        })
+                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
                     delay);
             }
             else if constexpr (std::is_same_v<Arg1, PacketDispatcher &>)
@@ -411,14 +409,14 @@ namespace mal_packet_weaver
                         moved_handler(*dispatcher_.lock(), std::forward<Arg2>(arg2), std::forward<Args>(args)...,
                                       std::move(packet));
                     },
-                    (bool(filter)
-                         ? (
-                               [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
-                                moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args, const CustomPacket &packet) {
-                                   return moved_filter(*dispatcher_.lock(), std::forward<Arg2>(arg2),
-                                                       std::forward<Args>(args)..., packet);
-                               })
-                         : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
+                    (bool(filter) ? (
+                                        [dispatcher_ = std::weak_ptr<PacketDispatcher>(dispatcher_),
+                                         moved_filter = std::move(filter)](Arg2 &&arg2, Args &&...args,
+                                                                           const CustomPacket &packet) {
+                                            return moved_filter(*dispatcher_.lock(), std::forward<Arg2>(arg2),
+                                                                std::forward<Args>(args)..., packet);
+                                        })
+                                  : PacketFilterFunc<CustomPacket, Arg2, Args...>{}),
                     delay);
             }
             else
