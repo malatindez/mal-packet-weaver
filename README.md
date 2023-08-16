@@ -265,10 +265,10 @@ This section provides an overview of macros that assist in declaring packet type
 
 Macro to declare an empty packet class with specific parameters.
 
-- **PacketName:** The name of the packet class.
-- **SubsystemID:** The identifier for the subsystem.
-- **PacketID:** The identifier for the packet.
-- **TTL:** The time-to-live value for the packet.
+- **`PacketName`:** The name of the packet class.
+- **`SubsystemID`:** The identifier for the subsystem.
+- **`PacketID`:** The identifier for the packet.
+- **`TTL`:** The time-to-live value for the packet.
 
 **Example:**
 ```cpp
@@ -285,12 +285,12 @@ These macros simplify the process of declaring request and response packets as p
 
 Macro to declare an empty request packet and a response packet with specific parameters and payload.
 
-- **PacketName:** The base name for the request and response packets.
-- **Subsystem:** The subsystem identifier.
-- **RequestID:** The packet identifier for the request.
-- **ResponseID:** The packet identifier for the response.
-- **RequestTTL:** The time-to-live value for the request.
-- **ResponseTTL:** The time-to-live value for the response.
+- **`PacketName`:** The base name for the request and response packets.
+- **`Subsystem`:** The subsystem identifier.
+- **`RequestID`:** The packet identifier for the request.
+- **`ResponseID`:** The packet identifier for the response.
+- **`RequestTTL`:** The time-to-live value for the request.
+- **`ResponseTTL`:** The time-to-live value for the response.
 - **...:** Payload members for the response packet. They should be defined as tuples, like this: `(int, value)`, `(typename, valuename)`.
 
 **Example:**
@@ -306,12 +306,12 @@ In this example, the macro declares an empty request packet named `MyPacketReque
 
 Macro to declare an empty request packet and a response packet with specific parameters but without payload.
 
-- **PacketName:** The base name for the request and response packets.
-- **Subsystem:** The subsystem identifier.
-- **RequestID:** The packet identifier for the request.
-- **ResponseID:** The packet identifier for the response.
-- **RequestTTL:** The time-to-live value for the request.
-- **ResponseTTL:** The time-to-live value for the response.
+- **`PacketName`:** The base name for the request and response packets.
+- **`Subsystem`:** The subsystem identifier.
+- **`RequestID`:** The packet identifier for the request.
+- **`ResponseID`:** The packet identifier for the response.
+- **`RequestTTL`:** The time-to-live value for the request.
+- **`ResponseTTL`:** The time-to-live value for the response.
 
 **Example:**
 ```cpp
@@ -329,12 +329,12 @@ These macros allow you to declare a packet class with a specified body and paylo
 
 Macro to declare a packet class with specific parameters, body, payload, and serialization.
 
-- **PacketName:** The name of the packet class.
-- **Subsystem:** The subsystem identifier.
-- **PacketID:** The packet identifier.
-- **TTL:** The time-to-live value.
-- **PacketBody:** The body of the packet, provided as a code block.
-- **...:** Payload members. They should be defined as tuples, like this: `(int, value)`, `(typename, valuename)`.
+- **`PacketName`:** The name of the packet class.
+- **`Subsystem`:** The subsystem identifier.
+- **`PacketID`:** The packet identifier.
+- **`TTL`:** The time-to-live value.
+- **`PacketBody`:** The body of the packet, provided as a code block.
+- **`...`:** Payload members. They should be defined as tuples, like this: `(int, value)`, `(typename, valuename)`.
 
 **Example:**
 ```cpp
@@ -352,11 +352,11 @@ In this example, the macro declares a packet class named `MyPacket` with subsyst
 
 Macro to declare a packet class with an empty payload, provided body, and serialization.
 
-- **PacketName:** The name of the packet class.
-- **Subsystem:** The subsystem identifier.
-- **PacketID:** The packet identifier.
-- **TTL:** The time-to-live value.
-- **PacketBody:** The body of the packet, provided as a code block.
+- **`PacketName`:** The name of the packet class.
+- **`Subsystem`:** The subsystem identifier.
+- **`PacketID`:** The packet identifier.
+- **`TTL`:** The time-to-live value.
+- **`PacketBody`:** The body of the packet, provided as a code block.
 
 **Example:**
 ```cpp
