@@ -28,7 +28,6 @@ jobs:
           doxyfile-path: "./Doxyfile"
           additional-packages: graphviz
             biblatex
-          enable-latex: true
 
       - name: Create folder
         run: |
