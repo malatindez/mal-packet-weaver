@@ -1,6 +1,22 @@
 var hierarchy =
 [
+    [ "boost::archive::archive_exception", "d1/d03/classboost_1_1archive_1_1archive__exception.html", [
+      [ "mal_packet_weaver::portable_binary_iarchive_exception", "d2/dc8/classmal__packet__weaver_1_1portable__binary__iarchive__exception.html", null ],
+      [ "mal_packet_weaver::portable_binary_oarchive_exception", "d7/d38/classmal__packet__weaver_1_1portable__binary__oarchive__exception.html", null ]
+    ] ],
+    [ "boost::archive::basic_binary_iprimitive", "dd/d4d/classboost_1_1archive_1_1basic__binary__iprimitive.html", [
+      [ "mal_packet_weaver::portable_binary_iarchive", "d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html", null ]
+    ] ],
+    [ "boost::archive::basic_binary_oprimitive", "df/dc4/classboost_1_1archive_1_1basic__binary__oprimitive.html", [
+      [ "mal_packet_weaver::portable_binary_oarchive", "d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html", null ]
+    ] ],
     [ "mal_toolkit::CallbackSystem< F >", "dd/d83/classmal__toolkit_1_1_callback_system.html", null ],
+    [ "boost::archive::detail::common_iarchive", "dd/dd2/classboost_1_1archive_1_1detail_1_1common__iarchive.html", [
+      [ "mal_packet_weaver::portable_binary_iarchive", "d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html", null ]
+    ] ],
+    [ "boost::archive::detail::common_oarchive", "d4/d77/classboost_1_1archive_1_1detail_1_1common__oarchive.html", [
+      [ "mal_packet_weaver::portable_binary_oarchive", "d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html", null ]
+    ] ],
     [ "std::enable_shared_from_this", null, [
       [ "mal_packet_weaver::PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", null ],
       [ "mal_packet_weaver::Session", "d8/d39/classmal__packet__weaver_1_1_session.html", null ]

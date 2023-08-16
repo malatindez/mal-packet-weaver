@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['bytearray_0',['ByteArray',['../d8/d99/structmal__toolkit_1_1_byte_array.html',1,'mal_toolkit']]],
-  ['byteview_1',['ByteView',['../d8/dab/structmal__toolkit_1_1_byte_view.html',1,'mal_toolkit']]]
+  ['archive_5fexception_0',['archive_exception',['../d1/d03/classboost_1_1archive_1_1archive__exception.html',1,'boost::archive']]]
 ];

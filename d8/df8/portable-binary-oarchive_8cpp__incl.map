@@ -1,0 +1,37 @@
+<map id="mal&#45;packet&#45;weaver/mal&#45;packet&#45;weaver/packet&#45;impl/portable&#45;binary&#45;oarchive.cpp" name="mal&#45;packet&#45;weaver/mal&#45;packet&#45;weaver/packet&#45;impl/portable&#45;binary&#45;oarchive.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="284,5,428,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="24,235,88,261"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="307,79,87,229,84,224,304,74"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="68,316,191,357"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="285,59,214,80,137,113,101,136,67,162,37,193,14,229,8,248,14,267,33,290,58,307,55,311,29,293,10,270,3,248,10,227,33,190,63,158,97,131,135,109,212,75,283,53"/>
+<area shape="rect" id="Node000004" href="$d7/dda/portable-binary-oarchive_8hpp.html" title=" " alt="" coords="268,139,444,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="359,76,359,124,353,124,353,76"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="469,124,590,180"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="413,74,475,114,472,118,410,79"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="614,132,789,172"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="429,62,626,124,625,129,427,67"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="308,168,212,194,101,230,96,232,95,227,99,225,210,189,307,163"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="804,228,924,268"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="398,163,456,177,548,193,622,201,696,209,790,225,789,230,695,214,621,206,548,198,455,182,396,168"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="948,228,1084,268"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="396,163,456,177,588,195,693,202,799,208,934,225,933,230,799,213,693,207,588,201,455,182,395,168"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="112,228,259,268"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="335,168,235,223,232,218,333,163"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="283,228,429,268"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="359,165,359,213,353,213,353,165"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="453,228,587,268"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="378,163,475,218,472,222,376,168"/>
+<area shape="rect" id="Node000010" href="$df/d44/portable-binary-archive_8hpp.html" title=" " alt="" coords="611,235,781,261"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="401,163,639,228,637,233,399,168"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="637,264,599,271,386,304,206,328,205,323,385,299,598,266,636,259"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="896,324,1008,350"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="733,259,903,316,902,321,731,264"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="358,324,474,350"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="657,264,470,322,468,316,656,259"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="498,324,643,350"/>
+<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="680,263,602,317,599,313,677,259"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="668,324,724,350"/>
+<area shape="poly" id="edge14_Node000010_Node000014" title=" " alt="" coords="699,261,699,309,693,309,693,261"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="748,316,873,357"/>
+<area shape="poly" id="edge15_Node000010_Node000015" title=" " alt="" coords="713,259,775,305,771,309,710,263"/>
+</map>

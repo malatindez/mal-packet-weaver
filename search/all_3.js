@@ -15,12 +15,14 @@ var searchData=
   ['deserialize_12',['deserialize',['../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1622df3e4ea56438f22f362cf1bd77b9',1,'mal_packet_weaver::DerivedPacket']]],
   ['deserialize_13',['Deserialize',['../da/d61/classmal__packet__weaver_1_1_packet_factory.html#ad82f39abacb042a3900d3ca7e7a8fc47',1,'mal_packet_weaver::PacketFactory']]],
   ['destroy_14',['Destroy',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a1aed586038ddcb1f075218de90e73b56',1,'mal_packet_weaver::DispatcherSession::Destroy()'],['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#acb3e458ecd0247c019bba9e148703027',1,'mal_packet_weaver::PacketDispatcher::Destroy()'],['../d8/d39/classmal__packet__weaver_1_1_session.html#a5987c4b8cc7ebd5ebade07756529dd2f',1,'mal_packet_weaver::Session::Destroy()']]],
-  ['diffie_2dhellman_2ehpp_15',['diffie-hellman.hpp',['../dc/db5/diffie-hellman_8hpp.html',1,'']]],
-  ['disable_16',['disable',['../d0/d09/classmal__toolkit_1_1enableable.html#ad186911b32bfe42b9884f818caba4f7b',1,'mal_toolkit::enableable']]],
-  ['dispatcher_17',['dispatcher',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a94fdbf0ca2b8e735fc6352663bf14277',1,'mal_packet_weaver::DispatcherSession']]],
-  ['dispatcher_2dsession_2ehpp_18',['dispatcher-session.hpp',['../de/d5c/dispatcher-session_8hpp.html',1,'']]],
-  ['dispatcher_5f_19',['dispatcher_',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ae474572e7bed5972888d1e6801830213',1,'mal_packet_weaver::DispatcherSession']]],
-  ['dispatchersession_20',['DispatcherSession',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ac10634f89d777b699d92e6a249de955f',1,'mal_packet_weaver::DispatcherSession::DispatcherSession()'],['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html',1,'mal_packet_weaver::DispatcherSession']]],
-  ['distribution_21',['distribution',['../da/dbb/classmal__toolkit_1_1uuid_1_1_u_u_i_d_generator.html#a4c2ce5a20cadf973b65024835b44f8e5',1,'mal_toolkit::uuid::UUIDGenerator']]],
-  ['divisor_5f_22',['divisor_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a420490b45fe95f110eef58b70025e341',1,'mal_toolkit::ExponentialBackoff']]]
+  ['detail_5fcommon_5fiarchive_15',['detail_common_iarchive',['../d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html#a05d33a216e76d9369d13f26acc84022d',1,'mal_packet_weaver::portable_binary_iarchive']]],
+  ['detail_5fcommon_5foarchive_16',['detail_common_oarchive',['../d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html#afbf79c684cdda6ae5309208eae1f734d',1,'mal_packet_weaver::portable_binary_oarchive']]],
+  ['diffie_2dhellman_2ehpp_17',['diffie-hellman.hpp',['../dc/db5/diffie-hellman_8hpp.html',1,'']]],
+  ['disable_18',['disable',['../d0/d09/classmal__toolkit_1_1enableable.html#ad186911b32bfe42b9884f818caba4f7b',1,'mal_toolkit::enableable']]],
+  ['dispatcher_19',['dispatcher',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#a94fdbf0ca2b8e735fc6352663bf14277',1,'mal_packet_weaver::DispatcherSession']]],
+  ['dispatcher_2dsession_2ehpp_20',['dispatcher-session.hpp',['../de/d5c/dispatcher-session_8hpp.html',1,'']]],
+  ['dispatcher_5f_21',['dispatcher_',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ae474572e7bed5972888d1e6801830213',1,'mal_packet_weaver::DispatcherSession']]],
+  ['dispatchersession_22',['DispatcherSession',['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#ac10634f89d777b699d92e6a249de955f',1,'mal_packet_weaver::DispatcherSession::DispatcherSession()'],['../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html',1,'mal_packet_weaver::DispatcherSession']]],
+  ['distribution_23',['distribution',['../da/dbb/classmal__toolkit_1_1uuid_1_1_u_u_i_d_generator.html#a4c2ce5a20cadf973b65024835b44f8e5',1,'mal_toolkit::uuid::UUIDGenerator']]],
+  ['divisor_5f_24',['divisor_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a420490b45fe95f110eef58b70025e341',1,'mal_toolkit::ExponentialBackoff']]]
 ];

@@ -1,0 +1,9 @@
+<map id="mal_packet_weaver::portable_binary_oarchive" name="mal_packet_weaver::portable_binary_oarchive">
+<area shape="rect" id="Node000001" title=" " alt="" coords="323,107,481,148"/>
+<area shape="rect" id="Node000002" href="$df/dc4/classboost_1_1archive_1_1basic__binary__oprimitive.html" title=" " alt="" coords="5,5,231,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,77,333,104,332,109,244,82"/>
+<area shape="rect" id="Node000003" href="$d4/d77/classboost_1_1archive_1_1detail_1_1common__oarchive.html" title=" " alt="" coords="28,100,208,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,125,322,125,322,130,223,130"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="76,180,160,206"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,178,230,165,322,143,323,148,231,170,175,183"/>
+</map>

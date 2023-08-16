@@ -14,6 +14,10 @@ var annotated_dup =
       [ "PacketFactory", "da/d61/classmal__packet__weaver_1_1_packet_factory.html", "da/d61/classmal__packet__weaver_1_1_packet_factory" ],
       [ "PacketTypeRegistrationHelper", "db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html", "db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper" ],
       [ "PacketTypeRegistrationHelperNoexcept", "df/d04/structmal__packet__weaver_1_1_packet_type_registration_helper_noexcept.html", null ],
+      [ "portable_binary_iarchive", "d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html", "d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive" ],
+      [ "portable_binary_iarchive_exception", "d2/dc8/classmal__packet__weaver_1_1portable__binary__iarchive__exception.html", "d2/dc8/classmal__packet__weaver_1_1portable__binary__iarchive__exception" ],
+      [ "portable_binary_oarchive", "d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html", "d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive" ],
+      [ "portable_binary_oarchive_exception", "d7/d38/classmal__packet__weaver_1_1portable__binary__oarchive__exception.html", "d7/d38/classmal__packet__weaver_1_1portable__binary__oarchive__exception" ],
       [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ]
     ] ],
     [ "mal_toolkit", "df/df5/namespacemal__toolkit.html", [

@@ -46,6 +46,8 @@ var NAVTREE =
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -62,11 +64,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d53/packet-factory_8hpp.html",
-"d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event.html#a7063494dd7c4de319f1d07be8681552c",
-"d8/dab/structmal__toolkit_1_1_byte_view.html#ab21d83b363077d0b9d90ef549c22af1f",
-"dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#ae3201e383545a1543105b8e43b1d31a7",
-"namespaces.html"
+"d2/d9d/classmal__packet__weaver_1_1_packet.html#a573235a5877f469654754d62d85bbdd3",
+"d4/d6a/template_8hpp.html#a8fc9d6e7834409dd7bebc9b6dbd103fa",
+"d8/d39/classmal__packet__weaver_1_1_session.html#a38932c9bf7c5ab18cfa6335c7dc4326e",
+"da/db3/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_4.html",
+"df/d44/portable-binary-archive_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

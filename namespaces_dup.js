@@ -1,5 +1,6 @@
 var namespaces_dup =
 [
+    [ "boost", "d4/da9/namespaceboost.html", "d4/da9/namespaceboost" ],
     [ "endianness", "d3/d98/namespaceendianness.html", null ],
     [ "events", "d8/dd5/namespaceevents.html", null ],
     [ "mal_packet_weaver", "d6/de9/namespacemal__packet__weaver.html", "d6/de9/namespacemal__packet__weaver" ],

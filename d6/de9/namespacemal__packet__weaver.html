@@ -112,6 +112,7 @@ $(document).ready(function(){initNavTree('d6/de9/namespacemal__packet__weaver.ht
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#concepts">Concepts</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">mal_packet_weaver Namespace Reference</div></div>
 </div><!--header-->
@@ -146,6 +147,14 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class for registering a packet type with the <a class="el" href="../../da/d61/classmal__packet__weaver_1_1_packet_factory.html" title="A class responsible for registering and creating packet deserializers.">PacketFactory</a>.  <a href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d04/structmal__packet__weaver_1_1_packet_type_registration_helper_noexcept.html">PacketTypeRegistrationHelperNoexcept</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html">portable_binary_iarchive</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc8/classmal__packet__weaver_1_1portable__binary__iarchive__exception.html">portable_binary_iarchive_exception</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html">portable_binary_oarchive</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d38/classmal__packet__weaver_1_1portable__binary__oarchive__exception.html">portable_binary_oarchive_exception</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html">Session</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a network session for sending and receiving packets.  <a href="../../d8/d39/classmal__packet__weaver_1_1_session.html#details">More...</a><br /></td></tr>
@@ -182,6 +191,13 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a2fe1e24598530a77a781144181b85f09"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a2fe1e24598530a77a781144181b85f09">PacketReceiverFn</a> = std::function&lt; void(std::unique_ptr&lt; <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a> &gt; &amp;&amp;)&gt;</td></tr>
 <tr class="separator:a2fe1e24598530a77a781144181b85f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a0e1f6e572f9899848ed8cfb7c975a140"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a0e1f6e572f9899848ed8cfb7c975a140">portable_binary_archive_flags</a> { <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a0e1f6e572f9899848ed8cfb7c975a140affaacfd1e23cf2e9bef5b3c9f94f6c96">endian_big</a> = 0x4000
+, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a0e1f6e572f9899848ed8cfb7c975a140a44820efa4579359d8f22c3e03e7b1f99">endian_little</a> = 0x8000
+ }</td></tr>
+<tr class="separator:a0e1f6e572f9899848ed8cfb7c975a140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af2c5029afaa161f2ddd273bc2f46d4f5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Executor  = boost::asio::any_io_executor&gt; </td></tr>
@@ -204,6 +220,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a6c0e59e082acc379a031b57d9b0e3d55"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">UniquePacketID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a6c0e59e082acc379a031b57d9b0e3d55">CreatePacketID</a> (<a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a531c6d496f114157a3562ecbbe89e9e0">PacketSubsystemID</a> subsystem_id, <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#acd76523faa7f79afa4a9ad4160e4a091">PacketID</a> packet_id) noexcept</td></tr>
 <tr class="memdesc:a6c0e59e082acc379a031b57d9b0e3d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a UniquePacketID from subsystem and packet IDs.  <br /></td></tr>
 <tr class="separator:a6c0e59e082acc379a031b57d9b0e3d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71615eb13401e9982f44e83260bd4fb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a71615eb13401e9982f44e83260bd4fb5">reverse_bytes</a> (char size, char *address)</td></tr>
+<tr class="separator:a71615eb13401e9982f44e83260bd4fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is the main namespace for the Mal <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets.">Packet</a> Weaver library. </p>
@@ -223,7 +241,7 @@ Functions</h2></td></tr>
 
 <p>Type alias for packet deserialization function. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -297,7 +315,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 
 <p>Type alias for packet IDs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00010">10</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00011">11</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -331,7 +349,7 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 
 <p>Type alias for packet subsystem IDs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00009">9</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00010">10</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -349,7 +367,28 @@ template&lt;typename <a class="el" href="../../dd/d2b/classmal__packet__weaver_1
 
 <p>Unique identifier for a packet, combining subsystem and packet IDs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00013">13</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00014">14</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a0e1f6e572f9899848ed8cfb7c975a140" name="a0e1f6e572f9899848ed8cfb7c975a140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e1f6e572f9899848ed8cfb7c975a140">&#9670;&#160;</a></span>portable_binary_archive_flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a0e1f6e572f9899848ed8cfb7c975a140">mal_packet_weaver::portable_binary_archive_flags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0e1f6e572f9899848ed8cfb7c975a140affaacfd1e23cf2e9bef5b3c9f94f6c96" name="a0e1f6e572f9899848ed8cfb7c975a140affaacfd1e23cf2e9bef5b3c9f94f6c96"></a>endian_big&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0e1f6e572f9899848ed8cfb7c975a140a44820efa4579359d8f22c3e03e7b1f99" name="a0e1f6e572f9899848ed8cfb7c975a140a44820efa4579359d8f22c3e03e7b1f99"></a>endian_little&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d44/portable-binary-archive_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../df/d44/portable-binary-archive_8hpp_source.html">portable-binary-archive.hpp</a>.</p>
 
 </div>
 </div>
@@ -400,7 +439,7 @@ template&lt;typename T , typename Executor  = boost::asio::any_io_executor&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Boost.Asio awaitable representing the result of the future. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d3a/common_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../dd/d3a/common_8hpp_source.html">common.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d3a/common_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../dd/d3a/common_8hpp_source.html">common.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -469,7 +508,7 @@ template&lt;typename T , typename ChronoType , typename Executor  = boost::asio:
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d3a/common_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../dd/d3a/common_8hpp_source.html">common.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d3a/common_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../dd/d3a/common_8hpp_source.html">common.hpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +548,7 @@ template&lt;typename T , typename ChronoType , typename Executor  = boost::asio:
 
 <p>Create a UniquePacketID from subsystem and packet IDs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -539,7 +578,50 @@ template&lt;typename T , typename ChronoType , typename Executor  = boost::asio:
 
 <p>Convert a PacketSubsystemID to a uint32_t value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a71615eb13401e9982f44e83260bd4fb5" name="a71615eb13401e9982f44e83260bd4fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71615eb13401e9982f44e83260bd4fb5">&#9670;&#160;</a></span>reverse_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mal_packet_weaver::reverse_bytes </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d44/portable-binary-archive_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../df/d44/portable-binary-archive_8hpp_source.html">portable-binary-archive.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/de9/namespacemal__packet__weaver_a71615eb13401e9982f44e83260bd4fb5_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 
 </div>
 </div>
@@ -569,7 +651,7 @@ template&lt;typename T , typename ChronoType , typename Executor  = boost::asio:
 
 <p>Extract PacketID from a UniquePacketID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00031">31</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00032">32</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -599,7 +681,7 @@ template&lt;typename T , typename ChronoType , typename Executor  = boost::asio:
 
 <p>Extract PacketSubsystemID from a UniquePacketID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -609,7 +691,7 @@ template&lt;typename T , typename ChronoType , typename Executor  = boost::asio:
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li>
-    <li class="footer">Generated on Wed Aug 16 2023 08:03:01 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Wed Aug 16 2023 15:00:47 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>
