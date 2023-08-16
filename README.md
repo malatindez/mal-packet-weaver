@@ -346,7 +346,7 @@ MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD(MyPacket, 1, 42, 10.0,
 , (int, value), (float, data))
 ```
 
-In this example, the macro declares a packet class named `MyPacket` with subsystem ID `1`, packet ID `42`, and TTL of `10.0`. The packet body is defined within the provided code block, containing a function `someFunction()`. Additionally, the packet has payload members `(int, value)` and `(float, data)`.
+In this example, the macro declares a packet class named `MyPacket` with subsystem ID `1`, packet ID `42`, and TTL of `10.0`. The packet body is defined within the provided code block, containing a functions `someFunction()` and `verifyData()`. Additionally, the packet has payload members `int value;` and `float data;`.
 
 #### `MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, Subsystem, PacketID, TTL, PacketBody)`
 
