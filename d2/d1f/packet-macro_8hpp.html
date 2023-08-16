@@ -158,25 +158,35 @@ Macros</h2></td></tr>
 <tr class="separator:ad13492fecc4df374e99badc0b9badc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23f6d929f1cb07599fd6b3d7d622beec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a23f6d929f1cb07599fd6b3d7d622beec">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName,  Subsystem,  ID,  TTL,  PACKET_BODY)</td></tr>
 <tr class="separator:a23f6d929f1cb07599fd6b3d7d622beec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3138cf8457ee125a061d1ed242a1fd6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a3138cf8457ee125a061d1ed242a1fd6b">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_PAYLOAD</a>(PacketName,  Subsystem,  ID,  TTL, ...)&#160;&#160;&#160;        <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#ad13492fecc4df374e99badc0b9badc89">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName, Subsystem, ID, TTL, /* nothing */, __VA_ARGS__)</td></tr>
+<tr class="memitem:a3138cf8457ee125a061d1ed242a1fd6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a3138cf8457ee125a061d1ed242a1fd6b">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_PAYLOAD</a>(PacketName,  Subsystem,  ID,  TTL, ...)&#160;&#160;&#160;    <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#ad13492fecc4df374e99badc0b9badc89">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName, Subsystem, ID, TTL, /* nothing */, __VA_ARGS__)</td></tr>
+<tr class="memdesc:a3138cf8457ee125a061d1ed242a1fd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare an empty request packet and a response packet with payload.  <br /></td></tr>
 <tr class="separator:a3138cf8457ee125a061d1ed242a1fd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82bfd48ed60bc10299c123a49d172180"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a82bfd48ed60bc10299c123a49d172180">MAL_PACKET_WEAVER_DECLARE_PACKET_WITHOUT_PAYLOAD</a>(PacketName,  Subsystem,  ID,  TTL)&#160;&#160;&#160;        <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a23f6d929f1cb07599fd6b3d7d622beec">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName, Subsystem, ID, TTL, /* nothing */)</td></tr>
+<tr class="memitem:a82bfd48ed60bc10299c123a49d172180"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a82bfd48ed60bc10299c123a49d172180">MAL_PACKET_WEAVER_DECLARE_PACKET_WITHOUT_PAYLOAD</a>(PacketName,  Subsystem,  ID,  TTL)&#160;&#160;&#160;    <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a23f6d929f1cb07599fd6b3d7d622beec">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName, Subsystem, ID, TTL, /* nothing */)</td></tr>
+<tr class="memdesc:a82bfd48ed60bc10299c123a49d172180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare an empty request packet and an empty response packet.  <br /></td></tr>
 <tr class="separator:a82bfd48ed60bc10299c123a49d172180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9f72e854b0c77eaf7b6de7bcc7a5bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a5f9f72e854b0c77eaf7b6de7bcc7a5bc">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName,  BasePacket,  Subsystem,  ID,  TTL,  PACKET_BODY)</td></tr>
+<tr class="memdesc:a5f9f72e854b0c77eaf7b6de7bcc7a5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a derived packet class without payload but with a provided body and specific parameters.  <br /></td></tr>
 <tr class="separator:a5f9f72e854b0c77eaf7b6de7bcc7a5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaed4e2c63a9e3802b8e13fe93e07244a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#aaed4e2c63a9e3802b8e13fe93e07244a">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName,  BasePacket,  Subsystem,  ID,  TTL,  PACKET_BODY, ...)</td></tr>
+<tr class="memdesc:aaed4e2c63a9e3802b8e13fe93e07244a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a derived packet class without payload but with a provided body.  <br /></td></tr>
 <tr class="separator:aaed4e2c63a9e3802b8e13fe93e07244a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187ac67a50d47c12cf337e44f2af2244"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a187ac67a50d47c12cf337e44f2af2244">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_PAYLOAD</a>(PacketName,  BasePacket,  Subsystem,  ID,  TTL, ...)&#160;&#160;&#160;        <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#aaed4e2c63a9e3802b8e13fe93e07244a">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName, BasePacket,Subsystem, ID, TTL, /* nothing */, __VA_ARGS__)</td></tr>
+<tr class="memitem:a187ac67a50d47c12cf337e44f2af2244"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a187ac67a50d47c12cf337e44f2af2244">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_PAYLOAD</a>(PacketName,  BasePacket,  Subsystem,  ID,  TTL, ...)</td></tr>
+<tr class="memdesc:a187ac67a50d47c12cf337e44f2af2244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a derived packet class with additional payload.  <br /></td></tr>
 <tr class="separator:a187ac67a50d47c12cf337e44f2af2244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31a67902393b4dc4d7b8b23a5bb66719"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a31a67902393b4dc4d7b8b23a5bb66719">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITHOUT_PAYLOAD</a>(PacketName,  BasePacket,  Subsystem,  ID,  TTL)&#160;&#160;&#160;        <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a5f9f72e854b0c77eaf7b6de7bcc7a5bc">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName, BasePacket, Subsystem, ID, TTL, /* nothing */)</td></tr>
+<tr class="memitem:a31a67902393b4dc4d7b8b23a5bb66719"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a31a67902393b4dc4d7b8b23a5bb66719">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITHOUT_PAYLOAD</a>(PacketName,  BasePacket,  Subsystem,  ID,  TTL)</td></tr>
+<tr class="memdesc:a31a67902393b4dc4d7b8b23a5bb66719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a derived packet class without payload but with a provided body.  <br /></td></tr>
 <tr class="separator:a31a67902393b4dc4d7b8b23a5bb66719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8dd69d7d9a4be340336bb254bc8a057"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#ab8dd69d7d9a4be340336bb254bc8a057">MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE_WITH_PAYLOAD</a>(PacketName,  Subsystem,  ID1,  ID2,  TTL1,  TTL2, ...)</td></tr>
+<tr class="memdesc:ab8dd69d7d9a4be340336bb254bc8a057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare an empty request packet and a response packet with specific parameters and payload.  <br /></td></tr>
 <tr class="separator:ab8dd69d7d9a4be340336bb254bc8a057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33e38efdb1ae7dbe2e0c45f26dd796c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a33e38efdb1ae7dbe2e0c45f26dd796c2">MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_RESPONSE_WITHOUT_PAYLOAD</a>(PacketName,  Subsystem,  ID1,  ID2,  TTL1,  TTL2, ...)</td></tr>
+<tr class="memdesc:a33e38efdb1ae7dbe2e0c45f26dd796c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare an empty request packet and a response packet with specific parameters but without payload.  <br /></td></tr>
 <tr class="separator:a33e38efdb1ae7dbe2e0c45f26dd796c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e32d68a18ddfb714234fb455c995343"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a0e32d68a18ddfb714234fb455c995343">MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_DERIVED_RESPONSE_WITH_PAYLOAD</a>(PacketName,  BasePacket,  Subsystem,  ID1,  ID2,  TTL1,  TTL2, ...)</td></tr>
+<tr class="memdesc:a0e32d68a18ddfb714234fb455c995343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare a derived packet class without payload but with a provided body and specific parameters.  <br /></td></tr>
 <tr class="separator:a0e32d68a18ddfb714234fb455c995343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a099429ec3b6606012c96bc99677d3818"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a099429ec3b6606012c96bc99677d3818">MAL_PACKET_WEAVER_DECLARE_EMPTY_REQUEST_AND_DERIVED_RESPONSE_WITHOUT_PAYLOAD</a>(PacketName,  BasePacket,  Subsystem,  ID1,  ID2,  TTL1,  TTL2, ...)</td></tr>
+<tr class="memdesc:a099429ec3b6606012c96bc99677d3818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare an empty request packet and a derived response packet without payload, with specific parameters.  <br /></td></tr>
 <tr class="separator:a099429ec3b6606012c96bc99677d3818"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -259,7 +269,21 @@ Macros</h2></td></tr>
 <div class="ttc" id="anamespacemal__packet__weaver_html_a55bbfecb837c31e7823aae457d86ef5d"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">mal_packet_weaver::UniquePacketID</a></div><div class="ttdeci">uint32_t UniquePacketID</div><div class="ttdoc">Unique identifier for a packet, combining subsystem and packet IDs.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00014">packet.hpp:14</a></div></div>
 <div class="ttc" id="astructmal__packet__weaver_1_1_packet_type_registration_helper_html"><div class="ttname"><a href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper</a></div><div class="ttdoc">Helper class for registering a packet type with the PacketFactory.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d53/packet-factory_8hpp_source.html#l00146">packet-factory.hpp:147</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00169">169</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p>Macro to declare a derived packet class without payload but with a provided body. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The name of the packet class. </td></tr>
+    <tr><td class="paramname">BasePacket</td><td>The base class. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID</td><td>The packet identifier. </td></tr>
+    <tr><td class="paramname">TTL</td><td>The time-to-live value. </td></tr>
+    <tr><td class="paramname">PACKET_BODY</td><td>The body of the packet(function declarations, private/public members, non-serializable once, etc.) </td></tr>
+    <tr><td class="paramname">...</td><td>Payload members for the response packet. They should be defined as tuples, like this: (int, value), (typename, valuename) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00206">206</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -312,25 +336,38 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> BasePacket, <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                  \</div>
-<div class="line">    {                                                                                                                \</div>
-<div class="line">    <span class="keyword">public</span>:                                                                                                          \</div>
-<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                        \</div>
-<div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                        \</div>
-<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                                   \</div>
-<div class="line">        PACKET_BODY                                                                                                  \</div>
-<div class="line">    private:                                                                                                         \</div>
-<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>boost::serialization::access;                                                                   \</div>
-<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;                                                                                     \</div>
-<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)                                                              \</div>
-<div class="line">        {                                                                                                            \</div>
-<div class="line">            ar &amp;boost::serialization::base_object&lt;BasePacket&gt;(*<span class="keyword">this</span>);                                                \</div>
-<div class="line">        }                                                                                                            \</div>
-<div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration;                             \</div>
-<div class="line">    };                                                                                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> BasePacket, <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                    \</div>
+<div class="line">    {                                                                                                                  \</div>
+<div class="line">    <span class="keyword">public</span>:                                                                                                            \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                          \</div>
+<div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                          \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                                     \</div>
+<div class="line">        PACKET_BODY                                                                                                    \</div>
+<div class="line">    private:                                                                                                           \</div>
+<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>boost::serialization::access;                                                                     \</div>
+<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;                                                                                       \</div>
+<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)                                                                \</div>
+<div class="line">        {                                                                                                              \</div>
+<div class="line">            ar &amp;boost::serialization::base_object&lt;BasePacket&gt;(*<span class="keyword">this</span>);                                                  \</div>
+<div class="line">        }                                                                                                              \</div>
+<div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration;                               \</div>
+<div class="line">    };                                                                                                                 \</div>
 <div class="line">    <span class="keyword">inline</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> PacketName::registration;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00148">148</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p>Macro to declare a derived packet class without payload but with a provided body and specific parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The name of the packet class. </td></tr>
+    <tr><td class="paramname">BasePacket</td><td>The base class. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID</td><td>The packet identifier. </td></tr>
+    <tr><td class="paramname">TTL</td><td>The time-to-live value. </td></tr>
+    <tr><td class="paramname">PACKET_BODY</td><td>The body of the packet(function declarations, private/public members, non-serializable once, etc.) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00173">173</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -379,12 +416,28 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;        <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#aaed4e2c63a9e3802b8e13fe93e07244a">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName, BasePacket,Subsystem, ID, TTL, /* nothing */, __VA_ARGS__)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#aaed4e2c63a9e3802b8e13fe93e07244a">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName, BasePacket, Subsystem, ID, TTL, \</div>
+<div class="line">                                                                    <span class="comment">/* nothing */</span>, __VA_ARGS__)</div>
+<div class="ttc" id="apacket-macro_8hpp_html_aaed4e2c63a9e3802b8e13fe93e07244a"><div class="ttname"><a href="../../d2/d1f/packet-macro_8hpp.html#aaed4e2c63a9e3802b8e13fe93e07244a">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD(PacketName, BasePacket, Subsystem, ID, TTL, PACKET_BODY,...)</div><div class="ttdoc">Macro to declare a derived packet class without payload but with a provided body.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00206">packet-macro.hpp:206</a></div></div>
+</div><!-- fragment -->
+<p>Macro to declare a derived packet class with additional payload. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The name of the packet class. </td></tr>
+    <tr><td class="paramname">BasePacket</td><td>The base class. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID</td><td>The packet identifier. </td></tr>
+    <tr><td class="paramname">TTL</td><td>The time-to-live value. </td></tr>
+    <tr><td class="paramname">...</td><td>Payload members for the response packet. They should be defined as tuples, like this: (int, value), (typename, valuename) </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00239">239</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -427,12 +480,27 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;        <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a5f9f72e854b0c77eaf7b6de7bcc7a5bc">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName, BasePacket, Subsystem, ID, TTL, /* nothing */)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a5f9f72e854b0c77eaf7b6de7bcc7a5bc">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName, BasePacket, Subsystem, ID, TTL, \</div>
+<div class="line">                                                                       <span class="comment">/* nothing */</span>)</div>
+<div class="ttc" id="apacket-macro_8hpp_html_a5f9f72e854b0c77eaf7b6de7bcc7a5bc"><div class="ttname"><a href="../../d2/d1f/packet-macro_8hpp.html#a5f9f72e854b0c77eaf7b6de7bcc7a5bc">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, BasePacket, Subsystem, ID, TTL, PACKET_BODY)</div><div class="ttdoc">Macro to declare a derived packet class without payload but with a provided body and specific paramet...</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00173">packet-macro.hpp:173</a></div></div>
+</div><!-- fragment -->
+<p>Macro to declare a derived packet class without payload but with a provided body. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The name of the packet class. </td></tr>
+    <tr><td class="paramname">BasePacket</td><td>The base class. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID</td><td>The packet identifier. </td></tr>
+    <tr><td class="paramname">TTL</td><td>The time-to-live value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00194">194</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00252">252</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -497,12 +565,25 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a>(PacketName##Request, Subsystem, ID1, TTL1)                                   \</div>
-<div class="line">    MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_PAYLOAD(PacketName##Response, BasePacket, Subsystem, ID2, TTL2, \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a>(PacketName##Request, Subsystem, ID1, TTL1)                                      \</div>
+<div class="line">    MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_PAYLOAD(PacketName##Response, BasePacket, Subsystem, ID2, TTL2,    \</div>
 <div class="line">                                                          __VA_ARGS__)</div>
 <div class="ttc" id="apacket-macro_8hpp_html_a2147e22f391e5db6c2e7b9458a058bf9"><div class="ttname"><a href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName, Subsystem, ID, TTL)</div><div class="ttdoc">Macro to declare an empty packet class with specific parameters.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00018">packet-macro.hpp:18</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00206">206</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p>Macro to declare a derived packet class without payload but with a provided body and specific parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The name of the packet class. </td></tr>
+    <tr><td class="paramname">BasePacket</td><td>The base class. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID</td><td>The packet identifier. </td></tr>
+    <tr><td class="paramname">TTL</td><td>The time-to-live value. </td></tr>
+    <tr><td class="paramname">...</td><td>Payload members for the response packet. They should be defined as tuples, like this: (int, value), (typename, valuename) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00305">305</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -567,10 +648,25 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a>(PacketName##Request, Subsystem, ID1, TTL1)                                   \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a>(PacketName##Request, Subsystem, ID1, TTL1)       \</div>
 <div class="line">    MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITHOUT_PAYLOAD(PacketName##Response, BasePacket, Subsystem, ID2, TTL2)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00212">212</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p>Macro to declare an empty request packet and a derived response packet without payload, with specific parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The base name for the request and response packets. </td></tr>
+    <tr><td class="paramname">BasePacket</td><td>The base packet class for the response. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID1</td><td>The packet identifier for the request. </td></tr>
+    <tr><td class="paramname">ID2</td><td>The packet identifier for the response. </td></tr>
+    <tr><td class="paramname">TTL1</td><td>The time-to-live value for the request. </td></tr>
+    <tr><td class="paramname">TTL2</td><td>The time-to-live value for the response. </td></tr>
+    <tr><td class="paramname">...</td><td>Payload members for the response packet. They should be defined as tuples, like this: (int, value), (typename, valuename) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00325">325</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -629,10 +725,25 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a>(PacketName##Request, Subsystem, ID1, TTL1)                                \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a>(PacketName##Request, Subsystem, ID1, TTL1)                                        \</div>
 <div class="line">    MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_PAYLOAD(PacketName##Response, Subsystem, ID2, TTL2, __VA_ARGS__)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00198">198</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p>Macro to declare an empty request packet and a response packet with specific parameters and payload. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The name of the packet class. </td></tr>
+    <tr><td class="paramname">BasePacket</td><td>The base class. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID1</td><td>The packet identifier for the request. </td></tr>
+    <tr><td class="paramname">ID2</td><td>The packet identifier for the response. </td></tr>
+    <tr><td class="paramname">TTL1</td><td>The time-to-live value for the request. </td></tr>
+    <tr><td class="paramname">TTL2</td><td>The time-to-live value for the response. </td></tr>
+    <tr><td class="paramname">...</td><td>Payload members for the response packet. They should be defined as tuples, like this: (int, value), (typename, valuename) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00270">270</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -691,10 +802,24 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a>(PacketName##Request, Subsystem, ID1, TTL1)                                \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="../../d2/d1f/packet-macro_8hpp.html#a2147e22f391e5db6c2e7b9458a058bf9">MAL_PACKET_WEAVER_DECLARE_PACKET</a>(PacketName##Request, Subsystem, ID1, TTL1)                                     \</div>
 <div class="line">    MAL_PACKET_WEAVER_DECLARE_PACKET_WITHOUT_PAYLOAD(PacketName##Response, Subsystem, ID2, TTL2)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00202">202</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p>Macro to declare an empty request packet and a response packet with specific parameters but without payload. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The base name for the request and response packets. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID1</td><td>The packet identifier for the request. </td></tr>
+    <tr><td class="paramname">ID2</td><td>The packet identifier for the response. </td></tr>
+    <tr><td class="paramname">TTL1</td><td>The time-to-live value for the request. </td></tr>
+    <tr><td class="paramname">TTL2</td><td>The time-to-live value for the response. </td></tr>
+    <tr><td class="paramname">...</td><td>Payload members for the response packet. They should be defined as tuples, like this: (int, value), (typename, valuename) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00288">288</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -743,7 +868,7 @@ Macros</h2></td></tr>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                       \</div>
 <div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration; \</div>
 <div class="line">    };                                                                                   \</div>
-<div class="line"><span class="keyword">inline</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> PacketName::registration;</div>
+<div class="line">    <span class="keyword">inline</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> PacketName::registration;</div>
 </div><!-- fragment -->
 <p>Macro to declare an empty packet class with specific parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -809,28 +934,28 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                                 \</div>
-<div class="line">    {                                                                                                            \</div>
-<div class="line">    <span class="keyword">public</span>:                                                                                                      \</div>
-<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                    \</div>
-<div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                    \</div>
-<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                               \</div>
-<div class="line">                                                                                                                 \</div>
-<div class="line">        MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                         \</div>
-<div class="line">                                                                                                                 \</div>
-<div class="line">        PACKET_BODY                                                                                              \</div>
-<div class="line">    private:                                                                                                     \</div>
-<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>boost::serialization::access;                                                               \</div>
-<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;                                                                                 \</div>
-<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)                                                          \</div>
-<div class="line">        {                                                                                                        \</div>
-<div class="line">            MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                       \</div>
-<div class="line">        }                                                                                                        \</div>
-<div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration;                         \</div>
-<div class="line">    };                                                                                                           \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                                  \</div>
+<div class="line">    {                                                                                                             \</div>
+<div class="line">    <span class="keyword">public</span>:                                                                                                       \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                     \</div>
+<div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                     \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                                \</div>
+<div class="line">                                                                                                                  \</div>
+<div class="line">        MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                          \</div>
+<div class="line">                                                                                                                  \</div>
+<div class="line">        PACKET_BODY                                                                                               \</div>
+<div class="line">    private:                                                                                                      \</div>
+<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>boost::serialization::access;                                                                \</div>
+<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;                                                                                  \</div>
+<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)                                                           \</div>
+<div class="line">        {                                                                                                         \</div>
+<div class="line">            MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                        \</div>
+<div class="line">        }                                                                                                         \</div>
+<div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration;                          \</div>
+<div class="line">    };                                                                                                            \</div>
 <div class="line">    <span class="keyword">inline</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> PacketName::registration;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -877,25 +1002,20 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                              \</div>
-<div class="line">    {                                                                                                         \</div>
-<div class="line">    <span class="keyword">public</span>:                                                                                                   \</div>
-<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                 \</div>
-<div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                 \</div>
-<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                            \</div>
-<div class="line">                                                                                                              \</div>
-<div class="line">        PACKET_BODY                                                                                           \</div>
-<div class="line">    private:                                                                                                  \</div>
-<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>boost::serialization::access;                                                            \</div>
-<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;                                                                              \</div>
-<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)                                                       \</div>
-<div class="line">        {                                                                                                     \</div>
-<div class="line">        }                                                                                                     \</div>
-<div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration;                      \</div>
-<div class="line">    };                                                                                                        \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                                \</div>
+<div class="line">    {                                                                                                           \</div>
+<div class="line">    <span class="keyword">public</span>:                                                                                                     \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#a55bbfecb837c31e7823aae457d86ef5d">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                   \</div>
+<div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                   \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                              \</div>
+<div class="line">                                                                                                                \</div>
+<div class="line">        PACKET_BODY                                                                                             \</div>
+<div class="line">    private:                                                                                                    \</div>
+<div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration;                        \</div>
+<div class="line">    };                                                                                                          \</div>
 <div class="line">    <span class="keyword">inline</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> PacketName::registration;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00122">122</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00121">121</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -938,12 +1058,26 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;        <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#ad13492fecc4df374e99badc0b9badc89">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName, Subsystem, ID, TTL, /* nothing */, __VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#ad13492fecc4df374e99badc0b9badc89">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName, Subsystem, ID, TTL, /* nothing */, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p>Macro to declare an empty request packet and a response packet with payload. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The base name for the request and response packets. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID1</td><td>The packet identifier for the request. </td></tr>
+    <tr><td class="paramname">ID2</td><td>The packet identifier for the response. </td></tr>
+    <tr><td class="paramname">TTL1</td><td>The time-to-live value for the request. </td></tr>
+    <tr><td class="paramname">TTL2</td><td>The time-to-live value for the response. </td></tr>
+    <tr><td class="paramname">...</td><td>Payload members for the response packet. They should be defined as tuples, like this: (int, value), (typename, valuename) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00146">146</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -980,12 +1114,25 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;        <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a23f6d929f1cb07599fd6b3d7d622beec">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName, Subsystem, ID, TTL, /* nothing */)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="../../d2/d1f/packet-macro_8hpp.html#a23f6d929f1cb07599fd6b3d7d622beec">MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName, Subsystem, ID, TTL, /* nothing */)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00144">144</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p>Macro to declare an empty request packet and an empty response packet. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PacketName</td><td>The base name for the request and response packets. </td></tr>
+    <tr><td class="paramname">Subsystem</td><td>The subsystem identifier. </td></tr>
+    <tr><td class="paramname">ID1</td><td>The packet identifier for the request. </td></tr>
+    <tr><td class="paramname">ID2</td><td>The packet identifier for the response. </td></tr>
+    <tr><td class="paramname">TTL1</td><td>The time-to-live value for the request. </td></tr>
+    <tr><td class="paramname">TTL2</td><td>The time-to-live value for the response. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00159">159</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1584,7 +1731,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_4576bb29f2e361ee3b0cab13520d23e7.html">packet-impl</a></li><li class="navelem"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html">packet-macro.hpp</a></li>
-    <li class="footer">Generated on Wed Aug 16 2023 15:00:47 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Wed Aug 16 2023 15:50:26 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>
