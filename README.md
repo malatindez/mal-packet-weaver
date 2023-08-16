@@ -468,10 +468,10 @@ Once you've set up your `PacketDispatcher` and registered handlers, you can star
 
 constexpr mal_packet_weaver::PacketSubsystemID PacketSubsystemNetwork = 0x0002;
 
-MAL_PACKET_WEAVER_DECLARE_PACKET(PingPacket, PacketSubsystemNetwork, 0, 120.0f)
-MAL_PACKET_WEAVER_DECLARE_PACKET(PongPacket, PacketSubsystemNetwork, 1, 120.0f)
+MAL_PACKET_WEAVER_DECLARE_PACKET(PingPacket, PacketSubsystemNetwork, 0, 120.0f);
+MAL_PACKET_WEAVER_DECLARE_PACKET(PongPacket, PacketSubsystemNetwork, 1, 120.0f);
 MAL_PACKET_WEAVER_DECLARE_PACKET_WITH_PAYLOAD(MessagePacket, PacketSubsystemNetwork, 2, 120.0f,
-                                              (std::string, message))
+                                              (std::string, message));
 
 int main() {
     // Create an io_context and PacketDispatcher instance
