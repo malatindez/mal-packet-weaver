@@ -78,7 +78,7 @@ The MAL Packet Weaver is a C++ library that provides utilities for working with 
 3. Include the desired headers in your source files:
 
    ```cpp
-   #include <mal-packet-weaver/.hpp>
+   #include <mal-packet-weaver/mal-packet-weaver.hpp>
    #include <mal-packet-weaver/packet-dispatcher.hpp>
    // ... other headers ...
    ```
