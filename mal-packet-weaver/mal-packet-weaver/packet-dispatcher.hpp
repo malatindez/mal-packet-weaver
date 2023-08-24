@@ -44,6 +44,103 @@ namespace mal_packet_weaver
     class PacketDispatcher final : public non_copyable_non_movable,
                                    public std::enable_shared_from_this<PacketDispatcher>
     {
+        /**
+         * @brief A wrapper class for synchronizing and processing data.
+         *
+         * This class provides a thread-safe mechanism for pushing data into a queue,
+         * and asynchronously processing them using a provided processing function.
+         *
+         * @tparam Value The type of the data.
+         */
+        template <typename Value>
+        class SynchronizationWrapper
+        {
+        public:
+            /**
+             * @brief Constructor for the SynchronizationWrapper class.
+             *
+             * @param context The Boost Asio io_context to be used for strand synchronization.
+             * @param fn A function that processes a vector of key-value pairs.
+             */
+            SynchronizationWrapper(boost::asio::io_context &context, std::function<void(std::vector<Value> &)> fn)
+                : strand_{ context }, dequeue_function_(std::move(fn))
+            {
+            }
+            /**
+             * @brief Pushes a value into the queue for asynchronous processing.
+             *
+             * The value is enqueued for processing by the processing function.
+             * The synchronization flag is set to indicate the availability of data.
+             *
+             * @param key The key to be pushed.
+             */
+            inline void push(Value &&value) requires(std::is_copy_constructible_v<Value> || std::is_copy_assignable_v<Value>)
+            {
+                strand_.post(
+                    [this, copied_value = value]()
+                    {
+                        input_data_.emplace_back(std::move(copied_value));
+                        synchronization_flag_.test_and_set(std::memory_order_release);
+                    }
+                );
+            }
+            inline void push(Value &&value)
+                requires(std::is_same_v<Value, std::unique_ptr<typename Value::element_type>>)
+            {
+                strand_.post(
+                    [this, released_ptr = value.release()]()
+                    {
+                        Value unique_ptr{ released_ptr };
+                        input_data_.emplace_back(std::move(unique_ptr));
+                        synchronization_flag_.test_and_set(std::memory_order_release);
+                    });
+            }
+
+            /**
+             * @brief Checks if there is data available for processing.
+             *
+             * @return `true` if data is available, `false` otherwise.
+             */
+
+            inline bool has_data() { return synchronization_flag_.test(std::memory_order_acquire); }
+
+            /**
+             * @brief Creates a task to asynchronously process the enqueued data.
+             *
+             * This function creates a task that processes the enqueued data using the
+             * processing function. The promise is set to `true` if data was processed,
+             * and `false` otherwise.
+             *
+             * @return A `std::future<bool>` indicating the result of data processing.
+             */
+            inline std::future<bool> create_pop_task()
+            {
+                std::shared_ptr<std::promise<bool>> promise = std::make_shared<std::promise<bool>>();
+                std::future<bool> input_future = promise->get_future();
+                strand_.post(
+                    [this, promise]()
+                    {
+                        if (input_data_.empty())
+                        {
+                            promise->set_value(false);
+                            synchronization_flag_.clear(std::memory_order_release);
+                            return;
+                        }
+                        dequeue_function_(input_data_);
+                        input_data_.clear();
+                        promise->set_value(true);
+                        synchronization_flag_.clear(std::memory_order_release);
+                    });
+                return input_future;
+            }
+
+        private:
+            boost::asio::io_context::strand strand_; /**< Synchronization strand. */
+            std::atomic_flag synchronization_flag_;  /**< Atomic flag indicating updates to the data_ */
+            std::function<void(std::vector<Value> &)> dequeue_function_; /**< Function that processes the input data */
+            std::vector<Value> input_data_;                              /**< Queue for storing the data */
+        };
+
     public:
         /**
          * @brief Alias for a unique pointer to a base packet type.
@@ -140,7 +237,7 @@ namespace mal_packet_weaver
         /**
          * @brief Registers a default handler for the provided packet type.
          *
-         * This function registers a default packet handler for a specific packet type. The handler
+         * This function registers a default packet handler for a specific packet type. The filter
          * function can be provided, and if it returns false, the packet is passed to the next
          * handler. An optional filter function can also be provided to determine whether the
          * handler should be applied based on the packet's properties. A delay parameter can be used
@@ -149,8 +246,7 @@ namespace mal_packet_weaver
          * @todo Add an ability to delete handlers
          *
          * @tparam DerivedPacket The type of packet for which the handler should be registered.
-         * @param handler The packet handler function. If it returns false, the packet will be
-         * passed to the next handler.
+         * @param handler The packet handler function.
          * @param filter The packet filter function to determine whether the handler should be
          * applied. (Optional)
          * @param delay The delay in seconds before the handler is executed. (Default is 0.0)
@@ -158,6 +254,25 @@ namespace mal_packet_weaver
         template <IsPacket DerivedPacket>
         void register_default_handler(PacketHandlerFunc<DerivedPacket> handler,
                                       PacketFilterFunc<DerivedPacket> filter = {}, float delay = 0.0f);
+
+        /**
+         * @brief Registers a subsystem handler for the provided packet type.
+         *
+         * This function registers a subsystem packet handler for a section of packets. The filter
+         * function can be provided, and if it returns false, the packet is passed to the next
+         * handler. An optional filter function can also be provided to determine whether the
+         * handler should be applied based on the packet's properties. A delay parameter can be used
+         * to postpone the handler's execution for a certain amount of time.
+         *
+         * @todo Add an ability to delete handlers
+         *
+         * @param handler The packet handler function.
+         * @param filter The packet filter function to determine whether the handler should be
+         * applied. (Optional)
+         * @param delay The delay in seconds before the handler is executed. (Default is 0.0)
+         */
+        void register_subsystem_handler(PacketSubsystemID subsystem_id, PacketHandlerFunc<Packet> handler,
+                                        PacketFilterFunc<Packet> filter = {}, float delay = 0.0f);
 
         /**
          * @brief Enqueues a promise associated with a packet.
@@ -253,32 +368,6 @@ namespace mal_packet_weaver
          * @param packet The packet to push (as an rvalue reference).
          */
         inline void push_packet(BasePacketPtr &&packet);
-        /**
-         * @brief Creates a promise_map_input_pop_task and returns a future to await completion.
-         * @return A future that signals the completion of the task.
-         */
-        std::future<bool> create_promise_map_input_pop_task();
-
-        /**
-         * @brief Creates a promise_filter_map_input_pop_task and returns a future to await
-         * completion.
-         * @return A future that signals the completion of the task.
-         */
-        std::future<bool> create_promise_filter_map_input_pop_task();
-
-        /**
-         * @brief Creates a default_handlers_input_pop_task and returns a future to await
-         * completion.
-         * @return A future that signals the completion of the task.
-         */
-        std::future<bool> create_default_handlers_input_pop_task();
-
-        /**
-         * @brief Creates an unprocessed_packets_input_pop_task and returns a future to await
-         * completion.
-         * @return A future that signals the completion of the task.
-         */
-        std::future<bool> create_unprocessed_packets_input_pop_task();
 
         /**
          * @brief Pops input packets from input queues to local maps for processing.
@@ -288,31 +377,16 @@ namespace mal_packet_weaver
 
         boost::asio::io_context &io_context_; /**< Reference to the associated Boost.Asio io_context. */
 
-        boost::asio::io_context::strand unprocessed_packets_input_strand_; /**< Strand for synchronizing access to the
-                                                                              unprocessed input packets queue. */
-        boost::asio::io_context::strand promise_map_input_strand_; /**< Strand for synchronizing access to the promise
-                                                                      map input. */
-        boost::asio::io_context::strand promise_filter_map_input_strand_; /**< Strand for synchronizing access to the
-                                                                             promise filter map input. */
-        boost::asio::io_context::strand default_handlers_input_strand_;   /**< Strand for synchronizing access to the
-                                                                             default   handlers input. */
-
-        std::atomic_flag unprocessed_packets_input_updated_; /**< Atomic flag indicating updates to
-                                                                unprocessed_packets_input_. */
-        std::atomic_flag promise_map_input_updated_;         /**< Atomic flag indicating updates to
-                                                                promise_map_input_. */
-        std::atomic_flag promise_filter_map_input_updated_;  /**< Atomic flag indicating updates to
-                                                                promise_filter_map_input_. */
-        std::atomic_flag default_handlers_input_updated_;    /**< Atomic flag indicating updates to
-                                                                default_handlers_input_. */
-
-        std::vector<BasePacketPtr> unprocessed_packets_input_; /**< Queue for storing unprocessed input packets. */
-        std::vector<std::pair<UniquePacketID, shared_packet_promise>>
+        SynchronizationWrapper<BasePacketPtr>
+            unprocessed_packets_input_; /**< Queue for storing unprocessed input packets. */
+        SynchronizationWrapper<std::pair<UniquePacketID, shared_packet_promise>>
             promise_map_input_; /**< Queue for storing promise map inputs. */
-        std::vector<std::pair<UniquePacketID, promise_filter>>
+        SynchronizationWrapper<std::pair<UniquePacketID, promise_filter>>
             promise_filter_map_input_; /**< Queue for storing promise filter map inputs. */
-        std::vector<std::pair<UniquePacketID, handler_tuple>>
+        SynchronizationWrapper<std::pair<UniquePacketID, handler_tuple>>
             default_handlers_input_; /**< Queue for storing default handlers inputs. */
+        SynchronizationWrapper<std::pair<PacketSubsystemID, handler_tuple>>
+            subsystem_handlers_input_; /**< Queue for storing subsystem handlers inputs. */
 
         std::unordered_map<UniquePacketID, std::vector<BasePacketPtr>>
             unprocessed_packets_; /**< Map storing unprocessed packets for each packet ID. */
@@ -322,6 +396,9 @@ namespace mal_packet_weaver
             promise_filter_map_; /**< Map storing promise filters for each packet ID. */
         std::unordered_map<UniquePacketID, std::vector<handler_tuple>>
             default_handlers_; /**< Map storing default packet handlers for each packet ID. */
+        std::unordered_map<PacketSubsystemID, std::vector<handler_tuple>>
+            subsystem_handlers_; /**< Map storing default packet handlers for entire subsystems, if no default_handler_
+                                    was declared */
 
         std::atomic_bool alive_{ true };
     };

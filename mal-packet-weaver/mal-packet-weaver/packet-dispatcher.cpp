@@ -8,13 +8,101 @@ namespace mal_packet_weaver
 {
     PacketDispatcher::PacketDispatcher(boost::asio::io_context &io_context)
         : io_context_{ io_context },
-          unprocessed_packets_input_strand_{ io_context },
-          promise_map_input_strand_{ io_context },
-          promise_filter_map_input_strand_{ io_context },
-          default_handlers_input_strand_{ io_context }
+          unprocessed_packets_input_{ io_context,
+                                      [this](std::vector<BasePacketPtr> &packets) -> void
+                                      {
+                                          for (auto &packet_ptr : packets)
+                                          {
+                                              if (packet_ptr == nullptr)
+                                              {
+                                                  spdlog::warn("packet_ptr in unprocessed_input is nullptr");
+                                                  continue;
+                                              }
+                                              auto packet_id = packet_ptr->type;
+                                              auto &unprocessed_packets_queue_ = unprocessed_packets_[packet_id];
+                                              unprocessed_packets_queue_.emplace_back(std::move(packet_ptr));
+                                          }
+                                      } },
+          promise_map_input_{
+              io_context,
+              [this](std::vector<std::pair<UniquePacketID, shared_packet_promise>> &promise_input) -> void
+              {
+                  for (auto &[packet_id, shared_promise] : promise_input)
+                  {
+                      auto &promise_queue = promise_map_[packet_id];
+                      promise_queue.emplace_back(std::move(shared_promise));
+                  }
+              }
+
+          },
+          promise_filter_map_input_{ io_context,
+                                     [this](
+                                         std::vector<std::pair<UniquePacketID, promise_filter>> &promise_input) -> void
+                                     {
+                                         for (auto &[packet_id, filter] : promise_input)
+                                         {
+                                             auto &filter_queue = promise_filter_map_[packet_id];
+                                             filter_queue.emplace_back(std::move(filter));
+                                         }
+                                     } },
+          default_handlers_input_{ io_context,
+                                   [this](std::vector<std::pair<UniquePacketID, handler_tuple>> &handlers) -> void
+                                   {
+                                       for (auto &[packet_id, handler] : handlers)
+                                       {
+                                           auto &handler_list = default_handlers_[packet_id];
+                                           // Insert the handler such that filtered ones are first.
+                                           mal_toolkit::SortedInsert<handler_tuple>(
+                                               handler_list, std::move(handler),
+                                               [](handler_tuple const &left,
+                                                  handler_tuple const &right) -> bool __lambda_force_inline
+                                               {
+                                                   if (bool(std::get<1>(left)))
+                                                   {
+                                                       return true;
+                                                   }
+                                                   else if (bool(std::get<1>(right)))
+                                                   {
+                                                       return false;
+                                                   }
+                                                   return true;
+                                               });
+                                       }
+                                   } },
+          subsystem_handlers_input_{ io_context,
+                                     [this](std::vector<std::pair<PacketSubsystemID, handler_tuple>> &handlers) -> void
+                                     {
+                                         for (auto &[packet_id, handler] : handlers)
+                                         {
+                                             auto &handler_list = subsystem_handlers_[packet_id];
+                                             // Insert the handler such that filtered ones are first.
+                                             mal_toolkit::SortedInsert<handler_tuple>(
+                                                 handler_list, std::move(handler),
+                                                 [](handler_tuple const &left,
+                                                    handler_tuple const &right) -> bool __lambda_force_inline
+                                                 {
+                                                     if (bool(std::get<1>(left)))
+                                                     {
+                                                         return true;
+                                                     }
+                                                     else if (bool(std::get<1>(right)))
+                                                     {
+                                                         return false;
+                                                     }
+                                                     return true;
+                                                 });
+                                         }
+                                     } }
     {
         spdlog::debug("PacketDispatcher constructor called.");
         co_spawn(io_context, std::bind(&PacketDispatcher::Run, this), boost::asio::detached);
+    }
+    void PacketDispatcher::register_subsystem_handler(PacketSubsystemID subsystem_id, PacketHandlerFunc<Packet> handler,
+                                                      PacketFilterFunc<Packet> filter, float delay)
+    {
+        spdlog::trace("Posting task to register subsystem handler for {} subsystem", subsystem_id);
+        handler_tuple tuple{ delay, std::move(filter), std::move(handler) };
+        subsystem_handlers_input_.push(std::pair{ subsystem_id, std::move(tuple) });
     }
 
     boost::asio::awaitable<std::shared_ptr<PacketDispatcher>> PacketDispatcher::get_shared_ptr()
@@ -123,132 +211,28 @@ namespace mal_packet_weaver
         spdlog::info("Exiting PacketDispatcher::Run");
     }
 
-    std::future<bool> PacketDispatcher::create_promise_map_input_pop_task()
-    {
-        spdlog::trace("Creating promise_map_input_pop_task");
-        std::shared_ptr<std::promise<bool>> promise_map_input_promise = std::make_shared<std::promise<bool>>();
-        std::future<bool> promise_map_input_future = promise_map_input_promise->get_future();
-        promise_map_input_strand_.post(
-            [this, promise_map_input_promise]()
-            {
-                for (auto &[packet_id, shared_promise] : promise_map_input_)
-                {
-                    auto &promise_queue = promise_map_[packet_id];
-                    promise_queue.emplace_back(std::move(shared_promise));
-                }
-                bool t = promise_map_input_.size() > 0;
-                promise_map_input_.clear();
-                promise_map_input_promise->set_value(t);
-                promise_map_input_updated_.clear(std::memory_order_release);
-                spdlog::trace("promise_map_input_pop_task completed");
-            });
-        return promise_map_input_future;
-    }
-
-    std::future<bool> PacketDispatcher::create_promise_filter_map_input_pop_task()
-    {
-        spdlog::trace("Creating promise_filter_map_input_pop_task");
-        std::shared_ptr<std::promise<bool>> promise_filter_map_input_promise = std::make_shared<std::promise<bool>>();
-        std::future<bool> promise_filter_map_input_future = promise_filter_map_input_promise->get_future();
-        promise_filter_map_input_strand_.post(
-            [this, promise_filter_map_input_promise]()
-            {
-                for (auto &[packet_id, filter] : promise_filter_map_input_)
-                {
-                    auto &filter_queue = promise_filter_map_[packet_id];
-                    filter_queue.emplace_back(std::move(filter));
-                }
-                bool t = promise_filter_map_input_.size() > 0;
-                promise_filter_map_input_.clear();
-                promise_filter_map_input_promise->set_value(t);
-                promise_filter_map_input_updated_.clear(std::memory_order_release);
-                spdlog::debug("promise_filter_map_input_pop_task completed");
-            });
-        return promise_filter_map_input_future;
-    }
-
-    std::future<bool> PacketDispatcher::create_default_handlers_input_pop_task()
-    {
-        spdlog::trace("Creating default_handlers_input_pop_task");
-        std::shared_ptr<std::promise<bool>> default_handlers_input_promise = std::make_shared<std::promise<bool>>();
-        std::future<bool> default_handlers_input_future = default_handlers_input_promise->get_future();
-        default_handlers_input_strand_.post(
-            [this, default_handlers_input_promise]()
-            {
-                for (auto &[packet_id, handler] : default_handlers_input_)
-                {
-                    auto &handler_list = default_handlers_[packet_id];
-                    // Insert the handler such that filtered ones are first.
-                    mal_toolkit::SortedInsert<handler_tuple>(
-                        handler_list, std::move(handler),
-                        [](handler_tuple const &left, handler_tuple const &right) -> bool __lambda_force_inline
-                        {
-                            if (bool(std::get<1>(left)))
-                            {
-                                return true;
-                            }
-                            else if (bool(std::get<1>(right)))
-                            {
-                                return false;
-                            }
-                            return true;
-                        });
-                }
-                bool t = default_handlers_input_.size() > 0;
-                default_handlers_input_.clear();
-                default_handlers_input_promise->set_value(t);
-                default_handlers_input_updated_.clear(std::memory_order_release);
-                spdlog::trace("default_handlers_input_pop_task completed");
-            });
-        return default_handlers_input_future;
-    }
-
-    std::future<bool> PacketDispatcher::create_unprocessed_packets_input_pop_task()
-    {
-        spdlog::trace("Creating unprocessed_packets_input_pop_task");
-        std::shared_ptr<std::promise<bool>> unprocessed_packets_input_promise = std::make_shared<std::promise<bool>>();
-        std::future<bool> unprocessed_packets_input_future = unprocessed_packets_input_promise->get_future();
-        unprocessed_packets_input_strand_.post(
-            [this, unprocessed_packets_input_promise]()
-            {
-                for (auto &packet_ptr : unprocessed_packets_input_)
-                {
-                    if (packet_ptr == nullptr)
-                    {
-                        spdlog::warn("packet_ptr in unprocessed_input is nullptr");
-                        continue;
-                    }
-                    auto packet_id = packet_ptr->type;
-                    auto &unprocessed_packets_queue_ = unprocessed_packets_[packet_id];
-                    unprocessed_packets_queue_.emplace_back(std::move(packet_ptr));
-                }
-                bool t = unprocessed_packets_input_.size() > 0;
-                unprocessed_packets_input_.clear();
-                unprocessed_packets_input_promise->set_value(t);
-                unprocessed_packets_input_updated_.clear(std::memory_order_release);
-                spdlog::trace("unprocessed_packets_input_pop_task completed");
-            });
-        return unprocessed_packets_input_future;
-    }
-
     boost::asio::awaitable<bool> PacketDispatcher::pop_inputs()
     {
         std::vector<std::future<bool>> futures{};
-        if (unprocessed_packets_input_updated_.test(std::memory_order_acquire))
+        if (unprocessed_packets_input_.has_data())
         {
-            futures.emplace_back(create_unprocessed_packets_input_pop_task());
+            futures.emplace_back(unprocessed_packets_input_.create_pop_task());
         }
-        if (promise_map_input_updated_.test(std::memory_order_acquire))
+        if (promise_map_input_.has_data())
         {
-            futures.emplace_back(create_promise_map_input_pop_task());
+            futures.emplace_back(promise_map_input_.create_pop_task());
         }
-        if (promise_filter_map_input_updated_.test(std::memory_order_acquire))
+        if (promise_filter_map_input_.has_data())
         {
-            futures.emplace_back(create_promise_filter_map_input_pop_task());
+            futures.emplace_back(promise_filter_map_input_.create_pop_task());
         }
-        if (default_handlers_input_updated_.test(std::memory_order_acquire))
+        if (default_handlers_input_.has_data())
         {
-            futures.emplace_back(create_default_handlers_input_pop_task());
+            futures.emplace_back(default_handlers_input_.create_pop_task());
+        }
+        if (subsystem_handlers_input_.has_data())
+        {
+            futures.emplace_back(subsystem_handlers_input_.create_pop_task());
         }
         bool rv = false;
         for (auto &future : futures)

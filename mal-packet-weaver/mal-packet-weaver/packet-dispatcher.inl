@@ -96,50 +96,33 @@ namespace mal_packet_weaver
                                                     PacketFilterFunc<DerivedPacket> filter, float delay)
     {
         spdlog::trace("Posting task to register default handler for packet {}", DerivedPacket::static_unique_id);
-        default_handlers_input_strand_.post(
-            [this, delay, movedFilter = filter, movedHandler = handler]() __lambda_force_inline -> void
-            {
-                constexpr auto packet_id = DerivedPacket::static_unique_id;
-                spdlog::trace("Registered default handler for packet {}!", packet_id);
-                handler_tuple tuple =
+        constexpr auto packet_id = DerivedPacket::static_unique_id;
+        
+        handler_tuple tuple =
                     handler_tuple{ delay,
-                                   !bool(movedFilter)
+                                   !bool(filter)
                                        ? PacketFilterFunc<Packet>{}
-                                       : ([movedFilter](Packet const &packet) -> bool
-                                          { return movedFilter(reinterpret_cast<DerivedPacket const &>(packet)); }),
-                                   [movedHandler](std::unique_ptr<Packet> &&packet)
+                                       : ([moved_filter = std::move(filter)](Packet const &packet) -> bool
+                                          { return moved_filter(reinterpret_cast<DerivedPacket const &>(packet)); }),
+                                   [moved_handler = std::move(handler)](std::unique_ptr<Packet> &&packet)
                                    {
                                        auto ptr = reinterpret_cast<DerivedPacket *>(packet.release());
                                        auto uptr = std::unique_ptr<DerivedPacket>(ptr);
-                                       movedHandler(std::move(uptr));
+                                       moved_handler(std::move(uptr));
                                    } };
-                default_handlers_input_.emplace_back(std::pair{ packet_id, tuple });
-                default_handlers_input_updated_.test_and_set(std::memory_order_release);
-            });
+        default_handlers_input_.push(std::pair{packet_id, std::move(tuple)});
     }
 
     inline void PacketDispatcher::enqueue_promise(UniquePacketID packet_id, shared_packet_promise promise)
     {
         spdlog::trace("Posting task to enqueue promise for packet {}", packet_id);
-        promise_map_input_strand_.post(
-            [this, packet_id, moved_promise = std::move(promise)]() mutable
-            {
-                spdlog::trace("Promise enqueued for packet {}!", packet_id);
-                promise_map_input_.emplace_back(std::pair{ packet_id, std::move(moved_promise) });
-                promise_map_input_updated_.test_and_set(std::memory_order_release);
-            });
+        promise_map_input_.push(std::pair{ packet_id, std::move(promise) });
     }
 
     inline void PacketDispatcher::enqueue_filter_promise(UniquePacketID packet_id, promise_filter filtered_promise)
     {
         spdlog::trace("Posting task to enqueue promise with filter for packet {}", packet_id);
-        promise_filter_map_input_strand_.post(
-            [this, packet_id, moved_filtered_promise = std::move(filtered_promise)]() mutable
-            {
-                spdlog::trace("Promise with filter enqueued for packet {}!", packet_id);
-                promise_filter_map_input_.emplace_back(std::pair{ packet_id, std::move(moved_filtered_promise) });
-                promise_filter_map_input_updated_.test_and_set(std::memory_order_release);
-            });
+        promise_filter_map_input_.push(std::pair{packet_id, std::move(filtered_promise)});
     }
 
     inline bool PacketDispatcher::fulfill_promises(UniquePacketID packet_id, BasePacketPtr &packet)
@@ -180,48 +163,72 @@ namespace mal_packet_weaver
     inline bool PacketDispatcher::fulfill_handlers(UniquePacketID packet_id, BasePacketPtr &packet,
                                                    float &min_handler_timestamp, SteadyTimer &timer)
     {
-        auto it = default_handlers_.find(packet_id);
-        if (it == default_handlers_.end())
         {
-            spdlog::warn("No handlers to fulfill for packet_id: {}", packet_id);
-            return false;
-        }
-
-        for (auto &[delay, filter, handler] : it->second)
-        {
-            if (delay > packet->get_packet_time_alive())
+            auto it = default_handlers_.find(packet_id);
+            if (it == default_handlers_.end())
             {
-                min_handler_timestamp =
-                    std::min<float>(min_handler_timestamp, timer.elapsed() + delay - packet->get_packet_time_alive());
-                spdlog::trace("Handler delay for packet_id {} is greater than packet time alive.", packet_id);
-                continue;
+                goto fulfill_handlers_exit;
             }
 
-            if (bool(filter) && !filter(*packet))
+            for (auto &[delay, filter, handler] : it->second)
             {
-                spdlog::trace("Filter condition not satisfied for packet_id: {}", packet_id);
-                continue;
+                if (delay > packet->get_packet_time_alive())
+                {
+                    min_handler_timestamp =
+                        std::min<float>(min_handler_timestamp, timer.elapsed() + delay - packet->get_packet_time_alive());
+                    spdlog::trace("Handler delay for packet_id {} is greater than packet time alive.", packet_id);
+                    continue;
+                }
+
+                if (bool(filter) && !filter(*packet))
+                {
+                    spdlog::trace("Filter condition not satisfied for packet_id: {}", packet_id);
+                    continue;
+                }
+
+                handler(std::move(packet));
+                spdlog::trace("Fulfilled handler for packet_id: {}", packet_id);
+                return true;
             }
 
-            handler(std::move(packet));
-            spdlog::trace("Fulfilled handler for packet_id: {}", packet_id);
-            return true;
+            spdlog::trace("No suitable default handler to fulfill for packet_id: {}", packet_id);
         }
+        fulfill_handlers_exit:
+        {
+            auto it = subsystem_handlers_.find(UniquePacketIDToPacketSubsystemID(packet_id));
+            if (it == subsystem_handlers_.end())
+            {
+                spdlog::trace("No handlers to fulfill for packet_id: {}", packet_id);
+                return false;
+            }
+            for (auto &[delay, filter, handler] : it->second)
+            {
+                if (delay > packet->get_packet_time_alive())
+                {
+                    min_handler_timestamp =
+                        std::min<float>(min_handler_timestamp, timer.elapsed() + delay - packet->get_packet_time_alive());
+                    spdlog::trace("Handler delay for packet_id {} is greater than packet time alive.", packet_id);
+                    continue;
+                }
 
-        spdlog::trace("No suitable handlers to fulfill for packet_id: {}", packet_id);
+                if (bool(filter) && !filter(*packet))
+                {
+                    spdlog::trace("Filter condition not satisfied for packet_id: {}", packet_id);
+                    continue;
+                }
+
+                handler(std::move(packet));
+                spdlog::trace("Fulfilled handler for packet_id: {}", packet_id);
+                return true;
+            }
+        }
         return false;
     }
 
     inline void PacketDispatcher::push_packet(BasePacketPtr &&packet)
     {
-        unprocessed_packets_input_strand_.post(
-            [this, released_packet = packet.release()]()
-            {
-                BasePacketPtr unique_packet{ released_packet };
-                unprocessed_packets_input_.emplace_back(std::move(unique_packet));
-                unprocessed_packets_input_updated_.test_and_set(std::memory_order_release);
-                spdlog::trace("Pushed packet to unprocessed_packets_input_ queue.");
-            });
+        unprocessed_packets_input_.push(std::move(packet));
+        spdlog::trace("Pushed packet to unprocessed_packets_input_ queue.");
     }
 
 }  // namespace mal_packet_weaver
