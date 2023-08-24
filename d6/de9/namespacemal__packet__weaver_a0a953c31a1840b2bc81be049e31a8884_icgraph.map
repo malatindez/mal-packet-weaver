@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::UniquePacketIDToPacketSubsystemID" name="mal_packet_weaver::UniquePacketIDToPacketSubsystemID">
+<area shape="rect" id="Node000001" title="Extract PacketSubsystemID from a UniquePacketID." alt="" coords="202,13,430,54"/>
+<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a777e68fdca73f97496bc360835a62c32" title="Fulfills handlers associated with a packet ID and packet data." alt="" coords="5,5,154,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,36,154,36,154,31,186,31"/>
+</map>

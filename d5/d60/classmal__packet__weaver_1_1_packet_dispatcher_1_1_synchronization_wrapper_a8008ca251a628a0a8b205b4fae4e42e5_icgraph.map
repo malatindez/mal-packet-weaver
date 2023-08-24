@@ -1,0 +1,17 @@
+<map id="mal_packet_weaver::PacketDispatcher::SynchronizationWrapper::push" name="mal_packet_weaver::PacketDispatcher::SynchronizationWrapper::push">
+<area shape="rect" id="Node000001" title="Pushes a value into the queue for asynchronous processing." alt="" coords="434,125,641,181"/>
+<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a6cd127b3b0d7992ba74265243d8ed081" title="Enqueues a promise with a filter associated with a packet." alt="" coords="220,5,386,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="470,120,385,76,362,64,364,59,387,71,473,116"/>
+<area shape="rect" id="Node000004" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af4ee0a486c569b7e413cb5740b5625de" title="Enqueues a promise associated with a packet." alt="" coords="220,85,386,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="419,136,386,130,387,125,420,130"/>
+<area shape="rect" id="Node000006" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a346f02299048c0c8443aeead2fbf7d23" title="Pushes an input packet to the unprocessed_packets_input_ queue." alt="" coords="229,165,377,221"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="420,176,378,183,377,178,419,171"/>
+<area shape="rect" id="Node000008" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a90f4839728ba615d085089e56fb99a08" title="Registers a default handler for the provided packet type." alt="" coords="222,245,384,301"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="473,191,387,236,364,247,362,242,385,231,470,186"/>
+<area shape="rect" id="Node000003" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a5fa270876e67889a7524a186b297cd11" title="Wait until a packet satisfying the filter condition is registered in the dispatch system and return a..." alt="" coords="14,5,163,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,36,164,36,164,31,205,31"/>
+<area shape="rect" id="Node000005" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1e7e2c9e624018e4a1046297453e0596" title="Wait until the packet is registered in the dispatch system and return as soon as possible." alt="" coords="14,85,163,141"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="205,116,164,116,164,111,205,111"/>
+<area shape="rect" id="Node000007" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a9bb612f197e6c11b943e3b223e79eac3" title="Enqueues a packet for processing." alt="" coords="5,165,172,221"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="213,196,172,196,172,191,213,191"/>
+</map>

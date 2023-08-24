@@ -1,0 +1,17 @@
+<map id="mal_packet_weaver::PacketDispatcher::SynchronizationWrapper&lt; Value &gt;" name="mal_packet_weaver::PacketDispatcher::SynchronizationWrapper&lt; Value &gt;">
+<area shape="rect" id="Node000001" title="A wrapper class for synchronizing and processing data." alt="" coords="96,286,303,342"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,190,60,216"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,227,60,245,75,260,114,284,112,288,72,264,56,248,43,230"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="83,190,166,216"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,230,123,246,128,261,148,284,144,288,123,264,118,247,117,231"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="205,183,343,223"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="262,238,247,264,228,288,223,284,242,261,257,235"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="367,190,496,216"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="412,228,391,247,366,265,304,291,302,286,363,260,388,243,409,224"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="360,94,412,120"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="393,133,402,157,423,188,418,191,397,160,388,135"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="437,94,543,120"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="477,133,441,191,436,188,473,131"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="471,5,509,31"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="493,46,493,94,487,94,487,46"/>
+</map>

@@ -81,6 +81,12 @@ var hierarchy =
         [ "mal_packet_weaver::crypto::KeyView", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view.html", null ]
       ] ]
     ] ],
+    [ "mal_packet_weaver::PacketDispatcher::SynchronizationWrapper< Value >", "d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html", null ],
+    [ "mal_packet_weaver::PacketDispatcher::SynchronizationWrapper< BasePacketPtr >", "d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html", null ],
+    [ "mal_packet_weaver::PacketDispatcher::SynchronizationWrapper< std::pair< PacketSubsystemID, handler_tuple > >", "d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html", null ],
+    [ "mal_packet_weaver::PacketDispatcher::SynchronizationWrapper< std::pair< UniquePacketID, handler_tuple > >", "d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html", null ],
+    [ "mal_packet_weaver::PacketDispatcher::SynchronizationWrapper< std::pair< UniquePacketID, promise_filter > >", "d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html", null ],
+    [ "mal_packet_weaver::PacketDispatcher::SynchronizationWrapper< std::pair< UniquePacketID, shared_packet_promise > >", "d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html", null ],
     [ "mal_toolkit::Timer< clock >", "db/d8f/classmal__toolkit_1_1_timer.html", null ],
     [ "mal_toolkit::Timer< std::chrono::steady_clock >", "db/d8f/classmal__toolkit_1_1_timer.html", null ],
     [ "mal_toolkit::parameter_pack_info< Args >::type_at< index >", "d4/d1c/structmal__toolkit_1_1parameter__pack__info_1_1type__at.html", null ],
@@ -94,6 +100,11 @@ var hierarchy =
     ] ],
     [ "bool", "d9/db9/classbool.html", null ],
     [ "float", "d4/dc3/classfloat.html", null ],
+    [ "function< void(std::vector< BasePacketPtr > &)>", "d5/ddf/classstd_1_1function_3_01void_07std_1_1vector_3_01_base_packet_ptr_01_4_01_6_08_4.html", null ],
+    [ "function< void(std::vector< std::pair< PacketSubsystemID, handler_tuple > > &)>", "d2/d84/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_packet_subsystem_i_d_00_01handler__tuple_01_4_01_4_01_6_08_4.html", null ],
+    [ "function< void(std::vector< std::pair< UniquePacketID, handler_tuple > > &)>", "d6/dde/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01handler__tuple_01_4_01_4_01_6_08_4.html", null ],
+    [ "function< void(std::vector< std::pair< UniquePacketID, promise_filter > > &)>", "df/dbe/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01promise__filter_01_4_01_4_01_6_08_4.html", null ],
+    [ "function< void(std::vector< std::pair< UniquePacketID, shared_packet_promise > > &)>", "da/d39/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01shared5e27b4863406e826d3bd759af62ce715.html", null ],
     [ "size_t", "dd/de2/classsize__t.html", null ],
     [ "time_point< std::chrono::steady_clock >", "d2/d24/classstd_1_1chrono_1_1time__point_3_01std_1_1chrono_1_1steady__clock_01_4.html", null ]
 ];

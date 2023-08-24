@@ -1,5 +1,7 @@
 <map id="mal_packet_weaver::PacketDispatcher::fulfill_handlers" name="mal_packet_weaver::PacketDispatcher::fulfill_handlers">
-<area shape="rect" id="Node000001" title="Fulfills handlers associated with a packet ID and packet data." alt="" coords="5,5,154,61"/>
-<area shape="rect" id="Node000002" href="$db/d8f/classmal__toolkit_1_1_timer.html#a4ac9f05ebd618ab6f567aebd6d421ddb" title="Calculates and returns the elapsed time since the timer was last reset." alt="" coords="202,13,322,54"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,31,187,31,187,36,154,36"/>
+<area shape="rect" id="Node000001" title="Fulfills handlers associated with a packet ID and packet data." alt="" coords="5,31,154,87"/>
+<area shape="rect" id="Node000002" href="$db/d8f/classmal__toolkit_1_1_timer.html#a4ac9f05ebd618ab6f567aebd6d421ddb" title="Calculates and returns the elapsed time since the timer was last reset." alt="" coords="256,5,376,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,46,240,34,241,39,155,51"/>
+<area shape="rect" id="Node000003" href="$d6/de9/namespacemal__packet__weaver.html#a0a953c31a1840b2bc81be049e31a8884" title="Extract PacketSubsystemID from a UniquePacketID." alt="" coords="202,71,430,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,66,187,71,187,76,154,72"/>
 </map>

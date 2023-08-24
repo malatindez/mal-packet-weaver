@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"df/d40/classmal__toolkit_1_1namable__once.html#aefd0f1c4f615944afacd0fee2ae9460f":[1,0,4,13,6],
+"df/d40/classmal__toolkit_1_1namable__once.html#aefd0f1c4f615944afacd0fee2ae9460f":[3,0,1,12,6],
 "df/d44/portable-binary-archive_8hpp.html":[4,0,0,0,1,5],
 "df/d44/portable-binary-archive_8hpp.html#a0e1f6e572f9899848ed8cfb7c975a140":[4,0,0,0,1,5,0],
 "df/d44/portable-binary-archive_8hpp.html#a0e1f6e572f9899848ed8cfb7c975a140a44820efa4579359d8f22c3e03e7b1f99":[4,0,0,0,1,5,0,1],

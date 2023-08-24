@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::PacketDispatcher::register_default_handler" name="mal_packet_weaver::PacketDispatcher::register_default_handler">
+<area shape="rect" id="Node000001" title="Registers a default handler for the provided packet type." alt="" coords="5,5,168,61"/>
+<area shape="rect" id="Node000002" href="$d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a8008ca251a628a0a8b205b4fae4e42e5" title="Pushes a value into the queue for asynchronous processing." alt="" coords="216,5,423,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,31,201,31,201,36,168,36"/>
+</map>

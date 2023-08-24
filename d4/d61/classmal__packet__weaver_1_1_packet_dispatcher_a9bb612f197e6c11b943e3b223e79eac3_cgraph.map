@@ -2,4 +2,6 @@
 <area shape="rect" id="Node000001" title="Enqueues a packet for processing." alt="" coords="5,5,172,61"/>
 <area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a346f02299048c0c8443aeead2fbf7d23" title="Pushes an input packet to the unprocessed_packets_input_ queue." alt="" coords="220,5,368,61"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,31,205,31,205,36,172,36"/>
+<area shape="rect" id="Node000003" href="$d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a8008ca251a628a0a8b205b4fae4e42e5" title="Pushes a value into the queue for asynchronous processing." alt="" coords="416,5,623,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,31,401,31,401,36,368,36"/>
 </map>

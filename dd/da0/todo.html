@@ -112,17 +112,19 @@ $(document).ready(function(){initNavTree('dd/da0/todo.html','../../'); initResiz
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1622df3e4ea56438f22f362cf1bd77b9">mal_packet_weaver::DerivedPacket&lt; PacketType &gt;::deserialize</a>  (const ByteView buffer)</dt>
-<dd><a class="anchor" id="_todo000005"></a>: add an ability to choose the archive type.  </dd>
+<dd><a class="anchor" id="_todo000006"></a>: add an ability to choose the archive type.  </dd>
 <dt>Member <a class="el" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#acc2b05e779546c118d6fbb5a18499aa5">mal_packet_weaver::DerivedPacket&lt; PacketType &gt;::serialize_to_bytearray</a>  (ByteArray &amp;buffer) const override</dt>
-<dd><a class="anchor" id="_todo000004"></a>: add an ability to choose the archive type.  </dd>
+<dd><a class="anchor" id="_todo000005"></a>: add an ability to choose the archive type.  </dd>
 <dt>Member <a class="el" href="../../d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html#aa4666bcf2c65991ad251e29d7d6cb312">mal_packet_weaver::DispatcherSession::register_default_handler</a>  (PacketHandlerFunc&lt; DerivedPacket &gt; handler, PacketFilterFunc&lt; DerivedPacket &gt; filter={}, float delay=0.0f)</dt>
 <dd><a class="anchor" id="_todo000001"></a>Add an ability to delete handlers </dd>
 <dt>Member <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a955d2445a5fa0b1b4573a71163cb8d2b">mal_packet_weaver::Packet::~Packet</a>  ()=default</dt>
-<dd><a class="anchor" id="_todo000003"></a>: use RBAC system to manage permissions  </dd>
+<dd><a class="anchor" id="_todo000004"></a>: use RBAC system to manage permissions  </dd>
 <dt>Member <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a90f4839728ba615d085089e56fb99a08">mal_packet_weaver::PacketDispatcher::register_default_handler</a>  (PacketHandlerFunc&lt; DerivedPacket &gt; handler, PacketFilterFunc&lt; DerivedPacket &gt; filter={}, float delay=0.0f)</dt>
 <dd><a class="anchor" id="_todo000002"></a>Add an ability to delete handlers </dd>
+<dt>Member <a class="el" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a70789c55da3b69b072467ca89fe4a8df">mal_packet_weaver::PacketDispatcher::register_subsystem_handler</a>  (PacketSubsystemID subsystem_id, PacketHandlerFunc&lt; Packet &gt; handler, PacketFilterFunc&lt; Packet &gt; filter={}, float delay=0.0f)</dt>
+<dd><a class="anchor" id="_todo000003"></a>Add an ability to delete handlers </dd>
 <dt>Member <a class="el" href="../../d8/d39/classmal__packet__weaver_1_1_session.html#a537990363637358cb83d51a85f358608">mal_packet_weaver::Session::received_packets_</a>  </dt>
-<dd><a class="anchor" id="_todo000006"></a>Implement a circular buffer and ByteView handler for the lock-free queue. The ByteView handler should hold a simple pointer to a circular buffer and a ByteView. The circular buffer should automatically free memory allocated by the ByteViewHandler::free() method. This approach optimizes memory usage by avoiding repeated allocation and deallocation from the OS. Another option is to use a default queue of shared pointers, which automatically handles deallocation. The final choice may affect performance and memory usage, and further testing is needed.</dd>
+<dd><a class="anchor" id="_todo000007"></a>Implement a circular buffer and ByteView handler for the lock-free queue. The ByteView handler should hold a simple pointer to a circular buffer and a ByteView. The circular buffer should automatically free memory allocated by the ByteViewHandler::free() method. This approach optimizes memory usage by avoiding repeated allocation and deallocation from the OS. Another option is to use a default queue of shared pointers, which automatically handles deallocation. The final choice may affect performance and memory usage, and further testing is needed.</dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -130,7 +132,7 @@ $(document).ready(function(){initNavTree('dd/da0/todo.html','../../'); initResiz
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Aug 20 2023 00:28:38 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+    <li class="footer">Generated on Thu Aug 24 2023 11:41:17 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>
 </body>
