@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['calculatesize_0',['CalculateSize',['../d8/de8/namespacemal__toolkit_1_1__template__detail.html#a8fc9d6e7834409dd7bebc9b6dbd103fa',1,'mal_toolkit::_template_detail::CalculateSize()'],['../d8/de8/namespacemal__toolkit_1_1__template__detail.html#ac6c8904a283789e9cebf68db97b21e54',1,'mal_toolkit::_template_detail::CalculateSize()']]],
+  ['calculatesize_0',['calculatesize',['../d8/de8/namespacemal__toolkit_1_1__template__detail.html#a8fc9d6e7834409dd7bebc9b6dbd103fa',1,'mal_toolkit::_template_detail::CalculateSize()'],['../d8/de8/namespacemal__toolkit_1_1__template__detail.html#ac6c8904a283789e9cebf68db97b21e54',1,'mal_toolkit::_template_detail::CalculateSize()']]],
   ['callback_2dsystem_2ehpp_1',['callback-system.hpp',['../d6/d29/callback-system_8hpp.html',1,'']]],
   ['callback_5faddresses_5f_2',['callback_addresses_',['../dd/d83/classmal__toolkit_1_1_callback_system.html#ac525d5e24448a927298eac317d241ac0',1,'mal_toolkit::CallbackSystem']]],
   ['callbackaddress_3',['CallbackAddress',['../dd/d83/classmal__toolkit_1_1_callback_system.html#aeb88293cebeabeecaf3e76b9e3966093',1,'mal_toolkit::CallbackSystem']]],
@@ -24,5 +24,5 @@ var searchData=
   ['crypto_2ehpp_21',['crypto.hpp',['../d2/d62/crypto_8hpp.html',1,'']]],
   ['current_5f_22',['current_',['../db/d8f/classmal__toolkit_1_1_timer.html#aaa7c17e61b66e09eff2a9573a81fc289',1,'mal_toolkit::Timer']]],
   ['current_5fdelay_5f_23',['current_delay_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#af3b554b21402458d2fe70da34b4c9b5b',1,'mal_toolkit::ExponentialBackoff::current_delay_'],['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a638ef36e78098aa8d7f53810cc877b65',1,'mal_toolkit::LinearBackoff::current_delay_']]],
-  ['currentsourcelocation_24',['CurrentSourceLocation',['../df/df5/namespacemal__toolkit.html#a2f8178fa182139d89e522d558e12a6c3',1,'mal_toolkit::CurrentSourceLocation(std::source_location location=std::source_location::current())'],['../df/df5/namespacemal__toolkit.html#a27bf9441da264c7f90650042e9e30f40',1,'mal_toolkit::CurrentSourceLocation()']]]
+  ['currentsourcelocation_24',['currentsourcelocation',['../df/df5/namespacemal__toolkit.html#a2f8178fa182139d89e522d558e12a6c3',1,'mal_toolkit::CurrentSourceLocation(std::source_location location=std::source_location::current())'],['../df/df5/namespacemal__toolkit.html#a27bf9441da264c7f90650042e9e30f40',1,'mal_toolkit::CurrentSourceLocation()']]]
 ];
