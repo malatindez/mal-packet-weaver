@@ -1,5 +1,5 @@
 <map id="mal_packet_weaver::PacketDispatcher::enqueue_filter_promise" name="mal_packet_weaver::PacketDispatcher::enqueue_filter_promise">
 <area shape="rect" id="Node000001" title="Enqueues a promise with a filter associated with a packet." alt="" coords="5,5,172,61"/>
 <area shape="rect" id="Node000002" href="$d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a8008ca251a628a0a8b205b4fae4e42e5" title="Pushes a value into the queue for asynchronous processing." alt="" coords="220,5,427,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,31,205,31,205,36,172,36"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,31,204,31,204,36,172,36"/>
 </map>

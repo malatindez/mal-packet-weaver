@@ -1,7 +1,7 @@
 <map id="mal_toolkit::bytes_to_integer" name="mal_toolkit::bytes_to_integer">
 <area shape="rect" id="Node000001" title="Convert a ByteView to an integer value of the specified type." alt="" coords="5,5,120,46"/>
 <area shape="rect" id="Node000002" href="$df/df5/namespacemal__toolkit.html#a1a10dbab8f9e26361eaa4af07f31713d" title="Asserts a condition with customizable behavior based on debug mode." alt="" coords="168,13,290,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,23,153,23,153,28,120,28"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,23,152,23,152,28,120,28"/>
 <area shape="rect" id="Node000003" href="$df/df5/namespacemal__toolkit.html#a27bf9441da264c7f90650042e9e30f40" title="Returns an empty string representing the current source location." alt="" coords="338,5,502,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="290,23,323,23,323,28,290,28"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="290,23,322,23,322,28,290,28"/>
 </map>

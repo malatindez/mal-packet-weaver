@@ -1,7 +1,7 @@
 <map id="mal_packet_weaver::portable_binary_oarchive" name="mal_packet_weaver::portable_binary_oarchive">
 <area shape="rect" id="Node000001" title=" " alt="" coords="279,64,437,105"/>
 <area shape="rect" id="Node000002" href="$df/dc4/classboost_1_1archive_1_1basic__binary__oprimitive.html" title=" " alt="" coords="5,5,231,76"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,61,279,68,278,73,245,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,62,279,68,278,73,246,67"/>
 <area shape="rect" id="Node000003" href="$d4/d77/classboost_1_1archive_1_1detail_1_1common__oarchive.html" title=" " alt="" coords="28,100,208,155"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,106,278,96,279,101,223,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,106,278,96,279,101,224,111"/>
 </map>

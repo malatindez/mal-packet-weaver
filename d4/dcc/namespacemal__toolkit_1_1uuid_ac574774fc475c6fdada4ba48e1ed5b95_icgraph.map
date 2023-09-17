@@ -1,7 +1,7 @@
 <map id="mal_toolkit::uuid::stom128i" name="mal_toolkit::uuid::stom128i">
 <area shape="rect" id="Node000001" title="Converts an UUIDv4 string representation to a 128&#45;bits unsigned int using SIMD via AVX2." alt="" coords="195,39,311,79"/>
 <area shape="rect" id="Node000002" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#ac72601e75ca8a2e090c494e3f6b70426" title=" " alt="" coords="18,5,134,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,48,134,39,135,34,181,43"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,48,134,39,135,34,180,43"/>
 <area shape="rect" id="Node000003" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a9b3b6b3069d4f69d9ef65e7aa2a50b0e" title=" " alt="" coords="5,71,147,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,75,148,81,147,76,180,69"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,75,148,81,147,76,179,70"/>
 </map>

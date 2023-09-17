@@ -1,9 +1,9 @@
 <map id="mal_toolkit::ByteView::as" name="mal_toolkit::ByteView::as">
 <area shape="rect" id="Node000001" title="Convert the ByteView to a typed view." alt="" coords="216,78,371,104"/>
 <area shape="rect" id="Node000002" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1622df3e4ea56438f22f362cf1bd77b9" title="Deserialize a byte view into a unique pointer of the specified packet type." alt="" coords="5,5,168,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,76,152,49,154,44,237,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,76,152,49,154,44,237,70"/>
 <area shape="rect" id="Node000003" href="$d8/dab/structmal__toolkit_1_1_byte_view.html#ab21d83b363077d0b9d90ef549c22af1f" title="Create a subview of the ByteView with a specified length." alt="" coords="17,71,156,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,94,156,94,156,88,201,88"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,94,156,94,156,88,200,88"/>
 <area shape="rect" id="Node000004" href="$d8/dab/structmal__toolkit_1_1_byte_view.html#acc43e8df785d2e5b6170a664c756123d" title="Create a subview of the ByteView." alt="" coords="17,136,156,177"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="237,111,154,138,152,133,236,106"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="237,112,154,138,152,133,235,106"/>
 </map>

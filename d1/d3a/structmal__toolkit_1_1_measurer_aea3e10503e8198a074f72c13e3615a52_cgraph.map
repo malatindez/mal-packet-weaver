@@ -1,5 +1,5 @@
 <map id="mal_toolkit::Measurer::log" name="mal_toolkit::Measurer::log">
 <area shape="rect" id="Node000001" title="Log the accumulated measurements." alt="" coords="5,5,165,31"/>
 <area shape="rect" id="Node000002" href="$d1/d3a/structmal__toolkit_1_1_measurer.html#ab4e7b2ae124cc9e9309760afeb98fe44" title="Calculate the average execution time of the last N entries." alt="" coords="213,5,374,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,16,198,16,198,21,165,21"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,16,197,16,197,21,165,21"/>
 </map>

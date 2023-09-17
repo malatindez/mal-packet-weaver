@@ -1,21 +1,21 @@
 <map id="mal_packet_weaver::Session::send_all" name="mal_packet_weaver::Session::send_all">
 <area shape="rect" id="Node000001" title="Asynchronously sends all packets in the queue through the network." alt="" coords="5,201,138,242"/>
 <area shape="rect" id="Node000002" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#aa3d43592b3a16ad73860e290f28b9ce9" title="Append multiple data sources to the byte array." alt="" coords="189,29,331,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,199,126,145,153,114,184,86,198,76,201,80,187,90,157,118,130,148,89,203"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,199,126,145,153,114,184,86,198,76,201,81,187,90,157,118,130,148,89,203"/>
 <area shape="rect" id="Node000003" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" title="Convert the ByteArray to a typed pointer." alt="" coords="384,66,543,92"/>
-<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="91,199,132,163,184,130,230,112,278,99,369,83,370,88,279,104,232,117,187,135,135,167,95,203"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="91,199,132,163,184,130,230,112,277,99,368,83,369,89,278,104,232,117,187,135,135,167,95,203"/>
 <area shape="rect" id="Node000004" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#aa83694a9b15273a1abbf95722b71fcca" title="Decrease the backoff delay using divisor factor." alt="" coords="186,144,334,185"/>
 <area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="138,199,176,187,178,192,139,204"/>
 <area shape="rect" id="Node000005" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="382,225,545,266"/>
-<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="138,223,367,237,367,242,138,228"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="138,223,366,237,366,242,138,228"/>
 <area shape="rect" id="Node000006" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e" title="Retrieves a shared pointer to the current session." alt="" coords="186,259,334,299"/>
 <area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="139,239,178,251,176,256,138,244"/>
 <area shape="rect" id="Node000007" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="390,303,538,343"/>
-<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="93,240,133,277,159,295,187,309,233,322,282,329,375,330,375,335,282,334,232,327,185,313,156,300,130,282,89,244"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="93,240,133,277,159,295,187,309,233,322,282,329,374,330,374,335,281,334,232,327,185,313,156,300,130,282,89,244"/>
 <area shape="rect" id="Node000008" href="$df/df5/namespacemal__toolkit.html#a205f8d4452e595ed3943f0d083c6033f" title="Convert a uint32_t value to a ByteArray using little&#45;endian byte order." alt="" coords="199,373,321,414"/>
 <area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="89,241,130,295,157,325,187,353,201,363,198,367,184,357,153,329,126,298,84,244"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="224,29,222,19,228,10,241,5,260,3,281,5,293,12,291,17,279,10,260,8,242,10,231,15,227,20,229,28"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="332,57,370,63,369,68,331,63"/>
-<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="333,264,367,259,368,264,334,270"/>
-<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="334,292,376,301,374,306,333,297"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="224,29,222,19,228,10,241,5,260,3,280,5,293,11,290,16,279,10,260,8,242,10,231,15,227,20,229,28"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="332,57,369,63,368,68,331,63"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="333,264,366,259,367,264,334,270"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="334,292,375,301,374,306,333,297"/>
 </map>

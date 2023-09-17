@@ -1,9 +1,9 @@
 <map id="mal_packet_weaver::portable_binary_iarchive" name="mal_packet_weaver::portable_binary_iarchive">
 <area shape="rect" id="Node000001" title=" " alt="" coords="320,107,474,148"/>
 <area shape="rect" id="Node000002" href="$dd/d4d/classboost_1_1archive_1_1basic__binary__iprimitive.html" title=" " alt="" coords="5,5,228,76"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,77,329,104,328,109,241,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="243,77,329,104,328,109,242,82"/>
 <area shape="rect" id="Node000003" href="$dd/dd2/classboost_1_1archive_1_1detail_1_1common__iarchive.html" title=" " alt="" coords="29,100,204,155"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,125,319,125,319,130,219,130"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="74,180,159,206"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,177,227,165,318,143,320,148,228,170,174,183"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,177,227,165,318,143,320,148,228,170,174,182"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="mal_toolkit::CallbackSystem::RemoveCallback" name="mal_toolkit::CallbackSystem::RemoveCallback">
 <area shape="rect" id="Node000001" title="Remove a callback by its ID." alt="" coords="226,5,398,46"/>
 <area shape="rect" id="Node000002" href="$dd/d83/classmal__toolkit_1_1_callback_system.html#a8310ae5fc9ffc4084ca631ae6bd229ac" title="Remove a callback by its function object." alt="" coords="5,5,178,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,28,178,28,178,23,210,23"/>
 </map>

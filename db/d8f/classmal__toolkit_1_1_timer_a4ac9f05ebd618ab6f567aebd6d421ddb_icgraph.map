@@ -1,7 +1,7 @@
 <map id="mal_toolkit::Timer::elapsed" name="mal_toolkit::Timer::elapsed">
 <area shape="rect" id="Node000001" title="Calculates and returns the elapsed time since the timer was last reset." alt="" coords="202,49,322,90"/>
 <area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a777e68fdca73f97496bc360835a62c32" title="Fulfills handlers associated with a packet ID and packet data." alt="" coords="5,5,154,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,57,153,50,154,45,188,52"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,57,153,50,154,45,187,52"/>
 <area shape="rect" id="Node000003" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323" title="This function represents the main loop for running a task with exponential backoff and asynchronous I..." alt="" coords="7,85,152,126"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,87,153,93,152,88,187,81"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,87,153,93,152,88,186,81"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="mal_toolkit::GetFunctionAddress" name="mal_toolkit::GetFunctionAddress">
 <area shape="rect" id="Node000001" title="Get the address of a callable function." alt="" coords="226,39,380,79"/>
 <area shape="rect" id="Node000002" href="$dd/d83/classmal__toolkit_1_1_callback_system.html#a4bffec2006ea3caf16b5f1c1137cea05" title="Add a new callback function." alt="" coords="5,5,178,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,47,178,42,179,37,212,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,47,178,42,179,37,211,42"/>
 <area shape="rect" id="Node000003" href="$dd/d83/classmal__toolkit_1_1_callback_system.html#a8310ae5fc9ffc4084ca631ae6bd229ac" title="Remove a callback by its function object." alt="" coords="5,71,178,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,75,179,81,178,75,211,70"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,76,179,81,178,75,210,70"/>
 </map>

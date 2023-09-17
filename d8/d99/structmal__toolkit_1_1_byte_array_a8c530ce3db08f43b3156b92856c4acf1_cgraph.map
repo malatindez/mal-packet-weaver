@@ -1,9 +1,9 @@
 <map id="mal_toolkit::ByteArray::from_byte_arrays" name="mal_toolkit::ByteArray::from_byte_arrays">
 <area shape="rect" id="Node000001" title="Create a byte array from multiple data sources." alt="" coords="5,59,148,99"/>
 <area shape="rect" id="Node000002" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#aa3d43592b3a16ad73860e290f28b9ce9" title="Append multiple data sources to the byte array." alt="" coords="196,29,338,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,65,181,60,181,66,149,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,65,180,60,181,66,149,71"/>
 <area shape="rect" id="Node000003" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" title="Convert the ByteArray to a typed pointer." alt="" coords="386,66,545,92"/>
-<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="148,78,196,79,338,79,371,79,371,84,338,84,196,84,148,84"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="230,29,229,19,235,10,248,5,267,3,288,5,300,12,298,17,287,10,267,8,249,10,238,15,234,20,236,28"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="339,58,372,62,371,68,338,63"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="148,78,196,79,338,79,370,79,370,84,338,84,196,84,148,84"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="230,29,229,19,235,10,248,5,267,3,288,5,300,11,298,16,286,10,267,8,249,10,238,15,234,20,236,28"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="339,58,371,62,370,68,338,63"/>
 </map>

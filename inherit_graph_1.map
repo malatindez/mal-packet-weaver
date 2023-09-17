@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" href="$d1/d03/classboost_1_1archive_1_1archive__exception.html" title=" " alt="" coords="5,53,145,94"/>
 <area shape="rect" id="Node000001" href="$d2/dc8/classmal__packet__weaver_1_1portable__binary__iarchive__exception.html" title=" " alt="" coords="195,5,349,61"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="158,54,194,46,195,52,159,59"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="159,53,194,46,195,52,160,59"/>
 <area shape="rect" id="Node000002" href="$d7/d38/classmal__packet__weaver_1_1portable__binary__oarchive__exception.html" title=" " alt="" coords="193,85,351,141"/>
-<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="160,88,193,94,192,100,158,93"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="160,88,193,94,192,100,159,93"/>
 </map>

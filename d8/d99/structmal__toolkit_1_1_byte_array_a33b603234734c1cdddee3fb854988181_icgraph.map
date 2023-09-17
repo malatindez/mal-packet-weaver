@@ -1,11 +1,11 @@
 <map id="mal_toolkit::ByteArray::view" name="mal_toolkit::ByteArray::view">
 <area shape="rect" id="Node000001" title="Create a ByteView of a subsequence of the byte array." alt="" coords="422,49,564,90"/>
 <area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a95349691831542cec27090d0ab21ca88" title="Asynchronously receives and processes incoming packets from the network." alt="" coords="227,5,365,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="407,56,364,48,365,43,408,51"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="406,56,364,48,365,43,407,51"/>
 <area shape="rect" id="Node000004" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a3b221a320f0fe93e2f463a52f9eab2a0" title="Returns the earliest acquired packet. If packet queue is empty, returns nullptr." alt="" coords="218,85,374,126"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="408,87,375,93,374,88,407,82"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="407,88,375,93,374,88,406,82"/>
 <area shape="rect" id="Node000003" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a5cf271c70d7ec610cfb01d0ed8655693" title="Constructor for the Session class." alt="" coords="21,13,154,54"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,36,154,36,154,31,212,31"/>
 <area shape="rect" id="Node000005" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a961d49d84fb1426fc605c529df1296d1" title=" " alt="" coords="5,85,170,126"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="203,108,170,108,170,103,203,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="202,108,170,108,170,103,202,103"/>
 </map>

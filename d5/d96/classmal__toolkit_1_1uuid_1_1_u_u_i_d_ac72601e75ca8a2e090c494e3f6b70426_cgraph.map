@@ -1,11 +1,11 @@
 <map id="mal_toolkit::uuid::UUID::fromStr" name="mal_toolkit::uuid::UUID::fromStr">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,71,122,111"/>
 <area shape="rect" id="Node000002" href="$d4/dcc/namespacemal__toolkit_1_1uuid.html#ac574774fc475c6fdada4ba48e1ed5b95" title="Converts an UUIDv4 string representation to a 128&#45;bits unsigned int using SIMD via AVX2." alt="" coords="170,71,286,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,88,155,88,155,94,122,94"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,88,154,88,154,94,122,94"/>
 <area shape="rect" id="Node000003" href="$d6/d11/namespacemal__toolkit_1_1endianness.html#a0d4fdd76d493b47a3fb18f146f737c1f" title="Converts a 16&#45;bit value between big&#45;endian and little&#45;endian." alt="" coords="334,5,478,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,68,334,49,336,54,286,73"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,68,334,49,335,54,286,73"/>
 <area shape="rect" id="Node000004" href="$d6/d11/namespacemal__toolkit_1_1endianness.html#ae402a5cfb38c56dae866180918471551" title="Converts a 256&#45;bit value between big&#45;endian and little&#45;endian using AVX2 intrinsics." alt="" coords="334,71,478,111"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="286,88,319,88,319,94,286,94"/>
 <area shape="rect" id="Node000005" href="$d6/d11/namespacemal__toolkit_1_1endianness.html#ad60454ca97bca47f79dff8c3cf07abf3" title="Converts a 32&#45;bit value between big&#45;endian and little&#45;endian." alt="" coords="334,136,478,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="286,109,336,128,334,133,284,114"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="286,109,335,128,334,133,284,114"/>
 </map>

@@ -1,11 +1,11 @@
 <map id="mal_packet_weaver::crypto::KeyPair" name="mal_packet_weaver::crypto::KeyPair">
 <area shape="rect" id="Node000001" title="Represents a pair of cryptographic keys (public and private keys)." alt="" coords="10,363,143,403"/>
 <area shape="rect" id="Node000002" href="$da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html" title="Represents a cryptographic key as a byte array." alt="" coords="10,244,143,285"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,299,79,362,74,362,74,299"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,300,79,362,74,362,74,300"/>
 <area shape="rect" id="Node000003" href="$d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes." alt="" coords="5,169,148,195"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,210,79,244,74,244,74,210"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="23,94,130,120"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="79,135,79,169,74,169,74,135"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="57,5,96,31"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="79,46,79,94,74,94,74,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="79,47,79,94,74,94,74,47"/>
 </map>

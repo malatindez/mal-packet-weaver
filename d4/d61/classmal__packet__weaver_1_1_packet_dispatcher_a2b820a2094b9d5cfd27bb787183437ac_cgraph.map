@@ -1,7 +1,7 @@
 <map id="mal_packet_weaver::PacketDispatcher::get_shared_ptr" name="mal_packet_weaver::PacketDispatcher::get_shared_ptr">
 <area shape="rect" id="Node000001" title="Retrieves a shared pointer to the current dispatcher." alt="" coords="5,31,144,87"/>
 <area shape="rect" id="Node000002" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="192,5,355,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,45,177,39,178,44,144,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,45,176,39,177,45,144,50"/>
 <area shape="rect" id="Node000003" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="199,71,348,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,67,185,74,184,79,143,73"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,67,184,74,183,79,143,73"/>
 </map>

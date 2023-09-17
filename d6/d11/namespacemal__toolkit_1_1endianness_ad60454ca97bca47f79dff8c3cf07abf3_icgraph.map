@@ -1,13 +1,13 @@
 <map id="mal_toolkit::endianness::betole32" name="mal_toolkit::endianness::betole32">
 <area shape="rect" id="Node000001" title="Converts a 32&#45;bit value between big&#45;endian and little&#45;endian." alt="" coords="359,39,503,79"/>
 <area shape="rect" id="Node000002" href="$d4/dcc/namespacemal__toolkit_1_1uuid.html#a6fc05ef12aa7cf48b1a92d6402e27748" title="Converts a 128&#45;bits unsigned int to an UUIDv4 string representation using SIMD via AVX2." alt="" coords="195,5,311,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="344,45,311,39,312,34,345,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="343,45,311,39,312,34,344,40"/>
 <area shape="rect" id="Node000004" href="$d4/dcc/namespacemal__toolkit_1_1uuid.html#ac574774fc475c6fdada4ba48e1ed5b95" title="Converts an UUIDv4 string representation to a 128&#45;bits unsigned int using SIMD via AVX2." alt="" coords="195,71,311,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="344,77,312,83,311,78,344,72"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="344,77,312,83,311,78,343,72"/>
 <area shape="rect" id="Node000003" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a4e75c9f1f51435c35a76386a1e98b134" title=" " alt="" coords="18,5,134,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="180,28,134,28,134,23,180,23"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,28,134,28,134,23,179,23"/>
 <area shape="rect" id="Node000005" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#ac72601e75ca8a2e090c494e3f6b70426" title=" " alt="" coords="18,71,134,111"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="180,94,134,94,134,88,180,88"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="179,94,134,94,134,88,179,88"/>
 <area shape="rect" id="Node000006" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#a9b3b6b3069d4f69d9ef65e7aa2a50b0e" title=" " alt="" coords="5,136,147,177"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="183,119,134,138,132,133,181,114"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="183,120,134,138,132,133,181,115"/>
 </map>

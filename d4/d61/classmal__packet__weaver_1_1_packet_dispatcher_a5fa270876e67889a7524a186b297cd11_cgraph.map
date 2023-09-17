@@ -1,13 +1,13 @@
 <map id="mal_packet_weaver::PacketDispatcher::await_packet" name="mal_packet_weaver::PacketDispatcher::await_packet">
 <area shape="rect" id="Node000001" title="Wait until a packet satisfying the filter condition is registered in the dispatch system and return a..." alt="" coords="5,55,155,111"/>
 <area shape="rect" id="Node000002" href="$df/df5/namespacemal__toolkit.html#a1a10dbab8f9e26361eaa4af07f31713d" title="Asserts a condition with customizable behavior based on debug mode." alt="" coords="225,13,347,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,60,223,40,224,46,156,65"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,60,222,41,223,46,156,65"/>
 <area shape="rect" id="Node000004" href="$d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5" title="Awaiting an std::future with Boost.Asio integration." alt="" coords="220,63,352,103"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="155,80,204,80,204,86,155,86"/>
 <area shape="rect" id="Node000005" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a6cd127b3b0d7992ba74265243d8ed081" title="Enqueues a promise with a filter associated with a packet." alt="" coords="203,127,369,183"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="156,107,191,119,189,124,154,112"/>
 <area shape="rect" id="Node000003" href="$df/df5/namespacemal__toolkit.html#a27bf9441da264c7f90650042e9e30f40" title="Returns an empty string representing the current source location." alt="" coords="439,5,603,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,23,424,23,424,28,348,28"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,23,423,23,423,28,348,28"/>
 <area shape="rect" id="Node000006" href="$d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a8008ca251a628a0a8b205b4fae4e42e5" title="Pushes a value into the queue for asynchronous processing." alt="" coords="417,127,624,183"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="369,152,402,152,402,158,369,158"/>
 </map>

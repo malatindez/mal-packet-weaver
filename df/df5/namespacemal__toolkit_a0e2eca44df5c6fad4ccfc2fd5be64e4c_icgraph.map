@@ -1,9 +1,9 @@
 <map id="mal_toolkit::rtrimview" name="mal_toolkit::rtrimview">
 <area shape="rect" id="Node000001" title="Trims trailing whitespace from a string view." alt="" coords="346,31,485,56"/>
 <area shape="rect" id="Node000002" href="$df/df5/namespacemal__toolkit.html#a08803427441a4a54fdcc0c4b7e0b32f3" title="Trims trailing whitespace from a string." alt="" coords="173,5,289,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="331,35,288,29,289,23,332,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="330,34,288,29,289,23,331,29"/>
 <area shape="rect" id="Node000003" href="$df/df5/namespacemal__toolkit.html#a4df57a0367bc8510628db5fed43ebc9f" title="Trims leading and trailing whitespace from a string view." alt="" coords="164,55,298,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="331,57,298,61,298,56,331,52"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="331,57,298,61,298,56,330,52"/>
 <area shape="rect" id="Node000004" href="$df/df5/namespacemal__toolkit.html#a934db623f96eff1f4fa6e095305328d8" title="Trims leading and trailing whitespace from a string." alt="" coords="5,55,116,80"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="149,70,116,70,116,65,149,65"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="148,70,116,70,116,65,148,65"/>
 </map>

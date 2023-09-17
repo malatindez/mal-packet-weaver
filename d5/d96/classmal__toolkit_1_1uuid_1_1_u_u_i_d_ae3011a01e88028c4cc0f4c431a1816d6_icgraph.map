@@ -1,6 +1,6 @@
 <map id="mal_toolkit::uuid::UUID::str" name="mal_toolkit::uuid::UUID::str">
 <area shape="rect" id="Node000001" title="Converts the UUID to its string representation." alt="" coords="170,29,286,70"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="254,16,245,10,228,8,213,10,203,14,200,20,201,28,196,29,195,19,200,11,211,5,228,3,246,5,257,12"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="254,16,244,10,228,8,213,10,203,14,200,20,201,28,196,29,195,19,200,11,211,5,228,3,246,5,257,11"/>
 <area shape="rect" id="Node000002" href="$d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html#ae74c9ad95156d0339b5c55c98c3fd616" title=" " alt="" coords="5,29,122,70"/>
 <area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="154,52,122,52,122,47,154,47"/>
 </map>

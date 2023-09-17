@@ -1,15 +1,15 @@
 <map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/include/spdlog.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/include/spdlog.hpp">
 <area shape="rect" id="Node000001" title="Provides integration with the SPDLOG library for efficient logging and debugging." alt="" coords="348,5,492,61"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,117,104,142"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="349,53,115,112,106,114,104,109,114,106,347,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="349,53,115,112,107,114,105,109,114,106,347,48"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="127,109,265,150"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,64,257,105,255,100,354,59"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,64,258,105,256,100,354,59"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="289,109,407,150"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="401,63,374,99,369,96,397,60"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="401,63,374,98,370,95,397,60"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="431,109,555,150"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="443,60,471,96,467,99,439,63"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="443,60,471,95,467,99,439,63"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="579,117,682,142"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="482,59,591,108,589,113,480,64"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="482,59,591,107,589,112,480,64"/>
 <area shape="rect" id="Node000007" href="$d4/dfc/win-undef_8hpp.html" title=" " alt="" coords="706,117,806,142"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="492,51,695,106,705,109,703,114,694,112,491,56"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="492,51,695,106,704,109,702,114,694,112,491,56"/>
 </map>
