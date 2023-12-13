@@ -259,7 +259,7 @@ By following these steps, you've successfully created a custom packet named `MyP
 
 ### Declaring the Packet Type Using Preprocessors
 
-This section provides an overview of macros that assist in declaring packet types for serialization and deserialization. These macros simplify the declaration of request and response packets, ensuring consistency and reducing boilerplate code.
+This section provides an overview of macros that assist in declaring packet types for serialization and deserialization. These macros simplify the declaration of request and response packets, ensuring consistency and simplifying the code.
 
 #### `MAL_PACKET_WEAVER_DECLARE_PACKET(PacketName, SubsystemID, PacketID, TTL)`
 
