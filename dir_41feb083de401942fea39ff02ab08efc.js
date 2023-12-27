@@ -8,8 +8,6 @@ var dir_41feb083de401942fea39ff02ab08efc =
     [ "common-structures.hpp", "d4/d80/common-structures_8hpp.html", "d4/d80/common-structures_8hpp" ],
     [ "converter.hpp", "d1/d27/converter_8hpp.html", "d1/d27/converter_8hpp" ],
     [ "debug.hpp", "da/d7b/debug_8hpp.html", "da/d7b/debug_8hpp" ],
-    [ "event.hpp", "dc/d94/event_8hpp.html", "dc/d94/event_8hpp" ],
-    [ "file-watcher.hpp", "dc/dad/file-watcher_8hpp.html", "dc/dad/file-watcher_8hpp" ],
     [ "library-pch.hpp", "db/d6e/library-pch_8hpp.html", "db/d6e/library-pch_8hpp" ],
     [ "macro.hpp", "d4/dc3/macro_8hpp.html", "d4/dc3/macro_8hpp" ],
     [ "mal-toolkit.hpp", "d1/d8a/mal-toolkit_8hpp.html", null ],

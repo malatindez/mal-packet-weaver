@@ -19,7 +19,7 @@ var template_8hpp =
     [ "mal_toolkit::return_type< R(C::*)(Args...) const volatile & >", "d4/d43/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_6_01_4.html", "d4/d43/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_6_01_4" ],
     [ "mal_toolkit::return_type< R(C::*)(Args...) const volatile && >", "dc/d0d/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_6_6_01_4.html", "dc/d0d/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_6_6_01_4" ],
     [ "mal_toolkit::EnumClassConcept", "d3/d38/conceptmal__toolkit_1_1_enum_class_concept.html", null ],
-    [ "return_type_t", "d4/d6a/template_8hpp.html#a66ef45660a539a559877c869d2d7af50", null ],
+    [ "return_type_t", "d4/d6a/template_8hpp.html#a56cd7f0fdbf0f19ca7df721f75787a0d", null ],
     [ "as_integer", "d4/d6a/template_8hpp.html#a744d054f457522233a3b30314956f61d", null ],
     [ "CalculateSize", "d4/d6a/template_8hpp.html#ac6c8904a283789e9cebf68db97b21e54", null ],
     [ "CalculateSize", "d4/d6a/template_8hpp.html#a8fc9d6e7834409dd7bebc9b6dbd103fa", null ],

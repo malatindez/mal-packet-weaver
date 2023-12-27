@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['return_5ftype_5ft_0',['return_type_t',['../df/df5/namespacemal__toolkit.html#a66ef45660a539a559877c869d2d7af50',1,'mal_toolkit']]]
+  ['return_5ftype_5ft_0',['return_type_t',['../df/df5/namespacemal__toolkit.html#a56cd7f0fdbf0f19ca7df721f75787a0d',1,'mal_toolkit']]]
 ];

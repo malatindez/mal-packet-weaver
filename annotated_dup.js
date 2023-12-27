@@ -27,10 +27,6 @@ var annotated_dup =
         [ "index_of_function_arg", "dc/d37/structmal__toolkit_1_1__template__detail_1_1index__of__function__arg.html", null ],
         [ "index_of_function_arg< std::function< Ret(Args...)> >", "dd/df0/structmal__toolkit_1_1__template__detail_1_1index__of__function__arg_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4.html", "dd/df0/structmal__toolkit_1_1__template__detail_1_1index__of__function__arg_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4" ]
       ] ],
-      [ "events", "d9/ddf/namespacemal__toolkit_1_1events.html", [
-        [ "Event", "d5/dbd/classmal__toolkit_1_1events_1_1_event.html", "d5/dbd/classmal__toolkit_1_1events_1_1_event" ],
-        [ "FilesChangedEvent", "d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event.html", "d5/d6e/classmal__toolkit_1_1events_1_1_files_changed_event" ]
-      ] ],
       [ "uuid", "d4/dcc/namespacemal__toolkit_1_1uuid.html", [
         [ "UUID", "d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d.html", "d5/d96/classmal__toolkit_1_1uuid_1_1_u_u_i_d" ],
         [ "UUIDGenerator", "da/dbb/classmal__toolkit_1_1uuid_1_1_u_u_i_d_generator.html", "da/dbb/classmal__toolkit_1_1uuid_1_1_u_u_i_d_generator" ]
@@ -40,7 +36,6 @@ var annotated_dup =
       [ "CallbackSystem", "dd/d83/classmal__toolkit_1_1_callback_system.html", "dd/d83/classmal__toolkit_1_1_callback_system" ],
       [ "enableable", "d0/d09/classmal__toolkit_1_1enableable.html", "d0/d09/classmal__toolkit_1_1enableable" ],
       [ "ExponentialBackoff", "d1/da7/classmal__toolkit_1_1_exponential_backoff.html", "d1/da7/classmal__toolkit_1_1_exponential_backoff" ],
-      [ "FileWatcher", "dd/d41/classmal__toolkit_1_1_file_watcher.html", "dd/d41/classmal__toolkit_1_1_file_watcher" ],
       [ "LinearBackoff", "d0/dbc/classmal__toolkit_1_1_linear_backoff.html", "d0/dbc/classmal__toolkit_1_1_linear_backoff" ],
       [ "Measurer", "d1/d3a/structmal__toolkit_1_1_measurer.html", "d1/d3a/structmal__toolkit_1_1_measurer" ],
       [ "namable", "da/d90/classmal__toolkit_1_1namable.html", "da/d90/classmal__toolkit_1_1namable" ],

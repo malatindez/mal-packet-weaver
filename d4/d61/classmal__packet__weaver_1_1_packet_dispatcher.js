@@ -2,10 +2,10 @@ var classmal__packet__weaver_1_1_packet_dispatcher =
 [
     [ "SynchronizationWrapper", "d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html", "d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper" ],
     [ "BasePacketPtr", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db", null ],
-    [ "handler_tuple", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a3de763529906e7cc213eca4a82e8f9a4", null ],
+    [ "handler_tuple", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a698a3441a2d6d08294cf544358775bbe", null ],
     [ "promise_filter", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#acb3cc54b48e9061fc0833ed48bf23626", null ],
     [ "shared_packet_promise", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a63179c18c99517b9d62a0c607feabd89", null ],
-    [ "shared_promise", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a18a4addbeb66de3ff2b2a73871d6cb3d", null ],
+    [ "shared_promise", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#accdb7332781ea14ae2473dfb6b354e51", null ],
     [ "PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac22bb2ccd532850a73766ce512b50082", null ],
     [ "await_packet", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1e7e2c9e624018e4a1046297453e0596", null ],
     [ "await_packet", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a5fa270876e67889a7524a186b297cd11", null ],

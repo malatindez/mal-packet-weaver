@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['time_5fto_5fflush_0',['time_to_flush',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a221fa6b46566b3e4a4174391023cbad9',1,'mal_toolkit::Measurer']]],
-  ['time_5fto_5flive_1',['time_to_live',['../d2/d9d/classmal__packet__weaver_1_1_packet.html#ae3201e383545a1543105b8e43b1d31a7',1,'mal_packet_weaver::Packet']]],
-  ['timestamp_5f_2',['timestamp_',['../d2/d9d/classmal__packet__weaver_1_1_packet.html#ab93effea544af5f55d5ffef6dd09cf2b',1,'mal_packet_weaver::Packet']]],
-  ['type_3',['type',['../d2/d9d/classmal__packet__weaver_1_1_packet.html#a83d94514219f8f5f0c3c11db9804e98a',1,'mal_packet_weaver::Packet']]]
+  ['uniform_5fdist_5f_0',['uniform_dist_',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#acbe0f7c1f07fb740b1c69eff10924261',1,'mal_toolkit::ExponentialBackoff']]],
+  ['unprocessed_5fpackets_5f_1',['unprocessed_packets_',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2924ef6b5846ef8e303af1138a669db0',1,'mal_packet_weaver::PacketDispatcher']]],
+  ['unprocessed_5fpackets_5finput_5f_2',['unprocessed_packets_input_',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a0ae6f3d71cee6362616d2d0a044dc81c',1,'mal_packet_weaver::PacketDispatcher']]]
 ];

@@ -1,3 +1,20 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$d2/d15/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4.html" title=" " alt="" coords="5,5,157,46"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="233,39,352,79"/>
+<area shape="rect" id="Node000001" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html" title="The PacketDispatcher class is responsible for managing packet dispatching and handling." alt="" coords="446,5,578,46"/>
+<area shape="poly" id="edge9_Node000000_Node000001" title=" " alt="" coords="367,45,445,33,446,38,368,50"/>
+<area shape="rect" id="Node000004" href="$d8/d39/classmal__packet__weaver_1_1_session.html" title="Represents a network session for sending and receiving packets." alt="" coords="446,71,578,111"/>
+<area shape="poly" id="edge10_Node000000_Node000004" title=" " alt="" coords="368,67,446,79,445,84,367,73"/>
+<area shape="rect" id="Node000005" href="$d1/dd3/classmal__toolkit_1_1non__copyable.html" title="A class that can&#39;t be copied." alt="" coords="5,185,165,211"/>
+<area shape="rect" id="Node000006" href="$d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets." alt="" coords="226,185,359,226"/>
+<area shape="poly" id="edge11_Node000005_Node000006" title=" " alt="" coords="180,199,226,200,226,206,180,204"/>
+<area shape="rect" id="Node000002" href="$d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html" title="A class that can&#39;t be copied neither moved." alt="" coords="213,120,372,161"/>
+<area shape="poly" id="edge13_Node000005_Node000002" title=" " alt="" coords="148,178,215,159,217,164,149,183"/>
+<area shape="rect" id="Node000007" href="$dd/d2b/classmal__packet__weaver_1_1_derived_packet.html" title="A templated class representing a derived packet from the base Packet class." alt="" coords="420,201,603,242"/>
+<area shape="poly" id="edge12_Node000006_Node000007" title=" " alt="" coords="374,209,420,212,419,218,374,214"/>
+<area shape="poly" id="edge15_Node000002_Node000001" title=" " alt="" coords="339,109,371,89,394,72,419,57,447,44,449,49,421,61,397,76,373,93,342,114"/>
+<area shape="poly" id="edge16_Node000002_Node000004" title=" " alt="" coords="387,116,444,103,446,108,388,122"/>
+<area shape="rect" id="Node000003" href="$d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html" title="Represents a session with packet dispatching functionality." alt="" coords="446,136,578,177"/>
+<area shape="poly" id="edge14_Node000002_Node000003" title=" " alt="" coords="387,145,445,149,445,154,387,150"/>
+<area shape="rect" id="Node000008" href="$db/d86/classmal__toolkit_1_1non__movable.html" title="A class that can&#39;t be moved." alt="" coords="6,128,164,153"/>
+<area shape="poly" id="edge17_Node000008_Node000002" title=" " alt="" coords="180,138,212,138,212,143,180,143"/>
 </map>
