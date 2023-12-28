@@ -144,7 +144,7 @@
 <area shape="poly" id="edge74_Node000060_Node000026" title=" " alt="" coords="2085,278,1619,342,1618,337,2084,273"/>
 <area shape="rect" id="Node000061" href="$dd/db5/spdlog_8hpp.html" title="Provides integration with the SPDLOG library for efficient logging and debugging." alt="" coords="3255,338,3377,363"/>
 <area shape="poly" id="edge67_Node000060_Node000061" title=" " alt="" coords="2163,270,3239,341,3239,347,2163,276"/>
-<area shape="rect" id="Node000068" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="2045,330,2203,371"/>
+<area shape="rect" id="Node000068" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="2056,330,2191,371"/>
 <area shape="poly" id="edge75_Node000060_Node000068" title=" " alt="" coords="2120,283,2117,315,2112,314,2114,282"/>
 <area shape="rect" id="Node000062" title=" " alt="" coords="3267,426,3365,452"/>
 <area shape="poly" id="edge68_Node000061_Node000062" title=" " alt="" coords="3318,364,3318,410,3313,410,3313,364"/>

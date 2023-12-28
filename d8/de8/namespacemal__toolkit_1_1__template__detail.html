@@ -140,10 +140,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a8fc9d6e7834409dd7bebc9b6dbd103fa"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8fc9d6e7834409dd7bebc9b6dbd103fa">CalculateSize</a> ()</td></tr>
 <tr class="memdesc:a8fc9d6e7834409dd7bebc9b6dbd103fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the total size of multiple types in bytes.  <br /></td></tr>
 <tr class="separator:a8fc9d6e7834409dd7bebc9b6dbd103fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10cdd53eefcce0a1a3a994dea73e620c" id="r_a10cdd53eefcce0a1a3a994dea73e620c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a10cdd53eefcce0a1a3a994dea73e620c"><td class="memTemplItemLeft" align="right" valign="top">consteval <a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a10cdd53eefcce0a1a3a994dea73e620c">index_of_helper</a> (std::size_t index)</td></tr>
-<tr class="memdesc:a10cdd53eefcce0a1a3a994dea73e620c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the index of a type within a parameter pack.  <br /></td></tr>
-<tr class="separator:a10cdd53eefcce0a1a3a994dea73e620c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59a7c27490a07d567274139834256c1" id="r_ab59a7c27490a07d567274139834256c1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab59a7c27490a07d567274139834256c1"><td class="memTemplItemLeft" align="right" valign="top">consteval <a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab59a7c27490a07d567274139834256c1">index_of_helper</a> (std::size_t)</td></tr>
+<tr class="memdesc:ab59a7c27490a07d567274139834256c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the index of a type within a parameter pack.  <br /></td></tr>
+<tr class="separator:ab59a7c27490a07d567274139834256c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a569cffb3c4f33e3da185c53671d3bb47" id="r_a569cffb3c4f33e3da185c53671d3bb47"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:a569cffb3c4f33e3da185c53671d3bb47"><td class="memTemplItemLeft" align="right" valign="top">consteval <a class="el" href="../../dd/de2/classsize__t.html">size_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a569cffb3c4f33e3da185c53671d3bb47">index_of_helper</a> (std::size_t index)</td></tr>
 <tr class="memdesc:a569cffb3c4f33e3da185c53671d3bb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the index of a type within a parameter pack.  <br /></td></tr>
@@ -232,49 +232,8 @@ template&lt;typename A , typename B , typename... Args&gt; </div>
 
 </div>
 </div>
-<a id="a10cdd53eefcce0a1a3a994dea73e620c" name="a10cdd53eefcce0a1a3a994dea73e620c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10cdd53eefcce0a1a3a994dea73e620c">&#9670;&#160;</a></span>index_of_helper() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">consteval <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> mal_toolkit::_template_detail::index_of_helper </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates the index of a type within a parameter pack. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type to search for. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>The current index being checked. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The index of type <code>T</code> if found, otherwise <code>std::numeric_limits&lt;std::size_t&gt;::max()</code>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/de8/namespacemal__toolkit_1_1__template__detail_a10cdd53eefcce0a1a3a994dea73e620c_icgraph.svg" width="376" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
 <a id="a569cffb3c4f33e3da185c53671d3bb47" name="a569cffb3c4f33e3da185c53671d3bb47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a569cffb3c4f33e3da185c53671d3bb47">&#9670;&#160;</a></span>index_of_helper() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a569cffb3c4f33e3da185c53671d3bb47">&#9670;&#160;</a></span>index_of_helper() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,7 +270,7 @@ template&lt;typename T , typename U &gt; </div>
 </div>
 </div>
 <a id="a4c5556a331ea37c7db390c8098597c38" name="a4c5556a331ea37c7db390c8098597c38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c5556a331ea37c7db390c8098597c38">&#9670;&#160;</a></span>index_of_helper() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5556a331ea37c7db390c8098597c38">&#9670;&#160;</a></span>index_of_helper() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,13 +313,54 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ab59a7c27490a07d567274139834256c1" name="ab59a7c27490a07d567274139834256c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab59a7c27490a07d567274139834256c1">&#9670;&#160;</a></span>index_of_helper() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">consteval <a class="el" href="../../dd/de2/classsize__t.html">size_t</a> mal_toolkit::_template_detail::index_of_helper </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the index of a type within a parameter pack. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The current index being checked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index of type <code>T</code> if found, otherwise <code>std::numeric_limits&lt;std::size_t&gt;::max()</code>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/de8/namespacemal__toolkit_1_1__template__detail_ab59a7c27490a07d567274139834256c1_icgraph.svg" width="376" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></li><li class="navelem"><a class="el" href="../../d8/de8/namespacemal__toolkit_1_1__template__detail.html">_template_detail</a></li>
-    <li class="footer">Generated on Wed Dec 27 2023 18:56:13 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Dec 28 2023 10:51:38 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

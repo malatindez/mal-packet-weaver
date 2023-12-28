@@ -26,8 +26,8 @@ var template_8hpp =
     [ "constexpr_for", "d4/d6a/template_8hpp.html#a4d9fe515b4cf334c6984d4725fa21e50", null ],
     [ "for_each_true", "d4/d6a/template_8hpp.html#a2f062a1732c9739d26f1edee74b3aa25", null ],
     [ "index_of_function_arg", "d4/d6a/template_8hpp.html#a02f9d3d70f6d5089e06dcfff0e0e1cdc", null ],
-    [ "index_of_helper", "d4/d6a/template_8hpp.html#a10cdd53eefcce0a1a3a994dea73e620c", null ],
     [ "index_of_helper", "d4/d6a/template_8hpp.html#a569cffb3c4f33e3da185c53671d3bb47", null ],
     [ "index_of_helper", "d4/d6a/template_8hpp.html#a4c5556a331ea37c7db390c8098597c38", null ],
+    [ "index_of_helper", "d4/d6a/template_8hpp.html#ab59a7c27490a07d567274139834256c1", null ],
     [ "index_of_type", "d4/d6a/template_8hpp.html#a09306c1075541c84ce7f61e50b461af0", null ]
 ];

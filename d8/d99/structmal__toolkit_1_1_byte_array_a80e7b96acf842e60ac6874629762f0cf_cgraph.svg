@@ -6,6 +6,16 @@
 <!-- Title: mal_toolkit::ByteArray::append Pages: 1 -->
 <svg width="413pt" height="79pt"
  viewBox="0.00 0.00 413.00 78.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 74.5)">
 <title>mal_toolkit::ByteArray::append</title>
 <!-- Node1 -->
@@ -21,7 +31,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#aa3d43592b3a16ad73860e290f28b9ce9" target="_top" xlink:title="Append multiple data sources to the byte array.">
+<g id="a_Node000002"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#aeee7ab5aa07bb08377a74f42375b59c8" target="_top" xlink:title="Append multiple data sources to the byte array.">
 <polygon fill="white" stroke="#666666" points="249.5,-52.5 142.75,-52.5 142.75,-22 249.5,-22 249.5,-52.5"/>
 <text text-anchor="start" x="150.75" y="-39" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray</text>
 <text text-anchor="middle" x="196.12" y="-27.75" font-family="Times,serif" font-size="10.00">::append</text>
@@ -74,4 +84,19 @@
 </g>
 </g>
 </g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

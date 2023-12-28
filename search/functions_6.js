@@ -1,7 +1,7 @@
 var searchData=
 [
   ['get_5fcurrent_5fdelay_0',['get_current_delay',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8',1,'mal_toolkit::ExponentialBackoff::get_current_delay()'],['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a5caf2535485109be06720d58da094f8f',1,'mal_toolkit::LinearBackoff::get_current_delay()']]],
-  ['get_5fcurrent_5fdelay_5fdouble_1',['get_current_delay_double',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a2f176b7332a35a17989e7531abafdf1e',1,'mal_toolkit::ExponentialBackoff::get_current_delay_double()'],['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#abac0ac77880bd4d94c4c5082a405b521',1,'mal_toolkit::LinearBackoff::get_current_delay_double()']]],
+  ['get_5fcurrent_5fdelay_5fdouble_1',['get_current_delay_double',['../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a2f176b7332a35a17989e7531abafdf1e',1,'mal_toolkit::ExponentialBackoff::get_current_delay_double()'],['../d0/dbc/classmal__toolkit_1_1_linear_backoff.html#a3b59bfa38a93e755aa3add7e2af0fafe',1,'mal_toolkit::LinearBackoff::get_current_delay_double()']]],
   ['get_5fpacket_5ftime_5falive_2',['get_packet_time_alive',['../d2/d9d/classmal__packet__weaver_1_1_packet.html#aec516b07bc3b09b17878bfd42004243c',1,'mal_packet_weaver::Packet']]],
   ['get_5fprivate_5fkey_5fview_3',['get_private_key_view',['../d4/df8/structmal__packet__weaver_1_1crypto_1_1_key_pair.html#a438157f466305cfee86e0ed0e1dfc36b',1,'mal_packet_weaver::crypto::KeyPair']]],
   ['get_5fpublic_5fkey_5fview_4',['get_public_key_view',['../d4/df8/structmal__packet__weaver_1_1crypto_1_1_key_pair.html#a29036b39ce174dd42665445cedef4a17',1,'mal_packet_weaver::crypto::KeyPair']]],

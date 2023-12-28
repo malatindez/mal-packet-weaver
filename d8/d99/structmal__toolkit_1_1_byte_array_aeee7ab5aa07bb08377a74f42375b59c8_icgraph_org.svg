@@ -6,16 +6,6 @@
 <!-- Title: mal_toolkit::ByteArray::append Pages: 1 -->
 <svg width="398pt" height="196pt"
  viewBox="0.00 0.00 398.00 196.12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
-<style type="text/css"><![CDATA[
-.node, .edge {opacity: 0.7;}
-.node.selected, .edge.selected {opacity: 1;}
-.edge:hover path { stroke: red; }
-.edge:hover polygon { stroke: red; fill: red; }
-]]></style>
-<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
-<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 192.12)">
 <title>mal_toolkit::ByteArray::append</title>
 <!-- Node1 -->
@@ -40,7 +30,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#a5ebdf4bd2aaee348803dcb9575c77114" target="_top" xlink:title="Append two data sources to the byte array.">
+<g id="a_Node000002"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#a80e7b96acf842e60ac6874629762f0cf" target="_top" xlink:title="Append two data sources to the byte array.">
 <polygon fill="white" stroke="#666666" points="244.62,-188.12 137.88,-188.12 137.88,-157.62 244.62,-157.62 244.62,-188.12"/>
 <text text-anchor="start" x="145.88" y="-174.62" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray</text>
 <text text-anchor="middle" x="191.25" y="-163.38" font-family="Times,serif" font-size="10.00">::append</text>
@@ -134,19 +124,4 @@
 </g>
 </g>
 </g>
-</svg>
-</svg>
-
-<style type='text/css'>
-<![CDATA[
-[data-mouse-over-selected='false'] { opacity: 0.7; }
-[data-mouse-over-selected='true']  { opacity: 1.0; }
-]]>
-</style>
-<script type="application/ecmascript"><![CDATA[
-document.addEventListener('DOMContentLoaded', (event) => {
-  highlightEdges();
-  highlightAdjacentNodes();
-});
-]]></script>
 </svg>

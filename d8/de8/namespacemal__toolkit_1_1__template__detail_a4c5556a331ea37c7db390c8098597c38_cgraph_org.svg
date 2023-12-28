@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d8/de8/namespacemal__toolkit_1_1__template__detail.html#a10cdd53eefcce0a1a3a994dea73e620c" target="_top" xlink:title="Calculates the index of a type within a parameter pack.">
+<g id="a_Node000002"><a xlink:href="../../d8/de8/namespacemal__toolkit_1_1__template__detail.html#ab59a7c27490a07d567274139834256c1" target="_top" xlink:title="Calculates the index of a type within a parameter pack.">
 <polygon fill="white" stroke="#666666" points="264.5,-30.5 150.25,-30.5 150.25,0 264.5,0 264.5,-30.5"/>
 <text text-anchor="start" x="158.25" y="-17" font-family="Times,serif" font-size="10.00">mal_toolkit::_template</text>
 <text text-anchor="middle" x="207.38" y="-5.75" font-family="Times,serif" font-size="10.00">_detail::index_of_helper</text>

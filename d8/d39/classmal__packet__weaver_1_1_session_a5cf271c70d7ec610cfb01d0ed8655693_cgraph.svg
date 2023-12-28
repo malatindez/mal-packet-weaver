@@ -348,7 +348,7 @@ var sectionId = 'dynsection-2';
 <!-- Node13 -->
 <g id="Node000013" class="node">
 <title>Node13</title>
-<g id="a_Node000013"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#aa3d43592b3a16ad73860e290f28b9ce9" target="_top" xlink:title="Append multiple data sources to the byte array.">
+<g id="a_Node000013"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#aeee7ab5aa07bb08377a74f42375b59c8" target="_top" xlink:title="Append multiple data sources to the byte array.">
 <polygon fill="white" stroke="#666666" points="387.75,-57.39 281,-57.39 281,-26.89 387.75,-26.89 387.75,-57.39"/>
 <text text-anchor="start" x="289" y="-43.89" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray</text>
 <text text-anchor="middle" x="334.38" y="-32.64" font-family="Times,serif" font-size="10.00">::append</text>

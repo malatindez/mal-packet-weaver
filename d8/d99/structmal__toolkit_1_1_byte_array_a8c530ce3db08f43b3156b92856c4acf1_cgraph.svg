@@ -31,7 +31,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#aa3d43592b3a16ad73860e290f28b9ce9" target="_top" xlink:title="Append multiple data sources to the byte array.">
+<g id="a_Node000002"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#aeee7ab5aa07bb08377a74f42375b59c8" target="_top" xlink:title="Append multiple data sources to the byte array.">
 <polygon fill="white" stroke="#666666" points="249.5,-52.5 142.75,-52.5 142.75,-22 249.5,-22 249.5,-52.5"/>
 <text text-anchor="start" x="150.75" y="-39" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray</text>
 <text text-anchor="middle" x="196.12" y="-27.75" font-family="Times,serif" font-size="10.00">::append</text>

@@ -1,6 +1,6 @@
 <map id="mal_packet_weaver::Session::send_all" name="mal_packet_weaver::Session::send_all">
 <area shape="rect" id="Node000001" title="Asynchronously sends all packets in the queue through the network." alt="" coords="5,201,138,242"/>
-<area shape="rect" id="Node000002" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#aa3d43592b3a16ad73860e290f28b9ce9" title="Append multiple data sources to the byte array." alt="" coords="189,29,331,70"/>
+<area shape="rect" id="Node000002" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#aeee7ab5aa07bb08377a74f42375b59c8" title="Append multiple data sources to the byte array." alt="" coords="189,29,331,70"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,199,126,145,153,114,184,86,198,76,201,81,187,90,157,118,130,148,89,203"/>
 <area shape="rect" id="Node000003" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" title="Convert the ByteArray to a typed pointer." alt="" coords="384,66,543,92"/>
 <area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="91,199,132,163,184,130,230,112,277,99,368,83,369,89,278,104,232,117,187,135,135,167,95,203"/>

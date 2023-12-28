@@ -67,10 +67,10 @@
 <area shape="poly" id="edge28_Node000028_Node000029" title=" " alt="" coords="3155,539,3174,572,3193,617,3199,642,3201,667,3196,690,3184,712,3166,727,3138,739,3067,758,2985,770,2910,777,2909,771,2985,764,3066,753,3137,734,3163,722,3180,709,3191,689,3195,666,3194,643,3188,619,3170,574,3150,542"/>
 <area shape="rect" id="Node000061" href="$d1/d27/converter_8hpp.html" title="Provides functions for converting between different data types." alt="" coords="2649,685,2744,710"/>
 <area shape="poly" id="edge63_Node000028_Node000061" title=" " alt="" coords="3109,544,2952,599,2741,681,2739,676,2950,593,3107,539"/>
-<area shape="rect" id="Node000062" href="$dd/dc6/backoffs_8hpp.html" title=" " alt="" coords="3500,766,3589,792"/>
-<area shape="poly" id="edge65_Node000028_Node000062" title=" " alt="" coords="3157,539,3204,594,3229,629,3246,657,3265,683,3297,708,3343,732,3392,750,3441,762,3485,769,3484,774,3440,767,3391,755,3340,737,3294,713,3261,686,3241,660,3224,632,3200,598,3153,543"/>
-<area shape="rect" id="Node000063" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="3654,685,3731,710"/>
-<area shape="poly" id="edge69_Node000028_Node000063" title=" " alt="" coords="3204,539,3245,545,3495,557,3649,570,3704,580,3723,586,3735,594,3743,614,3740,635,3730,656,3716,675,3712,672,3725,654,3735,634,3738,615,3730,598,3720,591,3703,585,3648,575,3495,562,3244,551,3203,544"/>
+<area shape="rect" id="Node000062" href="$dd/dc6/backoffs_8hpp.html" title=" " alt="" coords="3523,766,3612,792"/>
+<area shape="poly" id="edge65_Node000028_Node000062" title=" " alt="" coords="3157,539,3204,594,3229,629,3246,657,3265,683,3297,708,3348,734,3404,752,3459,764,3507,771,3506,776,3458,769,3403,758,3346,739,3294,713,3261,687,3241,660,3224,632,3200,598,3153,543"/>
+<area shape="rect" id="Node000063" href="$da/d7b/debug_8hpp.html" title="Contains debugging&#45;related macros and utilities for assisting with debugging tasks." alt="" coords="3665,685,3742,710"/>
+<area shape="poly" id="edge69_Node000028_Node000063" title=" " alt="" coords="3204,539,3245,545,3495,557,3649,570,3704,580,3723,586,3735,594,3744,613,3742,634,3735,655,3724,673,3720,670,3730,652,3737,633,3738,614,3730,598,3720,591,3703,585,3648,575,3495,562,3244,551,3203,544"/>
 <area shape="rect" id="Node000072" href="$d0/db4/measurer_8hpp.html" title="Implements performance measurement and profiling utilities." alt="" coords="3308,604,3402,629"/>
 <area shape="poly" id="edge80_Node000028_Node000072" title=" " alt="" coords="3175,539,3312,595,3310,600,3173,544"/>
 <area shape="rect" id="Node000073" href="$df/d05/timer_8hpp.html" title="Implements timer utilities for measuring elapsed time and intervals." alt="" coords="3307,685,3382,710"/>
@@ -153,14 +153,14 @@
 <area shape="rect" id="Node000060" title=" " alt="" coords="2996,855,3050,880"/>
 <area shape="poly" id="edge62_Node000029_Node000060" title=" " alt="" coords="2869,790,2986,845,2986,845,2984,850,2983,849,2867,794"/>
 <area shape="poly" id="edge64_Node000061_Node000029" title=" " alt="" coords="2720,708,2807,756,2805,760,2717,713"/>
-<area shape="poly" id="edge66_Node000062_Node000005" title=" " alt="" coords="3577,789,3602,796,3682,810,3750,816,3867,818,3984,821,4052,829,4132,844,4139,846,4138,852,4131,850,4052,834,3984,826,3867,823,3750,822,3681,815,3601,802,3576,795"/>
-<area shape="poly" id="edge67_Node000062_Node000033" title=" " alt="" coords="3578,790,3602,796,3657,807,3704,813,3784,817,3865,823,3911,831,3965,844,3969,846,3968,851,3964,850,3910,836,3864,828,3784,822,3703,818,3656,812,3601,802,3577,795"/>
-<area shape="poly" id="edge68_Node000062_Node000050" title=" " alt="" coords="3578,789,3602,796,3669,808,3726,814,3825,817,3923,821,3980,829,4047,844,4052,846,4051,851,4045,850,3979,834,3923,826,3825,822,3726,820,3668,814,3601,802,3576,795"/>
-<area shape="poly" id="edge77_Node000063_Node000029" title=" " alt="" coords="3653,705,2910,774,2910,768,3653,700"/>
+<area shape="poly" id="edge66_Node000062_Node000005" title=" " alt="" coords="3600,790,3624,796,3700,810,3765,816,3878,818,3990,821,4056,829,4132,844,4139,846,4138,852,4131,850,4055,834,3990,826,3878,824,3765,822,3699,815,3623,802,3598,795"/>
+<area shape="poly" id="edge67_Node000062_Node000033" title=" " alt="" coords="3600,790,3624,796,3719,813,3795,817,3871,823,3914,831,3965,844,3969,846,3968,851,3964,850,3913,836,3870,829,3795,822,3718,818,3623,802,3599,795"/>
+<area shape="poly" id="edge68_Node000062_Node000050" title=" " alt="" coords="3600,789,3624,796,3687,808,3742,814,3835,817,3929,822,3983,830,4047,844,4052,846,4051,851,4045,850,3982,835,3929,827,3835,823,3741,820,3686,814,3623,802,3598,795"/>
+<area shape="poly" id="edge77_Node000063_Node000029" title=" " alt="" coords="3664,705,2910,774,2910,768,3664,700"/>
 <area shape="rect" id="Node000064" href="$dd/db5/spdlog_8hpp.html" title="Provides integration with the SPDLOG library for efficient logging and debugging." alt="" coords="4479,766,4602,792"/>
-<area shape="poly" id="edge70_Node000063_Node000064" title=" " alt="" coords="3732,700,4464,768,4464,773,3731,705"/>
-<area shape="rect" id="Node000071" href="$da/d43/debug__with__source__location_8hpp.html" title="This file provides utility functions for debugging and assertion handling." alt="" coords="3613,758,3772,799"/>
-<area shape="poly" id="edge78_Node000063_Node000071" title=" " alt="" coords="3688,711,3686,743,3681,743,3683,711"/>
+<area shape="poly" id="edge70_Node000063_Node000064" title=" " alt="" coords="3743,700,4464,767,4463,773,3742,705"/>
+<area shape="rect" id="Node000071" href="$d3/d4b/debug__without__source__location_8hpp.html" title="Provides utility functions for debugging and assertion handling without source location information." alt="" coords="3636,758,3771,799"/>
+<area shape="poly" id="edge78_Node000063_Node000071" title=" " alt="" coords="3699,711,3697,743,3692,743,3694,711"/>
 <area shape="rect" id="Node000065" title=" " alt="" coords="4491,855,4590,880"/>
 <area shape="poly" id="edge71_Node000064_Node000065" title=" " alt="" coords="4543,792,4543,839,4538,839,4538,792"/>
 <area shape="rect" id="Node000066" title=" " alt="" coords="4613,847,4751,888"/>
@@ -173,8 +173,8 @@
 <area shape="poly" id="edge75_Node000064_Node000069" title=" " alt="" coords="4506,795,4341,852,4340,846,4504,790"/>
 <area shape="rect" id="Node000070" href="$d4/dfc/win-undef_8hpp.html" title=" " alt="" coords="4366,855,4467,880"/>
 <area shape="poly" id="edge76_Node000064_Node000070" title=" " alt="" coords="4525,794,4448,848,4445,843,4522,790"/>
-<area shape="poly" id="edge79_Node000071_Node000063" title=" " alt="" coords="3698,758,3698,726,3704,726,3703,758"/>
-<area shape="poly" id="edge81_Node000072_Node000063" title=" " alt="" coords="3391,627,3415,634,3535,663,3639,684,3638,689,3533,668,3413,639,3390,632"/>
+<area shape="poly" id="edge79_Node000071_Node000063" title=" " alt="" coords="3708,758,3709,726,3714,726,3714,758"/>
+<area shape="poly" id="edge81_Node000072_Node000063" title=" " alt="" coords="3391,627,3415,634,3540,663,3649,684,3648,689,3539,668,3413,639,3390,632"/>
 <area shape="poly" id="edge82_Node000072_Node000073" title=" " alt="" coords="3356,630,3351,670,3346,669,3351,629"/>
 <area shape="poly" id="edge87_Node000076_Node000029" title=" " alt="" coords="3077,713,2900,764,2898,759,3076,708"/>
 <area shape="poly" id="edge90_Node000078_Node000029" title=" " alt="" coords="2845,711,2845,750,2839,750,2839,711"/>
