@@ -7,14 +7,12 @@
 #ifdef MAL_PACKET_WEAVER_HAS_OPENSSL
 #include <openssl/aes.h>
 #include <openssl/bio.h>
-#include <openssl/core_names.h>
 #include <openssl/dh.h>
 #include <openssl/ec.h>
 #include <openssl/ecdh.h>
 #include <openssl/ecdsa.h>
 #include <openssl/evp.h>
 #include <openssl/kdf.h>
-#include <openssl/params.h>
 #include <openssl/pem.h>
 #include <openssl/sha.h>
 #else
