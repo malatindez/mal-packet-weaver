@@ -24,6 +24,7 @@ var template_8hpp =
     [ "CalculateSize", "d4/d6a/template_8hpp.html#ac6c8904a283789e9cebf68db97b21e54", null ],
     [ "CalculateSize", "d4/d6a/template_8hpp.html#a8fc9d6e7834409dd7bebc9b6dbd103fa", null ],
     [ "constexpr_for", "d4/d6a/template_8hpp.html#a4d9fe515b4cf334c6984d4725fa21e50", null ],
+    [ "constexpr_for_break", "d4/d6a/template_8hpp.html#a617c913599e535df57a4c915d49316bd", null ],
     [ "for_each_true", "d4/d6a/template_8hpp.html#a2f062a1732c9739d26f1edee74b3aa25", null ],
     [ "index_of_function_arg", "d4/d6a/template_8hpp.html#a02f9d3d70f6d5089e06dcfff0e0e1cdc", null ],
     [ "index_of_helper", "d4/d6a/template_8hpp.html#a569cffb3c4f33e3da185c53671d3bb47", null ],

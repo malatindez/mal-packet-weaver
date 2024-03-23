@@ -81,6 +81,7 @@ var namespacemal__toolkit =
     [ "bytes_to_uint32", "df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df", null ],
     [ "bytes_to_uint64", "df/df5/namespacemal__toolkit.html#ad015fb31669060c7890534f7db7541a6", null ],
     [ "constexpr_for", "df/df5/namespacemal__toolkit.html#a4d9fe515b4cf334c6984d4725fa21e50", null ],
+    [ "constexpr_for_break", "df/df5/namespacemal__toolkit.html#a617c913599e535df57a4c915d49316bd", null ],
     [ "CurrentSourceLocation", "df/df5/namespacemal__toolkit.html#a27bf9441da264c7f90650042e9e30f40", null ],
     [ "CurrentSourceLocation", "df/df5/namespacemal__toolkit.html#a2f8178fa182139d89e522d558e12a6c3", null ],
     [ "for_each_true", "df/df5/namespacemal__toolkit.html#a2f062a1732c9739d26f1edee74b3aa25", null ],

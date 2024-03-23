@@ -247,7 +247,7 @@ var NAVTREEINDEX0 =
 "d2/d7a/struct_hash.html":[3,0,4],
 "d2/d7d/packet-dispatcher_8inl.html":[4,0,0,0,7],
 "d2/d7d/packet-dispatcher_8inl_source.html":[4,0,0,0,7],
-"d2/d9d/classmal__packet__weaver_1_1_packet.html":[1,0,3,3],
 "d2/d9d/classmal__packet__weaver_1_1_packet.html":[3,0,0,3],
+"d2/d9d/classmal__packet__weaver_1_1_packet.html":[1,0,3,3],
 "d2/d9d/classmal__packet__weaver_1_1_packet.html#a09767662dde9e0e2be5c3d7c6541fb62":[3,0,0,3,10]
 };

@@ -376,6 +376,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d9fe515b4cf334c6984d4725fa21e50"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4d9fe515b4cf334c6984d4725fa21e50">constexpr_for</a> (F &amp;&amp;f)</td></tr>
 <tr class="memdesc:a4d9fe515b4cf334c6984d4725fa21e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constexpr loop for compile-time iteration.  <br /></td></tr>
 <tr class="separator:a4d9fe515b4cf334c6984d4725fa21e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617c913599e535df57a4c915d49316bd" id="r_a617c913599e535df57a4c915d49316bd"><td class="memTemplParams" colspan="2">template&lt;auto begin, auto end, auto inc, class F &gt; </td></tr>
+<tr class="memitem:a617c913599e535df57a4c915d49316bd"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a617c913599e535df57a4c915d49316bd">constexpr_for_break</a> (F &amp;&amp;f)</td></tr>
+<tr class="separator:a617c913599e535df57a4c915d49316bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f062a1732c9739d26f1edee74b3aa25" id="r_a2f062a1732c9739d26f1edee74b3aa25"><td class="memTemplParams" colspan="2">template&lt;class iterator , class F &gt; </td></tr>
 <tr class="memitem:a2f062a1732c9739d26f1edee74b3aa25"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="../../d9/db9/classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2f062a1732c9739d26f1edee74b3aa25">for_each_true</a> (iterator begin, iterator const &amp;end, F &amp;&amp;f)</td></tr>
 <tr class="memdesc:a2f062a1732c9739d26f1edee74b3aa25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a function to each element in a range and returns true if all return true.  <br /></td></tr>
@@ -557,7 +560,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00338">338</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00351">351</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
 
 </div>
 </div>
@@ -718,7 +721,7 @@ template&lt;EnumClassConcept Enumeration&gt; </div>
 
 <p>Converts an enumeration class value to its underlying integer value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00242">242</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00255">255</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
 
 </div>
 </div>
@@ -1220,6 +1223,35 @@ template&lt;auto begin, auto end, auto inc, class F &gt; </div>
 
 </div>
 </div>
+<a id="a617c913599e535df57a4c915d49316bd" name="a617c913599e535df57a4c915d49316bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a617c913599e535df57a4c915d49316bd">&#9670;&#160;</a></span>constexpr_for_break()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;auto begin, auto end, auto inc, class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void mal_toolkit::constexpr_for_break </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00215">215</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a27bf9441da264c7f90650042e9e30f40" name="a27bf9441da264c7f90650042e9e30f40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27bf9441da264c7f90650042e9e30f40">&#9670;&#160;</a></span>CurrentSourceLocation() <span class="overload">[1/2]</span></h2>
 
@@ -1328,7 +1360,7 @@ template&lt;class iterator , class F &gt; </div>
 
 <p>Applies a function to each element in a range and returns true if all return true. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00222">222</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d6a/template_8hpp_source.html#l00235">235</a> of file <a class="el" href="../../d4/d6a/template_8hpp_source.html">template.hpp</a>.</p>
 
 </div>
 </div>
@@ -2385,7 +2417,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></li>
-    <li class="footer">Generated on Sun Mar 17 2024 00:30:23 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Sat Mar 23 2024 23:53:06 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>
