@@ -21,7 +21,7 @@ namespace mal_packet_weaver
               dispatcher_{ std::make_shared<PacketDispatcher>(io_context) }
         {
             session_->set_packet_receiver([&dispatcher_ = *dispatcher_](std::unique_ptr<Packet> &&packet)
-                                              __lambda_force_inline { dispatcher_.enqueue_packet(std::move(packet)); });
+                                              __mal_toolkit_lambda_force_inline  { dispatcher_.enqueue_packet(std::move(packet)); });
         }
 
         /**

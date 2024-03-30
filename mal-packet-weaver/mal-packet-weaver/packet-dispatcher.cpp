@@ -55,7 +55,7 @@ namespace mal_packet_weaver
                                            mal_toolkit::SortedInsert<handler_tuple>(
                                                handler_list, std::move(handler),
                                                [](handler_tuple const &left,
-                                                  handler_tuple const &right) -> bool __lambda_force_inline
+                                                  handler_tuple const &right) -> bool __mal_toolkit_lambda_force_inline 
                                                {
                                                    if (bool(std::get<1>(left)))
                                                    {
@@ -79,7 +79,7 @@ namespace mal_packet_weaver
                                              mal_toolkit::SortedInsert<handler_tuple>(
                                                  handler_list, std::move(handler),
                                                  [](handler_tuple const &left,
-                                                    handler_tuple const &right) -> bool __lambda_force_inline
+                                                    handler_tuple const &right) -> bool __mal_toolkit_lambda_force_inline 
                                                  {
                                                      if (bool(std::get<1>(left)))
                                                      {
@@ -163,7 +163,7 @@ namespace mal_packet_weaver
                             // Remove packets that fulfill handlers and update min_handler_timestamp
                             std::erase_if(
                                 packet_vector, [this, &packet_id, &min_handler_timestamp, &timer](BasePacketPtr &packet)
-                                                   __lambda_force_inline
+                                                   __mal_toolkit_lambda_force_inline 
                                 { return fulfill_handlers(packet_id, packet, min_handler_timestamp, timer); });
                         }
                     }
@@ -188,7 +188,7 @@ namespace mal_packet_weaver
                     // Process packets: fulfill promises, fulfill handlers, and check for expiration
                     std::erase_if(packet_vector,
                                   [this, &packet_id, &min_handler_timestamp, &timer](BasePacketPtr &packet)
-                                      __lambda_force_inline
+                                      __mal_toolkit_lambda_force_inline 
                                   {
                                       return fulfill_promises(packet_id, packet) ||
                                              fulfill_handlers(packet_id, packet, min_handler_timestamp, timer) ||
@@ -198,7 +198,7 @@ namespace mal_packet_weaver
 
                 // Remove empty entries from the unprocessed_packets_ map
                 std::erase_if(unprocessed_packets_,
-                              [](auto const &pair) __lambda_force_inline { return pair.second.empty(); });
+                              [](auto const &pair) __mal_toolkit_lambda_force_inline  { return pair.second.empty(); });
 
                 // Decrease the delay for exponential backoff
                 backoff.decrease_delay();
