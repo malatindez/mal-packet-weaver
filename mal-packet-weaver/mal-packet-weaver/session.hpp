@@ -137,14 +137,6 @@ namespace mal_packet_weaver
         boost::asio::awaitable<std::shared_ptr<Session>> get_shared_ptr(boost::asio::io_context &io);
 
         /**
-         * @brief Initiates an asynchronous read operation from the socket to receive data.
-         *
-         * @details This function asynchronously reads data from the socket into the internal
-         * buffer.
-         */
-        void receive_all();
-
-        /**
          * @brief Asynchronously sends all packets in the queue through the network.
          *
          * @param io The boost::asio::io_context used for asynchronous operations.
@@ -168,7 +160,6 @@ namespace mal_packet_weaver
          * @param io The boost::asio::io_context used for asynchronous operations.
          */
         boost::asio::awaitable<void> async_packet_sender(boost::asio::io_context &io);
-        inline void read_bytes_to(ByteArray &byte_array, const size_t amount);
 
         /**
          * @brief Lock-free queue to store received packets that are waiting to be processed.
@@ -197,12 +188,7 @@ namespace mal_packet_weaver
          * @brief Indicates whether the session is alive and operational.
          */
         bool alive_ = true;
-
-        /**
-         * @brief Buffer used for reading data from the network socket.
-         */
-        boost::asio::streambuf buffer_;
-
+        
         /**
          * @brief The TCP socket for network communication.
          */

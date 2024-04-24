@@ -12,6 +12,7 @@ namespace mal_packet_weaver
             spdlog::warn("Session is closed, cannot send packet");
             return false;
         }
+        spdlog::trace("Encrypting packet {}", packet_arg.packet_name());
         const auto &packet = static_cast<const Packet &>(packet_arg);
         ByteArray buffer = ByteArray{ uint32_to_bytes(packet.type) };
         packet.serialize_to_bytearray(buffer);
@@ -22,16 +23,16 @@ namespace mal_packet_weaver
         // byte to check if connection is secured or not.
         buffer.insert(buffer.begin(), encryption_ ? std::byte{ 1 } : std::byte{ 0 });
         ByteArray *value = new ByteArray{ std::move(buffer) };
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000), 2, 1, 0.1);
+        spdlog::trace("Encrypted packet {}", packet_arg.packet_name());
         while (alive_)
         {
             if (packets_to_send_.push(value))
             {
+                spdlog::trace("Pushing packet {}", packet_arg.packet_name());
                 value = nullptr;
                 break;
             }
-            std::this_thread::sleep_for(backoff.get_current_delay());
-            backoff.increase_delay();
+            std::this_thread::yield();
         }
         if (!alive_ || value != nullptr)
         {
@@ -39,13 +40,6 @@ namespace mal_packet_weaver
             return false;
         }
         return true;
-    }
-
-    inline void Session::read_bytes_to(ByteArray &byte_array, const size_t amount)
-    {
-        const size_t current_size = byte_array.size();
-        byte_array.resize(current_size + amount);
-        buffer_.sgetn(byte_array.as<char>() + current_size * sizeof(char), amount);
     }
 
 }  // namespace mal_packet_weaver

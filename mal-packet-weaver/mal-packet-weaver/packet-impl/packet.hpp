@@ -1,7 +1,9 @@
 #pragma once
 #include "../common.hpp"
-#include "portable-binary-iarchive.hpp"
-#include "portable-binary-oarchive.hpp"
+#include <cereal/archives/portable_binary.hpp>
+#include <cereal/types/map.hpp>
+#include <cereal/types/vector.hpp>
+#include <cereal/types/string.hpp>
 namespace mal_packet_weaver
 {
     /// Forward declaration of the Packet class.
@@ -60,6 +62,8 @@ namespace mal_packet_weaver
         /// Virtual destructor for Packet class.
         virtual ~Packet() = default;
 
+        virtual const char* packet_name() const = 0;
+
         /// Serialize the packet into a ByteArray.
         virtual void serialize_to_bytearray(ByteArray &buffer) const = 0;
 
@@ -77,7 +81,7 @@ namespace mal_packet_weaver
         const float timestamp_;     ///< Timestamp when the packet was received.
 
     private:
-        friend class boost::serialization::access;
+        friend class cereal::access;
         // Base serialize method for classes.
         // This may be used for empty packets, so there's minimum boilerplate in packets.
         // This will just return an empty payload.
@@ -132,8 +136,8 @@ namespace mal_packet_weaver
         void serialize_to_bytearray(ByteArray &buffer) const override
         {
             /// @todo: add an ability to choose the archive type.
-            std::ostringstream oss;
-            portable_binary_oarchive oa(oss);
+            std::ostringstream oss(std::ios::out | std::ios::binary);
+            cereal::PortableBinaryOutputArchive oa(oss);
             oa << static_cast<const PacketType &>(*this);
             std::string const &s = oss.str();
             buffer.append(s);
@@ -153,8 +157,8 @@ namespace mal_packet_weaver
             /// @todo: add an ability to choose the archive type.
             const auto char_view = buffer.as<char>();
             const std::string s(char_view, buffer.size());
-            std::istringstream iss(s);
-            portable_binary_iarchive ia(iss);
+            std::istringstream iss(s, std::ios::in | std::ios::binary);
+            cereal::PortableBinaryInputArchive ia(iss);
             std::unique_ptr<PacketType> derived_packet = std::make_unique<PacketType>();
             ia >> *derived_packet;
             return derived_packet;

@@ -377,6 +377,8 @@ namespace mal_packet_weaver
 
         boost::asio::io_context &io_context_; /**< Reference to the associated Boost.Asio io_context. */
 
+        SignalHandler signal_handler_;        /**< Signal handler for the dispatcher. Allows to wait until the actual data has been passed. */
+
         SynchronizationWrapper<BasePacketPtr>
             unprocessed_packets_input_; /**< Queue for storing unprocessed input packets. */
         SynchronizationWrapper<std::pair<UniquePacketID, shared_packet_promise>>

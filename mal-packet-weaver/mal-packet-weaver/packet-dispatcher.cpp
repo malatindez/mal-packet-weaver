@@ -7,7 +7,7 @@
 namespace mal_packet_weaver
 {
     PacketDispatcher::PacketDispatcher(boost::asio::io_context &io_context)
-        : io_context_{ io_context },
+        : io_context_{ io_context }, signal_handler_{ io_context },
           unprocessed_packets_input_{ io_context,
                                       [this](std::vector<BasePacketPtr> &packets) -> void
                                       {
@@ -50,7 +50,7 @@ namespace mal_packet_weaver
                                    {
                                        for (auto &[packet_id, handler] : handlers)
                                        {
-                                           auto &handler_list = default_handlers_[packet_id];
+                                           auto &handler_list = default_handlers_[packxet_id];
                                            // Insert the handler such that filtered ones are first.
                                            mal_toolkit::SortedInsert<handler_tuple>(
                                                handler_list, std::move(handler),
@@ -103,6 +103,7 @@ namespace mal_packet_weaver
         spdlog::trace("Posting task to register subsystem handler for {} subsystem", subsystem_id);
         handler_tuple tuple{ delay, std::move(filter), std::move(handler) };
         subsystem_handlers_input_.push(std::pair{ subsystem_id, std::move(tuple) });
+        signal_handler_.notify();
     }
 
     boost::asio::awaitable<std::shared_ptr<PacketDispatcher>> PacketDispatcher::get_shared_ptr()
@@ -133,7 +134,6 @@ namespace mal_packet_weaver
     }
     boost::asio::awaitable<void> PacketDispatcher::Run()
     {
-        ExponentialBackoff backoff{ std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1 };
         SteadyTimer timer;
         float min_handler_timestamp = std::numeric_limits<float>::max();
 
@@ -167,12 +167,7 @@ namespace mal_packet_weaver
                                 { return fulfill_handlers(packet_id, packet, min_handler_timestamp, timer); });
                         }
                     }
-
-                    // Introduce delay and increase it using exponential backoff strategy
-                    boost::asio::steady_timer async_timer(co_await boost::asio::this_coro::executor,
-                                                          backoff.get_current_delay());
-                    co_await async_timer.async_wait(boost::asio::use_awaitable);
-                    backoff.increase_delay();
+                    co_await signal_handler_.wait_noexcept(std::chrono::microseconds(static_cast<size_t>(min_handler_timestamp * 1.0e6)));
                     continue;
                 }
 
@@ -199,9 +194,6 @@ namespace mal_packet_weaver
                 // Remove empty entries from the unprocessed_packets_ map
                 std::erase_if(unprocessed_packets_,
                               [](auto const &pair) __mal_toolkit_lambda_force_inline  { return pair.second.empty(); });
-
-                // Decrease the delay for exponential backoff
-                backoff.decrease_delay();
             }
         }
         catch (std::exception &e)

@@ -1,4 +1,5 @@
 #include "session.hpp"
+#include <boost/algorithm/hex.hpp>
 namespace mal_packet_weaver
 {
     Session::Session(boost::asio::io_context &io, boost::asio::ip::tcp::socket &&socket)
@@ -7,17 +8,6 @@ namespace mal_packet_weaver
           packets_to_send_{ 8192 }    // Initialize packets_to_send_ with a buffer size of 8192
     {
         spdlog::debug("Session: Creating a new session");
-
-        // Start receiving data from the socket
-        co_spawn(
-            socket.get_executor(),
-            [this, &io]() -> boost::asio::awaitable<void>
-            {
-                // wait until shared_ptr is initialized.
-                co_await get_shared_ptr(io);
-                receive_all();
-            },
-            boost::asio::detached);
 
         // Check if the socket is open and mark the session as alive if so
         alive_ = socket_.is_open();
@@ -30,10 +20,8 @@ namespace mal_packet_weaver
             spdlog::warn("Something went wrong. Socket is closed.");
             throw std::invalid_argument("Socket is closed");
         }
-
-        // Start asynchronous tasks for packet forging, sending, and sending packets concurrently
-        co_spawn(socket_.get_executor(), std::bind(&Session::async_packet_forger, this, std::ref(io)),
-                 boost::asio::detached);
+        // Start asynchronous tasks for receiving data, packet forging, and sending packets concurrently
+        co_spawn(socket_.get_executor(), std::bind(&Session::async_packet_forger, this, std::ref(io)), boost::asio::detached);
         co_spawn(socket_.get_executor(), std::bind(&Session::send_all, this, std::ref(io)), boost::asio::detached);
         for (size_t i = 0; i < 1; i++)
         {
@@ -91,7 +79,6 @@ namespace mal_packet_weaver
     {
         spdlog::trace("Async packet popping initiated.");
 
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 0.1);
         while (this->alive_)
         {
             std::unique_ptr<Packet> packet = pop_packet_now();
@@ -101,10 +88,7 @@ namespace mal_packet_weaver
                 spdlog::trace("Successfully popped a packet asynchronously.");
                 co_return packet;
             }
-
-            boost::asio::steady_timer timer(io, backoff.get_current_delay());
-            co_await timer.async_wait(boost::asio::use_awaitable);
-            backoff.increase_delay();
+            co_await boost::asio::this_coro::executor;
         }
 
         spdlog::error("Async packet popping stopped, session is not alive.");
@@ -123,32 +107,6 @@ namespace mal_packet_weaver
         }
 
         return nullptr;
-    }
-
-    void Session::receive_all()
-    {
-        spdlog::debug("Initiating async read from socket.");
-
-        boost::asio::async_read(socket_, buffer_, boost::asio::transfer_all(),
-                                [this](const boost::system::error_code ec, [[maybe_unused]] std::size_t length)
-                                {
-                                    if (ec)
-                                    {
-                                        spdlog::warn("Error reading message: {}", ec.message());
-                                        socket_.close();
-                                        alive_ = false;
-                                        packets_to_send_.consume_all(
-                                            [](ByteArray *value)
-                                            {
-                                                if (value != nullptr)
-                                                    delete value;
-                                            });
-                                    }
-                                    else
-                                    {
-                                        spdlog::info("Received total of {} bytes", length);
-                                    }
-                                });
     }
 
     boost::asio::awaitable<std::shared_ptr<Session>> Session::get_shared_ptr(boost::asio::io_context &io)
@@ -203,9 +161,9 @@ namespace mal_packet_weaver
             co_return;
         }
 
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);
         try
         {
+            boost::asio::steady_timer timer(io, std::chrono::microseconds(5));
             while (alive_)
             {
                 if (!packets_to_send_.empty() && !writing)
@@ -233,6 +191,17 @@ namespace mal_packet_weaver
                     }
 
                     spdlog::trace("Sending data...");
+                    // show data as hex
+                    {
+                        if (spdlog::get_level() == spdlog::level::trace)
+                        {
+                            std::string sending_hex;
+                            boost::algorithm::hex(data_to_send.as<uint8_t>(),
+                                                  data_to_send.as<uint8_t>() + data_to_send.size(),
+                                                  std::back_inserter(sending_hex));
+                            spdlog::trace("Sending hex: {}", sending_hex);
+                        }
+                    }
                     async_write(socket_, boost::asio::buffer(data_to_send.as<char>(), data_to_send.size()),
                                 [&](const boost::system::error_code ec, [[maybe_unused]] std::size_t length)
                                 {
@@ -248,13 +217,9 @@ namespace mal_packet_weaver
                                     }
                                 });
 
-                    backoff.decrease_delay();
                     continue;
                 }
-
-                boost::asio::steady_timer timer(io, backoff.get_current_delay());
                 co_await timer.async_wait(boost::asio::use_awaitable);
-                backoff.increase_delay();
             }
         }
         catch (std::exception &e)
@@ -270,9 +235,9 @@ namespace mal_packet_weaver
     }
     boost::asio::awaitable<void> Session::async_packet_forger(boost::asio::io_context &io)
     {
+        boost::asio::streambuf receiver_buffer;
         spdlog::debug("Starting async_packet_forger...");
 
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);
         std::shared_ptr<Session> session_lock = co_await get_shared_ptr(io);
         if (session_lock == nullptr)
         {
@@ -281,60 +246,85 @@ namespace mal_packet_weaver
                 "session using std::make_shared?");
             co_return;
         }
+        const auto socket_receive = [&]() -> boost::asio::awaitable<size_t> {
+            try
+            {
+                boost::asio::streambuf::mutable_buffers_type bufs = receiver_buffer.prepare(512);
+                size_t n = co_await socket_.async_receive(bufs, boost::asio::use_awaitable);
+                receiver_buffer.commit(n);
+                co_return n;
+            }
+            catch (std::exception &e)
+            {
+                auto &v = socket_;
+                socket_.close();
+                spdlog::error("Error reading message, socket dead: {}", e.what());
+                alive_ = false;
+                packets_to_send_.consume_all(
+                    [](ByteArray *value)
+                    {
+                        if (value != nullptr)
+                            delete value;
+                    });
+                co_return 0;
+            }
+        };
 
+        const auto read_bytes_to = [&](ByteArray &byte_array, const size_t amount)
+        {
+            const size_t current_size = byte_array.size();
+            byte_array.resize(current_size + amount);
+            receiver_buffer.sgetn(byte_array.as<char>() + current_size * sizeof(char), amount);
+        };
+
+        
+        boost::asio::steady_timer timer(io, std::chrono::microseconds(5));
         while (alive_)
         {
-            if (buffer_.size() >= 4)
+            co_await socket_receive();
+            if (receiver_buffer.size() < 4)
             {
-                spdlog::trace("Buffer size is sufficient for a packet...");
-
-                ByteArray packet_header;
-                read_bytes_to(packet_header, 4);
-                const int64_t packet_size = bytes_to_uint32(packet_header);
-
-                spdlog::trace("Read packet size: {}", packet_size);
-
-                // TODO: add a system that ensures that packet data size is correct.
-                // TODO: handle exception, and if packet size is too big we need to do something
-                // about it.
-                AlwaysAssert(packet_size != 0 && packet_size < 1024ULL * 1024 * 1024 * 4,
-                             "The amount of bytes to read is too big. 4GB? What are you "
-                             "transfering? Anyways, it seems to be a bug.");
-
-                while (static_cast<int64_t>(buffer_.size()) < packet_size && alive_)
-                {
-                    boost::asio::steady_timer timer(io, backoff.get_current_delay());
-                    co_await timer.async_wait(boost::asio::use_awaitable);
-                    backoff.increase_delay();
-                    spdlog::trace("Waiting for buffer to reach packet size...");
-                }
-
-                if (static_cast<int64_t>(buffer_.size()) < packet_size)
-                // While loop waits until requirement is satisfied, so if it's false then alive_ is
-                // false and session is dead, so we won't get any data anymore
-                {
-                    spdlog::error("Buffer still not sufficient, breaking out of loop...");
-                    break;
-                }
-
-                ByteArray *packet_data = new ByteArray;
-                read_bytes_to(*packet_data, packet_size);
-                spdlog::trace("Read packet data with size: {}", packet_size);
-
-                while (!received_packets_.push(packet_data))
-                {
-                    boost::asio::steady_timer timer(io, std::chrono::microseconds(100));
-                    co_await timer.async_wait(boost::asio::use_awaitable);
-                    spdlog::trace("Waiting to push packet data to received_packets_...");
-                }
-
-                backoff.decrease_delay();
+                co_await boost::asio::this_coro::executor;
                 continue;
             }
+            spdlog::trace("Buffer size is sufficient for a packet...");
 
-            boost::asio::steady_timer timer(io, backoff.get_current_delay());
-            co_await timer.async_wait(boost::asio::use_awaitable);
-            backoff.increase_delay();
+            ByteArray packet_header;
+            read_bytes_to(packet_header, 4);
+            const int64_t packet_size = bytes_to_uint32(packet_header);
+
+            spdlog::trace("Read packet size: {}", packet_size);
+
+            // TODO: add a system that ensures that packet data size is correct.
+            // TODO: handle exception, and if packet size is too big we need to do something
+            // about it.
+            AlwaysAssert(packet_size != 0 && packet_size < 1024ULL * 1024 * 1024 * 4,
+                         "The amount of bytes to read is too big. 4GB? What are you "
+                         "transfering? Anyways, it seems to be a bug.");
+
+            while (static_cast<int64_t>(receiver_buffer.size()) < packet_size && alive_)
+            {
+                co_await socket_receive();
+                spdlog::trace("Waiting for buffer to reach packet size...");
+            }
+
+            if (static_cast<int64_t>(receiver_buffer.size()) < packet_size)
+            // While loop waits until requirement is satisfied, so if it's false then alive_ is
+            // false and session is dead, so we won't get any data anymore
+            {
+                spdlog::error("Buffer still not sufficient, breaking out of loop...");
+                break;
+            }
+
+            ByteArray *packet_data = new ByteArray;
+            read_bytes_to(*packet_data, packet_size);
+            spdlog::trace("Read packet data with size: {}", packet_size);
+
+            while (!received_packets_.push(packet_data))
+            {
+                spdlog::trace("Waiting to push packet data to received_packets_...");
+                co_await timer.async_wait(boost::asio::use_awaitable);
+            }
         }
 
         spdlog::debug("Exiting async_packet_forger.");
@@ -344,8 +334,6 @@ namespace mal_packet_weaver
     {
         spdlog::debug("Starting async_packet_sender...");
 
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(1000 * 10), 2, 64, 0.1);
-
         std::shared_ptr<Session> session_lock = co_await get_shared_ptr(io);
         if (session_lock == nullptr)
         {
@@ -354,6 +342,7 @@ namespace mal_packet_weaver
                 "session using std::make_shared?");
             co_return;
         }
+        boost::asio::steady_timer timer(io, std::chrono::microseconds(5));
 
         while (alive_)
         {
@@ -366,10 +355,7 @@ namespace mal_packet_weaver
                     spdlog::warn("Session is no longer alive, exiting loop...");
                     break;
                 }
-
-                boost::asio::steady_timer timer(io, backoff.get_current_delay());
                 co_await timer.async_wait(boost::asio::use_awaitable);
-                backoff.increase_delay();
             }
             spdlog::trace("Received packet data!");
 
@@ -415,7 +401,6 @@ namespace mal_packet_weaver
                 }
 
                 delete packet_data;
-                backoff.decrease_delay();
             }
         }
 
