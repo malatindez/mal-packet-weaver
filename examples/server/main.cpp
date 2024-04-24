@@ -109,7 +109,7 @@ private:
 
     boost::asio::awaitable<void> cleanup_task()
     {
-        while(true)
+        while(alive)
         {
             std::erase_if(connections_, [](auto &session){ return session->is_closed(); });
             boost::asio::steady_timer timer(io_context_, std::chrono::seconds(1));

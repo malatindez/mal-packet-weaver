@@ -27,9 +27,9 @@ public:
     mal_packet_weaver::ByteArray public_key;
 
 private:
-    friend class boost::serialization::access;
+    friend class cereal::access;
     template <class Archive>
-    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
+    void serialize(Archive &ar)
     {
         ar &public_key;
     }
@@ -65,9 +65,9 @@ public:
     mal_packet_weaver::ByteArray signature;
 
 private:
-    friend class boost::serialization::access;
+    friend class cereal::access;
     template <class Archive>
-    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
+    void serialize(Archive &ar)
     {
         ar &public_key;
         ar &signature;

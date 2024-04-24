@@ -19,6 +19,8 @@
     class PacketName final : public mal_packet_weaver::DerivedPacket<PacketName>         \
     {                                                                                    \
     public:                                                                              \
+        static constexpr char const *const static_packet_name = #PacketName;             \
+        const char* packet_name() const final { return static_packet_name; }             \
         static constexpr mal_packet_weaver::UniquePacketID static_unique_id =            \
             mal_packet_weaver::CreatePacketID(Subsystem, ID);                            \
         static constexpr float time_to_live = TTL;                                       \
@@ -59,7 +61,7 @@ public                                                               \
  * @brief Internal macro to declare serialization for multiple base classes.
  */
 #define MAL_PACKET_WEAVER_DECLARE_BASE_CLASS_SERIALIZATION(r, _, elem) \
-    ar &boost::serialization::base_object<elem>(*this);
+    ar(CEREAL_NVP(cereal::base_class<elem>(this)));
 
 /**
  * @def MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(seq)
@@ -72,7 +74,7 @@ public                                                               \
  * @def MAL_PACKET_WEAVER_SERIALIZE_MEMBER(r, ar, elem)
  * @brief Internal macro to serialize payload members.
  */
-#define MAL_PACKET_WEAVER_SERIALIZE_MEMBER(r, ar, elem) ar &BOOST_PP_TUPLE_ELEM(1, elem);
+#define MAL_PACKET_WEAVER_SERIALIZE_MEMBER(r, ar, elem) ar(CEREAL_NVP(BOOST_PP_TUPLE_ELEM(1, elem)));
 
 /**
  * @def MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, seq)
@@ -120,6 +122,8 @@ public                                                               \
     class PacketName final : public mal_packet_weaver::DerivedPacket<PacketName>                                  \
     {                                                                                                             \
     public:                                                                                                       \
+        static constexpr char const *const static_packet_name = #PacketName;                                      \
+        const char* packet_name() const final { return static_packet_name; }                                      \
         static constexpr mal_packet_weaver::UniquePacketID static_unique_id =                                     \
             mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                     \
         static constexpr float time_to_live = TTL;                                                                \
@@ -128,9 +132,9 @@ public                                                               \
                                                                                                                   \
         PACKET_BODY                                                                                               \
     private:                                                                                                      \
-        friend class boost::serialization::access;                                                                \
+        friend class cereal::access;                                                                              \
         template <class Archive>                                                                                  \
-        void serialize(Archive &ar, const unsigned int)                                                           \
+        void serialize(Archive &ar)                                                                               \
         {                                                                                                         \
             MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                        \
         }                                                                                                         \
@@ -151,6 +155,8 @@ public                                                               \
     class PacketName final : public mal_packet_weaver::DerivedPacket<PacketName>                                \
     {                                                                                                           \
     public:                                                                                                     \
+        static constexpr char const *const static_packet_name = #PacketName;                                    \
+        const char* packet_name() const final { return static_packet_name; }                                    \
         static constexpr mal_packet_weaver::UniquePacketID static_unique_id =                                   \
             mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                   \
         static constexpr float time_to_live = TTL;                                                              \
@@ -205,16 +211,18 @@ public                                                               \
                                  BasePackets)) public mal_packet_weaver::DerivedPacket<PacketName>                 \
     {                                                                                                              \
     public:                                                                                                        \
+        static constexpr char const *const static_packet_name = #PacketName;                                       \
+        const char* packet_name() const final { return static_packet_name; }                                       \
         static constexpr mal_packet_weaver::UniquePacketID static_unique_id =                                      \
             mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                      \
         static constexpr float time_to_live = TTL;                                                                 \
         PACKET_BODY                                                                                                \
     private:                                                                                                       \
-        friend class boost::serialization::access;                                                                 \
+        friend class cereal::access;                                                                               \
         template <class Archive>                                                                                   \
-        void serialize(Archive &ar, const unsigned int)                                                            \
+        void serialize(Archive &ar)                                                                                \
         {                                                                                                          \
-            MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(BOOST_PP_TUPLE_TO_SEQ(BasePackets))                 \
+            MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(BOOST_PP_TUPLE_TO_SEQ(BasePackets))               \
         }                                                                                                          \
         static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;                           \
     };                                                                                                             \
@@ -239,17 +247,19 @@ public                                                               \
                                  BasePackets)) public mal_packet_weaver::DerivedPacket<PacketName>                   \
     {                                                                                                                \
     public:                                                                                                          \
+        static constexpr char const *const static_packet_name = #PacketName;                                         \
+        const char* packet_name() const final { return static_packet_name; }                                         \
         static constexpr mal_packet_weaver::UniquePacketID static_unique_id =                                        \
             mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                        \
         static constexpr float time_to_live = TTL;                                                                   \
         MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                             \
         PACKET_BODY                                                                                                  \
     private:                                                                                                         \
-        friend class boost::serialization::access;                                                                   \
+        friend class cereal::access;                                                                                 \
         template <class Archive>                                                                                     \
-        void serialize(Archive &ar, const unsigned int)                                                              \
+        void serialize(Archive &ar)                                                                                  \
         {                                                                                                            \
-            MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(BOOST_PP_TUPLE_TO_SEQ(BasePackets))                   \
+            MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(BOOST_PP_TUPLE_TO_SEQ(BasePackets))                 \
             MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                           \
         }                                                                                                            \
         static mal_packet_weaver::PacketTypeRegistrationHelper<PacketName> registration;                             \

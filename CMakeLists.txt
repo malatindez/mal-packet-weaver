@@ -5,12 +5,15 @@ cmake_policy(SET CMP0060 NEW)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-find_package(Boost REQUIRED COMPONENTS system serialization context coroutine HINTS "
+find_package(Boost REQUIRED COMPONENTS system context coroutine HINTS "
   C:/" 
   "C:/Boost" 
   "${CMAKE_CURRENT_SOURCE_DIR}/third_party/boost")
 
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third_party/mal-toolkit" EXCLUDE_FROM_ALL)
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third_party/cereal" EXCLUDE_FROM_ALL)
+
+set(CEREAL_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/third_party/cereal/include")
 
 file(GLOB_RECURSE MAL_PACKET_WEAVER_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/mal-packet-weaver/*.*"
@@ -34,6 +37,7 @@ add_library(mal-packet-weaver STATIC ${MAL_PACKET_WEAVER_SOURCES})
 target_link_libraries(mal-packet-weaver PUBLIC mal-toolkit)
 
 target_include_directories(mal-packet-weaver PUBLIC ${Boost_INCLUDE_DIRS})
+target_include_directories(mal-packet-weaver PUBLIC ${CEREAL_INCLUDE_DIRS})
 target_include_directories(mal-packet-weaver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/mal-packet-weaver)
 target_link_libraries(mal-packet-weaver PUBLIC ${Boost_LIBRARIES})
 

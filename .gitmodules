@@ -1,3 +1,6 @@
 [submodule "third_party/mal-toolkit"]
 	path = third_party/mal-toolkit
 	url = https://github.com/malatindez/mal-toolkit
+[submodule "third_party/cereal"]
+	path = third_party/cereal
+	url = https://github.com/USCiLab/cereal

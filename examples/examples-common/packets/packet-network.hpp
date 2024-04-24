@@ -37,7 +37,7 @@ public:
    
 
 private:
-    friend class boost::serialization::access;
+    friend class cereal::access;
     template <class Archive>
     void serialize(Archive &, const unsigned int) { }
 };
@@ -52,7 +52,7 @@ public:
     static constexpr float time_to_live = 10.0f;
 
 private:
-    friend class boost::serialization::access;
+    friend class cereal::access;
     template <class Archive>
     void serialize(Archive &, const unsigned int) { }
 };
@@ -68,9 +68,9 @@ public:
     std::string message;
 
 private:
-    friend class boost::serialization::access;
+    friend class cereal::access;
     template <class Archive>
-    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
+    void serialize(Archive &ar)
     {
         ar &message;
     }
@@ -87,9 +87,9 @@ public:
     std::string echo_message;
 
 private:
-    friend class boost::serialization::access;
+    friend class cereal::access;
     template <class Archive>
-    void serialize(Archive &ar, [[maybe_unused]] const unsigned int version)
+    void serialize(Archive &ar)
     {
         ar &echo_message;
     }

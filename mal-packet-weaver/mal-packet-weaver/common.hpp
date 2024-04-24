@@ -17,14 +17,17 @@
 #include <boost/lockfree/queue.hpp>
 #include <boost/range/begin.hpp>
 #include <boost/range/end.hpp>
-#include <boost/serialization/base_object.hpp>
-#include <boost/serialization/serialization.hpp>
 #include <deque>
 #include <future>
 #include <memory>
 #include <mutex>
 #include <queue>
 #include <unordered_map>
+
+#include <cereal/cereal.hpp>
+#include <cereal/types/string.hpp>
+#include <cereal/types/map.hpp>
+#include <cereal/archives/portable_binary.hpp>
 
 #include "mal-toolkit/mal-toolkit.hpp"
 /**
