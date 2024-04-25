@@ -12,11 +12,13 @@
 #include <boost/asio/steady_timer.hpp>
 #include <boost/asio/streambuf.hpp>
 #include <boost/asio/write.hpp>
+#include <boost/asio/thread_pool.hpp>
 #include <boost/bind/bind.hpp>
 #include <boost/endian/conversion.hpp>
 #include <boost/lockfree/queue.hpp>
 #include <boost/range/begin.hpp>
 #include <boost/range/end.hpp>
+#include <boost/thread.hpp>
 #include <deque>
 #include <future>
 #include <memory>
@@ -38,6 +40,16 @@
  */
 namespace mal_packet_weaver
 {
+    class timeout_exception : public std::runtime_error
+    {
+    public:
+        using std::runtime_error::runtime_error;
+    };
+    class future_failed : public std::runtime_error
+    {
+        public:
+        using std::runtime_error::runtime_error;
+    };
     /**
      * @brief This namespace alias brings symbols from the mal_toolkit namespace
      * into mal_packet_weaver.
@@ -47,119 +59,73 @@ namespace mal_packet_weaver
      * them with . This can help improve code readability and simplify usage.
      */
     using namespace mal_toolkit;
-
-    /**
-     * @brief Awaiting an std::future with Boost.Asio integration.
-     *
-     * This function allows you to co_await an std::future inside a Boost.Asio coroutine,
-     * waiting for the future's result and providing non-blocking behavior.
-     *
-     * @tparam T The type of the awaited value.
-     * @tparam Executor The executor type that will be used for the coroutine.
-     *
-     * @param fut The std::future object to be awaited.
-     * @param ex The executor for the coroutine.
-     *
-     * @return A Boost.Asio awaitable representing the result of the future.
-     */
-    template <typename T, typename Executor = boost::asio::any_io_executor>
-    boost::asio::awaitable<T, Executor> await_future(std::future<T>& fut, Executor ex)
+// clang-format off
+    namespace _await_future_impl
     {
-        while (fut.wait_for(std::chrono::seconds(0)) != std::future_status::ready)
-        {        
-            co_await boost::asio::post(ex, boost::asio::use_awaitable);
-        }
-
-        try
+        template <typename T, typename ChronoType, typename Executor>
+        boost::asio::awaitable<T> await_future(Executor &executor, std::future<T>& fut, ChronoType timeout)
         {
-            co_return fut.get();
-        }
-        catch ([[maybe_unused]] const std::exception&)
-        {
-            std::rethrow_exception(std::current_exception());
-        }
-    }
-
-    /**
-     * @brief Awaiting an std::future with timeout and Boost.Asio integration.
-     *
-     * This function allows you to co_await an std::future inside a Boost.Asio coroutine,
-     * waiting for the future's result with a specified timeout, and providing non-blocking behavior.
-     *
-     * @tparam T The type of the awaited value.
-     * @tparam ChronoType The type of the timeout duration (e.g., std::chrono::milliseconds).
-     * @tparam Executor The executor type that will be used for the coroutine.
-     *
-     * @param fut The std::future object to be awaited.
-     * @param ex The executor for the coroutine.
-     * @param timeout The maximum duration to wait for the future's result.
-     *
-     * @return A Boost.Asio awaitable representing the result of the future.
-     * @throws std::runtime_error if the future is not ready within the specified timeout.
-     */
-    template <typename T, typename ChronoType, typename Executor = boost::asio::any_io_executor>
-    boost::asio::awaitable<T, Executor> await_future(std::future<T>& fut, Executor ex, ChronoType timeout)
-    {
-        auto start = std::chrono::steady_clock::now();
-
-        while (fut.wait_for(std::chrono::seconds(0)) != std::future_status::ready)
-        {
-            if (std::chrono::steady_clock::now() - start > timeout)
+            auto timer = std::shared_ptr<boost::asio::steady_timer>{
+                new boost::asio::steady_timer{executor, timeout}
+            };
+            static boost::thread::attributes attrs;
+            attrs.set_stack_size(4096 * 8);  // 32 Kb per thread
+            if constexpr (std::is_same_v<T, void>)
             {
-                throw std::runtime_error("Future not ready within timeout");
-            }
-            co_await boost::asio::post(ex, boost::asio::use_awaitable);
-        }
-
-        try
-        {
-            co_return fut.get();
-        }
-        catch ([[maybe_unused]] const std::exception&)
-        {
-            std::rethrow_exception(std::current_exception());
-        }
-    }
-
-    template <typename T, typename ChronoType, typename Executor = boost::asio::any_io_executor>
-    boost::asio::awaitable<std::optional<T>, Executor> await_future_noexcept(std::future<T>& fut, Executor ex, ChronoType timeout)
-    {
-        auto start = std::chrono::steady_clock::now();
-
-        while (fut.wait_for(std::chrono::seconds(0)) != std::future_status::ready)
-        {
-            if (std::chrono::steady_clock::now() - start > timeout)
-            {
-                co_return std::nullopt;
-            }
-            co_await boost::asio::post(ex, boost::asio::use_awaitable);
-        }
-
-        try { co_return fut.get(); }
-        catch ([[maybe_unused]] const std::exception&) { }
-
-        co_return std::nullopt;
-    }
-    
-    template <typename ChronoType, typename Executor = boost::asio::any_io_executor>
-    boost::asio::awaitable<void, Executor> await_future_noexcept(std::future<void>& fut, Executor ex, ChronoType timeout)
-    {
-        auto start = std::chrono::steady_clock::now();
-
-        while (fut.wait_for(std::chrono::seconds(0)) != std::future_status::ready)
-        {
-            if (std::chrono::steady_clock::now() - start > timeout)
-            {
+                if (fut.wait_for(std::chrono::seconds(0)) == std::future_status::ready)
+                {
+                    co_return;
+                }
+                boost::thread thread(attrs,
+                                     [timer, &fut]()
+                                     {
+                                         try { fut.wait(); timer->cancel(); }
+    #ifdef _DEBUG
+                                         catch (std::exception& e) { spdlog::error("Future failed with exception: {}", e.what()); }
+    #endif
+                                         catch (...) { timer->cancel(); }
+                                     });
+                thread.detach();
+                try { co_await timer->async_wait(boost::asio::use_awaitable);} 
+                catch(...) { }
                 co_return;
             }
-            co_await boost::asio::post(ex, boost::asio::use_awaitable);
+            else
+            {
+                if (fut.wait_for(std::chrono::seconds(0)) == std::future_status::ready)
+                {
+                    co_return fut.get();
+                }
+                auto result = std::make_shared<std::optional<T>>(std::nullopt);
+                boost::thread thread(attrs,
+                                     [timer = timer, result = result, &fut]()
+                                     {
+                                         try { fut.wait(); *result = fut.get(); timer->cancel(); }
+    #ifdef _DEBUG
+                                         catch (std::exception& e) { spdlog::error("Future failed with exception: {}", e.what()); }
+    #endif
+                                         catch (...) { timer->cancel(); }
+                                     });
+                thread.detach();
+                try { co_await timer->async_wait(boost::asio::use_awaitable); }
+                catch(std::exception &e) { }
+                if (*result == std::nullopt) { throw future_failed{"Future failed for unknown reason."}; }
+                co_return std::move(result->value());
+            }
         }
-
-        try { co_return fut.get(); }
-        catch ([[maybe_unused]] const std::exception&) { }
-
-        co_return;
     }
+    template <typename T,  typename Executor>
+    boost::asio::awaitable<T> await_future(Executor& executor, std::future<T>& fut)
+    {
+        return _await_future_impl::await_future(executor, fut, std::chrono::steady_clock::time_point::max());
+    }
+    
+    template <typename T, typename ChronoType,  typename Executor>
+    boost::asio::awaitable<T> await_future(Executor& executor, std::future<T>& fut, ChronoType timeout)
+    {
+        return _await_future_impl::await_future(executor, fut, timeout);
+    }
+// clang-format on
 
     class SignalHandler {
     public:
@@ -168,64 +134,51 @@ namespace mal_packet_weaver
         // Asynchronously wait for the signal
         boost::asio::awaitable<void> wait()
         {
-            std::promise<void> promise;
-            auto future = promise.get_future();
-
+            auto timer = std::make_shared<boost::asio::steady_timer>(co_await boost::asio::this_coro::executor,
+                                                                     std::chrono::steady_clock::time_point::max());
             {
                 std::lock_guard<std::mutex> lock(mutex_);
-                waiters_.push_back([&promise]() { promise.set_value(); });
+                waiters_.emplace_back(timer);
             }
-
-            co_await await_future(future, co_await boost::asio::this_coro::executor);
+            try
+            {
+                co_await timer->async_wait(boost::asio::use_awaitable);
+            }
+            catch(...) {}
         }
         // Asynchronously wait for the signal
         template <typename ChronoType>
         boost::asio::awaitable<void> wait(ChronoType timeout)
         {
-            std::promise<void> promise;
-            auto future = promise.get_future();
-
+            auto timer = std::make_shared<boost::asio::steady_timer>(co_await boost::asio::this_coro::executor, 
+                                                                     timeout);
             {
                 std::lock_guard<std::mutex> lock(mutex_);
-                waiters_.push_back([&promise]() { promise.set_value(); });
+                waiters_.emplace_back(timer);
             }
-
-            co_await await_future(future, co_await boost::asio::this_coro::executor, timeout);
-        }
-        template <typename ChronoType>
-        boost::asio::awaitable<void> wait_noexcept(ChronoType timeout) noexcept
-        {
             try
             {
-                std::promise<void> promise;
-                auto future = promise.get_future();
-
-                {
-                    std::lock_guard<std::mutex> lock(mutex_);
-                    waiters_.push_back([&promise]() { promise.set_value(); });
-                }
-
-                co_await await_future_noexcept(future, co_await boost::asio::this_coro::executor, timeout);
+                co_await timer->async_wait(boost::asio::use_awaitable);
             }
-            catch (const std::exception&) { }
+            catch (...) { }
         }
 
         // Notify all waiters
         void notify() {
-            std::deque<std::function<void()>> waiters;
+            std::deque<std::shared_ptr<boost::asio::steady_timer>> waiters;
             {
                 std::lock_guard<std::mutex> lock(mutex_);
-                waiters_.swap(waiters_);
+                waiters_.swap(waiters);
             }
             for (auto& waiter : waiters) {
-                io_context_.post(std::move(waiter));
+                waiter->cancel();
             }
         }
 
     private:
         boost::asio::io_context& io_context_;
         std::mutex mutex_;
-        std::deque<std::function<void()>> waiters_;
+        std::deque<std::shared_ptr<boost::asio::steady_timer>> waiters_;
     };
 
 }  // namespace mal_packet_weaver

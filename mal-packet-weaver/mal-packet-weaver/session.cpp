@@ -111,7 +111,7 @@ namespace mal_packet_weaver
 
     boost::asio::awaitable<std::shared_ptr<Session>> Session::get_shared_ptr(boost::asio::io_context &io)
     {
-        ExponentialBackoff backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);
+        ExponentialBackoff backoff(std::chrono::microseconds(25), std::chrono::microseconds(100), 2, 32, 0.1);
 
         int it = 0;
         do
@@ -281,10 +281,9 @@ namespace mal_packet_weaver
         boost::asio::steady_timer timer(io, std::chrono::microseconds(5));
         while (alive_)
         {
-            co_await socket_receive();
             if (receiver_buffer.size() < 4)
             {
-                co_await boost::asio::this_coro::executor;
+                co_await socket_receive();
                 continue;
             }
             spdlog::trace("Buffer size is sufficient for a packet...");

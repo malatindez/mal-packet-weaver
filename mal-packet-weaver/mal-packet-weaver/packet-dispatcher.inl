@@ -20,15 +20,15 @@ namespace mal_packet_weaver
 
         if (timeout <= 0)
         {
-            auto base = co_await await_future(future, co_await boost::asio::this_coro::executor);
+            auto base = co_await await_future(io_context_, future);
             Assert(base->type == DerivedPacket::static_unique_id);  // Sanity check
             spdlog::trace("Received packet: {}, ({})", DerivedPacket::static_unique_id, DerivedPacket::static_packet_name);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
         }
 
         try
-        {
-            auto base = co_await await_future(future, co_await boost::asio::this_coro::executor,
+        { 
+            auto base = co_await await_future(io_context_, future,
                                               std::chrono::microseconds(static_cast<size_t>(timeout * 1e6f)));
             Assert(base->type == DerivedPacket::static_unique_id);  // Sanity check
             spdlog::trace("Received packet: {} ({})", DerivedPacket::static_unique_id, DerivedPacket::static_packet_name);
@@ -64,7 +64,7 @@ namespace mal_packet_weaver
 
         if (timeout <= 0)
         {
-            auto base = co_await await_future(future, co_await boost::asio::this_coro::executor);
+            auto base = co_await await_future(io_context_, future);
             Assert(base->type == DerivedPacket::static_unique_id);  // Sanity check
             spdlog::trace("Received packet: {} ({})", DerivedPacket::static_unique_id, DerivedPacket::static_packet_name);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));
@@ -72,8 +72,7 @@ namespace mal_packet_weaver
 
         try
         {
-            auto base = co_await await_future(future, co_await boost::asio::this_coro::executor,
-                                              std::chrono::microseconds(static_cast<size_t>(timeout * 1e6f)));
+            auto base = co_await await_future(io_context_, future, std::chrono::microseconds(static_cast<size_t>(timeout * 1e6f)));
             Assert(base->type == DerivedPacket::static_unique_id);  // Sanity check
             spdlog::trace("Received packet: {} ({})", DerivedPacket::static_unique_id, DerivedPacket::static_packet_name);
             co_return std::unique_ptr<DerivedPacket>(reinterpret_cast<DerivedPacket *>(base.release()));

@@ -50,7 +50,7 @@ namespace mal_packet_weaver
                                    {
                                        for (auto &[packet_id, handler] : handlers)
                                        {
-                                           auto &handler_list = default_handlers_[packxet_id];
+                                           auto &handler_list = default_handlers_[packet_id];
                                            // Insert the handler such that filtered ones are first.
                                            mal_toolkit::SortedInsert<handler_tuple>(
                                                handler_list, std::move(handler),
@@ -145,6 +145,7 @@ namespace mal_packet_weaver
                 "session using std::make_shared?");
             co_return;
         }
+        co_await boost::asio::this_coro::executor;
         try
         {
             while (alive_.load())
@@ -167,7 +168,15 @@ namespace mal_packet_weaver
                                 { return fulfill_handlers(packet_id, packet, min_handler_timestamp, timer); });
                         }
                     }
-                    co_await signal_handler_.wait_noexcept(std::chrono::microseconds(static_cast<size_t>(min_handler_timestamp * 1.0e6)));
+                    if (min_handler_timestamp == std::numeric_limits<float>::max())
+                    {
+                        co_await signal_handler_.wait();
+                    }
+                    else
+                    {
+                        co_await signal_handler_.wait(
+                            std::chrono::microseconds(static_cast<size_t>(min_handler_timestamp * 1.0e6)));
+                    }
                     continue;
                 }
 
@@ -227,10 +236,11 @@ namespace mal_packet_weaver
             futures.emplace_back(subsystem_handlers_input_.create_pop_task());
         }
         bool rv = false;
+        co_await boost::asio::this_coro::executor;
         for (auto &future : futures)
         {
             spdlog::trace("Waiting for futures to complete...");
-            rv |= co_await await_future(future, co_await boost::asio::this_coro::executor);
+            rv |= co_await await_future(io_context_, future);
             spdlog::trace("Futures complete. Result for popping is: {}", rv);
         }
         co_return rv;
