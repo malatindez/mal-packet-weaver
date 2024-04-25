@@ -245,14 +245,6 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6dd69b1a3c078b983b60645afa17b00c" id="r_a6dd69b1a3c078b983b60645afa17b00c"><td class="memTemplParams" colspan="2">template&lt;typename Integer &gt; </td></tr>
-<tr class="memitem:a6dd69b1a3c078b983b60645afa17b00c"><td class="memTemplItemLeft" align="right" valign="top">Integer&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6dd69b1a3c078b983b60645afa17b00c">bytes_to_integer</a> (const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">ByteView</a> byte_view)</td></tr>
-<tr class="memdesc:a6dd69b1a3c078b983b60645afa17b00c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> to an integer value of the specified type.  <br /></td></tr>
-<tr class="separator:a6dd69b1a3c078b983b60645afa17b00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87426557f3158835d5c92013409e09a3" id="r_a87426557f3158835d5c92013409e09a3"><td class="memTemplParams" colspan="2">template&lt;typename Integer &gt; </td></tr>
-<tr class="memitem:a87426557f3158835d5c92013409e09a3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a87426557f3158835d5c92013409e09a3">integer_to_bytes</a> (const Integer value)</td></tr>
-<tr class="memdesc:a87426557f3158835d5c92013409e09a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an integer value of the specified type to a <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a>.  <br /></td></tr>
-<tr class="separator:a87426557f3158835d5c92013409e09a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88b9a21f044ab10a8d5258658b0cfd66" id="r_a88b9a21f044ab10a8d5258658b0cfd66"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88b9a21f044ab10a8d5258658b0cfd66">bytes_to_uint16</a> (const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">ByteView</a> byte_view)</td></tr>
 <tr class="memdesc:a88b9a21f044ab10a8d5258658b0cfd66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a byte array to a uint16_t value using little-endian byte order.  <br /></td></tr>
 <tr class="separator:a88b9a21f044ab10a8d5258658b0cfd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -904,7 +896,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a1a10dbab8f9e26361eaa4af07f31713d_icgraph.svg" width="331" height="211"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a1a10dbab8f9e26361eaa4af07f31713d_icgraph.svg" width="331" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1017,62 +1009,6 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>The converted int64_t value. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df5/byte-helper_8hpp_source.html#l00528">528</a> of file <a class="el" href="../../da/df5/byte-helper_8hpp_source.html">byte-helper.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a6dd69b1a3c078b983b60645afa17b00c" name="a6dd69b1a3c078b983b60645afa17b00c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dd69b1a3c078b983b60645afa17b00c">&#9670;&#160;</a></span>bytes_to_integer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Integer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Integer mal_toolkit::bytes_to_integer </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html">ByteView</a></td>          <td class="paramname"><span class="paramname"><em>byte_view</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Convert a <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> to an integer value of the specified type. </p>
-<p>This template function converts the first N bytes of the given <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> to an integer value of the specified type, assuming little-endian byte order.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Integer</td><td>The integer type to convert to (e.g., uint16_t, int32_t, etc.). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">byte_view</td><td>The <a class="el" href="../../d8/dab/structmal__toolkit_1_1_byte_view.html" title="A lightweight view over a sequence of bytes.">ByteView</a> containing the bytes to convert. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The integer value converted from the byte view. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">mal_toolkit::AssertionError</td><td>if the byte_view size is less than N bytes. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../da/df5/byte-helper_8hpp_source.html#l00375">375</a> of file <a class="el" href="../../da/df5/byte-helper_8hpp_source.html">byte-helper.hpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a6dd69b1a3c078b983b60645afa17b00c_cgraph.svg" width="508" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>
@@ -1283,7 +1219,7 @@ template&lt;auto begin, auto end, auto inc, class F &gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a27bf9441da264c7f90650042e9e30f40_icgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a27bf9441da264c7f90650042e9e30f40_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1660,56 +1596,6 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a> containing the byte representation of the int64_t value. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../da/df5/byte-helper_8hpp_source.html#l00542">542</a> of file <a class="el" href="../../da/df5/byte-helper_8hpp_source.html">byte-helper.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a87426557f3158835d5c92013409e09a3" name="a87426557f3158835d5c92013409e09a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87426557f3158835d5c92013409e09a3">&#9670;&#160;</a></span>integer_to_bytes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Integer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> mal_toolkit::integer_to_bytes </td>
-          <td>(</td>
-          <td class="paramtype">const Integer</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Convert an integer value of the specified type to a <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a>. </p>
-<p>This template function converts an integer value of the specified type to a <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a> of appropriate size, using little-endian byte order.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Integer</td><td>The integer type to convert from (e.g., uint16_t, int32_t, etc.). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>The integer value to convert. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html" title="A dynamically resizable array of bytes.">ByteArray</a> containing the byte representation of the integer value. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../da/df5/byte-helper_8hpp_source.html#l00393">393</a> of file <a class="el" href="../../da/df5/byte-helper_8hpp_source.html">byte-helper.hpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df5/namespacemal__toolkit_a87426557f3158835d5c92013409e09a3_cgraph.svg" width="343" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>
@@ -2417,7 +2303,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 00:02:07 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 18:12:51 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

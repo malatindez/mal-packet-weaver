@@ -10,8 +10,7 @@ var searchData=
   ['bytes_5fto_5fint16_7',['bytes_to_int16',['../df/df5/namespacemal__toolkit.html#a3d550b1904e1c7ceb2a5994c4037a99c',1,'mal_toolkit']]],
   ['bytes_5fto_5fint32_8',['bytes_to_int32',['../df/df5/namespacemal__toolkit.html#a29596ae1fbeb6ee4ee74aa86c57214c9',1,'mal_toolkit']]],
   ['bytes_5fto_5fint64_9',['bytes_to_int64',['../df/df5/namespacemal__toolkit.html#a8f2aad558818fc39442478c3436d5a10',1,'mal_toolkit']]],
-  ['bytes_5fto_5finteger_10',['bytes_to_integer',['../df/df5/namespacemal__toolkit.html#a6dd69b1a3c078b983b60645afa17b00c',1,'mal_toolkit']]],
-  ['bytes_5fto_5fuint16_11',['bytes_to_uint16',['../df/df5/namespacemal__toolkit.html#a88b9a21f044ab10a8d5258658b0cfd66',1,'mal_toolkit']]],
-  ['bytes_5fto_5fuint32_12',['bytes_to_uint32',['../df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df',1,'mal_toolkit']]],
-  ['bytes_5fto_5fuint64_13',['bytes_to_uint64',['../df/df5/namespacemal__toolkit.html#ad015fb31669060c7890534f7db7541a6',1,'mal_toolkit']]]
+  ['bytes_5fto_5fuint16_10',['bytes_to_uint16',['../df/df5/namespacemal__toolkit.html#a88b9a21f044ab10a8d5258658b0cfd66',1,'mal_toolkit']]],
+  ['bytes_5fto_5fuint32_11',['bytes_to_uint32',['../df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df',1,'mal_toolkit']]],
+  ['bytes_5fto_5fuint64_12',['bytes_to_uint64',['../df/df5/namespacemal__toolkit.html#ad015fb31669060c7890534f7db7541a6',1,'mal_toolkit']]]
 ];

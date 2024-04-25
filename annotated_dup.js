@@ -9,16 +9,15 @@ var annotated_dup =
       ] ],
       [ "DerivedPacket", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html", "dd/d2b/classmal__packet__weaver_1_1_derived_packet" ],
       [ "DispatcherSession", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session.html", "d3/dbd/classmal__packet__weaver_1_1_dispatcher_session" ],
+      [ "future_failed", "d2/d01/classmal__packet__weaver_1_1future__failed.html", null ],
       [ "Packet", "d2/d9d/classmal__packet__weaver_1_1_packet.html", "d2/d9d/classmal__packet__weaver_1_1_packet" ],
       [ "PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher" ],
       [ "PacketFactory", "da/d61/classmal__packet__weaver_1_1_packet_factory.html", "da/d61/classmal__packet__weaver_1_1_packet_factory" ],
       [ "PacketTypeRegistrationHelper", "db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html", "db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper" ],
       [ "PacketTypeRegistrationHelperNoexcept", "df/d04/structmal__packet__weaver_1_1_packet_type_registration_helper_noexcept.html", null ],
-      [ "portable_binary_iarchive", "d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html", "d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive" ],
-      [ "portable_binary_iarchive_exception", "d2/dc8/classmal__packet__weaver_1_1portable__binary__iarchive__exception.html", "d2/dc8/classmal__packet__weaver_1_1portable__binary__iarchive__exception" ],
-      [ "portable_binary_oarchive", "d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html", "d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive" ],
-      [ "portable_binary_oarchive_exception", "d7/d38/classmal__packet__weaver_1_1portable__binary__oarchive__exception.html", "d7/d38/classmal__packet__weaver_1_1portable__binary__oarchive__exception" ],
-      [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ]
+      [ "Session", "d8/d39/classmal__packet__weaver_1_1_session.html", "d8/d39/classmal__packet__weaver_1_1_session" ],
+      [ "SignalHandler", "dc/db6/classmal__packet__weaver_1_1_signal_handler.html", "dc/db6/classmal__packet__weaver_1_1_signal_handler" ],
+      [ "timeout_exception", "d9/dcc/classmal__packet__weaver_1_1timeout__exception.html", null ]
     ] ],
     [ "mal_toolkit", "df/df5/namespacemal__toolkit.html", [
       [ "_template_detail", "d8/de8/namespacemal__toolkit_1_1__template__detail.html", [

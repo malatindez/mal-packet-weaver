@@ -33,8 +33,7 @@ var NAVTREE =
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ],
-        [ "Enumerator", "namespacemembers_eval.html", null ]
+        [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
     [ "Concepts", "concepts.html", "concepts" ],
@@ -43,11 +42,9 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
-        [ "Enumerator", "functions_eval.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -64,11 +61,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d9d/classmal__packet__weaver_1_1_packet.html#a09767662dde9e0e2be5c3d7c6541fb62",
-"d4/da0/string_8hpp.html#a0e2eca44df5c6fad4ccfc2fd5be64e4c",
-"d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html#a10d59abfca1883c88814d922a489e585",
-"db/d8f/classmal__toolkit_1_1_timer.html#a0b6acb8b48a034bb92d1e0ada31dfadc",
-"functions_f.html"
+"d3/d48/packet-impl_2packet_8hpp.html",
+"d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a9d9a770f61d399861650209edf4480e4",
+"da/d1a/classmal__packet__weaver_1_1crypto_1_1_key.html#a664b8b86221273118efe7ccefe355a8d",
+"dd/dc6/backoffs_8hpp.html#a19671c50dc058ec01ea4b470e49d5e6c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

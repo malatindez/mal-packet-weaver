@@ -5,6 +5,7 @@ var classmal__packet__weaver_1_1_derived_packet =
     [ "deserialize", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1622df3e4ea56438f22f362cf1bd77b9", null ],
     [ "expired", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a573235a5877f469654754d62d85bbdd3", null ],
     [ "get_packet_time_alive", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#aec516b07bc3b09b17878bfd42004243c", null ],
+    [ "packet_name", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a873e962126d774aceb789772af32445c", null ],
     [ "serialize", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a75b93add84b9e5adfd5e1070c87a1544", null ],
     [ "serialize_to_bytearray", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#acc2b05e779546c118d6fbb5a18499aa5", null ],
     [ "timestamp", "dd/d2b/classmal__packet__weaver_1_1_derived_packet.html#a1b353f8d666972864724e49b94e9184a", null ],

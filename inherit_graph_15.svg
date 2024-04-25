@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="da/d61/classmal__packet__weaver_1_1_packet_factory.html" target="_top" xlink:title="A class responsible for registering and creating packet deserializers.">
+<g id="a_Node000000"><a xlink:href="dc/db6/classmal__packet__weaver_1_1_signal_handler.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="99.25,-30.5 0,-30.5 0,0 99.25,0 99.25,-30.5"/>
 <text text-anchor="start" x="8" y="-17" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="49.62" y="-5.75" font-family="Times,serif" font-size="10.00">PacketFactory</text>
+<text text-anchor="middle" x="49.62" y="-5.75" font-family="Times,serif" font-size="10.00">SignalHandler</text>
 </a>
 </g>
 </g>

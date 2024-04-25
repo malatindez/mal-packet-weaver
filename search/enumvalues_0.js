@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['endian_5fbig_0',['endian_big',['../d6/de9/namespacemal__packet__weaver.html#a0e1f6e572f9899848ed8cfb7c975a140affaacfd1e23cf2e9bef5b3c9f94f6c96',1,'mal_packet_weaver']]],
-  ['endian_5flittle_1',['endian_little',['../d6/de9/namespacemal__packet__weaver.html#a0e1f6e572f9899848ed8cfb7c975a140a44820efa4579359d8f22c3e03e7b1f99',1,'mal_packet_weaver']]]
+  ['kgcc_0',['kGCC',['../d6/d11/namespacemal__toolkit_1_1endianness.html#a52efb6cae970de374672b3e576f3df5eace2dd44d386a20f68215c5d8fd0189c0',1,'mal_toolkit::endianness']]],
+  ['kicc_1',['kICC',['../d6/d11/namespacemal__toolkit_1_1endianness.html#a52efb6cae970de374672b3e576f3df5ea6727ffbb2e390e5a78b2fc9c5c495c49',1,'mal_toolkit::endianness']]],
+  ['kmsvc_2',['kMSVC',['../d6/d11/namespacemal__toolkit_1_1endianness.html#a52efb6cae970de374672b3e576f3df5ea9208582a59210ee83ee2553219d6c941',1,'mal_toolkit::endianness']]],
+  ['kunknown_3',['kUnknown',['../d6/d11/namespacemal__toolkit_1_1endianness.html#a52efb6cae970de374672b3e576f3df5ea25c2dc47991b3df171ed5192bcf70390',1,'mal_toolkit::endianness']]]
 ];

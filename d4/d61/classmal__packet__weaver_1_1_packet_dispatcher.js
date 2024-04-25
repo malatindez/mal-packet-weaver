@@ -29,6 +29,7 @@ var classmal__packet__weaver_1_1_packet_dispatcher =
     [ "promise_filter_map_input_", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#aac1276b4590a748c185776ab718ffe9b", null ],
     [ "promise_map_", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af5fb882d463fa3ae3df7a87bcce7c03d", null ],
     [ "promise_map_input_", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#af2122f62654d17488af789adb2819c62", null ],
+    [ "signal_handler_", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a658d694fda78545e02cc58aa8f86b49d", null ],
     [ "subsystem_handlers_", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a770040542353e2a76fe87d513bdd22e0", null ],
     [ "subsystem_handlers_input_", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a62d2ef83fa7dc0e43d319b921931153e", null ],
     [ "unprocessed_packets_", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2924ef6b5846ef8e303af1138a669db0", null ],

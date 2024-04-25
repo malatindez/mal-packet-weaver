@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flush_0',['flush',['../d1/d3a/structmal__toolkit_1_1_measurer.html#a42764823fc67a09f243e462dae776338',1,'mal_toolkit::Measurer']]]
+  ['generator_0',['generator',['../da/dbb/classmal__toolkit_1_1uuid_1_1_u_u_i_d_generator.html#aff7cc3bcbd0c441877f3f7e4335e937e',1,'mal_toolkit::uuid::UUIDGenerator']]]
 ];

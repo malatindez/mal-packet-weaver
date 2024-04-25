@@ -109,6 +109,7 @@ $(function(){initNavTree('dd/d3a/common_8hpp.html','../../'); initResizable(); }
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">common.hpp File Reference</div></div>
@@ -124,19 +125,23 @@ $(function(){initNavTree('dd/d3a/common_8hpp.html','../../'); initResizable(); }
 <code>#include &lt;boost/asio/steady_timer.hpp&gt;</code><br />
 <code>#include &lt;boost/asio/streambuf.hpp&gt;</code><br />
 <code>#include &lt;boost/asio/write.hpp&gt;</code><br />
+<code>#include &lt;boost/asio/thread_pool.hpp&gt;</code><br />
 <code>#include &lt;boost/bind/bind.hpp&gt;</code><br />
 <code>#include &lt;boost/endian/conversion.hpp&gt;</code><br />
 <code>#include &lt;boost/lockfree/queue.hpp&gt;</code><br />
 <code>#include &lt;boost/range/begin.hpp&gt;</code><br />
 <code>#include &lt;boost/range/end.hpp&gt;</code><br />
-<code>#include &lt;boost/serialization/base_object.hpp&gt;</code><br />
-<code>#include &lt;boost/serialization/serialization.hpp&gt;</code><br />
+<code>#include &lt;boost/thread.hpp&gt;</code><br />
 <code>#include &lt;deque&gt;</code><br />
 <code>#include &lt;future&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;queue&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;cereal/cereal.hpp&gt;</code><br />
+<code>#include &lt;cereal/types/string.hpp&gt;</code><br />
+<code>#include &lt;cereal/types/map.hpp&gt;</code><br />
+<code>#include &lt;cereal/archives/portable_binary.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/d8a/mal-toolkit_8hpp_source.html">mal-toolkit/mal-toolkit.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for common.hpp:</div>
@@ -151,22 +156,34 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="../../dd/d3a/common_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcc/classmal__packet__weaver_1_1timeout__exception.html">mal_packet_weaver::timeout_exception</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d01/classmal__packet__weaver_1_1future__failed.html">mal_packet_weaver::future_failed</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html">mal_packet_weaver::SignalHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:d6/de9/namespacemal__packet__weaver" id="r_d6/de9/namespacemal__packet__weaver"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></td></tr>
 <tr class="memdesc:d6/de9/namespacemal__packet__weaver"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the main namespace for the Mal <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets.">Packet</a> Weaver library. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/d0f/namespacemal__packet__weaver_1_1__await__future__impl" id="r_da/d0f/namespacemal__packet__weaver_1_1__await__future__impl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0f/namespacemal__packet__weaver_1_1__await__future__impl.html">mal_packet_weaver::_await_future_impl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af2c5029afaa161f2ddd273bc2f46d4f5" id="r_af2c5029afaa161f2ddd273bc2f46d4f5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Executor  = boost::asio::any_io_executor&gt; </td></tr>
-<tr class="memitem:af2c5029afaa161f2ddd273bc2f46d4f5"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; T, Executor &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5">mal_packet_weaver::await_future</a> (std::future&lt; T &gt; &amp;fut, Executor ex)</td></tr>
-<tr class="memdesc:af2c5029afaa161f2ddd273bc2f46d4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaiting an std::future with Boost.Asio integration.  <br /></td></tr>
-<tr class="separator:af2c5029afaa161f2ddd273bc2f46d4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0496058ec5d421a33221ddcc2512acb" id="r_ab0496058ec5d421a33221ddcc2512acb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ChronoType , typename Executor  = boost::asio::any_io_executor&gt; </td></tr>
-<tr class="memitem:ab0496058ec5d421a33221ddcc2512acb"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; T, Executor &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#ab0496058ec5d421a33221ddcc2512acb">mal_packet_weaver::await_future</a> (std::future&lt; T &gt; &amp;fut, Executor ex, ChronoType timeout)</td></tr>
-<tr class="memdesc:ab0496058ec5d421a33221ddcc2512acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awaiting an std::future with timeout and Boost.Asio integration.  <br /></td></tr>
-<tr class="separator:ab0496058ec5d421a33221ddcc2512acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0661b6f06a975407cd625df02d1be6e1" id="r_a0661b6f06a975407cd625df02d1be6e1"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ChronoType , typename Executor &gt; </td></tr>
+<tr class="memitem:a0661b6f06a975407cd625df02d1be6e1"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d0f/namespacemal__packet__weaver_1_1__await__future__impl.html#a0661b6f06a975407cd625df02d1be6e1">mal_packet_weaver::_await_future_impl::await_future</a> (Executor &amp;executor, std::future&lt; T &gt; &amp;fut, ChronoType timeout)</td></tr>
+<tr class="separator:a0661b6f06a975407cd625df02d1be6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048b2057595e400350d161d2af937f46" id="r_a048b2057595e400350d161d2af937f46"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Executor &gt; </td></tr>
+<tr class="memitem:a048b2057595e400350d161d2af937f46"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a048b2057595e400350d161d2af937f46">mal_packet_weaver::await_future</a> (Executor &amp;executor, std::future&lt; T &gt; &amp;fut)</td></tr>
+<tr class="separator:a048b2057595e400350d161d2af937f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22da1b2c34616eea8964876fb4330bbb" id="r_a22da1b2c34616eea8964876fb4330bbb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ChronoType , typename Executor &gt; </td></tr>
+<tr class="memitem:a22da1b2c34616eea8964876fb4330bbb"><td class="memTemplItemLeft" align="right" valign="top">boost::asio::awaitable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html#a22da1b2c34616eea8964876fb4330bbb">mal_packet_weaver::await_future</a> (Executor &amp;executor, std::future&lt; T &gt; &amp;fut, ChronoType timeout)</td></tr>
+<tr class="separator:a22da1b2c34616eea8964876fb4330bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -174,7 +191,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dd/d3a/common_8hpp.html">common.hpp</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 00:02:07 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 18:12:50 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

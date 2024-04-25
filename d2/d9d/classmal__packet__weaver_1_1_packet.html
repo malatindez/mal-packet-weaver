@@ -146,6 +146,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a955d2445a5fa0b1b4573a71163cb8d2b" id="r_a955d2445a5fa0b1b4573a71163cb8d2b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a955d2445a5fa0b1b4573a71163cb8d2b">~Packet</a> ()=default</td></tr>
 <tr class="memdesc:a955d2445a5fa0b1b4573a71163cb8d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets.">Packet</a> class.  <br /></td></tr>
 <tr class="separator:a955d2445a5fa0b1b4573a71163cb8d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873e962126d774aceb789772af32445c" id="r_a873e962126d774aceb789772af32445c"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a873e962126d774aceb789772af32445c">packet_name</a> () const =0</td></tr>
+<tr class="separator:a873e962126d774aceb789772af32445c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabce2fb07605261d7d4c79feb187c634" id="r_aabce2fb07605261d7d4c79feb187c634"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabce2fb07605261d7d4c79feb187c634">serialize_to_bytearray</a> (<a class="el" href="../../d8/d99/structmal__toolkit_1_1_byte_array.html">ByteArray</a> &amp;buffer) const =0</td></tr>
 <tr class="memdesc:aabce2fb07605261d7d4c79feb187c634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the packet into a ByteArray.  <br /></td></tr>
 <tr class="separator:aabce2fb07605261d7d4c79feb187c634"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,13 +187,13 @@ Static Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ac98d07dd8f7b70e16ccb9a01abf56b9c" id="r_ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac98d07dd8f7b70e16ccb9a01abf56b9c">boost::serialization::access</a></td></tr>
-<tr class="separator:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f44cbb59a08132f4c843e5225bba0e" id="r_ab2f44cbb59a08132f4c843e5225bba0e"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2f44cbb59a08132f4c843e5225bba0e">cereal::access</a></td></tr>
+<tr class="separator:ab2f44cbb59a08132f4c843e5225bba0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for all packets. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e6ffcaf80d9d63e0680967ea79a4014" name="a7e6ffcaf80d9d63e0680967ea79a4014"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e6ffcaf80d9d63e0680967ea79a4014">&#9670;&#160;</a></span>Packet() <span class="overload">[1/2]</span></h2>
@@ -222,7 +224,7 @@ Friends</h2></td></tr>
 
 <p>Constructor for <a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html" title="Base class for all packets.">Packet</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,7 +307,7 @@ Friends</h2></td></tr>
 
 <p>Check if the packet has expired based on its time-to-live. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00073">73</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -339,7 +341,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the time elapsed since the packet was received. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -378,6 +380,31 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a873e962126d774aceb789772af32445c" name="a873e962126d774aceb789772af32445c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873e962126d774aceb789772af32445c">&#9670;&#160;</a></span>packet_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char * mal_packet_weaver::Packet::packet_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a75b93add84b9e5adfd5e1070c87a1544" name="a75b93add84b9e5adfd5e1070c87a1544"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75b93add84b9e5adfd5e1070c87a1544">&#9670;&#160;</a></span>serialize()</h2>
 
@@ -407,7 +434,7 @@ template&lt;class Archive &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,13 +492,13 @@ template&lt;class Archive &gt; </div>
 
 <p>Get the timestamp when the packet was received. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="ac98d07dd8f7b70e16ccb9a01abf56b9c" name="ac98d07dd8f7b70e16ccb9a01abf56b9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac98d07dd8f7b70e16ccb9a01abf56b9c">&#9670;&#160;</a></span>boost::serialization::access</h2>
+<a id="ab2f44cbb59a08132f4c843e5225bba0e" name="ab2f44cbb59a08132f4c843e5225bba0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f44cbb59a08132f4c843e5225bba0e">&#9670;&#160;</a></span>cereal::access</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,7 +507,7 @@ template&lt;class Archive &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class boost::serialization::access</td>
+          <td class="memname">friend class cereal::access</td>
         </tr>
       </table>
   </td>
@@ -490,7 +517,7 @@ template&lt;class Archive &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -517,7 +544,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Measurer for packet timestamps. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00047">47</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -535,7 +562,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Time-to-live for the packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -553,7 +580,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Timestamp when the packet was received. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -571,7 +598,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Unique packet ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../d3/d48/packet-impl_2packet_8hpp_source.html">packet.hpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +612,7 @@ template&lt;class Archive &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></li><li class="navelem"><a class="el" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html">Packet</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 00:02:07 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 18:12:51 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

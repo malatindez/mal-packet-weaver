@@ -1,7 +1,9 @@
 <map id="mal_packet_weaver::PacketDispatcher::enqueue_packet" name="mal_packet_weaver::PacketDispatcher::enqueue_packet">
-<area shape="rect" id="Node000001" title="Enqueues a packet for processing." alt="" coords="5,5,172,61"/>
-<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a346f02299048c0c8443aeead2fbf7d23" title="Pushes an input packet to the unprocessed_packets_input_ queue." alt="" coords="220,5,368,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,31,204,31,204,36,172,36"/>
-<area shape="rect" id="Node000003" href="$d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a8008ca251a628a0a8b205b4fae4e42e5" title="Pushes a value into the queue for asynchronous processing." alt="" coords="416,5,623,61"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,31,401,31,401,36,368,36"/>
+<area shape="rect" id="Node000001" title="Enqueues a packet for processing." alt="" coords="5,34,172,90"/>
+<area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a346f02299048c0c8443aeead2fbf7d23" title="Pushes an input packet to the unprocessed_packets_input_ queue." alt="" coords="220,34,368,90"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,59,204,59,204,64,172,64"/>
+<area shape="rect" id="Node000003" href="$dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a033b6d259bc7ea46ba66dc0e13d0908d" title=" " alt="" coords="454,5,586,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,47,438,36,439,41,369,53"/>
+<area shape="rect" id="Node000004" href="$d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a8008ca251a628a0a8b205b4fae4e42e5" title="Pushes a value into the queue for asynchronous processing." alt="" coords="416,70,623,126"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="369,71,401,76,400,81,368,76"/>
 </map>

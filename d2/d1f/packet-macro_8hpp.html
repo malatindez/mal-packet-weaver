@@ -146,13 +146,13 @@ Macros</h2></td></tr>
 <tr class="memitem:ac63a949d63cf98edbca1315df880456b" id="r_ac63a949d63cf98edbca1315df880456b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac63a949d63cf98edbca1315df880456b">MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_INHERITANCE</a>(seq)&#160;&#160;&#160;    BOOST_PP_SEQ_FOR_EACH(<a class="el" href="#af0dc9b59d37de9625e2e8608c0ecf677">MAL_PACKET_WEAVER_DECLARE_BASE_CLASS_INHERITANCE</a>, _, seq)</td></tr>
 <tr class="memdesc:ac63a949d63cf98edbca1315df880456b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare inheritance for multiple base classes.  <br /></td></tr>
 <tr class="separator:ac63a949d63cf98edbca1315df880456b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0eadd4b2ae545320677b6b6d8556d72" id="r_af0eadd4b2ae545320677b6b6d8556d72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0eadd4b2ae545320677b6b6d8556d72">MAL_PACKET_WEAVER_DECLARE_BASE_CLASS_SERIALIZATION</a>(r,  _,  elem)&#160;&#160;&#160;    ar &amp;boost::serialization::base_object&lt;elem&gt;(*this);</td></tr>
+<tr class="memitem:af0eadd4b2ae545320677b6b6d8556d72" id="r_af0eadd4b2ae545320677b6b6d8556d72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0eadd4b2ae545320677b6b6d8556d72">MAL_PACKET_WEAVER_DECLARE_BASE_CLASS_SERIALIZATION</a>(r,  _,  elem)&#160;&#160;&#160;    ar(CEREAL_NVP(cereal::base_class&lt;elem&gt;(this)));</td></tr>
 <tr class="memdesc:af0eadd4b2ae545320677b6b6d8556d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal macro to declare serialization for multiple base classes.  <br /></td></tr>
 <tr class="separator:af0eadd4b2ae545320677b6b6d8556d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa86e31d452e78df8b06c6e08494eee16" id="r_aa86e31d452e78df8b06c6e08494eee16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa86e31d452e78df8b06c6e08494eee16">MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION</a>(seq)&#160;&#160;&#160;    BOOST_PP_SEQ_FOR_EACH(<a class="el" href="#af0eadd4b2ae545320677b6b6d8556d72">MAL_PACKET_WEAVER_DECLARE_BASE_CLASS_SERIALIZATION</a>, _, seq)</td></tr>
 <tr class="memdesc:aa86e31d452e78df8b06c6e08494eee16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to declare serialization for multiple base classes.  <br /></td></tr>
 <tr class="separator:aa86e31d452e78df8b06c6e08494eee16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b706484dedac9d68603241e9916a646" id="r_a5b706484dedac9d68603241e9916a646"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b706484dedac9d68603241e9916a646">MAL_PACKET_WEAVER_SERIALIZE_MEMBER</a>(r,  ar,  elem)&#160;&#160;&#160;ar &amp;BOOST_PP_TUPLE_ELEM(1, elem);</td></tr>
+<tr class="memitem:a5b706484dedac9d68603241e9916a646" id="r_a5b706484dedac9d68603241e9916a646"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b706484dedac9d68603241e9916a646">MAL_PACKET_WEAVER_SERIALIZE_MEMBER</a>(r,  ar,  elem)&#160;&#160;&#160;ar(CEREAL_NVP(BOOST_PP_TUPLE_ELEM(1, elem)));</td></tr>
 <tr class="memdesc:a5b706484dedac9d68603241e9916a646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal macro to serialize payload members.  <br /></td></tr>
 <tr class="separator:a5b706484dedac9d68603241e9916a646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30a3317e6b0ed8ceb93f0326c8dd2e92" id="r_a30a3317e6b0ed8ceb93f0326c8dd2e92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30a3317e6b0ed8ceb93f0326c8dd2e92">MAL_PACKET_WEAVER_SERIALIZE_MEMBERS</a>(ar,  seq)&#160;&#160;&#160;BOOST_PP_SEQ_FOR_EACH(<a class="el" href="#a5b706484dedac9d68603241e9916a646">MAL_PACKET_WEAVER_SERIALIZE_MEMBER</a>, ar, seq)</td></tr>
@@ -231,7 +231,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Internal macro to declare inheritance for multiple base classes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -254,14 +254,14 @@ Macros</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">elem</span>&#160;)&#160;&#160;&#160;    ar &amp;boost::serialization::base_object&lt;elem&gt;(*this);</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">elem</span>&#160;)&#160;&#160;&#160;    ar(CEREAL_NVP(cereal::base_class&lt;elem&gt;(this)));</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Internal macro to declare serialization for multiple base classes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -282,7 +282,7 @@ Macros</h2></td></tr>
 
 <p>Macro to declare inheritance for multiple base classes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +303,7 @@ Macros</h2></td></tr>
 
 <p>Macro to declare serialization for multiple base classes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -354,26 +354,29 @@ Macros</h2></td></tr>
 <div class="line">                                 BasePackets)) <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                   \</div>
 <div class="line">    {                                                                                                                \</div>
 <div class="line">    <span class="keyword">public</span>:                                                                                                          \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *<span class="keyword">const</span> static_packet_name = #PacketName;                                         \</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a873e962126d774aceb789772af32445c">packet_name</a>() const final { <span class="keywordflow">return</span> static_packet_name; }                                         \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#ac1b2a62ed867a9fdb7c6548955489e94">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                        \</div>
 <div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                        \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                                   \</div>
 <div class="line">        MAL_PACKET_WEAVER_DECLARE_PAYLOAD_MEMBERS(BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                             \</div>
 <div class="line">        PACKET_BODY                                                                                                  \</div>
 <div class="line">    private:                                                                                                         \</div>
-<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>boost::serialization::access;                                                                   \</div>
+<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>cereal::access;                                                                                 \</div>
 <div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;                                                                                     \</div>
-<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)                                                              \</div>
+<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar)                                                                                  \</div>
 <div class="line">        {                                                                                                            \</div>
-<div class="line">            MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(BOOST_PP_TUPLE_TO_SEQ(BasePackets))                   \</div>
+<div class="line">            MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(BOOST_PP_TUPLE_TO_SEQ(BasePackets))                 \</div>
 <div class="line">            MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                           \</div>
 <div class="line">        }                                                                                                            \</div>
 <div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration;                             \</div>
 <div class="line">    };                                                                                                               \</div>
 <div class="line">    <span class="keyword">inline</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> PacketName::registration;</div>
-<div class="ttc" id="aclassmal__packet__weaver_1_1_derived_packet_html"><div class="ttname"><a href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a></div><div class="ttdoc">A templated class representing a derived packet from the base Packet class.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00109">packet.hpp:110</a></div></div>
-<div class="ttc" id="aclassmal__packet__weaver_1_1_packet_html_a75b93add84b9e5adfd5e1070c87a1544"><div class="ttname"><a href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">mal_packet_weaver::Packet::serialize</a></div><div class="ttdeci">void serialize(Archive &amp;, const unsigned int)</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00085">packet.hpp:85</a></div></div>
-<div class="ttc" id="anamespacemal__packet__weaver_html_ac1b2a62ed867a9fdb7c6548955489e94"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#ac1b2a62ed867a9fdb7c6548955489e94">mal_packet_weaver::UniquePacketID</a></div><div class="ttdeci">uint32_t UniquePacketID</div><div class="ttdoc">Unique identifier for a packet, combining subsystem and packet IDs.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00014">packet.hpp:14</a></div></div>
-<div class="ttc" id="apacket-macro_8hpp_html_ac63a949d63cf98edbca1315df880456b"><div class="ttname"><a href="#ac63a949d63cf98edbca1315df880456b">MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_INHERITANCE</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_INHERITANCE(seq)</div><div class="ttdoc">Macro to declare inheritance for multiple base classes.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00054">packet-macro.hpp:54</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_derived_packet_html"><div class="ttname"><a href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a></div><div class="ttdoc">A templated class representing a derived packet from the base Packet class.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00113">packet.hpp:114</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_packet_html_a75b93add84b9e5adfd5e1070c87a1544"><div class="ttname"><a href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">mal_packet_weaver::Packet::serialize</a></div><div class="ttdeci">void serialize(Archive &amp;, const unsigned int)</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00089">packet.hpp:89</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_packet_html_a873e962126d774aceb789772af32445c"><div class="ttname"><a href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a873e962126d774aceb789772af32445c">mal_packet_weaver::Packet::packet_name</a></div><div class="ttdeci">virtual const char * packet_name() const =0</div></div>
+<div class="ttc" id="anamespacemal__packet__weaver_html_ac1b2a62ed867a9fdb7c6548955489e94"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#ac1b2a62ed867a9fdb7c6548955489e94">mal_packet_weaver::UniquePacketID</a></div><div class="ttdeci">uint32_t UniquePacketID</div><div class="ttdoc">Unique identifier for a packet, combining subsystem and packet IDs.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00016">packet.hpp:16</a></div></div>
+<div class="ttc" id="apacket-macro_8hpp_html_ac63a949d63cf98edbca1315df880456b"><div class="ttname"><a href="#ac63a949d63cf98edbca1315df880456b">MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_INHERITANCE</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_INHERITANCE(seq)</div><div class="ttdoc">Macro to declare inheritance for multiple base classes.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00056">packet-macro.hpp:56</a></div></div>
 <div class="ttc" id="astructmal__packet__weaver_1_1_packet_type_registration_helper_html"><div class="ttname"><a href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper</a></div><div class="ttdoc">Helper class for registering a packet type with the PacketFactory.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d53/packet-factory_8hpp_source.html#l00146">packet-factory.hpp:147</a></div></div>
 </div><!-- fragment -->
 <p>Macro to declare a derived packet class without payload but with a provided body. </p>
@@ -390,7 +393,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00236">236</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00244">244</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -436,16 +439,18 @@ Macros</h2></td></tr>
 <div class="line">                                 BasePackets)) <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                 \</div>
 <div class="line">    {                                                                                                              \</div>
 <div class="line">    <span class="keyword">public</span>:                                                                                                        \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *<span class="keyword">const</span> static_packet_name = #PacketName;                                       \</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a873e962126d774aceb789772af32445c">packet_name</a>() const final { <span class="keywordflow">return</span> static_packet_name; }                                       \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#ac1b2a62ed867a9fdb7c6548955489e94">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                      \</div>
 <div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                      \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                                 \</div>
 <div class="line">        PACKET_BODY                                                                                                \</div>
 <div class="line">    private:                                                                                                       \</div>
-<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>boost::serialization::access;                                                                 \</div>
+<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>cereal::access;                                                                               \</div>
 <div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;                                                                                   \</div>
-<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)                                                            \</div>
+<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar)                                                                                \</div>
 <div class="line">        {                                                                                                          \</div>
-<div class="line">            MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(BOOST_PP_TUPLE_TO_SEQ(BasePackets))                 \</div>
+<div class="line">            MAL_PACKET_WEAVER_DECLARE_BASE_CLASSES_SERIALIZATION(BOOST_PP_TUPLE_TO_SEQ(BasePackets))               \</div>
 <div class="line">        }                                                                                                          \</div>
 <div class="line">        <span class="keyword">static</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> registration;                           \</div>
 <div class="line">    };                                                                                                             \</div>
@@ -464,7 +469,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00202">202</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00208">208</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +513,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="#a38e607e765d0638a1f74d3574b62d0b7">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD</a>(PacketName, BasePackets, Subsystem, ID, TTL, \</div>
 <div class="line">                                                                    <span class="comment">/* nothing */</span>, __VA_ARGS__)</div>
-<div class="ttc" id="apacket-macro_8hpp_html_a38e607e765d0638a1f74d3574b62d0b7"><div class="ttname"><a href="#a38e607e765d0638a1f74d3574b62d0b7">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD(PacketName, BasePackets, Subsystem, ID, TTL, PACKET_BODY,...)</div><div class="ttdoc">Macro to declare a derived packet class without payload but with a provided body.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00236">packet-macro.hpp:236</a></div></div>
+<div class="ttc" id="apacket-macro_8hpp_html_a38e607e765d0638a1f74d3574b62d0b7"><div class="ttname"><a href="#a38e607e765d0638a1f74d3574b62d0b7">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITH_PAYLOAD(PacketName, BasePackets, Subsystem, ID, TTL, PACKET_BODY,...)</div><div class="ttdoc">Macro to declare a derived packet class without payload but with a provided body.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00244">packet-macro.hpp:244</a></div></div>
 </div><!-- fragment -->
 <p>Macro to declare a derived packet class with additional payload. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -523,7 +528,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00270">270</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00280">280</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -562,7 +567,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="#ab78d774033f6bcfc15ce2178f6ce23d9">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a>(PacketName, BasePackets, Subsystem, ID, TTL, \</div>
 <div class="line">                                                                       <span class="comment">/* nothing */</span>)</div>
-<div class="ttc" id="apacket-macro_8hpp_html_ab78d774033f6bcfc15ce2178f6ce23d9"><div class="ttname"><a href="#ab78d774033f6bcfc15ce2178f6ce23d9">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, BasePackets, Subsystem, ID, TTL, PACKET_BODY)</div><div class="ttdoc">Macro to declare a derived packet class without payload but with a provided body and specific paramet...</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00202">packet-macro.hpp:202</a></div></div>
+<div class="ttc" id="apacket-macro_8hpp_html_ab78d774033f6bcfc15ce2178f6ce23d9"><div class="ttname"><a href="#ab78d774033f6bcfc15ce2178f6ce23d9">MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_DECLARE_DERIVED_PACKET_WITH_BODY_WITHOUT_PAYLOAD(PacketName, BasePackets, Subsystem, ID, TTL, PACKET_BODY)</div><div class="ttdoc">Macro to declare a derived packet class without payload but with a provided body and specific paramet...</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00208">packet-macro.hpp:208</a></div></div>
 </div><!-- fragment -->
 <p>Macro to declare a derived packet class without payload but with a provided body. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -576,7 +581,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00283">283</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00293">293</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -646,7 +651,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00335">335</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00345">345</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -715,7 +720,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00354">354</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00364">364</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -779,7 +784,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00300">300</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00310">310</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -843,7 +848,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00318">318</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00328">328</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -878,6 +883,8 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;         \</div>
 <div class="line">    {                                                                                    \</div>
 <div class="line">    <span class="keyword">public</span>:                                                                              \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *<span class="keyword">const</span> static_packet_name = #PacketName;             \</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a873e962126d774aceb789772af32445c">packet_name</a>() const final { <span class="keywordflow">return</span> static_packet_name; }             \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#ac1b2a62ed867a9fdb7c6548955489e94">mal_packet_weaver::UniquePacketID</a> static_unique_id =            \</div>
 <div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                            \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                       \</div>
@@ -941,6 +948,8 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                                  \</div>
 <div class="line">    {                                                                                                             \</div>
 <div class="line">    <span class="keyword">public</span>:                                                                                                       \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *<span class="keyword">const</span> static_packet_name = #PacketName;                                      \</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a873e962126d774aceb789772af32445c">packet_name</a>() const final { <span class="keywordflow">return</span> static_packet_name; }                                      \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#ac1b2a62ed867a9fdb7c6548955489e94">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                     \</div>
 <div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                     \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                                \</div>
@@ -949,9 +958,9 @@ Macros</h2></td></tr>
 <div class="line">                                                                                                                  \</div>
 <div class="line">        PACKET_BODY                                                                                               \</div>
 <div class="line">    private:                                                                                                      \</div>
-<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>boost::serialization::access;                                                                \</div>
+<div class="line">        <span class="keyword">friend</span> <span class="keyword">class </span>cereal::access;                                                                              \</div>
 <div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">class</span> Archive&gt;                                                                                  \</div>
-<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)                                                           \</div>
+<div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a75b93add84b9e5adfd5e1070c87a1544">serialize</a>(Archive &amp;ar)                                                                               \</div>
 <div class="line">        {                                                                                                         \</div>
 <div class="line">            MAL_PACKET_WEAVER_SERIALIZE_MEMBERS(ar, BOOST_PP_VARIADIC_TO_SEQ(__VA_ARGS__))                        \</div>
 <div class="line">        }                                                                                                         \</div>
@@ -959,7 +968,7 @@ Macros</h2></td></tr>
 <div class="line">    };                                                                                                            \</div>
 <div class="line">    <span class="keyword">inline</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> PacketName::registration;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00119">119</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00121">121</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -999,6 +1008,8 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>PacketName final : <span class="keyword">public</span> <a class="code hl_class" href="../../dd/d2b/classmal__packet__weaver_1_1_derived_packet.html">mal_packet_weaver::DerivedPacket</a>&lt;PacketName&gt;                                \</div>
 <div class="line">    {                                                                                                           \</div>
 <div class="line">    <span class="keyword">public</span>:                                                                                                     \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *<span class="keyword">const</span> static_packet_name = #PacketName;                                    \</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="../../d2/d9d/classmal__packet__weaver_1_1_packet.html#a873e962126d774aceb789772af32445c">packet_name</a>() const final { <span class="keywordflow">return</span> static_packet_name; }                                    \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="../../d6/de9/namespacemal__packet__weaver.html#ac1b2a62ed867a9fdb7c6548955489e94">mal_packet_weaver::UniquePacketID</a> static_unique_id =                                   \</div>
 <div class="line">            mal_packet_weaver::CreatePacketID(Subsystem, ID);                                                   \</div>
 <div class="line">        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> time_to_live = TTL;                                                              \</div>
@@ -1009,7 +1020,7 @@ Macros</h2></td></tr>
 <div class="line">    };                                                                                                          \</div>
 <div class="line">    <span class="keyword">inline</span> <a class="code hl_struct" href="../../db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html">mal_packet_weaver::PacketTypeRegistrationHelper&lt;PacketName&gt;</a> PacketName::registration;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00150">150</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1072,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00175">175</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00181">181</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1107,7 +1118,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00188">188</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00194">194</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1148,7 @@ Macros</h2></td></tr>
 
 <p>Internal macro to declare payload members. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1169,7 @@ Macros</h2></td></tr>
 
 <p>Macro to declare payload members using a Boost.PP sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1179,7 +1190,7 @@ Macros</h2></td></tr>
 
 <p>Macro to determine the number of non-empty variadic arguments. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00109">109</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1202,14 +1213,14 @@ Macros</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">elem</span>&#160;)&#160;&#160;&#160;ar &amp;BOOST_PP_TUPLE_ELEM(1, elem);</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">elem</span>&#160;)&#160;&#160;&#160;ar(CEREAL_NVP(BOOST_PP_TUPLE_ELEM(1, elem)));</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Internal macro to serialize payload members. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1234,7 +1245,7 @@ Macros</h2></td></tr>
 
 <p>Macro to serialize payload members using a Boost.PP sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1256,11 +1267,11 @@ Macros</h2></td></tr>
 <div class="line">                                         46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28,   \</div>
 <div class="line">                                         27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \</div>
 <div class="line">                                         7, 6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0)</div>
-<div class="ttc" id="apacket-macro_8hpp_html_ae6e86dbb40fe6f08eaf047488f503b33"><div class="ttname"><a href="#ae6e86dbb40fe6f08eaf047488f503b33">MAL_PACKET_WEAVER_VA_ARGS_COUNT_IMPL</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_VA_ARGS_COUNT_IMPL( _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21, _22, _23, _24, _25, _26, _27, _28, _29, _30, _31, _32, _33, _34, _35, _36, _37, _38, _39, _40, _41, _42, _43, _44, _45, _46, _47, _48, _49, _50, _51, _52, _53, _54, _55, _56, _57, _58, _59, _60, _61, _62, _63, N,...)</div><div class="ttdoc">Internal macro to implement counting of variadic arguments.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00097">packet-macro.hpp:97</a></div></div>
+<div class="ttc" id="apacket-macro_8hpp_html_ae6e86dbb40fe6f08eaf047488f503b33"><div class="ttname"><a href="#ae6e86dbb40fe6f08eaf047488f503b33">MAL_PACKET_WEAVER_VA_ARGS_COUNT_IMPL</a></div><div class="ttdeci">#define MAL_PACKET_WEAVER_VA_ARGS_COUNT_IMPL( _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21, _22, _23, _24, _25, _26, _27, _28, _29, _30, _31, _32, _33, _34, _35, _36, _37, _38, _39, _40, _41, _42, _43, _44, _45, _46, _47, _48, _49, _50, _51, _52, _53, _54, _55, _56, _57, _58, _59, _60, _61, _62, _63, N,...)</div><div class="ttdoc">Internal macro to implement counting of variadic arguments.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1f/packet-macro_8hpp_source.html#l00099">packet-macro.hpp:99</a></div></div>
 </div><!-- fragment -->
 <p>Macro to count the number of variadic arguments (up to 62 arguments). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1600,7 +1611,7 @@ Macros</h2></td></tr>
 
 <p>Internal macro to implement counting of variadic arguments. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00097">97</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../d2/d1f/packet-macro_8hpp_source.html">packet-macro.hpp</a>.</p>
 
 </div>
 </div>
@@ -1610,7 +1621,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_4576bb29f2e361ee3b0cab13520d23e7.html">packet-impl</a></li><li class="navelem"><a class="el" href="../../d2/d1f/packet-macro_8hpp.html">packet-macro.hpp</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 00:02:07 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 18:12:50 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

@@ -1,5 +1,7 @@
 <map id="mal_packet_weaver::PacketDispatcher::push_packet" name="mal_packet_weaver::PacketDispatcher::push_packet">
-<area shape="rect" id="Node000001" title="Pushes an input packet to the unprocessed_packets_input_ queue." alt="" coords="5,5,154,61"/>
-<area shape="rect" id="Node000002" href="$d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a8008ca251a628a0a8b205b4fae4e42e5" title="Pushes a value into the queue for asynchronous processing." alt="" coords="202,5,409,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,31,186,31,186,36,154,36"/>
+<area shape="rect" id="Node000001" title="Pushes an input packet to the unprocessed_packets_input_ queue." alt="" coords="5,34,154,90"/>
+<area shape="rect" id="Node000002" href="$dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a033b6d259bc7ea46ba66dc0e13d0908d" title=" " alt="" coords="239,5,372,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,47,224,36,224,41,154,53"/>
+<area shape="rect" id="Node000003" href="$d5/d60/classmal__packet__weaver_1_1_packet_dispatcher_1_1_synchronization_wrapper.html#a8008ca251a628a0a8b205b4fae4e42e5" title="Pushes a value into the queue for asynchronous processing." alt="" coords="202,70,409,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,71,187,76,186,81,153,76"/>
 </map>

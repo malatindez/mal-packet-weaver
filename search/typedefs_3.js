@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['detail_5fcommon_5fiarchive_0',['detail_common_iarchive',['../d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html#a05d33a216e76d9369d13f26acc84022d',1,'mal_packet_weaver::portable_binary_iarchive']]],
-  ['detail_5fcommon_5foarchive_1',['detail_common_oarchive',['../d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html#afbf79c684cdda6ae5309208eae1f734d',1,'mal_packet_weaver::portable_binary_oarchive']]]
+  ['exponentialbackoffms_0',['ExponentialBackoffMs',['../df/df5/namespacemal__toolkit.html#af632a0e63d8d5929b6d2308fd626b425',1,'mal_toolkit']]],
+  ['exponentialbackoffns_1',['ExponentialBackoffNs',['../df/df5/namespacemal__toolkit.html#af1cb2e7eef359560034da1d31679125d',1,'mal_toolkit']]],
+  ['exponentialbackoffsec_2',['ExponentialBackoffSec',['../df/df5/namespacemal__toolkit.html#a19671c50dc058ec01ea4b470e49d5e6c',1,'mal_toolkit']]],
+  ['exponentialbackoffus_3',['ExponentialBackoffUs',['../df/df5/namespacemal__toolkit.html#a47a07f934074cab8855c8872eb9eb593',1,'mal_toolkit']]]
 ];

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['exponentialbackoffms_0',['ExponentialBackoffMs',['../df/df5/namespacemal__toolkit.html#af632a0e63d8d5929b6d2308fd626b425',1,'mal_toolkit']]],
-  ['exponentialbackoffns_1',['ExponentialBackoffNs',['../df/df5/namespacemal__toolkit.html#af1cb2e7eef359560034da1d31679125d',1,'mal_toolkit']]],
-  ['exponentialbackoffsec_2',['ExponentialBackoffSec',['../df/df5/namespacemal__toolkit.html#a19671c50dc058ec01ea4b470e49d5e6c',1,'mal_toolkit']]],
-  ['exponentialbackoffus_3',['ExponentialBackoffUs',['../df/df5/namespacemal__toolkit.html#a47a07f934074cab8855c8872eb9eb593',1,'mal_toolkit']]]
+  ['handler_5ftuple_0',['handler_tuple',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a698a3441a2d6d08294cf544358775bbe',1,'mal_packet_weaver::PacketDispatcher']]],
+  ['highresolutiontimer_1',['HighResolutionTimer',['../df/df5/namespacemal__toolkit.html#a7ebb06f29739b9bcd770205f6fbfaeaf',1,'mal_toolkit']]]
 ];

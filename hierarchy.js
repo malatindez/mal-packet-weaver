@@ -1,22 +1,6 @@
 var hierarchy =
 [
-    [ "boost::archive::archive_exception", "d1/d03/classboost_1_1archive_1_1archive__exception.html", [
-      [ "mal_packet_weaver::portable_binary_iarchive_exception", "d2/dc8/classmal__packet__weaver_1_1portable__binary__iarchive__exception.html", null ],
-      [ "mal_packet_weaver::portable_binary_oarchive_exception", "d7/d38/classmal__packet__weaver_1_1portable__binary__oarchive__exception.html", null ]
-    ] ],
-    [ "boost::archive::basic_binary_iprimitive", "dd/d4d/classboost_1_1archive_1_1basic__binary__iprimitive.html", [
-      [ "mal_packet_weaver::portable_binary_iarchive", "d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html", null ]
-    ] ],
-    [ "boost::archive::basic_binary_oprimitive", "df/dc4/classboost_1_1archive_1_1basic__binary__oprimitive.html", [
-      [ "mal_packet_weaver::portable_binary_oarchive", "d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html", null ]
-    ] ],
     [ "mal_toolkit::CallbackSystem< F >", "dd/d83/classmal__toolkit_1_1_callback_system.html", null ],
-    [ "boost::archive::detail::common_iarchive", "dd/dd2/classboost_1_1archive_1_1detail_1_1common__iarchive.html", [
-      [ "mal_packet_weaver::portable_binary_iarchive", "d8/d62/classmal__packet__weaver_1_1portable__binary__iarchive.html", null ]
-    ] ],
-    [ "boost::archive::detail::common_oarchive", "d4/d77/classboost_1_1archive_1_1detail_1_1common__oarchive.html", [
-      [ "mal_packet_weaver::portable_binary_oarchive", "d1/d25/classmal__packet__weaver_1_1portable__binary__oarchive.html", null ]
-    ] ],
     [ "std::enable_shared_from_this", null, [
       [ "mal_packet_weaver::PacketDispatcher", "d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html", null ],
       [ "mal_packet_weaver::Session", "d8/d39/classmal__packet__weaver_1_1_session.html", null ]
@@ -25,6 +9,12 @@ var hierarchy =
     [ "mal_packet_weaver::crypto::EncryptionInterface", "d7/da7/classmal__packet__weaver_1_1crypto_1_1_encryption_interface.html", null ],
     [ "mal_toolkit::Measurer< clock >::Entry", "db/ddb/structmal__toolkit_1_1_measurer_1_1_entry.html", null ],
     [ "Entry", "d7/da8/struct_measurer_1_1_entry.html", null ],
+    [ "std::exception", null, [
+      [ "std::runtime_error", null, [
+        [ "mal_packet_weaver::future_failed", "d2/d01/classmal__packet__weaver_1_1future__failed.html", null ],
+        [ "mal_packet_weaver::timeout_exception", "d9/dcc/classmal__packet__weaver_1_1timeout__exception.html", null ]
+      ] ]
+    ] ],
     [ "mal_toolkit::ExponentialBackoff< ChronoType >", "d1/da7/classmal__toolkit_1_1_exponential_backoff.html", null ],
     [ "mal_toolkit::_template_detail::function_traits< Func >", "da/d54/structmal__toolkit_1_1__template__detail_1_1function__traits.html", null ],
     [ "mal_toolkit::_template_detail::function_traits< std::function< Ret(Args...)> >", "da/d9a/structmal__toolkit_1_1__template__detail_1_1function__traits_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4.html", null ],
@@ -72,6 +62,7 @@ var hierarchy =
     [ "mal_toolkit::return_type< R(C::*)(Args...) volatile && >", "de/d97/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_6_6_01_4.html", null ],
     [ "mal_toolkit::return_type< R(C::*)(Args...) volatile >", "d6/d1d/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_4.html", null ],
     [ "mal_toolkit::return_type< R(C::*)(Args...)>", "d2/d15/structmal__toolkit_1_1return__type_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4.html", null ],
+    [ "mal_packet_weaver::SignalHandler", "dc/db6/classmal__packet__weaver_1_1_signal_handler.html", null ],
     [ "std::span< T >", null, [
       [ "mal_toolkit::ByteView", "d8/dab/structmal__toolkit_1_1_byte_view.html", [
         [ "mal_packet_weaver::crypto::KeyView", "d2/d3b/classmal__packet__weaver_1_1crypto_1_1_key_view.html", null ]

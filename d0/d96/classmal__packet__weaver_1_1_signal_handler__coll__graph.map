@@ -1,0 +1,20 @@
+<map id="mal_packet_weaver::SignalHandler" name="mal_packet_weaver::SignalHandler">
+<area shape="rect" id="Node000001" title=" " alt="" coords="91,424,223,465"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,321,95,346"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,359,74,379,88,398,118,422,115,426,84,402,69,382,58,362"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="119,321,195,346"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,362,159,424,154,424,154,362"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="218,306,370,361"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="249,373,183,426,180,422,246,369"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="126,200,268,241"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="226,250,272,303,268,307,222,254"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="84,94,174,120"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="142,132,164,172,182,198,178,201,159,175,138,135"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="198,94,329,120"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="209,130,194,145,189,158,188,172,192,199,187,200,183,172,184,157,190,142,205,126"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="295,5,333,31"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="302,46,273,95,268,92,297,43"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="313,146,419,172"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="326,44,364,144,359,146,321,46"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="358,187,308,306,303,304,353,185"/>
+</map>

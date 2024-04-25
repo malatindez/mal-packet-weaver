@@ -1,9 +1,7 @@
 <map id="mal_toolkit::Assert" name="mal_toolkit::Assert">
-<area shape="rect" id="Node000001" title="Asserts a condition with customizable behavior based on debug mode." alt="" coords="203,100,325,126"/>
+<area shape="rect" id="Node000001" title="Asserts a condition with customizable behavior based on debug mode." alt="" coords="203,60,325,86"/>
 <area shape="rect" id="Node000002" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a1e7e2c9e624018e4a1046297453e0596" title="Wait until the packet is registered in the dispatch system and return as soon as possible." alt="" coords="5,5,155,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,96,145,64,147,59,220,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,59,155,52,156,47,188,54"/>
 <area shape="rect" id="Node000003" href="$d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a5fa270876e67889a7524a186b297cd11" title="Wait until a packet satisfying the filter condition is registered in the dispatch system and return a..." alt="" coords="5,85,155,141"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,116,155,116,155,111,187,111"/>
-<area shape="rect" id="Node000004" href="$df/df5/namespacemal__toolkit.html#a6dd69b1a3c078b983b60645afa17b00c" title="Convert a ByteView to an integer value of the specified type." alt="" coords="23,165,137,206"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="216,135,135,167,133,162,214,130"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,92,156,99,155,94,187,87"/>
 </map>

@@ -8,10 +8,5 @@ var searchData=
   ['packet_2dmacro_2ehpp_5',['packet-macro.hpp',['../d2/d1f/packet-macro_8hpp.html',1,'']]],
   ['packet_2ecpp_6',['packet.cpp',['../d3/dae/packet_8cpp.html',1,'']]],
   ['packet_2ehpp_7',['packet.hpp',['../d3/d48/packet-impl_2packet_8hpp.html',1,'(Global Namespace)'],['../d2/d3f/packet_8hpp.html',1,'(Global Namespace)']]],
-  ['portable_2dbinary_2darchive_2ehpp_8',['portable-binary-archive.hpp',['../df/d44/portable-binary-archive_8hpp.html',1,'']]],
-  ['portable_2dbinary_2diarchive_2ecpp_9',['portable-binary-iarchive.cpp',['../dc/dab/portable-binary-iarchive_8cpp.html',1,'']]],
-  ['portable_2dbinary_2diarchive_2ehpp_10',['portable-binary-iarchive.hpp',['../dc/dcd/portable-binary-iarchive_8hpp.html',1,'']]],
-  ['portable_2dbinary_2doarchive_2ecpp_11',['portable-binary-oarchive.cpp',['../da/d7f/portable-binary-oarchive_8cpp.html',1,'']]],
-  ['portable_2dbinary_2doarchive_2ehpp_12',['portable-binary-oarchive.hpp',['../d7/dda/portable-binary-oarchive_8hpp.html',1,'']]],
-  ['posix_2ehpp_13',['posix.hpp',['../d5/d02/posix_8hpp.html',1,'']]]
+  ['posix_2ehpp_8',['posix.hpp',['../d5/d02/posix_8hpp.html',1,'']]]
 ];

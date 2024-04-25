@@ -11,5 +11,6 @@ var searchData=
   ['fulfill_5fhandlers_8',['fulfill_handlers',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a777e68fdca73f97496bc360835a62c32',1,'mal_packet_weaver::PacketDispatcher']]],
   ['fulfill_5fpromises_9',['fulfill_promises',['../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2ebc44d095b5fe14aaf3e851c3deef91',1,'mal_packet_weaver::PacketDispatcher']]],
   ['function_5ftraits_10',['function_traits',['../da/d54/structmal__toolkit_1_1__template__detail_1_1function__traits.html',1,'mal_toolkit::_template_detail']]],
-  ['function_5ftraits_3c_20std_3a_3afunction_3c_20ret_28args_2e_2e_2e_29_3e_20_3e_11',['function_traits&lt; std::function&lt; Ret(Args...)&gt; &gt;',['../da/d9a/structmal__toolkit_1_1__template__detail_1_1function__traits_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4.html',1,'mal_toolkit::_template_detail']]]
+  ['function_5ftraits_3c_20std_3a_3afunction_3c_20ret_28args_2e_2e_2e_29_3e_20_3e_11',['function_traits&lt; std::function&lt; Ret(Args...)&gt; &gt;',['../da/d9a/structmal__toolkit_1_1__template__detail_1_1function__traits_3_01std_1_1function_3_01_ret_07_args_8_8_8_08_4_01_4.html',1,'mal_toolkit::_template_detail']]],
+  ['future_5ffailed_12',['future_failed',['../d2/d01/classmal__packet__weaver_1_1future__failed.html',1,'mal_packet_weaver']]]
 ];

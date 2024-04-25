@@ -1,5 +1,0 @@
-<map id="mal_packet_weaver::PacketDispatcher::pop_inputs" name="mal_packet_weaver::PacketDispatcher::pop_inputs">
-<area shape="rect" id="Node000001" title="Pops input packets from input queues to local maps for processing." alt="" coords="5,5,148,61"/>
-<area shape="rect" id="Node000002" href="$d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5" title="Awaiting an std::future with Boost.Asio integration." alt="" coords="196,13,328,54"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,31,180,31,180,36,148,36"/>
-</map>

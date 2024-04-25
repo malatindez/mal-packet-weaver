@@ -130,13 +130,13 @@ $(function(){initNavTree('dd/d3a/common_8hpp_source.html','../../'); initResizab
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;boost/asio/steady_timer.hpp&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;boost/asio/streambuf.hpp&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;boost/asio/write.hpp&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;boost/bind/bind.hpp&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;boost/endian/conversion.hpp&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;boost/lockfree/queue.hpp&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;boost/range/begin.hpp&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;boost/range/end.hpp&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;boost/serialization/base_object.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;boost/serialization/serialization.hpp&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;boost/asio/thread_pool.hpp&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;boost/bind/bind.hpp&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;boost/endian/conversion.hpp&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;boost/lockfree/queue.hpp&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;boost/range/begin.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;boost/range/end.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;boost/thread.hpp&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;deque&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;future&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
@@ -144,65 +144,184 @@ $(function(){initNavTree('dd/d3a/common_8hpp_source.html','../../'); initResizab
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d8a/mal-toolkit_8hpp.html">mal-toolkit/mal-toolkit.hpp</a>&quot;</span></div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d6/de9/namespacemal__packet__weaver.html">   36</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Executor = boost::asio::any_io_executor&gt;</div>
-<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5">   63</a></span>    boost::asio::awaitable&lt;T, Executor&gt; <a class="code hl_function" href="../../d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5">await_future</a>(std::future&lt;T&gt;&amp; fut, Executor ex)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">while</span> (fut.wait_for(std::chrono::seconds(0)) != std::future_status::ready)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            boost::asio::steady_timer timer(ex, std::chrono::microseconds(10));</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keyword">co_await</span> timer.async_wait(boost::asio::use_awaitable);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keyword">co_return</span> fut.get();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> std::exception&amp;)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            std::rethrow_exception(std::current_exception());</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;cereal/cereal.hpp&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;cereal/types/string.hpp&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;cereal/types/map.hpp&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;cereal/archives/portable_binary.hpp&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d8a/mal-toolkit_8hpp.html">mal-toolkit/mal-toolkit.hpp</a>&quot;</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d6/de9/namespacemal__packet__weaver.html">   41</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d9/dcc/classmal__packet__weaver_1_1timeout__exception.html">   43</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d9/dcc/classmal__packet__weaver_1_1timeout__exception.html">timeout_exception</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">using </span>std::runtime_error::runtime_error;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
 </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ChronoType, <span class="keyword">typename</span> Executor = boost::asio::any_io_executor&gt;</div>
-<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../d6/de9/namespacemal__packet__weaver.html#ab0496058ec5d421a33221ddcc2512acb">   99</a></span>    boost::asio::awaitable&lt;T, Executor&gt; <a class="code hl_function" href="../../d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5">await_future</a>(std::future&lt;T&gt;&amp; fut, Executor ex, ChronoType timeout)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">auto</span> start = std::chrono::steady_clock::now();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">while</span> (fut.wait_for(std::chrono::seconds(0)) != std::future_status::ready)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span> (std::chrono::steady_clock::now() - start &gt; timeout)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Future not ready within timeout&quot;</span>);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            }</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            boost::asio::steady_timer timer(ex, std::chrono::microseconds(10));</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keyword">co_await</span> timer.async_wait(boost::asio::use_awaitable);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keyword">co_return</span> fut.get();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> std::exception&amp;)</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            std::rethrow_exception(std::current_exception());</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d2/d01/classmal__packet__weaver_1_1future__failed.html">   48</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d2/d01/classmal__packet__weaver_1_1future__failed.html">future_failed</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">using </span>std::runtime_error::runtime_error;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// clang-format off</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../da/d0f/namespacemal__packet__weaver_1_1__await__future__impl.html">   63</a></span>    <span class="keyword">namespace </span>_await_future_impl</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ChronoType, <span class="keyword">typename</span> Executor&gt;</div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../da/d0f/namespacemal__packet__weaver_1_1__await__future__impl.html#a0661b6f06a975407cd625df02d1be6e1">   66</a></span>        boost::asio::awaitable&lt;T&gt; <a class="code hl_function" href="../../da/d0f/namespacemal__packet__weaver_1_1__await__future__impl.html#a0661b6f06a975407cd625df02d1be6e1">await_future</a>(Executor &amp;executor, std::future&lt;T&gt;&amp; fut, ChronoType timeout)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keyword">auto</span> timer = std::shared_ptr&lt;boost::asio::steady_timer&gt;{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keyword">new</span> boost::asio::steady_timer{executor, timeout}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            };</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keyword">static</span> boost::thread::attributes attrs;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            attrs.set_stack_size(4096 * 8);  <span class="comment">// 32 Kb per thread</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;T, void&gt;)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">if</span> (fut.wait_for(std::chrono::seconds(0)) == std::future_status::ready)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    <span class="keyword">co_return</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                boost::thread thread(attrs,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                                     [timer, &amp;fut]()</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                                     {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                         <span class="keywordflow">try</span> { fut.wait(); timer-&gt;cancel(); }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    #ifdef _DEBUG</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                         <span class="keywordflow">catch</span> (std::exception&amp; e) { spdlog::error(<span class="stringliteral">&quot;Future failed with exception: {}&quot;</span>, e.what()); }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                         <span class="keywordflow">catch</span> (...) { timer-&gt;cancel(); }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                                     });</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                thread.detach();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                <span class="keywordflow">try</span> { <span class="keyword">co_await</span> timer-&gt;async_wait(boost::asio::use_awaitable);} </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <span class="keywordflow">catch</span>(...) { }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="keyword">co_return</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordflow">if</span> (fut.wait_for(std::chrono::seconds(0)) == std::future_status::ready)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    <span class="keyword">co_return</span> fut.get();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keyword">auto</span> result = std::make_shared&lt;std::optional&lt;T&gt;&gt;(std::nullopt);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                boost::thread thread(attrs,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                                     [timer = timer, result = result, &amp;fut]()</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                                     {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                                         <span class="keywordflow">try</span> { fut.wait(); *result = fut.get(); timer-&gt;cancel(); }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">    #ifdef _DEBUG</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                                         <span class="keywordflow">catch</span> (std::exception&amp; e) { spdlog::error(<span class="stringliteral">&quot;Future failed with exception: {}&quot;</span>, e.what()); }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                                         <span class="keywordflow">catch</span> (...) { timer-&gt;cancel(); }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                                     });</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                thread.detach();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">try</span> { <span class="keyword">co_await</span> timer-&gt;async_wait(boost::asio::use_awaitable); }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                <span class="keywordflow">catch</span>(std::exception &amp;e) { }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">if</span> (*result == std::nullopt) { <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d2/d01/classmal__packet__weaver_1_1future__failed.html">future_failed</a>{<span class="stringliteral">&quot;Future failed for unknown reason.&quot;</span>}; }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keyword">co_return</span> std::move(result-&gt;value());</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,  <span class="keyword">typename</span> Executor&gt;</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../d6/de9/namespacemal__packet__weaver.html#a048b2057595e400350d161d2af937f46">  118</a></span>    boost::asio::awaitable&lt;T&gt; <a class="code hl_function" href="../../d6/de9/namespacemal__packet__weaver.html#a048b2057595e400350d161d2af937f46">await_future</a>(Executor&amp; executor, std::future&lt;T&gt;&amp; fut)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../da/d0f/namespacemal__packet__weaver_1_1__await__future__impl.html#a0661b6f06a975407cd625df02d1be6e1">_await_future_impl::await_future</a>(executor, fut, std::chrono::steady_clock::time_point::max());</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
 </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}  <span class="comment">// namespace mal_packet_weaver</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ChronoType,  <span class="keyword">typename</span> Executor&gt;</div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="../../d6/de9/namespacemal__packet__weaver.html#a22da1b2c34616eea8964876fb4330bbb">  124</a></span>    boost::asio::awaitable&lt;T&gt; <a class="code hl_function" href="../../d6/de9/namespacemal__packet__weaver.html#a048b2057595e400350d161d2af937f46">await_future</a>(Executor&amp; executor, std::future&lt;T&gt;&amp; fut, ChronoType timeout)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../da/d0f/namespacemal__packet__weaver_1_1__await__future__impl.html#a0661b6f06a975407cd625df02d1be6e1">_await_future_impl::await_future</a>(executor, fut, timeout);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
 </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">// clang-format on</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="};">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html">  130</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html">SignalHandler</a> {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5e0f6b0c8a239e9451623cafc583db19">  132</a></span>        <a class="code hl_function" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5e0f6b0c8a239e9451623cafc583db19">SignalHandler</a>(boost::asio::io_context&amp; io_context) : <a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a32fe4bc24ca9cb3741ec333cf70fbecd">io_context_</a>(io_context) {}</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="comment">// Asynchronously wait for the signal</span></div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a57fc898061c7d271b76a14599e7650e5">  135</a></span>        boost::asio::awaitable&lt;void&gt; <a class="code hl_function" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a57fc898061c7d271b76a14599e7650e5">wait</a>()</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keyword">auto</span> timer = std::make_shared&lt;boost::asio::steady_timer&gt;(<span class="keyword">co_await</span> boost::asio::this_coro::executor,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                                                                     std::chrono::steady_clock::time_point::max());</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                std::lock_guard&lt;std::mutex&gt; lock(<a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#abe7c7343524640193445c314f7876f39">mutex_</a>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5ab431515d9325bf43a1b1df3a5de02f">waiters_</a>.emplace_back(timer);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                <span class="keyword">co_await</span> timer-&gt;async_wait(boost::asio::use_awaitable);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keywordflow">catch</span>(...) {}</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        }</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="comment">// Asynchronously wait for the signal</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ChronoType&gt;</div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a02d9bc35b0f09dbfee7aa995ac336936">  151</a></span>        boost::asio::awaitable&lt;void&gt; <a class="code hl_function" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a02d9bc35b0f09dbfee7aa995ac336936">wait</a>(ChronoType timeout)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keyword">auto</span> timer = std::make_shared&lt;boost::asio::steady_timer&gt;(<span class="keyword">co_await</span> boost::asio::this_coro::executor, </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                                                                     timeout);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                std::lock_guard&lt;std::mutex&gt; lock(<a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#abe7c7343524640193445c314f7876f39">mutex_</a>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5ab431515d9325bf43a1b1df3a5de02f">waiters_</a>.emplace_back(timer);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                <span class="keyword">co_await</span> timer-&gt;async_wait(boost::asio::use_awaitable);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="keywordflow">catch</span> (...) { }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        }</div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="comment">// Notify all waiters</span></div>
+<div class="foldopen" id="foldopen00167" data-start="{" data-end="}">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a033b6d259bc7ea46ba66dc0e13d0908d">  167</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a033b6d259bc7ea46ba66dc0e13d0908d">notify</a>() {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            std::deque&lt;std::shared_ptr&lt;boost::asio::steady_timer&gt;&gt; waiters;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                std::lock_guard&lt;std::mutex&gt; lock(<a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#abe7c7343524640193445c314f7876f39">mutex_</a>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5ab431515d9325bf43a1b1df3a5de02f">waiters_</a>.swap(waiters);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; waiter : waiters) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                waiter-&gt;cancel();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a32fe4bc24ca9cb3741ec333cf70fbecd">  179</a></span>        boost::asio::io_context&amp; <a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a32fe4bc24ca9cb3741ec333cf70fbecd">io_context_</a>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#abe7c7343524640193445c314f7876f39">  180</a></span>        std::mutex <a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#abe7c7343524640193445c314f7876f39">mutex_</a>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5ab431515d9325bf43a1b1df3a5de02f">  181</a></span>        std::deque&lt;std::shared_ptr&lt;boost::asio::steady_timer&gt;&gt; <a class="code hl_variable" href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5ab431515d9325bf43a1b1df3a5de02f">waiters_</a>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    };</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}  <span class="comment">// namespace mal_packet_weaver</span></div>
+</div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_signal_handler_html"><div class="ttname"><a href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html">mal_packet_weaver::SignalHandler</a></div><div class="ttdef"><b>Definition</b> <a href="#l00130">common.hpp:130</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_signal_handler_html_a02d9bc35b0f09dbfee7aa995ac336936"><div class="ttname"><a href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a02d9bc35b0f09dbfee7aa995ac336936">mal_packet_weaver::SignalHandler::wait</a></div><div class="ttdeci">boost::asio::awaitable&lt; void &gt; wait(ChronoType timeout)</div><div class="ttdef"><b>Definition</b> <a href="#l00151">common.hpp:151</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_signal_handler_html_a033b6d259bc7ea46ba66dc0e13d0908d"><div class="ttname"><a href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a033b6d259bc7ea46ba66dc0e13d0908d">mal_packet_weaver::SignalHandler::notify</a></div><div class="ttdeci">void notify()</div><div class="ttdef"><b>Definition</b> <a href="#l00167">common.hpp:167</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_signal_handler_html_a32fe4bc24ca9cb3741ec333cf70fbecd"><div class="ttname"><a href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a32fe4bc24ca9cb3741ec333cf70fbecd">mal_packet_weaver::SignalHandler::io_context_</a></div><div class="ttdeci">boost::asio::io_context &amp; io_context_</div><div class="ttdef"><b>Definition</b> <a href="#l00179">common.hpp:179</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_signal_handler_html_a57fc898061c7d271b76a14599e7650e5"><div class="ttname"><a href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a57fc898061c7d271b76a14599e7650e5">mal_packet_weaver::SignalHandler::wait</a></div><div class="ttdeci">boost::asio::awaitable&lt; void &gt; wait()</div><div class="ttdef"><b>Definition</b> <a href="#l00135">common.hpp:135</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_signal_handler_html_a5ab431515d9325bf43a1b1df3a5de02f"><div class="ttname"><a href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5ab431515d9325bf43a1b1df3a5de02f">mal_packet_weaver::SignalHandler::waiters_</a></div><div class="ttdeci">std::deque&lt; std::shared_ptr&lt; boost::asio::steady_timer &gt; &gt; waiters_</div><div class="ttdef"><b>Definition</b> <a href="#l00181">common.hpp:181</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_signal_handler_html_a5e0f6b0c8a239e9451623cafc583db19"><div class="ttname"><a href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#a5e0f6b0c8a239e9451623cafc583db19">mal_packet_weaver::SignalHandler::SignalHandler</a></div><div class="ttdeci">SignalHandler(boost::asio::io_context &amp;io_context)</div><div class="ttdef"><b>Definition</b> <a href="#l00132">common.hpp:132</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_signal_handler_html_abe7c7343524640193445c314f7876f39"><div class="ttname"><a href="../../dc/db6/classmal__packet__weaver_1_1_signal_handler.html#abe7c7343524640193445c314f7876f39">mal_packet_weaver::SignalHandler::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdef"><b>Definition</b> <a href="#l00180">common.hpp:180</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1future__failed_html"><div class="ttname"><a href="../../d2/d01/classmal__packet__weaver_1_1future__failed.html">mal_packet_weaver::future_failed</a></div><div class="ttdef"><b>Definition</b> <a href="#l00048">common.hpp:49</a></div></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1timeout__exception_html"><div class="ttname"><a href="../../d9/dcc/classmal__packet__weaver_1_1timeout__exception.html">mal_packet_weaver::timeout_exception</a></div><div class="ttdef"><b>Definition</b> <a href="#l00043">common.hpp:44</a></div></div>
 <div class="ttc" id="amal-toolkit_8hpp_html"><div class="ttname"><a href="../../d1/d8a/mal-toolkit_8hpp.html">mal-toolkit.hpp</a></div><div class="ttdoc">Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities.</div></div>
-<div class="ttc" id="anamespacemal__packet__weaver_html"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div><div class="ttdoc">This is the main namespace for the Mal Packet Weaver library.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">common.hpp:37</a></div></div>
-<div class="ttc" id="anamespacemal__packet__weaver_html_af2c5029afaa161f2ddd273bc2f46d4f5"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5">mal_packet_weaver::await_future</a></div><div class="ttdeci">boost::asio::awaitable&lt; T, Executor &gt; await_future(std::future&lt; T &gt; &amp;fut, Executor ex)</div><div class="ttdoc">Awaiting an std::future with Boost.Asio integration.</div><div class="ttdef"><b>Definition</b> <a href="#l00063">common.hpp:63</a></div></div>
+<div class="ttc" id="anamespacemal__packet__weaver_1_1__await__future__impl_html_a0661b6f06a975407cd625df02d1be6e1"><div class="ttname"><a href="../../da/d0f/namespacemal__packet__weaver_1_1__await__future__impl.html#a0661b6f06a975407cd625df02d1be6e1">mal_packet_weaver::_await_future_impl::await_future</a></div><div class="ttdeci">boost::asio::awaitable&lt; T &gt; await_future(Executor &amp;executor, std::future&lt; T &gt; &amp;fut, ChronoType timeout)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">common.hpp:66</a></div></div>
+<div class="ttc" id="anamespacemal__packet__weaver_html"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div><div class="ttdoc">This is the main namespace for the Mal Packet Weaver library.</div><div class="ttdef"><b>Definition</b> <a href="#l00041">common.hpp:42</a></div></div>
+<div class="ttc" id="anamespacemal__packet__weaver_html_a048b2057595e400350d161d2af937f46"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a048b2057595e400350d161d2af937f46">mal_packet_weaver::await_future</a></div><div class="ttdeci">boost::asio::awaitable&lt; T &gt; await_future(Executor &amp;executor, std::future&lt; T &gt; &amp;fut)</div><div class="ttdef"><b>Definition</b> <a href="#l00118">common.hpp:118</a></div></div>
 <div class="ttc" id="anamespacemal__toolkit_html"><div class="ttname"><a href="../../df/df5/namespacemal__toolkit.html">mal_toolkit</a></div><div class="ttdoc">Contains a collection of tools and utilities provided by the MAL Toolkit library.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dc6/backoffs_8hpp_source.html#l00006">backoffs.hpp:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -210,7 +329,7 @@ $(function(){initNavTree('dd/d3a/common_8hpp_source.html','../../'); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dd/d3a/common_8hpp.html">common.hpp</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 00:02:07 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 18:12:50 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

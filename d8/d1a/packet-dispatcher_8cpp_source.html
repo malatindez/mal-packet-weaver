@@ -126,7 +126,7 @@ $(function(){initNavTree('d8/d1a/packet-dispatcher_8cpp_source.html','../../'); 
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac22bb2ccd532850a73766ce512b50082">    9</a></span>    <a class="code hl_function" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac22bb2ccd532850a73766ce512b50082">PacketDispatcher::PacketDispatcher</a>(boost::asio::io_context &amp;io_context)</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        : io_context_{ io_context },</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        : io_context_{ io_context }, signal_handler_{ io_context },</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>          unprocessed_packets_input_{ io_context,</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                                      [this](<a class="code hl_namespace" href="../../d8/dcc/namespacestd.html">std</a>::vector&lt;<a class="code hl_typedef" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">BasePacketPtr</a>&gt; &amp;packets) -&gt; void</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                                      {</div>
@@ -224,41 +224,41 @@ $(function(){initNavTree('d8/d1a/packet-dispatcher_8cpp_source.html','../../'); 
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        spdlog::trace(<span class="stringliteral">&quot;Posting task to register subsystem handler for {} subsystem&quot;</span>, subsystem_id);</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_typedef" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a698a3441a2d6d08294cf544358775bbe">handler_tuple</a> tuple{ delay, std::move(filter), std::move(handler) };</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        subsystem_handlers_input_.push(std::pair{ subsystem_id, std::move(tuple) });</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        signal_handler_.notify();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
 </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2b820a2094b9d5cfd27bb787183437ac">  108</a></span>    boost::asio::awaitable&lt;std::shared_ptr&lt;PacketDispatcher&gt;&gt; PacketDispatcher::get_shared_ptr()</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">int</span> it = 0;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">do</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keyword">co_return</span> shared_from_this();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">catch</span> (std::bad_weak_ptr &amp;)</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                it++;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            boost::asio::steady_timer timer(io_context_, backoff.<a class="code hl_function" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8">get_current_delay</a>());</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keyword">co_await</span> timer.async_wait(boost::asio::use_awaitable);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            backoff.<a class="code hl_function" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8">increase_delay</a>();</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">if</span> (it &gt;= 50 &amp;&amp; it % 20 == 0)</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                spdlog::error(<span class="stringliteral">&quot;Failed to retrieve shared pointer, iteration: {}&quot;</span>, it);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        } <span class="keywordflow">while</span> (it &lt;= 200);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        spdlog::error(<span class="stringliteral">&quot;Exceeded maximum attempts to retrieve shared pointer&quot;</span>);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keyword">co_return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2b820a2094b9d5cfd27bb787183437ac">  109</a></span>    boost::asio::awaitable&lt;std::shared_ptr&lt;PacketDispatcher&gt;&gt; PacketDispatcher::get_shared_ptr()</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff(std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">int</span> it = 0;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">do</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keyword">co_return</span> shared_from_this();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">catch</span> (std::bad_weak_ptr &amp;)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                it++;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            boost::asio::steady_timer timer(io_context_, backoff.<a class="code hl_function" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8">get_current_delay</a>());</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keyword">co_await</span> timer.async_wait(boost::asio::use_awaitable);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            backoff.<a class="code hl_function" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8">increase_delay</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">if</span> (it &gt;= 50 &amp;&amp; it % 20 == 0)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                spdlog::error(<span class="stringliteral">&quot;Failed to retrieve shared pointer, iteration: {}&quot;</span>, it);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        } <span class="keywordflow">while</span> (it &lt;= 200);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        spdlog::error(<span class="stringliteral">&quot;Exceeded maximum attempts to retrieve shared pointer&quot;</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">co_return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
 </div>
-<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323">  134</a></span>    boost::asio::awaitable&lt;void&gt; PacketDispatcher::Run()</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_class" href="../../d1/da7/classmal__toolkit_1_1_exponential_backoff.html">ExponentialBackoff</a> backoff{ std::chrono::microseconds(1), std::chrono::microseconds(100), 2, 32, 0.1 };</div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ae48b4ef1938ba5fb557d1d9269c1a323">  135</a></span>    boost::asio::awaitable&lt;void&gt; PacketDispatcher::Run()</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <a class="code hl_class" href="../../db/d8f/classmal__toolkit_1_1_timer.html">SteadyTimer</a> timer;</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordtype">float</span> min_handler_timestamp = std::numeric_limits&lt;float&gt;::max();</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
@@ -270,109 +270,111 @@ $(function(){initNavTree('d8/d1a/packet-dispatcher_8cpp_source.html','../../'); 
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                <span class="stringliteral">&quot;session using std::make_shared?&quot;</span>);</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keyword">co_return</span>;</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keywordflow">while</span> (alive_.load())</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                <span class="keywordtype">bool</span> updated = <span class="keyword">co_await</span> pop_inputs();</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                <span class="keywordflow">if</span> (!updated)</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                    <span class="keywordflow">if</span> (min_handler_timestamp &lt; timer.<a class="code hl_function" href="../../db/d8f/classmal__toolkit_1_1_timer.html#a4ac9f05ebd618ab6f567aebd6d421ddb">elapsed</a>())</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                    {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                        spdlog::trace(<span class="stringliteral">&quot;Updating handlers...&quot;</span>);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                        min_handler_timestamp = std::numeric_limits&lt;float&gt;::max();</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;[packet_id, packet_vector] : unprocessed_packets_)</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                        {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                            <span class="comment">// Remove packets that fulfill handlers and update min_handler_timestamp</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                            std::erase_if(</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                                packet_vector, [<span class="keyword">this</span>, &amp;packet_id, &amp;min_handler_timestamp, &amp;timer](<a class="code hl_typedef" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">BasePacketPtr</a> &amp;packet)</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                                                   __mal_toolkit_lambda_force_inline </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                                { <span class="keywordflow">return</span> fulfill_handlers(packet_id, packet, min_handler_timestamp, timer); });</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                        }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                    }</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                    <span class="comment">// Introduce delay and increase it using exponential backoff strategy</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    boost::asio::steady_timer async_timer(<span class="keyword">co_await</span> boost::asio::this_coro::executor,</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                                                          backoff.get_current_delay());</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                    <span class="keyword">co_await</span> async_timer.async_wait(boost::asio::use_awaitable);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    backoff.increase_delay();</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                spdlog::trace(<span class="stringliteral">&quot;Input arrays were updated! Fetching...&quot;</span>);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                <span class="keywordflow">if</span> (!alive_.load())</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                }</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                min_handler_timestamp = std::numeric_limits&lt;float&gt;::max();</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;[packet_id, packet_vector] : unprocessed_packets_)</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                    <span class="comment">// Process packets: fulfill promises, fulfill handlers, and check for expiration</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                    std::erase_if(packet_vector,</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                                  [<span class="keyword">this</span>, &amp;packet_id, &amp;min_handler_timestamp, &amp;timer](<a class="code hl_typedef" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">BasePacketPtr</a> &amp;packet)</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                                      __mal_toolkit_lambda_force_inline </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                                  {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                                      <span class="keywordflow">return</span> fulfill_promises(packet_id, packet) ||</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                                             fulfill_handlers(packet_id, packet, min_handler_timestamp, timer) ||</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                                             packet-&gt;expired();</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                                  });</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                <span class="comment">// Remove empty entries from the unprocessed_packets_ map</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                std::erase_if(unprocessed_packets_,</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                              [](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;pair) __mal_toolkit_lambda_force_inline  { <span class="keywordflow">return</span> pair.second.empty(); });</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keyword">co_await</span> boost::asio::this_coro::executor;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keywordflow">while</span> (alive_.load())</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                <span class="keywordtype">bool</span> updated = <span class="keyword">co_await</span> pop_inputs();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                <span class="keywordflow">if</span> (!updated)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                    <span class="keywordflow">if</span> (min_handler_timestamp &lt; timer.<a class="code hl_function" href="../../db/d8f/classmal__toolkit_1_1_timer.html#a4ac9f05ebd618ab6f567aebd6d421ddb">elapsed</a>())</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                    {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                        spdlog::trace(<span class="stringliteral">&quot;Updating handlers...&quot;</span>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                        min_handler_timestamp = std::numeric_limits&lt;float&gt;::max();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;[packet_id, packet_vector] : unprocessed_packets_)</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                        {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                            <span class="comment">// Remove packets that fulfill handlers and update min_handler_timestamp</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                            std::erase_if(</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                                packet_vector, [<span class="keyword">this</span>, &amp;packet_id, &amp;min_handler_timestamp, &amp;timer](<a class="code hl_typedef" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">BasePacketPtr</a> &amp;packet)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                                                   __mal_toolkit_lambda_force_inline </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                { <span class="keywordflow">return</span> fulfill_handlers(packet_id, packet, min_handler_timestamp, timer); });</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                        }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                    }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                    <span class="keywordflow">if</span> (min_handler_timestamp == std::numeric_limits&lt;float&gt;::max())</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                        <span class="keyword">co_await</span> signal_handler_.wait();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                    {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                        <span class="keyword">co_await</span> signal_handler_.wait(</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                            std::chrono::microseconds(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(min_handler_timestamp * 1.0e6)));</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                spdlog::trace(<span class="stringliteral">&quot;Input arrays were updated! Fetching...&quot;</span>);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                <span class="keywordflow">if</span> (!alive_.load())</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                min_handler_timestamp = std::numeric_limits&lt;float&gt;::max();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;[packet_id, packet_vector] : unprocessed_packets_)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                    <span class="comment">// Process packets: fulfill promises, fulfill handlers, and check for expiration</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                    std::erase_if(packet_vector,</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                                  [<span class="keyword">this</span>, &amp;packet_id, &amp;min_handler_timestamp, &amp;timer](<a class="code hl_typedef" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">BasePacketPtr</a> &amp;packet)</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                                      __mal_toolkit_lambda_force_inline </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                                  {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                                      <span class="keywordflow">return</span> fulfill_promises(packet_id, packet) ||</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                                             fulfill_handlers(packet_id, packet, min_handler_timestamp, timer) ||</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                                             packet-&gt;expired();</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                                  });</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                }</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="comment">// Decrease the delay for exponential backoff</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                backoff.decrease_delay();</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        }</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">catch</span> (std::exception &amp;e)</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        {</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            spdlog::error(<span class="stringliteral">&quot;PacketDispatcher::Run cancelled with an error: {}&quot;</span>, e.what());</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        }</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        spdlog::info(<span class="stringliteral">&quot;Exiting PacketDispatcher::Run&quot;</span>);</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="comment">// Remove empty entries from the unprocessed_packets_ map</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                std::erase_if(unprocessed_packets_,</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                              [](<span class="keyword">auto</span> <span class="keyword">const</span> &amp;pair) __mal_toolkit_lambda_force_inline  { <span class="keywordflow">return</span> pair.second.empty(); });</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">catch</span> (std::exception &amp;e)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            spdlog::error(<span class="stringliteral">&quot;PacketDispatcher::Run cancelled with an error: {}&quot;</span>, e.what());</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        spdlog::info(<span class="stringliteral">&quot;Exiting PacketDispatcher::Run&quot;</span>);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
 </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="foldopen" id="foldopen00214" data-start="{" data-end="}">
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be">  214</a></span>    boost::asio::awaitable&lt;bool&gt; PacketDispatcher::pop_inputs()</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    {</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        std::vector&lt;std::future&lt;bool&gt;&gt; futures{};</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">if</span> (unprocessed_packets_input_.has_data())</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            futures.emplace_back(unprocessed_packets_input_.create_pop_task());</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">if</span> (promise_map_input_.has_data())</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            futures.emplace_back(promise_map_input_.create_pop_task());</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        }</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">if</span> (promise_filter_map_input_.has_data())</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        {</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            futures.emplace_back(promise_filter_map_input_.create_pop_task());</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        }</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">if</span> (default_handlers_input_.has_data())</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        {</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            futures.emplace_back(default_handlers_input_.create_pop_task());</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        }</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keywordflow">if</span> (subsystem_handlers_input_.has_data())</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            futures.emplace_back(subsystem_handlers_input_.create_pop_task());</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        }</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordtype">bool</span> rv = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;future : futures)</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            spdlog::trace(<span class="stringliteral">&quot;Waiting for futures to complete...&quot;</span>);</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            rv |= <span class="keyword">co_await</span> <a class="code hl_function" href="../../d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5">await_future</a>(future, <span class="keyword">co_await</span> boost::asio::this_coro::executor);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            spdlog::trace(<span class="stringliteral">&quot;Futures complete. Result for popping is: {}&quot;</span>, rv);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keyword">co_return</span> rv;</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a87b159df2e43d0b4de204fd9b41d46be">  215</a></span>    boost::asio::awaitable&lt;bool&gt; PacketDispatcher::pop_inputs()</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        std::vector&lt;std::future&lt;bool&gt;&gt; futures{};</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">if</span> (unprocessed_packets_input_.has_data())</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            futures.emplace_back(unprocessed_packets_input_.create_pop_task());</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keywordflow">if</span> (promise_map_input_.has_data())</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            futures.emplace_back(promise_map_input_.create_pop_task());</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordflow">if</span> (promise_filter_map_input_.has_data())</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            futures.emplace_back(promise_filter_map_input_.create_pop_task());</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordflow">if</span> (default_handlers_input_.has_data())</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            futures.emplace_back(default_handlers_input_.create_pop_task());</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordflow">if</span> (subsystem_handlers_input_.has_data())</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            futures.emplace_back(subsystem_handlers_input_.create_pop_task());</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordtype">bool</span> rv = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keyword">co_await</span> boost::asio::this_coro::executor;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;future : futures)</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            spdlog::trace(<span class="stringliteral">&quot;Waiting for futures to complete...&quot;</span>);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            rv |= <span class="keyword">co_await</span> await_future(io_context_, future);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            spdlog::trace(<span class="stringliteral">&quot;Futures complete. Result for popping is: {}&quot;</span>, rv);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keyword">co_return</span> rv;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
 </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>}  <span class="comment">// namespace mal_packet_weaver</span></div>
-<div class="ttc" id="aclassmal__packet__weaver_1_1_packet_dispatcher_html_a2924ef6b5846ef8e303af1138a669db0"><div class="ttname"><a href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2924ef6b5846ef8e303af1138a669db0">mal_packet_weaver::PacketDispatcher::unprocessed_packets_</a></div><div class="ttdeci">std::unordered_map&lt; UniquePacketID, std::vector&lt; BasePacketPtr &gt; &gt; unprocessed_packets_</div><div class="ttdef"><b>Definition</b> <a href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00392">packet-dispatcher.hpp:392</a></div></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>}  <span class="comment">// namespace mal_packet_weaver</span></div>
+<div class="ttc" id="aclassmal__packet__weaver_1_1_packet_dispatcher_html_a2924ef6b5846ef8e303af1138a669db0"><div class="ttname"><a href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a2924ef6b5846ef8e303af1138a669db0">mal_packet_weaver::PacketDispatcher::unprocessed_packets_</a></div><div class="ttdeci">std::unordered_map&lt; UniquePacketID, std::vector&lt; BasePacketPtr &gt; &gt; unprocessed_packets_</div><div class="ttdef"><b>Definition</b> <a href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00394">packet-dispatcher.hpp:394</a></div></div>
 <div class="ttc" id="aclassmal__packet__weaver_1_1_packet_dispatcher_html_a698a3441a2d6d08294cf544358775bbe"><div class="ttname"><a href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a698a3441a2d6d08294cf544358775bbe">mal_packet_weaver::PacketDispatcher::handler_tuple</a></div><div class="ttdeci">std::tuple&lt; float, PacketFilterFunc&lt; Packet &gt;, PacketHandlerFunc&lt; Packet &gt; &gt; handler_tuple</div><div class="ttdoc">Alias for a tuple containing information for packet handling.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00182">packet-dispatcher.hpp:182</a></div></div>
 <div class="ttc" id="aclassmal__packet__weaver_1_1_packet_dispatcher_html_a7a16362f32fc0c74236a5487a90151db"><div class="ttname"><a href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#a7a16362f32fc0c74236a5487a90151db">mal_packet_weaver::PacketDispatcher::BasePacketPtr</a></div><div class="ttdeci">std::unique_ptr&lt; Packet &gt; BasePacketPtr</div><div class="ttdoc">Alias for a unique pointer to a base packet type.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00148">packet-dispatcher.hpp:148</a></div></div>
 <div class="ttc" id="aclassmal__packet__weaver_1_1_packet_dispatcher_html_ac22bb2ccd532850a73766ce512b50082"><div class="ttname"><a href="../../d4/d61/classmal__packet__weaver_1_1_packet_dispatcher.html#ac22bb2ccd532850a73766ce512b50082">mal_packet_weaver::PacketDispatcher::PacketDispatcher</a></div><div class="ttdeci">PacketDispatcher(boost::asio::io_context &amp;io_context)</div><div class="ttdoc">Constructs a PacketDispatcher instance associated with the given io_context.</div><div class="ttdef"><b>Definition</b> <a href="#l00009">packet-dispatcher.cpp:9</a></div></div>
@@ -382,11 +384,10 @@ $(function(){initNavTree('d8/d1a/packet-dispatcher_8cpp_source.html','../../'); 
 <div class="ttc" id="aclassmal__toolkit_1_1_timer_html"><div class="ttname"><a href="../../db/d8f/classmal__toolkit_1_1_timer.html">mal_toolkit::Timer&lt; std::chrono::steady_clock &gt;</a></div></div>
 <div class="ttc" id="aclassmal__toolkit_1_1_timer_html_a4ac9f05ebd618ab6f567aebd6d421ddb"><div class="ttname"><a href="../../db/d8f/classmal__toolkit_1_1_timer.html#a4ac9f05ebd618ab6f567aebd6d421ddb">mal_toolkit::Timer::elapsed</a></div><div class="ttdeci">constexpr float elapsed() noexcept</div><div class="ttdoc">Calculates and returns the elapsed time since the timer was last reset.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d05/timer_8hpp_source.html#l00043">timer.hpp:43</a></div></div>
 <div class="ttc" id="acommon_8hpp_html"><div class="ttname"><a href="../../dd/d3a/common_8hpp.html">common.hpp</a></div></div>
-<div class="ttc" id="anamespacemal__packet__weaver_html"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div><div class="ttdoc">This is the main namespace for the Mal Packet Weaver library.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d3a/common_8hpp_source.html#l00036">common.hpp:37</a></div></div>
+<div class="ttc" id="anamespacemal__packet__weaver_html"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html">mal_packet_weaver</a></div><div class="ttdoc">This is the main namespace for the Mal Packet Weaver library.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d3a/common_8hpp_source.html#l00041">common.hpp:42</a></div></div>
 <div class="ttc" id="anamespacemal__packet__weaver_html_a0d5f3532a3ff6ea68fc3a46053777cdf"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a0d5f3532a3ff6ea68fc3a46053777cdf">mal_packet_weaver::PacketFilterFunc</a></div><div class="ttdeci">std::function&lt; bool(Args..., DerivedPacket const &amp;)&gt; PacketFilterFunc</div><div class="ttdoc">Predicate function type to filter packets.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00030">packet-dispatcher.hpp:30</a></div></div>
-<div class="ttc" id="anamespacemal__packet__weaver_html_a6136dff6b6b92f79e84bebd1e411029a"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a6136dff6b6b92f79e84bebd1e411029a">mal_packet_weaver::PacketSubsystemID</a></div><div class="ttdeci">uint16_t PacketSubsystemID</div><div class="ttdoc">Type alias for packet subsystem IDs.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00010">packet.hpp:10</a></div></div>
+<div class="ttc" id="anamespacemal__packet__weaver_html_a6136dff6b6b92f79e84bebd1e411029a"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a6136dff6b6b92f79e84bebd1e411029a">mal_packet_weaver::PacketSubsystemID</a></div><div class="ttdeci">uint16_t PacketSubsystemID</div><div class="ttdoc">Type alias for packet subsystem IDs.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d48/packet-impl_2packet_8hpp_source.html#l00012">packet.hpp:12</a></div></div>
 <div class="ttc" id="anamespacemal__packet__weaver_html_a9fb97c375ecb04fb0959de192890b4a3"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#a9fb97c375ecb04fb0959de192890b4a3">mal_packet_weaver::PacketHandlerFunc</a></div><div class="ttdeci">std::function&lt; void(Args..., std::unique_ptr&lt; DerivedPacket &gt;)&gt; PacketHandlerFunc</div><div class="ttdoc">Callback function type to handle packets asynchronously.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d1d/packet-dispatcher_8hpp_source.html#l00017">packet-dispatcher.hpp:17</a></div></div>
-<div class="ttc" id="anamespacemal__packet__weaver_html_af2c5029afaa161f2ddd273bc2f46d4f5"><div class="ttname"><a href="../../d6/de9/namespacemal__packet__weaver.html#af2c5029afaa161f2ddd273bc2f46d4f5">mal_packet_weaver::await_future</a></div><div class="ttdeci">boost::asio::awaitable&lt; T, Executor &gt; await_future(std::future&lt; T &gt; &amp;fut, Executor ex)</div><div class="ttdoc">Awaiting an std::future with Boost.Asio integration.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d3a/common_8hpp_source.html#l00063">common.hpp:63</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace.</div></div>
 <div class="ttc" id="apacket-dispatcher_8hpp_html"><div class="ttname"><a href="../../df/d1d/packet-dispatcher_8hpp.html">packet-dispatcher.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -395,7 +396,7 @@ $(function(){initNavTree('d8/d1a/packet-dispatcher_8cpp_source.html','../../'); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9cfe34390e85a1396a4f3d3f9b545fbe.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../dir_addcb3f2ab8d4a659aab133b2e096648.html">mal-packet-weaver</a></li><li class="navelem"><a class="el" href="../../d8/d1a/packet-dispatcher_8cpp.html">packet-dispatcher.cpp</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 00:02:07 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">Generated on Thu Apr 25 2024 18:12:50 for mal-packet-weaver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>
