@@ -87,11 +87,11 @@ var hierarchy =
     ] ],
     [ "bool", "d9/db9/classbool.html", null ],
     [ "float", "d4/dc3/classfloat.html", null ],
+    [ "function< void(std::vector< BasePacketPtr > &)>", "d5/ddf/classstd_1_1function_3_01void_07std_1_1vector_3_01_base_packet_ptr_01_4_01_6_08_4.html", null ],
+    [ "function< void(std::vector< std::pair< PacketSubsystemID, handler_tuple > > &)>", "d2/d84/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_packet_subsystem_i_d_00_01handler__tuple_01_4_01_4_01_6_08_4.html", null ],
+    [ "function< void(std::vector< std::pair< UniquePacketID, handler_tuple > > &)>", "d6/dde/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01handler__tuple_01_4_01_4_01_6_08_4.html", null ],
+    [ "function< void(std::vector< std::pair< UniquePacketID, promise_filter > > &)>", "df/dbe/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01promise__filter_01_4_01_4_01_6_08_4.html", null ],
+    [ "function< void(std::vector< std::pair< UniquePacketID, shared_packet_promise > > &)>", "da/d39/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01shared5e27b4863406e826d3bd759af62ce715.html", null ],
     [ "size_t", "dd/de2/classsize__t.html", null ],
-    [ "time_point< std::chrono::steady_clock >", "d2/d24/classstd_1_1chrono_1_1time__point_3_01std_1_1chrono_1_1steady__clock_01_4.html", null ],
-    [ "vector< BasePacketPtr > &)", "d8/d89/classstd_1_1function_3_01void_07std_1_1vector_3_01_base_packet_ptr_01_4_01_6_08.html", null ],
-    [ "vector< std::pair< PacketSubsystemID, handler_tuple > > &)", "d2/d22/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_packet_subsystem_i_d_00_01handler__tuple_01_4_01_4_01_6_08.html", null ],
-    [ "vector< std::pair< UniquePacketID, handler_tuple > > &)", "d1/dd1/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01handler__tuple_01_4_01_4_01_6_08.html", null ],
-    [ "vector< std::pair< UniquePacketID, promise_filter > > &)", "d6/d63/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01promise__filter_01_4_01_4_01_6_08.html", null ],
-    [ "vector< std::pair< UniquePacketID, shared_packet_promise > > &)", "da/d67/classstd_1_1function_3_01void_07std_1_1vector_3_01std_1_1pair_3_01_unique_packet_i_d_00_01shared1157ea6204f21c8e46b0b7afa457f467.html", null ]
+    [ "time_point< std::chrono::steady_clock >", "d2/d24/classstd_1_1chrono_1_1time__point_3_01std_1_1chrono_1_1steady__clock_01_4.html", null ]
 ];

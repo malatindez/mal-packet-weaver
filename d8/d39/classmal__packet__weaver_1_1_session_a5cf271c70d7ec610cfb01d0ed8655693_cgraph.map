@@ -1,34 +1,32 @@
 <map id="mal_packet_weaver::Session::Session" name="mal_packet_weaver::Session::Session">
-<area shape="rect" id="Node000001" title="Constructor for the Session class." alt="" coords="5,168,138,209"/>
-<area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html#ab8d02d6502bb180c3b0f383b3fddc6ca" title="Asynchronously forges new packets from the buffer." alt="" coords="186,59,323,115"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,165,188,121,191,125,111,170"/>
-<area shape="rect" id="Node000007" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a95349691831542cec27090d0ab21ca88" title="Asynchronously receives and processes incoming packets from the network." alt="" coords="186,161,323,216"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="138,186,170,186,170,191,138,191"/>
-<area shape="rect" id="Node000009" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a71ede34f71a6dc30d56d99015997caa3" title="Asynchronously sends all packets in the queue through the network." alt="" coords="188,317,321,358"/>
-<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="100,207,218,305,215,309,96,211"/>
+<area shape="rect" id="Node000001" title="Constructor for the Session class." alt="" coords="5,136,138,177"/>
+<area shape="rect" id="Node000002" href="$d8/d39/classmal__packet__weaver_1_1_session.html#ab8d02d6502bb180c3b0f383b3fddc6ca" title="Asynchronously forges new packets from the buffer." alt="" coords="186,49,323,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,133,174,108,177,113,121,138"/>
+<area shape="rect" id="Node000007" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a95349691831542cec27090d0ab21ca88" title="Asynchronously receives and processes incoming packets from the network." alt="" coords="186,129,323,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="138,154,170,154,170,159,138,159"/>
+<area shape="rect" id="Node000009" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a71ede34f71a6dc30d56d99015997caa3" title="Asynchronously sends all packets in the queue through the network." alt="" coords="188,267,321,307"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="103,175,214,255,210,259,100,179"/>
 <area shape="rect" id="Node000003" href="$df/df5/namespacemal__toolkit.html#a8405b24c94e717d8a57da64b1483a4a9" title="Always asserts a condition with customizable behavior." alt="" coords="371,13,531,39"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,63,392,41,394,46,324,68"/>
-<area shape="rect" id="Node000005" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" title="Convert the ByteArray to a typed pointer." alt="" coords="582,216,741,241"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="323,75,371,73,424,74,480,82,532,99,568,120,599,147,645,201,641,205,596,151,565,124,530,104,478,87,424,79,371,78,323,80"/>
-<area shape="rect" id="Node000006" href="$df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="394,113,508,154"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="324,101,380,114,378,119,323,106"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,56,383,40,384,45,324,61"/>
+<area shape="rect" id="Node000005" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" title="Convert the ByteArray to a typed pointer." alt="" coords="372,193,531,219"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="310,103,325,114,340,132,348,148,357,163,373,178,381,184,378,188,369,182,353,167,344,151,335,135,321,118,307,107"/>
+<area shape="rect" id="Node000006" href="$df/df5/namespacemal__toolkit.html#a5c77c699bb81839f37c2b5d956d8e2df" title="Convert a byte array to a uint32_t value using little&#45;endian byte order." alt="" coords="394,63,508,103"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="324,76,379,78,379,83,323,81"/>
 <area shape="rect" id="Node000004" href="$df/df5/namespacemal__toolkit.html#a27bf9441da264c7f90650042e9e30f40" title="Returns an empty string representing the current source location." alt="" coords="579,5,744,46"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="532,23,564,23,564,28,532,28"/>
-<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="323,167,379,151,380,156,324,172"/>
-<area shape="rect" id="Node000008" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#a33b603234734c1cdddee3fb854988181" title="Create a ByteView of a subsequence of the byte array." alt="" coords="380,179,522,219"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="324,189,365,192,364,197,323,195"/>
-<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="523,206,567,212,566,218,522,212"/>
-<area shape="poly" id="edge14_Node000009_Node000005" title=" " alt="" coords="291,314,328,296,370,279,471,253,566,236,567,242,472,258,372,284,331,301,293,319"/>
-<area shape="rect" id="Node000010" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#aeee7ab5aa07bb08377a74f42375b59c8" title="Append multiple data sources to the byte array." alt="" coords="380,317,522,358"/>
-<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="321,335,364,335,364,340,321,340"/>
-<area shape="rect" id="Node000011" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e" title="Retrieves a shared pointer to the current session." alt="" coords="378,383,525,423"/>
-<area shape="poly" id="edge15_Node000009_Node000011" title=" " alt="" coords="318,356,374,375,372,380,317,361"/>
-<area shape="rect" id="Node000014" href="$df/df5/namespacemal__toolkit.html#a205f8d4452e595ed3943f0d083c6033f" title="Convert a uint32_t value to a ByteArray using little&#45;endian byte order." alt="" coords="391,448,512,489"/>
-<area shape="poly" id="edge18_Node000009_Node000014" title=" " alt="" coords="278,356,320,394,372,433,382,438,380,443,370,437,317,398,274,360"/>
-<area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="491,314,621,246,623,251,493,319"/>
-<area shape="poly" id="edge12_Node000010_Node000010" title=" " alt="" coords="414,317,412,307,418,298,431,293,451,291,473,293,485,299,483,304,471,298,451,296,433,298,421,303,417,308,419,316"/>
-<area shape="rect" id="Node000012" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="580,349,743,390"/>
-<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="525,389,564,382,565,388,526,394"/>
-<area shape="rect" id="Node000013" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="587,415,736,455"/>
-<area shape="poly" id="edge17_Node000011_Node000013" title=" " alt="" coords="526,412,572,419,572,424,525,417"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="323,128,380,107,382,112,325,133"/>
+<area shape="rect" id="Node000008" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#a33b603234734c1cdddee3fb854988181" title="Create a ByteView of a subsequence of the byte array." alt="" coords="380,128,522,169"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="323,151,364,149,365,155,324,156"/>
+<area shape="poly" id="edge12_Node000009_Node000005" title=" " alt="" coords="294,264,370,229,389,221,391,226,372,233,296,269"/>
+<area shape="rect" id="Node000010" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#aeee7ab5aa07bb08377a74f42375b59c8" title="Append multiple data sources to the byte array." alt="" coords="380,267,522,307"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="321,284,364,284,364,290,321,290"/>
+<area shape="rect" id="Node000011" href="$d8/d39/classmal__packet__weaver_1_1_session.html#a44aae33be31d6dd7db9feb4142b3239e" title="Retrieves a shared pointer to the current session." alt="" coords="378,332,525,373"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="318,305,374,324,372,329,317,310"/>
+<area shape="rect" id="Node000014" href="$df/df5/namespacemal__toolkit.html#a205f8d4452e595ed3943f0d083c6033f" title="Convert a uint32_t value to a ByteArray using little&#45;endian byte order." alt="" coords="391,397,512,438"/>
+<area shape="poly" id="edge16_Node000009_Node000014" title=" " alt="" coords="278,306,320,344,372,382,382,388,380,392,370,387,317,348,274,310"/>
+<area shape="poly" id="edge11_Node000010_Node000010" title=" " alt="" coords="414,267,412,257,418,248,431,242,451,240,473,242,485,249,483,253,471,248,451,245,433,247,421,252,417,258,419,265"/>
+<area shape="rect" id="Node000012" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="580,364,743,405"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="526,361,565,367,564,372,525,366"/>
+<area shape="rect" id="Node000013" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="587,299,736,339"/>
+<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="525,338,572,331,572,336,526,343"/>
 </map>

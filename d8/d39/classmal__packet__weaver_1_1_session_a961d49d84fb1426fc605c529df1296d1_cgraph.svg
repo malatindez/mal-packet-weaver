@@ -46,7 +46,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 602;
+var viewWidth = 591;
 var viewHeight = 245;
 var sectionId = 'dynsection-9';
 </script>
@@ -183,9 +183,9 @@ var sectionId = 'dynsection-9';
 <g id="Node000006" class="node">
 <title>Node6</title>
 <g id="a_Node000006"><a xlink:href="../../da/d61/classmal__packet__weaver_1_1_packet_factory.html#a8fdf5f5e58a23f9e31aa35b2737e355b" target="_top" xlink:title="Instance of the Packet Factory.">
-<polygon fill="white" stroke="#666666" points="588.25,-128.5 479.25,-128.5 479.25,-98 588.25,-98 588.25,-128.5"/>
-<text text-anchor="start" x="487.25" y="-115" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
-<text text-anchor="middle" x="533.75" y="-103.75" font-family="Times,serif" font-size="10.00">PacketFactory::instance</text>
+<polygon fill="white" stroke="#666666" points="583,-128.5 474,-128.5 474,-98 583,-98 583,-128.5"/>
+<text text-anchor="start" x="482" y="-115" font-family="Times,serif" font-size="10.00">mal_packet_weaver::</text>
+<text text-anchor="middle" x="528.5" y="-103.75" font-family="Times,serif" font-size="10.00">PacketFactory::instance</text>
 </a>
 </g>
 </g>
@@ -193,26 +193,8 @@ var sectionId = 'dynsection-9';
 <g id="edge5_Node000005_Node000006" class="edge">
 <title>Node5&#45;&gt;Node6</title>
 <g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M436.31,-113.25C446.52,-113.25 457.16,-113.25 467.5,-113.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="467.48,-116.75 477.48,-113.25 467.48,-109.75 467.48,-116.75"/>
-</a>
-</g>
-</g>
-<!-- Node9 -->
-<g id="Node000009" class="node">
-<title>Node9</title>
-<g id="a_Node000009"><a xlink:href="../../d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" target="_top" xlink:title="Convert the ByteArray to a typed pointer.">
-<polygon fill="white" stroke="#666666" points="593.5,-24.88 474,-24.88 474,-5.62 593.5,-5.62 593.5,-24.88"/>
-<text text-anchor="middle" x="533.75" y="-11.38" font-family="Times,serif" font-size="10.00">mal_toolkit::ByteArray::as</text>
-</a>
-</g>
-</g>
-<!-- Node8&#45;&gt;Node9 -->
-<g id="edge8_Node000008_Node000009" class="edge">
-<title>Node8&#45;&gt;Node9</title>
-<g id="a_edge8_Node000008_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M428.8,-15.25C439.59,-15.25 451.11,-15.25 462.41,-15.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="462.09,-18.75 472.09,-15.25 462.09,-11.75 462.09,-18.75"/>
+<path fill="none" stroke="#63b8ff" d="M436.46,-113.25C445.05,-113.25 453.92,-113.25 462.6,-113.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="462.34,-116.75 472.34,-113.25 462.34,-109.75 462.34,-116.75"/>
 </a>
 </g>
 </g>

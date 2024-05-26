@@ -10,8 +10,6 @@
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="152,188,212,207,210,212,150,193"/>
 <area shape="rect" id="Node000007" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#a33b603234734c1cdddee3fb854988181" title="Create a ByteView of a subsequence of the byte array." alt="" coords="222,280,365,321"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="109,188,155,226,211,265,222,271,219,275,208,269,151,230,106,192"/>
-<area shape="rect" id="Node000005" href="$da/d61/classmal__packet__weaver_1_1_packet_factory.html#a8fdf5f5e58a23f9e31aa35b2737e355b" title="Instance of the Packet Factory." alt="" coords="432,149,577,190"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="375,167,416,167,416,172,375,172"/>
-<area shape="rect" id="Node000008" href="$d8/d99/structmal__toolkit_1_1_byte_array.html#ab23437254557962a474e4ba7c5e25fe4" title="Convert the ByteArray to a typed pointer." alt="" coords="425,288,584,313"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="365,298,410,298,410,303,365,303"/>
+<area shape="rect" id="Node000005" href="$da/d61/classmal__packet__weaver_1_1_packet_factory.html#a8fdf5f5e58a23f9e31aa35b2737e355b" title="Instance of the Packet Factory." alt="" coords="425,149,570,190"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="375,167,410,167,410,172,375,172"/>
 </map>

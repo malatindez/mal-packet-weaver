@@ -1,5 +1,0 @@
-<map id="mal_toolkit::ByteView::subview" name="mal_toolkit::ByteView::subview">
-<area shape="rect" id="Node000001" title="Create a subview of the ByteView with a specified length." alt="" coords="5,5,144,46"/>
-<area shape="rect" id="Node000002" href="$d8/dab/structmal__toolkit_1_1_byte_view.html#afd618c92ddc773d0df22d8d1a2fb16f2" title="Convert the ByteView to a typed view." alt="" coords="192,13,347,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,23,176,23,176,28,144,28"/>
-</map>

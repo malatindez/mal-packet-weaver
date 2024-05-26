@@ -1,0 +1,5 @@
+<map id="mal_packet_weaver::PacketFactory::RegisterDeserializer" name="mal_packet_weaver::PacketFactory::RegisterDeserializer">
+<area shape="rect" id="Node000001" title="Register a packet deserializer function for a specific PacketType." alt="" coords="245,13,457,54"/>
+<area shape="rect" id="Node000002" href="$db/d62/structmal__packet__weaver_1_1_packet_type_registration_helper.html#a311e049a67761a64b4c4754cfbdbf4d3" title="Constructor. Registers the packet type with the PacketFactory." alt="" coords="5,5,197,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,36,197,36,197,31,229,31"/>
+</map>
