@@ -1,7 +1,7 @@
 <map id="mal_packet_weaver::Session" name="mal_packet_weaver::Session">
 <area shape="rect" id="Node000001" title="Represents a network session for sending and receiving packets." alt="" coords="830,265,963,305"/>
 <area shape="rect" id="Node000002" href="$d2/df3/classmal__toolkit_1_1non__copyable__non__movable.html" title="A class that can&#39;t be copied neither moved." alt="" coords="489,22,648,63"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="664,59,738,86,775,106,808,129,838,161,861,198,891,263,886,265,857,200,834,165,805,134,772,110,736,91,662,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="664,53,738,77,775,95,808,117,840,152,864,192,881,232,892,263,887,265,876,234,859,195,836,155,805,122,772,99,737,82,663,58"/>
 <area shape="rect" id="Node000003" href="$d1/dd3/classmal__toolkit_1_1non__copyable.html" title="A class that can&#39;t be copied." alt="" coords="115,5,274,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="290,22,489,34,489,40,290,27"/>
 <area shape="rect" id="Node000004" href="$db/d86/classmal__toolkit_1_1non__movable.html" title="A class that can&#39;t be moved." alt="" coords="116,55,273,80"/>

@@ -9,8 +9,8 @@
 <area shape="rect" id="Node000007" href="$df/df5/namespacemal__toolkit.html#a205f8d4452e595ed3943f0d083c6033f" title="Convert a uint32_t value to a ByteArray using little&#45;endian byte order." alt="" coords="205,209,326,250"/>
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="111,155,187,194,200,200,198,205,184,199,109,160"/>
 <area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="228,29,227,19,233,10,246,5,265,3,286,5,299,11,297,16,285,10,265,8,247,10,236,15,232,20,234,28"/>
-<area shape="rect" id="Node000005" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="393,111,556,151"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="339,150,377,144,378,149,340,155"/>
-<area shape="rect" id="Node000006" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="401,176,549,217"/>
-<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="340,173,385,180,385,185,339,178"/>
+<area shape="rect" id="Node000005" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#a161c6f3c2d6e611ec15e3c6511182ec8" title="Get the current backoff delay." alt="" coords="393,112,556,153"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="339,150,377,145,378,150,340,156"/>
+<area shape="rect" id="Node000006" href="$d1/da7/classmal__toolkit_1_1_exponential_backoff.html#ad9374a1e0241fcbae8c9fa4d7c3175f8" title="Increase the backoff delay using exponential factor." alt="" coords="401,177,549,218"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="340,173,386,181,385,186,339,179"/>
 </map>

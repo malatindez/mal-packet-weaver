@@ -1,7 +1,7 @@
 <map id="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit.hpp" name="third_party/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit/mal&#45;toolkit.hpp">
 <area shape="rect" id="Node000001" title="Main header file for the MAL Toolkit library, providing a comprehensive set of tools and utilities." alt="" coords="2106,5,2249,61"/>
 <area shape="rect" id="Node000002" href="$db/d6e/library-pch_8hpp.html" title="Precompiled header (PCH) file for common headers used across the library." alt="" coords="1662,264,1768,290"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2106,44,2051,52,1989,65,1926,85,1865,111,1822,142,1784,180,1753,219,1731,252,1727,249,1749,216,1780,176,1818,138,1863,107,1924,80,1988,60,2050,47,2105,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2106,43,2051,52,1989,65,1925,84,1864,111,1821,142,1783,180,1753,219,1731,252,1727,249,1749,216,1779,177,1817,138,1862,107,1923,79,1987,60,2050,46,2105,38"/>
 <area shape="rect" id="Node000037" href="$d1/d27/converter_8hpp.html" title="Provides functions for converting between different data types." alt="" coords="1798,183,1893,208"/>
 <area shape="poly" id="edge36_Node000001_Node000037" title=" " alt="" coords="2106,40,2055,47,1999,60,1943,80,1893,111,1870,138,1856,169,1851,167,1865,136,1889,107,1940,76,1997,55,2054,42,2105,35"/>
 <area shape="rect" id="Node000038" href="$dd/dc6/backoffs_8hpp.html" title=" " alt="" coords="2789,264,2878,290"/>
